@@ -161,6 +161,13 @@ interface Props {
   enabledCategories: Set<CharacterCategory>;
   /** 度数阈值 — 过滤掉度数 < 阈值的节点（聚焦模式下豁免）。0 = 不过滤 */
   minDegree: number;
+  /** 搜索命中集 — null 表示无过滤;非 null 时进入"过滤平铺"态:
+   *  - 仅命中集节点可见,仅两端都命中的边可见
+   *  - 按命中集的连通分量做"中心+圆环"子图,多个分量 bin-pack
+   *  - 度为 0 的孤点单独排一个底部环
+   *  - 镜头锁俰视(z+ 朝下),zoomToFit 命中节点,巡游暂停
+   *  - 聚焦模式下豁免 */
+  matchedIds: Set<string> | null;
   /** 自动旋转 + 轮播巡游 */
   autoTour: boolean;
   onNodeSelect?: (id: string) => void;
@@ -182,6 +189,7 @@ export function Graph3D({
   focusNodeId,
   enabledCategories,
   minDegree,
+  matchedIds,
   autoTour,
   onNodeSelect,
   onEdgeSelect,
@@ -252,7 +260,7 @@ export function Graph3D({
     return m;
   }, [dataset]);
 
-  // ── 应用布局：聚焦模式覆盖 layoutMode ──
+  // ── 应用布局：聚焦模式 > 过滤平铺态 > 普通 layoutMode ──
   useEffect(() => {
     if (!fgRef.current) return;
 
@@ -294,6 +302,158 @@ export function Graph3D({
           900,
         );
       }, 50);
+    } else if (matchedIds) {
+      // 过滤平铺态:把命中集按连通分量分组,每组中心+圆环;多个子图 bin-pack
+      // ── 1) 收集命中节点 + 仅"两端都命中"的边
+      const hitNodes = nodes.filter((n) => matchedIds.has(n.id));
+      const localAdj = new Map<string, Set<string>>();
+      for (const id of matchedIds) localAdj.set(id, new Set());
+      for (const r of dataset.relations) {
+        if (matchedIds.has(r.source) && matchedIds.has(r.target)) {
+          localAdj.get(r.source)!.add(r.target);
+          localAdj.get(r.target)!.add(r.source);
+        }
+      }
+
+      // ── 2) DFS 求连通分量
+      const visited = new Set<string>();
+      const components: string[][] = [];
+      for (const id of matchedIds) {
+        if (visited.has(id)) continue;
+        const stack = [id];
+        const comp: string[] = [];
+        while (stack.length) {
+          const cur = stack.pop()!;
+          if (visited.has(cur)) continue;
+          visited.add(cur);
+          comp.push(cur);
+          for (const nb of localAdj.get(cur) ?? []) {
+            if (!visited.has(nb)) stack.push(nb);
+          }
+        }
+        components.push(comp);
+      }
+
+      // ── 3) 分:子图(>=2) + 孤点(==1)
+      const subgraphs = components
+        .filter((c) => c.length >= 2)
+        .sort((a, b) => b.length - a.length);
+      const loners = components.filter((c) => c.length === 1).map((c) => c[0]);
+
+      // ── 4) 计算每个子图的尺寸 + 中心节点
+      type SubLayout = {
+        ids: string[];
+        centerId: string;
+        radius: number; // 圆环半径
+        boxSize: number; // 占位方块边长(留给 bin-pack)
+      };
+      const NODE_FOOTPRINT = 18; // 头像约 12-24,圆环上节点边缘需要的额外间距
+      const subLayouts: SubLayout[] = subgraphs.map((ids) => {
+        // 中心:子图内度数(localAdj)最高
+        let centerId = ids[0];
+        let bestDeg = -1;
+        for (const id of ids) {
+          const d = localAdj.get(id)?.size ?? 0;
+          if (d > bestDeg) {
+            bestDeg = d;
+            centerId = id;
+          }
+        }
+        const neighborCount = ids.length - 1;
+        const radius = FOCUS_RADIUS_BASE + neighborCount * FOCUS_RADIUS_PER_NEIGHBOR;
+        const boxSize = (radius + NODE_FOOTPRINT) * 2;
+        return { ids, centerId, radius, boxSize };
+      });
+
+      // ── 5) bin-pack 子图:简单的 shelf-packing(行式装箱),按 boxSize 降序填入有限宽度
+      //    估算画布宽度:基于子图总面积取 sqrt 上界
+      const totalArea = subLayouts.reduce((s, sg) => s + sg.boxSize * sg.boxSize, 0);
+      const canvasWidth = Math.max(
+        ...subLayouts.map((sg) => sg.boxSize),
+        Math.sqrt(totalArea) * 1.2,
+        300,
+      );
+      const PADDING = 30; // 子图区域之间间距
+      const positions = new Map<string, { cx: number; cy: number }>();
+      let rowX = 0;
+      let rowY = 0;
+      let rowH = 0;
+      for (const sg of subLayouts) {
+        if (rowX > 0 && rowX + sg.boxSize > canvasWidth) {
+          rowY += rowH + PADDING;
+          rowX = 0;
+          rowH = 0;
+        }
+        positions.set(sg.centerId, {
+          cx: rowX + sg.boxSize / 2,
+          cy: rowY + sg.boxSize / 2,
+        });
+        rowX += sg.boxSize + PADDING;
+        rowH = Math.max(rowH, sg.boxSize);
+      }
+      const subgraphAreaH = rowY + rowH;
+
+      // ── 6) 应用子图位置:中心 fix 到 (cx, -cy)(注意 y 向上,行向下生长 → 取负),邻居在圆环
+      hitNodes.forEach((n) => {
+        n.fx = undefined;
+        n.fy = undefined;
+        n.fz = undefined;
+      });
+      for (const sg of subLayouts) {
+        const pos = positions.get(sg.centerId);
+        if (!pos) continue;
+        const center = hitNodes.find((n) => n.id === sg.centerId);
+        if (!center) continue;
+        center.fx = pos.cx;
+        center.fy = -pos.cy;
+        center.fz = 0;
+        const others = sg.ids.filter((id) => id !== sg.centerId);
+        others.forEach((id, i) => {
+          const n = hitNodes.find((x) => x.id === id);
+          if (!n) return;
+          const angle = (i / Math.max(1, others.length)) * Math.PI * 2 - Math.PI / 2;
+          n.fx = pos.cx + sg.radius * Math.cos(angle);
+          n.fy = -pos.cy + sg.radius * Math.sin(angle);
+          n.fz = 0;
+        });
+      }
+
+      // ── 7) 孤点区:画布底部一个大圆,均匀分布
+      if (loners.length > 0) {
+        const lonerCx = canvasWidth / 2;
+        const lonerCy = subgraphAreaH + PADDING * 2;
+        const lonerRadius = Math.max(
+          FOCUS_RADIUS_BASE,
+          (loners.length * NODE_FOOTPRINT * 1.6) / (Math.PI * 2),
+        );
+        loners.forEach((id, i) => {
+          const n = hitNodes.find((x) => x.id === id);
+          if (!n) return;
+          if (loners.length === 1) {
+            n.fx = lonerCx;
+            n.fy = -lonerCy;
+            n.fz = 0;
+          } else {
+            const angle = (i / loners.length) * Math.PI * 2 - Math.PI / 2;
+            n.fx = lonerCx + lonerRadius * Math.cos(angle);
+            n.fy = -lonerCy + lonerRadius * Math.sin(angle);
+            n.fz = 0;
+          }
+        });
+      }
+
+      // ── 8) 解锁非命中节点(虽然不渲染,避免占位)
+      nodes.forEach((n) => {
+        if (!matchedIds.has(n.id)) {
+          n.fx = undefined;
+          n.fy = undefined;
+          n.fz = undefined;
+        }
+      });
+
+      fgRef.current.d3ReheatSimulation();
+      // 镜头:俯视命中区域,zoomToFit 仅看到命中节点(可见性过滤已经隐藏其他)
+      setTimeout(() => fgRef.current?.zoomToFit(900, 80), 100);
     } else {
       // 普通模式：根据 layoutMode 重置锁定
       nodes.forEach((n) => {
@@ -308,7 +468,7 @@ export function Graph3D({
         fgRef.current?.zoomToFit(900, 60);
       }, 200);
     }
-  }, [focusedId, neighborSet, nodes, layoutMode]);
+  }, [focusedId, neighborSet, nodes, layoutMode, matchedIds, dataset.relations]);
 
   // ── focusNodeId（外部要求把镜头对准某节点，不是聚焦模式）──
   useEffect(() => {
@@ -359,7 +519,8 @@ export function Graph3D({
     };
   }, []);
 
-  const tourActive = autoTour && !tourPaused && !focusedId;
+  // 过滤平铺态下也暂停巡游(避免镜头旋转脱离俯视)
+  const tourActive = autoTour && !tourPaused && !focusedId && !matchedIds;
 
   // 邻接表：用于 DFS 巡游
   const adjacency = useMemo(() => {
@@ -373,13 +534,19 @@ export function Graph3D({
   }, [dataset]);
 
   // 可见节点 id 集合（用于巡游和 DFS 过滤）
+  // 三层 AND:类别 ∧ 度数 ∧ (无搜索 / 在命中集中)
   const visibleIdSet = useMemo(() => {
     return new Set(
       nodes
-        .filter((n) => enabledCategories.has(n.ch.category) && (degreeMap.get(n.id) ?? 0) >= minDegree)
+        .filter((n) => {
+          if (!enabledCategories.has(n.ch.category)) return false;
+          if ((degreeMap.get(n.id) ?? 0) < minDegree) return false;
+          if (matchedIds && !matchedIds.has(n.id)) return false;
+          return true;
+        })
         .map((n) => n.id),
     );
-  }, [nodes, enabledCategories, minDegree, degreeMap]);
+  }, [nodes, enabledCategories, minDegree, degreeMap, matchedIds]);
 
   // 巡游序列：从度数最高的节点开始，DFS 遍历可见连通分量；多个分量按度数降序衔接
   const tourSequence = useMemo<GraphNode[]>(() => {
@@ -517,7 +684,7 @@ export function Graph3D({
     ? tourSequence[tourIndex % tourSequence.length].id
     : null;
 
-  // ── 可见性 accessor — 聚焦优先，类别 AND 度数次之 ──
+  // ── 可见性 accessor — 聚焦优先,类别 ∧ 度数 ∧ 搜索命中 次之 ──
   const nodeVisibility = useCallback(
     (raw: object) => {
       const n = raw as GraphNode;
@@ -525,12 +692,13 @@ export function Graph3D({
       if (focusedId) {
         return n.id === focusedId || neighborSet.has(n.id);
       }
-      // 普通模式：类别过滤 AND 度数过滤
+      // 普通模式 / 过滤平铺态:类别 ∧ 度数 ∧ 搜索命中
       if (!enabledCategories.has(n.ch.category)) return false;
       if ((degreeMap.get(n.id) ?? 0) < minDegree) return false;
+      if (matchedIds && !matchedIds.has(n.id)) return false;
       return true;
     },
-    [focusedId, neighborSet, enabledCategories, minDegree, degreeMap],
+    [focusedId, neighborSet, enabledCategories, minDegree, degreeMap, matchedIds],
   );
 
   const linkVisibility = useCallback(
@@ -542,16 +710,17 @@ export function Graph3D({
       if (focusedId) {
         return sId === focusedId || tId === focusedId;
       }
-      // 普通模式：两端节点都通过过滤（类别 + 度数）才显示
+      // 普通模式 / 过滤平铺态:两端都通过 类别 ∧ 度数 ∧ 搜索命中
       const srcCh = dataset.characters.find((c) => c.id === sId);
       const tgtCh = dataset.characters.find((c) => c.id === tId);
       if (!srcCh || !tgtCh) return false;
       if (!enabledCategories.has(srcCh.category) || !enabledCategories.has(tgtCh.category)) return false;
       if ((degreeMap.get(sId) ?? 0) < minDegree) return false;
       if ((degreeMap.get(tId) ?? 0) < minDegree) return false;
+      if (matchedIds && (!matchedIds.has(sId) || !matchedIds.has(tId))) return false;
       return true;
     },
-    [focusedId, enabledCategories, minDegree, degreeMap, dataset.characters],
+    [focusedId, enabledCategories, minDegree, degreeMap, dataset.characters, matchedIds],
   );
 
   // ── 自定义节点 ──

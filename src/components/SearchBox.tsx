@@ -1,150 +1,275 @@
 "use client";
 
 /**
- * 搜索框：模糊名 + 别名（B 决策）+ 全文（C 决策）
+ * 搜索框 — 下拉建议 + 回车过滤平铺
  *
- * - 默认仅匹配 name_zh / name_en / aliases / epithet（轻量）
- * - 输入后 dynamic import 加载 fuse.js + 全文索引（bio + events 文本）
- * - 命中后回调，由外层负责 fitView 居中 + selectNode
+ * 输入预览(query 非空):
+ *   - 下拉列表显示最多 8 项命中(name/alias/epithet 优先,然后 fulltext)
+ *   - 点击下拉某项 = onPick(id) → 父级走 focus mode
+ *   - 底部一行 "共 N 人 · 回车应用" 告知总命中数
  *
- * 决策来源：docs/design-freeze.md §5.4
+ * 回车提交:
+ *   - 把所有命中(不止下拉 8 项,而是全部 hit 集)作为过滤集
+ *   - onSubmitFilter(query) → 父级走过滤平铺布局
+ *
+ * 清空: × / ESC / 输入框空 → onClear()
+ *
+ * ≥2 字严格子串(中文按原样,英文 lowercase 折叠)
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import type { Character } from "@/schemas/character";
 import { COLOR, FONT, CATEGORY_COLOR } from "@/lib/tokens";
 
+const TRIGGER_LEN = 2;
+const DROPDOWN_CAP = 8;
+
 interface Hit {
   character: Character;
-  /** 命中来源：name | alias | epithet | fulltext */
+  /** 命中来源:name(中/英)/alias/epithet/fulltext */
   origin: "name" | "alias" | "epithet" | "fulltext";
-  /** 全文命中片段（origin === fulltext 时填） */
+  /** fulltext 命中时的片段 */
   snippet?: string;
 }
 
-interface FuseResult {
-  item: { id: string; text: string };
-  score?: number;
-}
+/**
+ * 计算 hit 列表 — 与父级 computeMatchedIds 用同一套规则,但保留 origin 与 snippet。
+ */
+function computeHits(characters: Character[], rawQuery: string): Hit[] {
+  const q = rawQuery.trim();
+  if (q.length < TRIGGER_LEN) return [];
+  const qLower = q.toLowerCase();
 
-interface FuseInstance {
-  search(q: string): FuseResult[];
+  const nameHits: Hit[] = [];
+  const fullHits: Hit[] = [];
+  const seen = new Set<string>();
+
+  for (const c of characters) {
+    // 1) name 优先
+    if (c.name_zh.includes(q) || c.name_en.toLowerCase().includes(qLower)) {
+      nameHits.push({ character: c, origin: "name" });
+      seen.add(c.id);
+      continue;
+    }
+    if (c.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower))) {
+      nameHits.push({ character: c, origin: "alias" });
+      seen.add(c.id);
+      continue;
+    }
+    if (c.epithet && c.epithet.includes(q)) {
+      nameHits.push({ character: c, origin: "epithet" });
+      seen.add(c.id);
+      continue;
+    }
+    // 2) fulltext:bio / events / quotes / skills / domains
+    const inBio = c.bio?.includes(q) ?? false;
+    const inEvents = c.events.some((e) => e.title.includes(q) || e.desc.includes(q));
+    const inQuotes = c.quotes.some((qu) => qu.text.includes(q));
+    const inSkillsDomains = c.skills.some((s) => s.includes(q)) || c.domains.some((d) => d.includes(q));
+    if (inBio || inEvents || inQuotes || inSkillsDomains) {
+      // 构造 snippet:在原文里找出第一处 query
+      let snippet = "";
+      const search = (text: string | null | undefined) => {
+        if (!text) return false;
+        const idx = text.indexOf(q);
+        if (idx < 0) return false;
+        snippet = "…" + text.slice(Math.max(0, idx - 20), idx + q.length + 30) + "…";
+        return true;
+      };
+      if (!search(c.bio)) {
+        for (const e of c.events) if (search(e.title + " " + e.desc)) break;
+      }
+      if (!snippet) {
+        for (const qu of c.quotes) if (search(qu.text)) break;
+      }
+      fullHits.push({ character: c, origin: "fulltext", snippet });
+      seen.add(c.id);
+    }
+  }
+
+  return [...nameHits, ...fullHits];
 }
 
 interface Props {
   characters: Character[];
+  /** 当前输入字符串(受控) */
+  query: string;
+  onQueryChange: (q: string) => void;
+  /** 点击下拉某项 — 走 focus mode */
   onPick: (id: string) => void;
+  /** 回车 — 整集作为过滤集应用 */
+  onSubmitFilter: (query: string) => void;
+  /** × 清空(同时清除已应用的过滤) */
+  onClear: () => void;
+  /** 当前是否已经处于已应用的过滤态(决定 chip 显示) */
+  filterApplied: boolean;
+  /** 当前已应用的过滤命中数(filterApplied=true 时使用) */
+  appliedCount: number;
+  /** 数据集总人数 */
+  totalCount: number;
 }
 
-export function SearchBox({ characters, onPick }: Props) {
-  const [q, setQ] = useState("");
+export function SearchBox({
+  characters,
+  query,
+  onQueryChange,
+  onPick,
+  onSubmitFilter,
+  onClear,
+  filterApplied,
+  appliedCount,
+  totalCount,
+}: Props) {
   const [focused, setFocused] = useState(false);
-  const [fuse, setFuse] = useState<FuseInstance | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
-  // 当输入框首次聚焦：动态加载 fuse + 构建全文索引（推迟 80-150KB）
+  const hits = useMemo(() => computeHits(characters, query), [characters, query]);
+  const dropdownHits = hits.slice(0, DROPDOWN_CAP);
+
+  const trimmed = query.trim();
+  const canSubmit = trimmed.length >= TRIGGER_LEN && hits.length > 0;
+  const showDropdown = focused && trimmed.length > 0;
+
+  // 点击外部 = 关闭下拉
   useEffect(() => {
-    if (!focused || fuse) return;
-    let cancelled = false;
-    (async () => {
-      const FuseMod = (await import("fuse.js")).default;
-      const docs = characters.map((c) => ({
-        id: c.id,
-        text: [
-          c.bio ?? "",
-          c.events.map((e) => `${e.title} ${e.desc}`).join(" "),
-          c.skills.join(" "),
-          c.domains.join(" "),
-        ].join(" "),
-      }));
-      const fuseInst = new FuseMod(docs, {
-        keys: ["text"],
-        includeScore: true,
-        threshold: 0.4,
-        ignoreLocation: true,
-        minMatchCharLength: 2,
-      }) as unknown as FuseInstance;
-      if (!cancelled) setFuse(fuseInst);
-    })();
-    return () => {
-      cancelled = true;
+    if (!showDropdown) return;
+    const onDoc = (e: MouseEvent) => {
+      if (!wrapperRef.current) return;
+      if (!wrapperRef.current.contains(e.target as Node)) {
+        setFocused(false);
+      }
     };
-  }, [focused, fuse, characters]);
+    document.addEventListener("mousedown", onDoc);
+    return () => document.removeEventListener("mousedown", onDoc);
+  }, [showDropdown]);
 
-  const hits: Hit[] = useMemo(() => {
-    const query = q.trim();
-    if (!query) return [];
-    const lowerQ = query.toLowerCase();
-
-    // ── 1) 名 + 别名 + 称号（轻量 substring 匹配）──
-    const nameHits: Hit[] = [];
-    for (const c of characters) {
-      if (c.name_zh.includes(query) || c.name_en.toLowerCase().includes(lowerQ)) {
-        nameHits.push({ character: c, origin: "name" });
-        continue;
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (canSubmit) {
+        onSubmitFilter(trimmed);
+        setFocused(false);
+        inputRef.current?.blur();
       }
-      if (c.aliases.some((a) => a.includes(query) || a.toLowerCase().includes(lowerQ))) {
-        nameHits.push({ character: c, origin: "alias" });
-        continue;
-      }
-      if (c.epithet && c.epithet.includes(query)) {
-        nameHits.push({ character: c, origin: "epithet" });
-      }
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      onClear();
+      setFocused(false);
     }
-
-    // ── 2) 全文（fuse）─ 排除已经命中的人物
-    const seen = new Set(nameHits.map((h) => h.character.id));
-    const fullHits: Hit[] = [];
-    if (fuse && query.length >= 2) {
-      const results = fuse.search(query);
-      for (const r of results.slice(0, 6)) {
-        const c = characters.find((x) => x.id === r.item.id);
-        if (!c || seen.has(c.id)) continue;
-        // 简单 snippet：在原文里找 query，截 ±30 字
-        const idx = r.item.text.indexOf(query);
-        const snippet = idx >= 0
-          ? "…" + r.item.text.slice(Math.max(0, idx - 20), idx + query.length + 30) + "…"
-          : r.item.text.slice(0, 60) + "…";
-        fullHits.push({ character: c, origin: "fulltext", snippet });
-      }
-    }
-
-    return [...nameHits, ...fullHits].slice(0, 10);
-  }, [q, characters, fuse]);
+  };
 
   return (
     <div
+      ref={wrapperRef}
       style={{
         position: "absolute",
         top: 16,
         left: 16,
         right: 16,
-        maxWidth: 360,
+        maxWidth: 480,
         zIndex: 20,
       }}
     >
-      <input
-        ref={inputRef}
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setTimeout(() => setFocused(false), 200)}
-        placeholder="搜索：宙斯 / Zeus / 雷霆神 / 杀蛇…"
-        style={{
-          width: "100%",
-          padding: "10px 14px",
-          background: "oklch(99% 0 0 / 0.94)",
-          border: `1px solid ${COLOR.border}`,
-          borderRadius: 8,
-          color: COLOR.text,
-          fontSize: 14,
-          fontFamily: FONT.sans,
-          outline: "none",
-          backdropFilter: "blur(8px)",
-          WebkitBackdropFilter: "blur(8px)",
-          boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
-        }}
-      />
-      {q.trim() && (
+      <div style={{ position: "relative" }}>
+        <input
+          ref={inputRef}
+          value={query}
+          onChange={(e) => onQueryChange(e.target.value)}
+          onKeyDown={handleKeyDown}
+          onFocus={() => setFocused(true)}
+          placeholder="搜索:宙斯 / Zeus / 特洛伊战争 / 十二功业…  (回车应用)"
+          style={{
+            width: "100%",
+            padding: filterApplied ? "10px 180px 10px 14px" : "10px 14px",
+            background: "oklch(99% 0 0 / 0.94)",
+            border: `1px solid ${filterApplied ? COLOR.accent : COLOR.border}`,
+            borderRadius: 8,
+            color: COLOR.text,
+            fontSize: 14,
+            fontFamily: FONT.sans,
+            outline: "none",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+            transition: "border-color 120ms ease",
+          }}
+        />
+
+        {/* 已应用 chip — 仅 committed 态显示 */}
+        {filterApplied && (
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              right: 8,
+              transform: "translateY(-50%)",
+              display: "flex",
+              alignItems: "center",
+              gap: 4,
+              padding: "3px 6px 3px 10px",
+              background: COLOR.accent,
+              color: "#fff",
+              border: `1px solid ${COLOR.accent}`,
+              borderRadius: 999,
+              fontSize: 11,
+              fontFamily: FONT.mono,
+              lineHeight: 1,
+              userSelect: "none",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <span>{appliedCount} / {totalCount} 已应用</span>
+            <button
+              onClick={() => {
+                onClear();
+                inputRef.current?.focus();
+              }}
+              aria-label="清空搜索"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 16,
+                height: 16,
+                marginLeft: 2,
+                padding: 0,
+                background: "transparent",
+                border: "none",
+                color: "inherit",
+                cursor: "pointer",
+                fontSize: 14,
+                fontWeight: 600,
+                lineHeight: 1,
+              }}
+            >
+              ×
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* 输入提示:短查询 */}
+      {showDropdown && trimmed.length < TRIGGER_LEN && (
+        <div
+          style={{
+            marginTop: 6,
+            padding: "8px 12px",
+            background: "oklch(99% 0 0 / 0.96)",
+            border: `1px solid ${COLOR.border}`,
+            borderRadius: 8,
+            color: COLOR.textMuted,
+            fontSize: 12,
+            fontFamily: FONT.sans,
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+          }}
+        >
+          至少输入 {TRIGGER_LEN} 个字符
+        </div>
+      )}
+
+      {/* 下拉建议 */}
+      {showDropdown && trimmed.length >= TRIGGER_LEN && (
         <div
           style={{
             marginTop: 6,
@@ -157,65 +282,101 @@ export function SearchBox({ characters, onPick }: Props) {
             boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
           }}
         >
-          {hits.length === 0 && (
+          {hits.length === 0 ? (
             <div style={{ padding: 12, color: COLOR.textMuted, fontSize: 13 }}>
-              {fuse ? "无匹配" : "加载全文索引中…"}
+              无匹配
             </div>
-          )}
-          {hits.map((h) => (
-            <button
-              key={h.character.id + h.origin}
-              onMouseDown={(e) => {
-                e.preventDefault();
-                onPick(h.character.id);
-                setQ("");
-              }}
-              style={{
-                display: "flex",
-                width: "100%",
-                gap: 10,
-                padding: "10px 12px",
-                background: "transparent",
-                border: "none",
-                borderBottom: `1px solid ${COLOR.border}`,
-                color: COLOR.text,
-                textAlign: "left",
-                cursor: "pointer",
-                fontFamily: FONT.sans,
-              }}
-            >
-              <span
-                style={{
-                  display: "inline-block",
-                  width: 4,
-                  background: CATEGORY_COLOR[h.character.category],
-                  borderRadius: 2,
-                  flexShrink: 0,
+          ) : (
+            <>
+              {dropdownHits.map((h) => (
+                <button
+                  key={h.character.id + h.origin}
+                  onMouseDown={(e) => {
+                    // mousedown 而非 click — 早于 input.onBlur,防止下拉先被收起
+                    e.preventDefault();
+                    onPick(h.character.id);
+                    setFocused(false);
+                  }}
+                  style={{
+                    display: "flex",
+                    width: "100%",
+                    gap: 10,
+                    padding: "10px 12px",
+                    background: "transparent",
+                    border: "none",
+                    borderBottom: `1px solid ${COLOR.border}`,
+                    color: COLOR.text,
+                    textAlign: "left",
+                    cursor: "pointer",
+                    fontFamily: FONT.sans,
+                  }}
+                >
+                  <span
+                    style={{
+                      display: "inline-block",
+                      width: 4,
+                      background: CATEGORY_COLOR[h.character.category],
+                      borderRadius: 2,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <span style={{ flex: 1, minWidth: 0 }}>
+                    <span style={{ fontSize: 14, fontFamily: FONT.serif }}>
+                      {h.character.name_zh}
+                    </span>
+                    <span style={{ fontSize: 11, color: COLOR.textMuted, marginLeft: 8, fontFamily: FONT.mono }}>
+                      {h.character.name_en}
+                    </span>
+                    {h.origin === "fulltext" && h.snippet && (
+                      <div style={{ fontSize: 11, color: COLOR.textMuted, marginTop: 2, lineHeight: 1.4 }}>
+                        {h.snippet}
+                      </div>
+                    )}
+                    {h.origin === "alias" && (
+                      <div style={{ fontSize: 11, color: COLOR.textMuted, marginTop: 2 }}>
+                        {h.character.aliases.join(" · ")}
+                      </div>
+                    )}
+                  </span>
+                  <span style={{ fontSize: 10, color: COLOR.textMuted, fontFamily: FONT.mono, alignSelf: "center" }}>
+                    {h.origin}
+                  </span>
+                </button>
+              ))}
+
+              {/* 底部提示:总计 N 人 + 回车提交 */}
+              <button
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  if (canSubmit) {
+                    onSubmitFilter(trimmed);
+                    setFocused(false);
+                  }
                 }}
-              />
-              <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ fontSize: 14, fontFamily: FONT.serif }}>
-                  {h.character.name_zh}
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  gap: 8,
+                  padding: "8px 12px",
+                  background: hits.length > DROPDOWN_CAP ? COLOR.bgPanel : "transparent",
+                  border: "none",
+                  color: COLOR.textMuted,
+                  textAlign: "left",
+                  cursor: canSubmit ? "pointer" : "default",
+                  fontFamily: FONT.mono,
+                  fontSize: 11,
+                }}
+              >
+                <span>
+                  共 {hits.length} 人命中
+                  {hits.length > DROPDOWN_CAP && ` · 仅显示前 ${DROPDOWN_CAP}`}
                 </span>
-                <span style={{ fontSize: 11, color: COLOR.textMuted, marginLeft: 8, fontFamily: FONT.mono }}>
-                  {h.character.name_en}
-                </span>
-                {h.origin === "fulltext" && h.snippet && (
-                  <div style={{ fontSize: 11, color: COLOR.textMuted, marginTop: 2, lineHeight: 1.4 }}>
-                    {h.snippet}
-                  </div>
-                )}
-                {h.origin === "alias" && (
-                  <div style={{ fontSize: 11, color: COLOR.textMuted, marginTop: 2 }}>
-                    {h.character.aliases.join(" · ")}
-                  </div>
-                )}
-              </span>
-              <span style={{ fontSize: 10, color: COLOR.textMuted, fontFamily: FONT.mono, alignSelf: "center" }}>
-                {h.origin}
-              </span>
-            </button>
-          ))}
+                <span style={{ color: COLOR.accent }}>↵ 回车应用全部</span>
+              </button>
+            </>
+          )}
         </div>
       )}
     </div>

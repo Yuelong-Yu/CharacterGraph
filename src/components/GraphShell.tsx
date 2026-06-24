@@ -1,10 +1,10 @@
 "use client";
 
 /**
- * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤
+ * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤 + 搜索过滤
  */
 import { useMemo, useState } from "react";
-import type { Dataset, CharacterCategory } from "@/schemas/character";
+import type { Dataset, Character, CharacterCategory } from "@/schemas/character";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
@@ -17,6 +17,38 @@ type Selection =
   | { kind: "edge"; id: string };
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_LABEL) as CharacterCategory[];
+const SEARCH_TRIGGER_LEN = 2;
+
+/**
+ * 严格子串匹配:与 SearchBox.computeHits 同语义,仅返回 id 集。
+ *
+ * - <2 字符:返回 null 表示无过滤
+ * - 范围:name_zh / name_en / aliases / epithet / bio / events.{title,desc} /
+ *   quotes.text / skills / domains
+ * - 中文按原样 includes,英文 lowercase 折叠
+ */
+function computeMatchedIds(characters: Character[], rawQuery: string): Set<string> | null {
+  const q = rawQuery.trim();
+  if (q.length < SEARCH_TRIGGER_LEN) return null;
+  const qLower = q.toLowerCase();
+  const matched = new Set<string>();
+  for (const c of characters) {
+    if (
+      c.name_zh.includes(q) ||
+      c.name_en.toLowerCase().includes(qLower) ||
+      (c.epithet && c.epithet.includes(q)) ||
+      c.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower)) ||
+      (c.bio && c.bio.includes(q)) ||
+      c.events.some((e) => e.title.includes(q) || e.desc.includes(q)) ||
+      c.quotes.some((qu) => qu.text.includes(q)) ||
+      c.skills.some((s) => s.includes(q)) ||
+      c.domains.some((d) => d.includes(q))
+    ) {
+      matched.add(c.id);
+    }
+  }
+  return matched;
+}
 
 export function GraphShell({ dataset }: { dataset: Dataset }) {
   const [sel, setSel] = useState<Selection>({ kind: "none" });
@@ -29,6 +61,43 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const [minDegree, setMinDegree] = useState<number>(0);
   // 加载即进入巡游模式
   const [autoTour, setAutoTour] = useState<boolean>(true);
+
+  // 搜索:draft = 输入中,committed = 已回车应用的 query
+  // committed !== "" 时,Graph3D 进入"过滤平铺"态(filterMode)
+  const [draftQuery, setDraftQuery] = useState<string>("");
+  const [committedQuery, setCommittedQuery] = useState<string>("");
+
+  // 已应用的命中集 — 仅由 committedQuery 计算,驱动 3D 过滤平铺
+  const matchedIds = useMemo(
+    () => computeMatchedIds(dataset.characters, committedQuery),
+    [dataset.characters, committedQuery],
+  );
+
+  const handleSearchChange = (q: string) => {
+    setDraftQuery(q);
+    // 输入与已 commit 不一致 → 撤销 commit(让"修改输入"自动回到全图,避免错位)
+    if (q.trim() !== committedQuery.trim()) {
+      setCommittedQuery("");
+    }
+  };
+  const handleSearchSubmit = (q: string) => {
+    setCommittedQuery(q);
+    // 进入过滤平铺态 — 退出 focus mode、关闭已选
+    setFocusedId(null);
+    setSel({ kind: "none" });
+  };
+  const handleSearchClear = () => {
+    setDraftQuery("");
+    setCommittedQuery("");
+  };
+  // 下拉选某项 = 进入单焦点(focus mode)
+  const handleSearchPick = (id: string) => {
+    setDraftQuery("");
+    setCommittedQuery("");
+    setSel({ kind: "node", id });
+    setFocusId(id);
+    setFocusedId(id);
+  };
 
   // 计算每个节点的度数 + 最大度数（用于滑动条上限）
   const degreeInfo = useMemo(() => {
@@ -55,8 +124,15 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
       }
     : null;
 
-  // 节点点击：首次=进入聚焦+打开详情；再次点同一节点=退出聚焦+关闭详情
+  // 节点点击：
+  //   - 过滤平铺态:仅打开右侧详情面板,不进入 focus mode(保留多分量展示)
+  //   - 普通态:首次=进入聚焦+打开详情；再次点同一节点=退出聚焦+关闭详情
   const handleNodeClick = (id: string) => {
+    if (matchedIds) {
+      // 过滤平铺态
+      setSel({ kind: "node", id });
+      return;
+    }
     if (focusedId === id) {
       setFocusedId(null);
       setSel({ kind: "none" });
@@ -66,9 +142,11 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
     }
   };
 
-  // 点击空白：退出聚焦+关闭一切
+  // 点击空白:
+  //   - 过滤态下仅关闭详情(保留过滤)
+  //   - 普通态:退出聚焦+关闭一切
   const handleBackground = () => {
-    setFocusedId(null);
+    if (!matchedIds) setFocusedId(null);
     setSel({ kind: "none" });
   };
 
@@ -105,11 +183,14 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
       <div style={{ borderRight: `1px solid ${COLOR.border}`, position: "relative" }}>
         <SearchBox
           characters={dataset.characters}
-          onPick={(id) => {
-            setSel({ kind: "node", id });
-            setFocusId(id);
-            setFocusedId(id);
-          }}
+          query={draftQuery}
+          onQueryChange={handleSearchChange}
+          onPick={handleSearchPick}
+          onSubmitFilter={handleSearchSubmit}
+          onClear={handleSearchClear}
+          filterApplied={matchedIds !== null}
+          appliedCount={matchedIds?.size ?? 0}
+          totalCount={dataset.characters.length}
         />
         <Legend
           enabledCategories={enabledSet}
@@ -137,6 +218,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
           focusNodeId={focusId}
           enabledCategories={enabledSet}
           minDegree={minDegree}
+          matchedIds={matchedIds}
           autoTour={autoTour}
           onNodeSelect={handleNodeClick}
           onEdgeSelect={handleEdgeClick}
