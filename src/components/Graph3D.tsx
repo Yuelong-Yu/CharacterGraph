@@ -617,6 +617,10 @@ export function Graph3D({
         const plane = new THREE.Mesh(planeGeo, planeMat);
         plane.position.set(0, spriteCenterY, 0.2);
         plane.renderOrder = topMost ? 9991 : 600;
+        // billboard：plane 是 Mesh 不会自动朝向相机,每帧手动同步 quaternion
+        plane.onBeforeRender = (_r, _s, camera) => {
+          plane.quaternion.copy(camera.quaternion);
+        };
         group.add(plane);
       }
 
@@ -661,6 +665,9 @@ export function Graph3D({
         const labelMesh = new THREE.Mesh(labelGeo, labelMat);
         labelMesh.position.set(0, labelY, 0);
         labelMesh.renderOrder = 9992;
+        labelMesh.onBeforeRender = (_r, _s, camera) => {
+          labelMesh.quaternion.copy(camera.quaternion);
+        };
         group.add(labelMesh);
       } else {
         const label = new SpriteText(node.ch.name_zh);
@@ -708,6 +715,9 @@ export function Graph3D({
           const epiMesh = new THREE.Mesh(epiGeo, epiMat);
           epiMesh.position.set(0, epiY, 0);
           epiMesh.renderOrder = 9993;
+          epiMesh.onBeforeRender = (_r, _s, camera) => {
+            epiMesh.quaternion.copy(camera.quaternion);
+          };
           group.add(epiMesh);
         } else {
           const epi = new SpriteText(node.ch.epithet);
