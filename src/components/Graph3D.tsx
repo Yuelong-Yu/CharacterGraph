@@ -598,15 +598,16 @@ export function Graph3D({
       halo.renderOrder = topMost ? 9990 : 500;
       group.add(halo);
 
-      // 2) 头像 — 完全不透明的 Plane（走 opaque 渲染队列，renderOrder 严格生效）
-      //    手动 billboard：每帧让 plane 朝向相机
+      // 2) 头像 — Plane（手动 billboard：每帧让 plane 朝向相机）
+      //    中心节点必须 transparent:true，才能进入"透明队列"压在其他节点的 SpriteText 文字标签之上
+      //    （three.js 渲染顺序：opaque queue → transparent queue，renderOrder 只在同一队列内有效）
       const tex = getThumbTexture(node.ch.thumb);
       if (tex) {
         const planeGeo = new THREE.PlaneGeometry(spriteW, spriteH);
         const planeMat = new THREE.MeshBasicMaterial({
           map: tex,
-          transparent: false,
-          alphaTest: 0,           // 不丢弃任何像素 — 头像完全实色
+          transparent: topMost,       // 中心节点强制走透明队列
+          alphaTest: 0,
           depthTest: false,
           depthWrite: false,
           side: THREE.DoubleSide,
@@ -652,8 +653,8 @@ export function Graph3D({
         const labelGeo = new THREE.PlaneGeometry(labelW, labelH);
         const labelMat = new THREE.MeshBasicMaterial({
           map: labelTex,
-          transparent: false,
-          alphaTest: 0.01,
+          transparent: true,        // 走透明队列 + renderOrder=9992 → 永远盖住其他节点的 SpriteText
+          alphaTest: 0,
           depthTest: false,
           depthWrite: false,
           side: THREE.DoubleSide,
@@ -700,8 +701,8 @@ export function Graph3D({
           const epiGeo = new THREE.PlaneGeometry(epiW, epiH);
           const epiMat = new THREE.MeshBasicMaterial({
             map: epiTex,
-            transparent: false,
-            alphaTest: 0.01,
+            transparent: true,        // 同上：走透明队列，靠 renderOrder 压制
+            alphaTest: 0,
             depthTest: false,
             depthWrite: false,
             side: THREE.DoubleSide,
