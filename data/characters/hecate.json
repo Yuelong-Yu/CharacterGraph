@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "id": "hecate",
+  "name_zh": "赫卡忒",
+  "name_en": "Hecate",
+  "aliases": [
+    "黑卡蒂",
+    "Trivia",
+    "Hecat",
+    "月阴女神",
+    "黑月女神",
+    "鬼魂女王",
+    "黑魔法女主人",
+    "地狱钥匙掌管者",
+    "女巫皇后"
+  ],
+  "epithet": "魔法、夜晚与十字路口女神",
+  "category": "minor_deity",
+  "era_layer": 2,
+  "bio": "赫卡忒是古希腊宗教与神话中的一位女神，通常被描绘为手持火炬、钥匙或蛇，身旁伴有猎犬，后期常以三身或三面形象出现。她与十字路口、夜晚、光明、魔法、巫术和月亮密切相关。最早在赫西俄德的《神谱》（公元前8世纪）中被记载为一位拥有天空、大地和海洋领域的尊贵女神。她的崇拜可能起源于小亚细亚的卡里亚地区，或受古埃及青蛙女神海奎特的影响。在雅典，她与宙斯、赫斯提亚、赫尔墨斯、阿波罗一同被视为家庭的保护神。罗马时期，她常被称为Trivia，与狄安娜和阿尔忒弥斯混同。赫卡忒的圣兽是狗，重要圣地包括拉癸那（今土耳其）。她的职能广泛：赐福、带来财富、助产、航海保护、战争胜利等。后期逐渐与巫术、鬼魂和冥界紧密相连，成为女巫的守护神，在欧里庇得斯的《美狄亚》和莎士比亚的《麦克白》中均有重要角色。在《得墨忒耳颂歌》中，她目睹冥王哈迪斯劫走珀耳塞福涅，并帮助得墨忒耳寻找。赫卡忒也常与塞勒涅、阿尔忒弥斯和珀耳塞福涅等同，被视为月亮女神的三面之一。她的形象在艺术中常为三体围绕中央柱，手持各种象征物。",
+  "events": [
+    {
+      "title": "首次出现在《神谱》",
+      "desc": "赫卡忒最早出现在赫西俄德《神谱》中，被描述为一位拥有天空、大地和海洋领域的尊贵女神，受到宙斯敬重，赐福给向她祈祷的人们。",
+      "source": {
+        "work": "Theogony",
+        "locus": "lines 411–452",
+        "translator": "Hugh G. Evelyn-White"
+      }
+    },
+    {
+      "title": "帮助保护新生宙斯",
+      "desc": "在小亚细亚拉癸那的赫卡忒神庙东楣浮雕上，描绘了赫卡忒帮助保护新生宙斯免受父亲克洛诺斯吞噬的场景，这是唯一关于她参与宙斯诞生神话的证据。",
+      "source": {
+        "work": "Pausanias' Description of Greece",
+        "locus": "Book 5, chapter 13",
+        "translator": "W.H.S. Jones"
+      }
+    },
+    {
+      "title": "目睹珀耳塞福涅被劫",
+      "desc": "在《得墨忒耳颂歌》中，赫卡忒是唯一目睹冥王哈迪斯劫走珀耳塞福涅的神祇，随后她手持火炬帮助得墨忒耳寻找女儿。",
+      "source": {
+        "work": "Homeric Hymn to Demeter",
+        "locus": "lines 24–60",
+        "translator": "Hugh G. Evelyn-White"
+      }
+    },
+    {
+      "title": "指导美狄亚使用魔法",
+      "desc": "赫卡忒作为女巫的守护神，指导她的女祭司美狄亚配制魔药以帮助伊阿宋获取金羊毛，并帮助她获取爱情。",
+      "source": {
+        "work": "Apollonius of Rhodes, Argonautica",
+        "locus": "Book 3, lines 1196–1224",
+        "translator": "R.C. Seaton"
+      }
+    },
+    {
+      "title": "在《麦克白》中被引用",
+      "desc": "莎士比亚在悲剧《麦克白》中引用赫卡忒作为女巫皇后，强化了她与黑魔法和巫术的关联。",
+      "source": {
+        "work": "Macbeth",
+        "locus": "Act 3, Scene 5",
+        "translator": "Shakespeare"
+      }
+    },
+    {
+      "title": "阿尔卡美涅斯创作三身像",
+      "desc": "公元前5世纪末，雕塑家阿尔卡美涅斯创作了第一尊三身赫卡忒像，放置在雅典无翼胜利女神神庙前，成为后来赫卡忒标准形象的起源。",
+      "source": {
+        "work": "Pausanias' Description of Greece",
+        "locus": "Book 2, chapter 30",
+        "translator": "W.H.S. Jones"
+      }
+    }
+  ],
+  "quotes": [
+    {
+      "text": "且看赫卡忒，伫守在十字路口，每一张脸都凝视着一个方向。",
+      "source": {
+        "work": "Ovid, Metamorphoses",
+        "locus": "book 7, line 194",
+        "translator": "Brookes More"
+      }
+    }
+  ],
+  "weapons": [
+    "火炬",
+    "钥匙",
+    "蛇",
+    "匕首"
+  ],
+  "skills": [
+    "施展魔法",
+    "引导亡灵",
+    "保护家宅",
+    "赐福生育",
+    "掌管十字路口",
+    "预言",
+    "赐予胜利",
+    "保佑航海"
+  ],
+  "domains": [
+    "魔法",
+    "夜晚",
+    "十字路口",
+    "月亮",
+    "巫术",
+    "鬼魂",
+    "生育",
+    "荒野"
+  ],
+  "mounts": [],
+  "portrait": "/images/portraits/hecate.webp",
+  "thumb": "/images/thumbs/hecate.webp"
+}

@@ -1,0 +1,1749 @@
+[
+  {
+    "schema_version": 1,
+    "id": "achilles-agamemnon",
+    "source": "achilles",
+    "target": "agamemnon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "争夺布里塞伊斯",
+        "desc": "阿喀琉斯因女奴布里塞伊斯被阿伽门农夺走而愤怒退出战斗。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "1.182-187",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "achilles-hector",
+    "source": "achilles",
+    "target": "hector",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "杀死赫克托尔",
+        "desc": "阿喀琉斯为报帕特罗克洛斯之仇，在特洛伊城前杀死赫克托尔并拖尸。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "22.247-366",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "achilles-odysseus",
+    "source": "achilles",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共同参加特洛伊战争",
+        "desc": "奥德修斯和阿喀琉斯同为希腊联军重要将领，并肩作战。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "agamemnon-odysseus",
+    "source": "agamemnon",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奥德修斯作为阿伽门农的谋士",
+        "desc": "奥德修斯多次为阿伽门农出谋划策，包括木马计。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "agamemnon-paris",
+    "source": "agamemnon",
+    "target": "paris",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "帕里斯诱拐海伦引发战争",
+        "desc": "阿伽门农作为希腊联军统帅，率军攻打特洛伊以夺回弟媳海伦。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "aphrodite-ares",
+    "source": "aphrodite",
+    "target": "ares",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "偷情被赫菲斯托斯捉奸",
+        "desc": "阿芙洛狄忒与阿瑞斯私通，被赫菲斯托斯用金网捉住并示众。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": "8.266-366",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "aphrodite-hermes",
+    "source": "aphrodite",
+    "target": "hermes",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "生下赫马佛洛狄忒斯",
+        "desc": "阿芙洛狄忒与赫尔墨斯结合生下阴阳神赫马佛洛狄忒斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Ovid, Metamorphoses",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "aphrodite-paris",
+    "source": "aphrodite",
+    "target": "paris",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "帕里斯的评判",
+        "desc": "阿芙洛狄忒许诺帕里斯世上最美的女人，助其得到海伦。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "24.25-30",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-achilles",
+    "source": "apollo",
+    "target": "achilles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿波罗助帕里斯射杀阿喀琉斯",
+        "desc": "阿波罗因阿喀琉斯杀死赫克托耳而愤怒，指引帕里斯射中其脚踵。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "22.359-360",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-agamemnon",
+    "source": "apollo",
+    "target": "agamemnon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "降瘟疫于希腊军营",
+        "desc": "阿波罗因阿伽门农拒绝释放克律塞伊斯而用瘟疫惩罚希腊军。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "1.43-52",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-artemis",
+    "source": "apollo",
+    "target": "artemis",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "双胞胎诞生",
+        "desc": "阿波罗和阿尔忒弥斯是宙斯与勒托的双生子。",
+        "desc_long": null,
+        "source": {
+          "work": "Homeric Hymn to Apollo",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-athena",
+    "source": "apollo",
+    "target": "athena",
+    "primary_type": "hostile",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "特洛伊战争中对立",
+        "desc": "阿波罗支持特洛伊，雅典娜支持希腊，二神在战场上直接冲突。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "21.391-408",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-hector",
+    "source": "apollo",
+    "target": "hector",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿波罗助赫克托尔杀帕特罗克洛斯",
+        "desc": "阿波罗打掉帕特罗克洛斯的头盔并使其受伤，赫克托尔趁机杀死他。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "16.788-861",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-hermes",
+    "source": "apollo",
+    "target": "hermes",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "偷牛与里拉琴交换",
+        "desc": "赫尔墨斯偷走阿波罗的神牛，后用发明的里拉琴交换，两人和解。",
+        "desc_long": null,
+        "source": {
+          "work": "Homeric Hymn to Hermes",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "apollo-paris",
+    "source": "apollo",
+    "target": "paris",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿波罗指引帕里斯射杀阿喀琉斯",
+        "desc": "阿波罗引导帕里斯的箭射中阿喀琉斯脚踵致其死亡。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "22.359-360",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "ares-athena",
+    "source": "ares",
+    "target": "athena",
+    "primary_type": "hostile",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "雅典娜用巨石击倒阿瑞斯",
+        "desc": "在特洛伊战争中，雅典娜用巨石砸中阿瑞斯颈部使其倒地。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "21.403-408",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "ares-heracles",
+    "source": "ares",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "赫拉克勒斯杀死库克诺斯并刺伤阿瑞斯",
+        "desc": "赫拉克勒斯杀死阿瑞斯之子库克诺斯，并与阿瑞斯交战刺伤其大腿。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "artemis-agamemnon",
+    "source": "artemis",
+    "target": "agamemnon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "要求献祭伊菲革涅亚",
+        "desc": "阿尔忒弥斯因阿伽门农射杀圣鹿而要求献祭其女，否则阻止舰队起航。",
+        "desc_long": null,
+        "source": {
+          "work": "Iphigenia at Aulis",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "artemis-athena",
+    "source": "artemis",
+    "target": "athena",
+    "primary_type": "hostile",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "特洛伊战争中对立",
+        "desc": "阿尔忒弥斯支持特洛伊，雅典娜支持希腊，二神在战场上直接对抗。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "21.470-513",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-achilles",
+    "source": "athena",
+    "target": "achilles",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "助阿喀琉斯杀赫克托尔",
+        "desc": "雅典娜化身赫克托尔的兄弟欺骗赫克托尔，使其停下与阿喀琉斯决斗。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "22.226-247",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-hera",
+    "source": "athena",
+    "target": "hera",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "特洛伊战争中共同支持希腊",
+        "desc": "赫拉与雅典娜联手帮助希腊联军对抗特洛伊。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "密谋反叛宙斯",
+        "desc": "赫拉曾联合雅典娜和波塞冬趁宙斯熟睡时将其捆绑，企图夺权。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "1.399-406",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-heracles",
+    "source": "athena",
+    "target": "heracles",
+    "primary_type": "mentor",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "帮助赫拉克勒斯完成功业",
+        "desc": "雅典娜多次指导赫拉克勒斯，如提供铜钹驱散怪鸟等。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-hermes",
+    "source": "athena",
+    "target": "hermes",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同为宙斯子女",
+        "desc": "雅典娜与赫尔墨斯是宙斯与不同母亲所生的兄妹。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-medusa",
+    "source": "athena",
+    "target": "medusa",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "帮助珀尔修斯斩首美杜莎",
+        "desc": "雅典娜提供盾牌和指导，使珀尔修斯成功杀死美杜莎。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-odysseus",
+    "source": "athena",
+    "target": "odysseus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "雅典娜庇护奥德修斯",
+        "desc": "雅典娜在奥德修斯漂泊期间多次化身帮助他，并助其回家复仇。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-perseus",
+    "source": "athena",
+    "target": "perseus",
+    "primary_type": "mentor",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "提供青铜盾助其斩美杜莎",
+        "desc": "雅典娜借给珀尔修斯闪亮的盾牌以反射美杜莎的石化目光。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-poseidon",
+    "source": "athena",
+    "target": "poseidon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "争夺雅典城",
+        "desc": "雅典娜与波塞冬竞争雅典守护权，雅典娜以橄榄树获胜。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-demeter",
+    "source": "cronus",
+    "target": "demeter",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "克洛诺斯吞食得墨忒尔",
+        "desc": "得墨忒尔出生后被克洛诺斯吞入腹中，后被宙斯救出。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-gaia",
+    "source": "cronus",
+    "target": "gaia",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚生克洛诺斯",
+        "desc": "克洛诺斯是盖亚与乌拉诺斯之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": "137-138",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-hera",
+    "source": "cronus",
+    "target": "hera",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "克洛诺斯吞食赫拉",
+        "desc": "赫拉出生后被克洛诺斯吞入腹中，后被宙斯救出。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-poseidon",
+    "source": "cronus",
+    "target": "poseidon",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "克洛诺斯吞食波塞冬",
+        "desc": "波塞冬出生后被克洛诺斯吞下，后被宙斯救出。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-prometheus",
+    "source": "cronus",
+    "target": "prometheus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "克洛诺斯与普罗米修斯的血缘",
+        "desc": "普罗米修斯是伊阿珀托斯之子，伊阿珀托斯是克洛诺斯的兄弟。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-rhea",
+    "source": "cronus",
+    "target": "rhea",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "克洛诺斯与瑞亚结婚",
+        "desc": "克洛诺斯与妹妹瑞亚结合成为第二代神王神后。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cronus-zeus",
+    "source": "cronus",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "克洛诺斯吞食宙斯被石头代替",
+        "desc": "瑞亚用石头代替宙斯骗过克洛诺斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "demeter-poseidon",
+    "source": "demeter",
+    "target": "poseidon",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "波塞冬化为公马强暴得墨忒尔",
+        "desc": "得墨忒尔为躲避波塞冬化为母马，波塞冬化为公马追上并强暴，生下神马阿里翁。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "demeter-rhea",
+    "source": "demeter",
+    "target": "rhea",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "瑞亚生得墨忒尔",
+        "desc": "得墨忒尔是克洛诺斯与瑞亚之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "demeter-zeus",
+    "source": "demeter",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与得墨忒尔是兄妹",
+        "desc": "二人同为克洛诺斯与瑞亚的子女。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gaia-hera",
+    "source": "gaia",
+    "target": "hera",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚是赫拉的祖母",
+        "desc": "赫拉是克洛诺斯与瑞亚之女，盖亚是克洛诺斯之母。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gaia-poseidon",
+    "source": "gaia",
+    "target": "poseidon",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚是波塞冬的祖母",
+        "desc": "波塞冬是克洛诺斯之子，盖亚是克洛诺斯之母。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gaia-prometheus",
+    "source": "gaia",
+    "target": "prometheus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "普罗米修斯是盖亚之孙",
+        "desc": "普罗米修斯是伊阿珀托斯之子，伊阿珀托斯是盖亚之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gaia-rhea",
+    "source": "gaia",
+    "target": "rhea",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚生瑞亚",
+        "desc": "瑞亚是盖亚与乌拉诺斯之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gaia-zeus",
+    "source": "gaia",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚帮助瑞亚藏匿宙斯",
+        "desc": "盖亚指导瑞亚用石头代替宙斯，并帮助抚养宙斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hector-paris",
+    "source": "hector",
+    "target": "paris",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫克托耳与帕里斯是兄弟",
+        "desc": "二人皆为特洛伊国王普里阿摩斯之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hecate-medea",
+    "source": "hecate",
+    "target": "medea",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫卡忒指导美狄亚魔法",
+        "desc": "赫卡忒作为女巫守护神，传授美狄亚魔药和巫术。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollonius, Argonautica",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "helen-paris",
+    "source": "helen",
+    "target": "paris",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "帕里斯诱拐海伦",
+        "desc": "帕里斯在阿芙洛狄忒帮助下将海伦从斯巴达带到特洛伊。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hera-ares",
+    "source": "hera",
+    "target": "ares",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉生阿瑞斯",
+        "desc": "阿瑞斯是宙斯与赫拉之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hera-demeter",
+    "source": "hera",
+    "target": "demeter",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉与得墨忒尔是姐妹",
+        "desc": "二人同为克洛诺斯与瑞亚之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hera-heracles",
+    "source": "hera",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉迫害赫拉克勒斯",
+        "desc": "赫拉派毒蛇袭击婴儿赫拉克勒斯，并多次设难。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hera-poseidon",
+    "source": "hera",
+    "target": "poseidon",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉与波塞冬是兄妹",
+        "desc": "同为克洛诺斯与瑞亚的子女。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hera-rhea",
+    "source": "hera",
+    "target": "rhea",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "瑞亚生赫拉",
+        "desc": "赫拉是克洛诺斯与瑞亚之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hera-zeus",
+    "source": "hera",
+    "target": "zeus",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood",
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "宙斯与赫拉结婚",
+        "desc": "宙斯化身杜鹃追求赫拉，二人成婚。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "赫拉因宙斯不忠而争斗",
+        "desc": "赫拉多次因宙斯出轨而报复，两人关系紧张。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heracles-jason",
+    "source": "heracles",
+    "target": "jason",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共同参加阿尔戈号远征",
+        "desc": "赫拉克勒斯是阿尔戈英雄之一，与伊阿宋一同寻找金羊毛。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollonius, Argonautica",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heracles-perseus",
+    "source": "heracles",
+    "target": "perseus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉克勒斯是珀尔修斯后裔",
+        "desc": "赫拉克勒斯的母亲阿尔克墨涅是珀尔修斯的孙女。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heracles-theseus",
+    "source": "heracles",
+    "target": "theseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉克勒斯解救忒修斯",
+        "desc": "忒修斯被囚冥界，赫拉克勒斯在完成功业时将其救出。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hermes-odysseus",
+    "source": "hermes",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫尔墨斯传达宙斯旨意",
+        "desc": "赫尔墨斯前往卡吕普索岛命令其释放奥德修斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": "5.43-148",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hermes-perseus",
+    "source": "hermes",
+    "target": "perseus",
+    "primary_type": "ally",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "借武器给珀尔修斯",
+        "desc": "赫尔墨斯借给珀尔修斯弯刀和飞鞋以斩杀美杜莎。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jason-medea",
+    "source": "jason",
+    "target": "medea",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "伊阿宋与美狄亚结婚",
+        "desc": "美狄亚帮助伊阿宋取得金羊毛后，二人成婚并返回希腊。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollonius, Argonautica",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "伊阿宋抛弃美狄亚",
+        "desc": "伊阿宋为娶科林斯公主格劳刻而抛弃美狄亚。",
+        "desc_long": null,
+        "source": null,
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "medusa-perseus",
+    "source": "medusa",
+    "target": "perseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "珀尔修斯斩首美杜莎",
+        "desc": "珀尔修斯在诸神帮助下割下美杜莎的头颅。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "minotaur-theseus",
+    "source": "minotaur",
+    "target": "theseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "忒修斯杀死米诺陶",
+        "desc": "忒修斯进入迷宫杀死牛头怪物米诺陶。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-hector",
+    "source": "odysseus",
+    "target": "hector",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "特洛伊战争中的敌对",
+        "desc": "奥德修斯与赫克托耳在战场上交手。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-paris",
+    "source": "odysseus",
+    "target": "paris",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "特洛伊战争中的敌对",
+        "desc": "奥德修斯与帕里斯在战场上对立。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-penelope",
+    "source": "odysseus",
+    "target": "penelope",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奥德修斯与潘妮洛佩结婚",
+        "desc": "二人结婚生子忒勒马科斯，奥德修斯远征后潘妮洛佩苦等二十年。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-polyphemus",
+    "source": "odysseus",
+    "target": "polyphemus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奥德修斯弄瞎波吕斐摩斯",
+        "desc": "奥德修斯用烧红的木桩刺瞎独眼巨人波吕斐摩斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": "9.375-400",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-poseidon",
+    "source": "odysseus",
+    "target": "poseidon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "波塞冬因儿子被弄瞎而惩罚奥德修斯",
+        "desc": "波塞冬掀起风暴使奥德修斯漂泊十年。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "polyphemus-poseidon",
+    "source": "polyphemus",
+    "target": "poseidon",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "波塞冬之子",
+        "desc": "波吕斐摩斯是波塞冬与海仙女托俄萨之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Odyssey",
+          "locus": "1.70-73",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "poseidon-rhea",
+    "source": "poseidon",
+    "target": "rhea",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "瑞亚生波塞冬",
+        "desc": "波塞冬是克洛诺斯与瑞亚之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "poseidon-zeus",
+    "source": "poseidon",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "抽签分世界",
+        "desc": "宙斯、波塞冬、哈迪斯抽签分管天空、海洋和冥界。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": "15.187-193",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "prometheus-zeus",
+    "source": "prometheus",
+    "target": "zeus",
+    "primary_type": "hostile",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "普罗米修斯盗火被惩罚",
+        "desc": "宙斯将普罗米修斯锁在高加索山，每日鹰啄肝脏。",
+        "desc_long": null,
+        "source": {
+          "work": "Hesiod, Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "普罗米修斯助宙斯赢得泰坦之战",
+        "desc": "普罗米修斯曾站在宙斯一边帮助他推翻克洛诺斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Hesiod, Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "rhea-zeus",
+    "source": "rhea",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "瑞亚生下宙斯",
+        "desc": "瑞亚用石头代替宙斯骗过克洛诺斯。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "theseus-helen",
+    "source": "theseus",
+    "target": "helen",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "忒修斯绑架年幼的海伦",
+        "desc": "忒修斯与皮里托俄斯劫持海伦，后被其兄弟救回。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "theseus-poseidon",
+    "source": "theseus",
+    "target": "poseidon",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "忒修斯是波塞冬之子",
+        "desc": "忒修斯兼具凡父埃勾斯和神父波塞冬的血统。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-aphrodite",
+    "source": "zeus",
+    "target": "aphrodite",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与狄俄涅生阿芙洛狄忒",
+        "desc": "荷马记载阿芙洛狄忒是宙斯与海洋女神狄俄涅之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Iliad",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-apollo",
+    "source": "zeus",
+    "target": "apollo",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与勒托生阿波罗",
+        "desc": "阿波罗是宙斯与勒托之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Homeric Hymn to Apollo",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-ares",
+    "source": "zeus",
+    "target": "ares",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与赫拉生阿瑞斯",
+        "desc": "阿瑞斯是宙斯与赫拉之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-artemis",
+    "source": "zeus",
+    "target": "artemis",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与勒托生阿尔忒弥斯",
+        "desc": "阿尔忒弥斯是宙斯与勒托之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Homeric Hymn to Apollo",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-athena",
+    "source": "zeus",
+    "target": "athena",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯生雅典娜",
+        "desc": "雅典娜全副武装从宙斯额头中跳出。",
+        "desc_long": null,
+        "source": {
+          "work": "Theogony",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-helen",
+    "source": "zeus",
+    "target": "helen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与勒达生海伦",
+        "desc": "海伦是宙斯化为天鹅与勒达所生之女。",
+        "desc_long": null,
+        "source": {
+          "work": "Cypria",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-heracles",
+    "source": "zeus",
+    "target": "heracles",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与阿尔克墨涅生赫拉克勒斯",
+        "desc": "赫拉克勒斯是宙斯与凡人阿尔克墨涅之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-hermes",
+    "source": "zeus",
+    "target": "hermes",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与迈亚生赫尔墨斯",
+        "desc": "赫尔墨斯是宙斯与迈亚之子。",
+        "desc_long": null,
+        "source": {
+          "work": "Homeric Hymn to Hermes",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-perseus",
+    "source": "zeus",
+    "target": "perseus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与达娜厄生珀尔修斯",
+        "desc": "珀尔修斯是宙斯化为金雨与达娜厄所生。",
+        "desc_long": null,
+        "source": {
+          "work": "Apollodorus, Library",
+          "locus": null,
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  }
+]

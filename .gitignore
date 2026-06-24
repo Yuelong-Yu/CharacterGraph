@@ -1,0 +1,45 @@
+# --- Environment & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+.pnpm-store/
+
+# --- Python / uv ---
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.python-version
+.uv-cache/
+*.egg-info/
+
+# --- Data pipeline artifacts ---
+# 原始 Wiki HTML 不进仓库
+data/raw/
+# AI 生成的废稿不进仓库
+public/images/raw/
+
+# --- IDE / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# --- Logs / cache ---
+*.log
+.cache/
+coverage/
+
+# --- Local dev artifacts (not for repo) ---
+tmp/
+.playwright-mcp/
+/*.png
