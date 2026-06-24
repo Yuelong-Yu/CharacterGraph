@@ -193,3 +193,25 @@ BATCH_30_EXTRA = [
 # 当前所有已配置人物
 ALL_CHARACTERS = MVP_18 + BATCH_30_EXTRA
 
+# Batch 怪物 +10：覆盖原始怪物家族（Typhon/Echidna 及其后代）+ 单体名怪 + 海怪 + 标志性飞马
+# 全部归入 era_layer 2（与原始神/泰坦/奥林匹斯神同代际左右，多数为 Typhon × Echidna 后代）
+# 决策来源：用户后续怪物扩展指示 + 经典神话谱系
+BATCH_MONSTERS_10 = [
+    # 原始怪物之亲（2）
+    ("typhon",      "堤丰",         "Typhon",      CharacterCategory.MONSTER, 1, "诸怪之父,百头风暴巨怪"),
+    ("echidna",     "厄客德娜",     "Echidna",     CharacterCategory.MONSTER, 1, "诸怪之母,半人半蛇"),
+    # 堤丰与厄客德娜的后代（5）
+    ("cerberus",    "刻耳柏洛斯",   "Cerberus",    CharacterCategory.MONSTER, 2, "冥府三头犬"),
+    ("chimera",     "喀迈拉",       "Chimera",     CharacterCategory.MONSTER, 2, "狮羊蛇三体喷火怪"),
+    ("hydra",       "九头蛇",       "Hydra",       CharacterCategory.MONSTER, 2, "勒拿沼泽九头蛇"),
+    ("nemean_lion", "涅墨亚狮",     "Nemean Lion", CharacterCategory.MONSTER, 2, "刀枪不入的巨狮"),
+    ("sphinx",      "斯芬克斯",     "Sphinx",      CharacterCategory.MONSTER, 2, "底比斯之谜的人面狮身"),
+    # 海洋双怪（2）
+    ("scylla",      "斯库拉",       "Scylla",      CharacterCategory.MONSTER, 2, "墨西拿海峡六头女妖"),
+    ("charybdis",   "卡律布狄斯",   "Charybdis",   CharacterCategory.MONSTER, 2, "吞海大漩涡"),
+    # 标志性飞兽（1）
+    ("pegasus",     "珀伽索斯",     "Pegasus",     CharacterCategory.MONSTER, 3, "美杜莎血中诞生的飞马"),
+]
+
+ALL_CHARACTERS = ALL_CHARACTERS + BATCH_MONSTERS_10
+

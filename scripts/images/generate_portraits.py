@@ -29,6 +29,7 @@ import json
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -308,6 +309,98 @@ CHARACTER_PROMPTS: dict[str, str] = {
         "颈间挂月牙形银坠饰，右肩后方有双火炬（指引黑夜与冥界）与黑犬剪影，"
         "薄荷青与深紫魔法光辉中带星月微光，背景为月光下的三岔十字路口与远处坟冢"
     ),
+    # ─────────────────────────────────────────
+    # Batch 怪物 +10 — 沿用苔绿/暗紫阴森氛围族 + 单体特征化
+    # ─────────────────────────────────────────
+    # ── 原始怪物之亲 ──
+    "typhon": (
+        "堤丰，诸怪之父、百头风暴巨怪，宇宙级的恐怖存在，"
+        "上半身为肌肉虬结的庞大男性躯干，皮肤暗红如熔岩裂纹，胸膛伤痕累累，"
+        "肩部与背后生出数十条蛇头与龙头交缠（每个头眼眸喷着红色火焰，长舌吐出闪电），"
+        "面容狰狞，主面孔有黑色长须与角，瞳孔燃烧如太阳风暴，"
+        "下半身（隐于画面下缘暗影中）暗示为巨蟒之形，右肩后方有翻腾的风暴云与雷电剪影，"
+        "苔绿色与深紫红交织的末日氛围，背景为塔尔塔罗斯深渊的火山喷发与暴风夜空"
+    ),
+    "echidna": (
+        "厄客德娜，诸怪之母、半人半蛇的远古女妖，上半身为绝美而冰冷的成熟女性，"
+        "苍白如月光的皮肤泛着微弱蛇鳞光泽，乌黑长发如水草缠绕（发间点缀小蛇头），"
+        "翠绿色冷冽眼眸蕴含古老的恶意与母性，朱红色嘴唇微启露出尖牙，"
+        "上身赤裸覆有暗绿色蛇鳞鳞甲（仅覆盖关键部位），肩披深紫黑色破旧披纱，"
+        "下半身（隐于画面下缘）为粗壮的蛇尾盘绕（暗绿与暗金鳞片），"
+        "右肩后方有缠绕的小蛇与子嗣怪物的剪影（隐约可见三头犬/狮头等轮廓），"
+        "苔绿色与暗紫色阴森氛围，背景为阿里马洞穴深处的钟乳石与远古蛇骨"
+    ),
+    # ── 堤丰与厄客德娜的后代 ──
+    "cerberus": (
+        "刻耳柏洛斯，冥府三头犬，赫拉克勒斯第十二功业擒获的看门凶兽，"
+        "三个狰狞凶恶的犬头并排咆哮（每头有暗红色血瞳与暴露的尖牙獠齿），"
+        "毛色为深炭黑与暗灰交织，颈毛粗硬如鬣狮，脖颈处有缠绕的活蛇代替项圈（蛇头愤怒地抬起咝叫），"
+        "肌肉发达的犬科躯体（半身入画，前胸肩部为主），背脊隆起，"
+        "右肩后方有龙头蛇尾的剪影（古典造型中尾为蛇头），脚边阴影中有冥河的黑色雾气，"
+        "苔绿色与深紫黑交织的阴间氛围，背景为冥界入口的黑色门廊与阿刻戎河的鬼火"
+    ),
+    "chimera": (
+        "喀迈拉，狮羊蛇三体喷火怪，狰狞而怪异的复合野兽，"
+        "主头为咆哮的金棕色雄狮（猩红鬃毛沾血、獠牙外露、眼眸燃烧），"
+        "肩背中央长出一颗山羊头（卷曲犄角、邪恶的横瞳黄眼，从口中喷出橘红色烈焰），"
+        "尾部（隐于画面右侧）化为粗壮的青绿色巨蛇（蛇头探出咝叫，分叉的舌头吐着毒液），"
+        "雄狮的胸膛与前肢肌肉如雕塑般强劲，皮毛上有焦痕与战斗伤口，"
+        "右肩后方有翻腾的烈焰剪影，"
+        "苔绿色与暗橘红色火光交织，背景为吕基亚的火山岩地裂缝与浓烟"
+    ),
+    "hydra": (
+        "勒拿九头蛇（许德拉），赫拉克勒斯第二功业斩杀的沼泽巨蛇，"
+        "九颗蜿蜒蛇头从粗壮的蛇身基部分开向四面咝叫（其中一颗为不死的金色蛇头位居正中，其余八颗为暗绿色），"
+        "每颗蛇头眼瞳为冷绿或猩红，分叉长舌吐出毒液与黑色雾气，獠牙锋利，"
+        "鳞甲为深苔绿与暗黑相间，蛇身肌肉饱满盘旋（仅露出基部与肩颈位置入画），"
+        "蛇身上有被烧灼的伤痕（暗示赫拉克勒斯以火封伤口），"
+        "右肩后方有沼泽水雾与火把焰光剪影，"
+        "苔绿色与暗黑紫氛围，背景为勒拿沼泽的腐烂芦苇与黑沼水面"
+    ),
+    "nemean_lion": (
+        "涅墨亚狮，赫拉克勒斯第一功业斩杀的刀枪不入巨狮，"
+        "庞大如熊罴的雄狮，金棕色与古铜色相间的鬃毛茂密如太阳鬃焰（鬃毛中可见战斗中折断的箭头与剑尖），"
+        "面容威猛而傲气，深琥珀色眼眸闪着野性光辉，獠牙微露，"
+        "肌肉饱满的前胸与肩部入画（金属般坚硬刀枪不入的皮毛），毛色泛着金属反光，"
+        "前爪硕大利爪如弯刀，右肩后方有断折的剑与长矛剪影（暗示无数挑战者的失败），"
+        "苔绿色与暗金色光辉，背景为涅墨亚山谷的洞穴入口与黄昏血色天空"
+    ),
+    "sphinx": (
+        "斯芬克斯，底比斯之谜的人面狮身女妖，神秘而美丽的复合怪物，"
+        "上半身为绝美而冷酷的女性面容（深棕色卷曲长发垂下，金色发带束起，琥珀色智慧眼眸蕴含谜题），"
+        "肩背处生出巨大的金棕色雄鹰双翼（半张开），下身（半隐于阴影）为雄狮的躯干与利爪，"
+        "胸前有微妙的羽毛过渡到狮皮的纹理，颈间挂金色护符刻有埃及风格符文，"
+        "右肩后方有底比斯山岩与道路的剪影（暗示她端坐于山隘出谜），"
+        "苔绿色与暗金色调中带一抹诡秘紫色，背景为底比斯城外的悬崖与黄昏天空"
+    ),
+    # ── 海洋双怪 ──
+    "scylla": (
+        "斯库拉，墨西拿海峡的六头女妖，曾经美丽少女被诅咒化为的恐怖海怪，"
+        "上半身为依稀可辨的苍白美丽女性（金色长发缠绕海藻与珊瑚，碧绿色哀伤眼眸），"
+        "腰部以下化为暗青色海蛇与犬头交错的怪物群（六颗咆哮的犬头从腰间长出，每头有獠牙与红舌，"
+        "腰下还有十二条触手般的章鱼足蜿蜒），鳞片为深海蓝绿色泛着冷光，"
+        "右肩后方有翻涌的黑色巨浪与漩涡的剪影，远处隐约可见破碎的船桅，"
+        "苔绿色与暗深蓝阴森氛围，背景为墨西拿海峡的暴风夜海与悬崖暗礁"
+    ),
+    "charybdis": (
+        "卡律布狄斯，吞海的庞然大漩涡，已不复人形的海洋恐怖（古典传说中曾为波塞冬之女被宙斯惩罚化为漩涡），"
+        "画面中央是巨大的黑色海水漩涡口（直径占满画面中心，水墙环绕旋转），"
+        "漩涡边缘隐约浮现一张古老的女性面容（被海水扭曲，仅依稀可见空洞的眼眶与张开吞噬的巨口），"
+        "漩涡内部是无底的深渊黑暗，周围海水翻腾飞溅，碎裂的船板与桅杆被吸入其中，"
+        "右上方阴影中有翻腾的乌云与闪电剪影，"
+        "苔绿色与暗黑深蓝交织的恐怖氛围，背景为墨西拿海峡对岸的悬崖与暴风雨天空"
+    ),
+    # ── 标志性飞兽 ──
+    "pegasus": (
+        "珀伽索斯，美杜莎颈血中诞生的圣洁飞马，神性的洁白骏马，"
+        "纯白色光滑健美的马身（鬃毛与尾巴如银白色丝缎被风扬起），"
+        "侧身入画（颈部、肩、前胸与展开的双翼为主），头部高昂带骄傲与灵性，"
+        "深邃聪慧的琥珀色眼眸（带着不同于其他怪物的神圣感），"
+        "肩背处生出巨大的洁白羽翼半张开（每根羽毛带着金色光辉与微弱星光），"
+        "蹄子是闪着月光的灰白色（传说踏出泉源），脚边阴影中有泉水涌出的剪影，"
+        "深紫黑天空中带星辰的光晕（不同于其他怪物的金白色神性光辉），"
+        "背景为赫利孔山的悬崖与缪斯泉源，暗紫蓝夜空中有一颗将升起的飞马星座"
+    ),
 }
 
 
@@ -373,49 +466,67 @@ def process_to_portrait_and_thumb(raw_png: bytes, slug: str) -> None:
     thumb.save(THUMBS_DIR / f"{slug}.webp", "WEBP", quality=85, method=6)
 
 
-def main(target_slugs: list[str] | None = None):
+def _generate_and_save(slug: str) -> tuple[str, str | None]:
+    """Worker：返回 (slug, error_msg or None)。供线程池并发调用。"""
+    if slug not in CHARACTER_PROMPTS:
+        return slug, "无 prompt 定义"
+
+    portrait_path = PORTRAITS_DIR / f"{slug}.webp"
+    if portrait_path.exists():
+        print(f"  {slug}: 已存在，跳过", flush=True)
+        return slug, None
+
+    desc = CHARACTER_PROMPTS[slug]
+    print(f"  {slug}: 生成中...", flush=True)
+    t0 = time.time()
+    try:
+        raw = generate_one(slug, desc)
+        process_to_portrait_and_thumb(raw, slug)
+    except Exception as e:
+        return slug, f"{type(e).__name__}: {e}"
+    dt = time.time() - t0
+    print(f"  ✓ {slug}: {dt:.1f}s, raw {len(raw)//1024}KB → portraits/{slug}.webp + thumbs/{slug}.webp", flush=True)
+    return slug, None
+
+
+def main(target_slugs: list[str] | None = None, parallel: int = 5):
     if target_slugs is None:
         target_slugs = list(CHARACTER_PROMPTS.keys())
 
-    print(f"准备生成 {len(target_slugs)} 张：{target_slugs}")
+    print(f"准备生成 {len(target_slugs)} 张，并行 {parallel}：{target_slugs}")
     print()
 
     ok = 0
-    fail: list[str] = []
-    for i, slug in enumerate(target_slugs, start=1):
-        if slug not in CHARACTER_PROMPTS:
-            print(f"[{i}/{len(target_slugs)}] ✗ {slug}: 无 prompt 定义")
-            fail.append(slug)
-            continue
-
-        portrait_path = PORTRAITS_DIR / f"{slug}.webp"
-        if portrait_path.exists():
-            print(f"[{i}/{len(target_slugs)}] {slug}: 已存在，跳过")
-            ok += 1
-            continue
-
-        desc = CHARACTER_PROMPTS[slug]
-        print(f"[{i}/{len(target_slugs)}] {slug}: 生成中...")
-        t0 = time.time()
-        try:
-            raw = generate_one(slug, desc)
-        except Exception as e:
-            print(f"  ✗ {type(e).__name__}: {e}")
-            fail.append(slug)
-            continue
-
-        process_to_portrait_and_thumb(raw, slug)
-        dt = time.time() - t0
-        print(f"  ✓ {dt:.1f}s, raw {len(raw)//1024}KB → portraits/{slug}.webp + thumbs/{slug}.webp")
-        ok += 1
+    fail: list[tuple[str, str]] = []
+    with ThreadPoolExecutor(max_workers=parallel) as ex:
+        future_map = {ex.submit(_generate_and_save, slug): slug for slug in target_slugs}
+        for fut in as_completed(future_map):
+            slug, err = fut.result()
+            if err:
+                fail.append((slug, err))
+            else:
+                ok += 1
 
     print()
     print("=" * 60)
     print(f"完成 {ok}/{len(target_slugs)}")
     if fail:
-        print(f"失败：{fail}")
+        print(f"失败：")
+        for slug, err in fail:
+            print(f"  - {slug}: {err}")
 
 
 if __name__ == "__main__":
     args = sys.argv[1:]
-    main(args if args else None)
+    # 支持 `--parallel N` 选项
+    parallel = 5
+    slugs: list[str] = []
+    i = 0
+    while i < len(args):
+        if args[i] == "--parallel" and i + 1 < len(args):
+            parallel = int(args[i + 1])
+            i += 2
+        else:
+            slugs.append(args[i])
+            i += 1
+    main(slugs if slugs else None, parallel=parallel)

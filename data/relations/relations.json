@@ -1745,5 +1745,406 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 1,
+    "id": "typhon-echidna",
+    "source": "typhon",
+    "target": "echidna",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "诸怪之父与诸怪之母的结合",
+        "desc": "堤丰与厄客德娜结合,生下希腊神话中最负盛名的一系列怪物:刻耳柏洛斯、九头蛇、喀迈拉、涅墨亚狮、斯芬克斯等。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "306-325",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "typhon-cerberus",
+    "source": "typhon",
+    "target": "cerberus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堤丰之子刻耳柏洛斯",
+        "desc": "刻耳柏洛斯由堤丰与厄客德娜所生,为冥府守门三头犬。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "310-312",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "echidna-cerberus",
+    "source": "echidna",
+    "target": "cerberus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "厄客德娜之子刻耳柏洛斯",
+        "desc": "刻耳柏洛斯由厄客德娜所诞,与堤丰共为其父母。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "310-312",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "typhon-hydra",
+    "source": "typhon",
+    "target": "hydra",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堤丰之女九头蛇",
+        "desc": "九头蛇许德拉由堤丰与厄客德娜所生,后由赫拉抚养于勒拿沼泽,以备对付赫拉克勒斯。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "313-318",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "echidna-hydra",
+    "source": "echidna",
+    "target": "hydra",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "厄客德娜之女九头蛇",
+        "desc": "厄客德娜与堤丰生下勒拿九头蛇许德拉。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "313-318",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "typhon-chimera",
+    "source": "typhon",
+    "target": "chimera",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堤丰之女喀迈拉",
+        "desc": "喷火怪兽喀迈拉为堤丰与厄客德娜所生,前狮后蛇中段为羊。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "319-325",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "echidna-chimera",
+    "source": "echidna",
+    "target": "chimera",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "厄客德娜之女喀迈拉",
+        "desc": "厄客德娜与堤丰共同生下喀迈拉。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "319-325",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "echidna-nemean_lion",
+    "source": "echidna",
+    "target": "nemean_lion",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "涅墨亚狮的母系出身",
+        "desc": "涅墨亚狮在赫西俄德版本中由厄客德娜与其子奥尔特罗斯所生,刀枪不入。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "326-332",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "echidna-sphinx",
+    "source": "echidna",
+    "target": "sphinx",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "斯芬克斯的母系出身",
+        "desc": "斯芬克斯被记为厄客德娜与奥尔特罗斯之女,为底比斯之谜的人面狮身女妖。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "326-332",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zeus-typhon",
+    "source": "zeus",
+    "target": "typhon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯雷霆封堤丰于埃特纳",
+        "desc": "宙斯以雷霆与堤丰展开天界级搏斗,最终将整座埃特纳火山砸下,把堤丰永远封在西西里岛之下。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "853-868",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heracles-nemean_lion",
+    "source": "heracles",
+    "target": "nemean_lion",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第一功业:徒手扼杀涅墨亚狮",
+        "desc": "赫拉克勒斯发现涅墨亚狮刀枪不入,以橄榄棍打晕后徒手扼死,并以其爪剥皮披身,自此狮皮成为他的标志。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.1",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heracles-hydra",
+    "source": "heracles",
+    "target": "hydra",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第二功业:斩九头蛇",
+        "desc": "赫拉克勒斯在伊俄拉俄斯协助下灼伤断口阻止再生,斩下不死之头并封于巨石下;以九头蛇毒血浸箭。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.2",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heracles-cerberus",
+    "source": "heracles",
+    "target": "cerberus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第十二功业:擒获冥府三头犬",
+        "desc": "赫拉克勒斯获哈迪斯许可后,赤手与三头犬搏斗,以双臂扼住其颈直至屈服,将其带至欧律斯透斯面前后送回冥府。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.12",
+          "translator": null
+        },
+        "era_order": 12
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "medusa-pegasus",
+    "source": "medusa",
+    "target": "pegasus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "美杜莎颈血诞飞马",
+        "desc": "珀耳修斯斩下美杜莎首级时,从她的颈血中跃出飞马珀伽索斯与持金剑的巨人克律萨俄耳。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "278-286",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "poseidon-pegasus",
+    "source": "poseidon",
+    "target": "pegasus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "波塞冬之子飞马",
+        "desc": "珀伽索斯为波塞冬与美杜莎所生,从美杜莎颈血中跃出,成为海神之圣兽。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "278-286",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "perseus-pegasus",
+    "source": "perseus",
+    "target": "pegasus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "由珀耳修斯斩首美杜莎而诞生",
+        "desc": "飞马珀伽索斯在珀耳修斯斩首美杜莎之刻诞生,在部分版本中珀耳修斯曾乘其飞行救出安德洛墨达。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "4.770-803",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-scylla",
+    "source": "odysseus",
+    "target": "scylla",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "海峡之险中失六水手",
+        "desc": "奥德修斯依喀耳刻之言贴斯库拉一侧通过墨西拿海峡,虽被斯库拉抓走六名同伴,却避免了被卡律布狄斯整船吞没。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "12.245-259",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-charybdis",
+    "source": "odysseus",
+    "target": "charybdis",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "无花果树脱险",
+        "desc": "奥德修斯抱木桅漂至卡律布狄斯漩涡口,纵身攀住悬崖无花果树,等漩涡吐出木桅时再次跃下,得以幸免。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "12.426-446",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "scylla-charybdis",
+    "source": "scylla",
+    "target": "charybdis",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "海峡双怪相对而居",
+        "desc": "两怪相距一箭之地,守在墨西拿海峡两岸,使过往船只无法两全——避其一必落另一手中。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "12.101-110",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
   }
 ]

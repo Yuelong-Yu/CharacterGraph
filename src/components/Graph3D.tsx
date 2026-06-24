@@ -568,18 +568,20 @@ export function Graph3D({
       const baseColor = new THREE.Color(CATEGORY_COLOR[node.ch.category]);
 
       // 头像尺寸（半身像 2:3）
-      const spriteW = isHighlighted ? 16 : isSelected ? 13 : 12;
+      //   中心节点（巡游 / focus 中心）显著放大，其他节点同步缩小，形成 3x 视觉对比
+      //   目的：让屏幕中心节点鹤立鸡群，避免其下方文字被周围节点图片侵占
+      const spriteW = isHighlighted ? 24 : isSelected ? 13 : 8;
       const spriteH = spriteW * 1.5;
-      const spriteCenterY = (isSelected || isHighlighted) ? 1.2 : 0;
+      const spriteCenterY = isHighlighted ? 2.5 : isSelected ? 1.2 : 0;
       // 头像下沿 Y 坐标 = 中心 - 半高
       const spriteBottomY = spriteCenterY - spriteH / 2;
-      // 名字标签位置：始终在头像下沿之下，留 3 单位间隙
-      const labelTextHeight = isHighlighted ? 5.5 : 4.5;
-      const labelY = spriteBottomY - labelTextHeight / 2 - 3;
+      // 名字标签位置：始终在头像下沿之下，留较大间隙避免视觉粘连
+      const labelTextHeight = isHighlighted ? 6.5 : 4.5;
+      const labelGap = isHighlighted ? 4 : 3;
+      const labelY = spriteBottomY - labelTextHeight / 2 - labelGap;
       // 称号位置：名字下方拉开足够间距（label 整体高度 + 间距）
-      // SpriteText 实际占用 = textHeight + padding≈2 + 一些缓冲
-      const epiTextHeight = isHighlighted ? 2.8 : 2.4;
-      const epiY = labelY - labelTextHeight - 1.5;
+      const epiTextHeight = isHighlighted ? 3.2 : 2.4;
+      const epiY = labelY - labelTextHeight - 1.8;
 
       // 1) 背后彩色 halo
       const haloMat = new THREE.SpriteMaterial({
@@ -592,7 +594,7 @@ export function Graph3D({
         blending: THREE.AdditiveBlending,
       });
       const halo = new THREE.Sprite(haloMat);
-      const haloScale = isHighlighted ? 32 : isSelected ? 26 : 22;
+      const haloScale = isHighlighted ? 48 : isSelected ? 26 : 16;
       halo.scale.set(haloScale, haloScale, 1);
       halo.position.z = -0.3;
       halo.renderOrder = topMost ? 9990 : 500;
@@ -615,9 +617,6 @@ export function Graph3D({
         const plane = new THREE.Mesh(planeGeo, planeMat);
         plane.position.set(0, spriteCenterY, 0.2);
         plane.renderOrder = topMost ? 9991 : 600;
-        plane.onBeforeRender = (_renderer, _scene, camera) => {
-          plane.quaternion.copy(camera.quaternion);
-        };
         group.add(plane);
       }
 
@@ -631,7 +630,7 @@ export function Graph3D({
         depthTest: false,
       });
       const shadow = new THREE.Sprite(shadowMat);
-      const shadowW = isHighlighted ? 22 : 16;
+      const shadowW = isHighlighted ? 32 : 11;
       shadow.scale.set(shadowW, shadowW * 0.25, 1);
       shadow.position.set(0, spriteBottomY - 1, -0.2);
       shadow.renderOrder = topMost ? 9989 : 499;
@@ -662,7 +661,6 @@ export function Graph3D({
         const labelMesh = new THREE.Mesh(labelGeo, labelMat);
         labelMesh.position.set(0, labelY, 0);
         labelMesh.renderOrder = 9992;
-        labelMesh.onBeforeRender = (_r, _s, camera) => labelMesh.quaternion.copy(camera.quaternion);
         group.add(labelMesh);
       } else {
         const label = new SpriteText(node.ch.name_zh);
@@ -710,7 +708,6 @@ export function Graph3D({
           const epiMesh = new THREE.Mesh(epiGeo, epiMat);
           epiMesh.position.set(0, epiY, 0);
           epiMesh.renderOrder = 9993;
-          epiMesh.onBeforeRender = (_r, _s, camera) => epiMesh.quaternion.copy(camera.quaternion);
           group.add(epiMesh);
         } else {
           const epi = new SpriteText(node.ch.epithet);
@@ -732,6 +729,14 @@ export function Graph3D({
           group.add(epi);
         }
       }
+
+      // ── 整组 billboard：让整个节点 group 始终面向相机 ──
+      // 这是解决"任何相机角度下文字都在图片正下方、不被自身或邻居图片遮挡"的关键：
+      // group 自身朝相机旋转后，"下方"在屏幕空间始终向下，labelY/epiY 的负偏移
+      // 才能稳定呈现在头像下方，而非（在仰视/俯视下）漂移到头像上或与之重合。
+      group.onBeforeRender = (_renderer, _scene, camera) => {
+        group.quaternion.copy(camera.quaternion);
+      };
 
       return group;
     },
