@@ -30,7 +30,6 @@ export const CATEGORY_COLOR: Record<CharacterCategory, string> = {
   trojan:           "#b03a2e",   // 砖红 — 小亚细亚
   argonaut:         "#3a4ec2",   // 航蓝 — 出海
   independent_hero: "#8b8230",   // 橄榄绿金 — 典范
-  mortal_noncombat: "#7c7672",   // 中灰 — 凡俗
   minor_deity:      "#3da095",   // 深青绿 — 精灵
 };
 
@@ -43,7 +42,6 @@ export const CATEGORY_LABEL: Record<CharacterCategory, string> = {
   trojan:           "特洛伊方",
   argonaut:         "阿尔戈英雄",
   independent_hero: "独立英雄",
-  mortal_noncombat: "凡人非战角色",
   minor_deity:      "次要神祇/宁芙",
 };
 

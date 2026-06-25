@@ -2566,5 +2566,539 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 2,
+    "id": "aphrodite-hephaestus",
+    "source": "aphrodite",
+    "target": "hephaestus",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "正式婚姻",
+        "desc": "阿芙洛狄忒是赫淮斯托斯的妻子,但她与阿瑞斯私通,最终被赫淮斯托斯以金网捉奸。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "8.266-366",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ares-hephaestus",
+    "source": "ares",
+    "target": "hephaestus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金网捉奸",
+        "desc": "赫淮斯托斯以无形金网捉住阿瑞斯与阿芙洛狄忒,召来众神围观二人羞辱。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "8.266-366",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hera-hephaestus",
+    "source": "hera",
+    "target": "hephaestus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉之子",
+        "desc": "赫淮斯托斯在多种传统中为赫拉之子;一说赫拉无夫而生,后因其跛足将其抛下奥林匹斯。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "927-929",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "zeus-hephaestus",
+    "source": "zeus",
+    "target": "hephaestus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯与赫拉之子版本",
+        "desc": "荷马传统常称赫淮斯托斯为宙斯与赫拉之子,在奥林匹斯诸神宴饮中任斟酒与工匠神。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "1.571-600",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hephaestus-pandoras_box",
+    "source": "hephaestus",
+    "target": "pandoras_box",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "塑造潘多拉",
+        "desc": "赫淮斯托斯奉宙斯命以泥土塑造潘多拉,潘多拉带来的陶瓮成为人间诸苦之源。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《劳作与时日》",
+          "locus": "60-82",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hephaestus-shield_of_achilles",
+    "source": "hephaestus",
+    "target": "shield_of_achilles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "铸造阿喀琉斯之盾",
+        "desc": "忒提斯求赫淮斯托斯为阿喀琉斯重铸盔甲,神匠锻造了刻画宇宙与人间秩序的名盾。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "18.468-608",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "achilles-shield_of_achilles",
+    "source": "achilles",
+    "target": "shield_of_achilles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "接受新甲复仇",
+        "desc": "阿喀琉斯从母亲忒提斯处获得赫淮斯托斯所铸新盾,重返战场为帕特罗克洛斯复仇。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "19.12-23",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hermes-caduceus",
+    "source": "hermes",
+    "target": "caduceus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "信使权杖",
+        "desc": "赫尔墨斯持双蛇杖为众神传令、调停纷争并引导亡魂。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "24.1-14",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "apollo-caduceus",
+    "source": "apollo",
+    "target": "caduceus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赠杖和解",
+        "desc": "赫尔墨斯偷牛后以里拉琴与阿波罗和解,阿波罗赠其传令官之杖。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致赫尔墨斯》",
+          "locus": "496-532",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "odysseus-bow_of_odysseus",
+    "source": "odysseus",
+    "target": "bow_of_odysseus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "开弓复仇",
+        "desc": "奥德修斯归乡后拉开自己的大弓,一箭穿过十二斧孔,随后射杀求婚者。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "21.404-423, 22.1-88",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "penelope-bow_of_odysseus",
+    "source": "penelope",
+    "target": "bow_of_odysseus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "设试弓竞赛",
+        "desc": "潘妮洛佩以奥德修斯之弓设下择夫条件,拖延求婚者并让真正的主人重获武器。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "21.1-79",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ariadne-thread_of_ariadne",
+    "source": "ariadne",
+    "target": "thread_of_ariadne",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赠线团",
+        "desc": "阿里阿德涅赠忒修斯线团,使他能进入迷宫后循线返回。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.15.8",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "theseus-thread_of_ariadne",
+    "source": "theseus",
+    "target": "thread_of_ariadne",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "循线出迷宫",
+        "desc": "忒修斯杀死米诺陶后循阿里阿德涅线团返回,带同伴逃离迷宫。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.15.8",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "daedalus-thread_of_ariadne",
+    "source": "daedalus",
+    "target": "thread_of_ariadne",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "指出线团之法",
+        "desc": "代达罗斯作为迷宫设计者,向阿里阿德涅提示以线团标记路径的脱身办法。",
+        "desc_long": null,
+        "source": {
+          "work": "普鲁塔克《忒修斯传》",
+          "locus": "19",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "oedipus-sphinx",
+    "source": "oedipus",
+    "target": "sphinx",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "解谜胜斯芬克斯",
+        "desc": "俄狄浦斯答出斯芬克斯之谜,斯芬克斯羞愤坠崖,底比斯得救。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.5.8",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ariadne-theseus",
+    "source": "ariadne",
+    "target": "theseus",
+    "primary_type": "ally",
+    "composite_types": [
+      "marriage"
+    ],
+    "events": [
+      {
+        "title": "助忒修斯出迷宫",
+        "desc": "阿里阿德涅爱上忒修斯,赠线团助其杀米诺陶并逃离迷宫。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.15.8",
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "纳克索斯遗弃",
+        "desc": "忒修斯带她离开克里特后在纳克索斯遗弃她,她后为狄俄尼索斯所迎娶。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "E1.9",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "daedalus-minotaur",
+    "source": "daedalus",
+    "target": "minotaur",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "建造迷宫囚禁米诺陶",
+        "desc": "代达罗斯为米诺斯建造拉比林斯迷宫,将米诺陶囚于中心。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.1.4",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "daedalus-ariadne",
+    "source": "daedalus",
+    "target": "ariadne",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "传授线团之法",
+        "desc": "代达罗斯将出迷宫的方法告知阿里阿德涅,她再以线团帮助忒修斯。",
+        "desc_long": null,
+        "source": {
+          "work": "普鲁塔克《忒修斯传》",
+          "locus": "19",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "circe-odysseus",
+    "source": "circe",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "变水手为猪",
+        "desc": "喀耳刻将奥德修斯部下变为猪,奥德修斯凭赫尔墨斯神草抵抗魔法迫使她解除。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "10.210-309",
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "指点冥府与海峡",
+        "desc": "和解后喀耳刻指点奥德修斯下冥府,并告诫塞壬、斯库拉与卡律布狄斯之险。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "10.488-540, 12.37-126",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "circe-scylla",
+    "source": "circe",
+    "target": "scylla",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "嫉妒变海怪",
+        "desc": "奥维德传统中,喀耳刻因嫉妒格劳科斯爱斯库拉,在斯库拉沐浴处投毒,使其下身化为犬头海怪。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "13.898-14.74",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cassandra-paris",
+    "source": "cassandra",
+    "target": "paris",
+    "primary_type": "blood",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "预见帕里斯灾祸",
+        "desc": "卡桑德拉预见帕里斯将为特洛伊带来毁灭,却因阿波罗诅咒无人相信。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.12.5",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cassandra-agamemnon",
+    "source": "cassandra",
+    "target": "agamemnon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "战利品与同死",
+        "desc": "特洛伊陷落后卡桑德拉被分给阿伽门农,带回迈锡尼后预言二人将死,最终同被克吕泰涅斯特拉杀害。",
+        "desc_long": null,
+        "source": {
+          "work": "埃斯库罗斯《阿伽门农》",
+          "locus": "1072-1330",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "andromeda-perseus",
+    "source": "andromeda",
+    "target": "perseus",
+    "primary_type": "marriage",
+    "composite_types": [
+      "ally"
+    ],
+    "events": [
+      {
+        "title": "珀尔修斯救安德洛墨达",
+        "desc": "安德洛墨达被锁岩献给海怪,珀尔修斯路过救下她并娶为妻。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "4.706-739",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "andromeda-medusa_head",
+    "source": "andromeda",
+    "target": "medusa_head",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "首级石化海怪",
+        "desc": "珀尔修斯以美杜莎首级石化或击败海怪,救下被献祭的安德洛墨达。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "4.706-739",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
   }
 ]

@@ -26,7 +26,6 @@ export const CharacterCategory = z.enum([
   "trojan",            // 特洛伊方 — 砖红
   "argonaut",          // 阿尔戈英雄 — 航蓝
   "independent_hero",  // 独立英雄 — 橄榄金
-  "mortal_noncombat",  // 凡人非战角色 — 米灰
   "minor_deity",       // 次要神祇/宁芙 — 薄荷青
 ]);
 export type CharacterCategory = z.infer<typeof CharacterCategory>;

@@ -27,7 +27,6 @@ class CharacterCategory(str, Enum):
     TROJAN = "trojan"
     ARGONAUT = "argonaut"
     INDEPENDENT_HERO = "independent_hero"
-    MORTAL_NONCOMBAT = "mortal_noncombat"
     MINOR_DEITY = "minor_deity"
 
 
@@ -193,8 +192,8 @@ MVP_18 = [
     # 独立英雄 (2)
     ("heracles",   "赫拉克勒斯", "Heracles",   CharacterCategory.INDEPENDENT_HERO, 3, "十二功业的完成者"),
     ("perseus",    "珀尔修斯",   "Perseus",    CharacterCategory.INDEPENDENT_HERO, 3, "美杜莎的斩首者"),
-    # 凡人非战角色 (1)
-    ("helen",      "海伦",       "Helen",      CharacterCategory.MORTAL_NONCOMBAT, 4, "斯巴达王后,特洛伊战争之因"),
+    # 特洛伊方关联角色 (1)
+    ("helen",      "海伦",       "Helen",      CharacterCategory.TROJAN, 4, "斯巴达王后,特洛伊战争之因"),
 ]
 
 # Batch 2: 12 人扩展 → 累计 30，覆盖全部 10 类
@@ -216,8 +215,8 @@ BATCH_30_EXTRA = [
     ("medea",      "美狄亚",     "Medea",      CharacterCategory.ARGONAUT, 3, "科尔基斯公主,女巫"),
     # 独立英雄 +1
     ("theseus",    "忒修斯",     "Theseus",    CharacterCategory.INDEPENDENT_HERO, 3, "雅典之王,迷宫斩牛者"),
-    # 凡人非战角色 +1
-    ("penelope",   "潘妮洛佩",   "Penelope",   CharacterCategory.MORTAL_NONCOMBAT, 4, "奥德修斯之妻,忠贞的典范"),
+    # 阿开亚联军家属 +1
+    ("penelope",   "潘妮洛佩",   "Penelope",   CharacterCategory.ACHAEAN, 4, "奥德修斯之妻,忠贞的典范"),
     # 次要神祇/宁芙 +1（开启第 10 类）
     ("hecate",     "赫卡忒",     "Hecate",     CharacterCategory.MINOR_DEITY, 2, "魔法、夜晚与十字路口女神"),
 ]
@@ -247,6 +246,19 @@ BATCH_MONSTERS_10 = [
 
 ALL_CHARACTERS = ALL_CHARACTERS + BATCH_MONSTERS_10
 
+# Batch 高叙事频率人物 +7：补赫淮斯托斯与底比斯/迷宫/奥德赛/特洛伊/珀尔修斯断点
+BATCH_HIGH_FREQ_7 = [
+    ("hephaestus", "赫淮斯托斯", "Hephaestus", CharacterCategory.OLYMPIAN, 2, "火焰、锻造与工匠之神"),
+    ("oedipus",    "俄狄浦斯",   "Oedipus",    CharacterCategory.INDEPENDENT_HERO, 4, "解开斯芬克斯之谜的底比斯王"),
+    ("ariadne",    "阿里阿德涅", "Ariadne",    CharacterCategory.INDEPENDENT_HERO, 3, "赠线团助忒修斯出迷宫的克里特公主"),
+    ("daedalus",   "代达罗斯",   "Daedalus",   CharacterCategory.INDEPENDENT_HERO, 3, "迷宫与飞翼的神匠"),
+    ("circe",      "喀耳刻",     "Circe",      CharacterCategory.MINOR_DEITY, 3, "艾尤岛女巫,变形魔法的主人"),
+    ("cassandra",  "卡桑德拉",   "Cassandra",  CharacterCategory.TROJAN, 4, "无人相信的特洛伊预言者"),
+    ("andromeda",  "安德洛墨达", "Andromeda",  CharacterCategory.INDEPENDENT_HERO, 3, "被珀尔修斯救下的埃塞俄比亚公主"),
+]
+
+ALL_CHARACTERS = ALL_CHARACTERS + BATCH_HIGH_FREQ_7
+
 
 # ─────────────────────────────────────────────────────────────
 # Artifact MVP 12 件(id, 中文名, 英文名, 分类, 一句话描述)
@@ -267,5 +279,10 @@ ALL_ARTIFACTS = [
     ("winged_sandals",   "金翼草鞋",       "Winged Sandals",      ArtifactCategory.TREASURE, "赫尔墨斯/珀尔修斯的飞行神鞋"),
     ("pandoras_box",     "潘多拉之盒",     "Pandora's Pithos",    ArtifactCategory.TREASURE, "封禁众苦的陶瓮"),
     ("trojan_horse",     "特洛伊木马",     "Trojan Horse",        ArtifactCategory.TREASURE, "希腊联军破城之诡计"),
+    # Batch 高频器物 +4
+    ("caduceus",          "双蛇杖",         "Caduceus",            ArtifactCategory.TREASURE, "赫尔墨斯的信使权杖"),
+    ("bow_of_odysseus",   "奥德修斯之弓",   "Bow of Odysseus",     ArtifactCategory.WEAPON,   "伊塔卡归乡复仇的试弓"),
+    ("shield_of_achilles", "阿喀琉斯之盾",  "Shield of Achilles",  ArtifactCategory.WEAPON,   "赫淮斯托斯所铸的宇宙之盾"),
+    ("thread_of_ariadne", "阿里阿德涅线团", "Thread of Ariadne",   ArtifactCategory.TREASURE, "走出克里特迷宫的救命线"),
 ]
 

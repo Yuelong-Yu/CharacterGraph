@@ -1,0 +1,18 @@
+{
+  "schema_version": 2,
+  "id": "thread_of_ariadne",
+  "name_zh": "阿里阿德涅线团",
+  "name_en": "Thread of Ariadne",
+  "aliases": ["线团", "Ariadne's Thread"],
+  "epithet": "走出克里特迷宫的救命线",
+  "category": "treasure",
+  "bio": "阿里阿德涅线团是迷宫叙事中最朴素却最关键的宝物。忒修斯进入克里特迷宫之前,阿里阿德涅爱上他,在代达罗斯指点下取得线团。忒修斯将线头固定在入口,深入时不断放线,杀死米诺陶后循线返回,带领雅典贡品逃离迷宫。这个线团没有神火与金属,却胜过武器:它把“勇武的杀怪”变成“可以返回的行动”。后世“阿里阿德涅之线”成为在复杂困境中保持方向、找出路径的象征。",
+  "events": [
+    {"title": "阿里阿德涅赠线", "desc": "阿里阿德涅爱上忒修斯,向代达罗斯求得出迷宫之法,赠忒修斯线团。", "source": {"work": "阿波罗多洛斯《书库》", "locus": "3.15.8", "translator": null}},
+    {"title": "忒修斯循线入迷宫", "desc": "忒修斯将线头系在迷宫入口,一边深入一边放线,在中心找到并杀死米诺陶。", "source": {"work": "阿波罗多洛斯《书库》", "locus": "3.15.8", "translator": null}},
+    {"title": "循线返回", "desc": "杀死米诺陶后,忒修斯沿线团原路返回,救出同伴并逃离克里特。", "source": {"work": "普鲁塔克《忒修斯传》", "locus": "19", "translator": null}}
+  ],
+  "domains": ["迷宫", "路径", "解谜", "逃离"],
+  "portrait": "/images/portraits/thread_of_ariadne.webp",
+  "thumb": "/images/thumbs/thread_of_ariadne.webp"
+}

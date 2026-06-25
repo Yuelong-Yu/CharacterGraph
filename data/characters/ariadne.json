@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "id": "ariadne",
+  "name_zh": "阿里阿德涅",
+  "name_en": "Ariadne",
+  "aliases": ["Ariadna"],
+  "epithet": "赠线团助忒修斯出迷宫的克里特公主",
+  "category": "independent_hero",
+  "era_layer": 3,
+  "bio": "阿里阿德涅是克里特国王米诺斯与帕西淮之女,米诺陶的同母异父姐姐。雅典王子忒修斯作为贡品抵达克里特时,阿里阿德涅爱上他,在代达罗斯指点下赠予线团,使其进入迷宫后能循线返回。忒修斯杀死米诺陶后带她逃离克里特,却在纳克索斯岛将她遗弃。此后狄俄尼索斯发现并娶她为妻,赠予她星冠;她死后或直接被置于星空,其冠化为北冕座。阿里阿德涅既是迷宫叙事的救命线,也是从凡人公主转为神妻的关键女性。",
+  "events": [
+    {"title": "爱上忒修斯", "desc": "忒修斯抵达克里特准备入迷宫赴死,阿里阿德涅爱上他并暗中协助。", "source": {"work": "阿波罗多洛斯《书库》", "locus": "3.15.8", "translator": null}},
+    {"title": "赠线团", "desc": "阿里阿德涅从代达罗斯处得知出迷宫之法,赠忒修斯线团,嘱其一边深入一边放线,杀死米诺陶后循线返回。", "source": {"work": "阿波罗多洛斯《书库》", "locus": "3.15.8", "translator": null}},
+    {"title": "纳克索斯遗弃", "desc": "忒修斯带阿里阿德涅离开克里特,却在纳克索斯岛将她遗弃。版本或谓雅典娜/狄俄尼索斯命其如此。", "source": {"work": "阿波罗多洛斯《书库》", "locus": "E1.9", "translator": null}},
+    {"title": "狄俄尼索斯迎娶", "desc": "狄俄尼索斯在纳克索斯发现阿里阿德涅并娶她为妻,将她的星冠置于天上,化为北冕座。", "source": {"work": "奥维德《变形记》", "locus": "8.169-182", "translator": null}}
+  ],
+  "quotes": [],
+  "weapons": ["线团"],
+  "skills": ["提供线索", "宫廷谋划"],
+  "domains": ["迷宫", "线索", "背弃", "神婚"],
+  "mounts": [],
+  "portrait": "/images/portraits/ariadne.webp",
+  "thumb": "/images/thumbs/ariadne.webp"
+}
