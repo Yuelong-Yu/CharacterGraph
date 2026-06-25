@@ -451,6 +451,9 @@ export function Graph3D({
         center.fx = pos.cx;
         center.fy = -pos.cy;
         center.fz = 0;
+        center.x = center.fx;
+        center.y = center.fy;
+        center.z = center.fz;
         const others = sg.ids.filter((id) => id !== sg.centerId);
         others.forEach((id, i) => {
           const n = hitNodes.find((x) => x.id === id);
@@ -459,6 +462,9 @@ export function Graph3D({
           n.fx = pos.cx + sg.radius * Math.cos(angle);
           n.fy = -pos.cy + sg.radius * Math.sin(angle);
           n.fz = 0;
+          n.x = n.fx;
+          n.y = n.fy;
+          n.z = n.fz;
         });
       }
 
@@ -477,11 +483,17 @@ export function Graph3D({
             n.fx = lonerCx;
             n.fy = -lonerCy;
             n.fz = 0;
+            n.x = n.fx;
+            n.y = n.fy;
+            n.z = n.fz;
           } else {
             const angle = (i / loners.length) * Math.PI * 2 - Math.PI / 2;
             n.fx = lonerCx + lonerRadius * Math.cos(angle);
             n.fy = -lonerCy + lonerRadius * Math.sin(angle);
             n.fz = 0;
+            n.x = n.fx;
+            n.y = n.fy;
+            n.z = n.fz;
           }
         });
       }
@@ -496,8 +508,32 @@ export function Graph3D({
       });
 
       fgRef.current.d3ReheatSimulation();
-      // 镜头:俯视命中区域,zoomToFit 仅看到命中节点(可见性过滤已经隐藏其他)
-      setTimeout(() => fgRef.current?.zoomToFit(900, 80), 100);
+      // 镜头:过滤平铺态强制俯视 + 对命中节点 bounding box 做 Zoom to Fit。
+      // 不用 zoomToFit:react-force-graph 在 force tick 尚未更新 x/y/z 时会按旧/全局坐标 fit,导致画面被拉得过远。
+      setTimeout(() => {
+        if (!fgRef.current || hitNodes.length === 0) return;
+        const xs = hitNodes.map((n) => n.x ?? n.fx ?? 0);
+        const ys = hitNodes.map((n) => n.y ?? n.fy ?? 0);
+        const minX = Math.min(...xs);
+        const maxX = Math.max(...xs);
+        const minY = Math.min(...ys);
+        const maxY = Math.max(...ys);
+        const cx = (minX + maxX) / 2;
+        const cy = (minY + maxY) / 2;
+        const worldW = Math.max(80, maxX - minX + 140);
+        const worldH = Math.max(80, maxY - minY + 140);
+        const aspect = size.w / Math.max(1, size.h);
+        const fov = (50 * Math.PI) / 180;
+        const halfTan = Math.tan(fov / 2);
+        const distForH = (worldH / 2) / halfTan;
+        const distForW = (worldW / 2) / (halfTan * aspect);
+        const dist = Math.max(120, distForH, distForW);
+        fgRef.current.cameraPosition(
+          { x: cx, y: cy, z: dist },
+          { x: cx, y: cy, z: 0 },
+          900,
+        );
+      }, 100);
     } else {
       // 普通模式：根据 layoutMode 重置锁定
       nodes.forEach((n) => {
@@ -512,7 +548,7 @@ export function Graph3D({
         fgRef.current?.zoomToFit(900, 60);
       }, 200);
     }
-  }, [focusedId, neighborSet, nodes, layoutMode, matchedIds, dataset.relations]);
+  }, [focusedId, neighborSet, nodes, layoutMode, matchedIds, dataset.relations, size.w, size.h]);
 
   // ── focusNodeId（外部要求把镜头对准某节点，不是聚焦模式）──
   useEffect(() => {
