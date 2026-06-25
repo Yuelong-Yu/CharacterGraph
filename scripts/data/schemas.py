@@ -259,6 +259,35 @@ BATCH_HIGH_FREQ_7 = [
 
 ALL_CHARACTERS = ALL_CHARACTERS + BATCH_HIGH_FREQ_7
 
+# Batch 大扩展 +15:补冥界、奥林匹斯主神缺位、特洛伊战争阵容、阿尔戈/独立英雄与名怪
+BATCH_EXPANSION_15 = [
+    # 奥林匹斯/冥界 (3)
+    ("hades",          "哈迪斯",       "Hades",          CharacterCategory.OLYMPIAN, 2, "冥界之王,亡者与财富之神"),
+    ("persephone",     "珀耳塞福涅",   "Persephone",     CharacterCategory.OLYMPIAN, 2, "冥后,春之女神"),
+    ("dionysus",       "狄俄尼索斯",   "Dionysus",       CharacterCategory.OLYMPIAN, 3, "酒、狂欢与戏剧之神"),
+    # 泰坦 (1)
+    ("atlas",          "阿特拉斯",     "Atlas",          CharacterCategory.TITAN, 1, "以双肩擎天的泰坦"),
+    # 次要神祇 (1)
+    ("thetis",         "忒提斯",       "Thetis",         CharacterCategory.MINOR_DEITY, 2, "海中女神,阿喀琉斯之母"),
+    # 阿开亚联军 (2)
+    ("patroclus",      "帕特罗克洛斯", "Patroclus",      CharacterCategory.ACHAEAN, 4, "阿喀琉斯挚友"),
+    ("menelaus",       "墨涅拉俄斯",   "Menelaus",       CharacterCategory.ACHAEAN, 4, "斯巴达王,海伦之夫"),
+    # 特洛伊方 (2)
+    ("priam",          "普里阿摩斯",   "Priam",          CharacterCategory.TROJAN, 4, "特洛伊末代国王"),
+    ("aeneas",         "埃涅阿斯",     "Aeneas",         CharacterCategory.TROJAN, 4, "特洛伊幸存者,罗马先祖"),
+    # 阿尔戈英雄 (1)
+    ("orpheus",        "奥菲斯",       "Orpheus",        CharacterCategory.ARGONAUT, 3, "下冥府寻妻的乐圣"),
+    # 独立英雄 (1)
+    ("bellerophon",    "柏勒洛丰",     "Bellerophon",    CharacterCategory.INDEPENDENT_HERO, 3, "驯飞马屠喀迈拉的英雄"),
+    # 怪物 (4)
+    ("sirens",         "塞壬",         "Sirens",         CharacterCategory.MONSTER, 3, "以歌声诱杀水手的海妖"),
+    ("argus_panoptes", "阿耳戈斯",     "Argus Panoptes", CharacterCategory.MONSTER, 2, "百眼不眠的看守巨人"),
+    ("harpies",        "哈耳庇厄",     "Harpies",        CharacterCategory.MONSTER, 2, "夺食施秽的鸟身女妖"),
+    ("ladon",          "拉冬",         "Ladon",          CharacterCategory.MONSTER, 2, "看守金苹果的百头巨龙"),
+]
+
+ALL_CHARACTERS = ALL_CHARACTERS + BATCH_EXPANSION_15
+
 
 # ─────────────────────────────────────────────────────────────
 # Artifact MVP 12 件(id, 中文名, 英文名, 分类, 一句话描述)
@@ -284,5 +313,11 @@ ALL_ARTIFACTS = [
     ("bow_of_odysseus",   "奥德修斯之弓",   "Bow of Odysseus",     ArtifactCategory.WEAPON,   "伊塔卡归乡复仇的试弓"),
     ("shield_of_achilles", "阿喀琉斯之盾",  "Shield of Achilles",  ArtifactCategory.WEAPON,   "赫淮斯托斯所铸的宇宙之盾"),
     ("thread_of_ariadne", "阿里阿德涅线团", "Thread of Ariadne",   ArtifactCategory.TREASURE, "走出克里特迷宫的救命线"),
+    # Batch 大扩展器物 +5
+    ("lyre",              "里拉琴",         "Lyre",                ArtifactCategory.TREASURE, "赫尔墨斯所造、奥菲斯弹奏的神弦"),
+    ("club_of_heracles",  "赫拉克勒斯橄榄木棒", "Club of Heracles", ArtifactCategory.WEAPON,   "赫拉克勒斯亲手削成的橄榄巨棒"),
+    ("cornucopia",        "丰饶角",         "Cornucopia",          ArtifactCategory.TREASURE, "永不枯竭的丰饶之角"),
+    ("spear_of_achilles", "佩利昂木梣枪",   "Pelian Spear",        ArtifactCategory.WEAPON,   "唯阿喀琉斯能挥动的梣木长枪"),
+    ("bow_of_heracles",   "赫拉克勒斯之弓", "Bow of Heracles",     ArtifactCategory.WEAPON,   "淬九头蛇毒、终结特洛伊的神弓"),
 ]
 

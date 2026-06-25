@@ -3100,5 +3100,1143 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hades-persephone",
+    "source": "hades",
+    "target": "persephone",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "劫掠为冥后",
+        "desc": "哈迪斯从大地裂口掳走采花的珀耳塞福涅,立为冥后;后经宙斯调停形成四季之约。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致得墨忒尔》",
+          "locus": "1-39",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hades-zeus",
+    "source": "hades",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三分宇宙",
+        "desc": "哈迪斯与宙斯、波塞冬为兄弟,泰坦战后抽签,哈迪斯得冥界。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "15.187-193",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hades-poseidon",
+    "source": "hades",
+    "target": "poseidon",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三王兄弟",
+        "desc": "哈迪斯与波塞冬同为克洛诺斯之子,分治冥界与海洋。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "15.187-193",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cronus-hades",
+    "source": "cronus",
+    "target": "hades",
+    "primary_type": "blood",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "吞子之父",
+        "desc": "哈迪斯为克洛诺斯所生,曾被吞入腹中,后被宙斯救出。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "453-467",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "demeter-persephone",
+    "source": "demeter",
+    "target": "persephone",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女与四季",
+        "desc": "珀耳塞福涅为得墨忒尔之女,被掳后母亲悲伤使大地荒芜,石榴籽之约造成四季。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致得墨忒尔》",
+          "locus": "40-90",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "zeus-persephone",
+    "source": "zeus",
+    "target": "persephone",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯之女",
+        "desc": "珀耳塞福涅为宙斯与得墨忒尔之女,宙斯默许哈迪斯娶她,后又调停其归期。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致得墨忒尔》",
+          "locus": "1-3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hades-heracles",
+    "source": "hades",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "许擒三头犬",
+        "desc": "赫拉克勒斯第十二功业擒冥府三头犬,须经哈迪斯准许,在不用武器前提下徒手制伏。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.12",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "zeus-dionysus",
+    "source": "zeus",
+    "target": "dionysus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "两次出生",
+        "desc": "塞墨勒被雷火焚死,宙斯取出腹中胎儿缝入大腿足月再生,狄俄尼索斯为宙斯之子。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.4.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "dionysus-ariadne",
+    "source": "dionysus",
+    "target": "ariadne",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "纳克索斯迎娶",
+        "desc": "狄俄尼索斯在纳克索斯发现被忒修斯遗弃的阿里阿德涅,娶其为妻并将星冠升天。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "8.176-182",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hera-dionysus",
+    "source": "hera",
+    "target": "dionysus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉的迫害",
+        "desc": "赫拉因嫉恨诱使塞墨勒求宙斯显真身致其焚死,并持续迫害狄俄尼索斯。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.4.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "atlas-heracles",
+    "source": "atlas",
+    "target": "heracles",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "代取金苹果",
+        "desc": "赫拉克勒斯第十一功业请阿特拉斯代取金苹果,自己暂代擎天,后以巧言诱其归位。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.11",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "atlas-perseus",
+    "source": "atlas",
+    "target": "perseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "石化为山",
+        "desc": "珀尔修斯求宿被阿特拉斯拒绝,亮出美杜莎首级将其石化为阿特拉斯山脉。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "4.627-662",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cronus-atlas",
+    "source": "cronus",
+    "target": "atlas",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "泰坦同盟",
+        "desc": "阿特拉斯在泰坦之战中站在克洛诺斯一方对抗奥林匹斯神,战败后受擎天之罚。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "517-520",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "thetis-achilles",
+    "source": "thetis",
+    "target": "achilles",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "淬炼与庇护",
+        "desc": "忒提斯为阿喀琉斯之母,曾浸其于冥河使之近乎不死,战中屡屡庇护并求铸新甲。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "1.495-530",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "thetis-hephaestus",
+    "source": "thetis",
+    "target": "hephaestus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "求铸新甲",
+        "desc": "忒提斯亲赴赫淮斯托斯神炉,求他为阿喀琉斯打造新盾与铠甲。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "18.369-467",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "thetis-zeus",
+    "source": "thetis",
+    "target": "zeus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "恳请助子",
+        "desc": "忒提斯上奥林匹斯恳请宙斯让特洛伊军占上风,以凸显其子的重要。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "1.495-530",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "achilles-patroclus",
+    "source": "achilles",
+    "target": "patroclus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "挚友之死",
+        "desc": "帕特罗克洛斯披阿喀琉斯之甲出战被赫克托耳所杀,促使阿喀琉斯重返战场复仇。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "16.783-857",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "patroclus-hector",
+    "source": "patroclus",
+    "target": "hector",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫克托耳杀帕特罗克洛斯",
+        "desc": "帕特罗克洛斯追击至城墙被阿波罗击晕,终被赫克托耳所杀并夺甲。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "16.818-857",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "menelaus-helen",
+    "source": "menelaus",
+    "target": "helen",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻与失而复合",
+        "desc": "墨涅拉俄斯为海伦之夫,海伦被帕里斯带走引发战争,城破后二人重新复合。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "E5.21",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "menelaus-paris",
+    "source": "menelaus",
+    "target": "paris",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阵前单挑",
+        "desc": "墨涅拉俄斯与帕里斯阵前单挑几乎将其勒死,帕里斯被阿芙洛狄忒救走。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "3.340-382",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "agamemnon-menelaus",
+    "source": "agamemnon",
+    "target": "menelaus",
+    "primary_type": "blood",
+    "composite_types": [
+      "ally"
+    ],
+    "events": [
+      {
+        "title": "兄弟统军",
+        "desc": "阿伽门农为兄,墨涅拉俄斯为弟,兄长为弟纠集联军远征特洛伊。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "E3.6",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "priam-hector",
+    "source": "priam",
+    "target": "hector",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子与赎尸",
+        "desc": "普里阿摩斯为赫克托耳之父,赫克托耳战死后老王只身入希腊营赎回其尸。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "24.477-551",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "priam-paris",
+    "source": "priam",
+    "target": "paris",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "庇护之子",
+        "desc": "普里阿摩斯为帕里斯之父,虽知祸患仍庇护带回海伦的儿子。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "3.161-170",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "priam-cassandra",
+    "source": "priam",
+    "target": "cassandra",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "卡桑德拉为普里阿摩斯之女,其预言城破无人相信。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.12.5",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "priam-achilles",
+    "source": "priam",
+    "target": "achilles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "跪求归尸",
+        "desc": "普里阿摩斯夜入希腊营跪求阿喀琉斯归还赫克托耳遗体,阿喀琉斯为之动容。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "24.477-670",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "aeneas-aphrodite",
+    "source": "aeneas",
+    "target": "aphrodite",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "埃涅阿斯为阿芙洛狄忒与凡人安喀塞斯之子,战中屡被母亲救护。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "5.311-318",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "aeneas-priam",
+    "source": "aeneas",
+    "target": "priam",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "特洛伊王族同袍",
+        "desc": "埃涅阿斯为特洛伊王族勇将,城破后背父携子逃出,延续特洛伊血脉。",
+        "desc_long": null,
+        "source": {
+          "work": "维吉尔《埃涅阿斯纪》",
+          "locus": "2.705-729",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "aeneas-achilles",
+    "source": "aeneas",
+    "target": "achilles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "交锋被救",
+        "desc": "埃涅阿斯与阿喀琉斯交锋陷险,被波塞冬救走,因命运注定其将延续血脉。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "20.288-340",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "orpheus-jason",
+    "source": "orpheus",
+    "target": "jason",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿尔戈同行",
+        "desc": "奥菲斯随伊阿宋远征,以琴声压塞壬、安风浪,助阿尔戈号脱险。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "4.903-919",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "orpheus-hades",
+    "source": "orpheus",
+    "target": "hades",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "以琴动冥王",
+        "desc": "奥菲斯下冥府以琴声哀求,打动哈迪斯获准带亡妻还阳。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "10.40-48",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "orpheus-persephone",
+    "source": "orpheus",
+    "target": "persephone",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "打动冥后",
+        "desc": "奥菲斯的琴声令珀耳塞福涅动容,劝哈迪斯允其携妻还阳。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "10.40-48",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "bellerophon-pegasus",
+    "source": "bellerophon",
+    "target": "pegasus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "驯服飞马",
+        "desc": "柏勒洛丰得雅典娜金辔头,在比瑞涅泉边驯服珀伽索斯,乘其凌空作战。",
+        "desc_long": null,
+        "source": {
+          "work": "品达《奥林匹亚颂歌》",
+          "locus": "13.63-92",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "bellerophon-chimera",
+    "source": "bellerophon",
+    "target": "chimera",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "屠喀迈拉",
+        "desc": "柏勒洛丰乘飞马俯冲,以铅块投入喀迈拉喷火之口将其窒息杀死。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.3.2",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "bellerophon-athena",
+    "source": "bellerophon",
+    "target": "athena",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赐金辔头",
+        "desc": "雅典娜显灵赐柏勒洛丰金辔头,使其得以驯服飞马。",
+        "desc_long": null,
+        "source": {
+          "work": "品达《奥林匹亚颂歌》",
+          "locus": "13.63-92",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "odysseus-sirens",
+    "source": "odysseus",
+    "target": "sirens",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "缚桅听歌",
+        "desc": "奥德修斯令水手蜡封耳、自己绑于桅杆,听塞壬之歌而不致丧命,成唯一生还者。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "12.165-200",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "circe-sirens",
+    "source": "circe",
+    "target": "sirens",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "预警塞壬",
+        "desc": "喀耳刻预先警告奥德修斯塞壬以歌声诱杀水手,并教其应对之法。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "12.39-54",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "orpheus-sirens",
+    "source": "orpheus",
+    "target": "sirens",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "琴声压塞壬",
+        "desc": "阿尔戈号经过塞壬之岛,奥菲斯以更美的琴声盖过塞壬歌声,使英雄安然驶过。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "4.903-919",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "argus_panoptes-hermes",
+    "source": "argus_panoptes",
+    "target": "hermes",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "催眠诛百眼",
+        "desc": "赫尔墨斯以芦笛与冗长故事使阿耳戈斯百眼逐一闭上,趁其全睡将其杀死。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "1.668-721",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "argus_panoptes-hera",
+    "source": "argus_panoptes",
+    "target": "hera",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉命看守",
+        "desc": "赫拉派阿耳戈斯看守被变成母牛的伊俄,死后将其百眼移入孔雀尾羽。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.1.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "argus_panoptes-echidna",
+    "source": "argus_panoptes",
+    "target": "echidna",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诛厄客德娜",
+        "desc": "阿耳戈斯曾在厄客德娜睡梦中将其杀死,以惩其吞食过路人。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.1.2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "harpies-jason",
+    "source": "harpies",
+    "target": "jason",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿尔戈驱妖",
+        "desc": "阿尔戈英雄中的北风之子追逐哈耳庇厄,将其逐离,使盲先知菲纽斯重获进食。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "2.262-300",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ladon-heracles",
+    "source": "ladon",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "守苹果与第十一功业",
+        "desc": "拉冬看守赫斯珀里得斯金苹果,赫拉克勒斯取苹果时须越过这条百头巨龙。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.11",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ladon-golden_apple",
+    "source": "ladon",
+    "target": "golden_apple",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "看守金苹果",
+        "desc": "拉冬盘绕在结金苹果的圣树上永不睡眠,守护盖亚送给赫拉的婚礼圣果。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.11",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "atlas-golden_apple",
+    "source": "atlas",
+    "target": "golden_apple",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金苹果园之主",
+        "desc": "金苹果园由阿特拉斯之女赫斯珀里得斯看守,阿特拉斯代赫拉克勒斯摘取金苹果。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.11",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hades-helm_of_darkness",
+    "source": "hades",
+    "target": "helm_of_darkness",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "冥王之盔",
+        "desc": "隐身头盔为哈迪斯所有,由独眼巨人锻造,可使佩戴者完全隐形。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "1.2.1",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "orpheus-lyre",
+    "source": "orpheus",
+    "target": "lyre",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "乐圣之琴",
+        "desc": "奥菲斯以里拉琴奏出摄人心魄之乐,驯兽、动草木、压塞壬、动冥王。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "10.40-48",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hermes-lyre",
+    "source": "hermes",
+    "target": "lyre",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "发明里拉琴",
+        "desc": "初生的赫尔墨斯以龟壳造出第一把里拉琴,后赠予阿波罗换得和解。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致赫尔墨斯》",
+          "locus": "24-61",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "apollo-lyre",
+    "source": "apollo",
+    "target": "lyre",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "音乐之神之琴",
+        "desc": "赫尔墨斯将里拉琴赠予阿波罗,阿波罗成为音乐之神并传琴艺予奥菲斯。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致赫尔墨斯》",
+          "locus": "496-512",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "heracles-club_of_heracles",
+    "source": "heracles",
+    "target": "club_of_heracles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "橄榄木棒",
+        "desc": "赫拉克勒斯亲手削成橄榄木棒,以之击晕涅墨亚狮,成为标志武器。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.1",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "achilles-spear_of_achilles",
+    "source": "achilles",
+    "target": "spear_of_achilles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "佩利昂木梣枪",
+        "desc": "喀戎所赠梣木长枪极重,唯阿喀琉斯能挥,用以刺杀赫克托耳。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "16.140-144",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "heracles-bow_of_heracles",
+    "source": "heracles",
+    "target": "bow_of_heracles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "九头蛇毒弓",
+        "desc": "赫拉克勒斯以九头蛇毒淬箭,临终将弓与毒箭赠予菲罗克忒忒斯。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "bow_of_heracles-paris",
+    "source": "bow_of_heracles",
+    "target": "paris",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "射杀帕里斯",
+        "desc": "菲罗克忒忒斯持赫拉克勒斯之弓射杀帕里斯,扫清攻陷特洛伊的关键障碍。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "E5.8",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "dionysus-hades",
+    "source": "dionysus",
+    "target": "hades",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "下冥府接母",
+        "desc": "狄俄尼索斯下冥界接回生母塞墨勒,使之封神升天。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.5.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "rhea-hades",
+    "source": "rhea",
+    "target": "hades",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "哈迪斯为瑞亚与克洛诺斯之子。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "453-458",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
   }
 ]
