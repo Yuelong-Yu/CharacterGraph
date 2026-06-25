@@ -4,12 +4,12 @@
  * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤 + 搜索过滤
  */
 import { useMemo, useState } from "react";
-import type { Dataset, Character, CharacterCategory } from "@/schemas/character";
+import type { Artifact, ArtifactCategory, Dataset, Character, CharacterCategory } from "@/schemas/character";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
 import { Intro } from "./Intro";
-import { CATEGORY_LABEL, COLOR, FONT } from "@/lib/tokens";
+import { ARTIFACT_CATEGORY_LABEL, CATEGORY_LABEL, COLOR, FONT } from "@/lib/tokens";
 
 type Selection =
   | { kind: "none" }
@@ -17,7 +17,15 @@ type Selection =
   | { kind: "edge"; id: string };
 
 const ALL_CATEGORIES = Object.keys(CATEGORY_LABEL) as CharacterCategory[];
+const ALL_ARTIFACT_CATEGORIES = Object.keys(ARTIFACT_CATEGORY_LABEL) as ArtifactCategory[];
 const SEARCH_TRIGGER_LEN = 2;
+
+type SearchEntity = Character | Artifact;
+
+function hasCharacterOnlyMatch(c: Character, q: string): boolean {
+  return c.quotes.some((qu) => qu.text.includes(q)) ||
+    c.skills.some((s) => s.includes(q));
+}
 
 /**
  * 严格子串匹配:与 SearchBox.computeHits 同语义,仅返回 id 集。
@@ -27,24 +35,23 @@ const SEARCH_TRIGGER_LEN = 2;
  *   quotes.text / skills / domains
  * - 中文按原样 includes,英文 lowercase 折叠
  */
-function computeMatchedIds(characters: Character[], rawQuery: string): Set<string> | null {
+function computeMatchedIds(items: SearchEntity[], rawQuery: string): Set<string> | null {
   const q = rawQuery.trim();
   if (q.length < SEARCH_TRIGGER_LEN) return null;
   const qLower = q.toLowerCase();
   const matched = new Set<string>();
-  for (const c of characters) {
+  for (const item of items) {
     if (
-      c.name_zh.includes(q) ||
-      c.name_en.toLowerCase().includes(qLower) ||
-      (c.epithet && c.epithet.includes(q)) ||
-      c.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower)) ||
-      (c.bio && c.bio.includes(q)) ||
-      c.events.some((e) => e.title.includes(q) || e.desc.includes(q)) ||
-      c.quotes.some((qu) => qu.text.includes(q)) ||
-      c.skills.some((s) => s.includes(q)) ||
-      c.domains.some((d) => d.includes(q))
+      item.name_zh.includes(q) ||
+      item.name_en.toLowerCase().includes(qLower) ||
+      (item.epithet && item.epithet.includes(q)) ||
+      item.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower)) ||
+      (item.bio && item.bio.includes(q)) ||
+      item.events.some((e) => e.title.includes(q) || e.desc.includes(q)) ||
+      item.domains.some((d) => d.includes(q)) ||
+      ("quotes" in item && hasCharacterOnlyMatch(item, q))
     ) {
-      matched.add(c.id);
+      matched.add(item.id);
     }
   }
   return matched;
@@ -58,6 +65,9 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const [enabledCategories, setEnabledCategories] = useState<Set<CharacterCategory>>(
     () => new Set(ALL_CATEGORIES),
   );
+  const [enabledArtifactCategories, setEnabledArtifactCategories] = useState<Set<ArtifactCategory>>(
+    () => new Set(ALL_ARTIFACT_CATEGORIES),
+  );
   const [minDegree, setMinDegree] = useState<number>(0);
   // 加载即进入巡游模式
   const [autoTour, setAutoTour] = useState<boolean>(true);
@@ -67,10 +77,18 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const [draftQuery, setDraftQuery] = useState<string>("");
   const [committedQuery, setCommittedQuery] = useState<string>("");
 
+  const searchItems = useMemo(
+    () => [
+      ...dataset.characters.map((entity) => ({ kind: "character" as const, entity })),
+      ...dataset.artifacts.map((entity) => ({ kind: "artifact" as const, entity })),
+    ],
+    [dataset.characters, dataset.artifacts],
+  );
+
   // 已应用的命中集 — 仅由 committedQuery 计算,驱动 3D 过滤平铺
   const matchedIds = useMemo(
-    () => computeMatchedIds(dataset.characters, committedQuery),
-    [dataset.characters, committedQuery],
+    () => computeMatchedIds([...dataset.characters, ...dataset.artifacts], committedQuery),
+    [dataset.characters, dataset.artifacts, committedQuery],
   );
 
   const handleSearchChange = (q: string) => {
@@ -103,6 +121,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const degreeInfo = useMemo(() => {
     const m = new Map<string, number>();
     for (const c of dataset.characters) m.set(c.id, 0);
+    for (const a of dataset.artifacts) m.set(a.id, 0);
     for (const r of dataset.relations) {
       m.set(r.source, (m.get(r.source) ?? 0) + 1);
       m.set(r.target, (m.get(r.target) ?? 0) + 1);
@@ -114,13 +133,20 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const character = sel.kind === "node"
     ? dataset.characters.find((c) => c.id === sel.id)
     : null;
+  const artifact = sel.kind === "node"
+    ? dataset.artifacts.find((a) => a.id === sel.id)
+    : null;
+  const nodeById = useMemo(
+    () => new Map([...dataset.characters, ...dataset.artifacts].map((n) => [n.id, n])),
+    [dataset.characters, dataset.artifacts],
+  );
   const relation = sel.kind === "edge"
     ? dataset.relations.find((r) => r.id === sel.id)
     : null;
   const relChars = relation
     ? {
-        source: dataset.characters.find((c) => c.id === relation.source),
-        target: dataset.characters.find((c) => c.id === relation.target),
+        source: nodeById.get(relation.source),
+        target: nodeById.get(relation.target),
       }
     : null;
 
@@ -165,8 +191,20 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const allCategories = () => setEnabledCategories(new Set(ALL_CATEGORIES));
   const noCategories = () => setEnabledCategories(new Set());
 
+  const toggleArtifactCategory = (cat: ArtifactCategory) => {
+    setEnabledArtifactCategories((prev) => {
+      const next = new Set(prev);
+      if (next.has(cat)) next.delete(cat);
+      else next.add(cat);
+      return next;
+    });
+  };
+  const allArtifactCategories = () => setEnabledArtifactCategories(new Set(ALL_ARTIFACT_CATEGORIES));
+  const noArtifactCategories = () => setEnabledArtifactCategories(new Set());
+
   // 缓存 set 给 Graph3D 用，避免每次 render 都重建依赖
   const enabledSet = useMemo(() => enabledCategories, [enabledCategories]);
+  const enabledArtifactSet = useMemo(() => enabledArtifactCategories, [enabledArtifactCategories]);
 
   return (
     <div
@@ -182,7 +220,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
       <Intro />
       <div style={{ borderRight: `1px solid ${COLOR.border}`, position: "relative" }}>
         <SearchBox
-          characters={dataset.characters}
+          items={searchItems}
           query={draftQuery}
           onQueryChange={handleSearchChange}
           onPick={handleSearchPick}
@@ -190,13 +228,17 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
           onClear={handleSearchClear}
           filterApplied={matchedIds !== null}
           appliedCount={matchedIds?.size ?? 0}
-          totalCount={dataset.characters.length}
+          totalCount={dataset.characters.length + dataset.artifacts.length}
         />
         <Legend
           enabledCategories={enabledSet}
+          enabledArtifactCategories={enabledArtifactSet}
           onCategoryToggle={toggleCategory}
           onCategoriesAll={allCategories}
           onCategoriesNone={noCategories}
+          onArtifactCategoryToggle={toggleArtifactCategory}
+          onArtifactCategoriesAll={allArtifactCategories}
+          onArtifactCategoriesNone={noArtifactCategories}
         />
         <LayoutToggle value={layoutMode} onChange={setLayoutMode} />
         <AutoTourToggle value={autoTour} onChange={setAutoTour} />
@@ -207,7 +249,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
           visibleCount={
             Array.from(degreeInfo.map.entries()).filter(([, d]) => d >= minDegree).length
           }
-          total={dataset.characters.length}
+          total={dataset.characters.length + dataset.artifacts.length}
         />
         <Graph3D
           dataset={dataset}
@@ -217,6 +259,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
           focusedId={focusedId}
           focusNodeId={focusId}
           enabledCategories={enabledSet}
+          enabledArtifactCategories={enabledArtifactSet}
           minDegree={minDegree}
           matchedIds={matchedIds}
           autoTour={autoTour}
@@ -248,7 +291,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
               · 左下角：切换分层 / 自由布局
             </div>
             <div style={{ marginTop: 24, fontSize: 12 }}>
-              数据：{dataset.characters.length} 人 · {dataset.relations.length} 条关系
+              数据：{dataset.characters.length} 人 · {dataset.artifacts.length} 件神器 · {dataset.relations.length} 条关系
             </div>
           </div>
         )}
@@ -351,6 +394,122 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
             <Section
               title="主要事件"
               items={character.events.map((e) => (
+                <div key={e.title} style={{ marginBottom: 12 }}>
+                  <strong style={{ color: COLOR.accent, fontSize: 13 }}>{e.title}</strong>
+                  <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
+                    {e.desc}
+                  </div>
+                  {e.source && (
+                    <div style={{ fontFamily: FONT.mono, fontSize: 10, color: COLOR.textMuted, marginTop: 4 }}>
+                      《{e.source.work}》{e.source.locus ?? ""}
+                    </div>
+                  )}
+                </div>
+              ))}
+            />
+          </div>
+        )}
+
+        {artifact && (
+          <div>
+            <div
+              style={{
+                width: "100%",
+                aspectRatio: "2 / 3",
+                background: COLOR.bgRaised,
+                borderRadius: 8,
+                overflow: "hidden",
+                marginBottom: 16,
+                position: "relative",
+                border: `1px solid ${COLOR.border}`,
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={artifact.portrait}
+                alt={artifact.name_zh}
+                loading="lazy"
+                decoding="async"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                  animation: "fadeIn 400ms ease-out",
+                }}
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                }}
+              />
+            </div>
+
+            <div style={{ fontFamily: FONT.serif, fontSize: 28, fontWeight: 600 }}>
+              {artifact.name_zh}
+            </div>
+            <div style={{ fontFamily: FONT.mono, fontSize: 11, color: COLOR.textMuted, letterSpacing: "0.1em" }}>
+              {artifact.name_en} · {artifact.category.toUpperCase()}
+            </div>
+
+            {artifact.epithet && (
+              <div
+                style={{
+                  marginTop: 10,
+                  paddingTop: 10,
+                  borderTop: `1px solid ${COLOR.border}`,
+                  fontStyle: "italic",
+                  color: COLOR.accent,
+                  fontSize: 15,
+                  lineHeight: 1.5,
+                }}
+              >
+                {artifact.epithet}
+              </div>
+            )}
+
+            <Section
+              title="拥有/使用者"
+              items={dataset.relations
+                .filter((r) => r.primary_type === "owns" && r.target === artifact.id)
+                .map((r) => dataset.characters.find((c) => c.id === r.source))
+                .filter((owner): owner is Character => Boolean(owner))
+                .map((owner) => (
+                  <button
+                    key={owner.id}
+                    onClick={() => {
+                      setSel({ kind: "node", id: owner.id });
+                      setFocusId(owner.id);
+                      setFocusedId(owner.id);
+                    }}
+                    style={{
+                      display: "inline-block",
+                      margin: "0 8px 8px 0",
+                      padding: "6px 10px",
+                      borderRadius: 999,
+                      border: `1px solid ${COLOR.border}`,
+                      background: COLOR.bgRaised,
+                      color: COLOR.text,
+                      fontFamily: FONT.sans,
+                      fontSize: 12,
+                      cursor: "pointer",
+                    }}
+                  >
+                    {owner.name_zh}
+                  </button>
+                ))}
+            />
+
+            <KVRow label="象征/领域" values={artifact.domains} />
+
+            {artifact.bio && (
+              <Section
+                title="宝物简介"
+                items={<p style={{ lineHeight: 1.75, fontSize: 14, margin: 0 }}>{artifact.bio}</p>}
+              />
+            )}
+
+            <Section
+              title="关键事件"
+              items={artifact.events.map((e) => (
                 <div key={e.title} style={{ marginBottom: 12 }}>
                   <strong style={{ color: COLOR.accent, fontSize: 13 }}>{e.title}</strong>
                   <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
@@ -621,7 +780,7 @@ function DegreeSlider({
       >
         <span>0</span>
         <span>
-          {visibleCount}/{total} 人可见
+          {visibleCount}/{total} 节点可见
         </span>
         <span>{max}</span>
       </div>

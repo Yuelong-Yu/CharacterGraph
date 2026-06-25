@@ -404,14 +404,122 @@ CHARACTER_PROMPTS: dict[str, str] = {
 }
 
 
+# ─────────────────────────────────────────────────────────────
+# Artifact 风格 base + 12 件器物 prompts(纵向 2:3 卡牌静物)
+# 与人物 base 同审美:厚涂、戏剧光照、希腊纹样剪影
+# ─────────────────────────────────────────────────────────────
+BASE_STYLE_ARTIFACT_ZH = (
+    "卡牌器物立绘构图:神器静物特写,主体居中且占据画面中部约 60% 面积,2:3 竖向构图,"
+    "戏剧化侧逆光(chiaroscuro),强烈明暗对比,厚涂油画笔触,写实半奇幻风格,"
+    "参考 Dota 神器图标 + 三国杀宝物卡 + 古典油画静物的混合质感,"
+    "深色神圣氛围背景(深紫黑/深炭色/暗酒红/古铜暗金),背景带极淡的古希腊纹样剪影"
+    "(月桂枝、奥林匹斯山轮廓、神庙柱、星辰、古希腊回纹)但保持极简,"
+    "器物质感强烈(青铜/燧石/纯金/活火/羊皮),金属反光与岁月磨损痕迹清晰,"
+    "光线从背后侧方打来勾勒器物轮廓,正面带次级补光,色彩浓郁,"
+    "不出现人物、不画手部、不画任何边框/相框/装饰边,画面边缘自然过渡到背景,"
+    "整体史诗感、神话感、神器威严"
+)
+
+ARTIFACT_PROMPTS: dict[str, str] = {
+    # ── 武器(6)──
+    "lightning": (
+        "宙斯的闪电神器(Keraunos),由独眼巨人在塔尔塔罗斯熔炉所锻造,"
+        "形态为三股向上分叉的金黄色雷电火光柱,中央是炽白色核心(温度极高发亮),"
+        "三股顶端如羽翼般张开,边缘炸开金红色电弧,缠绕着尚未消散的雷霆余光,"
+        "器身周围空气被电离出蓝白色火花飞溅,下方烟雾翻腾,"
+        "悬浮于画面中央,仿佛刚被掷出尚未着地,"
+        "金白色与暗蓝紫色阴森氛围,背景为奥林匹斯山顶的暴风云与远处雷暴照亮的山脊"
+    ),
+    "trident": (
+        "波塞冬的三叉戟,以暗金青铜锻造,三股锋齿微微外撇如海浪翻涌的曲线,"
+        "戟杆为螺旋纹镶嵌珍珠母贝与海蓝石的长柄(画面中可见上半段),戟头镀以纯金,"
+        "戟身缠绕着海藻与浪花,周围有湿润的水雾与盐结晶的反光,"
+        "戟尖滴落清亮海水的水珠,水滴下方激起小漩涡的光,"
+        "暗深蓝与古铜金交织的氛围,背景为风暴中的爱琴海与远处礁石浪花"
+    ),
+    "harpe": (
+        "克洛诺斯阉父之镰、亦为珀尔修斯斩美杜莎之剑,前段为锋利的弯曲镰刃、后段为长剑直刃,"
+        "刀身以远古燧石与古铜混锻,刃口呈墨黑色泛着不祥的虹彩光,"
+        "握柄缠绕暗红色皮革与铜丝,柄端坠一颗暗金色护身珠,"
+        "刃面映出戈耳工首级若隐若现的剪影(暗示其曾斩美杜莎),"
+        "深紫黑与暗血红的肃杀氛围,背景为远古洞穴的钟乳石与暗夜星空"
+    ),
+    "aegis": (
+        "雅典娜与宙斯共有的埃癸斯神盾,圆盾形,边缘以纯金锻成镶嵌一圈卷曲的金色活蛇(蛇头微抬咝叫),"
+        "盾面正中央镶嵌着戈耳工首级(石化目光的青绿色女妖头颅,蛇发蜿蜒,双目泛红光),"
+        "盾面材质为深古铜底色绘有金色希腊回纹与雷电符号,周围光晕带石化的冷光,"
+        "盾面四角浮现拟人化的'恐惧''不和''战力''追击'四种怖象的金色浮雕,"
+        "金白色神威与暗石青冷光交织,背景为雷云翻腾的天空与远处奥林匹斯山的金色光辉"
+    ),
+    "lion_skin": (
+        "赫拉克勒斯的涅墨亚狮皮披风,完整的金棕色雄狮毛皮,狮头悬空作头盔形以露出空洞的眼眶与森然獠牙,"
+        "毛色为金棕与古铜交织闪着金属反光(暗示刀枪不入的特性),毛皮上有几道战斗中的烧灼焦痕与划痕,"
+        "狮爪自然下垂在毛皮两侧,前爪利爪如弯刀(暗示曾用以剥皮),"
+        "毛皮在画面中以悬挂或铺展状展示,主体居中,"
+        "金棕暗金与暗血红氛围,背景为涅墨亚山谷的洞穴入口与黄昏血色天空"
+    ),
+    "medusa_head": (
+        "美杜莎被斩下的首级,女妖青绿色冷艳的面容(双目紧闭却仍泛冷光,暗示石化力未消),"
+        "蛇发依旧蜿蜒(数十条暗绿色与暗金色毒蛇缠绕,部分蛇头微张吐舌),"
+        "颈口处仍渗出微微的暗金色血光(暗示从中诞生飞马),"
+        "首级悬空展示在画面中央,周围有微弱的石化冷雾扩散,"
+        "氛围为暗石青绿与暗紫黑的恐怖肃杀,背景为黑色洞穴岩壁与远处石化的人形轮廓剪影"
+    ),
+    # ── 宝物(6)──
+    "golden_apple": (
+        "刻有'献给最美者'(KALLISTĒ)古希腊字母的金苹果,纯金锻造的完美苹果形,表面有手工锤打的细微纹理,"
+        "金黄色泛着柔和的内光(神圣果实的神性辉光),苹果柄部有一片精雕金叶,叶脉清晰,"
+        "悬浮于画面中央,周围有微弱的金粉飞舞,"
+        "苹果下方阴影中隐约可见三位女神(赫拉、雅典娜、阿芙洛狄忒)的剪影争夺的轮廓(画面下沿处极淡),"
+        "金黄色与暗酒红的圣物氛围,背景为赫斯珀里得斯园的金光圣树枝条与远处晚霞"
+    ),
+    "golden_fleece": (
+        "传说中的金羊毛,完整的纯金色公羊皮毛,蓬松柔软的金色羊毛卷曲泛着内光(神性辉光),"
+        "羊头部分仍保留(双角金色微弯、眼眶空洞流出微光),四蹄羊蹄垂在毛皮两端,"
+        "毛皮在画面中以挂展状钉在一棵粗壮橡树枝桠上(画面上方隐约可见橡树轮廓),"
+        "树下盘绕一条不死巨龙(深绿色鳞片闪冷光,蛇身半隐于阴影中),"
+        "金黄与暗松绿交织的远征氛围,背景为科尔基斯阿瑞斯圣林的雾气与暗夜星空"
+    ),
+    "helm_of_darkness": (
+        "哈迪斯的隐身头盔(Kynee),一顶古希腊式青铜战盔,但材质为暗黑色金属(几乎吞噬周围光线),"
+        "盔顶有一抹纤细的暗紫色鬃毛饰(冥府之色),盔身边缘镶嵌一圈暗银纹路,"
+        "盔体局部正在'消失'(画面中部分轮廓淡化为半透明,边缘虚化为黑雾),"
+        "盔下方有冥府氛围的暗灰雾气盘绕,远处隐约可见冥河水波,"
+        "暗黑深紫与冷银交织的冥府氛围,背景为冥界入口的黑色门廊与鬼火点点"
+    ),
+    "winged_sandals": (
+        "赫尔墨斯的金翼草鞋(Talaria),一双暗金色古希腊式系带凉鞋(画面同时展示双只,微微悬空交叠),"
+        "鞋身材质为暗金色细皮带与古铜扣件,鞋面纹有希腊回纹,"
+        "鞋踝两侧各生出一对张开的金色羽翼(羽毛细密层叠如鹰翼,带柔光金边),"
+        "鞋下方有微微的风线气流(暗示飞行),空气中漂浮金色羽尘,"
+        "暗金与暗蓝灰交织的轻灵氛围,背景为高空云海与远处奥林匹斯山顶的金光"
+    ),
+    "pandoras_box": (
+        "潘多拉之瓮(原作 pithos 大陶瓮,后世误传为盒),古希腊红黑彩陶大瓮,瓮身绘有暗红色与漆黑相间的希腊几何纹与人物剪影,"
+        "瓮盖被刚刚揭开(微微倾斜悬空),从瓮口涌出黑色与暗灰的恶意烟雾(瘟疫、饥荒、争端、衰老、辛劳的拟人化魂影若隐若现),"
+        "烟雾向画面上方扩散,瓮底部仅余一缕微弱的金色光芒(象征'希望'未逃出),"
+        "瓮表面有古老的釉裂与岁月磨损痕迹,"
+        "暗赭红与暗黑灰交织的诸苦氛围,背景为远古神殿石阶与昏暗天空"
+    ),
+    "trojan_horse": (
+        "特洛伊木马,巨大的木质战马塑像(以伊达山巨松所造),四肢粗壮稳固站立,身高远超凡马,"
+        "马身以深褐色与暗木纹拼接,可见木匠埃佩奥斯的精细榫卯结构与铁箍加固,"
+        "马腹处有一道隐藏的暗门(画面侧面隐约可见门缝光透出,暗示腹中精兵潜伏),"
+        "马首昂起,眼眶为空洞的暗黑色(暗示无神),颈毛刻画为僵硬的木雕,"
+        "暗赭木色与暗血红的诡计氛围,背景为特洛伊高墙的轮廓与城外希腊军营的烟火"
+    ),
+}
+
+
+
 @retry(
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=3, min=3, max=30),
     retry=retry_if_exception_type(Exception),
 )
-def generate_one(slug: str, character_desc: str) -> bytes:
-    """单图生成 + 下载，返回 PNG 字节。"""
-    full_prompt = f"{BASE_STYLE_ZH}。\n\n{character_desc}。"
+def generate_one(slug: str, desc: str, base_style: str = BASE_STYLE_ZH) -> bytes:
+    """单图生成 + 下载,返回 PNG 字节。base_style 可切换人物/器物。"""
+    full_prompt = f"{base_style}。\n\n{desc}。"
     resp = client.images.generate(
         model=MODEL,
         prompt=full_prompt,
@@ -467,8 +575,15 @@ def process_to_portrait_and_thumb(raw_png: bytes, slug: str) -> None:
 
 
 def _generate_and_save(slug: str) -> tuple[str, str | None]:
-    """Worker：返回 (slug, error_msg or None)。供线程池并发调用。"""
-    if slug not in CHARACTER_PROMPTS:
+    """Worker:返回 (slug, error_msg or None)。供线程池并发调用。
+    自动从 CHARACTER_PROMPTS / ARTIFACT_PROMPTS 中查找,使用对应的 base style。"""
+    if slug in CHARACTER_PROMPTS:
+        desc = CHARACTER_PROMPTS[slug]
+        base_style = BASE_STYLE_ZH
+    elif slug in ARTIFACT_PROMPTS:
+        desc = ARTIFACT_PROMPTS[slug]
+        base_style = BASE_STYLE_ARTIFACT_ZH
+    else:
         return slug, "无 prompt 定义"
 
     portrait_path = PORTRAITS_DIR / f"{slug}.webp"
@@ -476,11 +591,10 @@ def _generate_and_save(slug: str) -> tuple[str, str | None]:
         print(f"  {slug}: 已存在，跳过", flush=True)
         return slug, None
 
-    desc = CHARACTER_PROMPTS[slug]
     print(f"  {slug}: 生成中...", flush=True)
     t0 = time.time()
     try:
-        raw = generate_one(slug, desc)
+        raw = generate_one(slug, desc, base_style=base_style)
         process_to_portrait_and_thumb(raw, slug)
     except Exception as e:
         return slug, f"{type(e).__name__}: {e}"
@@ -491,7 +605,8 @@ def _generate_and_save(slug: str) -> tuple[str, str | None]:
 
 def main(target_slugs: list[str] | None = None, parallel: int = 5):
     if target_slugs is None:
-        target_slugs = list(CHARACTER_PROMPTS.keys())
+        # 默认生成全部 — Character + Artifact
+        target_slugs = list(CHARACTER_PROMPTS.keys()) + list(ARTIFACT_PROMPTS.keys())
 
     print(f"准备生成 {len(target_slugs)} 张，并行 {parallel}：{target_slugs}")
     print()

@@ -6,7 +6,7 @@
  * 输入预览(query 非空):
  *   - 下拉列表显示最多 8 项命中(name/alias/epithet 优先,然后 fulltext)
  *   - 点击下拉某项 = onPick(id) → 父级走 focus mode
- *   - 底部一行 "共 N 人 · 回车应用" 告知总命中数
+ *   - 底部一行 "共 N 项 · 回车应用" 告知总命中数
  *
  * 回车提交:
  *   - 把所有命中(不止下拉 8 项,而是全部 hit 集)作为过滤集
@@ -17,14 +17,23 @@
  * ≥2 字严格子串(中文按原样,英文 lowercase 折叠)
  */
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
-import type { Character } from "@/schemas/character";
-import { COLOR, FONT, CATEGORY_COLOR } from "@/lib/tokens";
+import type { Artifact, Character } from "@/schemas/character";
+import {
+  ARTIFACT_CATEGORY_COLOR,
+  CATEGORY_COLOR,
+  COLOR,
+  FONT,
+} from "@/lib/tokens";
+
+type SearchEntity =
+  | { kind: "character"; entity: Character }
+  | { kind: "artifact"; entity: Artifact };
 
 const TRIGGER_LEN = 2;
 const DROPDOWN_CAP = 8;
 
 interface Hit {
-  character: Character;
+  item: SearchEntity;
   /** 命中来源:name(中/英)/alias/epithet/fulltext */
   origin: "name" | "alias" | "epithet" | "fulltext";
   /** fulltext 命中时的片段 */
@@ -34,39 +43,39 @@ interface Hit {
 /**
  * 计算 hit 列表 — 与父级 computeMatchedIds 用同一套规则,但保留 origin 与 snippet。
  */
-function computeHits(characters: Character[], rawQuery: string): Hit[] {
+function computeHits(items: SearchEntity[], rawQuery: string): Hit[] {
   const q = rawQuery.trim();
   if (q.length < TRIGGER_LEN) return [];
   const qLower = q.toLowerCase();
 
   const nameHits: Hit[] = [];
   const fullHits: Hit[] = [];
-  const seen = new Set<string>();
 
-  for (const c of characters) {
+  for (const item of items) {
+    const e = item.entity;
     // 1) name 优先
-    if (c.name_zh.includes(q) || c.name_en.toLowerCase().includes(qLower)) {
-      nameHits.push({ character: c, origin: "name" });
-      seen.add(c.id);
+    if (e.name_zh.includes(q) || e.name_en.toLowerCase().includes(qLower)) {
+      nameHits.push({ item, origin: "name" });
       continue;
     }
-    if (c.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower))) {
-      nameHits.push({ character: c, origin: "alias" });
-      seen.add(c.id);
+    if (e.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower))) {
+      nameHits.push({ item, origin: "alias" });
       continue;
     }
-    if (c.epithet && c.epithet.includes(q)) {
-      nameHits.push({ character: c, origin: "epithet" });
-      seen.add(c.id);
+    if (e.epithet && e.epithet.includes(q)) {
+      nameHits.push({ item, origin: "epithet" });
       continue;
     }
-    // 2) fulltext:bio / events / quotes / skills / domains
-    const inBio = c.bio?.includes(q) ?? false;
-    const inEvents = c.events.some((e) => e.title.includes(q) || e.desc.includes(q));
-    const inQuotes = c.quotes.some((qu) => qu.text.includes(q));
-    const inSkillsDomains = c.skills.some((s) => s.includes(q)) || c.domains.some((d) => d.includes(q));
-    if (inBio || inEvents || inQuotes || inSkillsDomains) {
-      // 构造 snippet:在原文里找出第一处 query
+
+    // 2) fulltext: Character = bio/events/quotes/skills/domains; Artifact = bio/events/domains
+    const inBio = e.bio?.includes(q) ?? false;
+    const inEvents = e.events.some((ev) => ev.title.includes(q) || ev.desc.includes(q));
+    const inDomains = e.domains.some((d) => d.includes(q));
+    const inCharacterOnly = item.kind === "character" && (
+      item.entity.quotes.some((qu) => qu.text.includes(q)) ||
+      item.entity.skills.some((s) => s.includes(q))
+    );
+    if (inBio || inEvents || inDomains || inCharacterOnly) {
       let snippet = "";
       const search = (text: string | null | undefined) => {
         if (!text) return false;
@@ -75,14 +84,13 @@ function computeHits(characters: Character[], rawQuery: string): Hit[] {
         snippet = "…" + text.slice(Math.max(0, idx - 20), idx + q.length + 30) + "…";
         return true;
       };
-      if (!search(c.bio)) {
-        for (const e of c.events) if (search(e.title + " " + e.desc)) break;
+      if (!search(e.bio)) {
+        for (const ev of e.events) if (search(ev.title + " " + ev.desc)) break;
       }
-      if (!snippet) {
-        for (const qu of c.quotes) if (search(qu.text)) break;
+      if (!snippet && item.kind === "character") {
+        for (const qu of item.entity.quotes) if (search(qu.text)) break;
       }
-      fullHits.push({ character: c, origin: "fulltext", snippet });
-      seen.add(c.id);
+      fullHits.push({ item, origin: "fulltext", snippet });
     }
   }
 
@@ -90,7 +98,7 @@ function computeHits(characters: Character[], rawQuery: string): Hit[] {
 }
 
 interface Props {
-  characters: Character[];
+  items: SearchEntity[];
   /** 当前输入字符串(受控) */
   query: string;
   onQueryChange: (q: string) => void;
@@ -104,12 +112,12 @@ interface Props {
   filterApplied: boolean;
   /** 当前已应用的过滤命中数(filterApplied=true 时使用) */
   appliedCount: number;
-  /** 数据集总人数 */
+  /** 数据集总节点数 */
   totalCount: number;
 }
 
 export function SearchBox({
-  characters,
+  items,
   query,
   onQueryChange,
   onPick,
@@ -123,7 +131,7 @@ export function SearchBox({
   const inputRef = useRef<HTMLInputElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const hits = useMemo(() => computeHits(characters, query), [characters, query]);
+  const hits = useMemo(() => computeHits(items, query), [items, query]);
   const dropdownHits = hits.slice(0, DROPDOWN_CAP);
 
   const trimmed = query.trim();
@@ -288,13 +296,18 @@ export function SearchBox({
             </div>
           ) : (
             <>
-              {dropdownHits.map((h) => (
+              {dropdownHits.map((h) => {
+                const entity = h.item.entity;
+                const color = h.item.kind === "character"
+                  ? CATEGORY_COLOR[entity.category as Character["category"]]
+                  : ARTIFACT_CATEGORY_COLOR[entity.category as Artifact["category"]];
+                return (
                 <button
-                  key={h.character.id + h.origin}
+                  key={entity.id + h.origin}
                   onMouseDown={(e) => {
                     // mousedown 而非 click — 早于 input.onBlur,防止下拉先被收起
                     e.preventDefault();
-                    onPick(h.character.id);
+                    onPick(entity.id);
                     setFocused(false);
                   }}
                   style={{
@@ -315,26 +328,31 @@ export function SearchBox({
                     style={{
                       display: "inline-block",
                       width: 4,
-                      background: CATEGORY_COLOR[h.character.category],
+                      background: color,
                       borderRadius: 2,
                       flexShrink: 0,
                     }}
                   />
                   <span style={{ flex: 1, minWidth: 0 }}>
                     <span style={{ fontSize: 14, fontFamily: FONT.serif }}>
-                      {h.character.name_zh}
+                      {entity.name_zh}
                     </span>
                     <span style={{ fontSize: 11, color: COLOR.textMuted, marginLeft: 8, fontFamily: FONT.mono }}>
-                      {h.character.name_en}
+                      {entity.name_en}
                     </span>
+                    {h.item.kind === "artifact" && (
+                      <span style={{ fontSize: 10, color, marginLeft: 8, fontFamily: FONT.mono }}>
+                        Artifact
+                      </span>
+                    )}
                     {h.origin === "fulltext" && h.snippet && (
                       <div style={{ fontSize: 11, color: COLOR.textMuted, marginTop: 2, lineHeight: 1.4 }}>
                         {h.snippet}
                       </div>
                     )}
-                    {h.origin === "alias" && (
+                    {h.origin === "alias" && entity.aliases.length > 0 && (
                       <div style={{ fontSize: 11, color: COLOR.textMuted, marginTop: 2 }}>
-                        {h.character.aliases.join(" · ")}
+                        {entity.aliases.join(" · ")}
                       </div>
                     )}
                   </span>
@@ -342,7 +360,8 @@ export function SearchBox({
                     {h.origin}
                   </span>
                 </button>
-              ))}
+              );
+              })}
 
               {/* 底部提示:总计 N 人 + 回车提交 */}
               <button
@@ -370,7 +389,7 @@ export function SearchBox({
                 }}
               >
                 <span>
-                  共 {hits.length} 人命中
+                  共 {hits.length} 项命中
                   {hits.length > DROPDOWN_CAP && ` · 仅显示前 ${DROPDOWN_CAP}`}
                 </span>
                 <span style={{ color: COLOR.accent }}>↵ 回车应用全部</span>

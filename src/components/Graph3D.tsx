@@ -20,8 +20,14 @@ import dynamic from "next/dynamic";
 import * as THREE from "three";
 import SpriteText from "three-spritetext";
 
-import type { Dataset, Character, Relation, CharacterCategory } from "@/schemas/character";
-import { CATEGORY_COLOR, RELATION_COLOR, COLOR, FONT } from "@/lib/tokens";
+import type { Artifact, ArtifactCategory, Dataset, Character, Relation, CharacterCategory } from "@/schemas/character";
+import {
+  ARTIFACT_CATEGORY_COLOR,
+  CATEGORY_COLOR,
+  RELATION_COLOR,
+  COLOR,
+  FONT,
+} from "@/lib/tokens";
 
 // SSR off — three.js 只能在浏览器
 const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), { ssr: false });
@@ -133,13 +139,26 @@ function getLabelTexture(
 // ─── 类型 ───────────────────────────────────────────────
 export type LayoutMode = "tier" | "free";
 
-interface GraphNode {
+interface CharacterGraphNode {
   id: string;
-  ch: Character;
+  kind: "character";
+  entity: Character;
   // 力学引擎用字段（运行时由 d3-force 写入 / 我们覆盖）
   x?: number; y?: number; z?: number;
   fx?: number; fy?: number; fz?: number;
 }
+
+interface ArtifactGraphNode {
+  id: string;
+  kind: "artifact";
+  entity: Artifact;
+  /** tier 布局用:Artifact 取主人 era_layer(多主人取第一个),无主人则 2 */
+  eraLayer: number;
+  x?: number; y?: number; z?: number;
+  fx?: number; fy?: number; fz?: number;
+}
+
+type GraphNode = CharacterGraphNode | ArtifactGraphNode;
 
 interface GraphLink {
   id: string;
@@ -159,6 +178,8 @@ interface Props {
   focusNodeId?: string | null;
   /** 当前启用的类别集合 — 不在此集合的节点和相关边将被隐藏（聚焦模式下豁免） */
   enabledCategories: Set<CharacterCategory>;
+  /** 当前启用的 Artifact 类别集合 */
+  enabledArtifactCategories: Set<ArtifactCategory>;
   /** 度数阈值 — 过滤掉度数 < 阈值的节点（聚焦模式下豁免）。0 = 不过滤 */
   minDegree: number;
   /** 搜索命中集 — null 表示无过滤;非 null 时进入"过滤平铺"态:
@@ -188,6 +209,7 @@ export function Graph3D({
   focusedId = null,
   focusNodeId,
   enabledCategories,
+  enabledArtifactCategories,
   minDegree,
   matchedIds,
   autoTour,
@@ -222,19 +244,40 @@ export function Graph3D({
   const didInitialFitRef = useRef(false);
   void didInitialFitRef; // 保留 ref 占位但不再使用
 
+  // ── Artifact tier layer:以第一个 owns 主人的 era_layer 定位;无主人则 2 ──
+  const artifactEraMap = useMemo(() => {
+    const charById = new Map(dataset.characters.map((c) => [c.id, c]));
+    const m = new Map<string, number>();
+    for (const a of dataset.artifacts) m.set(a.id, 2);
+    for (const r of dataset.relations) {
+      if (r.primary_type !== "owns") continue;
+      const owner = charById.get(r.source);
+      if (owner && m.has(r.target)) m.set(r.target, owner.era_layer);
+    }
+    return m;
+  }, [dataset.characters, dataset.artifacts, dataset.relations]);
+
   // ── 稳定的节点对象 — 仅 dataset 变化时重建 ──
   const nodes = useMemo<GraphNode[]>(
-    () => dataset.characters.map((c) => ({ id: c.id, ch: c })),
-    [dataset.characters],
+    () => [
+      ...dataset.characters.map((c): CharacterGraphNode => ({ id: c.id, kind: "character", entity: c })),
+      ...dataset.artifacts.map((a): ArtifactGraphNode => ({
+        id: a.id,
+        kind: "artifact",
+        entity: a,
+        eraLayer: artifactEraMap.get(a.id) ?? 2,
+      })),
+    ],
+    [dataset.characters, dataset.artifacts, artifactEraMap],
   );
 
   // ── 边数据 ──
   const links = useMemo<GraphLink[]>(() => {
-    const charIds = new Set(dataset.characters.map((c) => c.id));
+    const nodeIds = new Set([...dataset.characters.map((c) => c.id), ...dataset.artifacts.map((a) => a.id)]);
     return dataset.relations
-      .filter((r) => charIds.has(r.source) && charIds.has(r.target))
+      .filter((r) => nodeIds.has(r.source) && nodeIds.has(r.target))
       .map((r) => ({ id: r.id, source: r.source, target: r.target, rel: r }));
-  }, [dataset.characters, dataset.relations]);
+  }, [dataset.characters, dataset.artifacts, dataset.relations]);
 
   // ── 启动 zoom-to-fit 已移除：加载即进入巡游模式，由巡游接管相机 ──
 
@@ -253,6 +296,7 @@ export function Graph3D({
   const degreeMap = useMemo(() => {
     const m = new Map<string, number>();
     for (const c of dataset.characters) m.set(c.id, 0);
+    for (const a of dataset.artifacts) m.set(a.id, 0);
     for (const r of dataset.relations) {
       m.set(r.source, (m.get(r.source) ?? 0) + 1);
       m.set(r.target, (m.get(r.target) ?? 0) + 1);
@@ -458,7 +502,7 @@ export function Graph3D({
       // 普通模式：根据 layoutMode 重置锁定
       nodes.forEach((n) => {
         n.fx = undefined;
-        n.fy = layoutMode === "tier" ? (3 - n.ch.era_layer) * LAYER_SPACING : undefined;
+        n.fy = layoutMode === "tier" ? (3 - (n.kind === "character" ? n.entity.era_layer : n.eraLayer)) * LAYER_SPACING : undefined;
         n.fz = undefined;
       });
       fgRef.current.d3ReheatSimulation();
@@ -539,14 +583,15 @@ export function Graph3D({
     return new Set(
       nodes
         .filter((n) => {
-          if (!enabledCategories.has(n.ch.category)) return false;
+          if (n.kind === "character" && !enabledCategories.has(n.entity.category)) return false;
+          if (n.kind === "artifact" && !enabledArtifactCategories.has(n.entity.category)) return false;
           if ((degreeMap.get(n.id) ?? 0) < minDegree) return false;
           if (matchedIds && !matchedIds.has(n.id)) return false;
           return true;
         })
         .map((n) => n.id),
     );
-  }, [nodes, enabledCategories, minDegree, degreeMap, matchedIds]);
+  }, [nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds]);
 
   // 巡游序列：从度数最高的节点开始，DFS 遍历可见连通分量；多个分量按度数降序衔接
   const tourSequence = useMemo<GraphNode[]>(() => {
@@ -558,7 +603,9 @@ export function Graph3D({
       const da = degreeMap.get(a.id) ?? 0;
       const db = degreeMap.get(b.id) ?? 0;
       if (db !== da) return db - da;
-      if (a.ch.era_layer !== b.ch.era_layer) return a.ch.era_layer - b.ch.era_layer;
+      const eraA = a.kind === "character" ? a.entity.era_layer : a.eraLayer;
+      const eraB = b.kind === "character" ? b.entity.era_layer : b.eraLayer;
+      if (eraA !== eraB) return eraA - eraB;
       return a.id.localeCompare(b.id);
     });
 
@@ -693,12 +740,13 @@ export function Graph3D({
         return n.id === focusedId || neighborSet.has(n.id);
       }
       // 普通模式 / 过滤平铺态:类别 ∧ 度数 ∧ 搜索命中
-      if (!enabledCategories.has(n.ch.category)) return false;
+      if (n.kind === "character" && !enabledCategories.has(n.entity.category)) return false;
+      if (n.kind === "artifact" && !enabledArtifactCategories.has(n.entity.category)) return false;
       if ((degreeMap.get(n.id) ?? 0) < minDegree) return false;
       if (matchedIds && !matchedIds.has(n.id)) return false;
       return true;
     },
-    [focusedId, neighborSet, enabledCategories, minDegree, degreeMap, matchedIds],
+    [focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   const linkVisibility = useCallback(
@@ -711,16 +759,20 @@ export function Graph3D({
         return sId === focusedId || tId === focusedId;
       }
       // 普通模式 / 过滤平铺态:两端都通过 类别 ∧ 度数 ∧ 搜索命中
-      const srcCh = dataset.characters.find((c) => c.id === sId);
-      const tgtCh = dataset.characters.find((c) => c.id === tId);
-      if (!srcCh || !tgtCh) return false;
-      if (!enabledCategories.has(srcCh.category) || !enabledCategories.has(tgtCh.category)) return false;
+      const nodeById = new Map(nodes.map((n) => [n.id, n]));
+      const src = nodeById.get(sId);
+      const tgt = nodeById.get(tId);
+      if (!src || !tgt) return false;
+      if (src.kind === "character" && !enabledCategories.has(src.entity.category)) return false;
+      if (src.kind === "artifact" && !enabledArtifactCategories.has(src.entity.category)) return false;
+      if (tgt.kind === "character" && !enabledCategories.has(tgt.entity.category)) return false;
+      if (tgt.kind === "artifact" && !enabledArtifactCategories.has(tgt.entity.category)) return false;
       if ((degreeMap.get(sId) ?? 0) < minDegree) return false;
       if ((degreeMap.get(tId) ?? 0) < minDegree) return false;
       if (matchedIds && (!matchedIds.has(sId) || !matchedIds.has(tId))) return false;
       return true;
     },
-    [focusedId, enabledCategories, minDegree, degreeMap, dataset.characters, matchedIds],
+    [focusedId, nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   // ── 自定义节点 ──
@@ -732,9 +784,14 @@ export function Graph3D({
       const isFocused = node.id === focusedId;
       const isTourTarget = node.id === tourTargetId;
       const isHighlighted = isFocused || isTourTarget;
+      const entity = node.entity;
       // 是否需要绝对置顶（中心节点）— 巡游/聚焦的中心节点不被任何其他节点遮挡
       const topMost = isHighlighted;
-      const baseColor = new THREE.Color(CATEGORY_COLOR[node.ch.category]);
+      const baseColor = new THREE.Color(
+        node.kind === "character"
+          ? CATEGORY_COLOR[node.entity.category]
+          : ARTIFACT_CATEGORY_COLOR[node.entity.category],
+      );
 
       // 头像尺寸（半身像 2:3）
       //   中心节点（巡游 / focus 中心）显著放大，其他节点同步缩小，形成 3x 视觉对比
@@ -772,7 +829,7 @@ export function Graph3D({
       // 2) 头像 — Plane（手动 billboard：每帧让 plane 朝向相机）
       //    中心节点必须 transparent:true，才能进入"透明队列"压在其他节点的 SpriteText 文字标签之上
       //    （three.js 渲染顺序：opaque queue → transparent queue，renderOrder 只在同一队列内有效）
-      const tex = getThumbTexture(node.ch.thumb);
+      const tex = getThumbTexture(entity.thumb);
       if (tex) {
         const planeGeo = new THREE.PlaneGeometry(spriteW, spriteH);
         const planeMat = new THREE.MeshBasicMaterial({
@@ -813,7 +870,7 @@ export function Graph3D({
       if (topMost) {
         const labelPx = 64;
         const { texture: labelTex, aspect: labelAspect } = getLabelTexture(
-          node.ch.name_zh,
+          entity.name_zh,
           COLOR.text,
           "rgba(255,255,255,0.95)",
           FONT.serif,
@@ -839,7 +896,7 @@ export function Graph3D({
         };
         group.add(labelMesh);
       } else {
-        const label = new SpriteText(node.ch.name_zh);
+        const label = new SpriteText(entity.name_zh);
         label.color = COLOR.text;
         label.backgroundColor = "rgba(255,255,255,0.92)";
         label.padding = 2;
@@ -856,14 +913,14 @@ export function Graph3D({
       }
 
       // 5) 称号
-      if (node.ch.epithet) {
+      if (entity.epithet) {
         if (topMost) {
           const r = Math.round(baseColor.r * 220);
           const g = Math.round(baseColor.g * 220);
           const b = Math.round(baseColor.b * 220);
           const epiPx = 40;
           const { texture: epiTex, aspect: epiAspect } = getLabelTexture(
-            node.ch.epithet,
+            entity.epithet,
             `rgb(${r},${g},${b})`,
             "rgba(255,255,255,0.88)",
             FONT.sans,
@@ -889,7 +946,7 @@ export function Graph3D({
           };
           group.add(epiMesh);
         } else {
-          const epi = new SpriteText(node.ch.epithet);
+          const epi = new SpriteText(entity.epithet);
           const r = Math.round(baseColor.r * 220);
           const g = Math.round(baseColor.g * 220);
           const b = Math.round(baseColor.b * 220);
@@ -953,7 +1010,7 @@ export function Graph3D({
           graphData={{ nodes, links }}
           backgroundColor={COLOR.bg}
           nodeThreeObject={nodeThreeObject}
-          nodeLabel={(raw: object) => `${(raw as GraphNode).ch.name_zh} · ${(raw as GraphNode).ch.name_en}`}
+          nodeLabel={(raw: object) => `${(raw as GraphNode).entity.name_zh} · ${(raw as GraphNode).entity.name_en}`}
           nodeVisibility={nodeVisibility}
           linkColor={linkColor}
           linkWidth={linkWidth}

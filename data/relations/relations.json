@@ -2146,5 +2146,425 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 2,
+    "id": "zeus-lightning",
+    "source": "zeus",
+    "target": "lightning",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "独眼巨人锻造神器赠宙斯",
+        "desc": "宙斯解救塔尔塔罗斯中的独眼巨人,三兄弟为报恩锻造闪电,使宙斯得以击败泰坦。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "501-506",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "poseidon-trident",
+    "source": "poseidon",
+    "target": "trident",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "独眼巨人赠三叉戟",
+        "desc": "波塞冬作为三王之一,从独眼巨人手中获得三叉戟,自此掌天下海洋、地震与马匹。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "1.2.1",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cronus-harpe",
+    "source": "cronus",
+    "target": "harpe",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚授镰阉乌拉诺斯",
+        "desc": "盖亚以燧石铸大镰,藏予小儿克洛诺斯,后挥镰阉父乌拉诺斯,天地由此正式分离。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "159-200",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "gaia-harpe",
+    "source": "gaia",
+    "target": "harpe",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盖亚铸镰",
+        "desc": "镰刀剑由大地母神盖亚以燧石锻成,是这件兵器的最初制造者。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "159-180",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "perseus-harpe",
+    "source": "perseus",
+    "target": "harpe",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫尔墨斯赠镰刀剑",
+        "desc": "珀尔修斯出征美杜莎,获赠赫尔墨斯的镰刀剑,用以斩下美杜莎首级。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.4.2",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "athena-aegis",
+    "source": "athena",
+    "target": "aegis",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戈耳工首镶神盾",
+        "desc": "珀尔修斯将美杜莎首级献给雅典娜,女神嵌之于自己的神盾埃癸斯中央,成为震慑战场的标志性护具。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.4.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "zeus-aegis",
+    "source": "zeus",
+    "target": "aegis",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宙斯摇盾震慑战场",
+        "desc": "在荷马传统中,埃癸斯为宙斯所有,常借予雅典娜;宙斯亲摇之时,凡军震慑、神祇胆寒。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "17.593-596",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "heracles-lion_skin",
+    "source": "heracles",
+    "target": "lion_skin",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "剥涅墨亚狮皮披身",
+        "desc": "赫拉克勒斯徒手扼杀涅墨亚狮后,以狮爪剥下狮皮,披之为甲,自此成为他的标志性装束。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.1",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "perseus-medusa_head",
+    "source": "perseus",
+    "target": "medusa_head",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "斩首获得不死兵器",
+        "desc": "珀尔修斯以镰刀剑斩下美杜莎首级,装入魔法腰袋带回希腊。此首级仍具石化力,沿途被用作兵器。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.4.2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "athena-medusa_head",
+    "source": "athena",
+    "target": "medusa_head",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "首级镶入埃癸斯",
+        "desc": "珀尔修斯完成任务后将首级献予雅典娜,女神将其镶入埃癸斯神盾——“戈耳工首像”自此成为驱邪护身的标志。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.4.3",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hera-golden_apple",
+    "source": "hera",
+    "target": "golden_apple",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "圣婚之果",
+        "desc": "盖亚为庆贺宙斯与赫拉成婚,植下结金苹果的圣树作为赠礼,这棵树自此与赫拉的神圣婚姻关联。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.11",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "aphrodite-golden_apple",
+    "source": "aphrodite",
+    "target": "golden_apple",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "帕里斯之判",
+        "desc": "帕里斯将不和女神所抛“献给最美者”的金苹果判给阿芙洛狄忒,她以海伦相赠,引发特洛伊战争。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "E3.2",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "heracles-golden_apple",
+    "source": "heracles",
+    "target": "golden_apple",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第十一功业",
+        "desc": "赫拉克勒斯赴赫斯珀里得斯园,借阿特拉斯之手取得金苹果,作为第十一功业的战利品献予欧律斯透斯。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.11",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "jason-golden_fleece",
+    "source": "jason",
+    "target": "golden_fleece",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿尔戈远征所获",
+        "desc": "伊阿宋率阿尔戈英雄远征科尔基斯,在美狄亚相助下夺得金羊毛归还伊俄尔科斯。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "4",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "medea-golden_fleece",
+    "source": "medea",
+    "target": "golden_fleece",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "魔药与歌咒相助",
+        "desc": "美狄亚以草膏与歌咒驯铜牛、迷巨龙,助伊阿宋取得金羊毛。她背叛父亲埃厄忒斯随英雄远去。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "3-4",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "perseus-helm_of_darkness",
+    "source": "perseus",
+    "target": "helm_of_darkness",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戴隐身盔接近美杜莎",
+        "desc": "诸神(经赫尔墨斯之手)将哈迪斯的隐身盔借予珀尔修斯,他戴之接近沉睡的美杜莎,一击斩首。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.4.2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "athena-helm_of_darkness",
+    "source": "athena",
+    "target": "helm_of_darkness",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "战场刺阿瑞斯",
+        "desc": "雅典娜从哈迪斯处借隐身盔,使战神阿瑞斯无法看见她,得以将长矛刺入其肋。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "5.844-845",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hermes-winged_sandals",
+    "source": "hermes",
+    "target": "winged_sandals",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "众神信使的飞鞋",
+        "desc": "赫尔墨斯穿赫淮斯托斯所锻的金翼草鞋,在奥林匹斯与凡间瞬时往返,传宙斯之旨。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "5.44-49",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "perseus-winged_sandals",
+    "source": "perseus",
+    "target": "winged_sandals",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "斩美杜莎之行借用",
+        "desc": "赫尔墨斯将自己的金翼草鞋借予珀尔修斯,使其得以飞越戈耳工山岩、空中接近美杜莎并斩首后高速逃离。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.4.2",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "odysseus-trojan_horse",
+    "source": "odysseus",
+    "target": "trojan_horse",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奥德修斯定计破城",
+        "desc": "围城十年不下,奥德修斯提出造木马藏精兵、佯退诱敌入城的奇计,最终一夜攻陷特洛伊。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "8.492-520",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
   }
 ]

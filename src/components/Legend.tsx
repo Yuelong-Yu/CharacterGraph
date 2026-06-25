@@ -1,15 +1,17 @@
 "use client";
 
 /**
- * 折叠图例：右上角 i 图标 → 展开列出 10 类节点（带勾选过滤）+ 5 类边
+ * 折叠图例：右上角 i 图标 → 展开列出人物类别 + Artifact 类别 + 关系边
  *
- * - 类别 checkbox 默认全选，勾选状态变化时通过 onCategoryToggle 通知外层
- *
- * 决策来源：docs/design-freeze.md §5.5 + 后续过滤增量决定
+ * - 人物类别 checkbox 默认全选
+ * - Artifact 类别 checkbox 默认全选
+ * - 边只展示颜色说明
  */
 import { useState } from "react";
-import type { CharacterCategory } from "@/schemas/character";
+import type { ArtifactCategory, CharacterCategory } from "@/schemas/character";
 import {
+  ARTIFACT_CATEGORY_COLOR,
+  ARTIFACT_CATEGORY_LABEL,
   COLOR,
   FONT,
   CATEGORY_COLOR,
@@ -20,16 +22,24 @@ import {
 
 interface Props {
   enabledCategories: Set<CharacterCategory>;
+  enabledArtifactCategories: Set<ArtifactCategory>;
   onCategoryToggle: (cat: CharacterCategory) => void;
   onCategoriesAll: () => void;
   onCategoriesNone: () => void;
+  onArtifactCategoryToggle: (cat: ArtifactCategory) => void;
+  onArtifactCategoriesAll: () => void;
+  onArtifactCategoriesNone: () => void;
 }
 
 export function Legend({
   enabledCategories,
+  enabledArtifactCategories,
   onCategoryToggle,
   onCategoriesAll,
   onCategoriesNone,
+  onArtifactCategoryToggle,
+  onArtifactCategoriesAll,
+  onArtifactCategoriesNone,
 }: Props) {
   const [open, setOpen] = useState(false);
 
@@ -59,7 +69,7 @@ export function Legend({
         <div
           style={{
             marginTop: 8,
-            width: 300,
+            width: 320,
             padding: 16,
             background: "oklch(99% 0 0 / 0.98)",
             border: `1px solid ${COLOR.border}`,
@@ -83,32 +93,37 @@ export function Legend({
           {(Object.entries(CATEGORY_LABEL) as [CharacterCategory, string][]).map(([k, label]) => {
             const checked = enabledCategories.has(k);
             return (
-              <label
-                key={k}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "4px 0",
-                  fontSize: 12,
-                  cursor: "pointer",
-                  userSelect: "none",
-                  opacity: checked ? 1 : 0.45,
-                  transition: "opacity 120ms",
-                }}
-              >
+              <label key={k} style={rowLabelStyle(checked)}>
                 <input
                   type="checkbox"
                   checked={checked}
                   onChange={() => onCategoryToggle(k)}
-                  style={{
-                    width: 14,
-                    height: 14,
-                    accentColor: CATEGORY_COLOR[k],
-                    cursor: "pointer",
-                  }}
+                  style={{ width: 14, height: 14, accentColor: CATEGORY_COLOR[k], cursor: "pointer" }}
                 />
                 <Box color={CATEGORY_COLOR[k]} />
+                <span>{label}</span>
+              </label>
+            );
+          })}
+
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: 16, marginBottom: 8 }}>
+            <Heading>神器类别 · 勾选过滤</Heading>
+            <div style={{ display: "flex", gap: 8 }}>
+              <button onClick={onArtifactCategoriesAll} style={miniBtnStyle}>全选</button>
+              <button onClick={onArtifactCategoriesNone} style={miniBtnStyle}>清空</button>
+            </div>
+          </div>
+          {(Object.entries(ARTIFACT_CATEGORY_LABEL) as [ArtifactCategory, string][]).map(([k, label]) => {
+            const checked = enabledArtifactCategories.has(k);
+            return (
+              <label key={k} style={rowLabelStyle(checked)}>
+                <input
+                  type="checkbox"
+                  checked={checked}
+                  onChange={() => onArtifactCategoryToggle(k)}
+                  style={{ width: 14, height: 14, accentColor: ARTIFACT_CATEGORY_COLOR[k], cursor: "pointer" }}
+                />
+                <Box color={ARTIFACT_CATEGORY_COLOR[k]} />
                 <span>{label}</span>
               </label>
             );
@@ -125,7 +140,7 @@ export function Legend({
 
           <Heading style={{ marginTop: 16 }}>边粗细</Heading>
           <div style={{ fontSize: 11, color: COLOR.textMuted, lineHeight: 1.6 }}>
-            粗细随两人之间的事件数量递增（1–5px）。事件越多代表两人关系越紧密复杂。
+            粗细随两端节点之间的事件数量递增（1–5px）。事件越多代表关系越紧密复杂。
           </div>
 
           <Heading style={{ marginTop: 16 }}>提示</Heading>
@@ -149,6 +164,20 @@ const miniBtnStyle: React.CSSProperties = {
   borderRadius: 4,
   cursor: "pointer",
 };
+
+function rowLabelStyle(checked: boolean): React.CSSProperties {
+  return {
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+    padding: "4px 0",
+    fontSize: 12,
+    cursor: "pointer",
+    userSelect: "none",
+    opacity: checked ? 1 : 0.45,
+    transition: "opacity 120ms",
+  };
+}
 
 function Heading({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) {
   return (

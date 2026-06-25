@@ -12,11 +12,11 @@ from enum import Enum
 from typing import Optional, List
 from pydantic import BaseModel, Field, ConfigDict
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 
 # ─────────────────────────────────────────────────────────────
-# 节点 10 类分类（决定边框色）
+# 节点 10 类分类(Character,决定边框色)
 # ─────────────────────────────────────────────────────────────
 class CharacterCategory(str, Enum):
     OLYMPIAN = "olympian"
@@ -32,7 +32,15 @@ class CharacterCategory(str, Enum):
 
 
 # ─────────────────────────────────────────────────────────────
-# 关系 5 类（决定边色）
+# 武器/宝物 2 类(Artifact,决定边框色)
+# ─────────────────────────────────────────────────────────────
+class ArtifactCategory(str, Enum):
+    WEAPON = "weapon"
+    TREASURE = "treasure"
+
+
+# ─────────────────────────────────────────────────────────────
+# 关系 6 类(决定边色)
 # ─────────────────────────────────────────────────────────────
 class RelationType(str, Enum):
     BLOOD = "blood"
@@ -40,6 +48,7 @@ class RelationType(str, Enum):
     HOSTILE = "hostile"
     ALLY = "ally"
     MENTOR = "mentor"
+    OWNS = "owns"
 
 
 # ─────────────────────────────────────────────────────────────
@@ -99,6 +108,28 @@ class Character(BaseModel):
 
 
 # ─────────────────────────────────────────────────────────────
+# Artifact — 武器/宝物
+# ─────────────────────────────────────────────────────────────
+class Artifact(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    schema_version: int = Field(default=SCHEMA_VERSION)
+    id: str = Field(pattern=r"^[a-z][a-z0-9_]*$")
+    name_zh: str
+    name_en: str
+    aliases: List[str] = Field(default_factory=list)
+    epithet: Optional[str] = None
+    category: ArtifactCategory
+
+    bio: Optional[str] = None
+    events: List[CharacterEvent] = Field(default_factory=list)
+    domains: List[str] = Field(default_factory=list)
+
+    portrait: str
+    thumb: str
+
+
+# ─────────────────────────────────────────────────────────────
 # 关系事件 / Relation
 # ─────────────────────────────────────────────────────────────
 class RelationEvent(BaseModel):
@@ -129,6 +160,7 @@ class Dataset(BaseModel):
     model_config = ConfigDict(extra="forbid")
     schema_version: int = Field(default=SCHEMA_VERSION)
     characters: List[Character]
+    artifacts: List[Artifact] = Field(default_factory=list)
     relations: List[Relation]
 
 
@@ -214,4 +246,26 @@ BATCH_MONSTERS_10 = [
 ]
 
 ALL_CHARACTERS = ALL_CHARACTERS + BATCH_MONSTERS_10
+
+
+# ─────────────────────────────────────────────────────────────
+# Artifact MVP 12 件(id, 中文名, 英文名, 分类, 一句话描述)
+# 决策来源:用户 2026-06-24 Artifact 扩展指示
+# ─────────────────────────────────────────────────────────────
+ALL_ARTIFACTS = [
+    # 武器(6)
+    ("lightning",        "闪电",           "Thunderbolt",         ArtifactCategory.WEAPON,   "宙斯的不可抵御之武器"),
+    ("trident",          "三叉戟",         "Trident",             ArtifactCategory.WEAPON,   "波塞冬撼海撼地之器"),
+    ("harpe",            "镰刀剑",         "Harpe",               ArtifactCategory.WEAPON,   "克洛诺斯阉割乌拉诺斯之镰、珀尔修斯斩美杜莎之剑"),
+    ("aegis",            "埃癸斯神盾",     "Aegis",               ArtifactCategory.WEAPON,   "镶嵌戈耳工首级的雅典娜/宙斯神盾"),
+    ("lion_skin",        "涅墨亚狮皮",     "Nemean Lion Skin",    ArtifactCategory.WEAPON,   "赫拉克勒斯刀枪不入的战袍"),
+    ("medusa_head",      "美杜莎首级",     "Head of Medusa",      ArtifactCategory.WEAPON,   "石化目光的不死兵器"),
+    # 宝物(6)
+    ("golden_apple",     "金苹果",         "Golden Apple",        ArtifactCategory.TREASURE, "“献给最美者”的不和之果"),
+    ("golden_fleece",    "金羊毛",         "Golden Fleece",       ArtifactCategory.TREASURE, "阿尔戈英雄远征之鹄的"),
+    ("helm_of_darkness", "隐身头盔",       "Helm of Darkness",    ArtifactCategory.TREASURE, "哈迪斯赐予的隐形之盔"),
+    ("winged_sandals",   "金翼草鞋",       "Winged Sandals",      ArtifactCategory.TREASURE, "赫尔墨斯/珀尔修斯的飞行神鞋"),
+    ("pandoras_box",     "潘多拉之盒",     "Pandora's Pithos",    ArtifactCategory.TREASURE, "封禁众苦的陶瓮"),
+    ("trojan_horse",     "特洛伊木马",     "Trojan Horse",        ArtifactCategory.TREASURE, "希腊联军破城之诡计"),
+]
 

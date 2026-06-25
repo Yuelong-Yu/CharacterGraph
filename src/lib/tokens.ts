@@ -7,7 +7,7 @@
  *
  * 决策来源：docs/design-freeze.md §2.2 / §2.3 + 用户后续白底 + 3D 决定
  */
-import type { CharacterCategory, RelationType } from "@/schemas/character";
+import type { ArtifactCategory, CharacterCategory, RelationType } from "@/schemas/character";
 
 // ─── 基础调色（白底主题）───────────────────────────────────
 export const COLOR = {
@@ -47,13 +47,25 @@ export const CATEGORY_LABEL: Record<CharacterCategory, string> = {
   minor_deity:      "次要神祇/宁芙",
 };
 
-// ─── 5 类关系边色（白底校准，hex）──────────────────────
+// ─── Artifact 2 类节点边框色(白底校准,hex)─────
+export const ARTIFACT_CATEGORY_COLOR: Record<ArtifactCategory, string> = {
+  weapon:   "#7a1f1a",   // 深酒红 — 兵刃肃杀
+  treasure: "#c08b1c",   // 古金 — 宝物
+};
+
+export const ARTIFACT_CATEGORY_LABEL: Record<ArtifactCategory, string> = {
+  weapon:   "武器",
+  treasure: "宝物",
+};
+
+// ─── 6 类关系边色(白底校准,hex)──────────────────────
 export const RELATION_COLOR: Record<RelationType, string> = {
-  blood:    "#8a8580",   // 中性灰 — 血缘，最常见所以低调
+  blood:    "#8a8580",   // 中性灰 — 血缘,最常见所以低调
   marriage: "#c0506e",   // 玫瑰红 — 婚姻
   hostile:  "#b8332b",   // 暗红 — 敌对
   ally:     "#2e6cb8",   // 蓝 — 同伴
   mentor:   "#8b8230",   // 橄榄金 — 师徒
+  owns:     "#1f8a7a",   // 青碧 — 拥有(Character → Artifact)
 };
 
 export const RELATION_LABEL: Record<RelationType, string> = {
@@ -62,6 +74,7 @@ export const RELATION_LABEL: Record<RelationType, string> = {
   hostile:  "敌对",
   ally:     "同伴/战友",
   mentor:   "师徒/庇护",
+  owns:     "拥有/使用",
 };
 
 // ─── 字体 ─────────────────────────────────────────────────
