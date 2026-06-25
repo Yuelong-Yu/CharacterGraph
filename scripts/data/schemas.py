@@ -288,6 +288,36 @@ BATCH_EXPANSION_15 = [
 
 ALL_CHARACTERS = ALL_CHARACTERS + BATCH_EXPANSION_15
 
+# Batch 大扩展 +17:补原始神/泰坦/冥界配角、英雄、名怪与著名坐骑神兽
+BATCH_EXPANSION_17 = [
+    # 原始神 (3)
+    ("uranus",         "乌拉诺斯",     "Uranus",         CharacterCategory.PRIMORDIAL, 0, "原始天空之神,众泰坦之父"),
+    ("eros",           "厄洛斯",       "Eros",           CharacterCategory.PRIMORDIAL, 0, "原始爱欲之神"),
+    ("thanatos",       "塔纳托斯",     "Thanatos",       CharacterCategory.PRIMORDIAL, 0, "死亡的化身"),
+    # 泰坦 (2)
+    ("helios",         "赫利俄斯",     "Helios",         CharacterCategory.TITAN, 1, "驾日车巡天的太阳神"),
+    ("leto",           "勒托",         "Leto",           CharacterCategory.TITAN, 1, "阿波罗与阿尔忒弥斯之母"),
+    # 次要神祇 (2)
+    ("charon",         "卡戎",         "Charon",         CharacterCategory.MINOR_DEITY, 1, "冥河摆渡人"),
+    ("pan",            "潘",           "Pan",            CharacterCategory.MINOR_DEITY, 2, "山林、牧群与恐慌之神"),
+    # 阿尔戈英雄 (2)
+    ("atalanta",       "阿塔兰忒",     "Atalanta",       CharacterCategory.ARGONAUT, 3, "捷足的女猎手"),
+    ("dioscuri",       "狄俄斯库里",   "Dioscuri",       CharacterCategory.ARGONAUT, 3, "卡斯托耳与波吕丢刻斯双子"),
+    # 独立英雄 (1)
+    ("cadmus",         "卡德摩斯",     "Cadmus",         CharacterCategory.INDEPENDENT_HERO, 3, "底比斯的创建者,播龙牙者"),
+    # 怪物 (3)
+    ("geryon",         "革律翁",       "Geryon",         CharacterCategory.MONSTER, 3, "三体三头的远西巨人"),
+    ("talos",          "塔罗斯",       "Talos",          CharacterCategory.MONSTER, 3, "守护克里特的青铜巨人"),
+    ("calydonian_boar","卡吕冬野猪",   "Calydonian Boar",CharacterCategory.MONSTER, 3, "阿尔忒弥斯所遣的巨野猪"),
+    # 坐骑/神兽 (4)
+    ("xanthus_balius", "克桑托斯与巴利俄斯", "Xanthus and Balius", CharacterCategory.MONSTER, 4, "阿喀琉斯能言的不死神马"),
+    ("arion",          "阿里翁",       "Arion",          CharacterCategory.MONSTER, 3, "波塞冬所生的会言不死神马"),
+    ("ceryneian_hind", "刻律涅亚牝鹿", "Ceryneian Hind", CharacterCategory.MONSTER, 2, "阿尔忒弥斯的金角铜蹄牝鹿"),
+    ("mares_of_diomedes","狄俄墨得斯的牝马","Mares of Diomedes",CharacterCategory.MONSTER, 3, "色雷斯王的食人牝马"),
+]
+
+ALL_CHARACTERS = ALL_CHARACTERS + BATCH_EXPANSION_17
+
 
 # ─────────────────────────────────────────────────────────────
 # Artifact MVP 12 件(id, 中文名, 英文名, 分类, 一句话描述)
@@ -319,5 +349,9 @@ ALL_ARTIFACTS = [
     ("cornucopia",        "丰饶角",         "Cornucopia",          ArtifactCategory.TREASURE, "永不枯竭的丰饶之角"),
     ("spear_of_achilles", "佩利昂木梣枪",   "Pelian Spear",        ArtifactCategory.WEAPON,   "唯阿喀琉斯能挥动的梣木长枪"),
     ("bow_of_heracles",   "赫拉克勒斯之弓", "Bow of Heracles",     ArtifactCategory.WEAPON,   "淬九头蛇毒、终结特洛伊的神弓"),
+    # Batch 大扩展器物 +3
+    ("syrinx",              "排箫",           "Syrinx",              ArtifactCategory.TREASURE, "潘的芦笛,催眠百眼巨人之器"),
+    ("necklace_of_harmonia","哈尔摩尼亚项链", "Necklace of Harmonia",ArtifactCategory.TREASURE, "赐美貌也降灾祸的诅咒项链"),
+    ("ambrosia",            "神食神酒",       "Ambrosia and Nectar", ArtifactCategory.TREASURE, "诸神不死的食物与饮品"),
 ]
 

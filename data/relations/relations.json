@@ -4238,5 +4238,998 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 2,
+    "id": "uranus-gaia",
+    "source": "uranus",
+    "target": "gaia",
+    "primary_type": "marriage",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "天地结合与冲突",
+        "desc": "乌拉诺斯覆盖盖亚生下泰坦诸神,却囚禁子女,盖亚遂铸镰煽动反抗。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "126-160",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "uranus-cronus",
+    "source": "uranus",
+    "target": "cronus",
+    "primary_type": "blood",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "被子阉割",
+        "desc": "克洛诺斯伏击父亲乌拉诺斯并以镰刀阉割之,夺取天界统治权。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "176-182",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "uranus-aphrodite",
+    "source": "uranus",
+    "target": "aphrodite",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "断片生爱神",
+        "desc": "乌拉诺斯被阉割的断片落入大海,从泡沫中诞生了阿芙洛狄忒。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "188-200",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "aphrodite-eros",
+    "source": "aphrodite",
+    "target": "eros",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "爱神母子",
+        "desc": "后世传统中厄洛斯为阿芙洛狄忒之子,常随其左右以箭点燃爱欲。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "1.452-473",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "eros-apollo",
+    "source": "eros",
+    "target": "apollo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金箭戏阿波罗",
+        "desc": "厄洛斯以金箭射阿波罗使其痴恋达佛涅,又以铅箭令达佛涅厌弃他,后者化为月桂。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "1.452-473",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "thanatos-hades",
+    "source": "thanatos",
+    "target": "hades",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "冥界取魂",
+        "desc": "塔纳托斯职掌平静死亡,将亡者灵魂带往哈迪斯的冥界。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "758-766",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "thanatos-heracles",
+    "source": "thanatos",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "墓旁夺命",
+        "desc": "为救阿尔刻斯提斯,赫拉克勒斯伏击前来取魂的塔纳托斯,与之搏斗夺回她的性命。",
+        "desc_long": null,
+        "source": {
+          "work": "欧里庇得斯《阿尔刻斯提斯》",
+          "locus": "1140-1142",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "helios-circe",
+    "source": "helios",
+    "target": "circe",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "太阳神之女",
+        "desc": "女巫喀耳刻是太阳神赫利俄斯之女,继承其神性血脉。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "10.135-139",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "helios-odysseus",
+    "source": "helios",
+    "target": "odysseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "太阳神牛之祸",
+        "desc": "奥德修斯部下违禁宰食赫利俄斯圣牛,太阳神诉于宙斯,宙斯以雷霆击碎其船。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《奥德赛》",
+          "locus": "12.353-419",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "helios-medea",
+    "source": "helios",
+    "target": "medea",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙与龙车",
+        "desc": "美狄亚为赫利俄斯之孙女,危急时赫利俄斯赐予她飞龙牵引的太阳车助其逃离。",
+        "desc_long": null,
+        "source": {
+          "work": "欧里庇得斯《美狄亚》",
+          "locus": "1321-1322",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "leto-zeus",
+    "source": "leto",
+    "target": "zeus",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "受宙斯钟爱",
+        "desc": "勒托受宙斯钟爱怀孕,产下阿波罗与阿尔忒弥斯。",
+        "desc_long": null,
+        "source": {
+          "work": "赫西俄德《神谱》",
+          "locus": "918-920",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "leto-apollo",
+    "source": "leto",
+    "target": "apollo",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "阿波罗为勒托在得洛斯岛所生之子。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致阿波罗》",
+          "locus": "115-126",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "leto-artemis",
+    "source": "leto",
+    "target": "artemis",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "阿尔忒弥斯为勒托所生,并协助母亲接生弟弟阿波罗。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致阿波罗》",
+          "locus": "115-126",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "leto-hera",
+    "source": "leto",
+    "target": "hera",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赫拉迫害",
+        "desc": "赫拉嫉恨勒托,诅咒大地不得收容其临盆并遣巨蟒追逐。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致阿波罗》",
+          "locus": "91-101",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "charon-hades",
+    "source": "charon",
+    "target": "hades",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "冥界渡夫",
+        "desc": "卡戎在哈迪斯统辖的冥河上摆渡亡魂,是冥界秩序的一环。",
+        "desc_long": null,
+        "source": {
+          "work": "维吉尔《埃涅阿斯纪》",
+          "locus": "6.298-330",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "charon-orpheus",
+    "source": "charon",
+    "target": "orpheus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "琴声渡冥河",
+        "desc": "奥菲斯下冥府寻妻,以琴声打动卡戎得以渡过冥河。",
+        "desc_long": null,
+        "source": {
+          "work": "维吉尔《农事诗》",
+          "locus": "4.502",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "charon-aeneas",
+    "source": "charon",
+    "target": "aeneas",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金枝渡活人",
+        "desc": "埃涅阿斯持金枝来到冥河,卡戎见金枝破例渡这位活人过河。",
+        "desc_long": null,
+        "source": {
+          "work": "维吉尔《埃涅阿斯纪》",
+          "locus": "6.384-416",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "hermes-pan",
+    "source": "hermes",
+    "target": "pan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "多数传统称潘为赫尔墨斯之子,生而为半羊神。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马赞歌《致潘》",
+          "locus": "28-47",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "pan-syrinx",
+    "source": "pan",
+    "target": "syrinx",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "造排箫",
+        "desc": "潘追求化为芦苇的宁芙叙任克斯,采芦苇制成排箫随身吹奏。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "1.689-712",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "pan-typhon",
+    "source": "pan",
+    "target": "typhon",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "怪叫退堤丰",
+        "desc": "诸神战堤丰时,潘的怪叫惊退堤丰之兵,并参与救回宙斯筋腱。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "1.6.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "atalanta-calydonian_boar",
+    "source": "atalanta",
+    "target": "calydonian_boar",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "首箭见血",
+        "desc": "阿塔兰忒在卡吕冬狩猎中射出致命第一箭使巨野猪见血。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "8.380-444",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "atalanta-jason",
+    "source": "atalanta",
+    "target": "jason",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿尔戈同行",
+        "desc": "阿塔兰忒常被列为阿尔戈英雄之一,与伊阿宋一同远征。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "1.9.16",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "atalanta-golden_apple",
+    "source": "atalanta",
+    "target": "golden_apple",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金苹果赛跑",
+        "desc": "追求者在阿芙洛狄忒帮助下以三枚金苹果引阿塔兰忒拾取拖慢脚步,终在赛跑中胜她娶之。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "10.560-680",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "dioscuri-helen",
+    "source": "dioscuri",
+    "target": "helen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹与解救",
+        "desc": "狄俄斯库里为海伦之兄,曾出征救回幼时被忒修斯掳走的海伦。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.10.7",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "dioscuri-jason",
+    "source": "dioscuri",
+    "target": "jason",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阿尔戈双子",
+        "desc": "卡斯托耳与波吕丢刻斯同为阿尔戈英雄,远征中波吕丢刻斯拳杀蛮王阿密科斯。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "2.1-97",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "dioscuri-zeus",
+    "source": "dioscuri",
+    "target": "zeus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共享不死",
+        "desc": "波吕丢刻斯为宙斯之子,恳求与凡人兄弟卡斯托耳分享不死,宙斯允二人轮流于天界冥界,化为双子座。",
+        "desc_long": null,
+        "source": {
+          "work": "品达《涅墨亚颂歌》",
+          "locus": "10.55-90",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "dioscuri-theseus",
+    "source": "dioscuri",
+    "target": "theseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "讨还海伦",
+        "desc": "忒修斯掳走幼年海伦,狄俄斯库里兄弟出征阿提卡将其解救。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.10.7",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cadmus-necklace_of_harmonia",
+    "source": "cadmus",
+    "target": "necklace_of_harmonia",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "婚礼诅咒之赠",
+        "desc": "卡德摩斯娶哈尔摩尼亚,新娘获赠赫淮斯托斯所造、暗藏诅咒的项链。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.4.2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cadmus-ares",
+    "source": "cadmus",
+    "target": "ares",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "屠龙赎罪",
+        "desc": "卡德摩斯杀死阿瑞斯的圣泉巨龙,因此须服侍阿瑞斯八年赎罪,后娶其女哈尔摩尼亚。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.4.1-2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "cadmus-athena",
+    "source": "cadmus",
+    "target": "athena",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "指点播龙牙",
+        "desc": "雅典娜指示卡德摩斯将龙牙播入土中,长出武装战士,余五人成底比斯贵族祖先。",
+        "desc_long": null,
+        "source": {
+          "work": "奥维德《变形记》",
+          "locus": "3.101-130",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "necklace_of_harmonia-hephaestus",
+    "source": "necklace_of_harmonia",
+    "target": "hephaestus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "怨咒所铸",
+        "desc": "赫淮斯托斯因妻子私情怀恨,将诅咒注入为哈尔摩尼亚所造的项链。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "3.4.2",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "geryon-heracles",
+    "source": "geryon",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第十功业",
+        "desc": "赫拉克勒斯远赴远西,以毒箭一箭穿透三体的革律翁,夺取其红色牛群。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.10",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "talos-medea",
+    "source": "talos",
+    "target": "medea",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "魔法破青铜巨人",
+        "desc": "阿尔戈号经克里特时塔罗斯投石阻拦,美狄亚施法使其拔下脚踝封钉,灵液流尽而亡。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "4.1654-1688",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "talos-hephaestus",
+    "source": "talos",
+    "target": "hephaestus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "神匠所造",
+        "desc": "塔罗斯由赫淮斯托斯打造,赠予克里特王米诺斯守卫海岛。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "1.9.26",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "talos-jason",
+    "source": "talos",
+    "target": "jason",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阻拦阿尔戈号",
+        "desc": "塔罗斯向返航的阿尔戈号投掷巨石阻拦,后被美狄亚之法所破。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗尼俄斯《阿尔戈英雄纪》",
+          "locus": "4.1638-1688",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "calydonian_boar-artemis",
+    "source": "calydonian_boar",
+    "target": "artemis",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "神怒所遣",
+        "desc": "卡吕冬王献祭遗漏阿尔忒弥斯,女神遣下巨野猪惩罚其国。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "9.533-540",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "xanthus_balius-achilles",
+    "source": "xanthus_balius",
+    "target": "achilles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "神马牵战车",
+        "desc": "克桑托斯与巴利俄斯牵引阿喀琉斯战车,克桑托斯曾开口预言其主之死。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "19.404-424",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "xanthus_balius-poseidon",
+    "source": "xanthus_balius",
+    "target": "poseidon",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "婚礼之赠",
+        "desc": "波塞冬将神马克桑托斯与巴利俄斯作为礼物赠予佩琉斯的婚礼,后传给阿喀琉斯。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "16.866-867",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "arion-poseidon",
+    "source": "arion",
+    "target": "poseidon",
+    "primary_type": "owns",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "波塞冬所生",
+        "desc": "阿里翁由波塞冬与化为母马的得墨忒尔所生,是神速的不死神马。",
+        "desc_long": null,
+        "source": {
+          "work": "保萨尼亚斯《希腊志》",
+          "locus": "8.25.5-7",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "arion-demeter",
+    "source": "arion",
+    "target": "demeter",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "得墨忒尔所生",
+        "desc": "得墨忒尔化母马躲避波塞冬,被识破后生下神马阿里翁。",
+        "desc_long": null,
+        "source": {
+          "work": "保萨尼亚斯《希腊志》",
+          "locus": "8.25.5-7",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "arion-heracles",
+    "source": "arion",
+    "target": "heracles",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "一度归赫拉克勒斯",
+        "desc": "阿里翁一度为赫拉克勒斯所有,凭神速助其取胜,后转赠阿德剌斯托斯。",
+        "desc_long": null,
+        "source": {
+          "work": "保萨尼亚斯《希腊志》",
+          "locus": "8.25.10",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ceryneian_hind-heracles",
+    "source": "ceryneian_hind",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第三功业",
+        "desc": "赫拉克勒斯追逐刻律涅亚牝鹿整整一年,因是圣物不能伤害,终将其活捉。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.3",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ceryneian_hind-artemis",
+    "source": "ceryneian_hind",
+    "target": "artemis",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "女神圣物",
+        "desc": "刻律涅亚牝鹿是阿尔忒弥斯的圣物,赫拉克勒斯活捉时向女神辩明并承诺放归。",
+        "desc_long": null,
+        "source": {
+          "work": "品达《奥林匹亚颂歌》",
+          "locus": "3.26-30",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "mares_of_diomedes-heracles",
+    "source": "mares_of_diomedes",
+    "target": "heracles",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "第八功业",
+        "desc": "赫拉克勒斯制伏色雷斯食人牝马,将国王狄俄墨得斯喂给马群使其温顺,带回献给欧律斯透斯。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.8",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "mares_of_diomedes-ares",
+    "source": "mares_of_diomedes",
+    "target": "ares",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "战神之子所养",
+        "desc": "食人牝马为战神阿瑞斯之子、色雷斯王狄俄墨得斯所豢养。",
+        "desc_long": null,
+        "source": {
+          "work": "阿波罗多洛斯《书库》",
+          "locus": "2.5.8",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ambrosia-zeus",
+    "source": "ambrosia",
+    "target": "zeus",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸神之食",
+        "desc": "神食神酒为奥林匹斯诸神专享,维系其不朽,宙斯居奥林匹斯神宴之首。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "4.1-4",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 2,
+    "id": "ambrosia-thetis",
+    "source": "ambrosia",
+    "target": "thetis",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "涂身防腐",
+        "desc": "忒提斯曾以神食涂抹婴儿阿喀琉斯试图使其不死,也以神食保存帕特罗克洛斯遗体。",
+        "desc_long": null,
+        "source": {
+          "work": "荷马《伊利亚特》",
+          "locus": "19.38-39",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
   }
 ]
