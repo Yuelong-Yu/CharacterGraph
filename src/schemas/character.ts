@@ -15,42 +15,15 @@ export const SCHEMA_VERSION = 2;
 const SchemaVersionField = z.number().int().min(1).max(2);
 
 // ─────────────────────────────────────────────────────────────
-// Character 节点 10 类分类(决定边框色)
+// 分类 / 关系类型 — 通用化(项目无关)
+//
+// 具体取值由各项目 projects/<slug>/project.config.json 定义:
+//   - characterCategories / artifactCategories / relationTypes
+// schema 本身只校验 slug 格式;某取值是否「合法」改由加载期校验
+// (src/lib/data.ts 与 scripts/data/schemas.py 按当前项目 config 的键集判定,
+//  未声明的分类 / 关系类型 → 直接报错,等价于原闭集枚举的防错能力)。
 // ─────────────────────────────────────────────────────────────
-export const CharacterCategory = z.enum([
-  "olympian",          // 奥林匹斯神 — 金白
-  "titan",             // 泰坦 — 古铜
-  "primordial",        // 原始神/抽象拟人 — 深紫
-  "monster",           // 怪物 — 苔绿
-  "achaean",           // 阿开亚联军 — 海蓝
-  "trojan",            // 特洛伊方 — 砖红
-  "argonaut",          // 阿尔戈英雄 — 航蓝
-  "independent_hero",  // 独立英雄 — 橄榄金
-  "minor_deity",       // 次要神祇/宁芙 — 薄荷青
-]);
-export type CharacterCategory = z.infer<typeof CharacterCategory>;
-
-// ─────────────────────────────────────────────────────────────
-// Artifact 节点 2 类(决定边框色)
-// ─────────────────────────────────────────────────────────────
-export const ArtifactCategory = z.enum([
-  "weapon",    // 武器(三叉戟/闪电/镰刀/弓...)— 深红
-  "treasure",  // 宝物(金苹果/金羊毛/隐形头盔/木马/盒子...)— 金黄
-]);
-export type ArtifactCategory = z.infer<typeof ArtifactCategory>;
-
-// ─────────────────────────────────────────────────────────────
-// 关系类型(决定边色)— 6 类
-// ─────────────────────────────────────────────────────────────
-export const RelationType = z.enum([
-  "blood",       // 血缘 — 暖白
-  "marriage",    // 婚姻/情人 — 玫瑰金
-  "hostile",     // 敌对 — 暗红
-  "ally",        // 同伴/战友 — 青蓝
-  "mentor",      // 师徒/庇护 — 橄榄金
-  "owns",        // 拥有/使用(Character → Artifact)— 青碧
-]);
-export type RelationType = z.infer<typeof RelationType>;
+const Slug = z.string().regex(/^[a-z][a-z0-9_]*$/);
 
 // ─────────────────────────────────────────────────────────────
 // 文献出处 — 名言、事件必带
@@ -86,12 +59,12 @@ export type CharacterEvent = z.infer<typeof CharacterEvent>;
 // ─────────────────────────────────────────────────────────────
 export const Character = z.object({
   schema_version: SchemaVersionField,
-  id: z.string().regex(/^[a-z][a-z0-9_]*$/),
+  id: Slug,
   name_zh: z.string(),
   name_en: z.string(),
   aliases: z.array(z.string()).default([]),
   epithet: z.string().nullable(),
-  category: CharacterCategory,
+  category: Slug,
   era_layer: z.number().int().min(0).max(5),
 
   bio: z.string().nullable(),
@@ -113,14 +86,14 @@ export type Character = z.infer<typeof Character>;
 // ─────────────────────────────────────────────────────────────
 export const Artifact = z.object({
   schema_version: SchemaVersionField,
-  id: z.string().regex(/^[a-z][a-z0-9_]*$/),
+  id: Slug,
   name_zh: z.string(),
   name_en: z.string(),
   aliases: z.array(z.string()).default([]),
   /** 一句话定义(节点卡片显示,如"宙斯的不可抵御武器") */
   epithet: z.string().nullable(),
-  /** weapon | treasure */
-  category: ArtifactCategory,
+  /** weapon | treasure 等,具体取值见项目 config.artifactCategories */
+  category: Slug,
 
   /** 200-600 字背景(由来 / 形态 / 神力 / 流转) */
   bio: z.string().nullable(),
@@ -155,8 +128,8 @@ export const Relation = z.object({
   /** source/target = Character.id 或 Artifact.id;OWNS 时 source=character, target=artifact */
   source: z.string(),
   target: z.string(),
-  primary_type: RelationType,
-  composite_types: z.array(RelationType).default([]),
+  primary_type: Slug,
+  composite_types: z.array(Slug).default([]),
   events: z.array(RelationEvent).default([]),
 });
 export type Relation = z.infer<typeof Relation>;

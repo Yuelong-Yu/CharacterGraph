@@ -1,0 +1,870 @@
+{
+  "characters": [
+    {
+      "slug": "zeus",
+      "name_zh": "宙斯",
+      "name_en": "Zeus",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "众神之王"
+    },
+    {
+      "slug": "hera",
+      "name_zh": "赫拉",
+      "name_en": "Hera",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "天后"
+    },
+    {
+      "slug": "poseidon",
+      "name_zh": "波塞冬",
+      "name_en": "Poseidon",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "海洋之神"
+    },
+    {
+      "slug": "athena",
+      "name_zh": "雅典娜",
+      "name_en": "Athena",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "智慧与战争策略女神"
+    },
+    {
+      "slug": "apollo",
+      "name_zh": "阿波罗",
+      "name_en": "Apollo",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "光明、音乐与预言之神"
+    },
+    {
+      "slug": "artemis",
+      "name_zh": "阿尔忒弥斯",
+      "name_en": "Artemis",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "狩猎与月亮女神"
+    },
+    {
+      "slug": "aphrodite",
+      "name_zh": "阿芙洛狄忒",
+      "name_en": "Aphrodite",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "爱与美的女神"
+    },
+    {
+      "slug": "ares",
+      "name_zh": "阿瑞斯",
+      "name_en": "Ares",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "战神"
+    },
+    {
+      "slug": "cronus",
+      "name_zh": "克洛诺斯",
+      "name_en": "Cronus",
+      "category": "titan",
+      "era_layer": 1,
+      "epithet": "时间与收割之神"
+    },
+    {
+      "slug": "prometheus",
+      "name_zh": "普罗米修斯",
+      "name_en": "Prometheus",
+      "category": "titan",
+      "era_layer": 1,
+      "epithet": "先知,人类的庇护者"
+    },
+    {
+      "slug": "gaia",
+      "name_zh": "盖亚",
+      "name_en": "Gaia",
+      "category": "primordial",
+      "era_layer": 0,
+      "epithet": "大地母神"
+    },
+    {
+      "slug": "medusa",
+      "name_zh": "美杜莎",
+      "name_en": "Medusa",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "蛇发女妖"
+    },
+    {
+      "slug": "achilles",
+      "name_zh": "阿喀琉斯",
+      "name_en": "Achilles",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "疾足的英雄"
+    },
+    {
+      "slug": "odysseus",
+      "name_zh": "奥德修斯",
+      "name_en": "Odysseus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "足智多谋者"
+    },
+    {
+      "slug": "hector",
+      "name_zh": "赫克托耳",
+      "name_en": "Hector",
+      "category": "trojan",
+      "era_layer": 4,
+      "epithet": "特洛伊第一勇士"
+    },
+    {
+      "slug": "heracles",
+      "name_zh": "赫拉克勒斯",
+      "name_en": "Heracles",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "十二功业的完成者"
+    },
+    {
+      "slug": "perseus",
+      "name_zh": "珀尔修斯",
+      "name_en": "Perseus",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "美杜莎的斩首者"
+    },
+    {
+      "slug": "helen",
+      "name_zh": "海伦",
+      "name_en": "Helen",
+      "category": "trojan",
+      "era_layer": 4,
+      "epithet": "斯巴达王后,特洛伊战争之因"
+    },
+    {
+      "slug": "hermes",
+      "name_zh": "赫尔墨斯",
+      "name_en": "Hermes",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "众神信使,旅人与窃贼的守护神"
+    },
+    {
+      "slug": "demeter",
+      "name_zh": "得墨忒尔",
+      "name_en": "Demeter",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "丰收与农业女神"
+    },
+    {
+      "slug": "rhea",
+      "name_zh": "瑞亚",
+      "name_en": "Rhea",
+      "category": "titan",
+      "era_layer": 1,
+      "epithet": "众神之母,克洛诺斯之妻"
+    },
+    {
+      "slug": "minotaur",
+      "name_zh": "米诺陶",
+      "name_en": "Minotaur",
+      "category": "monster",
+      "era_layer": 4,
+      "epithet": "克里特迷宫中的牛头人"
+    },
+    {
+      "slug": "polyphemus",
+      "name_zh": "波吕斐摩斯",
+      "name_en": "Polyphemus",
+      "category": "monster",
+      "era_layer": 4,
+      "epithet": "独眼巨人"
+    },
+    {
+      "slug": "agamemnon",
+      "name_zh": "阿伽门农",
+      "name_en": "Agamemnon",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "希腊联军统帅"
+    },
+    {
+      "slug": "paris",
+      "name_zh": "帕里斯",
+      "name_en": "Paris",
+      "category": "trojan",
+      "era_layer": 4,
+      "epithet": "特洛伊王子,引发战争之人"
+    },
+    {
+      "slug": "jason",
+      "name_zh": "伊阿宋",
+      "name_en": "Jason",
+      "category": "argonaut",
+      "era_layer": 3,
+      "epithet": "阿尔戈号船长,金羊毛的寻获者"
+    },
+    {
+      "slug": "medea",
+      "name_zh": "美狄亚",
+      "name_en": "Medea",
+      "category": "argonaut",
+      "era_layer": 3,
+      "epithet": "科尔基斯公主,女巫"
+    },
+    {
+      "slug": "theseus",
+      "name_zh": "忒修斯",
+      "name_en": "Theseus",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "雅典之王,迷宫斩牛者"
+    },
+    {
+      "slug": "penelope",
+      "name_zh": "潘妮洛佩",
+      "name_en": "Penelope",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯之妻,忠贞的典范"
+    },
+    {
+      "slug": "hecate",
+      "name_zh": "赫卡忒",
+      "name_en": "Hecate",
+      "category": "minor_deity",
+      "era_layer": 2,
+      "epithet": "魔法、夜晚与十字路口女神"
+    },
+    {
+      "slug": "typhon",
+      "name_zh": "堤丰",
+      "name_en": "Typhon",
+      "category": "monster",
+      "era_layer": 1,
+      "epithet": "诸怪之父,百头风暴巨怪"
+    },
+    {
+      "slug": "echidna",
+      "name_zh": "厄客德娜",
+      "name_en": "Echidna",
+      "category": "monster",
+      "era_layer": 1,
+      "epithet": "诸怪之母,半人半蛇"
+    },
+    {
+      "slug": "cerberus",
+      "name_zh": "刻耳柏洛斯",
+      "name_en": "Cerberus",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "冥府三头犬"
+    },
+    {
+      "slug": "chimera",
+      "name_zh": "喀迈拉",
+      "name_en": "Chimera",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "狮羊蛇三体喷火怪"
+    },
+    {
+      "slug": "hydra",
+      "name_zh": "九头蛇",
+      "name_en": "Hydra",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "勒拿沼泽九头蛇"
+    },
+    {
+      "slug": "nemean_lion",
+      "name_zh": "涅墨亚狮",
+      "name_en": "Nemean Lion",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "刀枪不入的巨狮"
+    },
+    {
+      "slug": "sphinx",
+      "name_zh": "斯芬克斯",
+      "name_en": "Sphinx",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "底比斯之谜的人面狮身"
+    },
+    {
+      "slug": "scylla",
+      "name_zh": "斯库拉",
+      "name_en": "Scylla",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "墨西拿海峡六头女妖"
+    },
+    {
+      "slug": "charybdis",
+      "name_zh": "卡律布狄斯",
+      "name_en": "Charybdis",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "吞海大漩涡"
+    },
+    {
+      "slug": "pegasus",
+      "name_zh": "珀伽索斯",
+      "name_en": "Pegasus",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "美杜莎血中诞生的飞马"
+    },
+    {
+      "slug": "hephaestus",
+      "name_zh": "赫淮斯托斯",
+      "name_en": "Hephaestus",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "火焰、锻造与工匠之神"
+    },
+    {
+      "slug": "oedipus",
+      "name_zh": "俄狄浦斯",
+      "name_en": "Oedipus",
+      "category": "independent_hero",
+      "era_layer": 4,
+      "epithet": "解开斯芬克斯之谜的底比斯王"
+    },
+    {
+      "slug": "ariadne",
+      "name_zh": "阿里阿德涅",
+      "name_en": "Ariadne",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "赠线团助忒修斯出迷宫的克里特公主"
+    },
+    {
+      "slug": "daedalus",
+      "name_zh": "代达罗斯",
+      "name_en": "Daedalus",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "迷宫与飞翼的神匠"
+    },
+    {
+      "slug": "circe",
+      "name_zh": "喀耳刻",
+      "name_en": "Circe",
+      "category": "minor_deity",
+      "era_layer": 3,
+      "epithet": "艾尤岛女巫,变形魔法的主人"
+    },
+    {
+      "slug": "cassandra",
+      "name_zh": "卡桑德拉",
+      "name_en": "Cassandra",
+      "category": "trojan",
+      "era_layer": 4,
+      "epithet": "无人相信的特洛伊预言者"
+    },
+    {
+      "slug": "andromeda",
+      "name_zh": "安德洛墨达",
+      "name_en": "Andromeda",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "被珀尔修斯救下的埃塞俄比亚公主"
+    },
+    {
+      "slug": "hades",
+      "name_zh": "哈迪斯",
+      "name_en": "Hades",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "冥界之王,亡者与财富之神"
+    },
+    {
+      "slug": "persephone",
+      "name_zh": "珀耳塞福涅",
+      "name_en": "Persephone",
+      "category": "olympian",
+      "era_layer": 2,
+      "epithet": "冥后,春之女神"
+    },
+    {
+      "slug": "dionysus",
+      "name_zh": "狄俄尼索斯",
+      "name_en": "Dionysus",
+      "category": "olympian",
+      "era_layer": 3,
+      "epithet": "酒、狂欢与戏剧之神"
+    },
+    {
+      "slug": "atlas",
+      "name_zh": "阿特拉斯",
+      "name_en": "Atlas",
+      "category": "titan",
+      "era_layer": 1,
+      "epithet": "以双肩擎天的泰坦"
+    },
+    {
+      "slug": "thetis",
+      "name_zh": "忒提斯",
+      "name_en": "Thetis",
+      "category": "minor_deity",
+      "era_layer": 2,
+      "epithet": "海中女神,阿喀琉斯之母"
+    },
+    {
+      "slug": "patroclus",
+      "name_zh": "帕特罗克洛斯",
+      "name_en": "Patroclus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "阿喀琉斯挚友"
+    },
+    {
+      "slug": "menelaus",
+      "name_zh": "墨涅拉俄斯",
+      "name_en": "Menelaus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "斯巴达王,海伦之夫"
+    },
+    {
+      "slug": "priam",
+      "name_zh": "普里阿摩斯",
+      "name_en": "Priam",
+      "category": "trojan",
+      "era_layer": 4,
+      "epithet": "特洛伊末代国王"
+    },
+    {
+      "slug": "aeneas",
+      "name_zh": "埃涅阿斯",
+      "name_en": "Aeneas",
+      "category": "trojan",
+      "era_layer": 4,
+      "epithet": "特洛伊幸存者,罗马先祖"
+    },
+    {
+      "slug": "orpheus",
+      "name_zh": "奥菲斯",
+      "name_en": "Orpheus",
+      "category": "argonaut",
+      "era_layer": 3,
+      "epithet": "下冥府寻妻的乐圣"
+    },
+    {
+      "slug": "bellerophon",
+      "name_zh": "柏勒洛丰",
+      "name_en": "Bellerophon",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "驯飞马屠喀迈拉的英雄"
+    },
+    {
+      "slug": "sirens",
+      "name_zh": "塞壬",
+      "name_en": "Sirens",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "以歌声诱杀水手的海妖"
+    },
+    {
+      "slug": "argus_panoptes",
+      "name_zh": "阿耳戈斯",
+      "name_en": "Argus Panoptes",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "百眼不眠的看守巨人"
+    },
+    {
+      "slug": "harpies",
+      "name_zh": "哈耳庇厄",
+      "name_en": "Harpies",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "夺食施秽的鸟身女妖"
+    },
+    {
+      "slug": "ladon",
+      "name_zh": "拉冬",
+      "name_en": "Ladon",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "看守金苹果的百头巨龙"
+    },
+    {
+      "slug": "uranus",
+      "name_zh": "乌拉诺斯",
+      "name_en": "Uranus",
+      "category": "primordial",
+      "era_layer": 0,
+      "epithet": "原始天空之神,众泰坦之父"
+    },
+    {
+      "slug": "eros",
+      "name_zh": "厄洛斯",
+      "name_en": "Eros",
+      "category": "primordial",
+      "era_layer": 0,
+      "epithet": "原始爱欲之神"
+    },
+    {
+      "slug": "thanatos",
+      "name_zh": "塔纳托斯",
+      "name_en": "Thanatos",
+      "category": "primordial",
+      "era_layer": 0,
+      "epithet": "死亡的化身"
+    },
+    {
+      "slug": "helios",
+      "name_zh": "赫利俄斯",
+      "name_en": "Helios",
+      "category": "titan",
+      "era_layer": 1,
+      "epithet": "驾日车巡天的太阳神"
+    },
+    {
+      "slug": "leto",
+      "name_zh": "勒托",
+      "name_en": "Leto",
+      "category": "titan",
+      "era_layer": 1,
+      "epithet": "阿波罗与阿尔忒弥斯之母"
+    },
+    {
+      "slug": "charon",
+      "name_zh": "卡戎",
+      "name_en": "Charon",
+      "category": "minor_deity",
+      "era_layer": 1,
+      "epithet": "冥河摆渡人"
+    },
+    {
+      "slug": "pan",
+      "name_zh": "潘",
+      "name_en": "Pan",
+      "category": "minor_deity",
+      "era_layer": 2,
+      "epithet": "山林、牧群与恐慌之神"
+    },
+    {
+      "slug": "atalanta",
+      "name_zh": "阿塔兰忒",
+      "name_en": "Atalanta",
+      "category": "argonaut",
+      "era_layer": 3,
+      "epithet": "捷足的女猎手"
+    },
+    {
+      "slug": "dioscuri",
+      "name_zh": "狄俄斯库里",
+      "name_en": "Dioscuri",
+      "category": "argonaut",
+      "era_layer": 3,
+      "epithet": "卡斯托耳与波吕丢刻斯双子"
+    },
+    {
+      "slug": "cadmus",
+      "name_zh": "卡德摩斯",
+      "name_en": "Cadmus",
+      "category": "independent_hero",
+      "era_layer": 3,
+      "epithet": "底比斯的创建者,播龙牙者"
+    },
+    {
+      "slug": "geryon",
+      "name_zh": "革律翁",
+      "name_en": "Geryon",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "三体三头的远西巨人"
+    },
+    {
+      "slug": "talos",
+      "name_zh": "塔罗斯",
+      "name_en": "Talos",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "守护克里特的青铜巨人"
+    },
+    {
+      "slug": "calydonian_boar",
+      "name_zh": "卡吕冬野猪",
+      "name_en": "Calydonian Boar",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "阿尔忒弥斯所遣的巨野猪"
+    },
+    {
+      "slug": "xanthus_balius",
+      "name_zh": "克桑托斯与巴利俄斯",
+      "name_en": "Xanthus and Balius",
+      "category": "monster",
+      "era_layer": 4,
+      "epithet": "阿喀琉斯能言的不死神马"
+    },
+    {
+      "slug": "arion",
+      "name_zh": "阿里翁",
+      "name_en": "Arion",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "波塞冬所生的会言不死神马"
+    },
+    {
+      "slug": "ceryneian_hind",
+      "name_zh": "刻律涅亚牝鹿",
+      "name_en": "Ceryneian Hind",
+      "category": "monster",
+      "era_layer": 2,
+      "epithet": "阿尔忒弥斯的金角铜蹄牝鹿"
+    },
+    {
+      "slug": "mares_of_diomedes",
+      "name_zh": "狄俄墨得斯的牝马",
+      "name_en": "Mares of Diomedes",
+      "category": "monster",
+      "era_layer": 3,
+      "epithet": "色雷斯王的食人牝马"
+    }
+  ],
+  "artifacts": [
+    {
+      "slug": "lightning",
+      "name_zh": "闪电",
+      "name_en": "Thunderbolt",
+      "category": "weapon",
+      "epithet": "宙斯的不可抵御之武器"
+    },
+    {
+      "slug": "trident",
+      "name_zh": "三叉戟",
+      "name_en": "Trident",
+      "category": "weapon",
+      "epithet": "波塞冬撼海撼地之器"
+    },
+    {
+      "slug": "harpe",
+      "name_zh": "镰刀剑",
+      "name_en": "Harpe",
+      "category": "weapon",
+      "epithet": "克洛诺斯阉割乌拉诺斯之镰、珀尔修斯斩美杜莎之剑"
+    },
+    {
+      "slug": "aegis",
+      "name_zh": "埃癸斯神盾",
+      "name_en": "Aegis",
+      "category": "weapon",
+      "epithet": "镶嵌戈耳工首级的雅典娜/宙斯神盾"
+    },
+    {
+      "slug": "lion_skin",
+      "name_zh": "涅墨亚狮皮",
+      "name_en": "Nemean Lion Skin",
+      "category": "weapon",
+      "epithet": "赫拉克勒斯刀枪不入的战袍"
+    },
+    {
+      "slug": "medusa_head",
+      "name_zh": "美杜莎首级",
+      "name_en": "Head of Medusa",
+      "category": "weapon",
+      "epithet": "石化目光的不死兵器"
+    },
+    {
+      "slug": "golden_apple",
+      "name_zh": "金苹果",
+      "name_en": "Golden Apple",
+      "category": "treasure",
+      "epithet": "“献给最美者”的不和之果"
+    },
+    {
+      "slug": "golden_fleece",
+      "name_zh": "金羊毛",
+      "name_en": "Golden Fleece",
+      "category": "treasure",
+      "epithet": "阿尔戈英雄远征之鹄的"
+    },
+    {
+      "slug": "helm_of_darkness",
+      "name_zh": "隐身头盔",
+      "name_en": "Helm of Darkness",
+      "category": "treasure",
+      "epithet": "哈迪斯赐予的隐形之盔"
+    },
+    {
+      "slug": "winged_sandals",
+      "name_zh": "金翼草鞋",
+      "name_en": "Winged Sandals",
+      "category": "treasure",
+      "epithet": "赫尔墨斯/珀尔修斯的飞行神鞋"
+    },
+    {
+      "slug": "pandoras_box",
+      "name_zh": "潘多拉之盒",
+      "name_en": "Pandora's Pithos",
+      "category": "treasure",
+      "epithet": "封禁众苦的陶瓮"
+    },
+    {
+      "slug": "trojan_horse",
+      "name_zh": "特洛伊木马",
+      "name_en": "Trojan Horse",
+      "category": "treasure",
+      "epithet": "希腊联军破城之诡计"
+    },
+    {
+      "slug": "caduceus",
+      "name_zh": "双蛇杖",
+      "name_en": "Caduceus",
+      "category": "treasure",
+      "epithet": "赫尔墨斯的信使权杖"
+    },
+    {
+      "slug": "bow_of_odysseus",
+      "name_zh": "奥德修斯之弓",
+      "name_en": "Bow of Odysseus",
+      "category": "weapon",
+      "epithet": "伊塔卡归乡复仇的试弓"
+    },
+    {
+      "slug": "shield_of_achilles",
+      "name_zh": "阿喀琉斯之盾",
+      "name_en": "Shield of Achilles",
+      "category": "weapon",
+      "epithet": "赫淮斯托斯所铸的宇宙之盾"
+    },
+    {
+      "slug": "thread_of_ariadne",
+      "name_zh": "阿里阿德涅线团",
+      "name_en": "Thread of Ariadne",
+      "category": "treasure",
+      "epithet": "走出克里特迷宫的救命线"
+    },
+    {
+      "slug": "lyre",
+      "name_zh": "里拉琴",
+      "name_en": "Lyre",
+      "category": "treasure",
+      "epithet": "赫尔墨斯所造、奥菲斯弹奏的神弦"
+    },
+    {
+      "slug": "club_of_heracles",
+      "name_zh": "赫拉克勒斯橄榄木棒",
+      "name_en": "Club of Heracles",
+      "category": "weapon",
+      "epithet": "赫拉克勒斯亲手削成的橄榄巨棒"
+    },
+    {
+      "slug": "cornucopia",
+      "name_zh": "丰饶角",
+      "name_en": "Cornucopia",
+      "category": "treasure",
+      "epithet": "永不枯竭的丰饶之角"
+    },
+    {
+      "slug": "spear_of_achilles",
+      "name_zh": "佩利昂木梣枪",
+      "name_en": "Pelian Spear",
+      "category": "weapon",
+      "epithet": "唯阿喀琉斯能挥动的梣木长枪"
+    },
+    {
+      "slug": "bow_of_heracles",
+      "name_zh": "赫拉克勒斯之弓",
+      "name_en": "Bow of Heracles",
+      "category": "weapon",
+      "epithet": "淬九头蛇毒、终结特洛伊的神弓"
+    },
+    {
+      "slug": "syrinx",
+      "name_zh": "排箫",
+      "name_en": "Syrinx",
+      "category": "treasure",
+      "epithet": "潘的芦笛,催眠百眼巨人之器"
+    },
+    {
+      "slug": "necklace_of_harmonia",
+      "name_zh": "哈尔摩尼亚项链",
+      "name_en": "Necklace of Harmonia",
+      "category": "treasure",
+      "epithet": "赐美貌也降灾祸的诅咒项链"
+    },
+    {
+      "slug": "ambrosia",
+      "name_zh": "神食神酒",
+      "name_en": "Ambrosia and Nectar",
+      "category": "treasure",
+      "epithet": "诸神不死的食物与饮品"
+    }
+  ],
+  "en_title_override": {
+    "zeus": "Zeus",
+    "hera": "Hera",
+    "poseidon": "Poseidon",
+    "athena": "Athena",
+    "apollo": "Apollo",
+    "artemis": "Artemis",
+    "aphrodite": "Aphrodite",
+    "ares": "Ares",
+    "cronus": "Cronus",
+    "prometheus": "Prometheus",
+    "gaia": "Gaia",
+    "medusa": "Medusa",
+    "achilles": "Achilles",
+    "odysseus": "Odysseus",
+    "hector": "Hector",
+    "heracles": "Heracles",
+    "perseus": "Perseus",
+    "helen": "Helen of Troy",
+    "hermes": "Hermes",
+    "demeter": "Demeter",
+    "rhea": "Rhea (mythology)",
+    "minotaur": "Minotaur",
+    "polyphemus": "Polyphemus",
+    "agamemnon": "Agamemnon",
+    "paris": "Paris (mythology)",
+    "jason": "Jason",
+    "medea": "Medea",
+    "theseus": "Theseus",
+    "penelope": "Penelope",
+    "hecate": "Hecate"
+  },
+  "zh_title_override": {
+    "zeus": "宙斯",
+    "hera": "赫拉",
+    "poseidon": "波塞冬",
+    "athena": "雅典娜",
+    "apollo": "阿波罗",
+    "artemis": "阿耳忒弥斯",
+    "aphrodite": "阿佛洛狄忒",
+    "ares": "阿瑞斯",
+    "cronus": "克洛诺斯",
+    "prometheus": "普罗米修斯",
+    "gaia": "盖亚",
+    "medusa": "美杜莎",
+    "achilles": "阿喀琉斯",
+    "odysseus": "奧德修斯",
+    "hector": "赫克托耳",
+    "heracles": "赫拉克勒斯",
+    "perseus": "珀耳修斯",
+    "helen": "海伦",
+    "hermes": "赫耳墨斯",
+    "demeter": "得墨忒尔",
+    "rhea": "瑞亚_(神话)",
+    "minotaur": "弥诺陶洛斯",
+    "polyphemus": "波吕斐摩斯",
+    "agamemnon": "阿伽门农",
+    "paris": "帕里斯",
+    "jason": "伊阿宋",
+    "medea": "美狄亚",
+    "theseus": "忒修斯",
+    "penelope": "佩内洛佩",
+    "hecate": "赫卡忒"
+  }
+}

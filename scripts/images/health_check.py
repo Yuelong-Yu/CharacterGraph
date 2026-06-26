@@ -37,7 +37,7 @@ TMP_DIR = ROOT / "tmp"
 TMP_DIR.mkdir(exist_ok=True)
 
 
-def main():
+def main() -> None:
     print("=" * 60)
     print("doubao-seedream-5.0-lite 健康检查")
     print("=" * 60)

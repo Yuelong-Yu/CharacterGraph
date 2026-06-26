@@ -4,20 +4,20 @@
  * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤 + 搜索过滤
  */
 import { useMemo, useState } from "react";
-import type { Artifact, ArtifactCategory, Dataset, Character, CharacterCategory } from "@/schemas/character";
+import type { Artifact, Dataset, Character } from "@/schemas/character";
+import type { ClientProjectConfig } from "@/schemas/projectConfig";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
 import { Intro } from "./Intro";
-import { ARTIFACT_CATEGORY_LABEL, CATEGORY_LABEL, COLOR, FONT } from "@/lib/tokens";
+import { ProjectConfigProvider } from "@/lib/projectConfig";
+import { COLOR, FONT } from "@/lib/tokens";
 
 type Selection =
   | { kind: "none" }
   | { kind: "node"; id: string }
   | { kind: "edge"; id: string };
 
-const ALL_CATEGORIES = Object.keys(CATEGORY_LABEL) as CharacterCategory[];
-const ALL_ARTIFACT_CATEGORIES = Object.keys(ARTIFACT_CATEGORY_LABEL) as ArtifactCategory[];
 const SEARCH_TRIGGER_LEN = 2;
 
 type SearchEntity = Character | Artifact;
@@ -57,16 +57,19 @@ function computeMatchedIds(items: SearchEntity[], rawQuery: string): Set<string>
   return matched;
 }
 
-export function GraphShell({ dataset }: { dataset: Dataset }) {
+export function GraphShell({ dataset, config }: { dataset: Dataset; config: ClientProjectConfig }) {
+  const allCategoryKeys = useMemo(() => Object.keys(config.characterCategories), [config]);
+  const allArtifactCategoryKeys = useMemo(() => Object.keys(config.artifactCategories), [config]);
+
   const [sel, setSel] = useState<Selection>({ kind: "none" });
   const [focusId, setFocusId] = useState<string | null>(null);
   const [focusedId, setFocusedId] = useState<string | null>(null);
   const [layoutMode, setLayoutMode] = useState<LayoutMode>("tier");
-  const [enabledCategories, setEnabledCategories] = useState<Set<CharacterCategory>>(
-    () => new Set(ALL_CATEGORIES),
+  const [enabledCategories, setEnabledCategories] = useState<Set<string>>(
+    () => new Set(allCategoryKeys),
   );
-  const [enabledArtifactCategories, setEnabledArtifactCategories] = useState<Set<ArtifactCategory>>(
-    () => new Set(ALL_ARTIFACT_CATEGORIES),
+  const [enabledArtifactCategories, setEnabledArtifactCategories] = useState<Set<string>>(
+    () => new Set(allArtifactCategoryKeys),
   );
   const [minDegree, setMinDegree] = useState<number>(0);
   // 加载即进入巡游模式
@@ -180,7 +183,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const handleEdgeClick = (id: string) => setSel({ kind: "edge", id });
 
   // 类别勾选
-  const toggleCategory = (cat: CharacterCategory) => {
+  const toggleCategory = (cat: string) => {
     setEnabledCategories((prev) => {
       const next = new Set(prev);
       if (next.has(cat)) next.delete(cat);
@@ -188,10 +191,10 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
       return next;
     });
   };
-  const allCategories = () => setEnabledCategories(new Set(ALL_CATEGORIES));
+  const allCategories = () => setEnabledCategories(new Set(allCategoryKeys));
   const noCategories = () => setEnabledCategories(new Set());
 
-  const toggleArtifactCategory = (cat: ArtifactCategory) => {
+  const toggleArtifactCategory = (cat: string) => {
     setEnabledArtifactCategories((prev) => {
       const next = new Set(prev);
       if (next.has(cat)) next.delete(cat);
@@ -199,7 +202,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
       return next;
     });
   };
-  const allArtifactCategories = () => setEnabledArtifactCategories(new Set(ALL_ARTIFACT_CATEGORIES));
+  const allArtifactCategories = () => setEnabledArtifactCategories(new Set(allArtifactCategoryKeys));
   const noArtifactCategories = () => setEnabledArtifactCategories(new Set());
 
   // 缓存 set 给 Graph3D 用，避免每次 render 都重建依赖
@@ -207,6 +210,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
   const enabledArtifactSet = useMemo(() => enabledArtifactCategories, [enabledArtifactCategories]);
 
   return (
+    <ProjectConfigProvider config={config}>
     <div
       style={{
         display: "grid",
@@ -280,10 +284,10 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
         {sel.kind === "none" && (
           <div style={{ color: COLOR.textMuted, fontSize: 13, lineHeight: 1.7 }}>
             <div style={{ fontFamily: FONT.serif, fontSize: 22, color: COLOR.text, marginBottom: 10 }}>
-              GreekMyths
+              {config.title}
             </div>
-            希腊神话人物 3D 关系图谱。<br />
-            点击节点查看人物详情，点击边查看二人之间的事件链。
+            {config.subtitle && <>{config.subtitle}<br /></>}
+            点击节点查看详情，点击边查看二者之间的事件链。
             <div style={{ marginTop: 16, fontSize: 12 }}>
               · 鼠标拖动：旋转视角<br />
               · 滚轮：缩放<br />
@@ -469,7 +473,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
             <Section
               title="拥有/使用者"
               items={dataset.relations
-                .filter((r) => r.primary_type === "owns" && r.target === artifact.id)
+                .filter((r) => r.target === artifact.id)
                 .map((r) => dataset.characters.find((c) => c.id === r.source))
                 .filter((owner): owner is Character => Boolean(owner))
                 .map((owner) => (
@@ -554,6 +558,7 @@ export function GraphShell({ dataset }: { dataset: Dataset }) {
         )}
       </aside>
     </div>
+    </ProjectConfigProvider>
   );
 }
 

@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "link-assets": "node scripts/link-assets.mjs",
+    "predev": "node scripts/link-assets.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/link-assets.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

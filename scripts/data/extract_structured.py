@@ -1,17 +1,23 @@
 """
-LLM 结构化提取：data/raw/*.{en,zh}.json → data/characters/{slug}.json
+LLM 结构化提取:projects/<slug>/data/raw/*.{en,zh}.json → projects/<slug>/data/characters/{slug}.json
 
-流程：
-  1) 对每个 slug，读 en + zh 原文（en 截前 12000 字，zh 截前 3000 字）
-  2) 给 LLM 一个系统提示 + JSON Schema 描述 + 原文
+流程:
+  1) 对每个 slug,读 en + zh 原文(en 截前 12000 字,zh 截前 3000 字)
+  2) 给 LLM 系统提示 + 分类法(来自 project.config.json)+ 原文
   3) 模型按 Character schema 输出 JSON
-  4) pydantic 严格校验，失败重试 2 次
-  5) 落盘 data/characters/{slug}.json
+  4) pydantic 严格校验,失败重试 2 次
+  5) 落盘 projects/<slug>/data/characters/{slug}.json
 
-决策来源：docs/design-freeze.md §2.1 (7 字段), §5 (名言严格出处), §8 (schema)
+题材名取 config.title,分类法取 config.characterCategories,名册取 sources.json —— 脚本本身项目无关。
+
+用法:
+  uv run extract_structured.py --project greek
+
+决策来源:docs/design-freeze.md §2.1, §5 (名言严格出处), §8 (schema) + 多项目重构
 """
 
 from __future__ import annotations
+import argparse
 import json
 import sys
 import time
@@ -20,65 +26,63 @@ from pathlib import Path
 from pydantic import ValidationError
 
 sys.path.insert(0, str(Path(__file__).parent))
-from schemas import Character, CharacterCategory, ALL_CHARACTERS  # noqa: E402
+from schemas import Character  # noqa: E402
+from project_io import add_project_arg, characters_dir, load_config, load_sources, raw_dir  # noqa: E402
 from llm_client import call_json  # noqa: E402
-
-ROOT = Path(__file__).parent.parent.parent
-RAW_DIR = ROOT / "data" / "raw"
-OUT_DIR = ROOT / "data" / "characters"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 EN_MAX_CHARS = 12000
 ZH_MAX_CHARS = 3000
 
-# 与 schemas.py 对齐的 enum 列表，喂给 prompt
-CATEGORY_VALUES = [c.value for c in CharacterCategory]
 
-SYSTEM_PROMPT = """你是一位严谨的古典学研究者，专精希腊神话。你的任务是把维基百科的原文整理成结构化 JSON。
+def build_system_prompt(domain: str) -> str:
+    return f"""你是一位严谨的研究者,专精「{domain}」。你的任务是把维基百科的原文整理成结构化 JSON。
 
-**核心原则：**
-1. **不编造**——不知道的字段宁可留空数组或 null，绝不杜撰。
-2. **名言 quotes 必须带文献出处**：仅收录《伊利亚特》《奥德赛》《神谱》《变形记》《书库》等古典原典中真实出现的原句。没有出处的传世名言不要写。若一个都没有，quotes 返回 `[]`。
-3. **technical 字段**：
-   - `skills` 是动词短语（如"投掷雷霆"、"化身天鹅"、"使人发疯"）
-   - `domains` 是名词（如"雷电"、"婚姻"、"主权"），代表神职/领域
+**核心原则:**
+1. **不编造**——不知道的字段宁可留空数组或 null,绝不杜撰。
+2. **名言 quotes 必须带文献出处**:仅收录该题材公认原典中真实出现的原句,并标注出处。没有出处的传世名言不要写。若一个都没有,quotes 返回 `[]`。
+3. **technical 字段**:
+   - `skills` 是动词短语(如"投掷雷霆"、"化身天鹅")
+   - `domains` 是名词(如"雷电"、"婚姻"、"主权"),代表职能/领域
    - 二者不要重复
-4. **bio 字段**：200-600 字中文连贯叙述生平，不分点。
-5. **events 字段**：3-15 条该人物的重要事件。每条 title 简短（5-15 字），desc 80-200 字。
-6. **aliases**：常见别名/异名（如朱庇特、雷霆神、Jove），列入数组。
+4. **bio 字段**:200-600 字中文连贯叙述生平,不分点。
+5. **events 字段**:3-15 条该人物的重要事件。每条 title 简短(5-15 字),desc 80-200 字。
+6. **aliases**:常见别名/异名,列入数组。
 
-**输出格式：严格的 JSON 对象，不要 ```json 围栏，不要其他文字。**"""
+**输出格式:严格的 JSON 对象,不要 ```json 围栏,不要其他文字。**"""
 
 
 def build_user_prompt(slug: str, name_zh: str, name_en: str,
-                      category: CharacterCategory, era_layer: int,
-                      epithet: str,
+                      category: str, era_layer: int, epithet: str,
+                      categories_hint: str,
+                      project_slug: str,
                       en_text: str, zh_text: str) -> str:
-    portrait = f"/images/portraits/{slug}.webp"
-    thumb = f"/images/thumbs/{slug}.webp"
+    portrait = f"/p/{project_slug}/portraits/{slug}.webp"
+    thumb = f"/p/{project_slug}/thumbs/{slug}.webp"
 
-    return f"""请基于下列维基百科原文，按指定 JSON 结构产出 **{name_zh}（{name_en}）** 的结构化资料。
+    return f"""请基于下列维基百科原文,按指定 JSON 结构产出 **{name_zh}（{name_en}）** 的结构化资料。
 
-**已锁定的字段（不要更改）：**
-- `schema_version`: 1
+可选分类(category 必须是其一):{categories_hint}
+
+**已锁定的字段（不要更改）:**
+- `schema_version`: 2
 - `id`: "{slug}"
 - `name_zh`: "{name_zh}"
 - `name_en`: "{name_en}"
 - `epithet`: "{epithet}"
-- `category`: "{category.value}"
+- `category`: "{category}"
 - `era_layer`: {era_layer}
 - `portrait`: "{portrait}"
 - `thumb`: "{thumb}"
 
-**你需要从原文提取并填充以下字段：**
+**你需要从原文提取并填充以下字段:**
 - `aliases`: 字符串数组（中文/英文/罗马名/异名）
 - `bio`: 字符串（200-600 字中文生平叙述）
-- `events`: 数组，每项 `{{title, desc, source?}}`。source 是 `{{work, locus?, translator?}}`。
-- `quotes`: 数组，每项 `{{text, source}}`，source 必填且必须是真实古典文献。**没有就给 []**。
+- `events`: 数组,每项 `{{title, desc, source?}}`。source 是 `{{work, locus?, translator?}}`。
+- `quotes`: 数组,每项 `{{text, source}}`,source 必填且必须是真实文献。**没有就给 []**。
 - `weapons`: 字符串数组
 - `skills`: 字符串数组（动词短语）
-- `domains`: 字符串数组（名词，神职/领域）
-- `mounts`: 字符串数组（如"四匹白马拉的金车"算坐骑）
+- `domains`: 字符串数组（名词,职能/领域）
+- `mounts`: 字符串数组
 
 **输出 JSON 时所有字段必须齐全**（即便是空数组）。
 
@@ -89,17 +93,17 @@ def build_user_prompt(slug: str, name_zh: str, name_en: str,
 
 ---
 
-【中文维基百科原文（前 {len(zh_text)} 字，辅助译名/语境）】
+【中文维基百科原文（前 {len(zh_text)} 字,辅助译名/语境）】
 {zh_text}
 
 ---
 
-现在输出 JSON："""
+现在输出 JSON:"""
 
 
-def load_raw(slug: str) -> tuple[str, str]:
-    en_path = RAW_DIR / f"{slug}.en.json"
-    zh_path = RAW_DIR / f"{slug}.zh.json"
+def load_raw(raw: Path, slug: str) -> tuple[str, str]:
+    en_path = raw / f"{slug}.en.json"
+    zh_path = raw / f"{slug}.zh.json"
     en_text = ""
     zh_text = ""
     if en_path.exists():
@@ -109,30 +113,29 @@ def load_raw(slug: str) -> tuple[str, str]:
     return en_text, zh_text
 
 
-def extract_one(slug: str, name_zh: str, name_en: str,
-                category: CharacterCategory, era_layer: int, epithet: str) -> Character | None:
-    en_text, zh_text = load_raw(slug)
+def extract_one(raw: Path, system_prompt: str, categories_hint: str, project_slug: str,
+                slug: str, name_zh: str, name_en: str,
+                category: str, era_layer: int, epithet: str) -> Character | None:
+    en_text, zh_text = load_raw(raw, slug)
     if not en_text and not zh_text:
         print(f"  ✗ {slug} 无 raw 数据")
         return None
 
     user_prompt = build_user_prompt(
-        slug, name_zh, name_en, category, era_layer, epithet, en_text, zh_text
+        slug, name_zh, name_en, category, era_layer, epithet, categories_hint, project_slug, en_text, zh_text
     )
 
     for attempt in range(1, 4):
         try:
-            data = call_json(SYSTEM_PROMPT, user_prompt, max_tokens=8192)
-            char = Character.model_validate(data)
-            return char
+            data = call_json(system_prompt, user_prompt, max_tokens=8192)
+            return Character.model_validate(data)
         except ValidationError as e:
             errs = e.errors()[:3]
             err_summary = "; ".join(f"{'.'.join(map(str, x['loc']))}: {x['msg']}" for x in errs)
             print(f"  ⚠  尝试 {attempt}：schema 验证失败 — {err_summary}")
-            # 把错误反馈给模型再试
             user_prompt = (
                 user_prompt
-                + f"\n\n【上次输出 schema 校验失败：{err_summary}。请严格按字段名/类型重新输出 JSON。】"
+                + f"\n\n【上次输出 schema 校验失败:{err_summary}。请严格按字段名/类型重新输出 JSON。】"
             )
         except Exception as e:
             print(f"  ⚠  尝试 {attempt}：{type(e).__name__} — {e}")
@@ -140,29 +143,43 @@ def extract_one(slug: str, name_zh: str, name_en: str,
     return None
 
 
-def main():
-    print(f"提取 {len(ALL_CHARACTERS)} 个人物 → {OUT_DIR}\n")
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    add_project_arg(ap)
+    args = ap.parse_args()
+
+    config = load_config(args.project)
+    sources = load_sources(args.project)
+    characters = sources["characters"]
+    out_dir = characters_dir(args.project)
+    raw = raw_dir(args.project)
+
+    system_prompt = build_system_prompt(config.title)
+    categories_hint = ", ".join(f"{k}（{v.label}）" for k, v in config.characterCategories.items())
+
+    print(f"提取 {len(characters)} 个人物 → {out_dir}\n")
     ok = 0
     fail: list[str] = []
 
-    for slug, name_zh, name_en, category, era_layer, epithet in ALL_CHARACTERS:
-        out_path = OUT_DIR / f"{slug}.json"
+    for ch in characters:
+        slug = ch["slug"]
+        out_path = out_dir / f"{slug}.json"
         if out_path.exists():
             print(f"[{slug}] 已存在，跳过")
             ok += 1
             continue
 
-        print(f"[{slug}] {name_zh} ({category.value}, layer={era_layer})")
-        char = extract_one(slug, name_zh, name_en, category, era_layer, epithet)
+        print(f"[{slug}] {ch['name_zh']} ({ch['category']}, layer={ch['era_layer']})")
+        char = extract_one(
+            raw, system_prompt, categories_hint, args.project,
+            slug, ch["name_zh"], ch["name_en"], ch["category"], ch["era_layer"], ch["epithet"],
+        )
         if char is None:
             print(f"  ✗ 失败")
             fail.append(slug)
             continue
 
-        out_path.write_text(
-            char.model_dump_json(indent=2, exclude_none=False),
-            encoding="utf-8",
-        )
+        out_path.write_text(char.model_dump_json(indent=2, exclude_none=False), encoding="utf-8")
         print(f"  ✓ {len(char.events)} events, {len(char.quotes)} quotes, "
               f"{len(char.skills)} skills, {len(char.domains)} domains, "
               f"{len(char.aliases)} aliases, bio={len(char.bio or '')}字")
@@ -171,7 +188,7 @@ def main():
 
     print()
     print("=" * 60)
-    print(f"完成 {ok}/{len(ALL_CHARACTERS)}")
+    print(f"完成 {ok}/{len(characters)}")
     if fail:
         print(f"失败：{fail}")
 

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "GreekMyths — 希腊神话人物关系图谱",
-  description: "以 Node 和 Edge 形式探索希腊神话核心人物与关系",
+  title: "CharacterGraph — 人物关系图谱",
+  description: "以节点与边的形式探索不同作品/神话的人物与关系",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="mobile-block">
           <div>
             <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 40, marginBottom: 16 }}>
-              GreekMyths
+              CharacterGraph
             </div>
             <div style={{ fontSize: 14, lineHeight: 1.8, color: "oklch(45% 0.012 270)", maxWidth: 280 }}>
               本图谱为桌面端深度体验设计。<br />

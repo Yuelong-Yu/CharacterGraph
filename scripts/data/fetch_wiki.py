@@ -1,107 +1,39 @@
 """
-抓取 18 人 MVP 的中英文 Wikipedia 原文 → data/raw/
+抓取某项目人物名册的中英文 Wikipedia 原文 → projects/<slug>/data/raw/
 
-直接调 MediaWiki action API：
+直接调 MediaWiki action API:
   https://en.wikipedia.org/w/api.php?action=query&prop=extracts&...
 
-用 requests（读 HTTP_PROXY/HTTPS_PROXY 环境变量），避免 wikipedia-api 库内部 httpx 不识别代理。
+名册与标题覆盖来自 projects/<slug>/sources.json(characters / en_title_override / zh_title_override)。
+抓取机制本身项目无关 —— 换项目只换 sources.json。
 
-输出：
-  data/raw/{slug}.en.json  — {title, url, extract, sections?}
-  data/raw/{slug}.zh.json  — 同上
+输出:
+  projects/<slug>/data/raw/{slug}.en.json  — {title, url, extract, ...}
+  projects/<slug>/data/raw/{slug}.zh.json  — 同上
 
-决策来源：docs/design-freeze.md §2 (双源 Wiki)
+用法:
+  uv run fetch_wiki.py --project greek
+
+决策来源:docs/design-freeze.md §2 (双源 Wiki) + 多项目重构
 """
 
 from __future__ import annotations
+import argparse
 import json
 import os
 import sys
 import time
 from pathlib import Path
-from urllib.parse import quote
 
 import requests
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 sys.path.insert(0, str(Path(__file__).parent))
-from schemas import ALL_CHARACTERS  # noqa: E402
+from project_io import add_project_arg, load_sources, raw_dir  # noqa: E402
 
-ROOT = Path(__file__).parent.parent.parent
-RAW_DIR = ROOT / "data" / "raw"
-RAW_DIR.mkdir(parents=True, exist_ok=True)
-
-USER_AGENT = "GreekMyths/0.1 (https://github.com/odin/greek-myths; research)"
+USER_AGENT = "CharacterGraph/0.1 (research)"
 PROXY = os.getenv("WIKI_PROXY", "http://127.0.0.1:7897")
 PROXIES = {"http": PROXY, "https": PROXY}
-
-EN_TITLE_OVERRIDE: dict[str, str] = {
-    "zeus":       "Zeus",
-    "hera":       "Hera",
-    "poseidon":   "Poseidon",
-    "athena":     "Athena",
-    "apollo":     "Apollo",
-    "artemis":    "Artemis",
-    "aphrodite":  "Aphrodite",
-    "ares":       "Ares",
-    "cronus":     "Cronus",
-    "prometheus": "Prometheus",
-    "gaia":       "Gaia",
-    "medusa":     "Medusa",
-    "achilles":   "Achilles",
-    "odysseus":   "Odysseus",
-    "hector":     "Hector",
-    "heracles":   "Heracles",
-    "perseus":    "Perseus",
-    "helen":      "Helen of Troy",
-    # Batch 30 增量
-    "hermes":     "Hermes",
-    "demeter":    "Demeter",
-    "rhea":       "Rhea (mythology)",
-    "minotaur":   "Minotaur",
-    "polyphemus": "Polyphemus",
-    "agamemnon":  "Agamemnon",
-    "paris":      "Paris (mythology)",
-    "jason":      "Jason",
-    "medea":      "Medea",
-    "theseus":    "Theseus",
-    "penelope":   "Penelope",
-    "hecate":     "Hecate",
-}
-
-ZH_TITLE_OVERRIDE: dict[str, str] = {
-    "zeus":       "宙斯",
-    "hera":       "赫拉",
-    "poseidon":   "波塞冬",
-    "athena":     "雅典娜",
-    "apollo":     "阿波罗",
-    "artemis":    "阿耳忒弥斯",
-    "aphrodite":  "阿佛洛狄忒",
-    "ares":       "阿瑞斯",
-    "cronus":     "克洛诺斯",
-    "prometheus": "普罗米修斯",
-    "gaia":       "盖亚",
-    "medusa":     "美杜莎",
-    "achilles":   "阿喀琉斯",
-    "odysseus":   "奧德修斯",
-    "hector":     "赫克托耳",
-    "heracles":   "赫拉克勒斯",
-    "perseus":    "珀耳修斯",
-    "helen":      "海伦",
-    # Batch 30 增量
-    "hermes":     "赫耳墨斯",
-    "demeter":    "得墨忒尔",
-    "rhea":       "瑞亚_(神话)",
-    "minotaur":   "弥诺陶洛斯",
-    "polyphemus": "波吕斐摩斯",
-    "agamemnon":  "阿伽门农",
-    "paris":      "帕里斯",
-    "jason":      "伊阿宋",
-    "medea":      "美狄亚",
-    "theseus":    "忒修斯",
-    "penelope":   "佩内洛佩",
-    "hecate":     "赫卡忒",
-}
 
 
 @retry(
@@ -148,22 +80,33 @@ def fetch_extract(slug: str, lang: str, title: str) -> dict | None:
     }
 
 
-def main():
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    add_project_arg(ap)
+    args = ap.parse_args()
+
+    sources = load_sources(args.project)
+    characters = sources["characters"]
+    en_override: dict[str, str] = sources.get("en_title_override", {})
+    zh_override: dict[str, str] = sources.get("zh_title_override", {})
+    out_dir = raw_dir(args.project)
+
     print(f"代理：{PROXY}")
-    print(f"目标 {len(ALL_CHARACTERS)} 人 × 2 语言 = {len(ALL_CHARACTERS) * 2} 个词条")
-    print(f"输出目录：{RAW_DIR}\n")
+    print(f"目标 {len(characters)} 人 × 2 语言 = {len(characters) * 2} 个词条")
+    print(f"输出目录：{out_dir}\n")
 
     stats = {"en_ok": 0, "en_miss": 0, "en_skip": 0, "zh_ok": 0, "zh_miss": 0, "zh_skip": 0}
 
-    for slug, name_zh, name_en, _category, _era, _epithet in ALL_CHARACTERS:
+    for ch in characters:
+        slug, name_zh, name_en = ch["slug"], ch["name_zh"], ch["name_en"]
         print(f"[{slug}] {name_zh} / {name_en}")
 
-        en_path = RAW_DIR / f"{slug}.en.json"
+        en_path = out_dir / f"{slug}.en.json"
         if en_path.exists():
             stats["en_skip"] += 1
             print(f"  · [en] 已抓，跳过")
         else:
-            en_title = EN_TITLE_OVERRIDE.get(slug, name_en)
+            en_title = en_override.get(slug, name_en)
             try:
                 en_data = fetch_extract(slug, "en", en_title)
             except Exception as e:
@@ -179,12 +122,12 @@ def main():
                 stats["en_miss"] += 1
                 print(f"  ✗ [en] {en_title} — not found")
 
-        zh_path = RAW_DIR / f"{slug}.zh.json"
+        zh_path = out_dir / f"{slug}.zh.json"
         if zh_path.exists():
             stats["zh_skip"] += 1
             print(f"  · [zh] 已抓，跳过")
         else:
-            zh_title = ZH_TITLE_OVERRIDE.get(slug, name_zh)
+            zh_title = zh_override.get(slug, name_zh)
             try:
                 zh_data = fetch_extract(slug, "zh", zh_title)
             except Exception as e:

@@ -18,12 +18,8 @@
  */
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import type { Artifact, Character } from "@/schemas/character";
-import {
-  ARTIFACT_CATEGORY_COLOR,
-  CATEGORY_COLOR,
-  COLOR,
-  FONT,
-} from "@/lib/tokens";
+import { COLOR, FONT } from "@/lib/tokens";
+import { useProjectConfig } from "@/lib/projectConfig";
 
 type SearchEntity =
   | { kind: "character"; entity: Character }
@@ -127,6 +123,7 @@ export function SearchBox({
   appliedCount,
   totalCount,
 }: Props) {
+  const { characterCategoryColor, artifactCategoryColor } = useProjectConfig();
   const [focused, setFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -299,8 +296,8 @@ export function SearchBox({
               {dropdownHits.map((h) => {
                 const entity = h.item.entity;
                 const color = h.item.kind === "character"
-                  ? CATEGORY_COLOR[entity.category as Character["category"]]
-                  : ARTIFACT_CATEGORY_COLOR[entity.category as Artifact["category"]];
+                  ? characterCategoryColor(entity.category)
+                  : artifactCategoryColor(entity.category);
                 return (
                 <button
                   key={entity.id + h.origin}

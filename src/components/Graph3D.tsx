@@ -20,14 +20,9 @@ import dynamic from "next/dynamic";
 import * as THREE from "three";
 import SpriteText from "three-spritetext";
 
-import type { Artifact, ArtifactCategory, Dataset, Character, Relation, CharacterCategory } from "@/schemas/character";
-import {
-  ARTIFACT_CATEGORY_COLOR,
-  CATEGORY_COLOR,
-  RELATION_COLOR,
-  COLOR,
-  FONT,
-} from "@/lib/tokens";
+import type { Artifact, Dataset, Character, Relation } from "@/schemas/character";
+import { COLOR, FONT } from "@/lib/tokens";
+import { useProjectConfig } from "@/lib/projectConfig";
 
 // SSR off — three.js 只能在浏览器
 const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), { ssr: false });
@@ -177,9 +172,9 @@ interface Props {
   focusedId?: string | null;
   focusNodeId?: string | null;
   /** 当前启用的类别集合 — 不在此集合的节点和相关边将被隐藏（聚焦模式下豁免） */
-  enabledCategories: Set<CharacterCategory>;
+  enabledCategories: Set<string>;
   /** 当前启用的 Artifact 类别集合 */
-  enabledArtifactCategories: Set<ArtifactCategory>;
+  enabledArtifactCategories: Set<string>;
   /** 度数阈值 — 过滤掉度数 < 阈值的节点（聚焦模式下豁免）。0 = 不过滤 */
   minDegree: number;
   /** 搜索命中集 — null 表示无过滤;非 null 时进入"过滤平铺"态:
@@ -217,6 +212,7 @@ export function Graph3D({
   onEdgeSelect,
   onBackgroundClick,
 }: Props) {
+  const { characterCategoryColor, artifactCategoryColor, relationColor } = useProjectConfig();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -244,13 +240,12 @@ export function Graph3D({
   const didInitialFitRef = useRef(false);
   void didInitialFitRef; // 保留 ref 占位但不再使用
 
-  // ── Artifact tier layer:以第一个 owns 主人的 era_layer 定位;无主人则 2 ──
+  // ── Artifact tier layer:以第一个「人物→神器」关系的主人 era_layer 定位;无主人则 2 ──
   const artifactEraMap = useMemo(() => {
     const charById = new Map(dataset.characters.map((c) => [c.id, c]));
     const m = new Map<string, number>();
     for (const a of dataset.artifacts) m.set(a.id, 2);
     for (const r of dataset.relations) {
-      if (r.primary_type !== "owns") continue;
       const owner = charById.get(r.source);
       if (owner && m.has(r.target)) m.set(r.target, owner.era_layer);
     }
@@ -825,8 +820,8 @@ export function Graph3D({
       const topMost = isHighlighted;
       const baseColor = new THREE.Color(
         node.kind === "character"
-          ? CATEGORY_COLOR[node.entity.category]
-          : ARTIFACT_CATEGORY_COLOR[node.entity.category],
+          ? characterCategoryColor(node.entity.category)
+          : artifactCategoryColor(node.entity.category),
       );
 
       // 头像尺寸（半身像 2:3）
@@ -1012,7 +1007,7 @@ export function Graph3D({
 
       return group;
     },
-    [selectedNodeId, focusedId, tourTargetId],
+    [selectedNodeId, focusedId, tourTargetId, characterCategoryColor, artifactCategoryColor],
   );
 
   // ── 边的样式 ──
@@ -1020,9 +1015,9 @@ export function Graph3D({
     (raw: object) => {
       const link = raw as GraphLink;
       if (link.id === selectedEdgeId) return COLOR.accent;
-      return RELATION_COLOR[link.rel.primary_type];
+      return relationColor(link.rel.primary_type);
     },
-    [selectedEdgeId],
+    [selectedEdgeId, relationColor],
   );
 
   const linkWidth = useCallback(

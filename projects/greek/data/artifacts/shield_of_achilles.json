@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "id": "shield_of_achilles",
+  "name_zh": "阿喀琉斯之盾",
+  "name_en": "Shield of Achilles",
+  "aliases": [
+    "宇宙之盾",
+    "Achilles' Shield"
+  ],
+  "epithet": "赫淮斯托斯所铸的宇宙之盾",
+  "category": "weapon",
+  "bio": "阿喀琉斯之盾是《伊利亚特》中最著名的器物之一。帕特罗克洛斯穿阿喀琉斯旧甲战死后,赫克托耳夺走铠甲,忒提斯上奥林匹斯求赫淮斯托斯为儿子重铸军装。神匠用金、银、锡与青铜锻造盾牌,盾面刻画天、地、海、太阳、月亮、星座、两座城邦、婚礼、审判、战争、农田、葡萄园、牧场与舞场,成为一幅微缩宇宙。盾不只是防具,更是英雄命运与人类世界整体的图像:阿喀琉斯持之走向复仇,同时也走向自身死亡。",
+  "events": [
+    {
+      "title": "忒提斯求甲",
+      "desc": "帕特罗克洛斯战死,阿喀琉斯旧甲被赫克托耳夺走,忒提斯向赫淮斯托斯请求为其子打造新甲。",
+      "source": {
+        "work": "荷马《伊利亚特》",
+        "locus": "18.369-467",
+        "translator": null
+      }
+    },
+    {
+      "title": "赫淮斯托斯铸盾",
+      "desc": "赫淮斯托斯以青铜、锡、金、银锻盾,在盾面刻画宇宙、城邦、劳动、舞蹈与战争。",
+      "source": {
+        "work": "荷马《伊利亚特》",
+        "locus": "18.468-608",
+        "translator": null
+      }
+    },
+    {
+      "title": "阿喀琉斯持盾复仇",
+      "desc": "阿喀琉斯接受新甲重返战场,以赫淮斯托斯所铸盾牌护身,追杀赫克托耳并为帕特罗克洛斯复仇。",
+      "source": {
+        "work": "荷马《伊利亚特》",
+        "locus": "19.369-391",
+        "translator": null
+      }
+    }
+  ],
+  "domains": [
+    "宇宙图像",
+    "英雄防具",
+    "复仇",
+    "工匠神技"
+  ],
+  "portrait": "/p/greek/portraits/shield_of_achilles.webp",
+  "thumb": "/p/greek/thumbs/shield_of_achilles.webp"
+}

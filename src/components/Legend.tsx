@@ -8,25 +8,16 @@
  * - 边只展示颜色说明
  */
 import { useState } from "react";
-import type { ArtifactCategory, CharacterCategory } from "@/schemas/character";
-import {
-  ARTIFACT_CATEGORY_COLOR,
-  ARTIFACT_CATEGORY_LABEL,
-  COLOR,
-  FONT,
-  CATEGORY_COLOR,
-  CATEGORY_LABEL,
-  RELATION_COLOR,
-  RELATION_LABEL,
-} from "@/lib/tokens";
+import { COLOR, FONT } from "@/lib/tokens";
+import { useProjectConfig } from "@/lib/projectConfig";
 
 interface Props {
-  enabledCategories: Set<CharacterCategory>;
-  enabledArtifactCategories: Set<ArtifactCategory>;
-  onCategoryToggle: (cat: CharacterCategory) => void;
+  enabledCategories: Set<string>;
+  enabledArtifactCategories: Set<string>;
+  onCategoryToggle: (cat: string) => void;
   onCategoriesAll: () => void;
   onCategoriesNone: () => void;
-  onArtifactCategoryToggle: (cat: ArtifactCategory) => void;
+  onArtifactCategoryToggle: (cat: string) => void;
   onArtifactCategoriesAll: () => void;
   onArtifactCategoriesNone: () => void;
 }
@@ -41,6 +32,7 @@ export function Legend({
   onArtifactCategoriesAll,
   onArtifactCategoriesNone,
 }: Props) {
+  const { config } = useProjectConfig();
   const [open, setOpen] = useState(false);
 
   return (
@@ -90,7 +82,7 @@ export function Legend({
               <button onClick={onCategoriesNone} style={miniBtnStyle}>清空</button>
             </div>
           </div>
-          {(Object.entries(CATEGORY_LABEL) as [CharacterCategory, string][]).map(([k, label]) => {
+          {Object.entries(config.characterCategories).map(([k, { label, color }]) => {
             const checked = enabledCategories.has(k);
             return (
               <label key={k} style={rowLabelStyle(checked)}>
@@ -98,9 +90,9 @@ export function Legend({
                   type="checkbox"
                   checked={checked}
                   onChange={() => onCategoryToggle(k)}
-                  style={{ width: 14, height: 14, accentColor: CATEGORY_COLOR[k], cursor: "pointer" }}
+                  style={{ width: 14, height: 14, accentColor: color, cursor: "pointer" }}
                 />
-                <Box color={CATEGORY_COLOR[k]} />
+                <Box color={color} />
                 <span>{label}</span>
               </label>
             );
@@ -113,7 +105,7 @@ export function Legend({
               <button onClick={onArtifactCategoriesNone} style={miniBtnStyle}>清空</button>
             </div>
           </div>
-          {(Object.entries(ARTIFACT_CATEGORY_LABEL) as [ArtifactCategory, string][]).map(([k, label]) => {
+          {Object.entries(config.artifactCategories).map(([k, { label, color }]) => {
             const checked = enabledArtifactCategories.has(k);
             return (
               <label key={k} style={rowLabelStyle(checked)}>
@@ -121,21 +113,17 @@ export function Legend({
                   type="checkbox"
                   checked={checked}
                   onChange={() => onArtifactCategoryToggle(k)}
-                  style={{ width: 14, height: 14, accentColor: ARTIFACT_CATEGORY_COLOR[k], cursor: "pointer" }}
+                  style={{ width: 14, height: 14, accentColor: color, cursor: "pointer" }}
                 />
-                <Box color={ARTIFACT_CATEGORY_COLOR[k]} />
+                <Box color={color} />
                 <span>{label}</span>
               </label>
             );
           })}
 
           <Heading style={{ marginTop: 16 }}>关系边 · 颜色</Heading>
-          {Object.entries(RELATION_LABEL).map(([k, label]) => (
-            <Row
-              key={k}
-              swatch={<Line color={RELATION_COLOR[k as keyof typeof RELATION_COLOR]} />}
-              label={label}
-            />
+          {Object.entries(config.relationTypes).map(([k, { label, color }]) => (
+            <Row key={k} swatch={<Line color={color} />} label={label} />
           ))}
 
           <Heading style={{ marginTop: 16 }}>边粗细</Heading>

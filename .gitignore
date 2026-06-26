@@ -22,10 +22,12 @@ __pycache__/
 *.egg-info/
 
 # --- Data pipeline artifacts ---
-# 原始 Wiki HTML 不进仓库
-data/raw/
-# AI 生成的废稿不进仓库
-public/images/raw/
+# 原始 Wiki HTML 不进仓库（各项目）
+projects/*/data/raw/
+# AI 生成的废稿不进仓库（各项目）
+projects/*/images/raw/
+# 资源软链由 link-assets 脚本在 predev/prebuild 重建，不提交
+public/p/
 
 # --- IDE / OS ---
 .DS_Store
