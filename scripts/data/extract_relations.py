@@ -38,13 +38,14 @@ def build_system_prompt(domain: str, relation_hint: str) -> str:
 {relation_hint}
 
 **规则:**
-1. 一对人物只产出**一条边**,按"最主导"的关系定 primary_type,其余进 composite_types。
-2. **events 必须有内容**——至少 1 条,最多 6 条。每条 `{{title, desc, source?, era_order}}`。
-3. **source 可选**,但若能溯源到该题材公认原典请尽量填,不要编造。
+1. 一对人物只产出**一条边**,按"最主导/最终局"的关系定 primary_type,其余进 composite_types。同一对在不同时期可兼有多种关系(如先结盟后敌对),它们**不矛盾**:primary_type 取**终局或最重大**的那种,其余(如 alliance)放入 composite_types,并用多条 event 按时间记述各阶段。
+2. **events 必须有内容**——至少 1 条,最多 6 条。每条 `{{title, desc, source?, canon?, era_order}}`。
+3. **source 可选,但禁止编造**:work(典籍名)能溯源就尽量填;locus(回目/卷次/行号)**仅在确信时填,存疑则省略 locus**,绝不编造章节号。
 4. **era_order 从 0 起递增**——表示在他们关系中的时间序号。
 5. **不要漏掉重要关系**。
 6. **id 命名**:`{{source}}-{{target}}` 全小写,按字典序排列两个 slug。
-7. **schema_version 固定为 2**。
+7. **schema_version 固定为 3**。
+8. **正典标注 canon(仅多正典题材)**:若本题材有并行的多套正典(如"演义/小说"与"正史/史书"),为每条 event 标注 `canon`:`romance`(仅小说/演义)、`history`(正史可考)、`both`(两者皆载),并据此选 source.work。**若题材只有单一正典(如神话),省略 canon**。
 
 **输出:严格的 JSON 数组（顶层）,元素是 Relation 对象。不要 ```json 围栏。**"""
 
@@ -106,14 +107,14 @@ def main() -> None:
 请输出 JSON 数组。每个元素结构:
 ```
 {{
-  "schema_version": 2,
+  "schema_version": 3,
   "id": "a-b",
   "source": "a",
   "target": "b",
   "primary_type": "<上列之一>",
   "composite_types": [],
   "events": [
-    {{"title": "...", "desc": "...", "source": {{"work": "...", "locus": "..."}}, "era_order": 0}}
+    {{"title": "...", "desc": "...", "source": {{"work": "...", "locus": "..."}}, "canon": "both", "era_order": 0}}
   ]
 }}
 ```

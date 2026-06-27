@@ -16,14 +16,19 @@ projects/greek/sources.json,不再硬编码于此。
 
 from __future__ import annotations
 
-from typing import Dict, List, Optional
+from typing import Dict, List, Literal, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 # slug 格式:小写字母开头,允许小写字母/数字/下划线
 SLUG_PATTERN = r"^[a-z][a-z0-9_]*$"
+
+# 正典归属(v3)— 多正典题材(如三国:演义/正史)用于区分事件来源
+#   romance = 演义/小说独有  history = 正史可考  both = 两者皆载
+#   None/缺省 = 不适用(单一正典题材如希腊神话)
+Canon = Literal["romance", "history", "both"]
 
 
 # ─────────────────────────────────────────────────────────────
@@ -43,6 +48,7 @@ class Quote(BaseModel):
     model_config = ConfigDict(extra="forbid")
     text: str
     source: Citation
+    canon: Optional[Canon] = None
 
 
 # ─────────────────────────────────────────────────────────────
@@ -53,6 +59,7 @@ class CharacterEvent(BaseModel):
     title: str
     desc: str
     source: Optional[Citation] = None
+    canon: Optional[Canon] = None
 
 
 # ─────────────────────────────────────────────────────────────
@@ -61,7 +68,7 @@ class CharacterEvent(BaseModel):
 class Character(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=2)
+    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=3)
     id: str = Field(pattern=SLUG_PATTERN)
     name_zh: str
     name_en: str
@@ -89,7 +96,7 @@ class Character(BaseModel):
 class Artifact(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=2)
+    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=3)
     id: str = Field(pattern=SLUG_PATTERN)
     name_zh: str
     name_en: str
@@ -115,13 +122,14 @@ class RelationEvent(BaseModel):
     desc: str
     desc_long: Optional[str] = None
     source: Optional[Citation] = None
+    canon: Optional[Canon] = None
     era_order: int = Field(ge=0)
 
 
 class Relation(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=2)
+    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=3)
     id: str
     source: str
     target: str
@@ -136,7 +144,7 @@ class Relation(BaseModel):
 # ─────────────────────────────────────────────────────────────
 class Dataset(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=2)
+    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=3)
     characters: List[Character]
     artifacts: List[Artifact] = Field(default_factory=list)
     relations: List[Relation]
@@ -160,12 +168,14 @@ class ArtStyle(BaseModel):
 class ProjectConfig(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=2)
+    schema_version: int = Field(default=SCHEMA_VERSION, ge=1, le=3)
     slug: str = Field(pattern=SLUG_PATTERN)
     title: str
     subtitle: Optional[str] = None
     order: int = 999
     draft: bool = False
+    # 中文源优先级:中文题材用 "baike"(百度百科优先),西方题材用 "wikipedia"(默认)
+    zhSource: Literal["wikipedia", "baike"] = "wikipedia"
     characterCategories: Dict[str, Swatch]
     artifactCategories: Dict[str, Swatch] = Field(default_factory=dict)
     relationTypes: Dict[str, Swatch]

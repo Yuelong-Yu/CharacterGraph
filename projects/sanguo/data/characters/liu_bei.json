@@ -1,0 +1,175 @@
+{
+  "schema_version": 3,
+  "id": "liu_bei",
+  "name_zh": "刘备",
+  "name_en": "Liu Bei",
+  "aliases": [
+    "玄德",
+    "刘玄德",
+    "先主",
+    "昭烈帝"
+  ],
+  "epithet": "蜀汉昭烈帝",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "刘备（161-223），字玄德，幽州涿郡涿县人，东汉末年政治家，蜀汉开国皇帝。他是汉景帝之子中山靖王刘胜的后代。早年丧父，家贫，与母亲以贩鞋织席为生。少时拜卢植为师，结交公孙瓒。184年黄巾起义爆发，刘备率关羽、张飞、简雍等从军，因功任安喜县尉。后因不满督邮傲慢，鞭笞后弃官。先后依附公孙瓒、陶谦、曹操、袁绍、刘表。194年应陶谦邀请救援徐州，后被陶谦表为豫州刺史，陶谦病逝后领徐州。196年遭吕布偷袭，投奔曹操。后与董承等人密谋诛曹，事泄，杀徐州刺史车胄后投袁绍。200年官渡之战后投刘表，屯新野。208年与孙权联合在赤壁击败曹操，随后夺取荆州四郡，又入蜀夺取益州。221年在成都称帝，国号汉。222年因关羽被东吴所害，发动夷陵之战，被陆逊击败。223年病逝白帝城，托孤于诸葛亮，谥号昭烈皇帝。刘备弘毅宽厚，知人待士，百折不挠，其统治风格被史家评价为“外似儒而内实法”。",
+  "events": [
+    {
+      "title": "镇压黄巾起义",
+      "desc": "184年，刘备率众加入邹靖军队，参与讨伐黄巾军，因功被任命为安喜县尉。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "鞭笞督邮弃官",
+      "desc": "因督邮拒绝接见，刘备愤怒之下绑缚督邮并鞭笞一百，随后解下官印挂在督邮颈上，弃官而去。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": "注引典略",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "救援孔融",
+      "desc": "孔融被黄巾军围困于北海，遣太史慈向刘备求救，刘备欣然派兵解围。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "救援陶谦领徐州",
+      "desc": "194年，曹操攻打徐州，刘备应陶谦求救率军驰援。陶谦表刘备为豫州刺史，屯小沛。陶谦病逝后，遗命让徐州，刘备遂领徐州牧。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "依附曹操",
+      "desc": "196年，刘备被吕布击败，失去徐州，投奔曹操。曹操表其为豫州牧，并资助兵马。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "背曹投袁",
+      "desc": "刘备参与董承等人密谋诛杀曹操，事泄后斩杀徐州刺史车胄，转投袁绍。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "投奔刘表",
+      "desc": "官渡之战后，袁绍败亡，刘备南下投奔荆州刘表，被安置于新野。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "赤壁战后取荆州",
+      "desc": "208年，刘备与孙权联军在赤壁击败曹操，随后趁势夺取武陵、长沙、桂阳、零陵四郡，奠定基业。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "夺取益州",
+      "desc": "211年，刘备应刘璋邀约入蜀抵御张鲁，后与刘璋反目，于214年攻占成都，自领益州牧。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "称帝建蜀汉",
+      "desc": "221年，刘备在成都即皇帝位，国号汉，年号章武，正式建立蜀汉政权。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "夷陵之战",
+      "desc": "222年，为报关羽被东吴杀害之仇，刘备亲率大军征讨孙权，在夷陵被陆逊击败，退守白帝城。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "白帝城托孤",
+      "desc": "223年，刘备病重，召诸葛亮、李严到白帝城，托付后事，遗命诸葛亮辅佐幼主刘禅，旋病逝。",
+      "source": {
+        "work": "三国志·先主传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "吾必当乘此羽葆盖车。",
+      "source": {
+        "work": "三国志·蜀书·先主传",
+        "locus": "注引典略",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "孔文举知世间有刘备耶？",
+      "source": {
+        "work": "三国志·蜀书·先主传",
+        "locus": "注引九州春秋",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "知人善任",
+    "以德服人",
+    "笼络豪杰",
+    "忍辱负重",
+    "团结人心"
+  ],
+  "domains": [
+    "政治",
+    "外交",
+    "领导",
+    "仁义"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/liu_bei.webp",
+  "thumb": "/p/sanguo/thumbs/liu_bei.webp"
+}

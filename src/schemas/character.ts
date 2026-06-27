@@ -8,11 +8,11 @@
  */
 import { z } from "zod";
 
-/** 当前 schema 版本 — Artifact 引入后升到 2;Character/Relation 继续兼容 1/2。 */
-export const SCHEMA_VERSION = 2;
+/** 当前 schema 版本 — v2 引入 Artifact;v3 引入正典标注 canon。兼容 1/2/3。 */
+export const SCHEMA_VERSION = 3;
 
-/** 历史数据(SCHEMA_VERSION=1)与新数据(=2)均接受 */
-const SchemaVersionField = z.number().int().min(1).max(2);
+/** 历史数据(SCHEMA_VERSION=1/2)与新数据(=3)均接受 */
+const SchemaVersionField = z.number().int().min(1).max(3);
 
 // ─────────────────────────────────────────────────────────────
 // 分类 / 关系类型 — 通用化(项目无关)
@@ -24,6 +24,14 @@ const SchemaVersionField = z.number().int().min(1).max(2);
 //  未声明的分类 / 关系类型 → 直接报错,等价于原闭集枚举的防错能力)。
 // ─────────────────────────────────────────────────────────────
 const Slug = z.string().regex(/^[a-z][a-z0-9_]*$/);
+
+// ─────────────────────────────────────────────────────────────
+// 正典归属(v3)— 多正典题材(如三国:演义/正史)用于区分事件来源
+//   romance = 演义/小说独有  history = 正史可考  both = 两者皆载
+//   null/缺省 = 不适用(单一正典题材如希腊神话)
+// ─────────────────────────────────────────────────────────────
+export const Canon = z.enum(["romance", "history", "both"]);
+export type Canon = z.infer<typeof Canon>;
 
 // ─────────────────────────────────────────────────────────────
 // 文献出处 — 名言、事件必带
@@ -41,6 +49,7 @@ export type Citation = z.infer<typeof Citation>;
 export const Quote = z.object({
   text: z.string(),
   source: Citation,
+  canon: Canon.nullish(),
 });
 export type Quote = z.infer<typeof Quote>;
 
@@ -51,6 +60,7 @@ export const CharacterEvent = z.object({
   title: z.string(),
   desc: z.string(),
   source: Citation.nullish(),
+  canon: Canon.nullish(),
 });
 export type CharacterEvent = z.infer<typeof CharacterEvent>;
 
@@ -115,6 +125,7 @@ export const RelationEvent = z.object({
   desc: z.string(),
   desc_long: z.string().nullish(),
   source: Citation.nullish(),
+  canon: Canon.nullish(),
   era_order: z.number().int().min(0),
 });
 export type RelationEvent = z.infer<typeof RelationEvent>;

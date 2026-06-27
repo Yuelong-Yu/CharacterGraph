@@ -1,0 +1,166 @@
+{
+  "characters": [
+    {
+      "slug": "liu_bei",
+      "name_zh": "刘备",
+      "name_en": "Liu Bei",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "蜀汉昭烈帝"
+    },
+    {
+      "slug": "guan_yu",
+      "name_zh": "关羽",
+      "name_en": "Guan Yu",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "汉寿亭侯·武圣"
+    },
+    {
+      "slug": "zhang_fei",
+      "name_zh": "张飞",
+      "name_en": "Zhang Fei",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "万人敌·桓侯"
+    },
+    {
+      "slug": "zhuge_liang",
+      "name_zh": "诸葛亮",
+      "name_en": "Zhuge Liang",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "卧龙·蜀汉丞相"
+    },
+    {
+      "slug": "zhao_yun",
+      "name_zh": "赵云",
+      "name_en": "Zhao Yun",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "常山赵子龙"
+    },
+    {
+      "slug": "cao_cao",
+      "name_zh": "曹操",
+      "name_en": "Cao Cao",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "魏武帝·乱世枭雄"
+    },
+    {
+      "slug": "sun_quan",
+      "name_zh": "孙权",
+      "name_en": "Sun Quan",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "吴大帝"
+    },
+    {
+      "slug": "zhou_yu",
+      "name_zh": "周瑜",
+      "name_en": "Zhou Yu",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "东吴大都督·美周郎"
+    },
+    {
+      "slug": "lyu_bu",
+      "name_zh": "吕布",
+      "name_en": "Lü Bu",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "飞将·人中吕布"
+    },
+    {
+      "slug": "diao_chan",
+      "name_zh": "貂蝉",
+      "name_en": "Diaochan",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "闭月·连环计"
+    }
+  ],
+  "artifacts": [
+    {
+      "slug": "qinglong_yanyue_dao",
+      "name_zh": "青龙偃月刀",
+      "name_en": "Green Dragon Crescent Blade",
+      "category": "weapon",
+      "epithet": "关羽之刃·冷艳锯"
+    },
+    {
+      "slug": "zhangba_shemao",
+      "name_zh": "丈八蛇矛",
+      "name_en": "Serpent Spear",
+      "category": "weapon",
+      "epithet": "张飞之矛"
+    },
+    {
+      "slug": "fangtian_huaji",
+      "name_zh": "方天画戟",
+      "name_en": "Fangtian Huaji",
+      "category": "weapon",
+      "epithet": "吕布之戟"
+    },
+    {
+      "slug": "shuanggu_jian",
+      "name_zh": "雌雄双股剑",
+      "name_en": "Twin Swords",
+      "category": "weapon",
+      "epithet": "刘备之剑"
+    },
+    {
+      "slug": "qixing_baodao",
+      "name_zh": "七星宝刀",
+      "name_en": "Seven-Star Sword",
+      "category": "weapon",
+      "epithet": "王允献刀·曹操刺董"
+    },
+    {
+      "slug": "qinggang_jian",
+      "name_zh": "青釭剑",
+      "name_en": "Qinggang Sword",
+      "category": "weapon",
+      "epithet": "曹操佩剑·赵云夺之"
+    },
+    {
+      "slug": "chitu_ma",
+      "name_zh": "赤兔马",
+      "name_en": "Red Hare",
+      "category": "mount",
+      "epithet": "马中赤兔"
+    },
+    {
+      "slug": "dilu_ma",
+      "name_zh": "的卢马",
+      "name_en": "Dilu",
+      "category": "mount",
+      "epithet": "刘备坐骑·檀溪跃马"
+    }
+  ],
+  "owns": [
+    { "owner": "guan_yu", "artifact": "qinglong_yanyue_dao", "canon": "romance", "title": "关羽持青龙偃月刀", "desc": "《三国演义》中关羽以青龙偃月刀(冷艳锯)为标志兵器，温酒斩华雄、斩颜良诛文丑皆仗此刀。偃月刀实为宋代仪仗器，演义将其安于关羽，铸成武圣意象。", "work": "《三国演义》" },
+    { "owner": "zhang_fei", "artifact": "zhangba_shemao", "canon": "romance", "title": "张飞使丈八蛇矛", "desc": "《三国演义》中张飞惯用丈八蛇矛，当阳长坂据水断桥、横矛立马一声断喝吓退曹军，蛇矛遂为其勇烈象征。", "work": "《三国演义》" },
+    { "owner": "lyu_bu", "artifact": "fangtian_huaji", "canon": "romance", "title": "吕布执方天画戟", "desc": "《三国演义》中吕布以方天画戟纵横，辕门射戟解纷、虎牢关前独抗三英，画戟与赤兔并为‘人中吕布’的标识。正史载其用矛，画戟为演义艺术加工。", "work": "《三国演义》" },
+    { "owner": "liu_bei", "artifact": "shuanggu_jian", "canon": "romance", "title": "刘备佩雌雄双股剑", "desc": "《三国演义》中刘备以雌雄双股剑为兵，桃园结义后三英战吕布时与关张并力。双股剑为其仁主而能战的象征。", "work": "《三国演义》" },
+    { "owner": "cao_cao", "artifact": "qixing_baodao", "canon": "romance", "title": "曹操借七星刀刺董", "desc": "《三国演义》中曹操借司徒王允七星宝刀行刺董卓，事败遂以献刀为名脱身，是为‘孟德献刀’，刀旋归王允。", "work": "《三国演义》" },
+    { "owner": "lyu_bu", "artifact": "chitu_ma", "canon": "both", "title": "吕布有良马赤兔", "desc": "《三国志·吕布传》载‘布有良马曰赤兔’，能驰城飞堑；演义更以‘人中吕布，马中赤兔’传世。赤兔为吕布征战坐骑。", "work": "《三国志·吕布传》" },
+    { "owner": "guan_yu", "artifact": "chitu_ma", "canon": "romance", "title": "关羽得赤兔马", "desc": "《三国演义》中曹操以赤兔马赠关羽以收其心，关羽谢曰得马可一日见兄。后关羽败亡，赤兔绝食而死，演义以此成全忠义意象。正史中赤兔随吕布之死即失记载。", "work": "《三国演义》" },
+    { "owner": "liu_bei", "artifact": "dilu_ma", "canon": "both", "title": "刘备乘的卢跃檀溪", "desc": "的卢为刘备坐骑，《世说新语》及演义载其‘妨主’之说；刘备困于荆州，纵马跃过数丈檀溪脱险，‘的卢飞快’遂传为名马典故。", "work": "《世说新语》" },
+    { "owner": "cao_cao", "artifact": "qinggang_jian", "canon": "romance", "title": "曹操藏青釭剑", "desc": "《三国演义》中青釭剑为曹操双剑之一，削铁如泥，交背剑将夏侯恩佩带。", "work": "《三国演义》" },
+    { "owner": "zhao_yun", "artifact": "qinggang_jian", "canon": "romance", "title": "赵云长坂夺青釭剑", "desc": "《三国演义》中长坂坡赵云单骑救主，杀曹将夏侯恩夺得青釭剑，持之七进七出，剑遂归赵云。", "work": "《三国演义》" }
+  ],
+  "en_title_override": {
+    "lyu_bu": "Lü Bu",
+    "diao_chan": "Diaochan",
+    "qinglong_yanyue_dao": "Guandao",
+    "chitu_ma": "Red Hare",
+    "dilu_ma": "Dilu (horse)"
+  },
+  "zh_title_override": {
+    "shuanggu_jian": "双股剑",
+    "chitu_ma": "赤兔",
+    "dilu_ma": "的盧"
+  }
+}

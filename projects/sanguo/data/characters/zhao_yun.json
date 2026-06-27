@@ -1,0 +1,172 @@
+{
+  "schema_version": 3,
+  "id": "zhao_yun",
+  "name_zh": "赵云",
+  "name_en": "Zhao Yun",
+  "aliases": [
+    "赵子龙",
+    "Zilong",
+    "常山赵子龙",
+    "顺平侯"
+  ],
+  "epithet": "常山赵子龙",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "赵云（？—229年），字子龙，常山真定（今河北石家庄正定）人，身高八尺，姿颜雄伟。汉末三国时期蜀汉名将，与关羽、张飞并称“燕南三士”。早年受本郡推举，率领义从投奔公孙瓒。在公孙瓒处结识了刘备，后因兄长去世离开。约七年后在邺城与刘备重逢，从此追随刘备近三十年。赵云先后参与博望坡之战、长坂坡之战，在长坂坡保护刘备妻甘夫人与幼子刘禅脱险。后随刘备平定荆州江南四郡，任桂阳太守，拒婚赵范。刘备入蜀后，赵云与诸葛亮、张飞等率军入川，参与攻取益州。汉中之战中，赵云在汉水以空营计退曹军，被刘备赞为“一身是胆”。刘备称帝后，赵云劝谏勿伐吴，未被采纳。诸葛亮第一次北伐时，赵云率疑兵在箕谷牵制曹真主力，虽失利但亲自断后，保全辎重。建兴七年（229年）去世，后主刘禅追谥顺平侯。赵云一生忠勇谨慎，有大臣局量，被后世誉为“常胜将军”与完美人物。",
+  "events": [
+    {
+      "title": "投奔公孙瓒",
+      "desc": "赵云受常山郡推举，率领义从加入公孙瓒。公孙瓒起初怀疑其来意，赵云以天下混乱、择仁主而从之回答，获得信任，参与对抗袁绍等战役。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "结识刘备",
+      "desc": "赵云在公孙瓒处与刘备相识，二人关系亲密。后公孙瓒派刘备助田楷攻袁绍，赵云随刘备任骑兵军官。因兄长去世，赵云辞别刘备，临行承诺不忘刘备恩情。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "邺城重逢",
+      "desc": "刘备失徐州投奔袁绍时，赵云至邺城与刘备重逢。二人同榻而卧，刘备密令赵云招募数百人，对外声称是左将军部下，袁绍不知。随后赵云随刘备离开袁绍投奔刘表。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "博望坡擒夏侯兰",
+      "desc": "202年，刘备趁曹操北征，出兵攻曹。赵云在战斗中俘获同乡旧友夏侯兰，因知其精通法律，向刘备求情并推荐其为军正。赵云公私分明，获得赞扬。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "长坂坡救主",
+      "desc": "208年，曹操南征，刘琮投降，刘备南逃至当阳长坂。曹军精骑追上，刘备抛妻弃子。赵云怀抱刘备幼子刘禅，保护甘夫人，拼死杀出重围，使二人幸免于难。事后被升为牙门将军。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "拒婚赵范",
+      "desc": "赵云平定桂阳后任太守，原太守赵范欲将其寡嫂嫁予赵云以结好。赵云以同姓兄弟之嫂不可娶为由拒绝，并怀疑赵范被迫投降、意图不轨。不久赵范果然逃走，赵云免于牵连。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "截江夺阿斗",
+      "desc": "刘备入蜀后，孙权派船迎其妹孙夫人回吴，孙夫人企图带走刘禅。赵云与张飞率兵拦截，夺回刘禅，粉碎了东吴扣留人质的图谋。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan and Han Jin Chunqiu",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "劝谏分田安民",
+      "desc": "214年刘备平定益州后，欲将成都房舍及城外田地赏赐功臣。赵云引用霍去病“匈奴未灭，何以家为”之语，建议将田宅归还百姓，使其安居乐业，再行赋役。刘备采纳。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "汉水空营计",
+      "desc": "218-219年汉中之战，黄忠劫粮未归，赵云率数十骑寻之，遭遇曹军主力。赵云且战且退，回营后大开营门，偃旗息鼓。曹军疑有伏兵而退，赵云以强弩射其后队，曹军大乱。刘备赞曰“子龙一身是胆”。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "箕谷退兵",
+      "desc": "228年诸葛亮第一次北伐，赵云与邓芝率疑兵据箕谷，牵制曹真主力。因兵弱失利，赵云亲自断后，收拢部众，军资无所弃。诸葛亮问邓芝为何败而不溃，邓芝答赵云断后之功。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "天下大乱，未知孰是，民有倒悬之厄。鄙州论议，从仁政所在，不为忽袁公私明将军也。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "终不背德也。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "范迫于势耳，心未可测；天下女不少。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "霍去病以匈奴未灭，无用家为。今国贼非但匈奴，未可求安也。须天下都定，各反桑梓，归耕本土，乃其宜耳。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi), annotated by Pei Songzhi, citing Zhao Yun Biezhuan",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "单骑救主",
+    "突击敌阵",
+    "空营退敌",
+    "劝谏安民"
+  ],
+  "domains": [
+    "军事",
+    "忠诚",
+    "防御",
+    "治理"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhao_yun.webp",
+  "thumb": "/p/sanguo/thumbs/zhao_yun.webp"
+}

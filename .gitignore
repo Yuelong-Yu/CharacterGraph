@@ -26,6 +26,8 @@ __pycache__/
 projects/*/data/raw/
 # AI 生成的废稿不进仓库（各项目）
 projects/*/images/raw/
+# 画风试水图（一次性废稿）不进仓库
+projects/*/images/_style_test/
 # 资源软链由 link-assets 脚本在 predev/prebuild 重建，不提交
 public/p/
 

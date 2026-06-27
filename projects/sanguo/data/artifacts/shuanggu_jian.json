@@ -1,0 +1,33 @@
+{
+  "schema_version": 3,
+  "id": "shuanggu_jian",
+  "name_zh": "雌雄双股剑",
+  "name_en": "Twin Swords",
+  "aliases": [
+    "双股剑",
+    "雌雄剑",
+    "刘备双剑"
+  ],
+  "epithet": "刘备之剑",
+  "category": "weapon",
+  "bio": "双股剑，又称雌雄双股剑，是中国古代传说中的兵器，最著名的使用者是《三国演义》中的蜀汉先主刘备。关于其造型，历来存在争议：一种观点认为双股剑是一把前端分叉的剑，类似双叉剑；另一种观点则认为它是两把独立的剑，一雌一雄，故名“雌雄双股剑”。在《三国演义》中，刘备持此剑参与虎牢关三英战吕布等战役，是其标志性武器。双股剑象征刘备的仁义与雄才，亦体现其帝王身份。由于正史无记载，其具体形态和传说多出自后世文学演绎。",
+  "events": [
+    {
+      "title": "三英战吕布",
+      "desc": "在虎牢关之战中，刘备手持雌雄双股剑，与关羽、张飞一同迎战吕布，展现其勇武与统帅之姿。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "武勇",
+    "统帅",
+    "平衡"
+  ],
+  "portrait": "/p/sanguo/portraits/shuanggu_jian.webp",
+  "thumb": "/p/sanguo/thumbs/shuanggu_jian.webp"
+}

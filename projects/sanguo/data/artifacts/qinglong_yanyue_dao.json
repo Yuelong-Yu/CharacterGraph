@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "id": "qinglong_yanyue_dao",
+  "name_zh": "青龙偃月刀",
+  "name_en": "Green Dragon Crescent Blade",
+  "aliases": [
+    "冷艳锯",
+    "关刀"
+  ],
+  "epithet": "关羽之刃·冷艳锯",
+  "category": "weapon",
+  "bio": "青龙偃月刀，又名冷艳锯、关刀，是《三国演义》中关羽所使用的标志性兵器。传说关羽在汉末命工匠打造，重八十二斤（约合今18–48公斤），刀身呈偃月形，刀面阴刻龙纹，故名。小说中关羽凭此刀斩颜良、诛文丑，威震华夏。据考，偃月刀实际出现于北宋《武经总要》，宋元时期多用于操练、仪仗或军事考核，并非战场常用兵器。关羽死后，青龙偃月刀被东吴将领潘璋夺走，后关羽之子关兴杀潘璋夺回。该刀被后世视为武勇与忠义的象征，在戏曲、民间信仰中与关羽紧密相连，并衍生出多种武术套路。",
+  "events": [
+    {
+      "title": "关羽命匠铸造青龙偃月刀",
+      "desc": "据《三国演义》记载，关羽起兵前指定形制，令工匠铸造此刀，重八十二斤，刀身刻青龙纹，刃呈偃月状，故名青龙偃月刀，又名冷艳锯。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "关羽斩颜良",
+      "desc": "官渡之战中，关羽骑赤兔马，挥青龙偃月刀直冲袁军阵中，斩大将颜良于万军之首，此战使青龙偃月刀名声大噪。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "潘璋夺走青龙偃月刀",
+      "desc": "关羽败走麦城被俘后，青龙偃月刀落入东吴将领潘璋之手，成为战利品。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "关兴夺回父刀",
+      "desc": "关兴在夷陵之战中与潘璋交战，最终斩杀潘璋，夺回青龙偃月刀，为父报仇。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "《武经总要》收录偃月刀图",
+      "desc": "北宋官修军事著作《武经总要》首次以图文形式记载偃月刀，说明其作为仪仗与训练兵器使用，尚无史料证明关羽曾用此类长刀。",
+      "source": {
+        "work": "《武经总要》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "《三才图绘》评刀法第一",
+      "desc": "明代王圻、王思义编撰的《三才图绘》记载：‘关王偃月刀，刀势既大，其三十六刀法，兵杖遇之，无不屈者，刀类中此为第一。’肯定了其在冷兵器中的地位。",
+      "source": {
+        "work": "《三才图绘》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "domains": [
+    "武勇",
+    "忠义",
+    "力量"
+  ],
+  "portrait": "/p/sanguo/portraits/qinglong_yanyue_dao.webp",
+  "thumb": "/p/sanguo/thumbs/qinglong_yanyue_dao.webp"
+}

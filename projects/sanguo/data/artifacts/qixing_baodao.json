@@ -1,0 +1,88 @@
+{
+  "schema_version": 3,
+  "id": "qixing_baodao",
+  "name_zh": "七星宝刀",
+  "name_en": "Seven-Star Sword",
+  "aliases": [
+    "七宝刀",
+    "七星刀"
+  ],
+  "epithet": "王允献刀·曹操刺董",
+  "category": "weapon",
+  "bio": "七星宝刀是《三国演义》及《铜雀台》中出现的兵器，原为司徒王允所有。此刀削铁如泥、小巧便携，刀身镶嵌七颗星形宝石，故名七星宝刀。王允为除掉权臣董卓，将此刀借予曹操，嘱其行刺。曹操怀刀进入董卓府邸，趁董卓卧榻之机拔刀欲刺，却被董卓在衣镜中察觉，曹操急中生智，跪地献刀，声称是为董卓寻得的宝刀，以此脱身，史称“孟德献刀”。董卓被诛后，宝刀复归王允。后李傕攻破长安，王允被杀，宝刀可能落入李傕之手。李傕败亡后，宝刀最终归属曹操，藏于铜雀台中，成为其秘藏之一。后世《鹿鼎记》等小说亦曾化用“曹操献刀”这一典故。",
+  "events": [
+    {
+      "title": "王允藏刀",
+      "desc": "司徒王允拥有七星宝刀，视若珍宝，秘不示人。此刀削铁如泥，玲珑便携，刀身七星排列，寒光凛冽。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "曹操借刀",
+      "desc": "王允假借生日宴请众臣，席间痛陈董卓暴政，众人垂泪。曹操抚掌大笑，愿借王允宝刀行刺董卓，王允遂将七星宝刀授予曹操。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "曹操刺董",
+      "desc": "曹操怀揣宝刀入相府，趁董卓侧卧之机拔刀欲刺。董卓从衣镜中瞥见刀影，急问何为，曹操慌忙跪地，托词献刀。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "孟德献刀",
+      "desc": "曹操将七星宝刀献于董卓，董卓把玩赞叹，信以为真。曹操借试马之名逃出洛阳，自此踏上讨董之路。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "刀归王允",
+      "desc": "董卓被吕布诛杀后，七星宝刀复归王允。王允将其收存，未再示人。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "落入李傕之手",
+      "desc": "李傕、郭汜攻破长安，王允被杀。七星宝刀下落不明，据推测落入李傕之手。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "藏于铜雀台",
+      "desc": "李傕败亡后，七星宝刀辗转归曹操。曹操建铜雀台，将宝刀及诸多珍玩藏于台中，成为镇台之宝。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第三十三回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [],
+  "portrait": "/p/sanguo/portraits/qixing_baodao.webp",
+  "thumb": "/p/sanguo/thumbs/qixing_baodao.webp"
+}

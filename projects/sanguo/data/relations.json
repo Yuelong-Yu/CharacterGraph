@@ -1,0 +1,982 @@
+[
+  {
+    "schema_version": 3,
+    "id": "guan_yu-liu_bei",
+    "source": "liu_bei",
+    "target": "guan_yu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "镇压黄巾起义",
+        "desc": "184年，关羽随刘备招募义兵，参与镇压黄巾起义，开始军旅生涯。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "下邳被俘暂归曹操",
+        "desc": "200年，曹操东征刘备，关羽兵败被俘，暂留曹营。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "挂印封金千里寻兄",
+        "desc": "关羽得知刘备下落，封存曹操赏赐，辞别曹营，保护刘备家眷千里寻兄。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-zhang_fei",
+    "source": "liu_bei",
+    "target": "zhang_fei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "镇压黄巾起义",
+        "desc": "184年，张飞随刘备招募义兵，参与镇压黄巾起义，开始军旅生涯。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "长坂坡断后",
+        "desc": "208年，张飞率二十骑断后，据水断桥，保护刘备撤退。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-zhuge_liang",
+    "source": "liu_bei",
+    "target": "zhuge_liang",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三顾茅庐",
+        "desc": "207年，刘备三次拜访诸葛亮，请其出山。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "隆中对",
+        "desc": "诸葛亮提出隆中对战略，为蜀汉建国奠定蓝图。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "刘备托孤",
+        "desc": "223年，刘备病重，托付后事于诸葛亮。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-zhao_yun",
+    "source": "liu_bei",
+    "target": "zhao_yun",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "邺城重逢",
+        "desc": "200年，赵云在邺城与刘备重逢，从此追随。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "长坂坡救主",
+        "desc": "208年，赵云在长坂坡保护刘备妻儿脱险。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "汉水空营计",
+        "desc": "219年，赵云在汉水设空营计击败曹军，被刘备赞为'一身是胆'。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-liu_bei",
+    "source": "liu_bei",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "救援徐州",
+        "desc": "194年，曹操攻打徐州，刘备应陶谦求救率军对抗曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "依附曹操",
+        "desc": "196年，刘备被吕布击败后投奔曹操，曹操表其为豫州牧。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "背曹投袁",
+        "desc": "200年，刘备参与诛曹密谋，事泄后杀徐州刺史投奔袁绍，与曹操决裂。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      },
+      {
+        "title": "赤壁之战",
+        "desc": "208年，刘备与孙权联合在赤壁击败曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 3
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-sun_quan",
+    "source": "liu_bei",
+    "target": "sun_quan",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "赤壁之战联盟",
+        "desc": "208年，刘备与孙权结盟，在赤壁击败曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "湘水划界",
+        "desc": "215年，刘备与孙权以湘水为界平分荆州，暂时和解。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "夷陵之战",
+        "desc": "222年，刘备为报关羽之仇，率军攻吴，被陆逊击败。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-lyu_bu",
+    "source": "liu_bei",
+    "target": "lyu_bu",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "吕布投奔徐州",
+        "desc": "195年，吕布被曹操击败后投奔刘备，刘备收留之。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "袭取下邳",
+        "desc": "196年，吕布趁刘备与袁术交战，偷袭下邳，占据徐州。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "辕门射戟",
+        "desc": "196年，吕布为刘备调解与袁术的冲突，辕门射戟。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      },
+      {
+        "title": "下邳之战",
+        "desc": "198年，刘备与曹操联合围攻下邳，吕布被擒杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 3
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-guan_yu",
+    "source": "guan_yu",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "下邳被俘归曹",
+        "desc": "200年，关羽被曹操俘虏，暂归其麾下。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "白马斩颜良",
+        "desc": "关羽在官渡之战中斩袁绍大将颜良，曹操表封汉寿亭侯。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "挂印封金辞曹",
+        "desc": "关羽得知刘备下落，辞别曹操，千里寻兄。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      },
+      {
+        "title": "水淹七军",
+        "desc": "219年，关羽北伐樊城，击败曹将于禁、庞德，威震华夏。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 3
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-sun_quan",
+    "source": "guan_yu",
+    "target": "sun_quan",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "赤壁之战合作",
+        "desc": "208年，关羽随刘备与孙权结盟，参与赤壁之战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "单刀赴会",
+        "desc": "215年，关羽与鲁肃单刀相会，争议荆州边界。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "吕蒙偷袭荆州",
+        "desc": "219年，孙权派吕蒙偷袭荆州，关羽后方失守。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      },
+      {
+        "title": "败走麦城被杀",
+        "desc": "关羽在突围中被吴军擒杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 3
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lyu_bu-zhang_fei",
+    "source": "zhang_fei",
+    "target": "lyu_bu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "下邳失守",
+        "desc": "196年，张飞留守下邳，被吕布偷袭，丢失徐州。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "参与下邳之战",
+        "desc": "198年，张飞随刘备与曹操联合攻吕布。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_quan-zhuge_liang",
+    "source": "zhuge_liang",
+    "target": "sun_quan",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "出使东吴",
+        "desc": "208年，诸葛亮奉命出使江东，说服孙权联合抗曹。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "赤壁之战协作",
+        "desc": "孙刘联军在赤壁击败曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "维持同盟",
+        "desc": "诸葛亮主政期间，与东吴保持友好关系，多次派使者往来。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhou_yu-zhuge_liang",
+    "source": "zhuge_liang",
+    "target": "zhou_yu",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "赤壁之战合作",
+        "desc": "208年，诸葛亮与周瑜分别作为孙刘联盟的谋主和统帅，共同策划击败曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "南郡之战后",
+        "desc": "周瑜夺取江陵后，诸葛亮辅助刘备在荆州南部扩张。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "三气周瑜",
+        "desc": "《三国演义》虚构诸葛亮三气周瑜:一气夺南郡、二气赔了夫人又折兵、三气假途灭虢之计破产，周瑜屡为诸葛亮所算。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      },
+      {
+        "title": "既生瑜何生亮",
+        "desc": "《三国演义》中周瑜临终长叹‘既生瑜，何生亮’，吐血而亡，演义以此塑造瑜亮宿敌意象。正史中周瑜气度宽宏，无此事。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 3
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-sun_quan",
+    "source": "cao_cao",
+    "target": "sun_quan",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赤壁之战",
+        "desc": "208年，曹操南征，在赤壁被孙刘联军击败。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "合肥之战",
+        "desc": "曹操与孙权多次在合肥交战，互有胜负。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-lyu_bu",
+    "source": "cao_cao",
+    "target": "lyu_bu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兖州争夺战",
+        "desc": "194-195年，吕布占据兖州，曹操与之反复争夺，最终收复。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "下邳之战",
+        "desc": "198年，曹操率军围攻下邳，吕布被擒杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_quan-zhou_yu",
+    "source": "sun_quan",
+    "target": "zhou_yu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "周瑜助孙权继位",
+        "desc": "200年，孙策去世，周瑜将兵赴丧，以君臣之礼支持孙权。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "赤壁之战任命都督",
+        "desc": "208年，孙权任命周瑜为左督，统率水军抗曹。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "周瑜病逝",
+        "desc": "210年，周瑜在准备取蜀时病逝，孙权素服举哀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "diao_chan-lyu_bu",
+    "source": "lyu_bu",
+    "target": "diao_chan",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王允施连环计",
+        "desc": "王允将貂蝉先许吕布后献董卓，离间二人。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      },
+      {
+        "title": "吕布纳貂蝉为妾",
+        "desc": "董卓死后，吕布纳貂蝉为妾。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      },
+      {
+        "title": "随吕布逃亡",
+        "desc": "吕布逃离长安后，貂蝉随其辗转各地。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-qinglong_yanyue_dao",
+    "source": "guan_yu",
+    "target": "qinglong_yanyue_dao",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "关羽持青龙偃月刀",
+        "desc": "《三国演义》中关羽以青龙偃月刀(冷艳锯)为标志兵器，温酒斩华雄、斩颜良诛文丑皆仗此刀。偃月刀实为宋代仪仗器，演义将其安于关羽，铸成武圣意象。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_fei-zhangba_shemao",
+    "source": "zhang_fei",
+    "target": "zhangba_shemao",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "张飞使丈八蛇矛",
+        "desc": "《三国演义》中张飞惯用丈八蛇矛，当阳长坂据水断桥、横矛立马一声断喝吓退曹军，蛇矛遂为其勇烈象征。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lyu_bu-fangtian_huaji",
+    "source": "lyu_bu",
+    "target": "fangtian_huaji",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "吕布执方天画戟",
+        "desc": "《三国演义》中吕布以方天画戟纵横，辕门射戟解纷、虎牢关前独抗三英，画戟与赤兔并为‘人中吕布’的标识。正史载其用矛，画戟为演义艺术加工。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-shuanggu_jian",
+    "source": "liu_bei",
+    "target": "shuanggu_jian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "刘备佩雌雄双股剑",
+        "desc": "《三国演义》中刘备以雌雄双股剑为兵，桃园结义后三英战吕布时与关张并力。双股剑为其仁主而能战的象征。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-qixing_baodao",
+    "source": "cao_cao",
+    "target": "qixing_baodao",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操借七星刀刺董",
+        "desc": "《三国演义》中曹操借司徒王允七星宝刀行刺董卓，事败遂以献刀为名脱身，是为‘孟德献刀’，刀旋归王允。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lyu_bu-chitu_ma",
+    "source": "lyu_bu",
+    "target": "chitu_ma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "吕布有良马赤兔",
+        "desc": "《三国志·吕布传》载‘布有良马曰赤兔’，能驰城飞堑；演义更以‘人中吕布，马中赤兔’传世。赤兔为吕布征战坐骑。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·吕布传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-chitu_ma",
+    "source": "guan_yu",
+    "target": "chitu_ma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "关羽得赤兔马",
+        "desc": "《三国演义》中曹操以赤兔马赠关羽以收其心，关羽谢曰得马可一日见兄。后关羽败亡，赤兔绝食而死，演义以此成全忠义意象。正史中赤兔随吕布之死即失记载。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-dilu_ma",
+    "source": "liu_bei",
+    "target": "dilu_ma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "刘备乘的卢跃檀溪",
+        "desc": "的卢为刘备坐骑，《世说新语》及演义载其‘妨主’之说；刘备困于荆州，纵马跃过数丈檀溪脱险，‘的卢飞快’遂传为名马典故。",
+        "desc_long": null,
+        "source": {
+          "work": "《世说新语》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-qinggang_jian",
+    "source": "cao_cao",
+    "target": "qinggang_jian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操藏青釭剑",
+        "desc": "《三国演义》中青釭剑为曹操双剑之一，削铁如泥，交背剑将夏侯恩佩带。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhao_yun-qinggang_jian",
+    "source": "zhao_yun",
+    "target": "qinggang_jian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赵云长坂夺青釭剑",
+        "desc": "《三国演义》中长坂坡赵云单骑救主，杀曹将夏侯恩夺得青釭剑，持之七进七出，剑遂归赵云。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  }
+]

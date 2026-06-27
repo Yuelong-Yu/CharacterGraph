@@ -20,12 +20,14 @@ export type Swatch = z.infer<typeof Swatch>;
 
 /** 项目完整配置(服务端 / Python 读) */
 export const ProjectConfig = z.object({
-  schema_version: z.number().int().min(1).max(2),
+  schema_version: z.number().int().min(1).max(3),
   slug: Slug,
   title: z.string(),
   subtitle: z.string().nullish(),
   order: z.number().int().default(999),
   draft: z.boolean().default(false),
+  /** 中文源优先级:中文题材用 "baike",西方题材用 "wikipedia"(默认)。仅数据管线使用 */
+  zhSource: z.enum(["wikipedia", "baike"]).default("wikipedia"),
   characterCategories: z.record(Slug, Swatch),
   artifactCategories: z.record(Slug, Swatch).default({}),
   relationTypes: z.record(Slug, Swatch),

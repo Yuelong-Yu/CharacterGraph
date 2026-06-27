@@ -121,6 +121,7 @@ def process_to_portrait_and_thumb(raw_png: bytes, slug: str, ctx: ProjectCtx) ->
     portrait = img.resize((target_w, target_h), Image.LANCZOS)
     portrait.save(ctx.portraits_dir / f"{slug}.webp", "WEBP", quality=88, method=6)
 
+    # thumb：直接用整张立绘(已是 2:3)缩放到 128×192,不做胸像裁剪。
     thumb = portrait.resize((128, 192), Image.LANCZOS)
     thumb.save(ctx.thumbs_dir / f"{slug}.webp", "WEBP", quality=85, method=6)
 
