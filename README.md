@@ -1,4 +1,4 @@
-# GreekMyths
+# CharacterGraph
 
 希腊神话人物关系图谱网站（桌面专属、中文界面）。
 

@@ -1,4 +1,4 @@
-/* GreekMyths Service Worker — self-unregistering kill-switch
+/* CharacterGraph Service Worker — self-unregistering kill-switch
  *
  * 历史:旧版 sw.js precache 了 "/" 并把 HTML 缓存住,导致 dev 改前端后
  * 浏览器仍拿到旧 HTML(hydration mismatch)。本版本不再缓存任何东西,

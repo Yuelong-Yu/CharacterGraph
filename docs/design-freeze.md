@@ -1,4 +1,4 @@
-# GreekMyths — 设计冻结文档
+# CharacterGraph — 设计冻结文档
 
 **日期**：2026-06-24
 **状态**：访谈完成、待实施
@@ -189,7 +189,7 @@
 **方案 (C) — Web 主仓 + pipelines 当 scripts**
 
 ```
-GreekMyths/
+CharacterGraph/
 ├── docs/
 │   └── design-freeze.md       # 本文件
 ├── scripts/
