@@ -5,13 +5,14 @@
  * 仅 production 注册，dev 模式跳过避免缓存干扰。
  */
 import { useEffect } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 export function SWRegister() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (!("serviceWorker" in navigator)) return;
     if (process.env.NODE_ENV !== "production") return;
-    navigator.serviceWorker.register("/sw.js").catch(() => {
+    navigator.serviceWorker.register(withBasePath("/sw.js")).catch(() => {
       // ignore
     });
   }, []);

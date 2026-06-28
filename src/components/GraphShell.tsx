@@ -9,7 +9,6 @@ import type { ClientProjectConfig } from "@/schemas/projectConfig";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
-import { Intro } from "./Intro";
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
 
@@ -221,7 +220,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         fontFamily: FONT.sans,
       }}
     >
-      <Intro />
       <div style={{ borderRight: `1px solid ${COLOR.border}`, position: "relative" }}>
         <SearchBox
           items={searchItems}

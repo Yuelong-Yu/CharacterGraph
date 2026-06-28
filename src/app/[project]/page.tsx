@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { listProjects, loadDataset } from "@/lib/data";
 import { GraphShell } from "@/components/GraphShell";
-import { SWRegister } from "@/components/SWRegister";
 
 export function generateStaticParams() {
   return listProjects().map((p) => ({ project: p.slug }));
@@ -21,10 +20,5 @@ export default async function ProjectPage({ params }: { params: Promise<{ projec
   const { project } = await params;
   if (!listProjects().some((p) => p.slug === project)) notFound();
   const loaded = loadDataset(project);
-  return (
-    <>
-      <SWRegister />
-      <GraphShell dataset={loaded.dataset} config={loaded.config} />
-    </>
-  );
+  return <GraphShell dataset={loaded.dataset} config={loaded.config} />;
 }

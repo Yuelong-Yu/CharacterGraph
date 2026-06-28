@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { Artifact, Character, Relation, Dataset, SCHEMA_VERSION } from "@/schemas/character";
 import { ProjectConfig, ClientProjectConfig } from "@/schemas/projectConfig";
+import { withBasePath } from "@/lib/basePath";
 
 const PROJECTS_DIR = path.join(process.cwd(), "projects");
 
@@ -51,7 +52,7 @@ export function listProjects(): ProjectSummary[] {
       title: config.title,
       subtitle: config.subtitle ?? null,
       order: config.order,
-      cover: coverExists ? `/p/${slug}/cover.webp` : null,
+      cover: coverExists ? withBasePath(`/p/${slug}/cover.webp`) : null,
     });
   }
   return summaries.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
@@ -67,8 +68,16 @@ export function loadDataset(slug: string): LoadedProject {
 
   const config = ProjectConfig.parse(JSON.parse(fs.readFileSync(configPath, "utf-8")));
 
-  const characters = loadCharacters(base);
-  const artifacts = loadArtifacts(base);
+  const characters = loadCharacters(base).map((character) => ({
+    ...character,
+    portrait: withBasePath(character.portrait),
+    thumb: withBasePath(character.thumb),
+  }));
+  const artifacts = loadArtifacts(base).map((artifact) => ({
+    ...artifact,
+    portrait: withBasePath(artifact.portrait),
+    thumb: withBasePath(artifact.thumb),
+  }));
   const relations = loadRelations(base);
 
   const dataset = Dataset.parse({
