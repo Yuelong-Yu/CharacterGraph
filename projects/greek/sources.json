@@ -233,6 +233,14 @@
       "epithet": "奥德修斯之妻,忠贞的典范"
     },
     {
+      "slug": "telemachus",
+      "name_zh": "忒勒玛科斯",
+      "name_en": "Telemachus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯之子,伊塔刻王子"
+    },
+    {
       "slug": "hecate",
       "name_zh": "赫卡忒",
       "name_en": "Hecate",

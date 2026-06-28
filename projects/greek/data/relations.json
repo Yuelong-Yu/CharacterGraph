@@ -5231,5 +5231,79 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-telemachus",
+    "source": "odysseus",
+    "target": "telemachus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子相认",
+        "desc": "忒勒玛科斯在牧猪人欧迈俄斯的小屋与化装成乞丐归来的父亲奥德修斯相认，二人相拥而泣，共商铲除求婚者之计。",
+        "desc_long": null,
+        "source": {
+          "work": "奥德赛",
+          "locus": "卷十六",
+          "translator": null
+        },
+        "era_order": 0
+      },
+      {
+        "title": "并肩诛灭求婚者",
+        "desc": "奥德修斯现出真身后，忒勒玛科斯为父亲递送武器、紧闭厅门，父子以弓矢长矛并肩屠戮盘踞宫中的求婚者，夺回家园。",
+        "desc_long": null,
+        "source": {
+          "work": "奥德赛",
+          "locus": "卷二十二",
+          "translator": null
+        },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "penelope-telemachus",
+    "source": "penelope",
+    "target": "telemachus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子相守待父归",
+        "desc": "父亲奥德修斯出征特洛伊二十年未归，忒勒玛科斯与母亲佩涅洛佩在伊塔刻王宫相守，共同面对蜂拥逼婚、耗费家产的求婚者。",
+        "desc_long": null,
+        "source": {
+          "work": "奥德赛",
+          "locus": "卷一",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "athena-telemachus",
+    "source": "athena",
+    "target": "telemachus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "化身门托尔指引寻父",
+        "desc": "雅典娜化作奥德修斯的老友门托尔，鼓励并护佑忒勒玛科斯秘密出海，先访皮洛斯的涅斯托尔、再赴斯巴达的墨涅拉俄斯，打探父亲下落，助其成长为可担当的男子。",
+        "desc_long": null,
+        "source": {
+          "work": "奥德赛",
+          "locus": "卷一至卷四",
+          "translator": null
+        },
+        "era_order": 0
+      }
+    ]
   }
 ]
