@@ -79,6 +79,22 @@ function getShadowTexture(): THREE.Texture {
 
 // 文字标签纹理 — 把中文文字绘到 canvas 上，让 mesh 走 opaque 队列
 const _labelTexCache = new Map<string, { texture: THREE.CanvasTexture; aspect: number }>();
+const _screenUpVec = new THREE.Vector3();
+const _screenDepthVec = new THREE.Vector3();
+const _screenOffsetVec = new THREE.Vector3();
+
+function setCameraPlaneTransform(
+  object: THREE.Object3D,
+  camera: THREE.Camera,
+  offsetY: number,
+  offsetZ = 0,
+) {
+  _screenUpVec.set(0, 1, 0).applyQuaternion(camera.quaternion).multiplyScalar(offsetY);
+  _screenDepthVec.set(0, 0, 1).applyQuaternion(camera.quaternion).multiplyScalar(offsetZ);
+  object.position.copy(_screenOffsetVec.copy(_screenUpVec).add(_screenDepthVec));
+  object.quaternion.copy(camera.quaternion);
+}
+
 function getLabelTexture(
   text: string,
   textColor: string,
@@ -874,9 +890,9 @@ export function Graph3D({
         const plane = new THREE.Mesh(planeGeo, planeMat);
         plane.position.set(0, spriteCenterY, 0.2);
         plane.renderOrder = topMost ? 9991 : 600;
-        // billboard：plane 是 Mesh 不会自动朝向相机,每帧手动同步 quaternion
+        // Mesh 不会自动 billboard；同时按相机屏幕坐标重算偏移，保证标签始终在图像下方。
         plane.onBeforeRender = (_r, _s, camera) => {
-          plane.quaternion.copy(camera.quaternion);
+          setCameraPlaneTransform(plane, camera, spriteCenterY, 0.2);
         };
         group.add(plane);
       }
@@ -895,6 +911,9 @@ export function Graph3D({
       shadow.scale.set(shadowW, shadowW * 0.25, 1);
       shadow.position.set(0, spriteBottomY - 1, -0.2);
       shadow.renderOrder = topMost ? 9989 : 499;
+      shadow.onBeforeRender = (_r, _s, camera) => {
+        setCameraPlaneTransform(shadow, camera, spriteBottomY - 1, -0.2);
+      };
       group.add(shadow);
 
       // 4) 名字 — 中心节点用 opaque plane（保证在边/箭头之上），普通节点用 SpriteText（轻量）
@@ -923,7 +942,7 @@ export function Graph3D({
         labelMesh.position.set(0, labelY, 0);
         labelMesh.renderOrder = 9992;
         labelMesh.onBeforeRender = (_r, _s, camera) => {
-          labelMesh.quaternion.copy(camera.quaternion);
+          setCameraPlaneTransform(labelMesh, camera, labelY);
         };
         group.add(labelMesh);
       } else {
@@ -940,6 +959,9 @@ export function Graph3D({
         label.material.depthTest = false;
         label.material.depthWrite = false;
         label.renderOrder = 601;
+        label.onBeforeRender = (_r, _s, camera) => {
+          setCameraPlaneTransform(label, camera, labelY);
+        };
         group.add(label);
       }
 
@@ -973,7 +995,7 @@ export function Graph3D({
           epiMesh.position.set(0, epiY, 0);
           epiMesh.renderOrder = 9993;
           epiMesh.onBeforeRender = (_r, _s, camera) => {
-            epiMesh.quaternion.copy(camera.quaternion);
+            setCameraPlaneTransform(epiMesh, camera, epiY);
           };
           group.add(epiMesh);
         } else {
@@ -993,17 +1015,12 @@ export function Graph3D({
           epi.material.depthTest = false;
           epi.material.depthWrite = false;
           epi.renderOrder = 601;
+          epi.onBeforeRender = (_r, _s, camera) => {
+            setCameraPlaneTransform(epi, camera, epiY);
+          };
           group.add(epi);
         }
       }
-
-      // ── 整组 billboard：让整个节点 group 始终面向相机 ──
-      // 这是解决"任何相机角度下文字都在图片正下方、不被自身或邻居图片遮挡"的关键：
-      // group 自身朝相机旋转后，"下方"在屏幕空间始终向下，labelY/epiY 的负偏移
-      // 才能稳定呈现在头像下方，而非（在仰视/俯视下）漂移到头像上或与之重合。
-      group.onBeforeRender = (_renderer, _scene, camera) => {
-        group.quaternion.copy(camera.quaternion);
-      };
 
       return group;
     },
