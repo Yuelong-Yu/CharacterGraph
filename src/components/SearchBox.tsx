@@ -14,12 +14,13 @@
  *
  * 清空: × / ESC / 输入框空 → onClear()
  *
- * ≥2 字严格子串(中文按原样,英文 lowercase 折叠)
+ * ≥2 字严格子串(中文按原样,英文 lowercase 折叠)；拼音仅匹配中文 name/alias。
  */
 import { useEffect, useMemo, useRef, useState, type KeyboardEvent } from "react";
 import type { Artifact, Character } from "@/schemas/character";
 import { COLOR, FONT } from "@/lib/tokens";
 import { useProjectConfig } from "@/lib/projectConfig";
+import { matchSearchEntity, type SearchOrigin } from "@/lib/searchMatch";
 
 type SearchEntity =
   | { kind: "character"; entity: Character }
@@ -31,7 +32,7 @@ const DROPDOWN_CAP = 8;
 interface Hit {
   item: SearchEntity;
   /** 命中来源:name(中/英)/alias/epithet/fulltext */
-  origin: "name" | "alias" | "epithet" | "fulltext";
+  origin: SearchOrigin;
   /** fulltext 命中时的片段 */
   snippet?: string;
 }
@@ -42,52 +43,27 @@ interface Hit {
 function computeHits(items: SearchEntity[], rawQuery: string): Hit[] {
   const q = rawQuery.trim();
   if (q.length < TRIGGER_LEN) return [];
-  const qLower = q.toLowerCase();
 
   const nameHits: Hit[] = [];
   const fullHits: Hit[] = [];
 
   for (const item of items) {
-    const e = item.entity;
-    // 1) name 优先
-    if (e.name_zh.includes(q) || e.name_en.toLowerCase().includes(qLower)) {
+    const match = matchSearchEntity(item.entity, q);
+    if (!match) continue;
+
+    if (match.origin === "name") {
       nameHits.push({ item, origin: "name" });
       continue;
     }
-    if (e.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower))) {
+    if (match.origin === "alias") {
       nameHits.push({ item, origin: "alias" });
       continue;
     }
-    if (e.epithet && e.epithet.includes(q)) {
+    if (match.origin === "epithet") {
       nameHits.push({ item, origin: "epithet" });
       continue;
     }
-
-    // 2) fulltext: Character = bio/events/quotes/skills/domains; Artifact = bio/events/domains
-    const inBio = e.bio?.includes(q) ?? false;
-    const inEvents = e.events.some((ev) => ev.title.includes(q) || ev.desc.includes(q));
-    const inDomains = e.domains.some((d) => d.includes(q));
-    const inCharacterOnly = item.kind === "character" && (
-      item.entity.quotes.some((qu) => qu.text.includes(q)) ||
-      item.entity.skills.some((s) => s.includes(q))
-    );
-    if (inBio || inEvents || inDomains || inCharacterOnly) {
-      let snippet = "";
-      const search = (text: string | null | undefined) => {
-        if (!text) return false;
-        const idx = text.indexOf(q);
-        if (idx < 0) return false;
-        snippet = "…" + text.slice(Math.max(0, idx - 20), idx + q.length + 30) + "…";
-        return true;
-      };
-      if (!search(e.bio)) {
-        for (const ev of e.events) if (search(ev.title + " " + ev.desc)) break;
-      }
-      if (!snippet && item.kind === "character") {
-        for (const qu of item.entity.quotes) if (search(qu.text)) break;
-      }
-      fullHits.push({ item, origin: "fulltext", snippet });
-    }
+    fullHits.push({ item, origin: "fulltext", snippet: match.snippet });
   }
 
   return [...nameHits, ...fullHits];

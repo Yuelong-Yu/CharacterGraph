@@ -11,6 +11,7 @@ import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
+import { entityMatchesSearch } from "@/lib/searchMatch";
 
 type Selection =
   | { kind: "none" }
@@ -21,35 +22,20 @@ const SEARCH_TRIGGER_LEN = 2;
 
 type SearchEntity = Character | Artifact;
 
-function hasCharacterOnlyMatch(c: Character, q: string): boolean {
-  return c.quotes.some((qu) => qu.text.includes(q)) ||
-    c.skills.some((s) => s.includes(q));
-}
-
 /**
  * 严格子串匹配:与 SearchBox.computeHits 同语义,仅返回 id 集。
  *
  * - <2 字符:返回 null 表示无过滤
  * - 范围:name_zh / name_en / aliases / epithet / bio / events.{title,desc} /
  *   quotes.text / skills / domains
- * - 中文按原样 includes,英文 lowercase 折叠
+ * - 中文按原样 includes,英文 lowercase 折叠；拼音仅匹配中文 name/alias
  */
 function computeMatchedIds(items: SearchEntity[], rawQuery: string): Set<string> | null {
   const q = rawQuery.trim();
   if (q.length < SEARCH_TRIGGER_LEN) return null;
-  const qLower = q.toLowerCase();
   const matched = new Set<string>();
   for (const item of items) {
-    if (
-      item.name_zh.includes(q) ||
-      item.name_en.toLowerCase().includes(qLower) ||
-      (item.epithet && item.epithet.includes(q)) ||
-      item.aliases.some((a) => a.includes(q) || a.toLowerCase().includes(qLower)) ||
-      (item.bio && item.bio.includes(q)) ||
-      item.events.some((e) => e.title.includes(q) || e.desc.includes(q)) ||
-      item.domains.some((d) => d.includes(q)) ||
-      ("quotes" in item && hasCharacterOnlyMatch(item, q))
-    ) {
+    if (entityMatchesSearch(item, q)) {
       matched.add(item.id);
     }
   }
