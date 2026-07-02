@@ -172,6 +172,8 @@ class ProjectConfig(BaseModel):
     slug: str = Field(pattern=SLUG_PATTERN)
     title: str
     subtitle: Optional[str] = None
+    # 搜索框默认提示语,按项目主题定制
+    searchPlaceholder: str = "搜索:宙斯 / Zeus / 特洛伊战争 / 十二功业…  (回车应用)"
     order: int = 999
     draft: bool = False
     # 中文源优先级:中文题材用 "baike"(百度百科优先),西方题材用 "wikipedia"(默认)
@@ -180,6 +182,8 @@ class ProjectConfig(BaseModel):
     artifactCategories: Dict[str, Swatch] = Field(default_factory=dict)
     relationTypes: Dict[str, Swatch]
     eraLayers: Dict[str, str] = Field(default_factory=dict)
+    # 3D 图谱节点视觉主题:深色头像保留发光,浅色头像增强边界
+    nodeVisualTheme: Literal["darkPortraits", "lightPortraits"] = "darkPortraits"
     artStyle: ArtStyle
 
 

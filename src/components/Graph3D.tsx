@@ -228,7 +228,7 @@ export function Graph3D({
   onEdgeSelect,
   onBackgroundClick,
 }: Props) {
-  const { characterCategoryColor, artifactCategoryColor, relationColor } = useProjectConfig();
+  const { config, characterCategoryColor, artifactCategoryColor, relationColor } = useProjectConfig();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const fgRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -839,6 +839,7 @@ export function Graph3D({
           ? characterCategoryColor(node.entity.category)
           : artifactCategoryColor(node.entity.category),
       );
+      const lightPortraits = config.nodeVisualTheme === "lightPortraits";
 
       // 头像尺寸（半身像 2:3）
       //   中心节点（巡游 / focus 中心）显著放大，其他节点同步缩小，形成 3x 视觉对比
@@ -861,13 +862,17 @@ export function Graph3D({
         map: getHaloTexture(),
         color: baseColor,
         transparent: true,
-        opacity: isHighlighted ? 1 : isSelected ? 0.85 : 0.55,
+        opacity: lightPortraits
+          ? isHighlighted ? 0.34 : isSelected ? 0.26 : 0.16
+          : isHighlighted ? 1 : isSelected ? 0.85 : 0.55,
         depthWrite: false,
         depthTest: false,        // 不参与深度遮挡
         blending: THREE.AdditiveBlending,
       });
       const halo = new THREE.Sprite(haloMat);
-      const haloScale = isHighlighted ? 48 : isSelected ? 26 : 16;
+      const haloScale = lightPortraits
+        ? isHighlighted ? 38 : isSelected ? 20 : 12
+        : isHighlighted ? 48 : isSelected ? 26 : 16;
       halo.scale.set(haloScale, haloScale, 1);
       halo.position.z = -0.3;
       halo.renderOrder = topMost ? 9990 : 500;
@@ -878,10 +883,46 @@ export function Graph3D({
       //    （three.js 渲染顺序：opaque queue → transparent queue，renderOrder 只在同一队列内有效）
       const tex = getThumbTexture(entity.thumb);
       if (tex) {
+        if (lightPortraits) {
+          const backingGeo = new THREE.PlaneGeometry(spriteW * 1.05, spriteH * 1.04);
+          const backingMat = new THREE.MeshBasicMaterial({
+            color: 0x5f4636,
+            transparent: true,
+            opacity: isHighlighted ? 0.34 : isSelected ? 0.28 : 0.22,
+            depthTest: false,
+            depthWrite: false,
+            side: THREE.DoubleSide,
+          });
+          const backing = new THREE.Mesh(backingGeo, backingMat);
+          backing.position.set(0, spriteCenterY - 0.15, 0.08);
+          backing.renderOrder = topMost ? 9990 : 599;
+          backing.onBeforeRender = (_r, _s, camera) => {
+            setCameraPlaneTransform(backing, camera, spriteCenterY - 0.15, 0.08);
+          };
+          group.add(backing);
+
+          const outlineGeo = new THREE.PlaneGeometry(spriteW * 1.015, spriteH * 1.015);
+          const outlineMat = new THREE.MeshBasicMaterial({
+            color: 0x6f533f,
+            transparent: true,
+            opacity: isHighlighted ? 0.55 : isSelected ? 0.42 : 0.34,
+            depthTest: false,
+            depthWrite: false,
+            side: THREE.DoubleSide,
+          });
+          const outline = new THREE.Mesh(outlineGeo, outlineMat);
+          outline.position.set(0, spriteCenterY, 0.12);
+          outline.renderOrder = topMost ? 9990 : 599;
+          outline.onBeforeRender = (_r, _s, camera) => {
+            setCameraPlaneTransform(outline, camera, spriteCenterY, 0.12);
+          };
+          group.add(outline);
+        }
+
         const planeGeo = new THREE.PlaneGeometry(spriteW, spriteH);
         const planeMat = new THREE.MeshBasicMaterial({
           map: tex,
-          transparent: topMost,       // 中心节点强制走透明队列
+          transparent: topMost || lightPortraits,       // 浅色主题需要压过透明底/描边
           alphaTest: 0,
           depthTest: false,
           depthWrite: false,
@@ -902,17 +943,20 @@ export function Graph3D({
         map: getShadowTexture(),
         color: 0x000000,
         transparent: true,
-        opacity: 0.45,
+        opacity: lightPortraits ? 0.28 : 0.45,
         depthWrite: false,
         depthTest: false,
       });
       const shadow = new THREE.Sprite(shadowMat);
-      const shadowW = isHighlighted ? 32 : 11;
-      shadow.scale.set(shadowW, shadowW * 0.25, 1);
-      shadow.position.set(0, spriteBottomY - 1, -0.2);
+      const shadowW = lightPortraits
+        ? isHighlighted ? 36 : isSelected ? 16 : 10
+        : isHighlighted ? 32 : 11;
+      const shadowY = lightPortraits ? spriteCenterY - 0.35 : spriteBottomY - 1;
+      shadow.scale.set(shadowW, shadowW * (lightPortraits ? 0.62 : 0.25), 1);
+      shadow.position.set(0, shadowY, -0.2);
       shadow.renderOrder = topMost ? 9989 : 499;
       shadow.onBeforeRender = (_r, _s, camera) => {
-        setCameraPlaneTransform(shadow, camera, spriteBottomY - 1, -0.2);
+        setCameraPlaneTransform(shadow, camera, shadowY, -0.2);
       };
       group.add(shadow);
 
@@ -1024,7 +1068,7 @@ export function Graph3D({
 
       return group;
     },
-    [selectedNodeId, focusedId, tourTargetId, characterCategoryColor, artifactCategoryColor],
+    [selectedNodeId, focusedId, tourTargetId, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
   );
 
   // ── 边的样式 ──

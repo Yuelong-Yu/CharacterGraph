@@ -3,6 +3,7 @@
   "slug": "greek",
   "title": "希腊神话人物谱",
   "subtitle": "奥林匹斯诸神 · 英雄 · 异兽 · 神器",
+  "searchPlaceholder": "搜索:宙斯 / Zeus / 特洛伊战争 / 十二功业…  (回车应用)",
   "order": 1,
   "characterCategories": {
     "olympian": { "label": "奥林匹斯神", "color": "#b88a2c" },

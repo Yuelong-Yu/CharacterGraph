@@ -24,6 +24,8 @@ export const ProjectConfig = z.object({
   slug: Slug,
   title: z.string(),
   subtitle: z.string().nullish(),
+  /** 搜索框默认提示语,按项目主题定制 */
+  searchPlaceholder: z.string().default("搜索:宙斯 / Zeus / 特洛伊战争 / 十二功业…  (回车应用)"),
   order: z.number().int().default(999),
   draft: z.boolean().default(false),
   /** 中文源优先级:中文题材用 "baike",西方题材用 "wikipedia"(默认)。仅数据管线使用 */
@@ -33,6 +35,8 @@ export const ProjectConfig = z.object({
   relationTypes: z.record(Slug, Swatch),
   /** era_layer(int)→ 中文层标签 */
   eraLayers: z.record(z.string(), z.string()).default({}),
+  /** 节点头像在 3D 图谱里的视觉主题:深色头像保留发光,浅色头像增强边界 */
+  nodeVisualTheme: z.enum(["darkPortraits", "lightPortraits"]).default("darkPortraits"),
   /** 图像管线基础画风(人物 / 器物),仅服务端 + Python 使用 */
   artStyle: z.object({
     character: z.string(),

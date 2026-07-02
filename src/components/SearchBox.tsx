@@ -123,7 +123,7 @@ export function SearchBox({
   appliedCount,
   totalCount,
 }: Props) {
-  const { characterCategoryColor, artifactCategoryColor } = useProjectConfig();
+  const { config, characterCategoryColor, artifactCategoryColor } = useProjectConfig();
   const [focused, setFocused] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -182,7 +182,7 @@ export function SearchBox({
           onChange={(e) => onQueryChange(e.target.value)}
           onKeyDown={handleKeyDown}
           onFocus={() => setFocused(true)}
-          placeholder="搜索:宙斯 / Zeus / 特洛伊战争 / 十二功业…  (回车应用)"
+          placeholder={config.searchPlaceholder}
           style={{
             width: "100%",
             padding: filterApplied ? "10px 180px 10px 14px" : "10px 14px",
