@@ -1,0 +1,93 @@
+{
+  "schema_version": 3,
+  "id": "nausicaa",
+  "name_zh": "瑙西卡娅",
+  "name_en": "Nausicaa",
+  "aliases": [
+    "Nausicaä",
+    "Nausikaa"
+  ],
+  "epithet": "费埃克斯公主,在河口遇见奥德修斯",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "瑙西卡娅是古希腊史诗《奥德赛》中的人物，费埃克斯国王阿尔喀诺俄斯与王后阿瑞忒的女儿。其名意为“烧船者”。在《奥德赛》第六卷中，奥德修斯遭遇海难漂流至斯刻里亚岛（费埃克斯），赤身露体、疲惫不堪。瑙西卡娅正与侍女们在海边洗衣嬉戏，被奥德修斯惊醒。她并未因他的狼狈而躲避，反而怜悯这位英雄，赐予他衣物，并指引他进城面见王后阿瑞忒。奥德修斯在王宫受到隆重款待，并讲述了漫长漂泊的故事。瑙西卡娅对奥德修斯产生了朦胧的爱慕，她曾向女伴表示希望未来的丈夫像他一样，其父也允诺将女儿许配给奥德修斯。但两人终未结合。据亚里士多德和克里特的狄克提斯记载，她后来嫁给了奥德修斯之子忒勒玛科斯，生有一子或二子（波利波尔特斯和/或佩耳塞波利斯）。另有版本称她与奥德修斯本人育有一子。在史诗中，瑙西卡娅扮演了母亲般的角色，她帮助奥德修斯返乡，并叮嘱他“永远不要忘记我，因为我给了你生命”。她的故事被视为文学史上最早的单恋与未言明之爱的范例之一。",
+  "events": [
+    {
+      "title": "海边洗衣遇奥德修斯",
+      "desc": "奥德修斯船毁人亡后漂流至费埃克斯海岸，赤身露体。瑙西卡娅与侍女在河口洗衣玩耍，奥德修斯从林中走出，侍女们惊散。瑙西卡娅镇定面对，询问其来历。",
+      "source": {
+        "work": "Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赐衣引路助英雄",
+      "desc": "瑙西卡娅同情奥德修斯，给他衣服穿上，并指点他如何进城，建议他先单独去见王后阿瑞忒以求得庇护。她自己先行回城，避免流言。",
+      "source": {
+        "work": "Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "奥德修斯获王室款待",
+      "desc": "奥德修斯依计进入王宫，向王后阿瑞忒恳求，获得国王阿尔喀诺俄斯的欢迎。国王设宴并请奥德修斯讲述冒险经历，最终提供船只送其返乡。",
+      "source": {
+        "work": "Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "暗生情愫未表白",
+      "desc": "瑙西卡娅对奥德修斯萌生爱意，曾向女伴表示希望未来的丈夫像他一样。国王阿尔喀诺俄斯也曾暗示愿意将女儿嫁给奥德修斯，但奥德修斯未予回应，两人终无结果。",
+      "source": {
+        "work": "Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "嘱咐勿忘救命恩",
+      "desc": "在奥德修斯离开费埃克斯前夕，瑙西卡娅与他道别，深情地说：“永远不要忘记我，因为我给了你生命。”奥德修斯承诺将她视为再生恩人，但回家后从未向妻子佩涅洛佩提及此事。",
+      "source": {
+        "work": "Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "嫁与忒勒玛科斯",
+      "desc": "根据亚里士多德和克里特的狄克提斯的记载，瑙西卡娅后来嫁给了奥德修斯之子忒勒玛科斯，并生下波利波尔特斯和/或佩耳塞波利斯。另有一些版本认为她与奥德修斯本人有子。",
+      "source": {
+        "work": "Various",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Never forget me, for I gave you life",
+      "source": {
+        "work": "Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/nausicaa.webp",
+  "thumb": "/p/greek/thumbs/nausicaa.webp"
+}

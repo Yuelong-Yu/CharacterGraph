@@ -639,6 +639,86 @@
       "category": "monster",
       "era_layer": 3,
       "epithet": "色雷斯王的食人牝马"
+    },
+    {
+      "slug": "sisyphus",
+      "name_zh": "西西弗斯",
+      "name_en": "Sisyphus",
+      "category": "independent_hero",
+      "era_layer": 4,
+      "epithet": "推巨石的科林斯王"
+    },
+    {
+      "slug": "calypso",
+      "name_zh": "卡吕普索",
+      "name_en": "Calypso",
+      "category": "minor_deity",
+      "era_layer": 3,
+      "epithet": "奥古吉亚岛的女神,留奥德修斯七年"
+    },
+    {
+      "slug": "tiresias",
+      "name_zh": "忒瑞西阿斯",
+      "name_en": "Tiresias",
+      "category": "independent_hero",
+      "era_layer": 4,
+      "epithet": "底比斯盲先知,冥府预言者"
+    },
+    {
+      "slug": "nausicaa",
+      "name_zh": "瑙西卡娅",
+      "name_en": "Nausicaa",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "费埃克斯公主,在河口遇见奥德修斯"
+    },
+    {
+      "slug": "alcinous",
+      "name_zh": "阿尔基诺俄斯",
+      "name_en": "Alcinous",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "费埃克斯之王,听述奥德赛之人"
+    },
+    {
+      "slug": "aeolus",
+      "name_zh": "埃俄罗斯",
+      "name_en": "Aeolus",
+      "category": "minor_deity",
+      "era_layer": 2,
+      "epithet": "风神,风袋的赐予者"
+    },
+    {
+      "slug": "laertes",
+      "name_zh": "拉厄耳忒斯",
+      "name_en": "Laertes",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯之父,伊塔刻老王"
+    },
+    {
+      "slug": "nestor",
+      "name_zh": "涅斯托耳",
+      "name_en": "Nestor",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "皮洛斯老王,希腊智者"
+    },
+    {
+      "slug": "eumaeus",
+      "name_zh": "欧迈俄斯",
+      "name_en": "Eumaeus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯的忠诚猪倌"
+    },
+    {
+      "slug": "antinous",
+      "name_zh": "安提诺俄斯",
+      "name_en": "Antinous",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "求婚者首领"
     }
   ],
   "artifacts": [
@@ -809,6 +889,13 @@
       "name_en": "Ambrosia and Nectar",
       "category": "treasure",
       "epithet": "诸神不死的食物与饮品"
+    },
+    {
+      "slug": "bag_of_winds",
+      "name_zh": "风袋",
+      "name_en": "Bag of Winds",
+      "category": "treasure",
+      "epithet": "埃俄罗斯所赐的封风皮囊"
     }
   ],
   "en_title_override": {
@@ -841,7 +928,13 @@
     "medea": "Medea",
     "theseus": "Theseus",
     "penelope": "Penelope",
-    "hecate": "Hecate"
+    "hecate": "Hecate",
+    "calypso": "Calypso (mythology)",
+    "alcinous": "Alcinous",
+    "aeolus": "Aeolus (son of Hippotes)",
+    "nestor": "Nestor (mythology)",
+    "antinous": "Antinous (Odyssey)",
+    "laertes": "Laertes (father of Odysseus)"
   },
   "zh_title_override": {
     "zeus": "宙斯",

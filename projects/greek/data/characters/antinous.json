@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "antinous",
+  "name_zh": "安提诺俄斯",
+  "name_en": "Antinous",
+  "aliases": [
+    "Antinous",
+    "欧珀忒斯之子"
+  ],
+  "epithet": "求婚者首领",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "安提诺俄斯（希腊语：Ἀντίνοος）是希腊神话《奥德赛》中的人物，欧珀忒斯之子，是佩涅罗珀的求婚者之一。他在伊萨卡岛众多求婚者中最为傲慢和强势，曾试图在奥德修斯返回后继续强占王后，最终被奥德修斯用弓箭射死。其事迹主要记载于荷马史诗《奥德赛》中。",
+  "events": [
+    {
+      "title": "成为佩涅罗珀的求婚者",
+      "desc": "安提诺俄斯是伊萨卡王后佩涅罗珀的众多求婚者之一，他利用奥德修斯长期未归的机会，带领其他求婚者占据王宫，消耗奥德修斯的家产，并试图强迫佩涅罗珀改嫁。",
+      "source": {
+        "work": "荷马史诗《奥德赛》",
+        "locus": null,
+        "translator": "陈中梅"
+      },
+      "canon": null
+    },
+    {
+      "title": "被奥德修斯射杀",
+      "desc": "奥德修斯返回伊萨卡后，假扮成乞丐进入王宫。在射箭比赛中，奥德修斯表明身份，用弓箭射穿了安提诺俄斯的喉咙，将其杀死，成为复仇的起点。",
+      "source": {
+        "work": "荷马史诗《奥德赛》",
+        "locus": "第22卷",
+        "translator": "陈中梅"
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/antinous.webp",
+  "thumb": "/p/greek/thumbs/antinous.webp"
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 3,
+  "id": "sisyphus",
+  "name_zh": "西西弗斯",
+  "name_en": "Sisyphus",
+  "aliases": [
+    "Σίσυφος",
+    "Sisyphos",
+    "西緒弗斯",
+    "薛西弗斯",
+    "西西佛斯"
+  ],
+  "epithet": "推巨石的科林斯王",
+  "category": "independent_hero",
+  "era_layer": 4,
+  "bio": "西西弗斯是希腊神话中科林斯（古称埃菲拉）的建立者与首任国王。他是色萨利国王埃俄罗斯与埃那瑞忒之子，兄弟包括萨尔摩纽斯等人，与普勒阿得斯之墨洛珀结婚，生有格劳科斯等子，并通过格劳科斯成为柏勒洛丰的祖父，另有传说他是奥德修斯的生父。西西弗斯以狡诈机智著称，曾为获得清泉而向河神阿索波斯出卖宙斯藏匿其女埃伊娜的秘密，触怒宙斯。宙斯命死神塔纳托斯将其缚入塔耳塔洛斯，但他反将死神锁住，导致人间无人死亡，后由战神阿瑞斯解救。临死前他嘱咐妻子抛尸广场，以此借口返回阳间斥责妻子，随后拒绝重返冥界，最终被强行押回。作为惩罚，哈得斯令他在塔耳塔洛斯将一块巨石推上山顶，巨石每次近顶时都会滚落，永无止境。这一形象成为徒劳、无尽劳作的象征，后世加缪等哲学家对其进行了深刻诠释。",
+  "events": [
+    {
+      "title": "创立地峡运动会",
+      "desc": "西西弗斯在位期间，为纪念被海豚驮到科林斯地峡岸边的墨利刻耳忒斯，创立了地峡运动会。据鲍萨尼亚斯记载，这是希腊四大泛希腊运动会之一。",
+      "source": {
+        "work": "Pausanias, Description of Greece",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与兄弟萨尔摩纽斯为敌",
+      "desc": "西西弗斯与其兄萨尔摩纽斯素来不和，曾向德尔斐神谕求问杀死对方而免祸的方法。他诱惑了萨尔摩纽斯之女堤洛，意图生子篡位，但堤洛得知后亲手杀死了孩子。",
+      "source": {
+        "work": "Apollodorus, Library",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "出卖宙斯的秘密",
+      "desc": "西西弗斯为了在科林斯卫城上引出一股清泉，向河神阿索波斯告密其女埃伊娜被宙斯劫持的藏身之处，从而背叛了宙斯，埋下受罚的祸根。",
+      "source": {
+        "work": "Apollodorus, Library",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "欺骗死神塔纳托斯",
+      "desc": "宙斯派塔纳托斯捉拿西西弗斯，但西西弗斯察觉后将其用锁链反缚。死亡因此从人间消失，引发混乱。战神阿瑞斯介入解救塔纳托斯，并将西西弗斯移交。另一版本中被缚的是哈得斯本人。",
+      "source": {
+        "work": "Apollodorus, Library",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "智返阳间",
+      "desc": "西西弗斯临死前嘱妻抛尸广场，使其在冥界以妻子不敬为由向哈得斯或珀耳塞福涅申诉，获准返回阳间责妻。但他回到人间后拒绝回归，直至年老或被赫耳墨斯强行带回。",
+      "source": {
+        "work": "Apollodorus, Library",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "推石受罚",
+      "desc": "因欺骗诸神、自恃智慧超神，西西弗斯被哈得斯判处永恒苦役：在塔耳塔洛斯将一块巨石推上陡坡，每次接近山顶时巨石便滚回原点，循环不止。该惩罚成为徒劳无望的经典象征。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": "11.593-600",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被视为奥德修斯之父",
+      "desc": "在索福克勒斯与欧里庇得斯的作品中，有说法称西西弗斯才是奥德修斯的生父，而非拉厄耳忒斯。这一传说反映了西西弗斯狡诈形象与奥德修斯性格的契合。",
+      "source": {
+        "work": "Sophocles, Philoctetes",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "inque tuo sedisti, Sisyphe, saxo（而你，西西弗斯，坐于你的石上）",
+      "source": {
+        "work": "Ovid, Metamorphoses",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "欺骗死神",
+    "诱惑女性",
+    "设下计谋"
+  ],
+  "domains": [
+    "欺诈",
+    "统治",
+    "建城"
+  ],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/sisyphus.webp",
+  "thumb": "/p/greek/thumbs/sisyphus.webp"
+}

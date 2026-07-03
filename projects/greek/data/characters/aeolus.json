@@ -1,0 +1,113 @@
+{
+  "schema_version": 3,
+  "id": "aeolus",
+  "name_zh": "埃俄罗斯",
+  "name_en": "Aeolus",
+  "aliases": [
+    "Aeolus",
+    "Αἴολος",
+    "艾欧勒斯",
+    "Hippotades"
+  ],
+  "epithet": "风神,风袋的赐予者",
+  "category": "minor_deity",
+  "era_layer": 2,
+  "bio": "埃俄罗斯（希波忒斯之子）是希腊神话中的风神，居住在漂浮的埃俄利亚岛，该岛由不毁的铜墙环绕。他是宙斯任命的“风的守护者”，既能平息风暴也能掀起狂风。他有六个儿子和六个女儿，他们互相婚配，全家幸福地生活在岛上。在荷马史诗《奥德赛》中，奥德修斯一行在离开独眼巨人岛后到达埃俄利亚，埃俄罗斯热情招待他们一个月，临别时赠送一个风袋，内装除了西风以外的所有风，以确保他们顺利返乡。然而就在接近伊萨卡时，奥德修斯因疲惫入睡，其水手以为袋中藏有金银财宝而擅自打开，狂风瞬间涌出，将船队吹回埃俄利亚。埃俄罗斯认为奥德修斯必为神所憎恶，拒绝再次帮助，将其驱逐。在阿波罗尼奥斯的《阿尔戈英雄纪》中，埃俄罗斯应赫拉请求，只留下稳定的西风帮助伊阿宋返航。在维吉尔的《埃涅阿斯纪》中，天后朱诺为摧毁埃涅阿斯船队，许诺将仙女得伊俄珀亚嫁给他，换取他释放狂风，但海神尼普顿出面平息了风浪，拯救了埃涅阿斯。古典作家常将这个埃俄罗斯与赫楞之子（埃俄利亚族祖先）混淆，狄奥多罗斯试图区分他们，指出这个埃俄罗斯的父亲是希波忒斯，祖父是弥玛斯（赫楞之孙）。他的事迹体现了古希腊人对风与航海关系的理解，他被视为次要神祇，掌管自然之风。",
+  "events": [
+    {
+      "title": "接待奥德修斯一行",
+      "desc": "奥德修斯一行在离开独眼巨人岛后抵达埃俄利亚岛。埃俄罗斯热情招待他们整整一个月，询问特洛伊战争的种种经历。岛上有埃俄罗斯的六个儿子和六个女儿，他们互相婚配，全家欢宴不断。",
+      "source": {
+        "work": "Odyssey",
+        "locus": "10.1-16",
+        "translator": "A.T. Murray"
+      },
+      "canon": null
+    },
+    {
+      "title": "赠送风袋助返乡",
+      "desc": "奥德修斯启程返乡时，埃俄罗斯将一个用牛皮制成的风袋交给他，袋中捆缚了所有暴烈的风，只留下温和的西风吹送船只。埃俄罗斯嘱咐奥德修斯在抵达伊萨卡之前切勿打开风袋。",
+      "source": {
+        "work": "Odyssey",
+        "locus": "10.17-26",
+        "translator": "A.T. Murray"
+      },
+      "canon": null
+    },
+    {
+      "title": "水手误开风袋",
+      "desc": "当船队接近伊萨卡，甚至已能看见岸上炊烟时，奥德修斯因疲惫入睡。水手们怀疑袋中藏有金银财宝，擅自打开风袋。所有狂风瞬间涌出，掀起巨浪，将船队吹回埃俄利亚岛。",
+      "source": {
+        "work": "Odyssey",
+        "locus": "10.47-55",
+        "translator": "A.T. Murray"
+      },
+      "canon": null
+    },
+    {
+      "title": "拒绝再次帮助",
+      "desc": "奥德修斯返回埃俄利亚岛再次求助，埃俄罗斯却严厉拒绝，称奥德修斯必为神明所憎恶，自己不能帮助被众神厌弃之人，并命他立即离开。奥德修斯只得继续漂泊。",
+      "source": {
+        "work": "Odyssey",
+        "locus": "10.72-75",
+        "translator": "A.T. Murray"
+      },
+      "canon": null
+    },
+    {
+      "title": "朱诺请求释放狂风",
+      "desc": "在《埃涅阿斯纪》中，天后朱诺（赫拉）为阻止埃涅阿斯到达意大利，亲自拜访埃俄罗斯，许诺将最美的宁芙得伊俄珀亚嫁给他，换取他释放狂风摧毁埃涅阿斯的舰队。埃俄罗斯依言放出狂风。",
+      "source": {
+        "work": "Aeneid",
+        "locus": "1.65-75",
+        "translator": "Theodore C. Williams"
+      },
+      "canon": null
+    },
+    {
+      "title": "帮助伊阿宋返航",
+      "desc": "在《阿尔戈英雄纪》中，赫拉请求埃俄罗斯为阿尔戈号提供顺风。埃俄罗斯应允，只留下稳定的西风吹送，其他风均被封闭，使伊阿宋一行得以顺利返回希腊。",
+      "source": {
+        "work": "Argonautica",
+        "locus": "4.757-769",
+        "translator": "Robert Cooper Seaton"
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "where dwelt Aeolus, son of Hippotas, dear to the immortal gods, in a floating island, and all around it is a wall of unbreakable bronze, and the cliff runs up sheer. Twelve children of his, too, there are in the halls, six daughters and six sturdy sons, and he gave his daughters to his sons to wife. These, then, feast continually by their dear father and good mother, and before them lies boundless good cheer. And the house, filled with the savour of feasting, resounds all about even in the outer court by day, and by night again they sleep beside their chaste wives on blankets and on corded bedsteads.",
+      "source": {
+        "work": "Odyssey",
+        "locus": "10.1-16",
+        "translator": "A.T. Murray"
+      },
+      "canon": null
+    },
+    {
+      "text": "Begone from our island with speed, thou vilest of all that live. In no wise may I help or send upon his way that man who is hated of the blessed gods. Begone, for thou comest hither as one hated of the immortals.",
+      "source": {
+        "work": "Odyssey",
+        "locus": "10.72-75",
+        "translator": "A.T. Murray"
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "控制风向",
+    "释放狂风",
+    "平息风暴",
+    "收束狂风",
+    "赐予风袋"
+  ],
+  "domains": [
+    "风",
+    "风暴"
+  ],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/aeolus.webp",
+  "thumb": "/p/greek/thumbs/aeolus.webp"
+}

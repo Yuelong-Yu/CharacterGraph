@@ -1,0 +1,141 @@
+{
+  "schema_version": 3,
+  "id": "eumaeus",
+  "name_zh": "欧迈俄斯",
+  "name_en": "Eumaeus",
+  "aliases": [
+    "Eumaios",
+    "Εὔμαιος"
+  ],
+  "epithet": "奥德修斯的忠诚猪倌",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "欧迈俄斯是希腊神话中奥德修斯的忠实猪倌和朋友。他原是叙拉岛国王克忒西俄斯之子，幼年时被一名腓尼基水手诱拐，后者收买了他的女仆（乳母），女仆带着他和其他财宝随腓尼基人乘船逃离，途中女仆被阿尔忒弥斯杀死，但水手们继续航行至伊萨卡岛，奥德修斯的父亲拉厄耳忒斯买下他作为奴隶。此后欧迈俄斯与奥德修斯及其妹妹克提墨涅一同长大，受到母亲安提克勒亚的善待，几乎被视为克提墨涅的平等伙伴。在《奥德赛》中，欧迈俄斯是奥德修斯在特洛伊战争后返回伊萨卡时第一个遇到的人。当时奥德修斯伪装成乞丐，欧迈俄斯虽未认出主人，却因敬畏神明和同情而热情款待他。欧迈俄斯对奥德修斯无比忠诚，厌恶求婚者的胡作非为，但他对“奥德修斯即将归来”的传言十分谨慎，曾因被埃托利亚骗子误导而心生怀疑。他公平分配食物，慷慨祭祀神明（尤其赫尔墨斯），并以自己的微薄收入从塔菲亚人那里买了一名仆人梅绍利奥斯。当忒勒马科斯从皮洛斯和斯巴达归来时，欧迈俄斯像父亲一样迎接他。最终在屠杀求婚者时，欧迈俄斯与另一仆人菲洛提俄斯一起协助奥德修斯和忒勒马科斯。欧迈俄斯是忠诚、敬畏神明和好客的典范。",
+  "events": [
+    {
+      "title": "幼年被拐卖至伊萨卡",
+      "desc": "欧迈俄斯幼年时，一名腓尼基水手诱骗了他的乳母，乳母带着他和其他财宝随水手乘船逃离叙拉岛。途中乳母被阿尔忒弥斯杀死，水手们继续航行至伊萨卡，奥德修斯的父亲拉厄耳忒斯买下了欧迈俄斯作为奴隶。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 15, lines 403-484",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与奥德修斯一起长大",
+      "desc": "欧迈俄斯被买下后，与奥德修斯及其妹妹克提墨涅一同被抚养长大。奥德修斯的母亲安提克勒亚对待欧迈俄斯几乎如同对待克提墨涅一样平等。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 15, lines 363-370",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "首次接待伪装归来的奥德修斯",
+      "desc": "奥德修斯伪装成乞丐回到伊萨卡，第一个遇到的就是欧迈俄斯。尽管欧迈俄斯未认出主人，且心存疑虑，但他仍因敬畏宙斯和同情而热情款待了这位“乞丐”，提供食物和住所。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 14, lines 1-120",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "讲述假故事欺骗猪倌",
+      "desc": "奥德修斯在欧迈俄斯追问下编造了一段曲折的谎言，声称自己是克里特人，并非拉厄耳忒斯之子，而是卡斯托尔之子。欧迈俄斯虽未完全相信，但仍继续款待他。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 14, lines 191-359",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与奥德修斯辩论并展现忠诚",
+      "desc": "奥德修斯提出赌约（若失败则被扔下悬崖），欧迈俄斯以讽刺口吻回应：“那对我来说将是美德，我会得到好名声……如果我先把你带进棚屋款待你，然后杀了你。” 此对话展现了欧迈俄斯既敬畏神明又忠诚于主人，同时对虚假消息保持警惕。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 14, lines 402-406",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "购买仆人梅绍利奥斯",
+      "desc": "在奥德修斯长期缺席期间，欧迈俄斯用自己的微薄积蓄从塔菲亚人那里买了一个仆人梅绍利奥斯。在奥德修斯于棚屋中的第一顿晚餐上，梅绍利奥斯担任侍者。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 14, lines 449-452",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "迎接忒勒马科斯归来",
+      "desc": "忒勒马科斯从皮洛斯和斯巴达返回伊萨卡，遵照雅典娜的指示先拜访欧迈俄斯的棚屋。欧迈俄斯像父亲一样拥抱他，表达深深的担忧和喜悦。此时奥德修斯（仍伪装）就在旁边，读者能感受到父子般的纽带。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 16, lines 1-40",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与屠杀求婚者",
+      "desc": "在奥德修斯、忒勒马科斯以及另两位忠诚仆人菲洛提俄斯和欧迈俄斯共同策划并执行的复仇中，欧迈俄斯协助封锁大门、提供武器，并亲手杀死求婚者。",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 22, lines 1-200",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Don't you try to gratify or soothe my heart with falsehoods. It is not for that reason that I shall respect and entertain you, but because I fear Zeus, the patron of strangers, and pity you.",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 14, lines 386-389",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "That would be virtuous of me, my friend, and good reputation would be mine among men, for present time alike and hereafter, if first I led you into my shelter, there entertained you as guest, then murdered you and ravished the dear life from you. Then cheerfully I could go and pray to Zeus, son of Kronos.",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 14, lines 402-406",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "And as a loving father embraces his own son come back from a distant land after ten long years, his only son, greatly beloved and much sorrowed for.",
+      "source": {
+        "work": "奥德赛",
+        "locus": "Book 16, lines 19-21",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "养猪",
+    "款待宾客",
+    "忠诚侍主",
+    "公平分配食物",
+    "战斗辅助"
+  ],
+  "domains": [
+    "畜牧",
+    "忠诚",
+    "好客"
+  ],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/eumaeus.webp",
+  "thumb": "/p/greek/thumbs/eumaeus.webp"
+}

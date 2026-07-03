@@ -1,0 +1,101 @@
+{
+  "schema_version": 3,
+  "id": "calypso",
+  "name_zh": "卡吕普索",
+  "name_en": "Calypso",
+  "aliases": [
+    "Kalypso",
+    "Καλυψώ"
+  ],
+  "epithet": "奥古吉亚岛的女神,留奥德修斯七年",
+  "category": "minor_deity",
+  "era_layer": 3,
+  "bio": "卡吕普索（Calypso）是希腊神话中的一位女神/宁芙，其名源自希腊语καλύπτω，意为“隐藏”或“遮盖”。她通常被认为是泰坦阿特拉斯之女，但也有说法称她是俄刻阿尼得斯（Oceanids）或涅瑞伊得斯（Nereids）之一。卡吕普索居住在遥远的奥吉吉亚岛上，被奥林匹斯众神囚禁在那里作为惩罚，她会爱上被送到岛上的英雄，但英雄却不得不离开她。最著名的故事出自荷马的《奥德赛》：希腊英雄奥德修斯在返乡途中漂流至奥吉吉亚，卡吕普索将他扣留了七年，许诺他永生和永恒的欢愉，试图让他成为自己的丈夫。奥德修斯虽与她共枕，却日夜思念妻子佩涅洛佩。最终，在雅典娜的请求下，宙斯派遣赫尔墨斯命令卡吕普索释放奥德修斯。卡吕普索虽愤怒但仍服从，帮助奥德修斯建造船只，提供食物、衣物和顺风，送他离去。后世的传说中，卡吕普索与奥德修斯生有儿子拉丁努斯或瑙西托俄斯、瑙西诺俄斯，也有说法称她因爱自杀。卡吕普索常被描绘为一位迷人的女性，擅长歌唱和编织，以金梭织布，其歌声能迷惑人心。",
+  "events": [
+    {
+      "title": "扣留奥德修斯七年",
+      "desc": "在《奥德赛》中，卡吕普索将奥德修斯困在奥吉吉亚岛长达七年，许诺他永生和不朽，试图使他成为自己的丈夫。奥德修斯虽被迫与她同寝，却始终渴望返回家乡伊萨卡与妻子佩涅洛佩团聚。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "雅典娜求宙斯干预",
+      "desc": "奥德修斯的保护神雅典娜在奥林匹斯会议上向宙斯恳求，指出奥德修斯被困在卡吕普索的岛上，无法返回家乡。宙斯同意派遣赫尔墨斯前往奥吉吉亚传达命令。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赫尔墨斯传令释放",
+      "desc": "众神的使者赫尔墨斯奉宙斯之命飞抵奥吉吉亚，向卡吕普索宣布她必须释放奥德修斯。卡吕普索愤怒地抱怨众神嫉妒女神与凡人结合，但最终服从了神的旨意。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "卡吕普索帮助造船",
+      "desc": "卡吕普索答应放行后，给奥德修斯提供了斧头、钻子和扁斧，引导他到岛上砍伐树木建造木筏。她还提供了葡萄酒、面包、衣物等物资，并在奥德修斯启航时送以顺风。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "奥德修斯离开奥吉吉亚",
+      "desc": "奥德修斯建成木筏后，卡吕普索与他告别。奥德修斯乘筏离开奥吉吉亚，卡吕普索站在岸边目送。之后奥德修斯在海上遭遇风暴，但最终到达费埃克斯人的土地。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与奥德修斯生子传说",
+      "desc": "在《奥德赛》之后的叙述中，卡吕普索为奥德修斯生下了儿子，如拉丁努斯（在罗马传统中）或瑙西托俄斯和瑙西诺俄斯（据《神谱》残篇记载），但荷马史诗未提及子女。",
+      "source": {
+        "work": "Hesiod, Catalogue of Women (fragment)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "因爱自杀的结局",
+      "desc": "罗马神话作家许癸努斯（Hyginus）在《传说集》（Fabulae）中记载，卡吕普索因为对奥德修斯的爱情无法实现而自杀身亡，这与其他版本中她继续生活在岛上的结局不同。",
+      "source": {
+        "work": "Hyginus, Fabulae",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "歌唱魅惑",
+    "编织金梭",
+    "施展魔法"
+  ],
+  "domains": [
+    "海洋",
+    "隐藏",
+    "不朽"
+  ],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/calypso.webp",
+  "thumb": "/p/greek/thumbs/calypso.webp"
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 3,
+  "id": "tiresias",
+  "name_zh": "忒瑞西阿斯",
+  "name_en": "Tiresias",
+  "aliases": [
+    "特伊西亚斯",
+    "提瑞西阿斯",
+    "铁列西阿斯"
+  ],
+  "epithet": "底比斯盲先知,冥府预言者",
+  "category": "independent_hero",
+  "era_layer": 4,
+  "bio": "忒瑞西阿斯是古希腊神话中著名的底比斯盲先知，父亲为牧羊人埃维瑞斯，母亲为宁芙卡里克洛。他一生充满传奇色彩：曾在库勒涅山因打蛇而变为女性七年，后再次打蛇恢复男身。关于失明的原因有多种说法，最著名的一则是他因偷看雅典娜沐浴而被女神弄瞎双眼，作为补偿，雅典娜赐予他预言能力和听懂鸟语的本领；另一说他在宙斯与赫拉关于两性性爱乐趣的争论中，指出女人享受十分之十的快乐而男人仅得十分之一，赫拉怒而致其失明，宙斯则赐予他预言能力和长达七代人的寿命。他活跃于底比斯七代王权时期，曾为卡德摩斯、俄狄浦斯、克瑞翁等统治者提供预言。在索福克勒斯的悲剧中，他揭示了俄狄浦斯弑父娶母的真相，并预言了克瑞翁因不葬波吕尼刻斯而丧子的灾祸。在《奥德赛》中，奥德修斯在冥界召喚其灵魂，询问归途，他警告不要触碰赫利俄斯的牛群。此外，他还预言了纳西索斯的命运和墨诺叩斯的献祭。他最终因饮用被污染的蒂尔福萨泉水而死，死后在冥界仍保留预言能力。",
+  "events": [
+    {
+      "title": "变性经历",
+      "desc": "忒瑞西阿斯在库勒涅山看到两条蛇交配，用手杖打死雌蛇，随即变成女人。七年后在同一地点看到交配的蛇，这次他打死雄蛇，于是变回男人。另说他在成为女人期间曾与赫拉为伴并结婚生女曼托。",
+      "source": {
+        "work": "Phlegon of Tralles, On Marvels",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "失明与获得预言",
+      "desc": "多种版本：一说他偷看雅典娜沐浴，女神用手遮住他的眼睛导致失明，但净化其耳朵使其听懂鸟语并赐予预言能力；一说他在宙斯与赫拉的争论中判断女人享受性爱乐趣的十分之十，男人仅十分之一，赫拉怒而使其失明，宙斯则赐予预言和长寿。",
+      "source": {
+        "work": "Pseudo-Apollodorus, Bibliotheca",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "揭示俄狄浦斯的真相",
+      "desc": "底比斯遭瘟疫，俄狄浦斯请忒瑞西阿斯揭示祸源。先知起初不肯说，后愤怒地指出俄狄浦斯本人就是杀死前王拉伊俄斯的凶手，并暗示他犯下弑父娶母之罪。俄狄浦斯不信，但最终证实。",
+      "source": {
+        "work": "Sophocles, Oedipus Rex",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "预言克瑞翁的灾祸",
+      "desc": "在《安提戈涅》中，克瑞翁拒绝埋葬波吕尼刻斯并活埋安提戈涅。忒瑞西阿斯警告他，诸神不满，预言克瑞翁将丧子。克瑞翁起初斥责先知腐败，后听从建议，但为时已晚。",
+      "source": {
+        "work": "Sophocles, Antigone",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "冥界召唤与奥德修斯",
+      "desc": "奥德修斯在冥界献祭黑羊，召唤忒瑞西阿斯的灵魂。先知警告他不要碰赫利俄斯的牛群，否则将失去所有同伴和船只。奥德修斯虽听从，但手下违令，最终遭宙斯雷击而全军覆没。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": "Book 11",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "预言纳西索斯",
+      "desc": "宁芙利里奥佩询问儿子纳西索斯的命运，忒瑞西阿斯预言他若“认识自己”便会早夭。后纳西索斯因迷恋自己的倒影而溺亡，应验了预言。",
+      "source": {
+        "work": "Ovid, Metamorphoses",
+        "locus": "3.339-510",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "死亡",
+      "desc": "忒瑞西阿斯饮用蒂尔福萨泉的冰水后死亡。一说他被阿波罗的箭射中；一说因年老而亡。他的坟墓在蒂尔福萨泉附近或马其顿。死后其灵魂仍保留预言能力，居于冥界。",
+      "source": {
+        "work": "Pausanias, Description of Greece",
+        "locus": "9.33.1",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "You yourself are the criminal you seek.",
+      "source": {
+        "work": "Sophocles, Oedipus Rex",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "you will lose a son of your own loins",
+      "source": {
+        "work": "Sophocles, Antigone",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "进行预言",
+    "听懂鸟语",
+    "占卜",
+    "与冥界亡灵沟通"
+  ],
+  "domains": [
+    "预言",
+    "占卜",
+    "鸟占",
+    "冥界知识"
+  ],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/tiresias.webp",
+  "thumb": "/p/greek/thumbs/tiresias.webp"
+}

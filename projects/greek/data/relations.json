@@ -5305,5 +5305,311 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 1,
+    "id": "aeolus-bag_of_winds",
+    "source": "aeolus",
+    "target": "bag_of_winds",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "埃俄罗斯赐予风袋",
+        "desc": "风神埃俄罗斯将诸风封入一只牛皮囊中,只留西风助奥德修斯归乡,以银索扎紧袋口交予他。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "10.1-27", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "aeolus-odysseus",
+    "source": "aeolus",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赠风袋助归乡",
+        "desc": "埃俄罗斯款待奥德修斯一月,临别赠予封住诸风的皮囊,本可使奥德修斯直达伊塔刻,却被同伴误开风袋而功亏一篑。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "10.1-79", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "alcinous-nausicaa",
+    "source": "alcinous",
+    "target": "nausicaa",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女之情",
+        "desc": "阿尔基诺俄斯与王后阿瑞忒之女瑙西卡娅,在河口遇见裸体上岸的奥德修斯并带回宫中,阿尔基诺俄斯以父亲身份款待这位陌生人。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "6.12-15, 7.12-15", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "alcinous-odysseus",
+    "source": "alcinous",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "款待并送归",
+        "desc": "阿尔基诺俄斯设宴款待奥德修斯,听其叙述十年流浪,最终命费埃克斯人用海船将奥德修斯送回伊塔刻,此举引发波塞冬之怒。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "7-13", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "antinous-odysseus",
+    "source": "antinous",
+    "target": "odysseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "求婚者首领之死",
+        "desc": "化身为乞丐的奥德修斯在宫中受尽安提诺俄斯凌辱,拉弓试射后第一支箭便射穿安提诺俄斯喉中,展开对求婚者的复仇。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "22.1-88", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "antinous-penelope",
+    "source": "antinous",
+    "target": "penelope",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "强求婚与挥霍家产",
+        "desc": "安提诺俄斯率领求婚者长期驻扎奥德修斯宫中,日日宰杀牛羊设宴,挥霍其家产,并逼迫潘妮洛佩改嫁。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "1.106-122, 2.1-259", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "antinous-telemachus",
+    "source": "antinous",
+    "target": "telemachus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "谋害忒勒玛科斯",
+        "desc": "忒勒玛科斯出海寻父归来后,安提诺俄斯率求婚者在海岬设伏企图谋害他,幸得雅典娜护佑而脱险。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "4.625-847, 15.1-544", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "calypso-odysseus",
+    "source": "calypso",
+    "target": "odysseus",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奥古吉亚岛七年",
+        "desc": "卡吕普索在奥古吉亚岛收留海难漂来的奥德修斯,留他在身边七年,许以永生与神祇之爱,奥德修斯却每日在海边望乡哭泣,最终在雅典娜斡旋下卡吕普索被迫放他归乡。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "1.13-15, 5.13-224", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "eumaeus-odysseus",
+    "source": "eumaeus",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "猪倌认主",
+        "desc": "化身为乞丐的奥德修斯先到猪倌欧迈俄斯茅屋,欧迈俄斯虽未识破身份却以礼款待,后经洗脚时伤口显露被老奶妈欧律克勒亚识破,欧迈俄斯随即与忒勒玛科斯一同助奥德修斯复仇。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "14.1-533, 21.188-241", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "laertes-odysseus",
+    "source": "laertes",
+    "target": "odysseus",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "果园父子相认",
+        "desc": "奥德修斯在杀光求婚者后前往果园寻父,见拉厄耳忒斯正以老迈之身劳作,父子相认时拉厄耳忒斯悲喜交加,随后一同迎战求婚者家属的复仇。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "24.205-411", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nausicaa-odysseus",
+    "source": "nausicaa",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "河口相遇",
+        "desc": "瑙西卡娅受雅典娜托梦前往河口洗衣,在岸边遇见裸体上岸、满身海盐的奥德修斯,以衣物相赠并指引他入城求见父王阿尔基诺俄斯。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "6.39-331", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nestor-odysseus",
+    "source": "nestor",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "特洛伊战争中的并肩",
+        "desc": "涅斯托耳与奥德修斯同属希腊联军核心谋士,共谋木马计等关键策略,在特洛伊战争十年中结下战友情谊。",
+        "desc_long": null,
+        "source": {"work": "伊利亚特", "locus": "2.370-399, 9.165-313", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nestor-telemachus",
+    "source": "nestor",
+    "target": "telemachus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "皮洛斯之行",
+        "desc": "忒勒玛科斯在雅典娜指引下秘密出海至皮洛斯拜访涅斯托耳,老王以礼款待并讲述阿伽门农归乡被谋杀之事,指引他赴斯巴达访墨涅拉俄斯探听父亲下落。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "3.1-498", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "odysseus-bag_of_winds",
+    "source": "odysseus",
+    "target": "bag_of_winds",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "掌舵不眠九日",
+        "desc": "奥德修斯得到风袋后亲自掌舵九日九夜不眠,眼看已望见伊塔刻炊烟,却因疲惫入睡,被同伴误以为藏有金帛而私自打开风袋,诸风涌出,船被吹回大洋深处。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "10.28-79", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tiresias-oedipus",
+    "source": "tiresias",
+    "target": "oedipus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "揭示弑父娶母真相",
+        "desc": "底比斯瘟疫肆虐,俄狄浦斯遣人请来盲先知忒瑞西阿斯问卜,忒瑞西阿斯初不愿言,在被激怒后揭示俄狄浦斯正是弑父娶母的罪人,推动其悲剧命运的揭示。",
+        "desc_long": null,
+        "source": {"work": "索福克勒斯《俄狄浦斯王》", "locus": "300-462", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tiresias-odysseus",
+    "source": "tiresias",
+    "target": "odysseus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "冥府预言归乡之路",
+        "desc": "奥德修斯按喀耳刻指引下冥府召来忒瑞西阿斯亡魂,盲先知预言他归乡后将独身先返家、同伴皆亡、并在宫中见到求婚者,并指示他日后需携船桨深入内陆祭奉波塞冬以求善终。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "11.90-151", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sisyphus-thanatos",
+    "source": "sisyphus",
+    "target": "thanatos",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "欺骗死神链锁塔纳托斯",
+        "desc": "西西弗斯以狡黠智谋欺骗死神塔纳托斯,将其用铁链锁住,使凡人一度不再死亡,直到战神阿瑞斯出面解救,死神方得恢复职司。",
+        "desc_long": null,
+        "source": {"work": "阿波罗多洛斯《书库》", "locus": "3.3.3", "translator": null},
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sisyphus-zeus",
+    "source": "sisyphus",
+    "target": "zeus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "冥府永罚推石",
+        "desc": "西西弗斯因多次欺骗神明(包括死神与冥王哈迪斯),被宙斯判处永远在冥府推一块巨石上山,将到山顶时巨石又滚落山脚,周而复始永无止境。",
+        "desc_long": null,
+        "source": {"work": "奥德赛", "locus": "11.593-600", "translator": null},
+        "era_order": 0
+      }
+    ]
   }
 ]

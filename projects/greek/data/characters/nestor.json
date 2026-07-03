@@ -1,0 +1,129 @@
+{
+  "schema_version": 3,
+  "id": "nestor",
+  "name_zh": "涅斯托耳",
+  "name_en": "Nestor",
+  "aliases": [
+    "Nestor of Gerenia",
+    "Gerenian horseman",
+    "Νέστωρ Γερήνιος",
+    "皮洛斯之王"
+  ],
+  "epithet": "皮洛斯老王,希腊智者",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "涅斯托耳是希腊神话中皮洛斯的国王，以其智慧、口才和长寿而闻名。他是涅琉斯和克洛里斯之子，在赫拉克勒斯杀死其父兄后继承王位。年轻时，他作为阿耳戈英雄参与了寻找金羊毛的远征，并参加了卡吕冬野猪狩猎。特洛伊战争爆发时，涅斯托耳已年迈，但仍率领皮洛斯军队参战，与儿子安提洛科斯和特拉叙墨德斯并肩作战。他驾驶战车，手持黄金盾牌，在《伊利亚特》中多次向阿伽门农和阿喀琉斯提出和解建议，并以智者形象出现，尽管其建议有时带有幽默色彩。战后，他选择立即离开特洛伊，平安返回皮洛斯。在《奥德赛》中，他热情款待了前来询问父亲下落的忒勒马科斯。涅斯托耳活了三个世代，据传是阿波罗赐予的福分。他的妻子是欧律狄刻或阿那克西比亚，育有多名子女，包括佩西斯特拉托斯、安提洛科斯等。",
+  "events": [
+    {
+      "title": "参加阿耳戈英雄远征",
+      "desc": "涅斯托耳年轻时加入了伊阿宋领导的阿耳戈英雄远征，与众多英雄一同前往科尔喀斯寻找金羊毛。",
+      "source": {
+        "work": "Various ancient sources",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参加卡吕冬野猪狩猎",
+      "desc": "涅斯托耳参与了墨勒阿格罗斯组织的卡吕冬野猪狩猎，这是一次著名的冒险，集合了众多希腊英雄。",
+      "source": {
+        "work": "Various ancient sources",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "成为皮洛斯国王",
+      "desc": "赫拉克勒斯杀死了涅斯托耳的父亲涅琉斯和所有兄弟，涅斯托耳因此成为皮洛斯的国王。",
+      "source": {
+        "work": "Greek mythology",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "领导皮洛斯军队参与特洛伊战争",
+      "desc": "尽管年事已高，涅斯托耳仍率领皮洛斯军队参加特洛伊战争，与儿子安提洛科斯和特拉叙墨德斯并肩作战。他驾驶战车，手持黄金盾牌，在战场上表现勇敢。",
+      "source": {
+        "work": "Homer, Iliad",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "向阿伽门农和阿喀琉斯建议和解",
+      "desc": "在《伊利亚特》中，涅斯托耳多次向阿伽门农和阿喀琉斯提出和解建议，试图平息二人之间的争执，维护联军团结。",
+      "source": {
+        "work": "Homer, Iliad",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "建议帕特罗克洛斯伪装成阿喀琉斯",
+      "desc": "在《伊利亚特》第11卷，涅斯托耳劝说帕特罗克洛斯穿上阿喀琉斯的盔甲出战，这一建议最终导致帕特罗克洛斯被赫克托耳杀死。",
+      "source": {
+        "work": "Homer, Iliad",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "在帕特罗克洛斯葬礼上指导战车比赛",
+      "desc": "在帕特罗克洛斯的葬礼运动会上，涅斯托耳向儿子安提洛科斯详细传授赢得战车比赛的技巧，帮助他取得好成绩。",
+      "source": {
+        "work": "Homer, Iliad",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "安全返回皮洛斯",
+      "desc": "特洛伊战争结束后，涅斯托耳选择立即离开，避免了阿伽门农因触怒雅典娜而遭遇的灾难，平安回到皮洛斯。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "接待忒勒马科斯",
+      "desc": "奥德修斯的儿子忒勒马科斯前往皮洛斯询问父亲下落，涅斯托耳热情款待他，并回忆了特洛伊战争往事，但无法提供奥德修斯的具体信息。",
+      "source": {
+        "work": "Homer, Odyssey",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "黄金盾牌"
+  ],
+  "skills": [
+    "提供建议",
+    "演讲",
+    "领导军队",
+    "驾驭战车",
+    "英勇作战",
+    "慷慨款待"
+  ],
+  "domains": [
+    "智慧",
+    "建议",
+    "领导力",
+    "口才"
+  ],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/nestor.webp",
+  "thumb": "/p/greek/thumbs/nestor.webp"
+}
