@@ -3,7 +3,7 @@ doubao-seedream-5.0-lite 健康检查
 
 发一个最小请求验证：
   1) API key + base_url 有效
-  2) 模型名 "doubao-seedream-5.0-lite" 存在
+  2) 模型名（IMAGE_MODEL，默认 doubao-seedream-5.0-lite）存在
   3) 参数（size, output_format, response_format, watermark）兼容
   4) 返回的图片 URL 时效（立即下载落盘验证）
 
@@ -25,13 +25,14 @@ from volcenginesdkarkruntime import Ark
 ROOT = Path(__file__).parent.parent.parent
 load_dotenv(ROOT / ".env")
 
-ARK_KEY = os.getenv("ARK_API_KEY")
-if not ARK_KEY:
-    print("ERROR: ARK_API_KEY 未设置")
+IMAGE_API_KEY = os.getenv("IMAGE_API_KEY")
+if not IMAGE_API_KEY:
+    print("ERROR: IMAGE_API_KEY 未设置")
     sys.exit(1)
 
 # Agent Plan endpoint — SDK 会在 base_url 后自动拼 /images/generations
-BASE_URL = "https://ark.cn-beijing.volces.com/api/plan/v3"
+BASE_URL = os.getenv("IMAGE_BASE_URL", "https://ark.cn-beijing.volces.com/api/plan/v3")
+MODEL = os.getenv("IMAGE_MODEL", "doubao-seedream-5.0-lite")
 
 TMP_DIR = ROOT / "tmp"
 TMP_DIR.mkdir(exist_ok=True)
@@ -39,13 +40,14 @@ TMP_DIR.mkdir(exist_ok=True)
 
 def main() -> None:
     print("=" * 60)
-    print("doubao-seedream-5.0-lite 健康检查")
+    print(f"{MODEL} 健康检查")
     print("=" * 60)
-    print(f"API key: {ARK_KEY[:18]}...")
+    print(f"API key: {IMAGE_API_KEY[:18]}...")
     print(f"base_url: {BASE_URL}")
+    print(f"model: {MODEL}")
     print()
 
-    client = Ark(base_url=BASE_URL, api_key=ARK_KEY)
+    client = Ark(base_url=BASE_URL, api_key=IMAGE_API_KEY)
 
     prompt = (
         "Greek mythology hero portrait, half-body, three-quarter view, "
@@ -60,7 +62,7 @@ def main() -> None:
     t0 = time.time()
     try:
         resp = client.images.generate(
-            model="doubao-seedream-5.0-lite",
+            model=MODEL,
             prompt=prompt,
             size="2K",                  # 设计冻结文档要求 800×1200 — 后续下载后再裁剪
             output_format="png",

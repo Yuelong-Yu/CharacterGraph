@@ -35,8 +35,12 @@ uv run generate_portraits.py
 
 复制 `.env.example` 为 `.env` 并填入：
 
-- `ARK_API_KEY` — 火山方舟 doubao-seedream API key
-- `ANTHROPIC_API_KEY` 或 `OPENAI_API_KEY` — LLM 结构化提取
+- `IMAGE_API_KEY` — 火山方舟 doubao-seedream 图像生成 API key
+- `IMAGE_BASE_URL` — 图像接口地址（默认 `https://ark.cn-beijing.volces.com/api/plan/v3`）
+- `IMAGE_MODEL` — 图像模型名（默认 `doubao-seedream-5.0-lite`）
+- `CODING_API_KEY` — 火山方舟 deepseek-v4-flash LLM 结构化提取 API key
+- `CODING_BASE_URL` — Coding 接口地址（默认 `https://ark.cn-beijing.volces.com/api/coding`）
+- `CODING_MODEL` — LLM 模型名（默认 `deepseek-v4-flash`）
 
 ## 项目状态
 

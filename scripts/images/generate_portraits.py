@@ -34,15 +34,15 @@ from volcenginesdkarkruntime import Ark
 ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
-ARK_KEY = os.getenv("ARK_API_KEY")
-if not ARK_KEY:
-    print("ERROR: ARK_API_KEY 未设置")
+IMAGE_API_KEY = os.getenv("IMAGE_API_KEY")
+if not IMAGE_API_KEY:
+    print("ERROR: IMAGE_API_KEY 未设置")
     sys.exit(1)
 
-BASE_URL = "https://ark.cn-beijing.volces.com/api/plan/v3"
-MODEL = "doubao-seedream-5.0-lite"
+BASE_URL = os.getenv("IMAGE_BASE_URL", "https://ark.cn-beijing.volces.com/api/plan/v3")
+MODEL = os.getenv("IMAGE_MODEL", "doubao-seedream-5.0-lite")
 
-client = Ark(base_url=BASE_URL, api_key=ARK_KEY)
+client = Ark(base_url=BASE_URL, api_key=IMAGE_API_KEY)
 
 
 # ─────────────────────────────────────────────────────────────

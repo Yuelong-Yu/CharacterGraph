@@ -27,6 +27,6 @@ uv run generate_portraits.py --project greek zeus hera --parallel 1
 
 ## 注意
 
-- API key 在仓库根 `.env`(`ARK_API_KEY`)
+- API key 在仓库根 `.env`（`IMAGE_API_KEY`；可选 `IMAGE_BASE_URL` / `IMAGE_MODEL` 覆盖默认值）
 - 图像生成计费;批量前先跑 `health_check.py`,不要无确认重生成已有图
 - 火山方舟返回的图片 URL 有过期时间,必须立即下载落盘

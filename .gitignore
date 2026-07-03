@@ -47,3 +47,5 @@ coverage/
 tmp/
 .playwright-mcp/
 /*.png
+
+GreekmythPoker/

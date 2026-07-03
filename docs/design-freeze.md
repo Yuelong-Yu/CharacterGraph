@@ -93,7 +93,7 @@
 ### 3.1 图像生成
 
 - **工具**：`doubao-seedream-5.0-lite`（火山方舟 Agent Plan）
-- **API key**：用户提供的 key，写入本地 `.env`（加入 `.gitignore`），代码用 `os.getenv("ARK_API_KEY")` 引用
+- **API key**：用户提供的 key，写入本地 `.env`（加入 `.gitignore`），代码用 `os.getenv("IMAGE_API_KEY")` 引用
 - **计费**：包月套餐
 - **候选策略**：**(A) 一次过**，每人 1 张
 - **生成顺序**：**18 → 30 → 100 三批**，18 人完成后停下、跑通整站、用户验收，再扩展

@@ -768,11 +768,6 @@ export function Graph3D({
     };
   }, [tourActive, tourIndex, tourSequence]);
 
-  // 暂停后重置回 0 — 下次恢复时从头开始
-  useEffect(() => {
-    if (!tourActive) setTourIndex(0);
-  }, [tourActive]);
-
   // 当前正在巡游的节点 id
   const tourTargetId = tourActive && tourSequence.length > 0
     ? tourSequence[tourIndex % tourSequence.length].id

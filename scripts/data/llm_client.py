@@ -2,9 +2,9 @@
 LLM 客户端：调火山方舟兼容 Anthropic Messages API 的 deepseek-v4-flash
 
 环境变量（仓库根 .env）：
-  ARK_CODING_API_KEY   — API key
-  ARK_CODING_BASE_URL  — https://ark.cn-beijing.volces.com/api/coding
-  ARK_CODING_MODEL     — deepseek-v4-flash
+  CODING_API_KEY   — API key
+  CODING_BASE_URL  — https://ark.cn-beijing.volces.com/api/coding
+  CODING_MODEL     — deepseek-v4-flash
 
 提供：
   call_json(system, user, max_tokens) → 解析后的 dict（自动去 ```json 围栏）
@@ -25,12 +25,12 @@ from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_excep
 ROOT = Path(__file__).parent.parent.parent
 load_dotenv(ROOT / ".env")
 
-_API_KEY = os.getenv("ARK_CODING_API_KEY")
-_BASE_URL = os.getenv("ARK_CODING_BASE_URL", "https://ark.cn-beijing.volces.com/api/coding")
-_MODEL = os.getenv("ARK_CODING_MODEL", "deepseek-v4-flash")
+_API_KEY = os.getenv("CODING_API_KEY")
+_BASE_URL = os.getenv("CODING_BASE_URL", "https://ark.cn-beijing.volces.com/api/coding")
+_MODEL = os.getenv("CODING_MODEL", "deepseek-v4-flash")
 
 if not _API_KEY:
-    raise RuntimeError("ARK_CODING_API_KEY 未设置（检查仓库根 .env）")
+    raise RuntimeError("CODING_API_KEY 未设置（检查仓库根 .env）")
 
 _client = anthropic.Anthropic(api_key=_API_KEY, base_url=_BASE_URL)
 

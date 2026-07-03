@@ -30,11 +30,11 @@ uv run translate_quotes.py --project greek    # 名言译文回填
 
 cd scripts/images
 uv sync
-uv run health_check.py                          # 单张试水，验 ARK_API_KEY + URL 时效（项目无关）
+uv run health_check.py                          # 单张试水，验 IMAGE_API_KEY + URL 时效（项目无关）
 uv run generate_portraits.py --project greek    # 批量 800×1200 半身 + 128×192 缩略 → projects/greek/images/
 ```
 
-`fetch_wiki.py` honors `WIKI_PROXY` (default `http://127.0.0.1:7897`) for accessing Wikipedia from CN networks. API keys (`ARK_API_KEY`, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`) live in `.env` at repo root — both pipelines read the same file via `python-dotenv`.
+`fetch_wiki.py` honors `WIKI_PROXY` (default `http://127.0.0.1:7897`) for accessing Wikipedia from CN networks. API keys (`IMAGE_API_KEY` for portraits, `CODING_API_KEY` for LLM extraction; plus optional `IMAGE_BASE_URL` / `IMAGE_MODEL` / `CODING_BASE_URL` / `CODING_MODEL` with built-in defaults) live in `.env` at repo root — both pipelines read the same file via `python-dotenv`.
 
 `pnpm dev` / `pnpm build` run `scripts/link-assets.mjs` first (predev/prebuild) to rebuild the `public/p/<slug>` → `projects/<slug>/images` symlinks (gitignored).
 
