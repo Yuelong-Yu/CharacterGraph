@@ -1,0 +1,112 @@
+{
+  "characters": [
+    {
+      "slug": "tang_sanzang",
+      "name_zh": "唐僧",
+      "name_en": "Tang Sanzang",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "取经法师 / 金蝉子转世"
+    },
+    {
+      "slug": "sun_wukong",
+      "name_zh": "孙悟空",
+      "name_en": "Sun Wukong",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "齐天大圣 / 斗战胜佛"
+    },
+    {
+      "slug": "zhu_bajie",
+      "name_zh": "猪八戒",
+      "name_en": "Zhu Bajie",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "天蓬元帅 / 净坛使者"
+    },
+    {
+      "slug": "sha_wujing",
+      "name_zh": "沙悟净",
+      "name_en": "Sha Wujing",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "卷帘大将 / 金身罗汉"
+    },
+    {
+      "slug": "bai_long_ma",
+      "name_zh": "白龙马",
+      "name_en": "White Dragon Horse",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "西海龙王三太子 / 八部天龙"
+    },
+    {
+      "slug": "rulai",
+      "name_zh": "如来佛祖",
+      "name_en": "Gautama Buddha",
+      "category": "buddha",
+      "era_layer": 3,
+      "epithet": "西天极乐世界教主"
+    },
+    {
+      "slug": "guanyin",
+      "name_zh": "观音菩萨",
+      "name_en": "Guanyin",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "大慈大悲救苦救难菩萨"
+    },
+    {
+      "slug": "yudi",
+      "name_zh": "玉皇大帝",
+      "name_en": "Jade Emperor",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "三界主宰 / 昊天金阙至尊"
+    },
+    {
+      "slug": "taishang_laojun",
+      "name_zh": "太上老君",
+      "name_en": "Taishang Laojun",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "三清之一 / 道祖"
+    },
+    {
+      "slug": "niu_mowang",
+      "name_zh": "牛魔王",
+      "name_en": "Bull Demon King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "平天大圣"
+    },
+    {
+      "slug": "baigujing",
+      "name_zh": "白骨精",
+      "name_en": "White Bone Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "白骨夫人"
+    },
+    {
+      "slug": "tang_taizong",
+      "name_zh": "唐太宗",
+      "name_en": "Emperor Taizong of Tang",
+      "category": "mortal",
+      "era_layer": 0,
+      "epithet": "贞观天子 / 派僧取经"
+    }
+  ],
+  "artifacts": [],
+  "en_title_override": {
+    "rulai": "Gautama Buddha",
+    "tang_sanzang": "Tang Sanzang",
+    "taishang_laojun": "Laozi"
+  },
+  "zh_title_override": {
+    "rulai": "如来",
+    "yudi": "玉皇大帝",
+    "taishang_laojun": "太上老君",
+    "tang_taizong": "唐太宗"
+  }
+}

@@ -1,0 +1,349 @@
+[
+  {
+    "schema_version": 1,
+    "id": "bai_long_ma_guanyin",
+    "source": "bai_long_ma",
+    "target": "guanyin",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "观音救下小白龙",
+        "desc": "西海龙王三太子敖烈因纵火烧了殿上明珠犯下死罪，观音菩萨路过救下，点化他在鹰愁涧等候取经人，后化为白龙马驮唐僧西行。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第八回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "bai_long_ma_tang_sanzang",
+    "source": "bai_long_ma",
+    "target": "tang_sanzang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "化身白马为坐骑",
+        "desc": "唐僧行至鹰愁涧，小白龙吞食唐僧的白马。观音点化后，敖烈化为白马成为唐僧坐骑，一路驮唐僧西行至灵山，修成正果后封八部天龙。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baigujing_sun_wukong",
+    "source": "baigujing",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三打白骨精",
+        "desc": "白骨精先后化作美貌女子、老婆婆、老翁，欲食唐僧肉。悟空火眼金睛识破妖怪本相，三棍打死白骨精，但唐僧不识妖怪，念紧箍咒责怪悟空滥杀无辜，将其逐回花果山。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第二十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baigujing_tang_sanzang",
+    "source": "baigujing",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "图谋唐僧肉",
+        "desc": "白骨精听闻吃唐僧肉可长生不老，在白虎岭设局化作一家三口接近唐僧。唐僧肉眼凡胎不识妖怪，险些被骗，幸被悟空识破救下。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第二十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_rulai",
+    "source": "guanyin",
+    "target": "rulai",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "受如来委派寻取经人",
+        "desc": "如来佛祖在孟秋望日大会中宣布三藏真经需东土取经人，观音菩萨主动请缨寻访。如来赐锦襕袈裟、九环锡杖、金紧禁三箍交观音转交取经人，观音一路东行点化取经团队五众。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第八回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_sha_wujing",
+    "source": "guanyin",
+    "target": "sha_wujing",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "点化沙悟净",
+        "desc": "卷帘大将因蟠桃会打破琉璃盏被贬下界，在流沙河为妖。观音路过点化他皈依佛门，赐法名悟净，等候取经人。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第八回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_sun_wukong",
+    "source": "guanyin",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "点化悟空护僧",
+        "desc": "悟空被压五行山下五百年，观音路过告知他将有取经人路过救他。悟空答应保护取经人，观音赐三根救命毫毛。后唐僧揭五行山帖救出悟空，收为徒弟。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第八回、第十四回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_tang_sanzang",
+    "source": "guanyin",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "点化唐僧取经",
+        "desc": "观音菩萨化作老僧至长安化缘，向唐太宗展示锦襕袈裟与九环锡杖，言及西天大乘佛法可度亡者超生。唐僧主动请缨取经，观音点化他一路西行至灵山。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_zhu_bajie",
+    "source": "guanyin",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "点化猪八戒",
+        "desc": "天蓬元帅因调戏嫦娥被贬下凡，错投猪胎。在福陵山云栈洞为妖。观音点化他皈依佛门，赐法名悟能，等候取经人。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第八回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "niu_mowang_sun_wukong",
+    "source": "niu_mowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": ["enmity"],
+    "events": [
+      {
+        "title": "花果山七大圣结拜",
+        "desc": "悟空在花果山称美猴王后，与牛魔王等六大妖王结拜为兄弟，牛魔王为大哥，称平天大圣；悟空为小弟，称齐天大圣。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四回", "translator": null },
+        "era_order": 1
+      },
+      {
+        "title": "火焰山反目",
+        "desc": "取经路上过火焰山，悟空向结拜兄嫂牛魔王、铁扇公主借芭蕉扇灭火。牛魔王因悟空请观音收服其子红孩儿而怀恨，变作八戒骗回扇子，悟空与众神合力大战牛魔王，最终哪吒三太子擒之。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十九至六十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "rulai_sun_wukong",
+    "source": "rulai",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "五行山镇压",
+        "desc": "悟空大闹天宫无人能制，玉帝请西天如来。如来与悟空打赌，若翻出如来手掌便放其走。悟空翻不出五指山，如来翻掌化作五行山将悟空镇压五百年，贴六字真言封印。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "rulai_tang_sanzang",
+    "source": "rulai",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "前世师徒缘",
+        "desc": "唐僧前世为如来二弟子金蝉子，因轻慢佛法被贬转世。取经成功后，如来封唐僧为旃檀功德佛，回归本位。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第一百回", "translator": null },
+        "era_order": 3
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "rulai_yudi",
+    "source": "rulai",
+    "target": "yudi",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "玉帝请如来降妖",
+        "desc": "悟空大闹天宫打到凌霄宝殿外，玉帝急请西天如来佛祖救驾。如来以五行山镇压悟空后，玉帝率众神设安天大会谢如来。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sha_wujing_tang_sanzang",
+    "source": "sha_wujing",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "流沙河收沙僧",
+        "desc": "唐僧与悟空行至流沙河，沙僧为妖拦路。观音派木吒相助，沙僧归依唐僧，赐法名悟净，称沙和尚。一路挑担护卫，修成正果后封金身罗汉。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第二十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sun_wukong_taishang_laojun",
+    "source": "sun_wukong",
+    "target": "taishang_laojun",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "八卦炉炼大圣",
+        "desc": "悟空被擒后，太上老君将其投入八卦炉中，以文武火炼七七四十九日，欲化为丹。悟空躲在巽位仅被熏成火眼金睛，破炉而出，进一步大闹天宫。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sun_wukong_tang_sanzang",
+    "source": "sun_wukong",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "五行山收悟空",
+        "desc": "唐僧行至五行山揭去六字真言帖救出悟空，收为大徒弟。观音赐紧箍咒，悟空戴紧箍后无法违逆唐僧。一路降妖除魔护送至灵山，修成正果后封斗战胜佛。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十四回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sun_wukong_yudi",
+    "source": "sun_wukong",
+    "target": "yudi",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "大闹天宫",
+        "desc": "悟空嫌弼马温官小反下天庭，自封齐天大圣。玉帝招安后又因蟠桃会未邀请而怒，偷吃蟠桃、盗仙酒、偷老君金丹。十万天兵天将无法降制，最终打到凌霄宝殿外。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四至七回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taishang_laojun_yudi",
+    "source": "taishang_laojun",
+    "target": "yudi",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列天庭",
+        "desc": "太上老君为三清之一，居兜率宫炼丹修道；玉皇大帝为三界主宰，居凌霄宝殿。二神同列天庭，共同治理三界。悟空大闹天宫时，老君以金刚琢助二郎神擒悟空，又炼悟空于八卦炉。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六回、第七回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tang_sanzang_tang_taizong",
+    "source": "tang_sanzang",
+    "target": "tang_taizong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "结为御弟西行",
+        "desc": "贞观十三年，唐太宗设水陆大会超度亡魂，遇观音化身的癞和尚点化，遣陈玄奘西行取经。太宗与玄奘在长安灞桥结为异姓兄弟，赐姓唐，号三藏，亲送至城外。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tang_sanzang_zhu_bajie",
+    "source": "tang_sanzang",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "高老庄收八戒",
+        "desc": "唐僧与悟空行至高老庄，八戒强娶高翠兰。悟空变化高翠兰戏弄八戒，激战后收服。八戒归依唐僧，赐法名悟能，称八戒。一路牵马挑担护卫，修成正果后封净坛使者。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十八至十九回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  }
+]

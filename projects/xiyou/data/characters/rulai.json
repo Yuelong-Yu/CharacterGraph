@@ -1,0 +1,105 @@
+{
+  "schema_version": 3,
+  "id": "rulai",
+  "name_zh": "如来佛祖",
+  "name_en": "Gautama Buddha",
+  "aliases": [
+    "释迦牟尼",
+    "悉达多",
+    "佛陀",
+    "世尊",
+    "Tathāgata",
+    "Shakyamuni",
+    "Siddhartha Gautama",
+    "Gotama Buddha"
+  ],
+  "epithet": "西天极乐世界教主",
+  "category": "buddha",
+  "era_layer": 3,
+  "bio": "释迦牟尼佛，本名悉达多·乔达摩，公元前6至5世纪生于今尼泊尔蓝毗尼，为释迦族王子。他舍弃王族生活，出家成为沙门，历经苦行与禅修，在印度菩提伽耶菩提树下证悟涅槃，成为佛陀（觉者）。此后他游历恒河中游地区，在鹿野苑初转法轮，宣说四圣谛、八正道等教法，并建立僧团。其核心教义包括中道、缘起、五蕴、无我等，强调从无明与贪欲中解脱。佛陀一生教化无数，八十岁时在拘尸那迦入大般涅槃。他的教法由弟子结集为经、律、论三藏，后形成上座部、大乘、金刚乘等传统，传遍亚洲。佛陀的称号众多，常自称如来、应供、正遍知等，是佛教创始人，被尊为三界导师、四生慈父。",
+  "events": [
+    {
+      "title": "诞生于蓝毗尼园",
+      "desc": "据佛教传说，摩耶夫人于蓝毗尼园无忧树下从右胁诞下悉达多太子。太子降生即行七步，步步生莲，并宣称‘天上天下，唯我独尊’。阿育王石柱铭文证实了蓝毗尼为佛陀诞生地。",
+      "source": {
+        "work": "Wikipedia: Gautama Buddha",
+        "locus": "Early life",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "出家寻道",
+      "desc": "悉达多太子29岁时，目睹生老病死之苦，决心出家寻求解脱。他夜别妻儿，剃除须发，成为沙门，先后师从阿罗逻迦兰与郁陀迦罗摩子学习禅定，但认为未达究竟，遂自行苦修。",
+      "source": {
+        "work": "Wikipedia: Gautama Buddha",
+        "locus": "Renunciation and ascetic life",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "在菩提伽耶成道",
+      "desc": "历经六年苦行，悉达多放弃极端苦修，于尼连禅河畔菩提树下结跏趺坐，发誓不成正觉不起此座。经四十九日禅观，于凌晨睹明星而悟道，证得无上正等正觉，成为佛陀。",
+      "source": {
+        "work": "Wikipedia: Gautama Buddha",
+        "locus": "Enlightenment",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "初转法轮于鹿野苑",
+      "desc": "成道后，佛陀前往鹿野苑，为曾共修苦行的五比丘宣说中道、四圣谛与八正道，史称‘初转法轮’。五比丘闻法后证阿罗汉果，佛教僧团由此建立。",
+      "source": {
+        "work": "Wikipedia: Gautama Buddha",
+        "locus": "First sermon",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "建立僧团并游化传法",
+      "desc": "佛陀在恒河流域广收弟子，包括舍利弗、目犍连、大迦叶、阿难等。他带领僧团雨季安居，平时游化乞食，针对不同根器开示法义，使佛教教团迅速壮大。",
+      "source": {
+        "work": "Wikipedia: Gautama Buddha",
+        "locus": "Formation of the sangha",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "入大般涅槃于拘尸那迦",
+      "desc": "佛陀80岁时于拘尸那迦娑罗双树间示寂，入无余涅槃。临终前教导弟子‘以戒为师、以法为灯’，并最后度化外道须跋陀罗。遗体火化后舍利分为八份，由诸国建塔供养。",
+      "source": {
+        "work": "Wikipedia: Gautama Buddha",
+        "locus": "Mahāparinibbāṇa",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "宣说四圣谛",
+    "教导八正道",
+    "修习禅定",
+    "调伏外道",
+    "示现神通",
+    "开示缘起法",
+    "度化众生"
+  ],
+  "domains": [
+    "佛教",
+    "觉悟",
+    "慈悲",
+    "智慧",
+    "解脱",
+    "僧团",
+    "教化"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/rulai.webp",
+  "thumb": "/p/xiyou/thumbs/rulai.webp"
+}

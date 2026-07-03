@@ -1,0 +1,113 @@
+{
+  "schema_version": 3,
+  "id": "sha_wujing",
+  "name_zh": "沙悟净",
+  "name_en": "Sha Wujing",
+  "aliases": [
+    "沙僧",
+    "沙和尚",
+    "Monk Sha",
+    "Sand Monk",
+    "Sand Priest",
+    "Sa Oh Jeong",
+    "Sa Gojō",
+    "Sa Ngộ Tịnh",
+    "Sha Heshang"
+  ],
+  "epithet": "卷帘大将 / 金身罗汉",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "沙悟净，又称沙和尚、沙僧，是中国古典名著《西游记》中的人物。他原是天庭的卷帘大将，因在蟠桃会上失手打碎玻璃盏，被玉帝贬下流沙河，每七日受飞剑穿胸之苦。在流沙河为妖时，他以人肉为食，曾吃掉九个取经僧人，并将其头骨串成项链。后遇观音菩萨点化，皈依佛门，以沙为姓，法名悟净，等待取经人。唐僧西行至流沙河时，沙悟净被收为第三弟子。取经途中，他忠厚老实，常调和师徒矛盾，虽武艺不及孙悟空和猪八戒，但忠心耿耿，必要时亦能出力。最终到达西天，被如来佛祖封为金身罗汉。沙悟净的形象源自唐代玄奘取经故事中的深沙神，经后世演化而成，其武器为降妖宝杖，由月宫桂木制成，可随心变化。",
+  "events": [
+    {
+      "title": "被贬流沙河",
+      "desc": "沙悟净原为天庭卷帘大将，因在蟠桃会上失手打碎玻璃盏（一说为玉杯），被玉帝责罚，打了八百下后贬下凡间，在流沙河为妖，每七日遭飞剑穿胸之苦。",
+      "source": {
+        "work": "西游记",
+        "locus": "第八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "观音点化皈依",
+      "desc": "观音菩萨携木叉前往东土寻找取经人，途经流沙河时收服沙悟净，劝其皈依佛门，赐法名沙悟净，命他等候取经人。沙悟净从此不再吃人，并以骷髅项链为筏渡河。",
+      "source": {
+        "work": "西游记",
+        "locus": "第八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "收为唐僧弟子",
+      "desc": "唐僧师徒行至流沙河，沙悟净与孙悟空、猪八戒大战，后经观音派木叉调解，沙悟净拜唐僧为师，成为第三弟子，法号沙和尚。",
+      "source": {
+        "work": "西游记",
+        "locus": "第二十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "过通天河",
+      "desc": "沙悟净以善水著称，曾协助师徒渡过通天河。在过河时，他用葫芦变作舟船，或背唐僧涉水。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "调和师徒矛盾",
+      "desc": "取经路上，沙悟净多次在孙悟空与唐僧、猪八戒之间调和矛盾，维护团队和谐。例如在“三打白骨精”后唐僧驱逐悟空，沙悟净劝解无效，但仍忠心跟随。",
+      "source": {
+        "work": "西游记",
+        "locus": "第二十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被妖怪擒获",
+      "desc": "沙悟净曾多次被妖怪擒获，如被黄袍怪、红孩儿等所捉，但最终都被师兄救出，其角色多为看守行李或辅助作战。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十回等",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "封金身罗汉",
+      "desc": "取经成功后，如来佛祖论功行赏，因沙悟净诚敬皈依、保护圣僧，被封为金身罗汉（即金身罗汉菩萨）。",
+      "source": {
+        "work": "西游记",
+        "locus": "第一百回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "降妖宝杖（Monster-subduing Precious Rod）"
+  ],
+  "skills": [
+    "水性极佳",
+    "十八般变化",
+    "武艺",
+    "使用葫芦渡河",
+    "降妖宝杖变化"
+  ],
+  "domains": [
+    "忠诚",
+    "调和",
+    "护卫",
+    "水性"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/sha_wujing.webp",
+  "thumb": "/p/xiyou/thumbs/sha_wujing.webp"
+}
