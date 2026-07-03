@@ -28,6 +28,7 @@ from pathlib import Path
 
 import requests
 from bs4 import BeautifulSoup
+from scrapling.fetchers import Fetcher
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -37,7 +38,8 @@ USER_AGENT = "CharacterGraph/0.1 (research)"
 PROXY = os.getenv("WIKI_PROXY", "http://127.0.0.1:7897")
 PROXIES = {"http": PROXY, "https": PROXY}
 
-# 百度百科:国内站,走直连(忽略翻墙代理),作为中文维基缺失时的回退源
+# 百度百科:走 Scrapling Fetcher(httpx + stealthy_headers)反反爬,作为中文维基缺失时的回退源
+# Scrapling 自带浏览器指纹伪装与自适应 header,规避 requests 直连触发的 403/429 限流
 BAIKE_UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
@@ -104,30 +106,40 @@ def _clean_baike_text(text: str) -> str:
     retry=retry_if_exception_type((requests.RequestException,)),
 )
 def fetch_baike(slug: str, title: str) -> dict | None:
-    """抓百度百科词条概述(lemma-summary)作为中文源。直连(无代理)。
-    403/429 视为可重试(反爬限流),退避后再试。"""
+    """抓百度百科词条概述(lemma-summary)作为中文源。
+
+    走 Scrapling Fetcher(httpx + stealthy_headers + 浏览器指纹伪装)反反爬,
+    规避 requests 直连触发的 403/429 限流。403/429/503 仍视为可重试。
+    """
     url = "https://baike.baidu.com/item/" + requests.utils.quote(title)
-    headers = {
-        "User-Agent": BAIKE_UA,
-        "Referer": "https://baike.baidu.com/",
-        "Accept-Language": "zh-CN,zh;q=0.9",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    }
-    r = _baike_session.get(url, headers=headers, timeout=20)
-    if r.status_code in (403, 429, 503):
+    try:
+        page = Fetcher.get(
+            url,
+            stealthy_headers=True,
+            timeout=20,
+            follow_redirects=True,
+        )
+    except Exception as e:
+        # Scrapling 抛各种异常(RequestException 等),交给 tenacity 重试
+        raise requests.RequestException(f"scrapling fetch failed for {title}: {e}")
+    if page.status in (403, 429, 503):
         time.sleep(2.0)
-        raise requests.HTTPError(f"baike {r.status_code} (反爬限流) for {title}")
-    if r.status_code != 200:
+        raise requests.HTTPError(f"baike {page.status} (反爬限流) for {title}")
+    if page.status != 200:
         return None
-    soup = BeautifulSoup(r.text, "lxml")
-    summ = soup.select_one(
+    # lemma-summary 选择器:新版 baike 用混淆类名 lemmaSummary_XXX J-summary
+    summ_matches = page.css(
         "div.lemma-summary, div[class*=lemmaSummary], div[class*=lemma-summary]"
     )
-    extract = _clean_baike_text(summ.get_text(" ", strip=True)) if summ else ""
+    extract = _clean_baike_text(summ_matches[0].get_all_text(strip=True)) if summ_matches else ""
     if not extract:
-        meta = soup.select_one("meta[name=description]")
-        extract = _clean_baike_text(meta["content"]) if meta and meta.get("content") else ""
-    if not extract:
+        metas = page.css("meta[name=description]")
+        if metas:
+            content = metas[0].attrib.get("content", "")
+            extract = _clean_baike_text(content) if content else ""
+    # 检测 baike 验证码/空壳页:被反爬重定向到 captchaview 时,meta description 是
+    # "百度百科是一部内容开放、自由的网络百科全书..." 这种通用首页文本,不是真实词条
+    if not extract or "百度百科是一部内容开放" in extract or len(extract) < 100:
         return None
     return {
         "slug": slug,
