@@ -211,6 +211,14 @@ const LAYER_SPACING = 80;
 // 邻居圆环半径基数
 const FOCUS_RADIUS_BASE = 55;
 const FOCUS_RADIUS_PER_NEIGHBOR = 2.5;
+const NORMAL_FIT_PADDING = 110;
+const NORMAL_CHARGE_STRENGTH = -95;
+const NORMAL_LINK_DISTANCE = 82;
+const ARTIFACT_LINK_DISTANCE = 62;
+
+function tierYForNode(node: GraphNode): number {
+  return (3 - (node.kind === "character" ? node.entity.era_layer : node.eraLayer)) * LAYER_SPACING;
+}
 
 export function Graph3D({
   dataset,
@@ -233,6 +241,8 @@ export function Graph3D({
   const fgRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [size, setSize] = useState<{ w: number; h: number }>({ w: 0, h: 0 });
+  const [graphReady, setGraphReady] = useState(false);
+  const [initialFitReady, setInitialFitReady] = useState(false);
 
   // 容器尺寸观察
   useEffect(() => {
@@ -251,6 +261,20 @@ export function Graph3D({
       window.removeEventListener("resize", update);
     };
   }, []);
+
+  useEffect(() => {
+    if (graphReady) return;
+    let raf = 0;
+    const check = () => {
+      if (fgRef.current) {
+        setGraphReady(true);
+        return;
+      }
+      raf = requestAnimationFrame(check);
+    };
+    raf = requestAnimationFrame(check);
+    return () => cancelAnimationFrame(raf);
+  }, [graphReady, size.w, size.h]);
 
   // 启动后强制把镜头拉远到能看到所有节点（占位 — fitCameraToAllNodes 定义在 nodes 之后）
   const didInitialFitRef = useRef(false);
@@ -281,6 +305,10 @@ export function Graph3D({
     ],
     [dataset.characters, dataset.artifacts, artifactEraMap],
   );
+  const artifactIdSet = useMemo(
+    () => new Set(dataset.artifacts.map((a) => a.id)),
+    [dataset.artifacts],
+  );
 
   // ── 边数据 ──
   const links = useMemo<GraphLink[]>(() => {
@@ -291,6 +319,21 @@ export function Graph3D({
   }, [dataset.characters, dataset.artifacts, dataset.relations]);
 
   // ── 启动 zoom-to-fit 已移除：加载即进入巡游模式，由巡游接管相机 ──
+
+  // react-force-graph 的默认力参数更适合小圆点；这里节点包含头像、halo 和中文标签，
+  // 需要更大的节点间距，否则全图会在 fit 前先挤成一团。
+  useEffect(() => {
+    if (!graphReady || !fgRef.current) return;
+    fgRef.current.d3Force("charge")?.strength(NORMAL_CHARGE_STRENGTH);
+    fgRef.current.d3Force("link")?.distance((raw: GraphLink) => {
+      const sourceId = typeof raw.source === "object" ? raw.source.id : raw.source;
+      const targetId = typeof raw.target === "object" ? raw.target.id : raw.target;
+      const sourceIsArtifact = artifactIdSet.has(sourceId);
+      const targetIsArtifact = artifactIdSet.has(targetId);
+      return sourceIsArtifact || targetIsArtifact ? ARTIFACT_LINK_DISTANCE : NORMAL_LINK_DISTANCE;
+    });
+    fgRef.current.d3ReheatSimulation();
+  }, [graphReady, links, artifactIdSet]);
 
   // ── 聚焦时计算邻居集合 ──
   const neighborSet = useMemo(() => {
@@ -317,9 +360,10 @@ export function Graph3D({
 
   // ── 应用布局：聚焦模式 > 过滤平铺态 > 普通 layoutMode ──
   useEffect(() => {
-    if (!fgRef.current) return;
+    if (!graphReady || !fgRef.current) return;
 
     if (focusedId) {
+      setInitialFitReady(false);
       // 聚焦模式：聚焦节点钉在原点，邻居圆环排布
       const focused = nodes.find((n) => n.id === focusedId);
       if (!focused) return;
@@ -358,6 +402,7 @@ export function Graph3D({
         );
       }, 50);
     } else if (matchedIds) {
+      setInitialFitReady(false);
       // 过滤平铺态:把命中集按连通分量分组,每组中心+圆环;多个子图 bin-pack
       // ── 1) 收集命中节点 + 仅"两端都命中"的边
       const hitNodes = nodes.filter((n) => matchedIds.has(n.id));
@@ -546,20 +591,121 @@ export function Graph3D({
         );
       }, 100);
     } else {
+      setInitialFitReady(false);
       // 普通模式：根据 layoutMode 重置锁定
+      const isolatedNodes: GraphNode[] = [];
       nodes.forEach((n) => {
+        const isIsolated = (degreeMap.get(n.id) ?? 0) === 0;
+        if (isIsolated) {
+          isolatedNodes.push(n);
+          return;
+        }
         n.fx = undefined;
-        n.fy = layoutMode === "tier" ? (3 - (n.kind === "character" ? n.entity.era_layer : n.eraLayer)) * LAYER_SPACING : undefined;
+        n.fy = layoutMode === "tier" ? tierYForNode(n) : undefined;
         n.fz = undefined;
+      });
+
+      // 无连接节点在力学布局中只受斥力影响，容易被推成离群点并拖远全图 fit。
+      // 固定到主图右侧的浅弧线上，仍然可见，但不让它决定整体缩放。
+      isolatedNodes.forEach((n, i) => {
+        const angle = isolatedNodes.length === 1
+          ? 0
+          : (i / isolatedNodes.length) * Math.PI * 2;
+        const radius = 105 + Math.floor(i / 8) * 38;
+        n.fx = 170 + Math.cos(angle) * radius;
+        n.fy = layoutMode === "tier" ? tierYForNode(n) : Math.sin(angle) * radius * 0.35;
+        n.fz = Math.sin(angle) * radius;
+        n.x = n.fx;
+        n.y = n.fy;
+        n.z = n.fz;
       });
       fgRef.current.d3ReheatSimulation();
 
-      // 相机回到全局视图
-      setTimeout(() => {
-        fgRef.current?.zoomToFit(900, 60);
-      }, 200);
+      // 相机回到全局视图。不用 zoomToFit，避免 force tick 尚未稳定或离群点导致缩放过远。
+      const timer = setTimeout(() => {
+        if (!fgRef.current) return;
+        const fitNodes = nodes.filter((n) => {
+          if (n.kind === "character" && !enabledCategories.has(n.entity.category)) return false;
+          if (n.kind === "artifact" && !enabledArtifactCategories.has(n.entity.category)) return false;
+          if ((degreeMap.get(n.id) ?? 0) < minDegree) return false;
+          return true;
+        });
+        if (fitNodes.length === 0) return;
+
+        const connectedFitNodes = fitNodes.filter((n) => (degreeMap.get(n.id) ?? 0) > 0);
+        const isolatedFitNodes = fitNodes.filter((n) => (degreeMap.get(n.id) ?? 0) === 0);
+        if (connectedFitNodes.length > 0 && isolatedFitNodes.length > 0) {
+          const connectedXs = connectedFitNodes.map((n) => n.x ?? n.fx ?? 0);
+          const connectedYs = connectedFitNodes.map((n) => n.y ?? n.fy ?? 0);
+          const connectedZs = connectedFitNodes.map((n) => n.z ?? n.fz ?? 0);
+          const minConnectedX = Math.min(...connectedXs);
+          const maxConnectedX = Math.max(...connectedXs);
+          const minConnectedY = Math.min(...connectedYs);
+          const maxConnectedY = Math.max(...connectedYs);
+          const centerX = (minConnectedX + maxConnectedX) / 2;
+          const centerY = (minConnectedY + maxConnectedY) / 2;
+          const centerZ = (Math.min(...connectedZs) + Math.max(...connectedZs)) / 2;
+          const insetX = Math.min(120, Math.max(55, (maxConnectedX - minConnectedX) * 0.2));
+          isolatedFitNodes.forEach((n, i) => {
+            const row = i % 5;
+            const col = Math.floor(i / 5);
+            n.fx = centerX + insetX + col * 42;
+            n.fy = centerY + (row - (Math.min(5, isolatedFitNodes.length) - 1) / 2) * 52;
+            n.fz = centerZ;
+            n.x = n.fx;
+            n.y = n.fy;
+            n.z = n.fz;
+          });
+          fgRef.current.d3ReheatSimulation();
+        }
+
+        const xs = fitNodes.map((n) => n.x ?? n.fx ?? 0);
+        const ys = fitNodes.map((n) => n.y ?? n.fy ?? 0);
+        const zs = fitNodes.map((n) => n.z ?? n.fz ?? 0);
+        const minX = Math.min(...xs);
+        const maxX = Math.max(...xs);
+        const minY = Math.min(...ys);
+        const maxY = Math.max(...ys);
+        const minZ = Math.min(...zs);
+        const maxZ = Math.max(...zs);
+        const cx = (minX + maxX) / 2;
+        const cy = (minY + maxY) / 2;
+        const cz = (minZ + maxZ) / 2;
+        const worldW = Math.max(120, maxX - minX + NORMAL_FIT_PADDING);
+        const worldH = Math.max(120, maxY - minY + NORMAL_FIT_PADDING);
+        const worldD = Math.max(0, maxZ - minZ);
+        const aspect = size.w / Math.max(1, size.h);
+        const fov = (50 * Math.PI) / 180;
+        const halfTan = Math.tan(fov / 2);
+        const distForH = (worldH / 2) / halfTan;
+        const distForW = (worldW / 2) / (halfTan * aspect);
+        const dist = Math.max(170, distForH, distForW) + worldD * 0.12;
+        fgRef.current.cameraPosition(
+          { x: cx, y: cy, z: cz + dist },
+          { x: cx, y: cy, z: cz },
+          900,
+        );
+        setInitialFitReady(true);
+      }, 650);
+      return () => {
+        clearTimeout(timer);
+      };
     }
-  }, [focusedId, neighborSet, nodes, layoutMode, matchedIds, dataset.relations, size.w, size.h]);
+  }, [
+    focusedId,
+    neighborSet,
+    nodes,
+    layoutMode,
+    matchedIds,
+    dataset.relations,
+    size.w,
+    size.h,
+    degreeMap,
+    enabledCategories,
+    enabledArtifactCategories,
+    minDegree,
+    graphReady,
+  ]);
 
   // ── focusNodeId（外部要求把镜头对准某节点，不是聚焦模式）──
   useEffect(() => {
@@ -579,7 +725,7 @@ export function Graph3D({
   // ─────────────────────────────────────────────────────────
   // 自动旋转 + 轮播巡游
   // ─────────────────────────────────────────────────────────
-  // 鼠标交互暂停（mousedown 即暂停，mouseleave 后 2s 恢复）
+  // 鼠标实际交互暂停；停止操作后自动恢复，避免光标停在画布上阻止初始巡游。
   const [tourPaused, setTourPaused] = useState(false);
   const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -597,21 +743,25 @@ export function Graph3D({
       if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
       resumeTimerRef.current = setTimeout(() => setTourPaused(false), 2000);
     };
-    el.addEventListener("mousedown", pause);
-    el.addEventListener("wheel", pause, { passive: true });
+    const pauseThenResume = () => {
+      pause();
+      scheduleResume();
+    };
+    el.addEventListener("mousedown", pauseThenResume);
+    el.addEventListener("wheel", pauseThenResume, { passive: true });
+    el.addEventListener("touchstart", pauseThenResume, { passive: true });
     el.addEventListener("mouseleave", scheduleResume);
-    el.addEventListener("mouseenter", pause);
     return () => {
-      el.removeEventListener("mousedown", pause);
-      el.removeEventListener("wheel", pause);
+      el.removeEventListener("mousedown", pauseThenResume);
+      el.removeEventListener("wheel", pauseThenResume);
+      el.removeEventListener("touchstart", pauseThenResume);
       el.removeEventListener("mouseleave", scheduleResume);
-      el.removeEventListener("mouseenter", pause);
       if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
     };
   }, []);
 
   // 过滤平铺态下也暂停巡游(避免镜头旋转脱离俯视)
-  const tourActive = autoTour && !tourPaused && !focusedId && !matchedIds;
+  const tourActive = autoTour && initialFitReady && !tourPaused && !focusedId && !matchedIds;
 
   // 邻接表：用于 DFS 巡游
   const adjacency = useMemo(() => {
@@ -1112,8 +1262,9 @@ export function Graph3D({
           onBackgroundClick={() => onBackgroundClick?.()}
           showNavInfo={false}
           controlType="orbit"
-          warmupTicks={50}
-          cooldownTicks={120}
+          d3VelocityDecay={0.45}
+          warmupTicks={120}
+          cooldownTicks={220}
         />
       )}
     </div>
