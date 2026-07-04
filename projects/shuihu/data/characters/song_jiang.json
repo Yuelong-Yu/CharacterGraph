@@ -1,0 +1,121 @@
+{
+  "schema_version": 3,
+  "id": "song_jiang",
+  "name_zh": "宋江",
+  "name_en": "Song Jiang",
+  "aliases": [
+    "及时雨",
+    "呼保义",
+    "天魁星",
+    "孝义黑三郎",
+    "公明",
+    "Timely Rain",
+    "Protector of Justice",
+    "Filial and Righteous Dark Third Son",
+    "Dark Song Jiang",
+    "Song Jiang"
+  ],
+  "epithet": "及时雨·呼保义·天魁星",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "宋江，字公明，北宋末年山东郓城县押司。他仗义疏财、扶危济困，绰号“及时雨”、“呼保义”，在江湖上声名远扬。历史原型是1120年代在淮南、河北一带起义的流寇首领，最终被海州知州张叔夜招安，并可能参与了征讨方腊的军事行动。在古典小说《水浒传》中，宋江因私放劫取生辰纲的好友晁盖等人，被阎婆惜抓住把柄，怒而杀之，从此亡命江湖。他先后投奔柴进、花荣，在清风寨遭刘高之妻诬陷，被押送青州途中获救。后因父亲假病逝回家奔丧而被捕，刺配江州。在浔阳楼醉题反诗，被判死刑，梁山好汉劫法场将他救出，遂上梁山落草。晁盖死后，宋江被推为梁山首领，聚齐一百零八将，两胜童贯、三胜高俅，最终接受朝廷招安。他率领梁山好汉先后征辽、平田虎、王庆、方腊，功成后遭奸臣陷害，饮毒酒身亡，葬于蓼儿洼。",
+  "events": [
+    {
+      "title": "私放晁盖",
+      "desc": "宋江得知官府要抓捕劫取生辰纲的晁盖等人，立即骑快马赶往东溪村报信，使晁盖七人得以逃脱，投奔梁山泊。此举奠定了宋江与梁山的情谊。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "怒杀阎婆惜",
+      "desc": "宋江的妾室阎婆惜与张文远私通，发现晁盖写给宋江的感谢信后，以此要挟宋江。宋江在争执中失手杀死阎婆惜，被迫逃亡。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "清风寨遭陷害",
+      "desc": "宋江在清风寨观灯时被刘高之妻诬陷，遭逮捕。花荣救援未果，二人均被押送青州。途中被清风山好汉燕顺等劫下，刘高被杀。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "江州题反诗",
+      "desc": "宋江发配江州后，一日独自在浔阳楼饮酒，感怀身世，醉后在墙壁上题写“心在山东身在吴，飘蓬江海漫嗟吁。他时若遂凌云志，敢笑黄巢不丈夫！”等诗句，被黄文炳告发，定为谋反。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "梁山劫法场",
+      "desc": "宋江与戴宗被判处死刑，梁山好汉得知后，由晁盖率领众兄弟大闹江州法场，救出宋江和戴宗，随后宋江随同上梁山。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "聚义梁山泊",
+      "desc": "宋江上梁山后成为副首领，晁盖战死后被推举为寨主。他竖起“替天行道”大旗，广纳豪杰，最终使一百零八位好汉齐聚梁山，排定座次。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "接受招安",
+      "desc": "宋江为梁山兄弟前途考虑，借助李师师等关系走通朝廷路线，最终接受宋徽宗招安，梁山好汉正式成为官军。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "征讨方腊",
+      "desc": "招安后宋江率梁山人马随童贯大军南征方腊，虽最终平定叛乱，但梁山好汉死伤惨重，元气大伤。历史记载宋江可能参与了征方腊的军事行动。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "历史起义与投降",
+      "desc": "据《宋史》记载，宋江于宣和三年在淮南起义，转战京东、河北等地，攻掠十余州。海州知州张叔夜设伏焚其舟船，宋江被迫投降。另有记载称宋江曾随军征讨方腊。",
+      "source": {
+        "work": "《宋史》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/song_jiang.webp",
+  "thumb": "/p/shuihu/thumbs/song_jiang.webp"
+}

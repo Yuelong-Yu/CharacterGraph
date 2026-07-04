@@ -1,0 +1,135 @@
+{
+  "schema_version": 3,
+  "id": "wu_song",
+  "name_zh": "武松",
+  "name_en": "Wu Song",
+  "aliases": [
+    "武松",
+    "武二郎",
+    "行者",
+    "天伤星",
+    "Wu Song"
+  ],
+  "epithet": "行者·武二郎·天伤星",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "武松，古典名著《水浒传》中的重要人物，绰号“行者”，排行第二，又称“武二郎”。原籍清河县，因在景阳冈上空手打死一只吊睛白额虎而闻名。后至阳谷县，因兄长武大郎被害，怒杀奸夫西门庆与潘金莲，为兄报仇。被发配孟州后，醉打蒋门神，替施恩夺回快活林，却遭张都监陷害，血溅鸳鸯楼，杀死仇家。为避官府追捕，扮作头陀，与鲁智深、杨志等聚义二龙山，后随三山聚义上梁山。梁山大聚义时，排第十四位，上应天伤星，担任步军头领。征讨方腊时被包道乙飞剑斩断左臂，战后受封清忠祖师，最终在杭州六和寺病逝，享年八十。武松以勇武、刚烈、重情义著称，其形象亦出现在《金瓶梅》等衍生作品中。",
+  "events": [
+    {
+      "title": "景阳冈打虎",
+      "desc": "武松在景阳冈前饮酒十八碗，不顾店家劝阻独自过冈。遇猛虎后赤手空拳将其打死，成为当地英雄，被阳谷知县任命为都头。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二十三回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "杀嫂报仇",
+      "desc": "武松公差归来发现兄长武大郎被害，查明奸夫西门庆与潘金莲勾结，当众杀死二人，为兄雪冤，随后自行投案。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二十六回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "醉打蒋门神",
+      "desc": "武松发配孟州后，为报答施恩厚待，酒后至快活林痛打恶霸蒋门神，助施恩重夺地盘。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二十九回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "血溅鸳鸯楼",
+      "desc": "遭张都监、蒋门神等人设计陷害，武松大闹鸳鸯楼，杀死张都监、蒋门神等十五人，留下“杀人者，打虎武松也”字样后逃亡。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十一回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "二龙山聚义",
+      "desc": "武松扮作头陀后，经张青、孙二娘介绍，前往二龙山与鲁智深、杨志等会合，共同占据山寨。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十二回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "三山聚义后，武松随众上梁山。大聚义时位列天罡第十四星天伤星，任步军头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "征方腊断臂",
+      "desc": "在征讨方腊的战役中，武松与包道乙交战，被其飞剑斩断左臂，昏厥后被救，成为残废。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第一百一十七回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "六和寺圆寂",
+      "desc": "征方腊后，武松不愿回朝受封，在杭州六和寺出家，最终病逝，享年八十。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第一百一十九回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "你且休说，我只道是老虎，却原来是只野猪！",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二十三回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "text": "杀人者，打虎武松也。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十一回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "weapons": [
+    "雪花镔铁戒刀"
+  ],
+  "skills": [
+    "打虎",
+    "醉拳",
+    "步战格斗"
+  ],
+  "domains": [
+    "步军",
+    "复仇",
+    "侠义"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/wu_song.webp",
+  "thumb": "/p/shuihu/thumbs/wu_song.webp"
+}

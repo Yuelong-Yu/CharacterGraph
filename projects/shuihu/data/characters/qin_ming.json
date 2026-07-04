@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "id": "qin_ming",
+  "name_zh": "秦明",
+  "name_en": "Qin Ming",
+  "aliases": [
+    "秦明",
+    "霹雳火",
+    "天猛星"
+  ],
+  "epithet": "霹雳火·天猛星·马军五虎",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "秦明，梁山一百零八将之一，排名第七位，上应天猛星，为马军五虎将之一。原为青州指挥司统制，因性如烈火，人称“霹雳火”。使一条狼牙棒，有万夫不当之勇。宋江为逼其上山，设计使其全家被官府所杀，秦明无奈归顺梁山。后随宋江征讨方腊，在杭州之战中与方腊之侄方杰交战，不敌被刺死。秦明性格暴躁，作战勇猛，是梁山前期的重要战将。",
+  "events": [
+    {
+      "title": "青州统制归顺梁山",
+      "desc": "秦明原为青州指挥司统制，宋江为赚其上山，假扮秦明攻打青州，致使慕容知府杀害秦明一家。秦明走投无路，只得投降梁山，后娶花荣之妹为妻。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山泊大聚义排座次",
+      "desc": "宋江上山后，秦明位列梁山第七把交椅，为马军五虎将之一，上应天猛星，掌管梁山军务，多次随宋江出征。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊战死于杭州",
+      "desc": "梁山受招安后，秦明随宋江征讨方腊。在杭州北关门之战中，与方杰大战三十余合，因杜微飞刀偷袭分心，被方杰一戟刺死。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第九十七回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "狼牙棒"
+  ],
+  "skills": [
+    "勇猛冲锋",
+    "狼牙棒格斗"
+  ],
+  "domains": [
+    "战争",
+    "武力"
+  ],
+  "mounts": [
+    "黄骠马"
+  ],
+  "portrait": "/p/shuihu/portraits/qin_ming.webp",
+  "thumb": "/p/shuihu/thumbs/qin_ming.webp"
+}

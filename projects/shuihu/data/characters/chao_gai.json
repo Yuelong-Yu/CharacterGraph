@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "chao_gai",
+  "name_zh": "晁盖",
+  "name_en": "Chao Gai",
+  "aliases": [
+    "晁盖",
+    "托塔天王",
+    "晁保正",
+    "晁天王",
+    "Pagoda-Shifting Heavenly King",
+    "Heavenly King Chao"
+  ],
+  "epithet": "托塔天王·梁山前主",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "晁盖是古典小说《水浒传》中的人物，山东郓城县东溪村保正，本乡财主。因其力能托举青石宝塔过溪，震慑邪祟，人称“托塔天王”。晁盖广交江湖豪杰，与当地都头朱仝、雷横交好。刘唐得知权臣蔡京的生辰纲将途经郓城，前来邀晁盖一同劫取。晁盖与吴用、公孙胜、阮氏三雄等七人合谋，设计用蒙汗药麻倒押送官兵，成功劫走生辰纲。事发后，宋江暗中报信，朱仝、雷横有意放行，晁盖等人得以逃脱，投奔梁山泊。原寨主王伦忌惮晁盖等人的才能，欲以礼物打发他们离开。吴用激使林冲火并王伦，众人推举晁盖为梁山之主。晁盖任寨主期间，以“替天行道”为旗帜，但多委派宋江领兵征战，自己留守山寨。宋江在江州遇险时，晁盖亲率好汉劫法场救出宋江。后因曾头市夺马、辱骂梁山，晁盖亲自率军征讨，在战斗中遭史文恭毒箭射中额头，中毒身亡。临终遗言：“若哪个捉得射死我的，便叫他做梁山泊主。”晁盖虽未列入一百单八将，但作为梁山早期领袖，其精神始终被后人祭奠。",
+  "events": [
+    {
+      "title": "智取生辰纲",
+      "desc": "刘唐探知蔡京生辰纲途经郓城，邀晁盖共谋。晁盖联合吴用、公孙胜、阮氏三雄等七人，乔装成贩枣客商，利用白胜的药酒迷倒押运官兵，劫走价值十万贯的金珠宝贝。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "宋江报信逃亡",
+      "desc": "生辰纲案发，济州府缉捕何涛查得晁盖为首犯。宋江冒死飞马报信，郓城都头朱仝、雷横奉命抓捕时故意放水，晁盖与六人得以逃脱，投奔梁山泊。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "火并王伦坐梁山",
+      "desc": "晁盖等上梁山后，寨主王伦嫉贤妒能，欲以金帛打发他们离开。吴用智激林冲，林冲当众杀死王伦，众头领共推晁盖为梁山之主，梁山事业由此壮大。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "劫法场救宋江",
+      "desc": "宋江在浔阳楼题反诗被判死刑，晁盖闻讯率梁山好汉下山，在江州法场与李逵等里应外合，救出宋江和戴宗，随后大败官军，宋江被迫上梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "曾头市中箭身亡",
+      "desc": "曾头市曾家五虎抢走段景住欲献给晁盖的宝马，并辱骂梁山。晁盖不顾宋江劝阻亲征，在激战中被曾头市教师史文恭毒箭射中额头，回营后毒发身亡，临终指定擒杀史文恭者为梁山之主。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Whoever captures Shi Wengong and avenges me will be the next chief of Liangshan.",
+      "source": {
+        "work": "Water Margin",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/chao_gai.webp",
+  "thumb": "/p/shuihu/thumbs/chao_gai.webp"
+}

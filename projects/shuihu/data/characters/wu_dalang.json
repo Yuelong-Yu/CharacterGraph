@@ -1,0 +1,136 @@
+{
+  "schema_version": 3,
+  "id": "wu_dalang",
+  "name_zh": "武大郎",
+  "name_en": "Wu Dalang",
+  "aliases": [
+    "武大郎",
+    "三寸丁谷树皮",
+    "炊饼郎",
+    "Wu the Elder",
+    "Three-inch nail"
+  ],
+  "epithet": "三寸丁谷树皮·炊饼郎",
+  "category": "shijing",
+  "era_layer": 0,
+  "bio": "武大郎是《水浒传》及《金瓶梅》中的虚构人物，河北清河县人，武松的兄长。他自幼父母双亡，含辛茹苦将弟弟武松抚养成人。因身材矮小、容貌丑陋，绰号“三寸丁谷树皮”。他以卖炊饼为生，性格懦弱胆小，常受市井无赖欺凌。后娶潘金莲为妻，因外貌不配，邻里喻为“一朵鲜花插在牛粪上”。为避闲言，夫妻迁居阳谷县。武松打虎后兄弟重逢，潘金莲垂涎武松英俊，勾引未遂。武松出差期间，潘金莲与西门庆通奸，武大郎捉奸被西门庆踢伤。潘金莲与西门庆合谋，在药中下毒并闷死武大郎，随后火化尸体并贿赂邻居与仵作。武松归来查明真相，状告县令被驳回，后亲手杀死潘金莲为兄报仇。武大郎是封建社会最本分、最底层的劳动者形象，代表老实厚道的小人物，其故事在冀东南、鲁西北地区广为流传。",
+  "events": [
+    {
+      "title": "抚养弟弟武松",
+      "desc": "武大郎与武松父母早亡，武大郎作为兄长肩负起抚养弟弟的责任，含辛茹苦将武松拉扯长大。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "娶潘金莲为妻",
+      "desc": "武大郎娶潘金莲为妻，二人初期关系尚可，但因武大郎相貌丑陋、身材矮小，邻居常称其婚姻为“一朵鲜花插在牛粪上”。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "迁居阳谷县卖炊饼",
+      "desc": "为避开邻里闲言，武大郎与潘金莲迁居阳谷县。武大郎每日沿街叫卖炊饼（烧饼），潘金莲在家操持家务。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "兄弟阳谷重逢",
+      "desc": "武松景阳冈打虎后被阳谷知县任命为都头，恰巧与武大郎在阳谷县重逢。兄弟二人同居一处，关系亲密。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "潘金莲勾引武松未遂",
+      "desc": "潘金莲见武松英俊健壮，心生爱慕，趁武大郎外出时设酒菜勾引武松。武松严词拒绝并怒斥嫂嫂，随后搬离兄长家。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "武松出差，潘金莲与西门庆通奸",
+      "desc": "知县派武松押送财物赴东京，历时两月。期间潘金莲在王婆撮合下与西门庆勾搭成奸，二人频繁偷情。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "武大郎捉奸被踢伤",
+      "desc": "武大郎得知奸情后前往王婆家捉奸，西门庆仓促中踢中武大郎心窝，致其重伤卧床不起。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "潘金莲与西门庆合谋毒杀武大郎",
+      "desc": "潘金莲与西门庆恐武大郎伤愈后告知武松，遂在王婆策划下，由潘金莲在药中下毒，武大郎饮后发觉中毒，潘金莲用枕头将其闷死。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "火化尸体并贿赂掩盖",
+      "desc": "西门庆买通邻居何九叔和火化工人，将武大郎尸体秘密火化，对外谎称病死，企图掩盖谋杀真相。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "武松调查并状告被驳回",
+      "desc": "武松从东京返回，见兄长暴毙，经查访发现疑点，收集证据后到县衙告状。但知县已受西门庆贿赂，以证据不足为由驳回诉状。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "武松逼问并杀死潘金莲",
+      "desc": "武松愤而自行复仇，邀请邻居作证，在灵前逼问潘金莲与王婆，迫使潘金莲招供后将其杀死，割下首级祭奠武大郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/wu_dalang.webp",
+  "thumb": "/p/shuihu/thumbs/wu_dalang.webp"
+}

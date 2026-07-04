@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "id": "huyan_zhuo",
+  "name_zh": "呼延灼",
+  "name_en": "Huyan Zhuo",
+  "aliases": [
+    "双鞭",
+    "呼延灼",
+    "天威星"
+  ],
+  "epithet": "双鞭·天威星·马军五虎",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "呼延灼，古典名著《水浒传》中的人物，一百单八将之一，绰号“双鞭”。他是宋朝开国名将呼延赞的嫡派子孙，祖籍并州太原（今属山西太原）。原为汝宁郡都统制，奉命率军攻打梁山。曾摆下连环马阵，令宋江望而生畏。后中伏被擒，感宋江之忠义，归顺梁山。梁山大聚义时，排名第八位，上应“天威星”，为“马军五虎将”第四员。受招安后，随宋江南征北战，回朝受封御营兵马指挥使。后来率领大军，大破金兀术四太子，杀至淮西阵亡。",
+  "events": [
+    {
+      "title": "摆连环马阵",
+      "desc": "呼延灼奉命征讨梁山，使用连环马阵（以铁链连接战马，冲锋时势不可挡），令宋江军队一度难以抵挡。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被擒归顺梁山",
+      "desc": "呼延灼在战斗中中伏被俘，宋江亲自解缚并陈说忠义之理，呼延灼感其诚，遂投降梁山，成为梁山将领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大聚义排第八",
+      "desc": "梁山一百零八将聚义时，呼延灼位列第八，上应天威星，担任马军五虎将第四员。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "随宋江南征北战",
+      "desc": "受招安后，呼延灼跟随宋江征讨辽国、田虎、王庆、方腊等，屡立战功，回朝后被封为御营兵马指挥使。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大破金兀术后阵亡",
+      "desc": "后来呼延灼率领大军大破金兀术四太子，在淮西战场阵亡。",
+      "source": {
+        "work": "说岳全传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "双鞭"
+  ],
+  "skills": [
+    "摆连环马阵",
+    "冲锋陷阵",
+    "马战统帅"
+  ],
+  "domains": [
+    "军事",
+    "战争",
+    "马军"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/huyan_zhuo.webp",
+  "thumb": "/p/shuihu/thumbs/huyan_zhuo.webp"
+}

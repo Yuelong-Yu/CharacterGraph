@@ -1,0 +1,263 @@
+{
+  "characters": [
+    {
+      "slug": "song_jiang",
+      "name_zh": "宋江",
+      "name_en": "Song Jiang",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "及时雨·呼保义·天魁星"
+    },
+    {
+      "slug": "lin_chong",
+      "name_zh": "林冲",
+      "name_en": "Lin Chong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "豹子头·八十万禁军教头"
+    },
+    {
+      "slug": "lu_zhishen",
+      "name_zh": "鲁智深",
+      "name_en": "Lu Zhishen",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "花和尚·天孤星"
+    },
+    {
+      "slug": "wu_song",
+      "name_zh": "武松",
+      "name_en": "Wu Song",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "行者·武二郎·天伤星"
+    },
+    {
+      "slug": "li_kui",
+      "name_zh": "李逵",
+      "name_en": "Li Kui",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "黑旋风·铁牛·天杀星"
+    },
+    {
+      "slug": "ruan_xiaoqi",
+      "name_zh": "阮小七",
+      "name_en": "Ruan Xiaoqi",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "活阎罗·天败星"
+    },
+    {
+      "slug": "chao_gai",
+      "name_zh": "晁盖",
+      "name_en": "Chao Gai",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "托塔天王·梁山前主"
+    },
+    {
+      "slug": "gao_qiu",
+      "name_zh": "高俅",
+      "name_en": "Gao Qiu",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "殿帅府太尉·迫害林冲"
+    },
+    {
+      "slug": "pan_jinlian",
+      "name_zh": "潘金莲",
+      "name_en": "Pan Jinlian",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "武大郎之妻·毒杀亲夫"
+    },
+    {
+      "slug": "ximen_qing",
+      "name_zh": "西门庆",
+      "name_en": "Ximen Qing",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "阳谷县恶霸·西门大官人"
+    },
+    {
+      "slug": "wu_dalang",
+      "name_zh": "武大郎",
+      "name_en": "Wu Dalang",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "三寸丁谷树皮·炊饼郎"
+    },
+    {
+      "slug": "wang_po",
+      "name_zh": "王婆",
+      "name_en": "Wang Po",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "阳谷县茶坊婆·牵线毒杀"
+    },
+    {
+      "slug": "chai_jin",
+      "name_zh": "柴进",
+      "name_en": "Chai Jin",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "小旋风·后周柴荣子孙·天贵星"
+    },
+    {
+      "slug": "hua_rong",
+      "name_zh": "花荣",
+      "name_en": "Hua Rong",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "小李广·天英星"
+    },
+    {
+      "slug": "ruan_xiaoer",
+      "name_zh": "阮小二",
+      "name_en": "Ruan Xiaoer",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "立地太岁·天剑星"
+    },
+    {
+      "slug": "ruan_xiaowu",
+      "name_zh": "阮小五",
+      "name_en": "Ruan Xiaowu",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "短命二郎·天罪星"
+    },
+    {
+      "slug": "lu_junyi",
+      "name_zh": "卢俊义",
+      "name_en": "Lu Junyi",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "玉麒麟·天罡星·梁山副寨主"
+    },
+    {
+      "slug": "wu_yong",
+      "name_zh": "吴用",
+      "name_en": "Wu Yong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "智多星·天机星·梁山军师"
+    },
+    {
+      "slug": "gongsun_sheng",
+      "name_zh": "公孙胜",
+      "name_en": "Gongsun Sheng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "入云龙·天闲星·道士法师"
+    },
+    {
+      "slug": "guan_sheng",
+      "name_zh": "关胜",
+      "name_en": "Guan Sheng",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "大刀·天勇星·关羽后人"
+    },
+    {
+      "slug": "qin_ming",
+      "name_zh": "秦明",
+      "name_en": "Qin Ming",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "霹雳火·天猛星·马军五虎"
+    },
+    {
+      "slug": "huyan_zhuo",
+      "name_zh": "呼延灼",
+      "name_en": "Huyan Zhuo",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "双鞭·天威星·马军五虎"
+    },
+    {
+      "slug": "shi_jin",
+      "name_zh": "史进",
+      "name_en": "Shi Jin",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "九纹龙·天微星"
+    },
+    {
+      "slug": "dai_zong",
+      "name_zh": "戴宗",
+      "name_en": "Dai Zong",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "神行太保·天速星"
+    },
+    {
+      "slug": "liu_tang",
+      "name_zh": "刘唐",
+      "name_en": "Liu Tang",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "赤发鬼·天异星"
+    },
+    {
+      "slug": "yan_qing",
+      "name_zh": "燕青",
+      "name_en": "Yan Qing",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "浪子·天巧星"
+    }
+  ],
+  "artifacts": [
+    {
+      "slug": "zhangba_shemao",
+      "name_zh": "丈八蛇矛",
+      "name_en": "Serpent Spear",
+      "category": "weapon",
+      "epithet": "林冲之矛·禁军教头兵刃"
+    },
+    {
+      "slug": "shuimo_chanzhang",
+      "name_zh": "水磨禅杖",
+      "name_en": "Monk's Spade",
+      "category": "weapon",
+      "epithet": "鲁智深之杖·六十二斤"
+    },
+    {
+      "slug": "jiedao",
+      "name_zh": "戒刀",
+      "name_en": "Precept Knives",
+      "category": "weapon",
+      "epithet": "武松双刀·行者兵刃"
+    },
+    {
+      "slug": "banfu",
+      "name_zh": "板斧",
+      "name_en": "Twin Axes",
+      "category": "weapon",
+      "epithet": "李逵双斧·黑旋风兵刃"
+    },
+    {
+      "slug": "yucha",
+      "name_zh": "渔叉",
+      "name_en": "Fishing Fork",
+      "category": "weapon",
+      "epithet": "阮小七之叉·水军头领兵刃"
+    }
+  ],
+  "owns": [
+    { "owner": "lin_chong", "artifact": "zhangba_shemao", "canon": "romance", "title": "林冲使丈八蛇矛", "desc": "《水浒传》中林冲为东京八十万禁军教头，惯使丈八蛇矛，风雪山神庙手刃陆谦、梁山泊火并王伦皆仗此矛。蛇矛矛头如游蛇蜿蜒、双刃寒利，是禁军教头武艺的标志。", "work": "《水浒传》" },
+    { "owner": "lu_zhishen", "artifact": "shuimo_chanzhang", "canon": "romance", "title": "鲁智深持水磨禅杖", "desc": "《水浒传》中鲁智深以六十二斤水磨禅杖为兵器，拳打镇关西、倒拔垂杨柳、大闹野猪林皆携此杖。禅杖一头月牙铲、一头方便铲，重兵器中的僧家法器，与他花和尚身份相映成趣。", "work": "《水浒传》" },
+    { "owner": "wu_song", "artifact": "jiedao", "canon": "romance", "title": "武松使戒刀", "desc": "《水浒传》中武松在十字坡得孙二娘所赠两口戒刀，景阳冈打虎用拳、杀潘金莲西门庆用刀、血溅鸳鸯楼夜战蜈蚣岭均携此双刀。戒刀为行者装束中的护法门刃，武松扮行者后即为他的标志兵器。", "work": "《水浒传》" },
+    { "owner": "li_kui", "artifact": "banfu", "canon": "romance", "title": "李逵抡板斧", "desc": "《水浒传》中李逵惯使一对板斧，江州劫法场、沂岭杀四虎、大闹东京皆挥双斧。板斧粗重锋利、契合其黑旋风蛮勇冲杀的打法，是李逵莽烈形象的标志。", "work": "《水浒传》" },
+    { "owner": "ruan_xiaoqi", "artifact": "yucha", "canon": "romance", "title": "阮小七使渔叉", "desc": "《水浒传》中阮小七为石碣村渔户出身，梁山水军头领，惯使渔叉。智取生辰纲、水战官军、偷御酒等水军行动皆仗此叉。渔叉三齿倒钩、水下灵活，是阮氏三雄水上功夫的标志。", "work": "《水浒传》" }
+  ],
+  "en_title_override": {
+    "song_jiang": "Song Jiang (Water Margin)",
+    "wu_song": "Wu Song (Water Margin)",
+    "lin_chong": "Lin Chong",
+    "wang_po": "Wang Po (Water Margin)"
+  },
+  "zh_title_override": {}
+}

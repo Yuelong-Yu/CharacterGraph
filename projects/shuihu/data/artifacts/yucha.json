@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "yucha",
+  "name_zh": "渔叉",
+  "name_en": "Fishing Fork",
+  "aliases": [
+    "鱼叉",
+    "叉"
+  ],
+  "epithet": "阮小七之叉·水军头领兵刃",
+  "category": "weapon",
+  "bio": "渔叉是一种源自原始部落的生产工具，后演变为兵器。由叉刺和叉柄组成，叉刺铁质，通常有三齿或多齿，齿长3-5厘米，打磨锋利；叉刺背中部有孔，可安装长约1.5米的手柄。捕鱼时以叉齿刺向水中鱼。在《水浒传》中，渔叉成为阮小七的专属兵器。阮小七是梁山泊水军头领之一，善用渔叉在水战中突刺敌船与水卒，其渔叉兼具捕鱼实用性与战场杀伤力。此叉因阮小七的勇猛而被梁山好汉们熟知，成为水战标志性武器之一。",
+  "events": [
+    {
+      "title": "阮小七渔叉初显威",
+      "desc": "阮小七在石碣村与晁盖、吴用等人智取生辰纲后，为躲避追捕，用渔叉在水战中刺伤追兵，展示其水性及渔叉的实战威力。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "渔叉助破高俅水军",
+      "desc": "梁山泊三败高俅时，阮小七持渔叉潜入水下，凿穿官船并刺落水敌兵，渔叉在水下作战中的灵活性大显神威。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊渔叉战死",
+      "desc": "在征讨方腊的乌龙岭之战中，阮小七因违令穿戴方腊龙袍被贬为庶民，但其渔叉曾于此前多次刺敌立功，成为梁山水军精神象征。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "捕鱼",
+    "水战",
+    "武勇"
+  ],
+  "portrait": "/p/shuihu/portraits/yucha.webp",
+  "thumb": "/p/shuihu/thumbs/yucha.webp"
+}

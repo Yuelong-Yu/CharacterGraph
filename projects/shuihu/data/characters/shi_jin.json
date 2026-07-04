@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "shi_jin",
+  "name_zh": "史进",
+  "name_en": "Shi Jin",
+  "aliases": [
+    "九纹龙"
+  ],
+  "epithet": "九纹龙·天微星",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "史进是史家村史太公之子，自幼不务农业，只爱刺枪使棒。后拜东京八十万禁军教头王进为师，学得一身武艺。因身上纹有九条青龙，绰号“九纹龙”。他曾与少华山的朱武、陈达、杨春聚义，后因刺杀华州太守未果而被捕入狱。在《水浒传》第五十九回中，吴用设计救出史进，少华山全伙加入梁山。梁山大聚义时，史进排名第二十三位，上应天微星，担任马军八骠骑兼先锋使。征讨方腊时，在昱岭关前中箭身亡，后被追封为忠武郎。他是《水浒传》全书第一个出场的梁山好汉。",
+  "events": [
+    {
+      "title": "拜师王进",
+      "desc": "东京八十万禁军教头王进因得罪高俅，逃亡途中经过史家村，收史进为徒，传授武艺。史进自此武艺精进。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "聚义少华山",
+      "desc": "史进与少华山的朱武、陈达、杨春结识，义气相投，结为兄弟，共同对抗官府。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "刺杀华州太守",
+      "desc": "史进为救被华州太守囚禁的画匠王义之女玉娇枝，前往华州刺杀太守，但行动失败，反被擒获入狱。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第五十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "吴用计救史进",
+      "desc": "宋江、吴用等人设计用金铃吊挂引诱华州太守出城，趁机攻破华州，救出史进。少华山全伙随之上梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第五十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义",
+      "desc": "梁山一百零八将排座次，史进位列第二十三位，上应天微星，担任马军八骠骑兼先锋使。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "昱岭关阵亡",
+      "desc": "征讨方腊时，史进在昱岭关前中箭身亡，后被朝廷追封为忠武郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第一百一十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "刺枪使棒"
+  ],
+  "domains": [
+    "武术",
+    "骑兵"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/shi_jin.webp",
+  "thumb": "/p/shuihu/thumbs/shi_jin.webp"
+}
