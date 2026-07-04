@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "id": "zhang_dujian",
+  "name_zh": "张都监",
+  "name_en": "Zhang Dujian",
+  "aliases": [
+    "张蒙方",
+    "张都监"
+  ],
+  "epithet": "孟州兵马都监·陷害武松·鸳鸯楼血案",
+  "category": "chaoting",
+  "era_layer": 0,
+  "bio": "张蒙方是《水浒传》中的虚构人物，担任孟州兵马都监，人称张都监。他表面谦和，实则奸诈，与张团练、蒋门神勾结形成利益集团。为除掉武松，他假意赏识武松的武艺，将其收为亲信，并许诺将丫鬟玉兰许配给武松，以骗取信任。随后暗中设计，让人将金银财物藏在武松房内，栽赃武松盗窃，致使武松再次被发配恩州。武松在飞云浦识破张都监派来的刺杀阴谋后，反杀刺客，并返回孟州城，夜袭张府，在鸳鸯楼将张都监、张团练、蒋门神等人全部斩杀，并在墙上留下“杀人者，打虎武松也”的血字。张都监的陷害成为武松彻底走上反抗道路的转折点。其笑面虎般的形象，是《水浒传》中腐败官吏的典型代表，最终自食恶果。",
+  "events": [
+    {
+      "title": "勾结张团练蒋门神",
+      "desc": "张都监与张团练、蒋门神勾结，形成利益集团，共同对付武松。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "假意赏识武松",
+      "desc": "张都监假意欣赏武松的武艺，将其收为亲信，并许配丫鬟玉兰给他，骗取武松的信任。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "栽赃陷害武松",
+      "desc": "张都监暗中安排人将财物藏在武松房中，诬陷武松盗窃，致使武松再次被发配恩州。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "飞云浦刺杀阴谋",
+      "desc": "武松在发配途中，张都监派人在飞云浦设伏刺杀武松，但被武松识破并反杀。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "血洗鸳鸯楼",
+      "desc": "武松返回张府，在鸳鸯楼将张都监、张团练、蒋门神等人全部斩杀，并在墙上留下“杀人者，打虎武松也”的血字。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [
+    "军事"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zhang_dujian.webp",
+  "thumb": "/p/shuihu/thumbs/zhang_dujian.webp"
+}

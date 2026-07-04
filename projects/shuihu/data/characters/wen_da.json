@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "id": "wen_da",
+  "name_zh": "闻达",
+  "name_en": "Wen Da",
+  "aliases": [
+    "闻大刀"
+  ],
+  "epithet": "大名府兵马都监·护梁中书·人称闻大刀",
+  "category": "chaoting",
+  "era_layer": 0,
+  "bio": "闻达，古典小说《水浒传》中的人物。宋朝武将，北京大名府都监，绰号“闻大刀”。长期为大名府留守梁中书效力，常与大名府另一名都监“李天王”李成搭档，也曾作为守将对抗梁山军队。闻达在多部《水浒传》衍生小说中都有出场。",
+  "events": [
+    {
+      "title": "对抗梁山军队",
+      "desc": "作为大名府守将，闻达与李成搭档，率军抵抗梁山好汉的进攻，是梁山攻打大名府时的主要对手之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "大刀"
+  ],
+  "skills": [],
+  "domains": [
+    "军事防御",
+    "城市守卫"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/wen_da.webp",
+  "thumb": "/p/shuihu/thumbs/wen_da.webp"
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 3,
+  "id": "hu_cheng",
+  "name_zh": "扈成",
+  "name_en": "Hu Cheng",
+  "aliases": ["飞天虎"],
+  "epithet": "扈家庄少主·扈三娘之兄·李逵灭庄",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "扈成是古典小说《水浒传》中的人物,扈家庄庄主扈太公之子,绰号飞天虎,扈三娘之兄。他拜祝家庄教师栾廷玉为师,习铁棒武艺,与祝家庄结盟联姻,妹扈三娘许配祝彪。三打祝家庄时林冲生擒扈三娘,扈成牵牛担酒至梁山泊求和,许以不再助祝家庄。后祝家庄被梁山攻破,祝彪兵败来投,扈成缚绑祝彪打算送往梁山献功,岂料途中碰上李逵。李逵不问情由挥斧乱杀扈家庄老小,扈成只得弃家逃命,投延安府去了。其遭遇折射梁山好汉中李逵嗜杀一面的破坏性,亦是扈三娘被迫归梁的家族悲剧根源。",
+  "events": [
+    {
+      "title": "扈祝联姻结盟",
+      "desc": "扈成之父扈太公与祝家庄祝朝奉结盟,扈三娘许配祝彪,两家共抗梁山。扈成拜祝家庄教师栾廷玉为师习铁棒武艺。",
+      "source": {"work": "《水浒传》", "locus": "第四十六至四十七回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "林冲擒扈三娘",
+      "desc": "三打祝家庄时,扈三娘出战被林冲生擒,扈成被迫牵牛担酒至梁山泊求和,许以不再助祝家庄。",
+      "source": {"work": "《水浒传》", "locus": "第四十八回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "缚绑祝彪送梁山",
+      "desc": "祝家庄被梁山攻破后,祝彪兵败来投扈家庄,扈成将其缚绑,打算送往梁山献功求免。",
+      "source": {"work": "《水浒传》", "locus": "第五十回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "李逵灭扈家庄",
+      "desc": "扈成押送祝彪途中碰上李逵,李逵不问情由挥斧乱杀扈家庄老小,扈成弃家逃命,投延安府而去。",
+      "source": {"work": "《水浒传》", "locus": "第五十回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["铁棒"],
+  "domains": ["扈家庄少主"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/hu_cheng.webp",
+  "thumb": "/p/shuihu/thumbs/hu_cheng.webp"
+}

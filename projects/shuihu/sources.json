@@ -1111,6 +1111,94 @@
       "category": "jianghu",
       "era_layer": 0,
       "epithet": "梁山前主·白衣秀士·林冲火并"
+    },
+    {
+      "slug": "chen_zongshan",
+      "name_zh": "陈宗善",
+      "name_en": "Chen Zongshan",
+      "category": "chaoting",
+      "era_layer": 1,
+      "epithet": "太尉·招安正使·赍诏梁山"
+    },
+    {
+      "slug": "hu_cheng",
+      "name_zh": "扈成",
+      "name_en": "Hu Cheng",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "扈家庄少主·扈三娘之兄·李逵灭庄"
+    },
+    {
+      "slug": "he_jiushu",
+      "name_zh": "何九叔",
+      "name_en": "He Jiushu",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "阳谷仵作·武大郎死因见证人"
+    },
+    {
+      "slug": "zhang_dujian",
+      "name_zh": "张都监",
+      "name_en": "Zhang Dujian",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "孟州兵马都监·陷害武松·鸳鸯楼血案"
+    },
+    {
+      "slug": "murong_yanda",
+      "name_zh": "慕容彦达",
+      "name_en": "Murong Yanda",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "青州知府·慕容贵妃之兄·秦明归梁导火索"
+    },
+    {
+      "slug": "fu_an",
+      "name_zh": "富安",
+      "name_en": "Fu An",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "高衙内帮闲·谋害林冲·陆谦同党"
+    },
+    {
+      "slug": "lu_qian",
+      "name_zh": "陆谦",
+      "name_en": "Lu Qian",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "虞候·林冲旧友·风雪山神庙被林冲所杀"
+    },
+    {
+      "slug": "wen_da",
+      "name_zh": "闻达",
+      "name_en": "Wen Da",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "大名府兵马都监·护梁中书·人称闻大刀"
+    },
+    {
+      "slug": "qiao_daoqing",
+      "name_zh": "乔道清",
+      "name_en": "Qiao Daoqing",
+      "category": "jianghu",
+      "era_layer": 2,
+      "epithet": "田虎国师·幻魔君·后归梁山·公孙胜对手"
+    },
+    {
+      "slug": "wang_jin",
+      "name_zh": "王进",
+      "name_en": "Wang Jin",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "八十万禁军教头·被高俅逼走·史进之师"
+    },
+    {
+      "slug": "jin_cuilian",
+      "name_zh": "金翠莲",
+      "name_en": "Jin Cuilian",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "卖唱女·被镇关西欺压·鲁智深三拳相救"
     }
   ],
   "artifacts": [
@@ -1163,5 +1251,7 @@
     "lin_chong": "Lin Chong",
     "wang_po": "Wang Po (Water Margin)"
   },
-  "zh_title_override": {}
+  "zh_title_override": {
+    "wen_da": "闻大刀"
+  }
 }

@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "id": "qiao_daoqing",
+  "name_zh": "乔道清",
+  "name_en": "Qiao Daoqing",
+  "aliases": ["幻魔君", "乔冽", "护国灵感真人"],
+  "epithet": "田虎国师·幻魔君·后归梁山·公孙胜对手",
+  "category": "jianghu",
+  "era_layer": 2,
+  "bio": "乔道清是中国古典小说《水浒传》中的人物,原为田虎麾下法师。在不同版本中设定有异:简本系公孙胜师父罗真人的师弟,任田虎军师;百二十回本则原名乔冽,因拜师遭拒后杀人逃亡,投靠田虎获封护国灵感真人兼军师左丞相,绰号幻魔君。乔道清精通幻术,初登场于壶关战役,施法将平原化为汪洋,活捉鲁智深、武松等梁山将领。后与公孙胜斗法败于五雷天心正法,经孙安劝降拜入梁山阵营。归顺后参与征讨王庆战役,曾以三昧神水破敌喷火妖术,施法起雾助攻西京。该角色在征方腊前与马灵辞别宋江,最终归隐修道。",
+  "events": [
+    {
+      "title": "投靠田虎任军师",
+      "desc": "乔道清精通幻术,投靠田虎后获封护国灵感真人兼军师左丞相,绰号幻魔君,为田虎阵营核心法师。",
+      "source": {"work": "《水浒传》", "locus": "第九十四回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "壶关施法活捉梁山将",
+      "desc": "壶关战役中乔道清初登场,施法将平原化为汪洋,活捉鲁智深、武松等梁山将领,梁山军大败。",
+      "source": {"work": "《水浒传》", "locus": "第九十四回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "斗法败于五雷正法",
+      "desc": "公孙胜以罗真人所授五雷天心正法破乔道清幻术,乔道清法力被克败降。",
+      "source": {"work": "《水浒传》", "locus": "第九十四回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "孙安劝降归梁",
+      "desc": "乔道清败后经孙安劝降,拜入梁山阵营,随宋江征讨王庆。",
+      "source": {"work": "《水浒传》", "locus": "第九十五回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "征王庆以三昧神水破敌",
+      "desc": "征讨王庆战役中乔道清以三昧神水破敌喷火妖术,施法起雾助攻西京,立下战功。",
+      "source": {"work": "《水浒传》", "locus": "第一百零八回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "辞别宋江归隐",
+      "desc": "征方腊前乔道清与马灵辞别宋江,归隐修道,未参与征方腊战役。",
+      "source": {"work": "《水浒传》", "locus": "第一百一十回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["幻术", "三昧神水", "五雷天心正法"],
+  "domains": ["田虎国师", "梁山法师"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/qiao_daoqing.webp",
+  "thumb": "/p/shuihu/thumbs/qiao_daoqing.webp"
+}

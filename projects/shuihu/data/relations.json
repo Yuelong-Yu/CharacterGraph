@@ -11,7 +11,11 @@
         "title": "智取生辰纲",
         "desc": "晁盖邀吴用、公孙胜、刘唐、阮氏三雄(阮小二、阮小五、阮小七)及白胜，在黄泥冈以蒙汗药迷倒杨志押运的生辰纲队伍，劫走十万贯金珠，阮小七为水军主力。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十四至十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十四至十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -19,7 +23,11 @@
         "title": "上梁山聚义",
         "desc": "生辰纲事发后晁盖率众上梁山，阮小七随行。林冲火并原寨主王伦后推晁盖为主，阮小七位列水军头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十九至二十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十九至二十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -37,7 +45,11 @@
         "title": "智取生辰纲宋江通风报信",
         "desc": "宋江为郓城押司时，闻知生辰纲事发、官府差人捉拿晁盖，私放晁盖逃走，二人结下生死之交。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -45,7 +57,11 @@
         "title": "曾头市中箭托孤",
         "desc": "晁盖攻曾头市被史文恭毒箭中眼，临终遗言‘捉得射死我的，便为梁山泊主’，将寨主之位传于宋江。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -63,7 +79,11 @@
         "title": "江州劫法场结义",
         "desc": "宋江题反诗被判处斩，晁盖率梁山好汉劫法场，李逵挥双斧乱砍救出宋江。自此李逵拜宋江为兄，誓死相随。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -71,7 +91,11 @@
         "title": "毒酒弑弟同死",
         "desc": "宋江饮朝廷赐毒酒将死，恐李逵造反坏其忠义名声，召李逵同饮毒酒。李逵知晓无怨，毒发身亡，与宋江同葬蓼儿洼。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第一百二十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第一百二十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 3
       }
@@ -89,7 +113,11 @@
         "title": "相国寺结识结义",
         "desc": "林冲为东京八十万禁军教头，偶至大相国寺看鲁智深舞杖，二人投缘结为异姓兄弟。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -97,7 +125,11 @@
         "title": "大闹野猪林相救",
         "desc": "林冲被陷害刺配沧州，陆谦买通解差董超薛霸欲于野猪林害命。鲁智深一路暗中护送，于野猪林救下林冲，护送至沧州。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第八至九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第八至九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -105,7 +137,11 @@
         "title": "梁山聚义重逢",
         "desc": "林冲风雪山神庙后上梁山，鲁智深后亦因闹野猪林事败上二龙山，最终同聚梁山，并列马步军头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -123,7 +159,11 @@
         "title": "二龙山聚义结义",
         "desc": "鲁智深与杨志、武松同占二龙山落草，三人结为兄弟。武松血溅鸳鸯楼后改扮行者，经张青夫妇引荐上二龙山投鲁智深。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十一至五十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十一至五十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -131,7 +171,11 @@
         "title": "同归梁山",
         "desc": "二龙山三头领率众归顺梁山，鲁智深为步军头领之首，武松亦位列步军十头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -149,7 +193,11 @@
         "title": "成婚阳谷县",
         "desc": "潘金莲原为大户使女，因拒主家调戏被赌气嫁与矮丑的武大郎为妻，居阳谷县紫石街卖炊饼度日。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -157,7 +205,11 @@
         "title": "毒杀亲夫",
         "desc": "潘金莲与西门庆通奸被武大郎撞破，王婆献计，潘金莲以砒霜掺入武大郎药中将其毒杀，武大郎七窍流血而死。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -169,13 +221,19 @@
     "source": "pan_jinlian",
     "target": "ximen_qing",
     "primary_type": "kinship",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "王婆牵线通奸",
         "desc": "西门庆于阳谷县见潘金莲挑帘失手打中自己，遂赂王婆设局，与潘金莲在王婆茶坊通奸，往来日久。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -183,7 +241,11 @@
         "title": "害夫谋长聚",
         "desc": "奸情被武大郎撞破，西门庆踢伤武大郎。王婆献砒霜计，西门庆提供砒霜，潘金莲下手毒杀武大郎，欲长做夫妻。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -201,7 +263,11 @@
         "title": "阳谷县兄弟相认",
         "desc": "武松景阳冈打虎后任阳谷县都头，与兄武大郎在街市相认。武大郎喜极而泣，兄弟重逢。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -209,7 +275,11 @@
         "title": "杀嫂祭兄",
         "desc": "武松公差归来发现兄死有疑，私访取证后在武大郎灵前逼潘金莲招供，剜心祭兄，又杀西门庆于狮子楼，提头祭兄。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -227,7 +297,11 @@
         "title": "白虎节堂陷害",
         "desc": "高俅养子高衙内贪图林冲妻子张氏美色，高俅设计以看刀为名诱林冲入军机重地白虎节堂，诬其带刀行刺，下狱问罪。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -235,7 +309,11 @@
         "title": "刺配沧州陆谦纵火",
         "desc": "林冲被判刺配沧州，高俅遣陆谦买通牢营管营，火烧草料场欲烧死林冲。林冲雪夜逃出生天，风雪山神庙手刃陆谦。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第九至十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九至十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -247,13 +325,19 @@
     "source": "wu_song",
     "target": "pan_jinlian",
     "primary_type": "hostile",
-    "composite_types": ["kinship"],
+    "composite_types": [
+      "kinship"
+    ],
     "events": [
       {
         "title": "灵前逼供剜心",
         "desc": "武松查清兄长武大郎被毒杀真相，邀四邻为证在灵前逼潘金莲招供，招毕剜心祭兄，提头赴狮子楼寻西门庆。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -271,7 +355,11 @@
         "title": "供出奸情",
         "desc": "武松查兄长死因，先擒王婆审问，王婆供出西门庆潘金莲通奸及砒霜毒杀全过程。武松留王婆活口作证。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -279,7 +367,11 @@
         "title": "王婆被剐",
         "desc": "武松杀潘金莲西门庆后投案，官府审实王婆教唆通奸、主谋毒杀，判王婆凌迟处死于阳谷县示众。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -297,7 +389,11 @@
         "title": "狮子楼斗杀西门庆",
         "desc": "武松杀嫂后提潘金莲头至狮子楼寻西门庆，西门庆踢飞武松手中刀，武松夺刀力斗，将西门庆掷下楼撞死，割头祭兄。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -315,7 +411,11 @@
         "title": "林冲使丈八蛇矛",
         "desc": "《水浒传》中林冲为东京八十万禁军教头，惯使丈八蛇矛，风雪山神庙手刃陆谦、梁山泊火并王伦皆仗此矛。蛇矛矛头如游蛇蜿蜒、双刃寒利，是禁军教头武艺的标志。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": null, "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": null,
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -333,7 +433,11 @@
         "title": "鲁智深持水磨禅杖",
         "desc": "《水浒传》中鲁智深以六十二斤水磨禅杖为兵器，拳打镇关西、倒拔垂杨柳、大闹野猪林皆携此杖。禅杖一头月牙铲、一头方便铲，重兵器中的僧家法器，与他花和尚身份相映成趣。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": null, "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": null,
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -351,7 +455,11 @@
         "title": "武松使戒刀",
         "desc": "《水浒传》中武松在十字坡得孙二娘所赠两口戒刀，景阳冈打虎用拳、杀潘金莲西门庆用刀、血溅鸳鸯楼夜战蜈蚣岭均携此双刀。戒刀为行者装束中的护法门刃，武松扮行者后即为他的标志兵器。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": null, "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": null,
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -369,7 +477,11 @@
         "title": "李逵抡板斧",
         "desc": "《水浒传》中李逵惯使一对板斧，江州劫法场、沂岭杀四虎、大闹东京皆挥双斧。板斧粗重锋利、契合其黑旋风蛮勇冲杀的打法，是李逵莽烈形象的标志。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": null, "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": null,
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -387,7 +499,11 @@
         "title": "阮小七使渔叉",
         "desc": "《水浒传》中阮小七为石碣村渔户出身，梁山水军头领，惯使渔叉。智取生辰纲、水战官军、偷御酒等水军行动皆仗此叉。渔叉三齿倒钩、水下灵活，是阮氏三雄水上功夫的标志。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": null, "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": null,
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -405,7 +521,11 @@
         "title": "柴家庄资助林冲",
         "desc": "林冲被陷害刺配沧州，途经柴进庄上。柴进久闻林冲八十万禁军教头之名，以礼相待，赠金银书信，并修书沧州牢营管营差拨照应。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -423,7 +543,11 @@
         "title": "宋江逃难柴进庄",
         "desc": "宋江杀阎婆惜后逃难江湖，投柴进庄上避难。柴进以礼相待，留宋江居住半年，结为生死之交。后宋江上梁山，柴进亦入伙。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -441,7 +565,11 @@
         "title": "智取生辰纲",
         "desc": "公孙胜自蓟州来寻晁盖，共谋劫取梁中书生辰纲。晁盖、吴用、公孙胜、刘唐、阮氏三雄七人结义，于黄泥冈以蒙汗药迷倒杨志，劫走十万贯金珠。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十四至十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十四至十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -459,7 +587,11 @@
         "title": "刘唐报信生辰纲",
         "desc": "刘唐闻北京大名府梁中书收买十万贯金珠送东京蔡京贺寿，夜奔东溪村晁盖庄上报信，醉卧灵官庙被雷横捕快拿获。晁盖认作外甥救出，二人遂结谋劫纲。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十三至十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三至十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -477,7 +609,11 @@
         "title": "智取生辰纲",
         "desc": "晁盖、吴用邀石碣村阮氏三雄(阮小二、阮小五、阮小七)共谋劫取生辰纲，阮小二为长兄，率二弟三弟应诺。黄泥冈一战，阮氏三雄为水军主力。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十四至十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十四至十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -495,7 +631,11 @@
         "title": "智取生辰纲",
         "desc": "晁盖、吴用邀石碣村阮氏三雄共谋劫取生辰纲，阮小五为二弟，与兄阮小二、弟阮小七同应诺。黄泥冈一战，阮小五亦在军中。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十四至十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十四至十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -513,7 +653,11 @@
         "title": "智取生辰纲共谋",
         "desc": "晁盖与吴用自幼相识，吴用为乡村塾师，足智多谋。刘唐报信后，晁盖邀吴用共谋劫取生辰纲，吴用设计以蒙汗药迷倒杨志，劫走十万贯金珠。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -521,7 +665,11 @@
         "title": "梁山军师",
         "desc": "劫纲事发后晁盖率众上梁山，吴用为军师。林冲火并王伦后推晁盖为主，吴用位列梁山头领第二，专司谋略。晁盖死后辅佐宋江，前后策划三打祝家庄、攻打曾头市等重大战役。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十九至六十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十九至六十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -539,7 +687,11 @@
         "title": "江州牢营相识",
         "desc": "宋江刺配江州，与江州两院押牢节级戴宗相识。戴宗善神行法，日行八百里。二人结为兄弟，戴宗多方照应宋江在江州牢营生活。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -547,7 +699,11 @@
         "title": "神行法传信",
         "desc": "宋江题反诗被判处斩，戴宗以神行法昼夜奔走梁山报信，请晁盖率众劫法场救宋江。后戴宗随宋江上梁山，专司神行传信、刺探军情。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十九至四十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十九至四十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -559,13 +715,19 @@
     "source": "song_jiang",
     "target": "guan_sheng",
     "primary_type": "bond",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "战林冲秦明",
         "desc": "关胜为蒲东巡检，蔡京荐其征梁山。关胜跨战马、持青龙偃月刀，独战林冲、秦明二将，威风凛凛。宋江见其武勇且为关羽后人，心生招降之意。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -573,7 +735,11 @@
         "title": "中计归顺梁山",
         "desc": "宋江用呼延灼诈降之计，引关胜入伏，关胜兵败被擒。宋江亲解其缚、纳头便拜，关胜感宋江义气，遂降梁山，位列马军五虎之首。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -591,7 +757,11 @@
         "title": "清风寨生死之交",
         "desc": "花荣为青州清风寨知寨，与宋江为旧识生死之交。宋江杀阎婆惜后投花荣避难，花荣以礼相待。后刘高陷害宋江，花荣怒造反，与宋江同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十二至三十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十二至三十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -599,7 +769,11 @@
         "title": "蓼儿洼同死",
         "desc": "宋江饮朝廷赐毒酒将死，葬于蓼儿洼。花荣闻讯与吴用同至蓼儿洼，缢死于宋江墓前树上，以全生死之义。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第一百二十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第一百二十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 3
       }
@@ -617,7 +791,11 @@
         "title": "赚卢俊义上山",
         "desc": "宋江仰慕大名府富户卢俊义玉麒麟之名，欲请其上山为副寨主。吴用化名算命先生入大名府，诓卢俊义‘血光之灾’，诱其离家避祸，途中赚上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -625,7 +803,11 @@
         "title": "活捉史文恭推副位",
         "desc": "晁盖曾头市中箭遗言‘捉得射死我的，便为梁山泊主’。卢俊义上山后，于曾头市生擒史文恭。宋江欲让寨主之位，众将不从，卢俊义遂坐第二把交椅，为梁山副寨主。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十七至六十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十七至六十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -643,7 +825,11 @@
         "title": "吴用计赚卢俊义",
         "desc": "吴用奉宋江命，化名张用，扮作算命先生入大名府卢俊义府上，算卢俊义‘百日之内必有血光之灾’，诱其离家东南避祸。卢俊义中计，带管家李固、仆人燕青南下，途中被赚上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -661,7 +847,11 @@
         "title": "主仆相随",
         "desc": "燕青自幼为卢俊义家仆，卢俊义养大，教以武艺、相扑、百艺。燕青忠心耿耿，多方维护卢俊义。卢俊义被赚上梁山后，燕青亦随之上山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十一回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十一回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -669,7 +859,11 @@
         "title": "秋林渡辞别",
         "desc": "征方腊后，燕青劝卢俊义隐退避祸，卢俊义不舍功名。燕青留书辞别，自此浪迹江湖，不知所终。卢俊义后受封授官，被奸臣下毒，溺水而死。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第一百一十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第一百一十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 3
       }
@@ -687,7 +881,11 @@
         "title": "史家村开手师父",
         "desc": "鲁智深(时为渭州经略府提辖鲁达)于史家村结识少年史进，史进之父史太公请鲁达指点史进武艺。鲁达点拨史进棍法，史进拜鲁达为开手师父，二人结为师徒兼兄弟。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -695,7 +893,11 @@
         "title": "赤松林重逢结义",
         "desc": "鲁智深出走渭州后出家，史进亦离史家村落草少华山。二人于赤松林重逢，结为生死兄弟。后同上梁山，并列步军头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -707,13 +909,19 @@
     "source": "song_jiang",
     "target": "huyan_zhuo",
     "primary_type": "bond",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "连环马征梁山",
         "desc": "呼延灼为汝宁州都统制，高俅荐其征梁山。呼延灼以三千连环马铁甲骑兵成排冲杀，梁山兵马不能敌，损折大半。后徐宁上梁山教钩镰枪法始破连环马。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十五至五十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十五至五十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -721,7 +929,11 @@
         "title": "青州兵败归顺",
         "desc": "连环马破后，呼延灼败走青州。宋江用计生擒呼延灼，亲解其缚、纳头便拜。呼延灼感宋江义气，遂降梁山，位列马军五虎之一。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -733,13 +945,19 @@
     "source": "song_jiang",
     "target": "qin_ming",
     "primary_type": "bond",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "青州兵败被擒",
         "desc": "秦明为青州兵马统制，性如烈火号称霹雳火。征梁山被擒，宋江留秦明饮酒一夜，暗派人冒充秦明劫青州。慕容知府信以为真，杀害秦明全家。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -747,7 +965,11 @@
         "title": "被逼归顺",
         "desc": "秦明归青州发现全家被杀，知中宋江计，怒而返梁山。宋江赔礼认罪，将花荣之妹许配秦明。秦明无奈归顺梁山，位列马军五虎之一，征方腊战死清溪洞。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -765,7 +987,11 @@
         "title": "石碣村阮氏三雄",
         "desc": "阮小二、阮小五、阮小七为石碣村亲兄弟，打鱼为生。阮小二为长兄（立地太岁），阮小五为二弟（短命二郎），阮小七为三弟（活阎罗），三人皆为梁山元老水军头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -783,7 +1009,11 @@
         "title": "石碣村亲兄弟",
         "desc": "阮小二为长兄，阮小五为二弟，阮小七为三弟，石碣村渔户亲兄弟三人，共为梁山元老水军头领，征方腊后阮小二自刎、阮小五战死，唯阮小七得归。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -801,7 +1031,11 @@
         "title": "石碣村亲兄弟",
         "desc": "阮小五为二哥，阮小七为三弟，石碣村渔户亲兄弟。智取生辰纲、梁山水军行动皆共进退。征方腊阮小五战死，阮小七削发归乡。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -819,7 +1053,11 @@
         "title": "智取生辰纲",
         "desc": "杨志奉梁中书之命押送十万贯生辰纲赴东京蔡京府，途经黄泥冈。晁盖、吴用、公孙胜、刘唐、阮氏三雄、白胜七人设局，以蒙汗药迷倒杨志一行，劫走生辰纲。杨志醒后无颜回京，流落江湖后上二龙山落草。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -837,7 +1075,11 @@
         "title": "东京卖刀杀牛二",
         "desc": "杨志失职流落东京，盘缠用尽，于天汉州桥卖祖传宝刀。京师泼皮牛二‘没毛大虫’前来撒泼耍横，强抢宝刀、辱骂杨志。杨志怒起，一刀杀死牛二，自首到官府，被刺配北京大名府。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -855,7 +1097,11 @@
         "title": "养父子",
         "desc": "高衙内本为高俅堂兄弟，高俅发迹后无子，收养为嗣子，称高衙内。倚高俅之势横行东京，专一淫人妻女，号称‘花花太岁’。高俅为满足其色欲，设计陷害林冲，致林冲家破人亡。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -873,7 +1119,11 @@
         "title": "浔阳江亲兄弟",
         "desc": "张横、张顺为浔阳江边小孤山人，亲兄弟。张横为兄（船火儿），张顺为弟（浪里白条）。兄弟二人一水上一水下，曾共劫浔阳江。后同上梁山，皆为水军头领。征方腊张顺涌金门战死，张横亦病死军中。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -891,7 +1141,11 @@
         "title": "郓城都头同僚",
         "desc": "朱仝、雷横同为郓城县都头，与宋江交好。二人多次同差，私放宋江、刘唐。后雷横打死白秀英被判死刑，朱仝私放雷横，自披枷锁替雷横受罪，义重如山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十三回、第五十一回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三回、第五十一回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -909,7 +1163,11 @@
         "title": "朱仝私放宋江",
         "desc": "宋江杀阎婆惜后，朱仝奉命搜查宋家庄，于佛堂暗室发现宋江。朱仝念旧交，私放宋江逃走，并赠银两书信。宋江得以投柴进避难，后上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -927,7 +1185,11 @@
         "title": "蓟州结义",
         "desc": "杨雄为蓟州押狱刽子手，行刑归来遇泼皮抢夺赏赐，石秀路见不平助杨雄打散泼皮。杨雄感石秀义气，结为异姓兄弟，石秀搬入杨雄家居住，助其料理肉铺。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -935,7 +1197,11 @@
         "title": "翠屏山杀妻同上梁山",
         "desc": "石秀识破潘巧云与裴如海通奸，智杀裴如海，告发杨雄。杨雄诱潘巧云至翠屏山，石秀助杨雄杀潘巧云。二人遂同上梁山，并列步军头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -947,13 +1213,19 @@
     "source": "yang_xiong",
     "target": "pan_qiaoyun",
     "primary_type": "kinship",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "二婚成亲",
         "desc": "潘巧云前夫王押司亡故，改嫁杨雄。杨雄忙于公事冷落潘巧云，潘巧云与报恩寺和尚裴如海旧情复燃，借还愿之名在报恩寺通奸。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -961,7 +1233,11 @@
         "title": "翠屏山杀妻",
         "desc": "石秀识破通奸、智杀裴如海，杨雄诱潘巧云至翠屏山古松前，逼其招供后割舌剜心，肢解杀妻。潘巧云香消玉殒，杨雄石秀同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -979,7 +1255,11 @@
         "title": "识破通奸智杀裴如海",
         "desc": "石秀住杨雄家，察觉潘巧云与报恩寺和尚裴如海通奸。潘巧云反诬石秀调戏，杨雄误会赶走石秀。石秀夜伏巷弄，刀杀裴如海，剥去僧袍示众。杨雄醒悟，二人定计杀潘巧云。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -991,13 +1271,19 @@
     "source": "song_jiang",
     "target": "dong_ping",
     "primary_type": "bond",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "东平府双枪拒敌",
         "desc": "董平为东平府兵马都监，善使双枪，号称双枪将，有万夫不当之勇。宋江打东平府，董平出城迎战，连战韩滔、徐宁，梁山众将莫能近前。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -1005,7 +1291,11 @@
         "title": "中计生擒归顺",
         "desc": "宋江用计生擒董平，亲解其缚、纳头便拜。董平感宋江义气，遂降梁山，位列马军五虎之一。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1017,13 +1307,19 @@
     "source": "song_jiang",
     "target": "zhang_qing",
     "primary_type": "bond",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "东昌飞石打十五将",
         "desc": "张清为东昌府守将，善飞石打人，百发百中号称没羽箭。宋江打东昌府，张清连打徐宁、燕顺、百胜将韩滔、双鞭呼延灼等十五员梁山将领，个个头破血流。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       },
@@ -1031,7 +1327,11 @@
         "title": "吴用计擒归顺",
         "desc": "吴用用计引张清入水，被阮氏三雄水下生擒。宋江亲解其缚、纳头便拜，张清感义气归顺梁山，位列马军八骠骑之首。后征方腊娶琼英为妻。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1049,7 +1349,11 @@
         "title": "祝家庄一丈青被擒",
         "desc": "扈三娘为扈家庄千金，祝彪未婚妻，善使日月双刀，唤作一丈青。三打祝家庄时扈三娘出阵助祝家庄，连擒王英、秦明部将。林冲出阵迎战，一枪挑落其马，生擒扈三娘。后宋江将其许配王英。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1067,7 +1371,11 @@
         "title": "朝堂四大奸臣同党",
         "desc": "蔡京为太师、高俅为太尉，与童贯、杨戬并称四大奸臣。把持朝政、贪墨纳贿、排挤忠良。梁中书所送十万贯生辰纲即贿蔡京贺寿。招安后多次进谗害宋江卢俊义，致二将饮毒酒而死。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第一百二十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第一百二十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1085,7 +1393,11 @@
         "title": "童贯征梁山兵败",
         "desc": "朝廷以童贯为统帅征梁山，率十万大军进剿。童贯不懂兵法，被宋江用十面埋伏之计大破，折兵大半，仅以身免。童贯隐瞒败绩，谎报军情。后高俅再征亦败。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七十六至七十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十六至七十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1103,7 +1415,11 @@
         "title": "二龙山聚义",
         "desc": "杨志失陷生辰纲后流落江湖，与鲁智深、曹正合力夺下二龙山宝珠寺落草。鲁智深为山寨之主，杨志、武松为副。后武松亦上二龙山，四人结义。最终同归梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1121,7 +1437,11 @@
         "title": "登州猎户亲兄弟",
         "desc": "解珍解宝为登州猎户亲兄弟，解珍为兄（两头蛇），解宝为弟（双尾蝎）。兄弟共猎虎遭毛太公陷害入狱，孙立孙新顾大嫂劫狱救之，同上梁山。征方腊解珍坠崖死，解宝被伏兵所杀。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1139,7 +1459,11 @@
         "title": "揭阳镇亲兄弟",
         "desc": "穆弘穆春为揭阳镇亲兄弟，穆弘为兄（没遮拦），穆春为弟（小遮拦）。兄弟霸市称霸揭阳镇，江州三霸之一。宋江过揭阳镇时结怨，后同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1157,7 +1481,11 @@
         "title": "登州亲兄弟",
         "desc": "孙立为登州兵马提辖，孙新为孙立之弟（小尉迟），登州开酒店。孙新妻顾大嫂设计劫狱救解珍解宝，逼孙立同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1175,7 +1503,11 @@
         "title": "登州夫妻",
         "desc": "顾大嫂为孙新之妻，性烈如火号称母大虫。顾大嫂与解珍解宝是姑表兄妹，闻解氏兄弟遭陷害，设计劫狱救之，逼丈夫孙新及其兄孙立同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1193,7 +1525,11 @@
         "title": "登云山叔侄",
         "desc": "邹渊为登云山寨主（出林龙），邹润为邹渊侄子（独角龙）。叔侄共落草登云山，与孙立交好。登州劫狱救解珍解宝时助阵，后同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1211,7 +1547,11 @@
         "title": "宋江主婚",
         "desc": "三打祝家庄后扈三娘被林冲所擒。宋江践诺将扈三娘许配矮脚虎王英。扈三娘无奈从命，与王英成婚。征方腊时王英被郑彪所杀，扈三娘报仇亦战死。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1229,7 +1569,11 @@
         "title": "十字坡夫妻",
         "desc": "张青与孙二娘在十字坡开黑店，蒙汗药迷客商做人肉馒头。武松过十字坡时孙二娘下药，反被武松制服。张青赶回解围，二人结交武松。后同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1247,7 +1591,11 @@
         "title": "梁山亲兄弟",
         "desc": "朱贵为梁山南山酒店主（旱地忽律），朱富为朱贵之弟（笑面虎），沂州开酒店。李逵接母时朱富下药迷都头李云，救李逵后同上梁山。兄弟皆为梁山耳目。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1265,7 +1613,11 @@
         "title": "大名府刽子手兄弟",
         "desc": "蔡福蔡庆为大名府刽子手亲兄弟，蔡福为兄（铁臂膊），蔡庆为弟（一枝花，鬓边插花）。卢俊义案中蔡福收柴进贿赂保卢俊义性命，后同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1283,7 +1635,11 @@
         "title": "浔阳江贩私盐兄弟",
         "desc": "童威童猛为浔阳江贩私盐亲兄弟，童威为兄（出洞蛟），童猛为弟（翻江蜃）。兄弟随李俊上梁山，皆为水军头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1301,7 +1657,11 @@
         "title": "白虎山亲兄弟",
         "desc": "孔明孔亮为白虎山孔家庄亲兄弟，孔明为兄（毛头星），孔亮为弟（独火星）。兄弟宋江徒弟，共劫村坊后上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1319,7 +1679,11 @@
         "title": "郓城亲兄弟",
         "desc": "宋江宋清为郓城亲兄弟，宋江为兄，宋清为弟（铁扇子）。宋江杀阎婆惜后宋清随兄逃难，后同上梁山。宋清专司排设筵席。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1337,7 +1701,11 @@
         "title": "少华山聚义",
         "desc": "朱武为少华山军师（神机军师），陈达为二寨主（跳涧虎），杨春为三寨主（白花蛇）。陈达欲打史家庄被史进擒获，朱武杨春自缚求和，史进感义气释之，三人与史进结交。后同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1355,7 +1723,11 @@
         "title": "少华山聚义",
         "desc": "朱武与杨春共谋少华山落草，陈达被擒后朱武杨春自缚求和史进。三人结义，后同归梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1373,7 +1745,11 @@
         "title": "少华山二三位结义",
         "desc": "陈达杨春共随朱武落草少华山，三人结义为兄弟。陈达性急好斗，杨春机警精明，互补共谋。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1391,7 +1767,11 @@
         "title": "清风山聚义",
         "desc": "燕顺为清风山大寨主（锦毛虎），王英为二寨主（矮脚虎），郑天寿为三寨主（白面郎君）。宋江投清风山，燕顺以礼相待，三人后随宋江上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1409,7 +1789,11 @@
         "title": "清风山聚义",
         "desc": "郑天寿打银匠出身，因貌白号称白面郎君，流落清风山与燕顺王英结义为三寨主。后随宋江上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1427,7 +1811,11 @@
         "title": "芒砀山聚义",
         "desc": "樊瑞为芒砀山大寨主（混世魔王），项充为副（八臂哪吒），李衮为副（飞天大圣）。樊瑞善法术，欲吞并梁山，被公孙胜破法，史进擒之，三人归顺梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1445,7 +1833,11 @@
         "title": "芒砀山聚义",
         "desc": "李衮为芒砀山副寨主（飞天大圣），手持标枪盾牌，与樊瑞项充共落草。后同归梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1463,7 +1855,11 @@
         "title": "梁山泊初创元老",
         "desc": "杜迁（摸着天）、宋万（云里金刚）为王伦时代梁山泊初创元老，与王伦共落草梁山。林冲火并王伦后，杜迁宋万随晁盖宋江，位列梁山元老。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十一回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十一回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1481,7 +1877,11 @@
         "title": "枯树山招降",
         "desc": "鲍旭为枯树山寨主（丧门神），杀人如麻。李逵招降鲍旭，二人脾气相投结为兄弟，同上梁山。后鲍旭随李逵为步军副将，征方腊战死。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1499,7 +1899,11 @@
         "title": "智取生辰纲",
         "desc": "白胜为黄泥冈附近闲汉（白日鼠），晁盖吴用邀其入伙。白胜挑酒桶于黄泥冈叫卖，以蒙汗药迷杨志一行，智取生辰纲七友之一。案发后白胜被捕受刑，熬不过拷打供出晁盖。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1517,7 +1921,11 @@
         "title": "东京师徒",
         "desc": "曹正为林冲在东京所收徒弟（操刀鬼），善屠宰刀法。林冲被陷害刺配后曹正流落十字坡开酒店。鲁智深杨志夺二龙山时曹正助阵，后上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1535,7 +1943,11 @@
         "title": "史家村开手师父",
         "desc": "李忠为史进的开手师父之一（打虎将），街市卖药使枪棒为生。史进家慷慨相待，后史进学成武艺更精。李忠后桃花山落草，与周通同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1553,7 +1965,11 @@
         "title": "桃花山聚义",
         "desc": "周通为桃花山寨主（小霸王），强抢刘太公女逼婚。鲁智深代女揍周通，周通退婚。后李忠上桃花山与周通结义，李忠为寨主，周通为副。同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1571,7 +1987,11 @@
         "title": "芒砀山斗法归顺",
         "desc": "樊瑞善法术欲吞并梁山，公孙胜破其法术，史进擒樊瑞项充李衮。樊瑞感公孙胜道法高深，拜其为师学五雷天心正法。后樊瑞为梁山副法师。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1589,7 +2009,11 @@
         "title": "李家庄主仆",
         "desc": "杜兴（鬼脸儿）为李应管家，独龙冈李家庄总管。杜兴丑陋忠直，武艺精熟，助李应处理庄务。三打祝家庄后杜兴随李应上梁山，主仆同列梁山头领。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1607,7 +2031,11 @@
         "title": "蓟州结义",
         "desc": "时迁（鼓上蚤）在蓟州盗墓被杨雄石秀撞破，时迁跪求收留。杨雄石秀见其机灵，结为兄弟，同上梁山。时迁盗徐宁雁翎甲、祝家庄偷鸡皆为梁山奇功。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1619,13 +2047,19 @@
     "source": "xu_ning",
     "target": "tang_long",
     "primary_type": "bond",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "表兄弟设局骗徐宁上山",
         "desc": "汤隆为徐宁表弟（金钱豹子），铁匠出身。呼延灼连环马难破，汤隆献计：骗徐宁上山教钩镰枪法。汤隆盗徐宁祖传雁翎甲诱其离家，一路诱至梁山。徐宁中计被迫归顺，教钩镰枪法破连环马。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十六回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十六回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1643,7 +2077,11 @@
         "title": "清风山归附",
         "desc": "宋江杀阎婆惜后逃难江湖，投清风山。燕顺王英郑天寿以礼相待。清风山事件后，燕顺率王英郑天寿随宋江同上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1661,7 +2099,11 @@
         "title": "君臣把持朝政",
         "desc": "宋徽宗赵佶在位，蔡京为太师，与高俅、童贯、杨戬并称四大奸臣，把持朝政、贪墨纳贿、排挤忠良。赵佶宠信四大奸臣，致朝政腐败，民变四起，终致北宋覆亡。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": null, "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": null,
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1679,7 +2121,11 @@
         "title": "君臣宠信",
         "desc": "赵佶为端王时高俅以蹴鞠得幸，登基后擢高俅为太尉。高俅倚赵佶之宠，迫害忠良，陷害林冲，与蔡京童贯杨戬同把朝政。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1697,7 +2143,11 @@
         "title": "徽宗狎妓",
         "desc": "赵佶微服出宫，幸东京名妓李师师于镇安坊。李师师通诗词音律，赵佶为之倾倒，常微服往来。宋江燕青借李师师门路走招安关系，李师师助言于赵佶。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1715,7 +2165,11 @@
         "title": "翁婿敛财",
         "desc": "梁中书为蔡京女婿，任北京大名府知府。为贺蔡京生辰，搜刮十万贯金珠为生辰纲，差杨志押送东京。生辰纲被晁盖等劫取，引发智取生辰纲大案。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1733,7 +2187,11 @@
         "title": "大名府斗将押纲",
         "desc": "杨志卖刀杀牛二后刺配大名府，梁中书爱其武艺，留作帐下。大名府校场杨志与索超斗将，梁中书拔为提辖。后差杨志押送生辰纲赴东京，途经黄泥冈被晁盖等劫取。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1751,7 +2209,11 @@
         "title": "招安促成",
         "desc": "宿元景为太尉，刚正忠厚，同情梁山忠义。宋江两败童贯、三败高俅后，求招安无门。燕青通过李师师见赵佶，宿元景在朝堂上进言相助，最终促成梁山招安。征方腊后宿元景亦为梁山残部请封。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第八十一回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第八十一回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1769,7 +2231,11 @@
         "title": "郓城县衙通奸",
         "desc": "张文远为宋江同僚，人称小张三。宋江纳阎婆惜为外室，因公务冷落。张文远趁虚而入，与阎婆惜在乌龙院通奸，二人常幽会。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十一回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十一回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1781,13 +2247,19 @@
     "source": "song_jiang",
     "target": "yan_poxi",
     "primary_type": "kinship",
-    "composite_types": ["hostile"],
+    "composite_types": [
+      "hostile"
+    ],
     "events": [
       {
         "title": "纳为外室",
         "desc": "宋江母亡，阎婆惜母女流落郓城。宋江赠棺葬父，并纳阎婆惜为外室，安置于乌龙院。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       },
@@ -1795,7 +2267,11 @@
         "title": "怒杀阎婆惜",
         "desc": "阎婆惜发现晁盖写给宋江的谢恩书信，要挟宋江三件事，第三件索要梁山金珠。宋江怒起，以刀杀阎婆惜于乌龙院。事后宋江逃难江湖，后上梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十一回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十一回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1813,7 +2289,11 @@
         "title": "三拳打死镇关西",
         "desc": "鲁达（鲁智深）为渭州经略府提辖，闻金翠莲哭诉被郑屠（镇关西）强骗，大怒。至肉铺故意刁难郑屠，要精肉肥肉臊子各十斤。郑屠怒提刀杀来，鲁达三拳打死镇关西：第一拳打正鼻梁，第二拳打眼眶，第三拳打太阳穴。鲁达见打死人，假意要走，从容脱身。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1831,7 +2311,11 @@
         "title": "智杀裴如海",
         "desc": "石秀住杨雄家，察觉潘巧云与报恩寺和尚裴如海通奸。潘巧云反诬石秀调戏，杨雄误会赶走石秀。石秀夜伏巷弄，刀杀裴如海，剥去僧袍示众。杨雄醒悟，二人定计杀潘巧云。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十五回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十五回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1849,7 +2333,11 @@
         "title": "招安牵线",
         "desc": "宋江求招安无门，派燕青通过李师师见宋徽宗赵佶。李师师在镇安坊雅阁接待宋江燕青，向赵佶进言梁山忠义求招安之意。赵佶感悟，终促成招安。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第七十二回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十二回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1867,7 +2355,11 @@
         "title": "五台山剃度",
         "desc": "鲁达三拳打死镇关西后逃难，至五台山文殊院剃度为僧，法名智深。智真长老识鲁智深根器，亲为剃度，赠四句偈言‘遇林而起，遇山而富，遇水而兴，遇江而止’，定其一生。后鲁智深多次回山请益。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1885,7 +2377,11 @@
         "title": "曾头市教师",
         "desc": "曾弄为曾头市长官，史文恭为曾头市教师，武艺高强。曾弄长子曾涂、次子曾密、三子曾索、四子曾魁、五子曾升，五子皆习武。曾头市与梁山对立，史文恭射死晁盖。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1903,7 +2399,11 @@
         "title": "曾头市中箭",
         "desc": "晁盖率梁山众将攻打曾头市，夜袭曾头市中计。史文恭于乱军中以毒箭射中晁盖面门，晁盖坠马，被林冲等救回梁山，当夜毒发身亡。临终遗言‘捉得射死我的，便为梁山泊主’。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1921,7 +2421,11 @@
         "title": "活捉史文恭",
         "desc": "卢俊义被赚上梁山后，于曾头市大破曾家军，生擒史文恭。史文恭武艺虽高，不敌卢俊义，被擒后剖腹剜心祭奠晁盖。卢俊义以此功坐梁山第二把交椅。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第六十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第六十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1939,7 +2443,11 @@
         "title": "祝家庄教师",
         "desc": "祝朝奉为祝家庄庄主，栾廷玉为祝家庄教师，武艺高强善使飞锤。祝朝奉三子祝龙祝虎祝彪皆从栾廷玉习武。三打祝家庄时栾廷玉飞锤打欧鹏，与梁山众将酣战。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1957,7 +2465,11 @@
         "title": "祝家庄父子",
         "desc": "祝朝奉为祝家庄庄主，三子祝龙祝虎祝彪。祝彪为三子，与扈三娘订亲。三打祝家庄时祝家庄覆灭，祝朝奉祝龙祝虎被杀，祝彪逃奔扈家庄被扈成所擒献梁山。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -1975,7 +2487,11 @@
         "title": "祝扈联姻",
         "desc": "扈三娘为扈家庄千金，与祝彪订亲，祝扈两家联姻共抗梁山。三打祝家庄时扈三娘出阵助祝家庄，被林冲所擒。后宋江将扈三娘许配王英，祝扈联姻作废。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第四十八回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十八回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 1
       }
@@ -1993,7 +2509,11 @@
         "title": "夺快活林",
         "desc": "蒋门神蒋忠为孟州恶霸，身长九尺有万夫不当之勇。施恩在孟州牢营旁开快活林酒店，蒋门神率恶仆打伤施恩，夺其酒店。施恩求武松代为出头，引发武松醉打蒋门神。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -2011,7 +2531,11 @@
         "title": "醉打蒋门神",
         "desc": "武松应施恩之请，带醉至快活林酒店。一路饮酒三四十碗，至酒店故意刁难蒋门神妾。蒋门神怒出，武松以玉环步鸳鸯脚踢翻蒋门神，踏住胸膛痛打。蒋门神求饶，归还酒店与施恩。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第二十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -2029,7 +2553,11 @@
         "title": "征方腊",
         "desc": "招安后宋江率梁山军征方腊。方腊于江南起义，自称圣公，建帮源洞政权。梁山军连克方腊数州，双方血战。征方腊一战梁山好汉战死大半（59人战死，20人病死），方腊最终被鲁智深擒获。宋江虽胜，梁山实力大损。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第一百一十二至一百一十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第一百一十二至一百一十九回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 2
       }
@@ -2047,7 +2575,11 @@
         "title": "征方腊郑魔君杀王英",
         "desc": "征方腊时王英与扈三娘同战方腊部将郑彪（郑魔君）。郑彪善左道法术，作法使王英神志不清，一枪刺王英于马下。扈三娘见夫战死，急来报仇，亦被郑彪飞砖打死。夫妻同死郑魔君之手。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第一百一十七回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第一百一十七回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 2
       }
@@ -2065,7 +2597,11 @@
         "title": "二仙山学法",
         "desc": "公孙胜为蓟州二仙山道士，拜罗真人为师，学得五雷天心正法，能呼风唤雨、役使神将。罗真人识公孙胜根器，授以道法。公孙胜后随晁盖智取生辰纲上梁山，为梁山法师。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第五十三回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
@@ -2083,7 +2619,1037 @@
         "title": "火并王伦",
         "desc": "林冲被陷害刺配后上梁山，王伦忌林冲武艺高强恐夺其位，百般刁难欲拒之。林冲携柴进书信苦求，王伦勉强留林冲为第四位。晁盖等劫生辰纲后上梁山，王伦又欲拒之。林冲怒起，火并王伦，一刀杀之。晁盖遂为梁山之主。",
         "desc_long": null,
-        "source": { "work": "《水浒传》", "locus": "第十一回、第十九回", "translator": null },
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十一回、第十九回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chen_zongshan-zhao_ji",
+    "source": "chen_zongshan",
+    "target": "zhao_ji",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉旨赍诏招安",
+        "desc": "陈宗善为殿前太尉,受宋徽宗派遣赍招安诏书与御酒往梁山泊招安宋江。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chen_zongshan-song_jiang",
+    "source": "chen_zongshan",
+    "target": "song_jiang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赍诏梁山泊",
+        "desc": "陈宗善奉旨至梁山泊宣读招安诏书,宋江率众跪接,然随行张干办李虞候肆行挑衅,招安未成。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cai_jing-chen_zongshan",
+    "source": "cai_jing",
+    "target": "chen_zongshan",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "蔡京举荐招安",
+        "desc": "蔡京举荐陈宗善为招安正使,实则欲借招安失败推动武力征讨梁山。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chen_zongshan-gao_qiu",
+    "source": "chen_zongshan",
+    "target": "gao_qiu",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "高俅同谋招安",
+        "desc": "高俅与蔡京共议,遣陈宗善赍诏招安,实欲借机陷害梁山好汉。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chen_zongshan-tong_guan",
+    "source": "chen_zongshan",
+    "target": "tong_guan",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "童贯共议招安",
+        "desc": "童贯与蔡京高俅共议招安事宜,陈宗善奉命出使梁山。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chen_zongshan-li_kui",
+    "source": "chen_zongshan",
+    "target": "li_kui",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "李逵撕诏骂钦差",
+        "desc": "李逵于梁山忠义堂前扯碎招安诏书,挥拳殴打陈宗善,泼洒御酒,招安遂告失败。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_cheng-hu_sanniang",
+    "source": "hu_cheng",
+    "target": "hu_sanniang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "扈家庄兄妹",
+        "desc": "扈成为扈家庄庄主扈太公之子,扈三娘之兄,绰号飞天虎。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_cheng-zhu_chaofeng",
+    "source": "hu_cheng",
+    "target": "zhu_chaofeng",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "扈祝联姻结盟",
+        "desc": "扈家庄与祝家庄联姻,扈三娘许配祝彪,两家结盟共抗梁山。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十六回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_cheng-luan_tingyu",
+    "source": "hu_cheng",
+    "target": "luan_tingyu",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "栾廷玉授徒",
+        "desc": "扈成拜祝家庄教师栾廷玉为师,学铁棒武艺。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_cheng-lin_chong",
+    "source": "hu_cheng",
+    "target": "lin_chong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "林冲擒扈三娘",
+        "desc": "三打祝家庄时林冲生擒扈三娘,扈成被迫献妹求和。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十八回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_cheng-li_kui",
+    "source": "hu_cheng",
+    "target": "li_kui",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "李逵灭扈家庄",
+        "desc": "扈成缚绑祝彪送往梁山求和,李逵不问情由挥斧乱杀扈家庄老小,扈成弃家逃命投延安府。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第五十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_cheng-song_jiang",
+    "source": "hu_cheng",
+    "target": "song_jiang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "献妹求和",
+        "desc": "扈三娘被林冲所擒后,扈成牵牛担酒至梁山泊求和,许以不再助祝家庄。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第四十九回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jiushu-wu_dalang",
+    "source": "he_jiushu",
+    "target": "wu_dalang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "验尸武大郎",
+        "desc": "何九叔为阳谷县团头仵作,奉命验武大郎尸,见七窍流血识破砒霜之毒。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jiushu-wu_song",
+    "source": "he_jiushu",
+    "target": "wu_song",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "武松盘问作证",
+        "desc": "武松杀嫂前召集邻里,何九叔交出武大郎骨殖为证,详述西门庆行贿及砒霜毒杀始末。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jiushu-ximen_qing",
+    "source": "he_jiushu",
+    "target": "ximen_qing",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西门庆行贿灭口",
+        "desc": "西门庆于武大郎死后立即送银两与何九叔欲封其口,何九叔伪收实藏以为日后铁证。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jiushu-pan_jinlian",
+    "source": "he_jiushu",
+    "target": "pan_jinlian",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "识破毒杀奸情",
+        "desc": "何九叔验尸时察觉武大郎系被潘金莲以砒霜毒杀,与西门庆王婆合谋。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jiushu-wang_po",
+    "source": "he_jiushu",
+    "target": "wang_po",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王婆同谋知情",
+        "desc": "何九叔知王婆为西门庆潘金莲通奸撮合人,亦为毒杀武大郎献计者。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二十六回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wu_song-zhang_dujian",
+    "source": "wu_song",
+    "target": "zhang_dujian",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "鸳鸯楼设局陷害",
+        "desc": "张都监假意厚待武松,以许配丫鬟玉兰为名骗取信任,暗中安排盗窃栽赃,致武松再度刺配。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      },
+      {
+        "title": "血溅鸳鸯楼",
+        "desc": "武松于飞云浦识破刺杀阴谋后,夜返孟州鸳鸯楼,斩杀张都监及张团练蒋门神等满门,题血字'杀人者,打虎武松也'。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十一回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_menshen-zhang_dujian",
+    "source": "jiang_menshen",
+    "target": "zhang_dujian",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "勾结蒋门神张团练",
+        "desc": "张都监与张团练蒋门神结为利益集团,共谋陷害武松以夺回快活林。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_en-zhang_dujian",
+    "source": "shi_en",
+    "target": "zhang_dujian",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "陷害施恩主子",
+        "desc": "张都监设局陷害武松,致使施恩失去快活林酒店,又被张团练蒋门神夺回。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "murong_yanda-qin_ming",
+    "source": "murong_yanda",
+    "target": "qin_ming",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "误杀秦明全家",
+        "desc": "宋江设计使人扮作秦明夜打青州城,慕容彦达误认秦明叛变,将秦明全家老小斩杀,致秦明进退失据被迫归降梁山。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十四回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_xin-murong_yanda",
+    "source": "huang_xin",
+    "target": "murong_yanda",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "起用黄信征剿",
+        "desc": "慕容彦达起用兵马都监黄信征剿清风山梁山好汉,黄信为慕容彦达部下。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hua_rong-murong_yanda",
+    "source": "hua_rong",
+    "target": "murong_yanda",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "陷害花荣下狱",
+        "desc": "慕容彦达听信刘高谗言,将清风寨副知寨花荣下狱,引发宋江花荣大闹清风寨。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "murong_yanda-song_jiang",
+    "source": "murong_yanda",
+    "target": "song_jiang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "征剿梁山",
+        "desc": "慕容彦达奏请朝廷征讨梁山,起用秦明黄信征剿,后梁山好汉攻破青州,慕容彦达被杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "murong_yanda-zhao_ji",
+    "source": "murong_yanda",
+    "target": "zhao_ji",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "慕容贵妃外戚",
+        "desc": "慕容彦达为宋徽宗宠妃慕容贵妃之兄,倚仗外戚之势任青州知府。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fu_an-gao_yanei",
+    "source": "fu_an",
+    "target": "gao_yanei",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "高衙内帮闲心腹",
+        "desc": "富安为高衙内的心腹帮闲,为高衙内图谋林冲之妻出谋划策。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fu_an-lu_qian",
+    "source": "fu_an",
+    "target": "lu_qian",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "合谋陷害林冲",
+        "desc": "富安与陆谦同为高俅父子鹰犬,合谋诱骗林冲误入白虎堂,又共赴沧州密谋火烧草料场。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七至十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fu_an-lin_chong",
+    "source": "fu_an",
+    "target": "lin_chong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "献计白虎堂陷害",
+        "desc": "富安献计令陆谦调虎离山,后与陆谦共劝林冲持刀至白虎节堂,致林冲被诬带刀行刺下狱。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      },
+      {
+        "title": "草料场纵火被杀",
+        "desc": "富安随陆谦赴沧州买通差拨,密谋火烧草料场,风雪山神庙夜纵火时被林冲当场识破斩杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fu_an-gao_qiu",
+    "source": "fu_an",
+    "target": "gao_qiu",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "高俅鹰犬",
+        "desc": "富安为高俅养子高衙内心腹,受高俅父子指使谋害林冲。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_chong-lu_qian",
+    "source": "lin_chong",
+    "target": "lu_qian",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "背叛旧友陷害",
+        "desc": "陆谦本为林冲自幼挚友,因贪图权势投靠高俅父子,献计诱骗林冲误入白虎堂,贿赂公差欲加害于发配途中。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七至九回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      },
+      {
+        "title": "风雪山神庙被杀",
+        "desc": "陆谦赴沧州买通差拨火烧草料场,风雪山神庙夜被林冲识破,林冲怒斥其背信弃义,剜心割首祭武。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_qiu-lu_qian",
+    "source": "gao_qiu",
+    "target": "lu_qian",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "投靠高俅",
+        "desc": "陆谦为殿帅府虞候,投靠高俅父子为其鹰犬,卖友求荣。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_yanei-lu_qian",
+    "source": "gao_yanei",
+    "target": "lu_qian",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "为高衙内效劳",
+        "desc": "陆谦受高衙内指使,调虎离山协助高衙内图谋霸占林冲之妻。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第七回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liang_shangshu-wen_da",
+    "source": "liang_shangshu",
+    "target": "wen_da",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "大名府都监护梁中书",
+        "desc": "闻达为北京大名府兵马都监,绰号闻大刀,长期为大名府留守梁中书效力,护守城池。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wen_da-yang_zhi",
+    "source": "wen_da",
+    "target": "yang_zhi",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "大名府同僚",
+        "desc": "杨志发配大名府后受梁中书赏识,与闻达李成等同府武将共事,闻达参与大名府武将比武评议。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "suo_chao-wen_da",
+    "source": "suo_chao",
+    "target": "wen_da",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "大名府双都监",
+        "desc": "闻达与李成(李天王)并称大名府两大都监,索超为大名府副将,三人同府为将。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第十三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gongsun_sheng-qiao_daoqing",
+    "source": "gongsun_sheng",
+    "target": "qiao_daoqing",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "斗法败于五雷正法",
+        "desc": "乔道清施法将平原化为汪洋活捉梁山将领,公孙胜以罗真人所授五雷天心正法破其幻术,乔道清败降。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九十四回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "luo_zhenren-qiao_daoqing",
+    "source": "luo_zhenren",
+    "target": "qiao_daoqing",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "罗真人师弟",
+        "desc": "简本《水浒传》中乔道清为二仙山罗真人师弟,同为道门法术高手。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九十四回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qiao_daoqing-song_jiang",
+    "source": "qiao_daoqing",
+    "target": "song_jiang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归降梁山",
+        "desc": "乔道清斗法败于公孙胜后,经孙安劝降拜入梁山阵营,随宋江征讨王庆方腊。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_zhishen-qiao_daoqing",
+    "source": "lu_zhishen",
+    "target": "qiao_daoqing",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "法术活捉鲁智深",
+        "desc": "壶关战役中乔道清施法将平原化为汪洋,活捉鲁智深武松等梁山将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九十四回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qiao_daoqing-wu_song",
+    "source": "qiao_daoqing",
+    "target": "wu_song",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "法术活捉武松",
+        "desc": "壶关战役中乔道清施法将平原化为汪洋,活捉鲁智深武松等梁山将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第九十四回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_qiu-wang_jin",
+    "source": "gao_qiu",
+    "target": "wang_jin",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被高俅逼走",
+        "desc": "王进为八十万禁军教头,其父王升曾击伤未发迹的高俅,高俅得势后报复,王进被迫携母逃离东京。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_jin-wang_jin",
+    "source": "shi_jin",
+    "target": "wang_jin",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "史家村收徒",
+        "desc": "王进携母逃往延安府途中经史家村,收史进为徒,授半年武艺,史进武艺大成为后日九纹龙。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第二回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jin_cuilian-lu_zhishen",
+    "source": "jin_cuilian",
+    "target": "lu_zhishen",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "鲁达三拳相救",
+        "desc": "金翠莲被镇关西郑屠虚钱实契强占为妾,流落渭州酒楼卖唱,鲁达闻其遭遇怒打镇关西,赠银遣其返乡。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jin_cuilian-zhen_guanxi",
+    "source": "jin_cuilian",
+    "target": "zhen_guanxi",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被镇关西欺压",
+        "desc": "镇关西郑屠见金翠莲年轻美貌,写三千贯文书虚钱实契强占为妾,又被其妻赶出,父女流落街头卖唱还债。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三回",
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jin_cuilian-shi_jin",
+    "source": "jin_cuilian",
+    "target": "shi_jin",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "史进赠银相救",
+        "desc": "金翠莲于渭州酒楼卖唱诉苦,史进与鲁达在座,史进赠银十两助其返乡。",
+        "desc_long": null,
+        "source": {
+          "work": "《水浒传》",
+          "locus": "第三回",
+          "translator": null
+        },
         "canon": "romance",
         "era_order": 0
       }
