@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "id": "meng_kang",
+  "name_zh": "孟康",
+  "name_en": "Meng Kang",
+  "aliases": [
+    "玉幡竿",
+    "Jade Flagpole",
+    "地满星"
+  ],
+  "epithet": "玉幡竿·地满星·造船匠",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "孟康，古典名著《水浒传》中的人物，真定府人氏，身材高瘦、肤色白皙，因得绰号“玉幡竿”。他原本是一名船匠，受宋朝官府征调监造运送花石纲的大船。因提调官苛刻暴虐，动辄责罚，孟康一怒之下杀死提调官，弃家逃亡至饮马川落草，与裴宣、邓飞共同为首领。后经杨林引荐，结识梁山戴宗，受邀加入梁山泊。梁山大聚义时，排第七十位，星号地满星，负责监造战船，常与水军头领协同作战。梁山受招安后，他随军征讨辽国，平定王庆、田虎等叛乱。在征讨方腊的战役中，孟康随军攻打乌龙岭，被敌方火炮击中，粉身碎骨而死。朝廷追封其为义节郎。",
+  "events": [
+    {
+      "title": "杀提调官落草饮马川",
+      "desc": "孟康奉命监造花石纲大船，因提调官苛刻残暴，动辄责罚，孟康忍无可忍，怒杀提调官后逃亡，至饮马川落草，与裴宣、邓飞结为头领。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "经杨林介绍加入梁山",
+      "desc": "戴宗奉命前往蓟州寻找公孙胜，途中经饮马川遇杨林，杨林引荐裴宣、邓飞、孟康三人。戴宗邀请他们加入梁山，三人欣然接受，孟康自此成为梁山好汉。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次任造船匠",
+      "desc": "梁山一百零八将大聚义时，孟康排第七十位，星号地满星，被委任为造船匠，负责监造梁山所有战船，为水军作战提供保障。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与征辽及平寇战役",
+      "desc": "梁山受招安后，孟康随军征讨辽国，后又参与平定王庆、田虎等叛军的战斗，在历次水战中发挥其造船监船的特长。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "乌龙岭被火炮炸死",
+      "desc": "征方腊时，孟康随军攻打乌龙岭。敌方施放火炮，孟康躲避不及，被炮弹击中，粉身碎骨而死。后朝廷追封其为义节郎。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "建造船只",
+    "监造战船"
+  ],
+  "domains": [
+    "造船",
+    "战船监造"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/meng_kang.webp",
+  "thumb": "/p/shuihu/thumbs/meng_kang.webp"
+}

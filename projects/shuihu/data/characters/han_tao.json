@@ -1,0 +1,65 @@
+{
+  "schema_version": 3,
+  "id": "han_tao",
+  "name_zh": "韩滔",
+  "name_en": "Han Tao",
+  "aliases": [
+    "百胜将",
+    "地威星"
+  ],
+  "epithet": "百胜将·地威星·呼延灼副将",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "韩滔，古典名著《水浒传》中的人物，一百单八将之一，绰号“百胜将”。东京（今河南开封）人氏，原为陈州团练使。因朝廷征讨梁山，韩滔被任命为呼延灼的副将，与彭玘一同随军出征。首次交锋中，彭玘被扈三娘擒获后归顺梁山，韩滔继续作战。梁山利用钩镰枪大破连环马，韩滔在混战中被刘唐、杜迁生擒，经彭玘劝说后归顺梁山。梁山大聚义时，韩滔排第四十二位，上应地威星，担任马军小彪将兼远探出哨头领，常与彭玘搭档。招安后，韩滔随军征讨辽国、田虎、王庆，立有战功。在征方腊的常州之战中，韩滔与彭玘一同进攻，被敌将高可立一箭射中面颊落马，随后被张近仁一枪刺死。战后追封义节郎。",
+  "events": [
+    {
+      "title": "被任命为呼延灼副将",
+      "desc": "高唐州被梁山攻陷后，朝廷派呼延灼征讨梁山，韩滔与彭玘被任命为呼延灼的副将，一同领军前往。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被俘后归顺梁山",
+      "desc": "梁山用钩镰枪大破呼延灼的连环马阵，韩滔在战斗中遭刘唐、杜迁生擒。经先已归顺梁山的彭玘劝说，韩滔同意投降，加入梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义排座次",
+      "desc": "梁山一百零八将齐聚忠义堂，韩滔位列第四十二名，星号地威星，职司马军小彪将兼远探出哨头领，常与彭玘搭档。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊战死常州",
+      "desc": "梁山受招安后征讨方腊，韩滔与彭玘奉命攻打常州。敌将高可立射中韩滔面颊，韩滔落马，被张近仁刺死。战后追封义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "枣木槊"
+  ],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/han_tao.webp",
+  "thumb": "/p/shuihu/thumbs/han_tao.webp"
+}

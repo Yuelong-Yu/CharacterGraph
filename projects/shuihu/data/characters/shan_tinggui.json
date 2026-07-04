@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "id": "shan_tinggui",
+  "name_zh": "单廷珪",
+  "name_en": "Shan Tinggui",
+  "aliases": [
+    "圣水将",
+    "地奇星",
+    "General of Sacred Water",
+    "单廷圭"
+  ],
+  "epithet": "圣水将·地奇星·凌州团练使",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "单廷珪，或写作单廷圭，是《水浒传》中的人物，原为凌州团练使，与魏定国同守凌州。他骑一匹黑马，着黑甲黑盔，顶插黑羽，使一柄长刀，擅长利用水攻，能筑坝改道以淹敌军，因此得绰号“圣水将”，并训练了一支五百人的水攻部队。朝廷派他征讨梁山时，他与魏定国设伏擒获了梁山将领郝思文和宣赞，但在押送途中被李逵、焦挺、鲍旭等救走。随后关胜用拖刀计将单廷珪打下马生擒，关胜以礼相待，单廷珪感其义而投降梁山，并协助劝降了魏定国。梁山一百零八将大聚义时，单廷珪排第四十四位，上应地奇星，任马军小彪将兼远探出哨头领。接受招安后，他随军征讨辽国及平定田虎、王庆等叛乱。在征讨方腊的战役中，他与魏定国攻打歙州时被诱入陷阱，双双跌落深坑，被伏兵杀死。",
+  "events": [
+    {
+      "title": "奉旨征讨梁山",
+      "desc": "单廷珪与魏定国受太师蔡京之命，率凌州官军征讨梁山泊。初次交锋，单廷珪与魏定国设计诱捕了梁山将领郝思文和宣赞，并押送京城，途中被李逵等救走。",
+      "source": {
+        "work": "Water Margin",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "关胜拖刀计擒单廷珪",
+      "desc": "关胜与单廷珪单挑，关胜佯败逃走，单廷珪追赶时被关胜回身一刀打下马，束手就擒。关胜以礼相待，说服单廷珪投降梁山。",
+      "source": {
+        "work": "Water Margin",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "归顺梁山并劝降魏定国",
+      "desc": "单廷珪感念关胜的义气，同意加入梁山，并与关胜一同说服魏定国也投降梁山，二人从此成为梁山好汉。",
+      "source": {
+        "work": "Water Margin",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "梁山一百零八将大聚义，单廷珪排第四十四位，上应地奇星，任马军小彪将兼远探出哨头领。",
+      "source": {
+        "work": "Water Margin",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊中伏身亡",
+      "desc": "征讨方腊时，单廷珪与魏定国奉命攻打歙州，被诱入陷阱，双双跌落深坑，被伏兵杀死。",
+      "source": {
+        "work": "Water Margin",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "长刀"
+  ],
+  "skills": [
+    "引水淹敌",
+    "统领水攻部队",
+    "骑术"
+  ],
+  "domains": [
+    "水攻",
+    "军事"
+  ],
+  "mounts": [
+    "黑马"
+  ],
+  "portrait": "/p/shuihu/portraits/shan_tinggui.webp",
+  "thumb": "/p/shuihu/thumbs/shan_tinggui.webp"
+}

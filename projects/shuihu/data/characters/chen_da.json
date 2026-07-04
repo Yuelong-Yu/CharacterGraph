@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "id": "chen_da",
+  "name_zh": "陈达",
+  "name_en": "Chen Da",
+  "aliases": [
+    "跳涧虎",
+    "地周星",
+    "Chen Da"
+  ],
+  "epithet": "跳涧虎·地周星·少华山老二",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "陈达，古典名著《水浒传》中的人物，一百单八将之一，绰号“跳涧虎”，上应地周星。邺城人氏，原是少华山二寨主，与大寨主史进、三寨主朱武聚义。因史进与鲁智深交好，受到梁山招揽，陈达随史进等人一同入伙。梁山大聚义时，排第七十二位，担任马军小彪将兼远探出哨头领。后随梁山军征讨方腊，在昱岭关之战中中箭身亡，追封义节郎。陈达武艺中等，性格勇猛，但缺乏谋略，在梁山多次战役中担任先锋或探哨角色。",
+  "events": [
+    {
+      "title": "少华山聚义",
+      "desc": "陈达与朱武、史进在少华山落草，陈达为二寨主，三人结拜为兄弟。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "结识鲁智深",
+      "desc": "因史进与鲁智深相识，少华山与梁山势力建立联系，陈达参与相关事件。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "加入梁山",
+      "desc": "史进、朱武、陈达三人率少华山人马正式加入梁山，成为梁山好汉。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大聚义排座次",
+      "desc": "梁山大聚义时，陈达排第七十二位，上应地周星，担任马军小彪将兼远探出哨头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊战死",
+      "desc": "在征讨方腊的昱岭关战役中，陈达中箭身亡，后被追封为义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "骑马冲刺",
+    "侦查探哨"
+  ],
+  "domains": [
+    "马军",
+    "侦查",
+    "先锋"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/chen_da.webp",
+  "thumb": "/p/shuihu/thumbs/chen_da.webp"
+}

@@ -327,6 +327,630 @@
       "category": "shijing",
       "era_layer": 0,
       "epithet": "京师泼皮·没毛大虫"
+    },
+    {
+      "slug": "li_ying",
+      "name_zh": "李应",
+      "name_en": "Li Ying",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "扑天雕·天富星·独龙冈李家庄"
+    },
+    {
+      "slug": "xu_ning",
+      "name_zh": "徐宁",
+      "name_en": "Xu Ning",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "金枪手·天祐星·金枪班教师"
+    },
+    {
+      "slug": "suo_chao",
+      "name_zh": "索超",
+      "name_en": "Suo Chao",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "急先锋·天空星·大名府兵马都监"
+    },
+    {
+      "slug": "mu_hong",
+      "name_zh": "穆弘",
+      "name_en": "Mu Hong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "没遮拦·天究星·揭阳镇霸主"
+    },
+    {
+      "slug": "li_jun",
+      "name_zh": "李俊",
+      "name_en": "Li Jun",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "混江龙·天寿星·后为暹罗王"
+    },
+    {
+      "slug": "jie_zhen",
+      "name_zh": "解珍",
+      "name_en": "Jie Zhen",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "两头蛇·天暴星·登州猎户"
+    },
+    {
+      "slug": "jie_bao",
+      "name_zh": "解宝",
+      "name_en": "Jie Bao",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "双尾蝎·天哭星·登州猎户"
+    },
+    {
+      "slug": "zhu_wu",
+      "name_zh": "朱武",
+      "name_en": "Zhu Wu",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "神机军师·地魁星·少华山"
+    },
+    {
+      "slug": "huang_xin",
+      "name_zh": "黄信",
+      "name_en": "Huang Xin",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "镇三山·地煞星·青州兵马都监"
+    },
+    {
+      "slug": "sun_li",
+      "name_zh": "孙立",
+      "name_en": "Sun Li",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "病尉迟·地勇星·登州兵马提辖"
+    },
+    {
+      "slug": "xuan_zan",
+      "name_zh": "宣赞",
+      "name_en": "Xuan Zan",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "丑郡马·地杰星·关胜副将"
+    },
+    {
+      "slug": "hao_siwen",
+      "name_zh": "郝思文",
+      "name_en": "Hao Siwen",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "井木犴·地雄星·关胜副将"
+    },
+    {
+      "slug": "han_tao",
+      "name_zh": "韩滔",
+      "name_en": "Han Tao",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "百胜将·地威星·呼延灼副将"
+    },
+    {
+      "slug": "peng_qi",
+      "name_zh": "彭玘",
+      "name_en": "Peng Qi",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "天目将·地英星·呼延灼副将"
+    },
+    {
+      "slug": "shan_tinggui",
+      "name_zh": "单廷珪",
+      "name_en": "Shan Tinggui",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "圣水将·地奇星·凌州团练使"
+    },
+    {
+      "slug": "wei_dingguo",
+      "name_zh": "魏定国",
+      "name_en": "Wei Dingguo",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "神火将·地猛星·凌州团练使"
+    },
+    {
+      "slug": "xiao_rang",
+      "name_zh": "萧让",
+      "name_en": "Xiao Rang",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "圣手书生·地文星·书法家"
+    },
+    {
+      "slug": "pei_xuan",
+      "name_zh": "裴宣",
+      "name_en": "Pei Xuan",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "铁面孔目·地正星·饮马川寨主"
+    },
+    {
+      "slug": "ou_peng",
+      "name_zh": "欧鹏",
+      "name_en": "Ou Peng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "摩云金翅·地阔星·黄州军户"
+    },
+    {
+      "slug": "deng_fei",
+      "name_zh": "邓飞",
+      "name_en": "Deng Fei",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "火眼狻猊·地阖星·襄阳人"
+    },
+    {
+      "slug": "yan_shun",
+      "name_zh": "燕顺",
+      "name_en": "Yan Shun",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "锦毛虎·地强星·清风山老大"
+    },
+    {
+      "slug": "yang_lin",
+      "name_zh": "杨林",
+      "name_en": "Yang Lin",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "锦豹子·地暗星·彰德府人"
+    },
+    {
+      "slug": "ling_zhen",
+      "name_zh": "凌振",
+      "name_en": "Ling Zhen",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "轰天雷·地轴星·炮手"
+    },
+    {
+      "slug": "jiang_jing",
+      "name_zh": "蒋敬",
+      "name_en": "Jiang Jing",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "神算子·地会星·落科举子"
+    },
+    {
+      "slug": "lv_fang",
+      "name_zh": "吕方",
+      "name_en": "Lv Fang",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "小温侯·地佐星·对影山落草"
+    },
+    {
+      "slug": "guo_sheng",
+      "name_zh": "郭盛",
+      "name_en": "Guo Sheng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "赛仁贵·地祐星·对影山落草"
+    },
+    {
+      "slug": "an_daoquan",
+      "name_zh": "安道全",
+      "name_en": "An Daoquan",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "神医·地灵星·建康府医师"
+    },
+    {
+      "slug": "huangfu_duan",
+      "name_zh": "皇甫端",
+      "name_en": "Huangfu Duan",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "紫髯伯·地兽星·兽医"
+    },
+    {
+      "slug": "wang_ying",
+      "name_zh": "王英",
+      "name_en": "Wang Ying",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "矮脚虎·地微星·清风山老二"
+    },
+    {
+      "slug": "bao_xu",
+      "name_zh": "鲍旭",
+      "name_en": "Bao Xu",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "丧门神·地暴星·枯树山寨主"
+    },
+    {
+      "slug": "fan_rui",
+      "name_zh": "樊瑞",
+      "name_en": "Fan Rui",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "混世魔王·地然星·芒砀山寨主"
+    },
+    {
+      "slug": "kong_ming",
+      "name_zh": "孔明",
+      "name_en": "Kong Ming",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "毛头星·地猖星·白虎山孔家庄"
+    },
+    {
+      "slug": "kong_liang",
+      "name_zh": "孔亮",
+      "name_en": "Kong Liang",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "独火星·地狂星·白虎山孔家庄"
+    },
+    {
+      "slug": "xiang_chong",
+      "name_zh": "项充",
+      "name_en": "Xiang Chong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "八臂哪吒·地飞星·芒砀山"
+    },
+    {
+      "slug": "li_gun",
+      "name_zh": "李衮",
+      "name_en": "Li Gun",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "飞天大圣·地走星·芒砀山"
+    },
+    {
+      "slug": "jin_dajian",
+      "name_zh": "金大坚",
+      "name_en": "Jin Dajian",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "玉臂匠·地巧星·玉工"
+    },
+    {
+      "slug": "ma_lin",
+      "name_zh": "马麟",
+      "name_en": "Ma Lin",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "铁笛仙·地明星·建康人"
+    },
+    {
+      "slug": "tong_wei",
+      "name_zh": "童威",
+      "name_en": "Tong Wei",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "出洞蛟·地进星·浔阳江贩私盐"
+    },
+    {
+      "slug": "tong_meng",
+      "name_zh": "童猛",
+      "name_en": "Tong Meng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "翻江蜃·地退星·浔阳江贩私盐"
+    },
+    {
+      "slug": "meng_kang",
+      "name_zh": "孟康",
+      "name_en": "Meng Kang",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "玉幡竿·地满星·造船匠"
+    },
+    {
+      "slug": "hou_jian",
+      "name_zh": "侯健",
+      "name_en": "Hou Jian",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "通臂猿·地遂星·裁缝"
+    },
+    {
+      "slug": "chen_da",
+      "name_zh": "陈达",
+      "name_en": "Chen Da",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "跳涧虎·地周星·少华山老二"
+    },
+    {
+      "slug": "yang_chun",
+      "name_zh": "杨春",
+      "name_en": "Yang Chun",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "白花蛇·地隐星·少华山老三"
+    },
+    {
+      "slug": "zheng_tianshou",
+      "name_zh": "郑天寿",
+      "name_en": "Zheng Tianshou",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "白面郎君·地异星·清风山老三"
+    },
+    {
+      "slug": "tao_zongwang",
+      "name_zh": "陶宗旺",
+      "name_en": "Tao Zongwang",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "九尾龟·地理星·光州田户"
+    },
+    {
+      "slug": "song_qing",
+      "name_zh": "宋清",
+      "name_en": "Song Qing",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "铁扇子·地俊星·宋江之弟"
+    },
+    {
+      "slug": "yue_he",
+      "name_zh": "乐和",
+      "name_en": "Yue He",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "铁叫子·地乐星·登州孙立小舅"
+    },
+    {
+      "slug": "gong_wang",
+      "name_zh": "龚旺",
+      "name_en": "Gong Wang",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "花项虎·地捷星·张清副将"
+    },
+    {
+      "slug": "ding_desun",
+      "name_zh": "丁得孙",
+      "name_en": "Ding Desun",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "中箭虎·地速星·张清副将"
+    },
+    {
+      "slug": "mu_chun",
+      "name_zh": "穆春",
+      "name_en": "Mu Chun",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "小遮拦·地镇星·揭阳镇穆弘之弟"
+    },
+    {
+      "slug": "cao_zheng",
+      "name_zh": "曹正",
+      "name_en": "Cao Zheng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "操刀鬼·地羁星·林冲徒弟"
+    },
+    {
+      "slug": "song_wan",
+      "name_zh": "宋万",
+      "name_en": "Song Wan",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "云里金刚·地魔星·梁山初创元老"
+    },
+    {
+      "slug": "du_qian",
+      "name_zh": "杜迁",
+      "name_en": "Du Qian",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "摸着天·地妖星·梁山初创元老"
+    },
+    {
+      "slug": "xue_yong",
+      "name_zh": "薛永",
+      "name_en": "Xue Yong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "病大虫·地幽星·卖艺武师"
+    },
+    {
+      "slug": "shi_en",
+      "name_zh": "施恩",
+      "name_en": "Shi En",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "金眼彪·地伏星·孟州牢营小管营"
+    },
+    {
+      "slug": "li_zhong",
+      "name_zh": "李忠",
+      "name_en": "Li Zhong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "打虎将·地僻星·史进开手师父"
+    },
+    {
+      "slug": "zhou_tong",
+      "name_zh": "周通",
+      "name_en": "Zhou Tong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "小霸王·地空星·桃花山寨主"
+    },
+    {
+      "slug": "tang_long",
+      "name_zh": "汤隆",
+      "name_en": "Tang Long",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "金钱豹子·地孤星·铁匠·徐宁表弟"
+    },
+    {
+      "slug": "zou_yuan",
+      "name_zh": "邹渊",
+      "name_en": "Zou Yuan",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "出林龙·地短星·登云山寨主"
+    },
+    {
+      "slug": "zou_run",
+      "name_zh": "邹润",
+      "name_en": "Zou Run",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "独角龙·地角星·邹渊侄子"
+    },
+    {
+      "slug": "zhu_gui",
+      "name_zh": "朱贵",
+      "name_en": "Zhu Gui",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "旱地忽律·地囚星·梁山南山酒店"
+    },
+    {
+      "slug": "zhu_fu",
+      "name_zh": "朱富",
+      "name_en": "Zhu Fu",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "笑面虎·地藏星·朱贵弟弟·沂州酒店"
+    },
+    {
+      "slug": "cai_fu",
+      "name_zh": "蔡福",
+      "name_en": "Cai Fu",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "铁臂膊·地平星·大名府刽子手"
+    },
+    {
+      "slug": "cai_qing",
+      "name_zh": "蔡庆",
+      "name_en": "Cai Qing",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "一枝花·地损星·大名府刽子手"
+    },
+    {
+      "slug": "li_li",
+      "name_zh": "李立",
+      "name_en": "Li Li",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "催命判官·地奴星·揭阳岭黑店"
+    },
+    {
+      "slug": "li_yun",
+      "name_zh": "李云",
+      "name_en": "Li Yun",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "青眼虎·地察星·沂水县都头"
+    },
+    {
+      "slug": "jiao_ting",
+      "name_zh": "焦挺",
+      "name_en": "Jiao Ting",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "没面目·地恶星·相扑好手"
+    },
+    {
+      "slug": "shi_yong",
+      "name_zh": "石勇",
+      "name_en": "Shi Yong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "石将军·地丑星·送信人"
+    },
+    {
+      "slug": "sun_xin",
+      "name_zh": "孙新",
+      "name_en": "Sun Xin",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "小尉迟·地数星·孙立之弟·登州酒店"
+    },
+    {
+      "slug": "gu_dasao",
+      "name_zh": "顾大嫂",
+      "name_en": "Gu Dasao",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "母大虫·地阴星·孙新之妻"
+    },
+    {
+      "slug": "zhang_qing_cai",
+      "name_zh": "张青",
+      "name_en": "Zhang Qing",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "菜园子·地刑星·十字坡黑店"
+    },
+    {
+      "slug": "sun_erniang",
+      "name_zh": "孙二娘",
+      "name_en": "Sun Erniang",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "母夜叉·地壮星·十字坡黑店·张青之妻"
+    },
+    {
+      "slug": "wang_dingliu",
+      "name_zh": "王定六",
+      "name_en": "Wang Dingliu",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "活闪婆·地劣星·建康府卖酒"
+    },
+    {
+      "slug": "yu_baosi",
+      "name_zh": "郁保四",
+      "name_en": "Yu Baosi",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "险道神·地健星·青州强人·掌帅旗"
+    },
+    {
+      "slug": "bai_sheng",
+      "name_zh": "白胜",
+      "name_en": "Bai Sheng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "白日鼠·地耗星·黄泥冈卖酒"
+    },
+    {
+      "slug": "shi_qian",
+      "name_zh": "时迁",
+      "name_en": "Shi Qian",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "鼓上蚤·地贼星·神偷"
+    },
+    {
+      "slug": "duan_jingzhu",
+      "name_zh": "段景住",
+      "name_en": "Duan Jingzhu",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "金毛犬·地狗星·盗马贼"
+    },
+    {
+      "slug": "du_xing",
+      "name_zh": "杜兴",
+      "name_en": "Du Xing",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "鬼脸儿·地全星·李应管家"
     }
   ],
   "artifacts": [

@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "id": "wang_ying",
+  "name_zh": "王英",
+  "name_en": "Wang Ying",
+  "aliases": [
+    "矮脚虎",
+    "地微星",
+    "王矮虎"
+  ],
+  "epithet": "矮脚虎·地微星·清风山老二",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "王英，古典名著《水浒传》中的人物，一百单八将之一，绰号“矮脚虎”。两淮人氏，车夫出身。原为清风山二寨主，与燕顺、郑天寿一同占山为王。因救助宋江，大闹青州，而到梁山入伙。三打祝家庄后娶扈三娘为妻。梁山大聚义时，排第五十八位，上应“地微星”，职司为专掌三军内探事马军头领。征方腊时，在睦州与敌将郑彪交战，被郑彪一枪挑于马下，战死。后追封义节郎。王英生性粗鲁好色，但武艺不凡，与扈三娘夫妻二人同为梁山马军头领，屡立战功。",
+  "events": [
+    {
+      "title": "清风山落草为寇",
+      "desc": "王英原为车夫，后因犯罪流落江湖，与燕顺、郑天寿在清风山结伙，成为二寨主，专干打家劫舍的勾当。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "救助宋江结识好汉",
+      "desc": "宋江因杀阎婆惜被发配江州，途经清风山时被王英等人擒获。王英敬重宋江之名，释放并结拜，后因宋江被陷害而大闹青州。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大闹青州逼上梁山",
+      "desc": "为救宋江，王英与燕顺等好汉合力攻打青州，杀死知府，最终率领清风山人马一起投奔梁山。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "三打祝家庄娶扈三娘",
+      "desc": "梁山攻打祝家庄时，王英色心起，主动出战扈三娘，却被生擒。后扈三娘被林冲所擒，宋江做主将扈三娘许配给王英，二人成婚。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次列地微星",
+      "desc": "梁山大聚义时，王英排名第五十八位，上应地微星，与妻子扈三娘一同担任专掌三军内探事马军头领。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊战死睦州",
+      "desc": "宋江率军征讨方腊，在睦州之战中，王英与敌将郑彪交战，不敌被刺死，成为梁山战死的将领之一，后追封义节郎。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/wang_ying.webp",
+  "thumb": "/p/shuihu/thumbs/wang_ying.webp"
+}

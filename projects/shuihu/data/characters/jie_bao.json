@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "jie_bao",
+  "name_zh": "解宝",
+  "name_en": "Jie Bao",
+  "aliases": [
+    "双尾蝎",
+    "天哭星"
+  ],
+  "epithet": "双尾蝎·天哭星·登州猎户",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "解宝，古典名著《水浒传》中的人物，一百单八将之一，绰号“双尾蝎”，星号天哭星。原是登州猎户，与兄长解珍以狩猎为生，相依为命。因猎虎被地主毛太公设计陷害，与解珍一同被诬陷入狱。后得到顾大嫂、孙新等人相助，越狱并反出登州，投奔梁山泊。梁山大聚义时，解宝排第三十五位，上应天哭星，职司为步军头领。在征讨方腊的战役中，解宝随军攻打乌龙岭，不幸战死。朝廷追封其为忠武郎。解宝与解珍并称“登州双猎”，以勇猛和猎术著称。",
+  "events": [
+    {
+      "title": "猎虎被陷害",
+      "desc": "解宝与兄长解珍在登州山中猎虎，虎中箭后滚落至地主毛太公后园。二人前往讨虎，毛太公不但不还，反诬陷他们抢劫，勾结官府将二人打入死牢。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "越狱反登州",
+      "desc": "解珍解宝在狱中受尽折磨，表姐顾大嫂与孙新、孙立等人设计劫牢，救出二人。众人合力杀死毛太公一家，随后反出登州，投奔梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "战死乌龙岭",
+      "desc": "征讨方腊时，解宝随宋江攻打乌龙岭。因山路险峻，解宝与解珍奉命从小路攀爬偷袭，不料被敌军发现，解宝被滚石砸中，坠崖身亡。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/jie_bao.webp",
+  "thumb": "/p/shuihu/thumbs/jie_bao.webp"
+}

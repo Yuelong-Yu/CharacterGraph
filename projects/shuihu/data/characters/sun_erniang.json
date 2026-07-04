@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "id": "sun_erniang",
+  "name_zh": "孙二娘",
+  "name_en": "Sun Erniang",
+  "aliases": [
+    "孙二娘",
+    "母夜叉",
+    "地壮星",
+    "Sun Erniang"
+  ],
+  "epithet": "母夜叉·地壮星·十字坡黑店·张青之妻",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "孙二娘是《水浒传》中的人物，绰号“母夜叉”，梁山一百单八将之一，排第一百零三位，上应地壮星。她是山夜叉孙元的女儿，与丈夫“菜园子”张青在孟州大树十字坡下开设黑店，以蒙汗药麻翻过往客商，谋财害命。武松刺配孟州途经其店，孙二娘试图在酒中下药，被武松识破并打翻在地。恰逢张青赶回，问明缘由后与武松结拜为兄弟。武松在鸳鸯楼杀死张都监等人后，孙二娘协助他改扮成行者，投奔二龙山。不久夫妻二人也加入二龙山。三山聚义后，孙二娘仍以开酒店为掩护，为梁山打探消息、接应好汉。她常参与战斗，有时乔装民妇混入敌营配合义军行动。梁山大聚义时，她被任命为打听声息、邀接来宾的头领。征讨方腊时，在清溪县被杜微的飞刀击中身亡，后追封为“旌德郡君”。孙二娘性格泼辣凶悍，武艺不俗，是梁山女将中极具特色的一位。",
+  "events": [
+    {
+      "title": "十字坡开店害人",
+      "desc": "孙二娘与丈夫张青在孟州十字坡开黑店，用蒙汗药麻翻过往客商，谋取其财物并做人肉馒头。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "武松识破蒙汗药",
+      "desc": "武松刺配孟州途经十字坡，故意言语调戏孙二娘，孙二娘在酒中下蒙汗药，被武松识破并反将其打倒在地。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "张青武松结拜",
+      "desc": "张青赶回，得知武松是打虎英雄，连忙赔罪，并提议结拜为兄弟，孙二娘亦与武松相认。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "助武松改扮行者",
+      "desc": "武松在鸳鸯楼血溅张都监府后，孙二娘与张青帮助他乔装改扮成行者模样，掩护其逃离。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "投奔二龙山",
+      "desc": "武松先行投奔二龙山，随后孙二娘与张青也关闭黑店，加入二龙山成为鲁智深、杨志等好汉的伙伴。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山聚义任头领",
+      "desc": "三山聚义后，孙二娘随众上梁山，大聚义时排第一百零三位，上应地壮星，负责打探消息、接待来宾。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊战死",
+      "desc": "征讨方腊期间，孙二娘在清溪县与敌军交战，被杜微的飞刀击中身亡。后朝廷追封其为旌德郡君。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "下蒙汗药",
+    "乔装改扮",
+    "打探情报",
+    "接应头领"
+  ],
+  "domains": [
+    "情报",
+    "酒店",
+    "接应"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/sun_erniang.webp",
+  "thumb": "/p/shuihu/thumbs/sun_erniang.webp"
+}

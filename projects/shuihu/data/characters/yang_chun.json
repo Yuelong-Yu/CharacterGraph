@@ -1,0 +1,134 @@
+{
+  "schema_version": 3,
+  "id": "yang_chun",
+  "name_zh": "杨春",
+  "name_en": "Yang Chun",
+  "aliases": [
+    "白花蛇",
+    "White Flower Serpent",
+    "地隐星"
+  ],
+  "epithet": "白花蛇·地隐星·少华山老三",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "杨春，古典名著《水浒传》中的人物，蒲州解良人氏，绰号“白花蛇”。原为少华山三头领之一，与朱武、陈达结拜。因陈达劫掠华阴县被史进擒获，朱武与杨春以兄弟情义打动史进，救回陈达并与之结交。后因史进与少华山往来密信被猎户告发，官府围剿史家庄，史进烧庄与众头领一同杀出，但未留在少华山，后辗转回归并成为大寨主。史进因救画匠之女被华州贺太守擒获，鲁智深独闯华州亦被俘，少华山向梁山求救。梁山智取华州救出二人后，少华山众人随史进加入梁山。梁山大聚义时，杨春排第七十三位，上应地隐星，担任马军小彪将兼远探出哨头领。征方腊时，于昱岭关遭庞万春伏击，与史进、陈达等五人一同中箭身亡，追封义节郎。",
+  "events": [
+    {
+      "title": "少华山结义",
+      "desc": "杨春与朱武、陈达在少华山聚义，杨春居第三位，三人结为生死兄弟，劫富济贫。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "陈达被擒，苦肉计救兄弟",
+      "desc": "陈达劫掠华阴县时被史进擒获，朱武与杨春前往史家庄跪求释放，以同生共死之义感动史进，陈达获释。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与史进结交",
+      "desc": "史进敬佩三人义气，与少华山头领互赠礼物，时常往来宴请，关系密切。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "火烧史家庄",
+      "desc": "猎户告发史进与少华山勾结，官府围庄。史进拒绝出卖兄弟，与朱武、杨春等杀出，并火烧庄园。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "史进入伙少华山",
+      "desc": "史进寻找师父王进未果，返回少华山，被三人推举为大寨主，杨春仍为三头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "史进鲁智深被擒",
+      "desc": "史进为救画匠之女夜闯华州被擒，鲁智深独行营救亦中伏被俘。杨春与朱武、陈达商议向梁山求援。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山智取华州",
+      "desc": "梁山好汉假扮朝廷钦差，诱杀贺太守，攻破华州救出史进和鲁智深。杨春等少华山众人随史进加入梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义",
+      "desc": "一百零八将齐聚梁山，杨春排第七十三位，上应地隐星，任马军小彪将兼远探出哨头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征辽",
+      "desc": "梁山受招安后，杨春随军征讨辽国，参与多次战役，立功。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "昱岭关战死",
+      "desc": "征方腊时，杨春与史进、陈达等六人攻昱岭关，遭守将庞万春伏击，乱箭射死，追封义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "长刀"
+  ],
+  "skills": [
+    "使长刀",
+    "骑马侦查"
+  ],
+  "domains": [
+    "侦查",
+    "马战"
+  ],
+  "mounts": [
+    "战马"
+  ],
+  "portrait": "/p/shuihu/portraits/yang_chun.webp",
+  "thumb": "/p/shuihu/thumbs/yang_chun.webp"
+}

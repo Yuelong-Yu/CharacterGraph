@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "id": "xue_yong",
+  "name_zh": "薛永",
+  "name_en": "Xue Yong",
+  "aliases": [
+    "病大虫",
+    "Sick Tiger"
+  ],
+  "epithet": "病大虫·地幽星·卖艺武师",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "薛永是《水浒传》中的人物，绰号“病大虫”，河南洛阳人。其祖父曾为军官，因得罪同僚丢官，家道中落。薛永以街头卖艺、卖药为生，擅长棍棒、枪矛等长兵器。他来到揭阳镇卖艺，因未拜会当地豪强穆弘、穆春兄弟，无人赏钱。宋江路过慷慨打赏，穆春上前挑衅，薛永出手相助，击败穆春，二人结识。穆氏兄弟追捕并殴打薛永，后因得知宋江身份而道歉释放。宋江在江州因题反诗被判死刑，梁山好汉劫法场，薛永与李俊等在白龙庙聚义接应。随后薛永利用徒弟侯健在黄文炳家做裁缝的关系，协助梁山杀死黄文炳一家，遂上梁山。梁山大聚义时排第八十四位，上应地幽星，任步军将校。征讨方腊时，在昱岭关与史进、石秀、陈达、杨春、李忠一同被庞万春射杀，追封义节郎。",
+  "events": [
+    {
+      "title": "卖艺遇宋江",
+      "desc": "薛永在揭阳镇卖艺，因未拜会穆氏兄弟无人赏钱。宋江路过慷慨打赏，穆春挑衅，薛永助宋江击败穆春，二人相识。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "白龙庙聚义",
+      "desc": "宋江江州被判死刑，梁山好汉劫法场后撤至白龙庙，薛永驾船接应，与宋江等二十九位好汉聚义。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "智杀黄文炳",
+      "desc": "薛永利用徒弟侯健在黄文炳家做裁缝的关系，帮助梁山好汉潜入黄家，杀死黄文炳及其家人，为宋江报仇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义",
+      "desc": "梁山一百零八将排座次，薛永位列第八十四位，上应地幽星，担任步军将校。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "昱岭关战死",
+      "desc": "征方腊时，薛永与史进、石秀、陈达、杨春、李忠奉命攻打昱岭关，遭守将庞万春箭雨伏击，五人全部阵亡。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "棍棒",
+    "枪矛"
+  ],
+  "skills": [
+    "使枪棒",
+    "街头卖艺"
+  ],
+  "domains": [
+    "格斗",
+    "军事"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/xue_yong.webp",
+  "thumb": "/p/shuihu/thumbs/xue_yong.webp"
+}

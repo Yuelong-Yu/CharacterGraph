@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "id": "zou_run",
+  "name_zh": "邹润",
+  "name_en": "Zou Run",
+  "aliases": [
+    "独角龙",
+    "Single Horned Dragon",
+    "地角星"
+  ],
+  "epithet": "独角龙·地角星·邹渊侄子",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "邹润是《水浒传》中的人物，山东莱州人，因脑后生有一个肉瘤，绰号“独角龙”。他与叔父邹渊年龄相仿，一起带领八九十名喽啰在登云山落草，劫富济贫。邹氏叔侄与孙新、杨林、邓飞、石勇等人交好，后来因参与营救被诬陷的解珍、解宝兄弟而加入孙立为首的劫狱团伙。劫狱成功后，众人前往梁山，途经祝家庄时，孙立利用与祝家庄教头栾廷玉的同门关系，假意投靠，邹润等人随行卧底。在梁山第三次攻打祝家庄时，里应外合攻破庄园，邹润正式入伙。梁山大聚义时，邹润排第九十一位，上应地角星，担任步兵将校。招安后，他随军征讨辽国、田虎、王庆、方腊，屡立战功。战后朝廷封其为武奕郎，但邹润不愿为官，辞官返回登云山，终老于乡野。",
+  "events": [
+    {
+      "title": "登云山落草",
+      "desc": "邹润与叔父邹渊在登云山聚集八九十名喽啰，劫富济贫，并与孙新、杨林、邓飞、石勇等人结为好友，成为当地一股绿林势力。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与营救解珍解宝",
+      "desc": "解珍、解宝被毛太公陷害入狱，顾大嫂串联孙新、孙立、乐和以及邹渊、邹润等人，商议劫狱。邹润叔侄同意加入，在乐和内应下，众人杀入牢房救出解氏兄弟，并前往毛太公家复仇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "卧底祝家庄",
+      "desc": "劫狱后众人投奔梁山，路过祝家庄时，孙立提出利用与教头栾廷玉的同门关系假意助战。邹润跟随孙立等人进入祝家庄，取得信任后，在梁山第三次攻打时里应外合，攻破祝家庄。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山聚义",
+      "desc": "邹润在梁山排第九十一位，上应地角星，担任步兵将校。大聚义后与其他好汉一起接受朝廷招安。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊",
+      "desc": "邹润随宋江征讨方腊，参与多场战斗。在最终决战中幸存，成为少数存活的好汉之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "辞官归隐",
+      "desc": "征讨方腊后，朝廷封邹润为武奕郎，但他不愿为官，辞去官职，返回登云山过着平民生活，得以善终。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zou_run.webp",
+  "thumb": "/p/shuihu/thumbs/zou_run.webp"
+}

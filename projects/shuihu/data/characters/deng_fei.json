@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "id": "deng_fei",
+  "name_zh": "邓飞",
+  "name_en": "Deng Fei",
+  "aliases": [
+    "火眼狻猊",
+    "Fiery Eyed Suanni"
+  ],
+  "epithet": "火眼狻猊·地阖星·襄阳人",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "邓飞是《水浒传》中的人物，祖籍襄阳，因双眼布满血丝而被称为“火眼狻猊”。他武艺高强，擅长使用一条带刺的长铁链作为武器。最初，邓飞与裴宣、孟康在饮马川占山为王，是三位头领中的第二位。后经旧识杨林引荐，结识了前往蓟州寻找公孙胜的梁山好汉戴宗，在戴宗的邀请下，邓飞与饮马川的弟兄们一同加入梁山。梁山一百零八将聚义后，邓飞排第四十九位，属七十二地煞星中的地阖星，担任梁山马军小彪将兼斥候（虎崽巡逻队指挥官）。受招安后，他随宋江等人征讨辽国，屡立战功。在征讨方腊的战役中，梁山军攻打杭州北门，索超被敌将石宝斩杀，邓飞为替索超报仇，冲上前去与石宝交战，但终因实力不济，被石宝一刀劈为两段，壮烈牺牲。",
+  "events": [
+    {
+      "title": "饮马川聚义",
+      "desc": "邓飞与裴宣、孟康在饮马川结寨，成为三位首领中的第二位。他因眼红如血，人称“火眼狻猊”，使用带刺铁链，武艺高强。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "经杨林引荐加入梁山",
+      "desc": "杨林与邓飞是旧识，当戴宗路过饮马川时，杨林引荐邓飞三人与戴宗相识。戴宗邀请他们加入梁山，邓飞等欣然同意，成为梁山好汉。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "梁山一百零八将聚齐后，邓飞被排为第四十九位，对应地阖星，并担任马军小彪将兼斥候（虎崽巡逻队指挥官），统领骑兵侦察。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨辽国",
+      "desc": "宋江率梁山军接受招安后，奉旨征辽。邓飞作为马军将领参与作战，在多次战斗中表现英勇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "杭州之战殉难",
+      "desc": "征讨方腊时，梁山军攻打杭州。索超在北门被方腊部将石宝斩杀，邓飞愤怒上前报仇，但武艺不敌石宝，被石宝一刀劈为两段，战死沙场。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "带刺铁链"
+  ],
+  "skills": [
+    "使用铁链攻击"
+  ],
+  "domains": [
+    "战斗",
+    "骑兵巡逻"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/deng_fei.webp",
+  "thumb": "/p/shuihu/thumbs/deng_fei.webp"
+}

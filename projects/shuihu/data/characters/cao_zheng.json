@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "id": "cao_zheng",
+  "name_zh": "曹正",
+  "name_en": "Cao Zheng",
+  "aliases": [
+    "操刀鬼",
+    "地羁星",
+    "Knife-wielding Demon"
+  ],
+  "epithet": "操刀鬼·地羁星·林冲徒弟",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "曹正，开封人氏，屠户出身，绰号“操刀鬼”，曾拜林冲为师学习武艺。因在山东经商失败，遂在当地娶妻，于黄泥岗附近开设酒店。偶然遇见落魄的杨志，二人交手后曹正敬其武艺，建议杨志投奔二龙山邓龙一伙。途中遇到鲁智深，三人合谋设计：曹正与杨志假装擒住鲁智深献给邓龙，邓龙中计开门，鲁智深趁机杀死邓龙，夺取二龙山。曹正遂成为二龙山头领之一。后二龙山、桃花山、白虎山三山聚义，一同加入梁山。梁山大聚义时，曹正排第八十一位，上应地羁星，负责屠宰牲口。征方腊时，曹正随军攻打宣州，被毒箭射中，中毒身亡。追封义节郎。",
+  "events": [
+    {
+      "title": "酒店巧遇杨志",
+      "desc": "杨志因押送花石纲被劫而落魄，在曹正酒店白吃白喝，曹正与之交手，发现其武艺不凡，问明身份后建议杨志投奔二龙山邓龙。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第17回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "设计夺取二龙山",
+      "desc": "曹正与杨志途中遇鲁智深，三人合谋：曹正和杨志假意擒住鲁智深献给邓龙，邓龙开寨门后鲁智深挣脱并杀死邓龙，三人接管山寨。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第17回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "三山聚义上梁山",
+      "desc": "二龙山、桃花山、白虎山三山人马在呼延灼征讨梁山时共同抗敌，后随宋江一同加入梁山，曹正成为梁山好汉之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第58回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "大聚义排位与职责",
+      "desc": "梁山一百零八将排座次，曹正列第八十一位，星号地羁星，负责屠宰牲口，为梁山后勤保障。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第71回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "征方腊战死宣州",
+      "desc": "梁山受招安后征讨方腊，曹正在攻打宣州时被毒箭射中，中毒身亡，后被追封为义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第112回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "屠宰牲口",
+    "武术格斗"
+  ],
+  "domains": [
+    "屠宰",
+    "畜牧"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/cao_zheng.webp",
+  "thumb": "/p/shuihu/thumbs/cao_zheng.webp"
+}

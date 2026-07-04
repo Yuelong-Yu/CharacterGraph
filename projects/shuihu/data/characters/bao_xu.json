@@ -1,0 +1,92 @@
+{
+  "schema_version": 3,
+  "id": "bao_xu",
+  "name_zh": "鲍旭",
+  "name_en": "Bao Xu",
+  "aliases": [
+    "丧门神",
+    "God of Death"
+  ],
+  "epithet": "丧门神·地暴星·枯树山寨主",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "鲍旭是《水浒传》中的人物，面目丑陋，如锅底脸色，眼突唇裂，声音如雷，绰号“丧门神”。原为寇州枯树山寨主，率领一伙喽啰打家劫舍，以一把丧门剑武艺高强。后因李逵和焦挺前来结交，随李逵前往梁山。途中遇宣赞、郝思文被官军押送，鲍旭与李逵、焦挺一同劫囚救出二人，又趁势攻打凌州官军大营，得胜后率部加入梁山。梁山大聚义时，鲍旭排第六十位，属七十二地煞，星号地暴星，担任步军将校，常与李逵协同作战。招安后，他参与征辽、征田虎、王庆等战役，屡立战功。在征讨方腊的杭州之战中，鲍旭随李逵攻北门，斩杀敌将廉明后贪功冒进，冲入城门，遭守将石宝埋伏，被拦腰砍死。朝廷追封其为义节郎。",
+  "events": [
+    {
+      "title": "结识李逵焦挺",
+      "desc": "李逵下山途中遇到焦挺，得知枯树山寨主鲍旭勇猛，便前往枯树山相见。鲍旭欣赏李逵豪爽，同意率部加入梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "救宣赞郝思文",
+      "desc": "鲍旭、李逵、焦挺得知宣赞和郝思文被官军俘虏，押送经过枯树山。三人率众劫囚，救出二人，并一同投奔梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "攻破凌州",
+      "desc": "救出宣赞、郝思文后，鲍旭等人乘胜袭击凌州官军驻地，大败守军，进一步壮大梁山声势，随后一同返回梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义",
+      "desc": "一百零八将齐聚梁山，鲍旭排第六十位，星号地暴星，与李逵同为步军将校，负责冲锋陷阵。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征辽立功",
+      "desc": "梁山受招安后，鲍旭随军北伐辽国，在多次战斗中发挥步战优势，斩杀敌将，为宋军取胜作出贡献。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "杭州之战殒命",
+      "desc": "征讨方腊时，鲍旭随李逵攻打杭州北门。他先斩杀敌将廉明，随后贪功冲入城门，遭敌将石宝埋伏，被腰斩而死。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "丧门剑"
+  ],
+  "skills": [
+    "使丧门剑",
+    "步战"
+  ],
+  "domains": [
+    "死亡",
+    "劫掠",
+    "战争"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/bao_xu.webp",
+  "thumb": "/p/shuihu/thumbs/bao_xu.webp"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 3,
+  "id": "kong_liang",
+  "name_zh": "孔亮",
+  "name_en": "Kong Liang",
+  "aliases": [
+    "独火星",
+    "地狂星"
+  ],
+  "epithet": "独火星·地狂星·白虎山孔家庄",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "孔亮，古典名著《水浒传》中的人物，一百单八将之一，绰号“独火星”。青州人氏，原是孔家庄二少爷，与哥哥孔明同为宋江的徒弟。后因故在白虎山落草，与哥哥孔明聚集人马占据山寨。为救被青州知府杀害的叔父，孔亮与孔明联合二龙山、桃花山的人马，合力攻打青州。攻破青州后，随宋江等一同上了梁山。梁山大聚义时，孔亮排第六十三位，上应地狂星，担任守护中军步军骁将。梁山受招安后，孔亮随军征讨方腊。在昆山之战中，孔亮被方腊麾下大将杀死，后追封为义节郎。孔亮武艺平平，但忠心耿耿，是梁山好汉中的一员。",
+  "events": [
+    {
+      "title": "拜宋江为师",
+      "desc": "孔亮与兄长孔明在孔家庄时，拜宋江为师，学习武艺和为人处世之道，与宋江结下深厚情谊。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "白虎山落草",
+      "desc": "孔亮因与当地豪强冲突，与兄长孔明在白虎山占山为王，聚集喽啰，成为一方草寇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "联合攻打青州",
+      "desc": "为报叔父被杀之仇，孔亮兄弟联合二龙山鲁智深、杨志、武松以及桃花山李忠、周通等人马，合力攻打青州，最终攻破城池。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "加入梁山",
+      "desc": "攻破青州后，孔亮随宋江及二龙山、桃花山好汉一同上梁山，成为梁山泊一员。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大聚义排位",
+      "desc": "梁山一百零八将大聚义时，孔亮排第六十三位，上应地狂星，担任守护中军步军骁将，负责中军安全。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊战死昆山",
+      "desc": "梁山受招安后，孔亮随军征讨方腊。在昆山之战中，孔亮与敌军交战，不幸被方腊部将杀死，后朝廷追封为义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/kong_liang.webp",
+  "thumb": "/p/shuihu/thumbs/kong_liang.webp"
+}

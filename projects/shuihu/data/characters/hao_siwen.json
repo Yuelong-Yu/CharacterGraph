@@ -1,0 +1,63 @@
+{
+  "schema_version": 3,
+  "id": "hao_siwen",
+  "name_zh": "郝思文",
+  "name_en": "Hao Siwen",
+  "aliases": [
+    "井木犴",
+    "Wood Dog of Well"
+  ],
+  "epithet": "井木犴·地雄星·关胜副将",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "郝思文是《水浒传》中的虚构人物，绰号“井木犴”，因其母梦井木犴星宿而怀孕得名。他与关胜结义，同在蒲州担任军官。蔡京调遣关胜征讨梁山时，郝思文作为副将随行。中呼延灼计策，郝思文被扈三娘擒获，归降梁山。后随关胜攻打凌州，被单廷珪、魏定国设计擒获，押解途中被李逵、焦挺、鲍旭救出，并参与攻破凌州。梁山大聚义时，郝思文排第四十一位，上应地雄星，担任马军小彪将兼远探出哨头领。招安后参与征辽和讨伐方腊。在杭州之战中，他与徐宁守北门，遭方腊军突袭被擒，被方腊之子方天定碎剐而死，后追封义节郎。",
+  "events": [
+    {
+      "title": "随关胜征讨梁山被擒归降",
+      "desc": "蔡京调遣关胜率军征讨梁山，郝思文与宣赞为副将。关胜中呼延灼计被擒，郝思文被扈三娘所擒。宋江以礼相待，三人感其诚，遂降梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "攻打凌州被擒后获救",
+      "desc": "关胜请命攻打凌州，郝思文与宣赞随行。战斗中郝思文被单廷珪诱捕，与宣赞一同被押送京城。途经枯树山时被李逵、焦挺、鲍旭救出，随后合力攻破凌州。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义排座次",
+      "desc": "一百零八将齐聚梁山，郝思文排第四十一位，上应地雄星，任马军小彪将兼远探出哨头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊杭州被擒碎剐",
+      "desc": "梁山军攻打杭州时，郝思文与徐宁守北门。方腊军突袭，郝思文被擒，徐宁中箭。郝思文被方腊之子方天定下令碎剐处死，后追封义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/hao_siwen.webp",
+  "thumb": "/p/shuihu/thumbs/hao_siwen.webp"
+}

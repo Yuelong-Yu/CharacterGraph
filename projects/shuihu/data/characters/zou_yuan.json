@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "id": "zou_yuan",
+  "name_zh": "邹渊",
+  "name_en": "Zou Yuan",
+  "aliases": [
+    "出林龙",
+    "Forest Emerging Dragon"
+  ],
+  "epithet": "出林龙·地短星·登云山寨主",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "邹渊原是莱州人，一个流浪汉和赌徒，性格粗鲁但为人正直。他绰号“出林龙”，擅长使用棍棒，与侄子邹润一同在登云山落草，带领八九十名喽啰劫富济贫。邹渊与孙新、杨林、邓飞、石勇等人关系密切。后应顾大嫂之邀，参与劫狱解救被陷害的解珍、解宝兄弟。邹渊与邹润、孙新、顾大嫂、孙立、乐和等人里应外合，成功劫狱，并杀死仇人。随后众人前往梁山，途中恰逢梁山攻打祝家庄受阻。孙立利用与祝家庄教头栾廷玉的同门关系，率邹渊等人假意投靠祝家庄，实则卧底。在祝家庄之战中，邹渊等人配合梁山，里应外合，攻破祝家庄，立下大功。之后邹渊正式加入梁山。梁山排座次时，邹渊位列第九十位，上应地短星，担任步军将校。在梁山受招安后，邹渊随军征讨辽国、田虎、王庆等。在征讨方腊的战役中，邹渊随军攻打清溪县，混战中被敌军骑兵撞倒，遭马踏而死。后追封义节郎。",
+  "events": [
+    {
+      "title": "登云山落草",
+      "desc": "邹渊与侄子邹润在登云山聚集八九十名喽啰，打家劫舍，劫富济贫，成为一方草寇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "劫狱救解珍解宝",
+      "desc": "应顾大嫂之邀，邹渊参与劫狱行动，与孙新、孙立、乐和等人里应外合，成功救出被陷害的解珍、解宝兄弟。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "卧底祝家庄",
+      "desc": "邹渊随孙立假意投靠祝家庄，骗取信任，在梁山第三次攻打祝家庄时作为内应，帮助梁山攻破祝家庄。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "梁山一百零八将大聚义时，邹渊排第九十位，上应地短星，职司步军将校。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "战死清溪县",
+      "desc": "征讨方腊时，邹渊随军攻打清溪县，在混战中被敌军骑兵撞倒并被马踏而死。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "棍棒"
+  ],
+  "skills": [
+    "使棍棒"
+  ],
+  "domains": [
+    "步兵",
+    "绿林"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zou_yuan.webp",
+  "thumb": "/p/shuihu/thumbs/zou_yuan.webp"
+}

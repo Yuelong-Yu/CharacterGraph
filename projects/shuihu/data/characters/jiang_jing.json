@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "jiang_jing",
+  "name_zh": "蒋敬",
+  "name_en": "Jiang Jing",
+  "aliases": [
+    "神算子",
+    "Jiang Jing"
+  ],
+  "epithet": "神算子·地会星·落科举子",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "蒋敬，潭州人氏，落科举子出身。原为黄门山二寨主，因钦慕宋江，率众到梁山入伙。梁山大聚义时，排第五十三位，上应地会星，绰号“神算子”，负责考算山寨钱粮，掌管财务账目，精于计算。征讨方腊时随军出战，战后回朝被授武奕郎。但他不恋官爵，辞官返回潭州为民，终老故里。其人生性聪慧，于算学一道尤为擅长，是梁山后勤财务的核心人物。",
+  "events": [
+    {
+      "title": "落科举子出身",
+      "desc": "蒋敬本是潭州读书人，参加科举未中，成为落科举子，遂弃文从武，浪迹江湖。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "黄门山二寨主",
+      "desc": "蒋敬与摩云金翅欧鹏、铁笛仙马麟、九尾龟陶宗旺一同占据黄门山，他坐第二把交椅，负责山寨事务。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "慕宋江入伙梁山",
+      "desc": "宋江被发配江州途经黄门山，蒋敬等四人久慕宋江之名，遂率全寨人马加入梁山，成为梁山好汉。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大聚义排第五十三位",
+      "desc": "梁山一百零八将大聚义时，蒋敬位列地煞星，排第五十三位，上应地会星，获绰号“神算子”。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "掌管钱粮考算",
+      "desc": "蒋敬在梁山专司考算山寨钱粮出入，负责账目核算与物资调配，为梁山后勤保障做出重要贡献。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊",
+      "desc": "梁山受招安后，蒋敬随宋江征讨方腊，在战事中协助管理军需粮草，最终幸存。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "授官后辞官返乡",
+      "desc": "征方腊回朝，蒋敬被授武奕郎。但他不愿为官，辞去官职返回潭州，以平民身份终老。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "掌管钱粮考算",
+    "精于计算账目",
+    "调配物资"
+  ],
+  "domains": [
+    "财务",
+    "算学"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/jiang_jing.webp",
+  "thumb": "/p/shuihu/thumbs/jiang_jing.webp"
+}

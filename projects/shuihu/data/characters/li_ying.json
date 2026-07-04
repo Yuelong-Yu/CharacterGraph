@@ -1,0 +1,85 @@
+{
+  "schema_version": 3,
+  "id": "li_ying",
+  "name_zh": "李应",
+  "name_en": "Li Ying",
+  "aliases": [
+    "扑天雕",
+    "天富星"
+  ],
+  "epithet": "扑天雕·天富星·独龙冈李家庄",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "李应是古典名著《水浒传》中的人物，一百单八将之一，绰号“扑天雕”。郓州人氏，原为李家庄庄主。他曾修书给祝家庄，索要时迁，却被祝家庄拒绝；与祝彪交战时又被暗箭所伤，因而与祝家庄交恶。梁山攻灭祝家庄后，将他全家赚上梁山。梁山大聚义时，排第十一位，上应天富星，掌管钱粮。征方腊回朝后授中山府郓州都统制，后辞官回乡，重做富豪。",
+  "events": [
+    {
+      "title": "修书索要时迁被拒",
+      "desc": "时迁因偷鸡被祝家庄擒获，李应念及与祝家庄的盟约，写信索要时迁，但祝家庄拒绝放人，导致双方关系破裂。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与祝彪交战受伤",
+      "desc": "李应亲赴祝家庄理论，与祝彪交战，被祝彪暗箭射伤，从此与祝家庄结下深仇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山攻灭祝家庄后被赚上山",
+      "desc": "梁山好汉攻打祝家庄时，利用李应与祝家庄的矛盾，设计将李应全家赚上梁山，李应从此成为梁山一员。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义排第十一位",
+      "desc": "梁山一百零八将排座次时，李应位列第十一，上应天富星，负责掌管梁山钱粮，为山寨后勤保障。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊后授官",
+      "desc": "梁山受招安后，李应随军征讨方腊，战后因功被朝廷授予中山府郓州都统制之职。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "辞官回乡重做富豪",
+      "desc": "李应不愿为官，辞去都统制职务，回到家乡继续经营产业，重过富豪生活。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [
+    "钱粮"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/li_ying.webp",
+  "thumb": "/p/shuihu/thumbs/li_ying.webp"
+}

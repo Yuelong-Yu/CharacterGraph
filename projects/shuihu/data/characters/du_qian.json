@@ -1,0 +1,85 @@
+{
+  "schema_version": 3,
+  "id": "du_qian",
+  "name_zh": "杜迁",
+  "name_en": "Du Qian",
+  "aliases": [
+    "摸着天",
+    "Touching the Sky",
+    "地妖星",
+    "Earthly Fiend Star"
+  ],
+  "epithet": "摸着天·地妖星·梁山初创元老",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "杜迁是《水浒传》中的人物，梁山一百单八将之一，绰号“摸着天”，星号地妖星。他是梁山的初创元老之一，早期与王伦、宋万共同占据梁山泊，位列二寨主。因武艺平平，在晁盖、宋江主政时期地位逐渐下降。林冲被逼上梁山时，王伦因忌惮其才能欲以财物打发，杜迁与宋万力劝王伦收留，林冲最终得以入伙。晁盖等七人劫取生辰纲后投奔梁山，王伦再次猜忌，吴用察觉林冲的不满，设计激林冲火并王伦。林冲杀王伦时，杜迁与宋万被晁盖等人阻拦，无法干预。王伦死后，林冲推举晁盖为寨主，杜迁与宋万不得已归顺。梁山排座次时，杜迁位列第八十三位，职司步军将校。招安后，他随宋江南征北战，参与征辽、讨田虎、王庆等战役。在征讨方腊的战争中，杜迁奉命攻打清溪县，不幸陷入敌阵，被马踏身亡。战后被朝廷追封为义节郎。",
+  "events": [
+    {
+      "title": "成为梁山二寨主",
+      "desc": "杜迁与王伦、宋万最早占据梁山泊，杜迁坐第二把交椅，是梁山的开创元老之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "劝王伦收留林冲",
+      "desc": "林冲遭高俅陷害，逃亡至梁山。王伦担心林冲功高震主，欲以银两打发。杜迁与宋万一起劝说王伦接纳林冲，王伦最终同意。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "晁盖上山时被阻",
+      "desc": "晁盖等七人劫生辰纲后投奔梁山，王伦再次猜忌。吴用设计让林冲火并王伦，杜迁和宋万试图阻拦，但被晁盖等人挡住，无法救援王伦。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "归顺晁盖",
+      "desc": "王伦被杀后，林冲推举晁盖为梁山之主。杜迁和宋万见大势已去，只得归顺晁盖，继续担任头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "梁山一百单八将大聚义，杜迁排名第八十三位，星号地妖星，担任步军将校。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊战死",
+      "desc": "梁山受招安后，杜迁随军征讨方腊。在攻打清溪县的战斗中，杜迁不幸陷入敌阵，被敌军骑兵踩踏而死。战后被追封为义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/du_qian.webp",
+  "thumb": "/p/shuihu/thumbs/du_qian.webp"
+}

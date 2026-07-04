@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "id": "mu_hong",
+  "name_zh": "穆弘",
+  "name_en": "Mu Hong",
+  "aliases": [
+    "穆弘",
+    "没遮拦",
+    "Mu Hong"
+  ],
+  "epithet": "没遮拦·天究星·揭阳镇霸主",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "穆弘，古典名著《水浒传》中的人物，一百单八将之一，绰号“没遮拦”。江州人氏，原为揭阳镇富户，与弟弟穆春一同称霸揭阳镇，是当地一霸。宋江被发配江州时，穆弘参与营救宋江，大闹江州，成为白龙庙二十九英雄之一。上梁山后，穆弘屡立战功，在梁山泊大聚义时排名第二十四位，上应天究星，担任马军八骠骑兼先锋使。后随梁山军征讨方腊，在杭州染病身亡，被追封为忠武郎。",
+  "events": [
+    {
+      "title": "揭阳镇称霸",
+      "desc": "穆弘与弟弟穆春凭借家势在揭阳镇横行霸道，无人敢惹，成为当地一霸。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与营救宋江",
+      "desc": "宋江被押送江州，穆弘与李俊、张顺等英雄一同策划营救，在江州城展开行动。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大闹江州",
+      "desc": "穆弘随众好汉在江州大闹，劫法场救出宋江和戴宗，与官府对抗。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "白龙庙聚义",
+      "desc": "成功救出宋江后，穆弘等二十九位英雄在白龙庙聚会，结为兄弟，共上梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义",
+      "desc": "梁山泊英雄排座次，穆弘位列第二十四位，星号天究星，担任马军八骠骑兼先锋使。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊病逝",
+      "desc": "梁山军征讨方腊时，穆弘随军作战，在杭州染病，不治身亡。后被朝廷追封为忠武郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/mu_hong.webp",
+  "thumb": "/p/shuihu/thumbs/mu_hong.webp"
+}

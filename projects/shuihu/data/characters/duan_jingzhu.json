@@ -1,0 +1,111 @@
+{
+  "schema_version": 3,
+  "id": "duan_jingzhu",
+  "name_zh": "段景住",
+  "name_en": "Duan Jingzhu",
+  "aliases": [
+    "金毛犬",
+    "地狗星",
+    "Golden-haired Hound",
+    "盗马贼"
+  ],
+  "epithet": "金毛犬·地狗星·盗马贼",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "段景住，涿州人氏，绰号“金毛犬”，以盗马为生。他盗取金国王子的照夜玉狮子马，欲献给宋江作为入伙之礼，途经曾头市时被曾氏五虎劫夺。段景住上山报告，晁盖大怒，亲自率兵攻打曾头市，不幸中箭身亡。宋江继任寨主后，梁山好汉攻破曾头市，为晁盖报仇。梁山一百零八将大聚义时，段景住位列第一百零八位，上应地狗星，担任走报机密步军头领，负责传递情报。受招安后，他随军征辽、讨伐田虎、王庆，最后参与征讨方腊。在杭州外海乘船进攻时，遇风浪船翻，段景住不识水性，溺水而死。朝廷追封其为义节郎。",
+  "events": [
+    {
+      "title": "盗取照夜玉狮子马",
+      "desc": "段景住从金国王子处盗得一匹名为“照夜玉狮子”的白色骏马，打算献给宋江以换取入伙梁山的资格。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "途经曾头市被劫马",
+      "desc": "段景住携带宝马经过曾头市时，被曾家五虎拦截，马匹被夺。段景住告知马是献给宋江的，曾家出言辱骂宋江。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "上梁山报告引发晁盖亲征",
+      "desc": "段景住逃至梁山，将马被劫及曾家辱骂之事报告宋江和晁盖。晁盖大怒，不顾宋江劝阻，执意亲自率军攻打曾头市。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "晁盖中箭身亡",
+      "desc": "晁盖在攻打曾头市时，被曾家教师史文恭用毒箭射中面颊，回山后毒发身亡。段景住事件间接导致了梁山领导权更迭。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次位列地狗星",
+      "desc": "宋江成为梁山之主后，举行大聚义，段景住被排为第一百零八位，上应地狗星，担任走报机密步军头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "担任走报机密步军头领",
+      "desc": "段景住负责前线与后方之间的情报传递任务，因其盗马出身的机敏，适合此职。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊时溺死杭州外海",
+      "desc": "在征讨方腊的战役中，段景住随水军乘船进攻杭州，行至钱塘江口遇大风浪，船翻落水，因不习水性而淹死。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "追封义节郎",
+      "desc": "朝廷为表彰段景住在征讨方腊中的贡献，追封其为“义节郎”的荣誉称号。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "盗取马匹",
+    "传递情报"
+  ],
+  "domains": [
+    "盗马",
+    "情报"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/duan_jingzhu.webp",
+  "thumb": "/p/shuihu/thumbs/duan_jingzhu.webp"
+}

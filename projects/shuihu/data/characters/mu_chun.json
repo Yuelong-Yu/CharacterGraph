@@ -1,0 +1,116 @@
+{
+  "schema_version": 3,
+  "id": "mu_chun",
+  "name_zh": "穆春",
+  "name_en": "Mu Chun",
+  "aliases": [
+    "穆春",
+    "Mu Chun",
+    "小遮拦",
+    "Little Unrestrained",
+    "地镇星"
+  ],
+  "epithet": "小遮拦·地镇星·揭阳镇穆弘之弟",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "穆春是古典小说《水浒传》中的人物，绰号“小遮拦”，一百单八将之一，排第八十位，上应地镇星。他与兄长穆弘是揭阳镇富户，称霸一方，当地百姓既敬且畏。宋江因罪被刺配江州，途经揭阳镇时，见薛永卖艺，慷慨赠银，穆春认为挑战其权威，上前挑衅，却被薛永打败。穆春羞怒之下，命镇上客栈不得留宿宋江等人。宋江与押送公差无奈躲入穆家，穆家老父好心收留。穆春兄弟回家后得知，欲报复宋江，宋江连夜逃走。穆春兄弟追至江边，宋江登上张横的船，险遭劫杀，幸得李俊赶到解围。李俊引荐宋江与穆氏兄弟相识，二人敬佩宋江侠名，释薛永，赔礼道歉，结为好友。宋江在江州因题反诗被判死刑，梁山好汉劫法场，穆春兄弟与李俊等人驾船接应，一同上了梁山。梁山大聚义时，穆春任步军将校。招安后，他随军征辽、讨田虎、王庆，在征方腊时，杭州之战后六名头领病倒，穆春留下照料，其兄穆弘病逝。战后穆春授武奕郎，但他辞官返回揭阳镇，平安终老。",
+  "events": [
+    {
+      "title": "揭阳镇称霸",
+      "desc": "穆春与兄长穆弘是揭阳镇富户，势力庞大，当地百姓敬畏有加，二人控制镇上买卖，凡江湖卖艺者须先拜码头才能赚钱。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "刁难宋江",
+      "desc": "宋江在揭阳镇赏赐薛永银两，穆春认为挑战自家权威，当街与宋江冲突，却被薛永打败。穆春随后下令客栈不得接待宋江，迫使宋江露宿。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "夜追宋江",
+      "desc": "穆春兄弟回家后得知宋江住在自家，欲加害。宋江闻讯逃走，穆春兄弟追至江边，宋江上了张横的船，险遭抢劫，幸得李俊解围。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "结识宋江",
+      "desc": "李俊介绍宋江与穆春兄弟相识，二人得知宋江是闻名江湖的义士，羞愧道歉，释放薛永，设宴款待，此后结为好友。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "江州劫法场",
+      "desc": "宋江在江州被判死刑，梁山好汉与李俊、穆春等人齐聚，攻入法场救出宋江，穆春兄弟参与战斗，杀出江州。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "白龙庙聚义",
+      "desc": "众好汉撤离江州，在江边白龙庙被官兵围困，穆春兄弟与李俊等驾船接应，合力击退官军，一同上梁山，成为白龙庙二十九英雄之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义",
+      "desc": "梁山一百单八将排座次，穆春位列第八十，上应地镇星，担任步军将校，负责步兵作战。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊兄病逝",
+      "desc": "梁山招安后征讨方腊，杭州之战后穆春因照料病倒的头领未参与后续战斗，其兄穆弘在此期间病逝，穆春悲痛。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "辞官归乡",
+      "desc": "征方腊结束后，穆春因功被授武奕郎，但他无意仕途，辞官返回揭阳镇，过平民生活。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/mu_chun.webp",
+  "thumb": "/p/shuihu/thumbs/mu_chun.webp"
+}

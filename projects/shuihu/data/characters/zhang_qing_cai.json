@@ -1,0 +1,71 @@
+{
+  "schema_version": 3,
+  "id": "zhang_qing_cai",
+  "name_zh": "张青",
+  "name_en": "Zhang Qing",
+  "aliases": [
+    "菜园子",
+    "地刑星"
+  ],
+  "epithet": "菜园子·地刑星·十字坡黑店",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "张青，绰号“菜园子”，梁山好汉之一，排名第一百零二，为地刑星。原在孟州十字坡开黑店，与妻子孙二娘一起贩卖人肉包子。后因结识武松，经武松引荐上梁山。宋江受招安后，张青随梁山军征讨方腊，在歙州之战中阵亡。他擅长种菜，亦精于用毒，在梁山负责经营西山酒店，打探消息。其人物形象出自《水浒传》，是一个兼具凶残与义气的复杂角色。",
+  "events": [
+    {
+      "title": "十字坡开店",
+      "desc": "张青与妻子孙二娘在孟州十字坡开设黑店，用蒙汗药麻翻过往客人，杀害后制成肉包子出售。武松被发配孟州时，孙二娘欲害武松，反被武松制服，张青出面解释，两人结为兄弟。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第二十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "结识武松上梁山",
+      "desc": "武松在鸳鸯楼报仇后，逃至十字坡，张青夫妇收留武松，并帮助他化装成头陀前往二龙山。后武松上梁山，张青夫妇亦随之上山，成为梁山好汉。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山西山酒店管事",
+      "desc": "上梁山后，张青与孙二娘负责经营西山酒店，专门打探过往客商消息，为梁山提供情报。此酒店是梁山对外的重要耳目。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第四十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "随征方腊",
+      "desc": "宋江接受招安后，张青随军征讨方腊。在歙州之战中，张青与敌军交战，因不敌对手，被乱箭射死，成为梁山阵亡好汉之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第一百一十二回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "开黑店",
+    "用蒙汗药",
+    "种菜"
+  ],
+  "domains": [
+    "黑店经营",
+    "情报收集",
+    "种菜"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zhang_qing_cai.webp",
+  "thumb": "/p/shuihu/thumbs/zhang_qing_cai.webp"
+}

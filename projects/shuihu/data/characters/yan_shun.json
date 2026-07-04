@@ -1,0 +1,101 @@
+{
+  "schema_version": 3,
+  "id": "yan_shun",
+  "name_zh": "燕顺",
+  "name_en": "Yan Shun",
+  "aliases": [
+    "锦毛虎",
+    "Multicoloured Tiger"
+  ],
+  "epithet": "锦毛虎·地强星·清风山老大",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "燕顺，绰号“锦毛虎”，莱州人氏，原为羊马贩子出身，后落草为寇，成为清风山的大寨主，手下有王英、郑天寿两位头领。他身材魁梧，红发黄须，擅使大刀。宋江因事路过清风山时被燕顺等人擒获，燕顺得知对方是及时雨宋江后，立即释放并盛情款待。宋江在清风寨遭刘高妻子诬陷，燕顺等率众下山救援，大闹青州，杀死刘高夫妇。后燕顺随宋江一同上梁山入伙。梁山大聚义时，燕顺排名第五十位，上应地强星，担任马军小彪将兼远探出哨头领。招安后，他随军征讨辽国、田虎、王庆，立有战功。在征讨方腊的战役中，燕顺奉命攻打乌龙岭，与敌将石宝交锋，不幸被石宝的流星锤击中而死。后追封为义节郎。",
+  "events": [
+    {
+      "title": "清风山为王",
+      "desc": "燕顺原为羊马贩子，因生意折本流落江湖，后占据清风山，与王英、郑天寿结为兄弟，成为山寨大当家，专劫过往客商。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "擒宋江又释之",
+      "desc": "宋江路过清风山时被喽啰擒获，燕顺等人欲取其心肝做醒酒汤。宋江叹息说出姓名，燕顺大惊，立即松绑并跪拜道歉，尊为上宾。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大闹清风寨",
+      "desc": "宋江在清风寨被刘高妻子诬陷为贼，与花荣一同被捕。燕顺、王英、郑天寿三人率众下山，半路劫囚车，杀死刘高，救出宋江和花荣。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "怒杀刘高妻",
+      "desc": "攻破清风寨后，王英欲强占刘高之妻，燕顺为给宋江报仇，挥刀杀死该妇人，导致王英愤怒。宋江许诺日后为王英娶妻，平息矛盾。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "上梁山入伙",
+      "desc": "燕顺等随宋江离开清风山，途经对影山收服吕方、郭盛，并一起前往梁山泊，加入晁盖、宋江领导的义军，成为梁山好汉之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "梁山大聚义时，燕顺排名第五十位，上应地强星，被任命为马军小彪将兼远探出哨头领，负责侦察与巡逻任务。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "乌龙岭战死",
+      "desc": "征讨方腊时，燕顺随军攻打乌龙岭，见同袍马林被敌将石宝斩杀，愤怒上前挑战。石宝使用流星锤偷袭，燕顺躲避不及，被击中身亡。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "刀"
+  ],
+  "skills": [
+    "使刀",
+    "格斗"
+  ],
+  "domains": [
+    "强盗",
+    "马军"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/yan_shun.webp",
+  "thumb": "/p/shuihu/thumbs/yan_shun.webp"
+}

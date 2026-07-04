@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "id": "jie_zhen",
+  "name_zh": "解珍",
+  "name_en": "Jie Zhen",
+  "aliases": [
+    "两头蛇",
+    "天暴星",
+    "解珍",
+    "Jie Zhen"
+  ],
+  "epithet": "两头蛇·天暴星·登州猎户",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "解珍，登州猎户，绰号“两头蛇”，与弟弟解宝以狩猎为生。因猎得一只老虎被地主毛太公陷害入狱，幸得表兄孙立、孙新及顾大嫂等相救，越狱后反出登州，投奔梁山。梁山大聚义时，排第三十四位，上应天暴星，职司步军头领。随宋江征讨方腊时，在乌龙岭攀爬险崖，不慎失手坠落身亡。追封忠武郎。其人生经历坎坷，从猎户到好汉，最终战死沙场，是梁山兄弟情义的体现。",
+  "events": [
+    {
+      "title": "猎虎被害",
+      "desc": "解珍与弟解宝在登州山中猎得一只猛虎，老虎滚落至地主毛太公后园。二人前去索要，毛太公父子不仅赖账，还反诬陷他们私闯民宅、抢劫财物，勾结官府将兄弟二人打入死牢。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "越狱反登州",
+      "desc": "解珍、解宝在狱中受尽折磨，表兄孙立、孙新与顾大嫂、乐和等内外接应，劫牢救出二人。众人杀死毛太公一家，烧毁庄院，毅然放弃登州基业，一同投奔梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "入伙梁山",
+      "desc": "解珍兄弟随孙立等人上梁山，晁盖、宋江大喜，收留众人。解珍与解宝被编入步军，成为梁山早期骨干之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大聚义排位",
+      "desc": "梁山大聚义时，天降石碣，解珍位列天罡第三十四星，星号天暴星，职司为步军头领，与解宝共同负责步兵作战。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "战死乌龙岭",
+      "desc": "征讨方腊时，解珍与解宝奉命偷袭乌龙岭。解珍攀爬悬崖时，被敌军发现并砍断绳索，坠落深谷身亡。死后被追封为忠武郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/jie_zhen.webp",
+  "thumb": "/p/shuihu/thumbs/jie_zhen.webp"
+}

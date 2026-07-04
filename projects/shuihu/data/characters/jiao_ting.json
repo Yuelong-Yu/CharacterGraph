@@ -1,0 +1,108 @@
+{
+  "schema_version": 3,
+  "id": "jiao_ting",
+  "name_zh": "焦挺",
+  "name_en": "Jiao Ting",
+  "aliases": [
+    "没面目",
+    "Faceless"
+  ],
+  "epithet": "没面目·地恶星·相扑好手",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "焦挺是《水浒传》中的人物，原籍中山府（今河北定州一带），出身相扑世家，精通祖传相扑技艺，但因不善交际，在江湖上默默无闻，绰号“没面目”。他本打算投奔枯树山的鲍旭，途中遇到梁山好汉李逵。李逵因焦挺直视自己而恼怒，与之相斗，却被焦挺摔倒在地。李逵佩服其武艺，邀其同往梁山。焦挺欣然应允，并随李逵前往枯树山说服鲍旭一同加入梁山。此时恰逢梁山将领宣赞、郝思文被官军俘获，途经枯树山，焦挺、李逵、鲍旭三人合力劫囚，救出二人。随后他们又突袭凌州官军大营，取得胜利。焦挺随众人回到梁山，成为梁山好汉之一。梁山排座次时，焦挺位列第九十八位，上应地恶星，担任步军将校。招安后，他随军征讨辽国，平定田虎、王庆，最后在征讨方腊的战役中，于润州（今江苏镇江）战死。",
+  "events": [
+    {
+      "title": "相扑世家流落江湖",
+      "desc": "焦挺出身中山府相扑世家，掌握祖传相扑秘技，但因性格孤僻，不愿张扬，在江湖上无名无号，人称“没面目”。他计划投奔枯树山鲍旭，以图发展。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与李逵相遇并相扑取胜",
+      "desc": "焦挺在前往枯树山途中遇见李逵。李逵因其直视自己而怒而出手，焦挺以相扑绝技将李逵摔倒在地。李逵惊服其武艺，主动结交并邀其同往梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "说服鲍旭加入梁山",
+      "desc": "焦挺随李逵到达枯树山，向鲍旭引见李逵。李逵说明梁山招纳之意，鲍旭欣然接受，三人结伴回梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "劫救宣赞郝思文",
+      "desc": "途经枯树山时，焦挺、李逵、鲍旭得知梁山将领宣赞、郝思文被官军俘获并押送京城。三人率众劫夺囚车，救出二将。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "突袭凌州官军",
+      "desc": "救出宣赞、郝思文后，焦挺等联合枯树山人马，趁官军不备，突袭凌州大营，大破官军，为梁山立下功劳。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山聚义排座次",
+      "desc": "焦挺随李逵等人上梁山后，在梁山一百零八将大聚义时，排第九十八位，上应地恶星，担任步军将校。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征辽与平田虎王庆",
+      "desc": "梁山受招安后，焦挺随军征讨辽国，并参与平定田虎、王庆等叛乱，屡立战功。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "战死于润州",
+      "desc": "征方腊战役中，焦挺随军攻打润州，在激战中阵亡。后被朝廷追封为义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "相扑摔跤"
+  ],
+  "domains": [
+    "相扑",
+    "武术"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/jiao_ting.webp",
+  "thumb": "/p/shuihu/thumbs/jiao_ting.webp"
+}

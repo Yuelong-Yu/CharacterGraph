@@ -1,0 +1,107 @@
+{
+  "schema_version": 3,
+  "id": "ling_zhen",
+  "name_zh": "凌振",
+  "name_en": "Ling Zhen",
+  "aliases": [
+    "凌振",
+    "轰天雷",
+    "Heaven-shaking Thunder",
+    "Ling Zhen"
+  ],
+  "epithet": "轰天雷·地轴星·炮手",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "凌振，古典名著《水浒传》中的人物，绰号“轰天雷”，祖贯燕陵（今河南鄢陵），原为东京甲仗库副使炮手，擅长火药武器与弓箭。呼延灼奉旨征讨梁山时，请凌振提供火炮支援。凌振在河岸筑炮台轰击梁山，梁山派水军潜水破坏火炮，凌振追击时误入沼泽被俘。宋江礼遇招降，凌振遂归顺梁山。后凌振以火炮助梁山破呼延灼连环马阵。梁山大聚义时，排第五十二位，上应地轴星，负责制造大小火炮，任火炮指挥官。受招安后，凌振随宋江南征北战，参与征辽、讨田虎、王庆等战役，屡用火炮破敌。征方腊时，常以火炮轰击城寨制造混乱，为梁山军开路。最终凌振幸存，被火药局御营任用，恢复军官职务。",
+  "events": [
+    {
+      "title": "被召助战呼延灼",
+      "desc": "呼延灼奉命征讨梁山，请求朝廷派遣凌振携带火炮支援。凌振在河岸筑炮台，日夜轰击梁山寨，给梁山造成巨大威胁。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被擒归顺梁山",
+      "desc": "梁山派阮氏三雄等水军潜水破坏火炮，凌振追击时误入沼泽被俘。宋江亲自解缚礼遇，凌感动而降。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "助破连环马",
+      "desc": "凌振以火炮从侧翼轰击呼延灼的连环甲马，使马匹受惊乱阵，配合钩镰枪步兵大破连环马，呼延灼被擒后亦归顺。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义排座次",
+      "desc": "一百单八将齐聚梁山，凌振排名第五十二位，上应地轴星，担任火炮制造与指挥之职，统领梁山炮兵。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征辽与讨逆",
+      "desc": "招安后，凌振随军征辽、讨田虎、王庆，多次以火炮攻破敌军城池营寨，屡立战功。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊用炮破敌",
+      "desc": "征方腊时，凌振奉命炮轰敌城，如攻打杭州、昱岭关等战，火炮震慑敌军，为梁山军冲锋创造机会。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "幸存受封",
+      "desc": "征方腊结束，凌振是少数幸存头领之一。朝廷念其功绩，仍命其于火药局御营任用，恢复军官身份。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "火炮",
+    "弓箭"
+  ],
+  "skills": [
+    "操作火炮",
+    "制造火药武器",
+    "射箭",
+    "布设炮阵"
+  ],
+  "domains": [
+    "火炮",
+    "火药",
+    "攻城战"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/ling_zhen.webp",
+  "thumb": "/p/shuihu/thumbs/ling_zhen.webp"
+}

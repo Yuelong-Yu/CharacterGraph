@@ -1,0 +1,95 @@
+{
+  "schema_version": 3,
+  "id": "tao_zongwang",
+  "name_zh": "陶宗旺",
+  "name_en": "Tao Zongwang",
+  "aliases": [
+    "九尾龟",
+    "地理星",
+    "Nine-tailed Turtle"
+  ],
+  "epithet": "九尾龟·地理星·光州田户",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "陶宗旺是《水浒传》中的人物，绰号“九尾龟”，光州人氏，出身田户。他天生神力，擅长使用枪和剑，因武艺高强被称作“九尾龟”。原为黄门山四寨主之一，与欧鹏、蒋敬、马麟一同占据黄门山。后听闻宋江大名，在宋江被救回梁山途中经过黄门山时，四人主动拦路请求加入梁山，宋江欣然应允。梁山大聚义时，陶宗旺排第七十五位，上应地理星，负责监修山寨城垣，掌管防御工事建设。接受招安后，他随梁山军征讨辽国，平定田虎、王庆等叛乱。在征讨方腊的战役中，随军攻打润州时被流矢射中，遭敌军骑兵踩踏身亡。死后被追封为义节郎。陶宗旺虽出身农家，但凭借忠诚与勇力成为梁山重要的一员，其负责城防的职务也体现了梁山对他的信任。",
+  "events": [
+    {
+      "title": "黄门山落草为寇",
+      "desc": "陶宗旺因出身田户，不满时政，与欧鹏、蒋敬、马麟在黄门山聚义，成为四寨主之一，占据山寨，劫富济贫。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "拦路投奔宋江",
+      "desc": "宋江被救出江州后，率众回梁山途中经过黄门山。陶宗旺等四人听闻宋江之名，主动拦路请求加入，宋江接受并带他们一同上梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山聚义排位",
+      "desc": "梁山一百零八将大聚义时，陶宗旺排第七十五位，上应地理星，属于七十二地煞之一，职务为监修城垣，负责山寨防御工事。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "监修山寨城垣",
+      "desc": "陶宗旺凭借其农作和土木经验，被委任负责修建梁山的城墙、堡垒等防御设施，为山寨的固守做出贡献。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征辽国建功",
+      "desc": "梁山招安后，陶宗旺随军北伐辽国，参与多场战斗，虽非主要战将，但尽职尽责，协助大军的后勤与防御。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "战死于润州",
+      "desc": "征讨方腊时，梁山军攻打润州。陶宗旺在战斗中被流矢射中，随后被敌军骑兵践踏而死，是梁山较早阵亡的好汉之一，后追封义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "枪",
+    "剑"
+  ],
+  "skills": [
+    "使用枪法",
+    "使用剑术",
+    "修建城防工事"
+  ],
+  "domains": [
+    "防御工事",
+    "土木工程",
+    "农业"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/tao_zongwang.webp",
+  "thumb": "/p/shuihu/thumbs/tao_zongwang.webp"
+}

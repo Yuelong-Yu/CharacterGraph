@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "id": "tong_meng",
+  "name_zh": "童猛",
+  "name_en": "Tong Meng",
+  "aliases": [
+    "翻江蜃",
+    "地退星"
+  ],
+  "epithet": "翻江蜃·地退星·浔阳江贩私盐",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "童猛，古典名著《水浒传》中的人物，一百单八将之一，绰号“翻江蜃”。他是童威的弟弟，早先在浔阳江上贩卖私盐，与李俊颇有交情。后随李俊等人入伙梁山，成为水军头领之一。梁山大聚义时，排第六十九位，上应地退星，与阮小七驻守梁山西北水寨。梁山受招安后，童猛随军征战，参与征讨辽国、田虎、王庆、方腊等战役。平定方腊返回途中，因不愿做官，与李俊及童威一起，从太仓港远渡到暹罗国，成为暹罗国的重要人物。童猛亦在《水浒后传》等续书中出场，延续其海外生涯。其性格沉稳，水性极佳，是梁山水军中的得力干将。",
+  "events": [
+    {
+      "title": "随李俊入伙梁山",
+      "desc": "童猛与兄长童威在浔阳江贩卖私盐，与李俊、张顺等相交。宋江被发配江州时，李俊等人曾搭救宋江。后童猛随李俊一同上梁山，成为梁山泊水军头领之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次定职",
+      "desc": "梁山一百单八将大聚义时，童猛排第六十九位，星号地退星，与阮小七一同驻守梁山西北水寨，负责水军防务。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊立功",
+      "desc": "梁山接受招安后，童猛随军征讨方腊。在攻打苏州、杭州等水战中，童猛凭借出色的水性与兄长童威多次立下战功，但梁山伤亡惨重。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "远渡暹罗建国",
+      "desc": "平定方腊后，童猛不愿接受朝廷封赏，与李俊、童威一起在太仓港打造船只，出海前往暹罗国，最终在暹罗开创基业，成为李俊暹罗政权的重要成员。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "续书中的海外生涯",
+      "desc": "在《水浒后传》等续书中，童猛随李俊在暹罗经历了一系列冒险，包括抗击金兵、与海外势力争斗等，最终辅佐李俊成为暹罗国王，被封为将军。",
+      "source": {
+        "work": "水浒后传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/tong_meng.webp",
+  "thumb": "/p/shuihu/thumbs/tong_meng.webp"
+}

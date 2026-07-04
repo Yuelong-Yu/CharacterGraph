@@ -1,0 +1,96 @@
+{
+  "schema_version": 3,
+  "id": "zheng_tianshou",
+  "name_zh": "郑天寿",
+  "name_en": "Zheng Tianshou",
+  "aliases": [],
+  "epithet": "白面郎君·地异星·清风山老三",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "郑天寿，小说《水浒传》中人物，苏州人氏，绰号“白面郎君”，因生得白皙俊俏而得名。原为银匠，自幼习练枪棒，武艺不俗。后流落江湖，途经清风山时与山贼王英交手，不分胜负，被寨主燕顺赏识，邀其入伙，坐第三把交椅。宋江因杀阎婆惜逃亡至清风山，被郑天寿等人误捉，险些被挖心做汤，宋江感叹自报姓名后，燕顺敬其豪义，慌忙松绑，四人结为兄弟。宋江在山上时曾劝阻王英霸占刘高之妻，后刘妻恩将仇报诬陷宋江，导致宋江与花荣被刘高擒拿。郑天寿与燕顺、王英半路劫囚，救出宋江、花荣，并随宋江设计收降秦明，最终一起投奔梁山。梁山排座次时，郑天寿位列地煞星第七十四位，为地异星，担任步军小头领。梁山接受招安后，郑天寿随军征讨辽国，后又参与平定方腊之役。在攻打睦州时，郑天寿被敌方飞石击中，不幸阵亡。",
+  "events": [
+    {
+      "title": "落草清风山",
+      "desc": "郑天寿流落江湖，经过清风山时与王英交战，不分胜负。燕顺见其武艺高强，邀请入伙，郑天寿遂与燕顺、王英结为兄弟，成为清风山三当家。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "误捉宋江",
+      "desc": "宋江逃亡至清风山，被郑天寿等人设陷阱擒获。众贼欲挖其心做醒酒汤，宋江临死叹言，燕顺闻其名大惊，立即释放并赔罪，四人由此结识。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "劫囚救宋江",
+      "desc": "宋江被刘高诬陷入狱，花荣搭救未果反被擒。郑天寿与燕顺、王英半路截击押解队伍，击败黄信，救出宋江和花荣。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与收降秦明",
+      "desc": "青州府派秦明征剿清风山，宋江用计使秦明被官府所迫，最终秦明上山入伙。郑天寿参与此战，协助宋江南征北战。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "上梁山聚义",
+      "desc": "宋江担心朝廷大军报复，率清风山人马及花荣、秦明等一起投奔梁山。郑天寿随之成为梁山好汉，后位列地煞星。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受招安征辽",
+      "desc": "梁山接受宋徽宗招安后，郑天寿作为步军头领随军北征辽国，参与多场战役，表现英勇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "战死睦州",
+      "desc": "在征讨方腊的睦州之战中，郑天寿被敌方投掷的飞石击中要害，当场阵亡。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "使用枪棒",
+    "近身格斗"
+  ],
+  "domains": [
+    "步兵作战",
+    "近战格斗"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zheng_tianshou.webp",
+  "thumb": "/p/shuihu/thumbs/zheng_tianshou.webp"
+}

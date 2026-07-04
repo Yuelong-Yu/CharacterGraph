@@ -1,0 +1,91 @@
+{
+  "schema_version": 3,
+  "id": "song_qing",
+  "name_zh": "宋清",
+  "name_en": "Song Qing",
+  "aliases": [
+    "铁扇子",
+    "地俊星",
+    "宋江之弟",
+    "Song Qing"
+  ],
+  "epithet": "铁扇子·地俊星·宋江之弟",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "宋清是《水浒传》中的人物，绰号“铁扇子”，梁山一百单八将之一，排第七十六位，上应地俊星。他是宋江的弟弟，为人恭敬孝顺。在梁山负责掌管排设筵席之事。征讨方腊后回朝，被授武奕郎。宋江去世后，宋清获得承袭其名爵的权利，但宋清婉拒，只愿回家务农。宋徽宗怜其孝道，赐钱十万贯，田三千亩。后来宋清生一子宋安平，应过科举，官至秘书学士。",
+  "events": [
+    {
+      "title": "梁山聚义排座次",
+      "desc": "宋清随哥哥宋江上梁山，成为一百单八将之一，排第七十六位，上应地俊星，负责掌管排设筵席之事。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "掌管排设筵席",
+      "desc": "宋清在梁山负责安排宴席事务，是后勤管理的重要人物。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊受封武奕郎",
+      "desc": "梁山受招安后，宋清随军征讨方腊，战后回朝，被朝廷授予武奕郎之职。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "婉拒承袭宋江名爵",
+      "desc": "宋江去世后，朝廷允许宋清承袭其兄的名爵，但宋清以孝道为由推辞，不愿为官。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "回乡务农获赐田钱",
+      "desc": "宋清辞官回乡务农，宋徽宗怜其孝道，赐钱十万贯、田三千亩，使其得以安度余生。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "生子宋安平仕途显达",
+      "desc": "宋清后来生有一子宋安平，宋安平参加科举，官至秘书学士，光耀门楣。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "排设筵席",
+    "管理后勤"
+  ],
+  "domains": [
+    "宴席",
+    "后勤"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/song_qing.webp",
+  "thumb": "/p/shuihu/thumbs/song_qing.webp"
+}

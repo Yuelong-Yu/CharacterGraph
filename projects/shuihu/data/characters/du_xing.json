@@ -1,0 +1,68 @@
+{
+  "schema_version": 3,
+  "id": "du_xing",
+  "name_zh": "杜兴",
+  "name_en": "Du Xing",
+  "aliases": [
+    "杜兴",
+    "鬼脸儿",
+    "地全星",
+    "Du Xing"
+  ],
+  "epithet": "鬼脸儿·地全星·李应管家",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "杜兴，古典名著《水浒传》中的人物，绰号“鬼脸儿”，中山府人氏。早年因在蓟州做买卖时打死同伙客人而被捕，得杨雄搭救。后随李应一同上梁山，成为梁山一百单八将之一，排第八十九位，上应地全星，为山寨四店打听消息、邀请来宾的八头领之一。在征讨方腊后，杜兴没有战死，而是随旧主李应还乡，做了一处富豪，得以善终。",
+  "events": [
+    {
+      "title": "打死同伙被捕，杨雄搭救",
+      "desc": "杜兴在蓟州做买卖时，因与同伙客人发生争执，失手将其打死，被捕入狱。幸得杨雄相助，得以脱身。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": "第四十六回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "随李应入伙梁山",
+      "desc": "宋江三打祝家庄后，杜兴随主人李应一同加入梁山泊，成为梁山好汉之一。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": "第五十回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "梁山大聚义，排第八十九位",
+      "desc": "梁山一百单八将大聚义时，杜兴排第八十九位，上应地全星，担任四店打听消息、邀请来宾的头领。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "征方腊后还乡为富",
+      "desc": "杜兴随梁山军征讨方腊，战后幸存，随李应回到家乡，成为一方富豪，安享晚年。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": "第一百一十九回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [
+    "情报",
+    "接待"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/du_xing.webp",
+  "thumb": "/p/shuihu/thumbs/du_xing.webp"
+}

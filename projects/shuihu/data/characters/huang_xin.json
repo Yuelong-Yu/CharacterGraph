@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "id": "huang_xin",
+  "name_zh": "黄信",
+  "name_en": "Huang Xin",
+  "aliases": [
+    "镇三山",
+    "Huang Xin"
+  ],
+  "epithet": "镇三山·地煞星·青州兵马都监",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "黄信是《水浒传》中的人物，原为青州兵马都监，因武艺高强，师从秦明，擅长马步战，使用丧门剑，曾自夸能镇压青州附近的三座山（清风山、二龙山、桃花山）上的贼寇，故得绰号“镇三山”。他奉命前往清风寨处理花荣叛逃事件，假意调解却设伏擒获花荣，并与刘高一起押送宋江和花荣前往青州。途中遭清风山好汉伏击，黄信被迫退守，刘高被杀。其后，其师秦明被设计归顺梁山，秦明亲自劝降黄信，黄信遂加入梁山。梁山大聚义时，黄信排第三十八位，上应地煞星，担任马军小彪将兼远探出哨头领。招安后，他参与征辽、讨伐田虎、王庆及方腊等战役，在征方腊中幸存。战后受封武奕郎，仍回青州任职。黄信在《水浒后传》等衍生作品中亦有出场。",
+  "events": [
+    {
+      "title": "设计擒获花荣宋江",
+      "desc": "黄信奉命至清风寨处理花荣抗命及庇护宋江之事，假意调解，设伏擒获花荣，同时刘高手下抓获宋江。黄信将两人押送青州。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "押送途中遭劫",
+      "desc": "押送队伍在前往青州途中被清风山好汉伏击，黄信寡不敌众，退守清风寨，刘高被杀。黄信向青州知府慕容彦达报告并请求援兵。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受秦明劝说归顺梁山",
+      "desc": "秦明被清风山好汉设计归顺后，前往清风寨劝降黄信。黄信听从师父之言，放弃官职，随秦明、宋江等一同上梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山排座次",
+      "desc": "一百零八将大聚义时，黄信排第三十八位，上应地煞星，担任马军小彪将兼远探出哨头领第一名。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊幸存受封",
+      "desc": "黄信参与征讨方腊的战役，在众多好汉战死的情况下幸存。战后回朝，因功被授予武奕郎，并恢复青州兵马都监之职。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "丧门剑"
+  ],
+  "skills": [
+    "马步战",
+    "剑术"
+  ],
+  "domains": [
+    "侦察",
+    "巡逻"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/huang_xin.webp",
+  "thumb": "/p/shuihu/thumbs/huang_xin.webp"
+}

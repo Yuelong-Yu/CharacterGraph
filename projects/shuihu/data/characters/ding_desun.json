@@ -1,0 +1,71 @@
+{
+  "schema_version": 3,
+  "id": "ding_desun",
+  "name_zh": "丁得孙",
+  "name_en": "Ding Desun",
+  "aliases": [
+    "中箭虎",
+    "Arrow-hit Tiger"
+  ],
+  "epithet": "中箭虎·地速星·张清副将",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "丁得孙是古典小说《水浒传》中的人物，绰号“中箭虎”，因面颊及全身遍布疤痕而得名。他原是东昌府守将张清的副将，与龚旺一同辅佐张清，擅长使用叉枪。梁山好汉攻打东昌府时，张清以飞石连败数员梁山大将，丁得孙与龚旺则伺机上前擒拿落马者。然而在混战中，丁得孙被吕方、郭盛擒获，随后张清也中计被俘并投降梁山，丁得孙随之归顺。梁山一百单八将大聚义时，丁得孙位列第七十九名，上应地速星，担任步军将校。接受朝廷招安后，他参与了征讨辽国的战役。在征讨方腊的过程中，丁得孙奉命进攻歙州，成功诱敌入伏，但追击时被草丛中的毒蛇咬伤，中毒身亡。后被追封为义节郎。",
+  "events": [
+    {
+      "title": "东昌府被擒归降",
+      "desc": "梁山军攻打东昌府，张清飞石连败梁山数将，丁得孙与龚旺试图擒拿被击落者。混战中丁得孙被吕方、郭盛所擒，后张清投降，丁得孙也随同归顺梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义排座次",
+      "desc": "梁山完成大聚义，丁得孙位列第七十九名，星号地速星，担任步军将校，与其他好汉共同聚义。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨辽国建功",
+      "desc": "梁山受招安后，丁得孙随军征讨辽国，参与多次战斗，作为步兵将校执行作战任务。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊中毒蛇身亡",
+      "desc": "征讨方腊期间，丁得孙奉命进攻歙州，成功诱敌入伏。但在追击残敌时，不慎被草丛中的毒蛇咬伤，因中毒不治身亡，后被追封为义节郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "叉枪"
+  ],
+  "skills": [
+    "使用叉枪",
+    "擒拿俘虏"
+  ],
+  "domains": [
+    "步兵指挥",
+    "伏击战术"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/ding_desun.webp",
+  "thumb": "/p/shuihu/thumbs/ding_desun.webp"
+}
