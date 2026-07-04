@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "fang_la",
+  "name_zh": "方腊",
+  "name_en": "Fang La",
+  "aliases": ["方圣公"],
+  "epithet": "江南起义军首领·自称圣公",
+  "category": "jianghu",
+  "era_layer": 2,
+  "bio": "方腊，《水浒传》中江南起义军首领，睦州青溪人，原为漆园主。借摩尼教起义，自称圣公，建元永乐，据江南八州二十五县，与北宋朝廷分庭抗礼。宋江招安后率梁山军征方腊，双方血战，梁山好汉战死大半。方腊最终被鲁智深擒获，押赴东京处决。",
+  "events": [
+    {"title": "江南起义", "desc": "方腊借摩尼教起义，自称圣公，建元永乐，据江南八州二十五县，兵力强盛，与北宋朝廷分庭抗礼。", "source": {"work": "《水浒传》", "locus": "第一百一十回", "translator": null}, "canon": "romance"},
+    {"title": "血战梁山军", "desc": "宋江招安后率梁山军征方腊。方腊部将郑彪（郑魔君）、包道乙等善法术，杀梁山多员将领。双方血战，梁山好汉战死大半（59人战死，20人病死）。", "source": {"work": "《水浒传》", "locus": "第一百一十二至一百一十八回", "translator": null}, "canon": "romance"},
+    {"title": "鲁智深擒方腊", "desc": "方腊兵败逃匿，鲁智深于帮源洞中偶遇方腊，一杖打翻擒获。方腊被押赴东京处决。江南起义平定，然梁山实力亦大损。", "source": {"work": "《水浒传》", "locus": "第一百一十九回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": ["起义军首领"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/fang_la.webp",
+  "thumb": "/p/shuihu/thumbs/fang_la.webp"
+}

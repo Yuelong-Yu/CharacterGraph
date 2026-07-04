@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "luo_zhenren",
+  "name_zh": "罗真人",
+  "name_en": "Luo Zhenren",
+  "aliases": ["二仙山道士"],
+  "epithet": "公孙胜师父·二仙山道士·授五雷天心正法",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "罗真人，《水浒传》中蓟州二仙山紫虚观道士，公孙胜之师，道法高深，能呼风唤雨、役使神将。授公孙胜五雷天心正法。李逵随公孙胜蓟州求法时，罗真人以法术戏弄李逵，后应天命放公孙胜下山助梁山破高廉。征方腊前罗真人召公孙胜归山，未随征。",
+  "events": [
+    {"title": "授五雷天心正法", "desc": "公孙胜为蓟州二仙山道士，拜罗真人为师，学得五雷天心正法，能呼风唤雨、役使神将。罗真人识公孙胜根器，授以道法。", "source": {"work": "《水浒传》", "locus": "第五十三回", "translator": null}, "canon": "romance"},
+    {"title": "法术戏弄李逵", "desc": "李逵随公孙胜蓟州求法，罗真人以法术将李逵掷入蓟州府牢中受苦。后戴宗求情，罗真人放李逵，并允公孙胜下山助梁山破高廉法术。", "source": {"work": "《水浒传》", "locus": "第五十三回", "translator": null}, "canon": "romance"},
+    {"title": "召公孙胜归山", "desc": "征方腊前，罗真人召公孙胜归山，言其尘缘已尽，不可随征。公孙胜遂辞梁山归二仙山修道，未随征方腊。", "source": {"work": "《水浒传》", "locus": "第八十五回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["五雷天心正法", "呼风唤雨"],
+  "domains": ["道法", "法术"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/luo_zhenren.webp",
+  "thumb": "/p/shuihu/thumbs/luo_zhenren.webp"
+}

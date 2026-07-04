@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "zhu_biao",
+  "name_zh": "祝彪",
+  "name_en": "Zhu Biao",
+  "aliases": ["祝三少爷"],
+  "epithet": "祝家庄三子·扈三娘未婚夫",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "祝彪，《水浒传》中祝家庄三子，祝朝奉第三子，武艺精熟，与扈三娘订亲。三打祝家庄时祝彪出阵与梁山众将酣战。祝家庄破后，祝彪逃奔扈家庄，被扈成所擒献梁山，被杀。",
+  "events": [
+    {"title": "祝扈联姻", "desc": "祝彪为祝家庄三子，与扈家庄千金扈三娘订亲，祝扈两家联姻共抗梁山。", "source": {"work": "《水浒传》", "locus": "第四十七回", "translator": null}, "canon": "romance"},
+    {"title": "三打祝家庄", "desc": "祝彪出阵与梁山众将酣战，武艺精熟。后孙立作内应，吴用设计，祝家庄破。", "source": {"work": "《水浒传》", "locus": "第四十八回", "translator": null}, "canon": "romance"},
+    {"title": "被擒遇害", "desc": "祝家庄破后，祝彪逃奔扈家庄。扈成见祝家大势已去，擒祝彪献梁山，祝彪被杀。扈三娘后亦被林冲所擒，许配王英。", "source": {"work": "《水浒传》", "locus": "第五十回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["长枪"],
+  "domains": ["武艺"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zhu_biao.webp",
+  "thumb": "/p/shuihu/thumbs/zhu_biao.webp"
+}

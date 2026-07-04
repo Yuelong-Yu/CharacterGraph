@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "wang_lun",
+  "name_zh": "王伦",
+  "name_en": "Wang Lun",
+  "aliases": ["白衣秀士"],
+  "epithet": "梁山前主·白衣秀士·林冲火并",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "王伦，《水浒传》中梁山泊首任寨主，绰号白衣秀士，不及第的书生，在小旋风柴进资助下开创梁山泊。麾下有杜迁、宋万、朱贵等头领。其为人心胸狭窄，难以容忍能力比他大的人，屡次刁难前来投奔的林冲，不愿接纳实力雄厚的晁盖一行。后在晁盖的送行宴上，被林冲火并。",
+  "events": [
+    {"title": "开创梁山泊", "desc": "王伦为不及第书生，在小旋风柴进资助下开创梁山泊，绰号白衣秀士。麾下有杜迁（摸着天）、宋万（云里金刚）、朱贵（旱地忽律）等头领，落草打劫。", "source": {"work": "《水浒传》", "locus": "第十一回", "translator": null}, "canon": "romance"},
+    {"title": "刁难林冲", "desc": "林冲被陷害刺配后上梁山，王伦忌林冲武艺高强恐夺其位，百般刁难欲拒之。林冲携柴进书信苦求，王伦勉强留林冲为第四位。", "source": {"work": "《水浒传》", "locus": "第十一回", "translator": null}, "canon": "romance"},
+    {"title": "林冲火并王伦", "desc": "晁盖等劫生辰纲后上梁山，王伦又欲拒之。林冲怒王伦心胸狭隘不能容人，火并王伦，一刀杀之。晁盖遂为梁山之主，开梁山聚义之始。", "source": {"work": "《水浒传》", "locus": "第十九回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": ["山寨开创"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/wang_lun.webp",
+  "thumb": "/p/shuihu/thumbs/wang_lun.webp"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 3,
+  "id": "liang_shangshu",
+  "name_zh": "梁中书",
+  "name_en": "Liang Shangshu",
+  "aliases": [
+    "梁中书",
+    "梁世杰",
+    "Liang Shijie"
+  ],
+  "epithet": "北京大名府知府·生辰纲发起者·蔡京女婿",
+  "category": "chaoting",
+  "era_layer": 0,
+  "bio": "梁世杰，古典小说《水浒传》中的人物，官居北京大名府留守司，因系太师蔡京女婿，被尊称为“梁中书”。作为北宋大名府的行政长官，他负责治理地方并兼任军务。小说中，他为了给岳父蔡京贺寿，搜刮十万贯金银珠宝作为生辰纲，命杨志押送，结果在黄泥岗被晁盖、吴用等人劫走，此事直接导致晁盖等人上梁山聚义。后来，梁中书又参与了对卢俊义、石秀的抓捕与囚禁，引发了梁山大军三打大名府的事件。最终，在大名府城破之时，梁中书仓皇逃窜，下落不明。其官职设定符合宋代陪都军政长官“留守”制度，是小说中朝廷腐败官僚的典型代表。",
+  "events": [
+    {
+      "title": "命杨志押送生辰纲",
+      "desc": "梁中书为岳父蔡京贺寿，搜刮十万贯金珠宝贝，命杨志押送前往东京。杨志虽百般谨慎，但在黄泥岗被晁盖、吴用等人用计劫走，生辰纲失落。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第十六回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "捉拿卢俊义、石秀",
+      "desc": "卢俊义被管家李固陷害，梁中书将其打入死牢；石秀为救卢俊义独闯大名府，也被擒获。梁中书将二人囚禁，并计划处决。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山三打大名府",
+      "desc": "梁山为救卢俊义、石秀，先后三次攻打大名府。梁中书指挥守城，但最终城破，他趁乱逃命，不知所终。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第六十四回至六十六回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [
+    "行政",
+    "司法",
+    "财政"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/liang_shangshu.webp",
+  "thumb": "/p/shuihu/thumbs/liang_shangshu.webp"
+}

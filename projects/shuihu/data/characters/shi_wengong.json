@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "shi_wengong",
+  "name_zh": "史文恭",
+  "name_en": "Shi Wengong",
+  "aliases": ["史教师"],
+  "epithet": "曾头市教师·射死晁盖·卢俊义所擒",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "史文恭，《水浒传》中曾头市教师，武艺高强，善使方天画戟，箭法精准。曾弄聘其教导曾家五子武艺。晁盖率梁山众将攻打曾头市，史文恭于乱军中以毒箭射中晁盖面门，晁盖当夜毒发身亡。后卢俊义被赚上梁山，于曾头市生擒史文恭，剖腹剜心祭奠晁盖。",
+  "events": [
+    {"title": "曾头市教师", "desc": "曾弄聘史文恭为曾头市教师，教导曾家五子（曾涂/曾密/曾索/曾魁/曾升）武艺，史文恭武艺高强，善使方天画戟，箭法精准。", "source": {"work": "《水浒传》", "locus": "第六十回", "translator": null}, "canon": "romance"},
+    {"title": "射死晁盖", "desc": "晁盖率梁山众将攻打曾头市，夜袭中计。史文恭于乱军中以毒箭射中晁盖面门，晁盖坠马，被林冲等救回梁山，当夜毒发身亡。临终遗言'捉得射死我的，便为梁山泊主'。", "source": {"work": "《水浒传》", "locus": "第六十回", "translator": null}, "canon": "romance"},
+    {"title": "卢俊义活擒史文恭", "desc": "卢俊义被赚上梁山后，于曾头市大破曾家军，生擒史文恭。史文恭武艺虽高，不敌卢俊义，被擒后剖腹剜心祭奠晁盖。", "source": {"work": "《水浒传》", "locus": "第六十八回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["方天画戟", "箭术"],
+  "domains": ["武艺", "射术"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/shi_wengong.webp",
+  "thumb": "/p/shuihu/thumbs/shi_wengong.webp"
+}

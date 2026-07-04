@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "id": "su_yuanjing",
+  "name_zh": "宿元景",
+  "name_en": "Su Yuanjing",
+  "aliases": [
+    "宿太尉"
+  ],
+  "epithet": "太尉·梁山招安促成者",
+  "category": "chaoting",
+  "era_layer": 1,
+  "bio": "宿元景是古典小说《水浒传》中的虚构人物，宋徽宗心腹官员，官拜北宋殿前太尉。他性情宽厚，反对权臣童贯、蔡京，主张招安梁山泊，曾借御香金铃吊挂助宋江攻破华州救出史进、鲁智深。宿元景促成宋徽宗下诏招安梁山，并亲赴济州宣读诏书。梁山受招安后，他推动宋江率军征讨辽国，在陈桥驿事件中协助化解朝廷与梁山矛盾。征讨田虎期间举荐陈瓘为监军，最终奏请敕封宋江为“忠烈义济灵应侯”，并主持修建梁山泊靖忠庙。宿元景虽曾接受梁山金银贿赂，但仍被描述为正面形象。在续书《水浒后传》中也有登场，于暹罗国册封李俊等幸存梁山好汉。",
+  "events": [
+    {
+      "title": "借御香金铃吊挂助破华州",
+      "desc": "宋江为救史进、鲁智深攻打华州，宿元景奉旨前往西岳华山进香，宋江利用其御香金铃吊挂等仪仗，假扮太尉随从，赚开城门，成功攻破华州救出二人。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "促成宋徽宗下诏招安梁山",
+      "desc": "宿元景在朝廷中力排众议，向宋徽宗陈说招安梁山之利，最终促使皇帝颁布招安诏书，并亲自担任钦差前往梁山传达旨意。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "亲赴济州宣读招安诏书",
+      "desc": "宿元景奉旨抵达济州，在梁山众好汉面前宣读招安诏书，正式接纳梁山归顺朝廷，并安抚众将，化解了梁山对朝廷的疑虑。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "推动征辽并化解陈桥驿矛盾",
+      "desc": "梁山受招安后，宿元景建议宋徽宗派遣宋江率军征讨辽国。在陈桥驿事件中，因朝廷赏赐不公引发梁山将士不满，宿元景出面调解，缓和了双方紧张关系。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "举荐陈瓘为监军征田虎",
+      "desc": "朝廷征讨田虎时，宿元景举荐陈瓘担任监军，以协调宋江与朝廷的关系，确保征讨顺利进行。陈瓘后来成为梁山军的重要支持者。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "奏请敕封宋江并建靖忠庙",
+      "desc": "宋江等人平定方腊后，宿元景向宋徽宗奏请追封宋江为“忠烈义济灵应侯”，并主持在梁山泊修建靖忠庙，以表彰梁山好汉的功绩。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/su_yuanjing.webp",
+  "thumb": "/p/shuihu/thumbs/su_yuanjing.webp"
+}

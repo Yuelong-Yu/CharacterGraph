@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "zeng_nong",
+  "name_zh": "曾弄",
+  "name_en": "Zeng Nong",
+  "aliases": ["曾长官"],
+  "epithet": "曾头市长官·曾家五子之父",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "曾弄，《水浒传》中曾头市长官，原为金国人，后移居大宋凌州曾头市。生五子：曾涂、曾密、曾索、曾魁、曾升，皆习武。聘史文恭为教师，苏定为副教师，曾头市兵力强盛。因段景住盗照夜玉狮子马欲献宋江被曾家夺去，与梁山结怨。晁盖攻打曾头市中箭身亡，后梁山破曾头市，曾弄全家被杀。",
+  "events": [
+    {"title": "曾头市立寨", "desc": "曾弄原为金国人，移居大宋凌州曾头市，生五子皆习武，聘史文恭为教师，苏定为副教师，曾头市兵力强盛，独霸一方。", "source": {"work": "《水浒传》", "locus": "第六十回", "translator": null}, "canon": "romance"},
+    {"title": "夺马结怨梁山", "desc": "段景住盗金国太子照夜玉狮子马欲献宋江，途经曾头市被曾家夺去。曾弄父子辱骂梁山，宋江怒，欲伐曾头市。", "source": {"work": "《水浒传》", "locus": "第六十回", "translator": null}, "canon": "romance"},
+    {"title": "曾头市覆灭", "desc": "晁盖中箭后，梁山再攻曾头市。卢俊义生擒史文恭，曾家五子皆战死，曾弄自缢身亡，曾头市满门覆灭。", "source": {"work": "《水浒传》", "locus": "第六十八回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": ["乡绅武装"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zeng_nong.webp",
+  "thumb": "/p/shuihu/thumbs/zeng_nong.webp"
+}

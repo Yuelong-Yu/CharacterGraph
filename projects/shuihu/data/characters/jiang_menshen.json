@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "jiang_menshen",
+  "name_zh": "蒋门神",
+  "name_en": "Jiang Menshen",
+  "aliases": ["蒋忠"],
+  "epithet": "蒋忠·孟州恶霸·武松醉打",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "蒋门神，《水浒传》中孟州恶霸，本名蒋忠，身长九尺，有万夫不当之勇，号称蒋门神。夺施恩快活林酒店，欺压客商。施恩求武松代为出头，武松带醉至快活林，以玉环步鸳鸯脚踢翻蒋门神，痛打一顿，夺回酒店。后蒋门神勾结张都监陷害武松，武松血溅鸳鸯楼后将其全家杀死。",
+  "events": [
+    {"title": "夺快活林", "desc": "蒋门神蒋忠为孟州恶霸，身长九尺有万夫不当之勇。施恩在孟州牢营旁开快活林酒店，蒋门神率恶仆打伤施恩，夺其酒店。", "source": {"work": "《水浒传》", "locus": "第二十九回", "translator": null}, "canon": "romance"},
+    {"title": "武松醉打蒋门神", "desc": "施恩求武松代为出头。武松带醉至快活林酒店，一路饮酒三四十碗，至酒店故意刁难蒋门神妾。蒋门神怒出，武松以玉环步鸳鸯脚踢翻蒋门神，踏住胸膛痛打。蒋门神求饶，归还酒店。", "source": {"work": "《水浒传》", "locus": "第二十九回", "translator": null}, "canon": "romance"},
+    {"title": "勾结张都监陷害武松", "desc": "蒋门神勾结孟州张都监，设计陷害武松偷盗，武松被判刺配恩州。蒋门神又买通解差欲于飞云浦杀武松。武松识破，杀解差后返回孟州，血溅鸳鸯楼，杀张都监蒋门神张团练全家。", "source": {"work": "《水浒传》", "locus": "第三十回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["拳脚"],
+  "domains": ["恶霸"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/jiang_menshen.webp",
+  "thumb": "/p/shuihu/thumbs/jiang_menshen.webp"
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": 3,
+  "id": "zhen_guanxi",
+  "name_zh": "镇关西",
+  "name_en": "Zhen Guanxi",
+  "aliases": [
+    "镇关西",
+    "郑屠"
+  ],
+  "epithet": "郑屠·卖肉恶霸·鲁智深三拳打死",
+  "category": "shijing",
+  "era_layer": 0,
+  "bio": "镇关西，本名郑屠，是《水浒传》中渭州城的一个肉铺屠户。他倚仗一身蛮力和地头蛇势力，横行市井，欺压良善。某日，落魄艺人金老父女因欠他钱财，被他强逼卖唱抵债，金翠莲不堪凌辱，啼哭不止。恰逢鲁达（即后来的鲁智深）与史进、李忠在酒楼饮酒，闻得哭声，问明原委后大怒。鲁达次日到郑屠肉铺，故意刁难，先要十斤精肉臊子，又要十斤肥肉臊子，最后要十斤软骨臊子，且要郑屠亲手切。郑屠忍无可忍，持刀扑向鲁达，被鲁达顺势三拳打死：第一拳正中鼻梁，鲜血迸流；第二拳打中眼眶，眼珠突出；第三拳击中太阳穴，郑屠当场毙命。鲁达见出了人命，假意斥责郑屠诈死，从容脱身。镇关西之死成为《水浒传》中脍炙人口的经典情节，也直接导致鲁达逃亡，最终出家为僧，走上梁山之路。",
+  "events": [
+    {
+      "title": "欺压金翠莲父女",
+      "desc": "镇关西强买金老父女，逼迫金翠莲卖唱还债，金翠莲不堪凌辱，在酒楼啼哭，被鲁达听见。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "鲁达刁难切臊子",
+      "desc": "鲁达为替金氏父女出气，到郑屠肉铺故意刁难，先后要精肉、肥肉、软骨各十斤切作臊子，郑屠虽恼怒却不敢发作，只得照办。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "郑屠提刀反击",
+      "desc": "鲁达最后要求将软骨臊子再切一遍，郑屠忍无可忍，从肉案上抢了一把尖刀，直扑鲁达。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "三拳打死镇关西",
+      "desc": "鲁达避开刀锋，顺势挥拳，第一拳打中鼻梁，鲜血迸流；第二拳打中眼眶，眼珠迸出；第三拳打中太阳穴，郑屠当场死亡。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "鲁达假意离去",
+      "desc": "鲁达见郑屠已死，故意指着尸体骂他诈死，随后从容离开现场，为日后逃亡埋下伏笔。",
+      "source": {
+        "work": "《水浒传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "屠刀"
+  ],
+  "skills": [
+    "切肉",
+    "屠宰"
+  ],
+  "domains": [
+    "肉铺",
+    "屠宰"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zhen_guanxi.webp",
+  "thumb": "/p/shuihu/thumbs/zhen_guanxi.webp"
+}

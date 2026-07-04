@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "luan_tingyu",
+  "name_zh": "栾廷玉",
+  "name_en": "Luan Tingyu",
+  "aliases": ["铁棒栾廷玉"],
+  "epithet": "祝家庄教师·飞锤打欧鹏",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "栾廷玉，《水浒传》中祝家庄教师，武艺高强，善使铁棒与飞锤暗器。祝朝奉聘其教导三子祝龙祝虎祝彪武艺。三打祝家庄时栾廷玉飞锤打欧鹏，与梁山众将酣战。后祝家庄破，栾廷玉战死乱军中。",
+  "events": [
+    {"title": "祝家庄教师", "desc": "栾廷玉为祝朝奉所聘教师，武艺高强善使铁棒与飞锤暗器，教导祝龙祝虎祝彪三子武艺。与孙立为同门师兄弟。", "source": {"work": "《水浒传》", "locus": "第四十七回", "translator": null}, "canon": "romance"},
+    {"title": "飞锤打欧鹏", "desc": "三打祝家庄时，栾廷玉出阵与梁山众将酣战，飞锤打欧鹏落马，威震梁山。后孙立作内应，假意助栾廷玉实为梁山破庄。", "source": {"work": "《水浒传》", "locus": "第四十八回", "translator": null}, "canon": "romance"},
+    {"title": "战死祝家庄", "desc": "祝家庄破时，栾廷玉力战梁山众将，终因寡不敌众战死乱军中。", "source": {"work": "《水浒传》", "locus": "第五十回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["铁棒", "飞锤暗器"],
+  "domains": ["武艺"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/luan_tingyu.webp",
+  "thumb": "/p/shuihu/thumbs/luan_tingyu.webp"
+}

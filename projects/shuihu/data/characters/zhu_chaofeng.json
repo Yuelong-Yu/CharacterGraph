@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "zhu_chaofeng",
+  "name_zh": "祝朝奉",
+  "name_en": "Zhu Chaofeng",
+  "aliases": ["祝家庄庄主"],
+  "epithet": "祝家庄庄主·祝龙祝虎祝彪之父",
+  "category": "jianghu",
+  "era_layer": 0,
+  "bio": "祝朝奉，《水浒传》中独龙冈祝家庄庄主，生三子：祝龙、祝虎、祝彪，皆从栾廷玉习武。祝家庄与扈家庄、李家庄三庄联防，誓与梁山为敌。三打祝家庄后，祝朝奉及三子皆被杀，祝家庄覆灭。",
+  "events": [
+    {"title": "三庄联防", "desc": "祝朝奉为独龙冈祝家庄庄主，与扈家庄、李家庄三庄联防，聘栾廷玉为教师，誓与梁山为敌。三子祝龙祝虎祝彪皆习武，祝彪与扈三娘订亲。", "source": {"work": "《水浒传》", "locus": "第四十七回", "translator": null}, "canon": "romance"},
+    {"title": "三打祝家庄", "desc": "时迁偷鸡引发宋江三打祝家庄。栾廷玉飞锤打欧鹏，祝家庄顽强抵抗。后孙立作内应，吴用设计，终于攻破祝家庄。", "source": {"work": "《水浒传》", "locus": "第四十七至五十回", "translator": null}, "canon": "romance"},
+    {"title": "祝家庄覆灭", "desc": "祝家庄破后，祝朝奉及祝龙祝虎被杀，祝彪逃奔扈家庄被扈成所擒献梁山，亦被杀。祝家庄满门覆灭，扈三娘被林冲所擒后宋江许配王英。", "source": {"work": "《水浒传》", "locus": "第五十回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": ["乡绅武装"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zhu_chaofeng.webp",
+  "thumb": "/p/shuihu/thumbs/zhu_chaofeng.webp"
+}

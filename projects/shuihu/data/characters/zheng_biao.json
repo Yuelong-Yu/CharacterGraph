@@ -1,0 +1,23 @@
+{
+  "schema_version": 3,
+  "id": "zheng_biao",
+  "name_zh": "郑彪",
+  "name_en": "Zheng Biao",
+  "aliases": ["郑魔君"],
+  "epithet": "郑魔君·方腊部将·杀王英扈三娘",
+  "category": "jianghu",
+  "era_layer": 2,
+  "bio": "郑彪，《水浒传》中方腊部将，绰号郑魔君，善左道法术。拜包道乙为师学得诸般妖法。征方腊时郑彪作法使王英神志不清，一枪刺死王英，又以飞砖打死扈三娘，夫妻同死其手。后郑彪被梁山众将围杀。",
+  "events": [
+    {"title": "方腊部将", "desc": "郑彪为方腊部将，绰号郑魔君，拜包道乙为师学得诸般妖法，善左道法术。", "source": {"work": "《水浒传》", "locus": "第一百一十七回", "translator": null}, "canon": "romance"},
+    {"title": "作法杀王英扈三娘", "desc": "征方腊时王英与扈三娘同战郑彪。郑彪作法使王英神志不清，一枪刺王英于马下。扈三娘见夫战死急来报仇，亦被郑彪飞砖打死。夫妻同死郑魔君之手。", "source": {"work": "《水浒传》", "locus": "第一百一十七回", "translator": null}, "canon": "romance"},
+    {"title": "被梁山围杀", "desc": "郑彪杀王英扈三娘后，被梁山众将围攻，终被杀。", "source": {"work": "《水浒传》", "locus": "第一百一十七回", "translator": null}, "canon": "romance"}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["左道法术", "飞砖暗器"],
+  "domains": ["妖法", "武艺"],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zheng_biao.webp",
+  "thumb": "/p/shuihu/thumbs/zheng_biao.webp"
+}

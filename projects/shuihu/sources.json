@@ -951,6 +951,166 @@
       "category": "liangshan",
       "era_layer": 0,
       "epithet": "鬼脸儿·地全星·李应管家"
+    },
+    {
+      "slug": "zhao_ji",
+      "name_zh": "赵佶",
+      "name_en": "Zhao Ji",
+      "category": "chaoting",
+      "era_layer": 1,
+      "epithet": "宋徽宗·昏君·李师师情人"
+    },
+    {
+      "slug": "yang_jian",
+      "name_zh": "杨戬",
+      "name_en": "Yang Jian",
+      "category": "chaoting",
+      "era_layer": 1,
+      "epithet": "太尉·四大奸臣之四"
+    },
+    {
+      "slug": "liang_shangshu",
+      "name_zh": "梁中书",
+      "name_en": "Liang Shangshu",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "北京大名府知府·生辰纲发起者·蔡京女婿"
+    },
+    {
+      "slug": "su_yuanjing",
+      "name_zh": "宿元景",
+      "name_en": "Su Yuanjing",
+      "category": "chaoting",
+      "era_layer": 1,
+      "epithet": "太尉·梁山招安促成者"
+    },
+    {
+      "slug": "zhang_wenyuan",
+      "name_zh": "张文远",
+      "name_en": "Zhang Wenyuan",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "郓城小吏·与阎婆惜通奸"
+    },
+    {
+      "slug": "yan_poxi",
+      "name_zh": "阎婆惜",
+      "name_en": "Yan Poxi",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "宋江外室·与张文远通奸·要挟宋江"
+    },
+    {
+      "slug": "zhen_guanxi",
+      "name_zh": "镇关西",
+      "name_en": "Zhen Guanxi",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "郑屠·卖肉恶霸·鲁智深三拳打死"
+    },
+    {
+      "slug": "pei_ruhai",
+      "name_zh": "裴如海",
+      "name_en": "Pei Ruhai",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "报恩寺和尚·与潘巧云通奸·石秀所杀"
+    },
+    {
+      "slug": "li_shishi",
+      "name_zh": "李师师",
+      "name_en": "Li Shishi",
+      "category": "shijing",
+      "era_layer": 1,
+      "epithet": "东京名妓·宋徽宗情人·招安牵线人"
+    },
+    {
+      "slug": "zhi_zhen",
+      "name_zh": "智真长老",
+      "name_en": "Zhi Zhen",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "五台山文殊院方丈·鲁智深师父"
+    },
+    {
+      "slug": "shi_wengong",
+      "name_zh": "史文恭",
+      "name_en": "Shi Wengong",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "曾头市教师·射死晁盖·卢俊义所擒"
+    },
+    {
+      "slug": "zeng_nong",
+      "name_zh": "曾弄",
+      "name_en": "Zeng Nong",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "曾头市长官·曾家五子之父"
+    },
+    {
+      "slug": "zhu_chaofeng",
+      "name_zh": "祝朝奉",
+      "name_en": "Zhu Chaofeng",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "祝家庄庄主·祝龙祝虎祝彪之父"
+    },
+    {
+      "slug": "luan_tingyu",
+      "name_zh": "栾廷玉",
+      "name_en": "Luan Tingyu",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "祝家庄教师·飞锤打欧鹏"
+    },
+    {
+      "slug": "zhu_biao",
+      "name_zh": "祝彪",
+      "name_en": "Zhu Biao",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "祝家庄三子·扈三娘未婚夫"
+    },
+    {
+      "slug": "fang_la",
+      "name_zh": "方腊",
+      "name_en": "Fang La",
+      "category": "jianghu",
+      "era_layer": 2,
+      "epithet": "江南起义军首领·自称圣公"
+    },
+    {
+      "slug": "zheng_biao",
+      "name_zh": "郑彪",
+      "name_en": "Zheng Biao",
+      "category": "jianghu",
+      "era_layer": 2,
+      "epithet": "郑魔君·方腊部将·杀王英扈三娘"
+    },
+    {
+      "slug": "jiang_menshen",
+      "name_zh": "蒋门神",
+      "name_en": "Jiang Menshen",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "蒋忠·孟州恶霸·武松醉打"
+    },
+    {
+      "slug": "luo_zhenren",
+      "name_zh": "罗真人",
+      "name_en": "Luo Zhenren",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "公孙胜师父·二仙山道士·授五雷天心正法"
+    },
+    {
+      "slug": "wang_lun",
+      "name_zh": "王伦",
+      "name_en": "Wang Lun",
+      "category": "jianghu",
+      "era_layer": 0,
+      "epithet": "梁山前主·白衣秀士·林冲火并"
     }
   ],
   "artifacts": [
