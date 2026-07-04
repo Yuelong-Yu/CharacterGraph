@@ -1,0 +1,119 @@
+{
+  "schema_version": 3,
+  "id": "tong_guan",
+  "name_zh": "童贯",
+  "name_en": "Tong Guan",
+  "aliases": [
+    "道夫",
+    "道辅",
+    "Tong Guan",
+    "Tong Daofu"
+  ],
+  "epithet": "太尉·征梁山兵败",
+  "category": "chaoting",
+  "era_layer": 1,
+  "bio": "童贯（约1054—1126），字道夫，一作道辅，北宋开封人，是宋徽宗时期极受宠信的宦官、军事将领、政治顾问与宰执。他早年受教于名宦官将领，以身体强健、长须异于常人著称。1104年首次领军获胜，获徽宗御书“瘦金体”嘉奖；其后在西北对西夏作战中屡建功勋，逐步升至枢密院高位。1111年出使辽朝，洞悉契丹腐朽，力主联金灭辽。1118年秘密与女真达成“海上之盟”，约定共灭辽国并收回燕云十六州。1120年率军攻辽燕京，途中因方腊起义爆发，被迫南调镇压。1122年回师北伐失利，燕京被金军攻占，宋以岁币赎取空城，童贯因功封广阳郡王。1125年金军南侵，童贯随徽宗南逃，被钦宗贬逐，途中以十大罪被斩于南雄。童贯位列“六贼”，是北宋末年内忧外患的关键人物之一，其联金政策与军事失误加速了北宋灭亡。",
+  "events": [
+    {
+      "title": "首次领军获胜获徽宗御书",
+      "desc": "1104年，童贯在西北初战告捷，宋徽宗亲自书写“瘦金体”嘉奖令赐予他，标志着其军事生涯的开端。",
+      "source": {
+        "work": "英文维基百科 Tong Guan 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "出使辽朝洞察契丹腐败",
+      "desc": "1111年，童贯奉命出使辽朝燕京，观察到辽朝统治的腐败，从而萌生与女真结盟攻辽的念头。",
+      "source": {
+        "work": "中文维基百科 童贯 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "升任枢密院最高职务",
+      "desc": "1116年，童贯成为宋朝首位进入枢密院担任主要决策者的宦官，标志着其政治生涯的顶峰。",
+      "source": {
+        "work": "英文维基百科 Tong Guan 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "主导海上之盟联金灭辽",
+      "desc": "1118年，童贯建议徽宗与女真结盟，并秘密派遣使节达成海上之盟，约定共同灭辽后宋得燕云十六州。",
+      "source": {
+        "work": "英文维基百科 Tong Guan 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "镇压方腊起义",
+      "desc": "1120年，童贯率原本攻辽的军队南下，成功平定方腊起义，但因主力南调导致北伐延误。",
+      "source": {
+        "work": "中文维基百科 童贯 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "北伐燕京失败遭贬",
+      "desc": "1122年，童贯回师攻辽，被金军击败，燕京被金占领，宋以岁币赎回空城，童贯因战败被迫退休。",
+      "source": {
+        "work": "英文维基百科 Tong Guan 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "再次受命北御金军",
+      "desc": "1124年，徽宗再次起用童贯，命其率军北上防御，但童贯撤除了宋辽边境的防御林，使华北平原暴露。",
+      "source": {
+        "work": "英文维基百科 Tong Guan 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "南逃并护卫徽宗",
+      "desc": "1125年末，金军南侵，童贯逃回开封报信，后担任徽宗亲卫队长，随徽宗逃离开封。",
+      "source": {
+        "work": "英文维基百科 Tong Guan 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被钦宗处死",
+      "desc": "1126年，宋钦宗以十大罪下令处死童贯，派遣监察御史在南雄追上并将其斩首。",
+      "source": {
+        "work": "中文维基百科 童贯 词条",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [
+    "军事",
+    "政治",
+    "外交"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/tong_guan.webp",
+  "thumb": "/p/shuihu/thumbs/tong_guan.webp"
+}

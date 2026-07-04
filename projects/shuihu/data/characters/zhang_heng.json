@@ -1,0 +1,93 @@
+{
+  "schema_version": 3,
+  "id": "zhang_heng",
+  "name_zh": "张横",
+  "name_en": "Zhang Heng",
+  "aliases": [
+    "船火儿",
+    "天平星"
+  ],
+  "epithet": "船火儿·天平星",
+  "category": "liangshan",
+  "era_layer": 1,
+  "bio": "张横是《水浒传》中的人物，江州人氏，原为浔阳江上的艄公，与弟弟张顺同为当地一霸。他与李俊结为义兄弟，后因参与营救宋江、大闹江州，成为白龙庙二十九英雄之一。梁山大聚义时，张横排第二十八位，上应天竟星（一作天平星），担任水军头领。征讨方腊时，他病死于杭州，被追封为忠武郎。张横性格勇猛，擅长水战，在梁山泊水军中颇具威名，其事迹体现了梁山好汉的义气与反抗精神。",
+  "events": [
+    {
+      "title": "原为浔阳江艄公",
+      "desc": "张横出身江州，在浔阳江上以摆渡为生，与弟弟张顺横行当地，成为一霸。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与李俊结为义兄弟",
+      "desc": "张横与李俊交好，结为义兄弟，两人在江州一带共同活动，互为照应。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第三十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与营救宋江",
+      "desc": "宋江被发配江州，因题反诗被判斩首。张横随李俊等人在江州劫法场，救出宋江。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第四十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大闹江州",
+      "desc": "劫法场后，张横与梁山好汉一起大闹江州城，杀死官兵，最终逃往梁山。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第四十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "白龙庙二十九英雄之一",
+      "desc": "在江州脱险后，张横等二十九人在白龙庙聚会，正式加入梁山队伍。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第四十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梁山大聚义排第二十八",
+      "desc": "梁山泊英雄排座次时，张横位列第二十八位，上应天竟星（天平星），担任水军头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征方腊时病死于杭州",
+      "desc": "梁山受招安后，张横随军征讨方腊，在杭州染病身亡。后被追封为忠武郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": "第一百一十二回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/zhang_heng.webp",
+  "thumb": "/p/shuihu/thumbs/zhang_heng.webp"
+}

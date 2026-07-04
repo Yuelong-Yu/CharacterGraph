@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "id": "pan_qiaoyun",
+  "name_zh": "潘巧云",
+  "name_en": "Pan Qiaoyun",
+  "aliases": [
+    "潘巧云"
+  ],
+  "epithet": "杨雄之妻·报恩寺通奸",
+  "category": "shijing",
+  "era_layer": 0,
+  "bio": "潘巧云，古典小说《水浒传》中人物，生于七月七日，风韵寡妇，屠夫潘公之女。她原本是王押司的妻子，王押司去世后，改嫁杨雄。石秀寄住杨家期间，潘巧云常以风话挑逗石秀，但石秀始终以亲嫂之礼相待，不为所动。后来，她借为前夫王押司举办两周年祭日之机，请报恩寺僧人来做功德，与僧人裴如海勾搭成奸。石秀发现奸情后告知杨雄，潘巧云反咬一口，诬陷石秀调戏自己，导致杨雄与石秀产生误会。石秀为证明清白并防止杨雄日后遭暗害，设计杀死了裴如海。杨雄得知真相后，与石秀一同将潘巧云及婢女迎儿哄骗至翠屏山杀死。潘巧云因不守妇道、诬陷好人而成为《水浒传》中著名的反面女性角色之一。",
+  "events": [
+    {
+      "title": "改嫁杨雄",
+      "desc": "潘巧云原本是王押司的妻子，王押司去世后，她再嫁给了杨雄，成为杨雄之妻。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "挑逗石秀",
+      "desc": "石秀寄住杨家后，潘巧云多次以言语挑逗石秀，试图引诱他，但石秀始终以亲嫂之礼相待，不为所动。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与裴如海通奸",
+      "desc": "潘巧云借为前夫王押司举办两周年祭日的机会，请报恩寺僧人来做功德，与僧人裴如海勾搭成奸，暗中私通。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "诬陷石秀",
+      "desc": "石秀察觉潘巧云与裴如海的奸情后告诉了杨雄。潘巧云为掩盖真相，反诬石秀调戏她，导致杨雄与石秀产生误会。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "石秀杀裴如海",
+      "desc": "石秀为了证明自己的清白，并防止杨雄日后遭潘巧云和裴如海谋害，暗中杀死了裴如海，并留下证据。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "翠屏山被杀",
+      "desc": "杨雄得知真相后，与石秀一同将潘巧云和她的婢女迎儿哄骗至翠屏山，在那里将二人杀死，以报通奸之仇。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/pan_qiaoyun.webp",
+  "thumb": "/p/shuihu/thumbs/pan_qiaoyun.webp"
+}

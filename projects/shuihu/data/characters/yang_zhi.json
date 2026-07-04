@@ -1,0 +1,120 @@
+{
+  "schema_version": 3,
+  "id": "yang_zhi",
+  "name_zh": "杨志",
+  "name_en": "Yang Zhi",
+  "aliases": [
+    "青面兽",
+    "天暗星",
+    "杨制使",
+    "杨提辖",
+    "Yang Zhi"
+  ],
+  "epithet": "青面兽·天暗星",
+  "category": "liangshan",
+  "era_layer": 0,
+  "bio": "杨志，古典名著《水浒传》中的人物，一百单八将之一，绰号“青面兽”。他是杨家将后人，武举出身，曾任殿帅府制使。因失陷花石纲而流落江湖，后在东京谋求复职未果，穷困潦倒之际卖刀，杀死泼皮牛二，被刺配大名府。在大名府得到梁中书赏识，提拔为管军提辖使，奉命护送生辰纲。然而生辰纲被晁盖、吴用等人劫取，杨志无法交差，只得逃往二龙山落草。后三山聚义时随鲁智深、武松等人一同加入梁山。梁山大聚义时，杨志排第十七位，上应天暗星，位列马军八骠骑兼先锋使。他随宋江征讨方腊，在丹徒县病逝，追封忠武郎。杨志一生波折，空有一身武艺和报国之心，却屡遭挫折，最终在梁山找到了归宿，但结局仍令人唏嘘。",
+  "events": [
+    {
+      "title": "失陷花石纲",
+      "desc": "杨志担任殿帅府制使时，奉命押送花石纲，不料在黄河中遭遇风浪，船只沉没，花石纲全部丢失。杨志因此被革职，流落江湖，不敢回京复命。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "卖刀杀牛二",
+      "desc": "杨志在东京谋求复职不果，盘缠用尽，无奈之下出售祖传宝刀。泼皮牛二前来纠缠，杨志一时怒起，杀死牛二，被官府擒获，刺配大名府。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受恩梁中书",
+      "desc": "杨志被刺配到大名府后，得到梁中书赏识，被提拔为管军提辖使，并委以重任，负责押送生辰纲。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "智取生辰纲",
+      "desc": "晁盖、吴用等七人设计在黄泥岗劫取生辰纲。杨志虽然谨慎，但仍被蒙汗药麻翻，丢失了生辰纲，无法向梁中书交代，只得逃亡。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "落草二龙山",
+      "desc": "生辰纲被劫后，杨志走投无路，在曹正的建议下，与鲁智深一同占据二龙山，成为山寨头领。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "三山聚义上梁山",
+      "desc": "二龙山、桃花山、白虎山三山人马在呼延灼攻打时联合抗敌，后随宋江一起并入梁山，杨志成为梁山好汉之一。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大聚义排座次",
+      "desc": "梁山一百单八将大聚义时，杨志排第十七位，星号天暗星，担任马军八骠骑兼先锋使。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "征讨方腊病逝",
+      "desc": "宋江率梁山好汉征讨方腊，杨志随军征战。在丹徒县时，杨志因病去世，后被追封为忠武郎。",
+      "source": {
+        "work": "水浒传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "祖传宝刀",
+    "朴刀",
+    "长枪"
+  ],
+  "skills": [
+    "枪法娴熟",
+    "刀法精湛",
+    "武举出身",
+    "统领兵马"
+  ],
+  "domains": [
+    "武艺",
+    "押运",
+    "落草",
+    "先锋"
+  ],
+  "mounts": [],
+  "portrait": "/p/shuihu/portraits/yang_zhi.webp",
+  "thumb": "/p/shuihu/thumbs/yang_zhi.webp"
+}

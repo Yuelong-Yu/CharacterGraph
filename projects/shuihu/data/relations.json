@@ -806,5 +806,307 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chao_gai-yang_zhi",
+    "source": "chao_gai",
+    "target": "yang_zhi",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "智取生辰纲",
+        "desc": "杨志奉梁中书之命押送十万贯生辰纲赴东京蔡京府，途经黄泥冈。晁盖、吴用、公孙胜、刘唐、阮氏三雄、白胜七人设局，以蒙汗药迷倒杨志一行，劫走生辰纲。杨志醒后无颜回京，流落江湖后上二龙山落草。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第十六回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "niu_er-yang_zhi",
+    "source": "yang_zhi",
+    "target": "niu_er",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "东京卖刀杀牛二",
+        "desc": "杨志失职流落东京，盘缠用尽，于天汉州桥卖祖传宝刀。京师泼皮牛二‘没毛大虫’前来撒泼耍横，强抢宝刀、辱骂杨志。杨志怒起，一刀杀死牛二，自首到官府，被刺配北京大名府。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第十二回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_qiu-gao_yanei",
+    "source": "gao_qiu",
+    "target": "gao_yanei",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "养父子",
+        "desc": "高衙内本为高俅堂兄弟，高俅发迹后无子，收养为嗣子，称高衙内。倚高俅之势横行东京，专一淫人妻女，号称‘花花太岁’。高俅为满足其色欲，设计陷害林冲，致林冲家破人亡。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第七回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_heng-zhang_shun",
+    "source": "zhang_heng",
+    "target": "zhang_shun",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "浔阳江亲兄弟",
+        "desc": "张横、张顺为浔阳江边小孤山人，亲兄弟。张横为兄（船火儿），张顺为弟（浪里白条）。兄弟二人一水上一水下，曾共劫浔阳江。后同上梁山，皆为水军头领。征方腊张顺涌金门战死，张横亦病死军中。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第三十七回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lei_heng-zhu_tong",
+    "source": "zhu_tong",
+    "target": "lei_heng",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "郓城都头同僚",
+        "desc": "朱仝、雷横同为郓城县都头，与宋江交好。二人多次同差，私放宋江、刘唐。后雷横打死白秀英被判死刑，朱仝私放雷横，自披枷锁替雷横受罪，义重如山。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第十三回、第五十一回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "song_jiang-zhu_tong",
+    "source": "song_jiang",
+    "target": "zhu_tong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "朱仝私放宋江",
+        "desc": "宋江杀阎婆惜后，朱仝奉命搜查宋家庄，于佛堂暗室发现宋江。朱仝念旧交，私放宋江逃走，并赠银两书信。宋江得以投柴进避难，后上梁山。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第二十二回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiu-yang_xiong",
+    "source": "yang_xiong",
+    "target": "shi_xiu",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "蓟州结义",
+        "desc": "杨雄为蓟州押狱刽子手，行刑归来遇泼皮抢夺赏赐，石秀路见不平助杨雄打散泼皮。杨雄感石秀义气，结为异姓兄弟，石秀搬入杨雄家居住，助其料理肉铺。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第四十四回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      },
+      {
+        "title": "翠屏山杀妻同上梁山",
+        "desc": "石秀识破潘巧云与裴如海通奸，智杀裴如海，告发杨雄。杨雄诱潘巧云至翠屏山，石秀助杨雄杀潘巧云。二人遂同上梁山，并列步军头领。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第四十六回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pan_qiaoyun-yang_xiong",
+    "source": "yang_xiong",
+    "target": "pan_qiaoyun",
+    "primary_type": "kinship",
+    "composite_types": ["hostile"],
+    "events": [
+      {
+        "title": "二婚成亲",
+        "desc": "潘巧云前夫王押司亡故，改嫁杨雄。杨雄忙于公事冷落潘巧云，潘巧云与报恩寺和尚裴如海旧情复燃，借还愿之名在报恩寺通奸。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第四十四回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      },
+      {
+        "title": "翠屏山杀妻",
+        "desc": "石秀识破通奸、智杀裴如海，杨雄诱潘巧云至翠屏山古松前，逼其招供后割舌剜心，肢解杀妻。潘巧云香消玉殒，杨雄石秀同上梁山。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第四十六回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pan_qiaoyun-shi_xiu",
+    "source": "shi_xiu",
+    "target": "pan_qiaoyun",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "识破通奸智杀裴如海",
+        "desc": "石秀住杨雄家，察觉潘巧云与报恩寺和尚裴如海通奸。潘巧云反诬石秀调戏，杨雄误会赶走石秀。石秀夜伏巷弄，刀杀裴如海，剥去僧袍示众。杨雄醒悟，二人定计杀潘巧云。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第四十五回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dong_ping-song_jiang",
+    "source": "song_jiang",
+    "target": "dong_ping",
+    "primary_type": "bond",
+    "composite_types": ["hostile"],
+    "events": [
+      {
+        "title": "东平府双枪拒敌",
+        "desc": "董平为东平府兵马都监，善使双枪，号称双枪将，有万夫不当之勇。宋江打东平府，董平出城迎战，连战韩滔、徐宁，梁山众将莫能近前。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第六十九回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      },
+      {
+        "title": "中计生擒归顺",
+        "desc": "宋江用计生擒董平，亲解其缚、纳头便拜。董平感宋江义气，遂降梁山，位列马军五虎之一。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第六十九回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "song_jiang-zhang_qing",
+    "source": "song_jiang",
+    "target": "zhang_qing",
+    "primary_type": "bond",
+    "composite_types": ["hostile"],
+    "events": [
+      {
+        "title": "东昌飞石打十五将",
+        "desc": "张清为东昌府守将，善飞石打人，百发百中号称没羽箭。宋江打东昌府，张清连打徐宁、燕顺、百胜将韩滔、双鞭呼延灼等十五员梁山将领，个个头破血流。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第七十回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      },
+      {
+        "title": "吴用计擒归顺",
+        "desc": "吴用用计引张清入水，被阮氏三雄水下生擒。宋江亲解其缚、纳头便拜，张清感义气归顺梁山，位列马军八骠骑之首。后征方腊娶琼英为妻。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第七十回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hu_sanniang-lin_chong",
+    "source": "lin_chong",
+    "target": "hu_sanniang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祝家庄一丈青被擒",
+        "desc": "扈三娘为扈家庄千金，祝彪未婚妻，善使日月双刀，唤作一丈青。三打祝家庄时扈三娘出阵助祝家庄，连擒王英、秦明部将。林冲出阵迎战，一枪挑落其马，生擒扈三娘。后宋江将其许配王英。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第四十八回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cai_jing-gao_qiu",
+    "source": "cai_jing",
+    "target": "gao_qiu",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "朝堂四大奸臣同党",
+        "desc": "蔡京为太师、高俅为太尉，与童贯、杨戬并称四大奸臣。把持朝政、贪墨纳贿、排挤忠良。梁中书所送十万贯生辰纲即贿蔡京贺寿。招安后多次进谗害宋江卢俊义，致二将饮毒酒而死。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第一百二十回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "song_jiang-tong_guan",
+    "source": "tong_guan",
+    "target": "song_jiang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "童贯征梁山兵败",
+        "desc": "朝廷以童贯为统帅征梁山，率十万大军进剿。童贯不懂兵法，被宋江用十面埋伏之计大破，折兵大半，仅以身免。童贯隐瞒败绩，谎报军情。后高俅再征亦败。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第七十六至七十七回", "translator": null },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_zhishen-yang_zhi",
+    "source": "lu_zhishen",
+    "target": "yang_zhi",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "二龙山聚义",
+        "desc": "杨志失陷生辰纲后流落江湖，与鲁智深、曹正合力夺下二龙山宝珠寺落草。鲁智深为山寨之主，杨志、武松为副。后武松亦上二龙山，四人结义。最终同归梁山。",
+        "desc_long": null,
+        "source": { "work": "《水浒传》", "locus": "第十七回", "translator": null },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
   }
 ]

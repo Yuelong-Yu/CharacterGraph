@@ -207,6 +207,126 @@
       "category": "liangshan",
       "era_layer": 1,
       "epithet": "浪子·天巧星"
+    },
+    {
+      "slug": "yang_zhi",
+      "name_zh": "杨志",
+      "name_en": "Yang Zhi",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "青面兽·天暗星"
+    },
+    {
+      "slug": "zhang_qing",
+      "name_zh": "张清",
+      "name_en": "Zhang Qing",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "没羽箭·天捷星"
+    },
+    {
+      "slug": "dong_ping",
+      "name_zh": "董平",
+      "name_en": "Dong Ping",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "双枪将·天立星·马军五虎"
+    },
+    {
+      "slug": "zhang_heng",
+      "name_zh": "张横",
+      "name_en": "Zhang Heng",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "船火儿·天平星"
+    },
+    {
+      "slug": "zhang_shun",
+      "name_zh": "张顺",
+      "name_en": "Zhang Shun",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "浪里白条·天损星"
+    },
+    {
+      "slug": "zhu_tong",
+      "name_zh": "朱仝",
+      "name_en": "Zhu Tong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "美髯公·天满星"
+    },
+    {
+      "slug": "lei_heng",
+      "name_zh": "雷横",
+      "name_en": "Lei Heng",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "插翅虎·天退星"
+    },
+    {
+      "slug": "yang_xiong",
+      "name_zh": "杨雄",
+      "name_en": "Yang Xiong",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "病关索·天牢星"
+    },
+    {
+      "slug": "shi_xiu",
+      "name_zh": "石秀",
+      "name_en": "Shi Xiu",
+      "category": "liangshan",
+      "era_layer": 0,
+      "epithet": "拼命三郎·天慧星"
+    },
+    {
+      "slug": "hu_sanniang",
+      "name_zh": "扈三娘",
+      "name_en": "Hu Sanniang",
+      "category": "liangshan",
+      "era_layer": 1,
+      "epithet": "一丈青·地慧星·梁山女将"
+    },
+    {
+      "slug": "gao_yanei",
+      "name_zh": "高衙内",
+      "name_en": "Gao Yanei",
+      "category": "chaoting",
+      "era_layer": 0,
+      "epithet": "高俅养子·花花太岁"
+    },
+    {
+      "slug": "cai_jing",
+      "name_zh": "蔡京",
+      "name_en": "Cai Jing",
+      "category": "chaoting",
+      "era_layer": 1,
+      "epithet": "太师·四大奸臣之首"
+    },
+    {
+      "slug": "tong_guan",
+      "name_zh": "童贯",
+      "name_en": "Tong Guan",
+      "category": "chaoting",
+      "era_layer": 1,
+      "epithet": "太尉·征梁山兵败"
+    },
+    {
+      "slug": "pan_qiaoyun",
+      "name_zh": "潘巧云",
+      "name_en": "Pan Qiaoyun",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "杨雄之妻·报恩寺通奸"
+    },
+    {
+      "slug": "niu_er",
+      "name_zh": "牛二",
+      "name_en": "Niu Er",
+      "category": "shijing",
+      "era_layer": 0,
+      "epithet": "京师泼皮·没毛大虫"
     }
   ],
   "artifacts": [
