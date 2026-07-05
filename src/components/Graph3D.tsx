@@ -220,6 +220,14 @@ function tierYForNode(node: GraphNode): number {
   return (3 - (node.kind === "character" ? node.entity.era_layer : node.eraLayer)) * LAYER_SPACING;
 }
 
+function nodeCoord(n: GraphNode): { x: number; y: number; z: number } {
+  return {
+    x: n.x ?? n.fx ?? 0,
+    y: n.y ?? n.fy ?? 0,
+    z: n.z ?? n.fz ?? 0,
+  };
+}
+
 export function Graph3D({
   dataset,
   layoutMode,
@@ -631,6 +639,93 @@ export function Graph3D({
           return true;
         });
         if (fitNodes.length === 0) return;
+
+        const fitNodeIds = new Set(fitNodes.map((n) => n.id));
+        const fitAdj = new Map<string, Set<string>>();
+        for (const n of fitNodes) fitAdj.set(n.id, new Set());
+        for (const r of dataset.relations) {
+          if (!fitNodeIds.has(r.source) || !fitNodeIds.has(r.target)) continue;
+          fitAdj.get(r.source)?.add(r.target);
+          fitAdj.get(r.target)?.add(r.source);
+        }
+
+        const visited = new Set<string>();
+        const components: GraphNode[][] = [];
+        const nodeById = new Map(fitNodes.map((n) => [n.id, n]));
+        for (const n of fitNodes) {
+          if (visited.has(n.id)) continue;
+          const stack = [n.id];
+          const comp: GraphNode[] = [];
+          while (stack.length > 0) {
+            const id = stack.pop()!;
+            if (visited.has(id)) continue;
+            visited.add(id);
+            const node = nodeById.get(id);
+            if (node) comp.push(node);
+            for (const nb of fitAdj.get(id) ?? []) {
+              if (!visited.has(nb)) stack.push(nb);
+            }
+          }
+          if (comp.length > 0) components.push(comp);
+        }
+
+        // 有边的小连通分量同样会被力导向推远；fit 前把非主岛整体收拢到主岛右侧的近邻区域。
+        const connectedComponents = components
+          .filter((comp) => comp.some((n) => (degreeMap.get(n.id) ?? 0) > 0))
+          .sort((a, b) => {
+            if (b.length !== a.length) return b.length - a.length;
+            const da = a.reduce((sum, n) => sum + (degreeMap.get(n.id) ?? 0), 0);
+            const db = b.reduce((sum, n) => sum + (degreeMap.get(n.id) ?? 0), 0);
+            return db - da;
+          });
+
+        const mainComponent = connectedComponents[0] ?? [];
+        const satelliteComponents = connectedComponents.slice(1);
+        if (mainComponent.length > 0 && satelliteComponents.length > 0) {
+          const mainCoords = mainComponent.map(nodeCoord);
+          const mainMinX = Math.min(...mainCoords.map((p) => p.x));
+          const mainMaxX = Math.max(...mainCoords.map((p) => p.x));
+          const mainMinY = Math.min(...mainCoords.map((p) => p.y));
+          const mainMaxY = Math.max(...mainCoords.map((p) => p.y));
+          const mainCenterY = (mainMinY + mainMaxY) / 2;
+          const mainCenterZ = (Math.min(...mainCoords.map((p) => p.z)) + Math.max(...mainCoords.map((p) => p.z))) / 2;
+          const mainH = Math.max(120, mainMaxY - mainMinY);
+          const bandX = mainMaxX + Math.min(105, Math.max(65, (mainMaxX - mainMinX) * 0.12));
+          const rowGap = 54;
+          const bandRows = Math.max(3, Math.floor(mainH / rowGap) + 1);
+
+          satelliteComponents.forEach((comp, i) => {
+            const coords = comp.map(nodeCoord);
+            const minX = Math.min(...coords.map((p) => p.x));
+            const maxX = Math.max(...coords.map((p) => p.x));
+            const minY = Math.min(...coords.map((p) => p.y));
+            const maxY = Math.max(...coords.map((p) => p.y));
+            const minZ = Math.min(...coords.map((p) => p.z));
+            const maxZ = Math.max(...coords.map((p) => p.z));
+            const compCx = (minX + maxX) / 2;
+            const compCy = (minY + maxY) / 2;
+            const compCz = (minZ + maxZ) / 2;
+            const row = i % bandRows;
+            const col = Math.floor(i / bandRows);
+            const targetCx = bandX + col * 58;
+            const targetCy = mainCenterY + (row - (Math.min(bandRows, satelliteComponents.length) - 1) / 2) * rowGap;
+            const targetCz = mainCenterZ;
+            const dx = targetCx - compCx;
+            const dy = targetCy - compCy;
+            const dz = targetCz - compCz;
+
+            comp.forEach((n) => {
+              const p = nodeCoord(n);
+              n.fx = p.x + dx;
+              n.fy = layoutMode === "tier" ? tierYForNode(n) : p.y + dy;
+              n.fz = p.z + dz;
+              n.x = n.fx;
+              n.y = n.fy;
+              n.z = n.fz;
+            });
+          });
+          fgRef.current.d3ReheatSimulation();
+        }
 
         const connectedFitNodes = fitNodes.filter((n) => (degreeMap.get(n.id) ?? 0) > 0);
         const isolatedFitNodes = fitNodes.filter((n) => (degreeMap.get(n.id) ?? 0) === 0);
