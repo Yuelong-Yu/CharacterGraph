@@ -30,6 +30,7 @@ const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), { ssr: false 
 // ─── 纹理缓存 ───────────────────────────────────────────
 const _texCache = new Map<string, THREE.Texture>();
 const _texLoader = typeof window !== "undefined" ? new THREE.TextureLoader() : null;
+const _preloadedImages = new Set<string>();
 
 function getThumbTexture(url: string): THREE.Texture | null {
   if (!_texLoader) return null;
@@ -39,6 +40,25 @@ function getThumbTexture(url: string): THREE.Texture | null {
   tex.colorSpace = THREE.SRGBColorSpace;
   _texCache.set(url, tex);
   return tex;
+}
+
+function preloadImageUrls(urls: string[]) {
+  if (typeof document === "undefined") return;
+  for (const url of urls) {
+    if (_preloadedImages.has(url)) continue;
+    _preloadedImages.add(url);
+
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = "image";
+    link.href = url;
+    document.head.appendChild(link);
+
+    const img = new Image();
+    img.decoding = "async";
+    img.fetchPriority = "high";
+    img.src = url;
+  }
 }
 
 let _haloTex: THREE.Texture | null = null;
@@ -300,9 +320,21 @@ export function Graph3D({
     return m;
   }, [dataset.characters, dataset.artifacts, dataset.relations]);
 
+  // ── 度数表：每个节点的入度+出度（基于全数据集，不受类别过滤影响） ──
+  const degreeMap = useMemo(() => {
+    const m = new Map<string, number>();
+    for (const c of dataset.characters) m.set(c.id, 0);
+    for (const a of dataset.artifacts) m.set(a.id, 0);
+    for (const r of dataset.relations) {
+      m.set(r.source, (m.get(r.source) ?? 0) + 1);
+      m.set(r.target, (m.get(r.target) ?? 0) + 1);
+    }
+    return m;
+  }, [dataset]);
+
   // ── 稳定的节点对象 — 仅 dataset 变化时重建 ──
-  const nodes = useMemo<GraphNode[]>(
-    () => [
+  const nodes = useMemo<GraphNode[]>(() => {
+    const unsorted: GraphNode[] = [
       ...dataset.characters.map((c): CharacterGraphNode => ({ id: c.id, kind: "character", entity: c })),
       ...dataset.artifacts.map((a): ArtifactGraphNode => ({
         id: a.id,
@@ -310,9 +342,18 @@ export function Graph3D({
         entity: a,
         eraLayer: artifactEraMap.get(a.id) ?? 2,
       })),
-    ],
-    [dataset.characters, dataset.artifacts, artifactEraMap],
-  );
+    ];
+
+    return unsorted.sort((a, b) => {
+      const da = degreeMap.get(a.id) ?? 0;
+      const db = degreeMap.get(b.id) ?? 0;
+      if (db !== da) return db - da;
+      const eraA = a.kind === "character" ? a.entity.era_layer : a.eraLayer;
+      const eraB = b.kind === "character" ? b.entity.era_layer : b.eraLayer;
+      if (eraA !== eraB) return eraA - eraB;
+      return a.id.localeCompare(b.id);
+    });
+  }, [dataset.characters, dataset.artifacts, artifactEraMap, degreeMap]);
   const artifactIdSet = useMemo(
     () => new Set(dataset.artifacts.map((a) => a.id)),
     [dataset.artifacts],
@@ -353,18 +394,6 @@ export function Graph3D({
     }
     return s;
   }, [focusedId, dataset.relations]);
-
-  // ── 度数表：每个节点的入度+出度（基于全数据集，不受类别过滤影响） ──
-  const degreeMap = useMemo(() => {
-    const m = new Map<string, number>();
-    for (const c of dataset.characters) m.set(c.id, 0);
-    for (const a of dataset.artifacts) m.set(a.id, 0);
-    for (const r of dataset.relations) {
-      m.set(r.source, (m.get(r.source) ?? 0) + 1);
-      m.set(r.target, (m.get(r.target) ?? 0) + 1);
-    }
-    return m;
-  }, [dataset]);
 
   // ── 应用布局：聚焦模式 > 过滤平铺态 > 普通 layoutMode ──
   useEffect(() => {
@@ -936,6 +965,12 @@ export function Graph3D({
 
     return order;
   }, [nodes, visibleIdSet, adjacency, degreeMap]);
+
+  useEffect(() => {
+    const priorityUrls = tourSequence.slice(0, 12).map((n) => n.entity.thumb);
+    preloadImageUrls(priorityUrls);
+    for (const url of priorityUrls) getThumbTexture(url);
+  }, [tourSequence]);
 
   // 旋转：每帧把相机绕 Y 轴旋转（6°/秒）
   useEffect(() => {
