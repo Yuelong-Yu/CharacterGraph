@@ -20,6 +20,13 @@ import type {
 } from "@/schemas/character";
 import type { GraphDiff, WhatIfTurnDetail } from "@/schemas/whatif";
 
+export interface DiffNormalizationContext {
+  premise?: string;
+  narrative?: readonly { text: string }[];
+}
+
+const EXPLICIT_RELATION_RUPTURE = /绝交|决裂|恩断义绝|反目成仇|分道扬镳|不再往来|断绝(?:关系|往来)|关系(?:彻底)?破裂|解除(?:关系|盟约)|终止(?:关系|合作)/;
+
 function unwrappedWork(work: string): string {
   let base = work.trim();
   while (base.startsWith("《") && base.endsWith("》")) {
@@ -83,7 +90,11 @@ function adaptRelationEvent(event: RelationEvent, preferredWork: string | null):
  * 清理 LLM 把已有节点/关系再次放进 additions 的常见错误。
  * 返回新 diff，不修改模型原始输出或当前图谱。
  */
-export function normalizeDiffAgainstDataset(base: Dataset, diff: GraphDiff): GraphDiff {
+export function normalizeDiffAgainstDataset(
+  base: Dataset,
+  diff: GraphDiff,
+  context?: DiffNormalizationContext,
+): GraphDiff {
   const fallbackWork = primaryWork(base);
   const nodeIds = new Set([
     ...base.characters.map((character) => character.id),
@@ -113,6 +124,10 @@ export function normalizeDiffAgainstDataset(base: Dataset, diff: GraphDiff): Gra
       events: relation.events.map((event) =>
         adaptRelationEvent(event, event.source?.work ?? fallbackWork)),
     }));
+
+  const removedEdges = context
+    ? filterUnsupportedEdgeRemovals(base, diff, context)
+    : diff.removedEdges;
 
   const characterById = new Map(base.characters.map((character) => [character.id, character]));
   const modifiedEvents = diff.modifiedEvents.map((change) => {
@@ -147,7 +162,39 @@ export function normalizeDiffAgainstDataset(base: Dataset, diff: GraphDiff): Gra
     };
   });
 
-  return { ...diff, addedNodes, addedEdges, modifiedEvents, replacedEvents };
+  return { ...diff, removedEdges, addedNodes, addedEdges, modifiedEvents, replacedEvents };
+}
+
+function filterUnsupportedEdgeRemovals(
+  base: Dataset,
+  diff: GraphDiff,
+  context: DiffNormalizationContext,
+): string[] {
+  const removedNodes = new Set(diff.removedNodes);
+  const relations = new Map(base.relations.map((relation) => [relation.id, relation]));
+  const entities = new Map(
+    [...base.characters, ...base.artifacts].map((entity) => [entity.id, entity]),
+  );
+  const evidence = [context.premise, ...(context.narrative ?? []).map((segment) => segment.text)]
+    .filter((text): text is string => Boolean(text?.trim()));
+
+  return diff.removedEdges.filter((relationId) => {
+    const relation = relations.get(relationId);
+    if (!relation) return true;
+    if (removedNodes.has(relation.source) || removedNodes.has(relation.target)) return true;
+
+    const source = entities.get(relation.source);
+    const target = entities.get(relation.target);
+    if (!source || !target) return false;
+    const sourceNames = [source.name_zh, relation.source];
+    const targetNames = [target.name_zh, relation.target];
+
+    return evidence.some((text) => (
+      EXPLICIT_RELATION_RUPTURE.test(text)
+      && sourceNames.some((name) => text.includes(name))
+      && targetNames.some((name) => text.includes(name))
+    ));
+  });
 }
 
 /**

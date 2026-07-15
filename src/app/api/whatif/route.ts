@@ -15,7 +15,7 @@ import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
 import { buildContext } from "@/lib/whatif/contextBuilder";
 import { buildSystemPrompt, buildUserPrompt, LLMParseError } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf } from "@/lib/whatif/llmClient";
+import { generateParsedWhatIf, LLMRefusalError } from "@/lib/whatif/llmClient";
 import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
@@ -127,7 +127,10 @@ export async function POST(req: NextRequest) {
         );
 
         // 6.5 清理重复新增并做来源校验
-        const diff = normalizeDiffAgainstDataset(dataset, llmOutput.diff);
+        const diff = normalizeDiffAgainstDataset(dataset, llmOutput.diff, {
+          premise: input.premise,
+          narrative: llmOutput.narrative,
+        });
         const validation = validateNarrative(llmOutput.narrative, dataset, diff);
 
         // 7. 落库：session + root branch + turn
@@ -184,7 +187,9 @@ export async function POST(req: NextRequest) {
           validation,
         });
       } catch (e) {
-        if (e instanceof LLMParseError) {
+        if (e instanceof LLMRefusalError) {
+          send("error", { code: "LLM_REFUSAL", message: e.message });
+        } else if (e instanceof LLMParseError) {
           send("error", { code: "PARSE_ERROR", message: e.message, raw: e.raw });
         } else {
           const message = e instanceof Error ? e.message : String(e);

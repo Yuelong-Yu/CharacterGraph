@@ -33,12 +33,16 @@ import {
   type UserCharacterRecord,
 } from "@/lib/userCharacters";
 import {
+  createUserCharacterScope,
   deleteUserCharacterRecord,
+  listUserCharacterScopes,
   loadOrInitializeUserCharacterScope,
   loadUserCharacterRecords,
   loadUserEvents,
+  migrateBaseUserCharactersToScope,
   saveUserCharacterRecord,
   saveUserEvents,
+  type UserCharacterScope,
 } from "@/lib/userContentDb";
 import {
   deleteUserCharacterHistory,
@@ -111,7 +115,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     activeBranchId,
   } = whatIfWorkspace;
 
-  const activeUserScopeId = activeBranchId ?? BASE_USER_CHARACTER_SCOPE;
+  const userBranchStorageKey = `character-graph:${config.slug}:active-user-branch:v1`;
+  const [localUserBranchId, setLocalUserBranchId] = useState<string | null>(null);
+  const [userCharacterScopes, setUserCharacterScopes] = useState<UserCharacterScope[]>([]);
+  const [userScopesReady, setUserScopesReady] = useState(false);
+  const activeUserScopeId = activeBranchId ?? localUserBranchId ?? BASE_USER_CHARACTER_SCOPE;
   const userEventStorageKey = `character-graph:${config.slug}:user-events:v1`;
   const [userEvents, setUserEvents] = useState<UserEventsByCharacter>({});
   const [loadedUserEventKey, setLoadedUserEventKey] = useState<string | null>(null);
@@ -131,6 +139,46 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   useEffect(() => {
     recordsRef.current = userCharacterRecords;
   }, [userCharacterRecords]);
+
+  useEffect(() => {
+    let cancelled = false;
+    setUserScopesReady(false);
+    const now = new Date().toISOString();
+    const migrationScope: UserCharacterScope = {
+      id: `user-branch:${typeof crypto.randomUUID === "function" ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`}`,
+      projectSlug: config.slug,
+      kind: "user-branch",
+      title: "用户改编分支",
+      createdAt: now,
+      updatedAt: now,
+    };
+    migrateBaseUserCharactersToScope(config.slug, migrationScope)
+      .then(async (migratedRecords) => {
+        if (migratedRecords.length > 0) {
+          window.localStorage.setItem(userBranchStorageKey, migrationScope.id);
+        }
+        const scopes = await listUserCharacterScopes(config.slug);
+        if (cancelled) return;
+        const storedBranchId = window.localStorage.getItem(userBranchStorageKey);
+        const migratedScope = migratedRecords.length > 0
+          ? scopes.find((scope) => scope.id === migrationScope.id) ?? migrationScope
+          : null;
+        const nextBranchId = migratedScope?.id
+          ?? (storedBranchId && scopes.some((scope) => scope.id === storedBranchId) ? storedBranchId : null);
+        setUserCharacterScopes(scopes);
+        setLocalUserBranchId(nextBranchId);
+        if (nextBranchId) window.localStorage.setItem(userBranchStorageKey, nextBranchId);
+        else window.localStorage.removeItem(userBranchStorageKey);
+        setUserScopesReady(true);
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setLocalUserBranchId(null);
+        setUserCharacterScopes([]);
+        setUserScopesReady(true);
+      });
+    return () => { cancelled = true; };
+  }, [config.slug, userBranchStorageKey]);
 
   useEffect(() => {
     let cancelled = false;
@@ -164,6 +212,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   }, [config.slug, loadedUserEventKey, userEventStorageKey, userEvents]);
 
   useEffect(() => {
+    if (!userScopesReady) return;
     let cancelled = false;
     const load = activeUserScopeId === BASE_USER_CHARACTER_SCOPE
       ? loadUserCharacterRecords(config.slug, activeUserScopeId)
@@ -179,7 +228,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       setLoadedUserScopeId(activeUserScopeId);
     });
     return () => { cancelled = true; };
-  }, [activeUserScopeId, config.slug]);
+  }, [activeUserScopeId, config.slug, userScopesReady]);
 
   const datasetWithUserCharacters = useMemo(
     () => mergeUserCharacters(dataset, userCharacterRecords),
@@ -278,10 +327,25 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   );
   const selectedCharacterAdaptations = useMemo(
     () => character
-      ? relationAdaptationsForCharacter(userCharacterRecords, character.id)
+      ? relationAdaptationsForCharacter(userCharacterRecords, character.id, character.events)
       : [],
     [character, userCharacterRecords],
   );
+  const selectedMainEventItems = useMemo(() => {
+    if (!character) return [];
+    return [
+      ...character.events.map((event, index) => ({
+        key: `character:${index}:${event.title}`,
+        event,
+        adaptation: null,
+      })),
+      ...selectedCharacterAdaptations.map((adaptation) => ({
+        key: `adaptation:${adaptation.relationId}:${adaptation.event.title}`,
+        event: adaptation.event,
+        adaptation,
+      })),
+    ];
+  }, [character, selectedCharacterAdaptations]);
   const artifact = sel.kind === "node"
     ? effectiveDataset.artifacts.find((a) => a.id === sel.id)
     : null;
@@ -334,6 +398,15 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     setSel({ kind: "none" });
   };
 
+  const activateLocalUserBranch = (branchId: string | null) => {
+    setLocalUserBranchId(branchId);
+    if (branchId) window.localStorage.setItem(userBranchStorageKey, branchId);
+    else window.localStorage.removeItem(userBranchStorageKey);
+    setFocusedId(null);
+    setFocusId(null);
+    setSel({ kind: "none" });
+  };
+
   const handleWhatIfTurnsChange = useCallback((turns: typeof whatIfTurns) => {
     dispatchWhatIf({ type: "set-turns", turns });
   }, []);
@@ -347,9 +420,23 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       throw new Error("人物分支仍在载入，请稍后重试");
     }
     const previous = userCharacterRecords.find((item) => item.id === record.id);
+    let persistedRecord = record;
+    let createdScope: UserCharacterScope | null = null;
+    if (!previous && !activeBranchId && activeUserScopeId === BASE_USER_CHARACTER_SCOPE) {
+      const now = new Date().toISOString();
+      createdScope = {
+        id: `user-branch:${typeof crypto.randomUUID === "function" ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`}`,
+        projectSlug: config.slug,
+        kind: "user-branch",
+        title: `人物改编：${record.character.name_zh}`,
+        createdAt: now,
+        updatedAt: now,
+      };
+      persistedRecord = { ...record, scopeId: createdScope.id };
+    }
     const nextRecords = previous
-      ? userCharacterRecords.map((item) => item.id === record.id ? record : item)
-      : [...userCharacterRecords, record];
+      ? userCharacterRecords.map((item) => item.id === record.id ? persistedRecord : item)
+      : [...userCharacterRecords, persistedRecord];
     let impactCount = 0;
     if (previous && activeBranchId) {
       const impact = await fetchUserCharacterHistoryImpact(activeBranchId, record.id);
@@ -360,7 +447,14 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           : "当前分支没有引用该人物的推演。确认保存修改？",
       )) return;
     }
-    await saveUserCharacterRecord(record);
+    if (createdScope) {
+      await createUserCharacterScope(createdScope, [persistedRecord]);
+      setUserCharacterScopes((scopes) => [createdScope!, ...scopes]);
+      setLoadedUserScopeId(createdScope.id);
+      activateLocalUserBranch(createdScope.id);
+    } else {
+      await saveUserCharacterRecord(persistedRecord);
+    }
     setUserCharacterRecords(nextRecords);
     setDeletedUserCharacter(null);
     if (previous && activeBranchId && impactCount > 0) {
@@ -371,7 +465,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         await regenerateUserCharacterHistory({
           projectSlug: config.slug,
           branchId: activeBranchId,
-          characterId: record.id,
+          characterId: persistedRecord.id,
           datasetOverlay: {
             characters: nextDataset.characters.filter((character) => changedIds.has(character.id)),
             relations: custom.relations,
@@ -384,9 +478,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       }
     }
     setUserCharacterEditor(null);
-    setSel({ kind: "node", id: record.id });
-    setFocusId(record.id);
-    setFocusedId(record.id);
+    setSel({ kind: "node", id: persistedRecord.id });
+    setFocusId(persistedRecord.id);
+    setFocusedId(persistedRecord.id);
   };
 
   const removeUserCharacter = async (record: UserCharacterRecord) => {
@@ -555,6 +649,41 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             </button>
           </div>
         )}
+        {!whatIfConfig && localUserBranchId && (
+          <div
+            style={{
+              position: "absolute",
+              top: 16,
+              right: 66,
+              zIndex: 30,
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
+            }}
+          >
+            <span style={{ color: COLOR.textMuted, fontSize: 11, whiteSpace: "nowrap" }}>
+              {userCharacterScopes.find((scope) => scope.id === localUserBranchId)?.title ?? "用户改编分支"}
+            </span>
+            <button
+              type="button"
+              onClick={() => activateLocalUserBranch(null)}
+              style={{
+                height: 38,
+                padding: "0 12px",
+                border: `1px solid ${COLOR.border}`,
+                borderRadius: 6,
+                background: COLOR.bgPanel,
+                color: COLOR.textMuted,
+                cursor: "pointer",
+                fontSize: 12,
+                fontFamily: FONT.sans,
+                whiteSpace: "nowrap",
+              }}
+            >
+              退出分支版本
+            </button>
+          </div>
+        )}
         {!isWhatIfChangeView && (
           <SearchBox
             items={searchItems}
@@ -566,7 +695,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             filterApplied={matchedIds !== null}
             appliedCount={matchedIds?.size ?? 0}
             totalCount={effectiveDataset.characters.length + effectiveDataset.artifacts.length}
-            rightOffset={whatIfConfig ? 283 : 16}
+            rightOffset={whatIfConfig ? 283 : localUserBranchId ? 270 : 16}
           />
         )}
         <Legend
@@ -671,6 +800,34 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             <div style={{ marginTop: 24, fontSize: 12 }}>
               数据：{effectiveDataset.characters.length} 人 · {effectiveDataset.artifacts.length} 件神器 · {effectiveDataset.relations.length} 条关系
             </div>
+            {!localUserBranchId && userCharacterScopes.length > 0 && (
+              <div style={{ marginTop: 22, paddingTop: 16, borderTop: `1px solid ${COLOR.border}` }}>
+                <div style={{ color: COLOR.text, fontSize: 12, fontWeight: 600, marginBottom: 8 }}>
+                  人物改编分支
+                </div>
+                {userCharacterScopes.map((scope) => (
+                  <button
+                    key={scope.id}
+                    type="button"
+                    onClick={() => activateLocalUserBranch(scope.id)}
+                    style={{
+                      width: "100%",
+                      padding: "8px 0",
+                      border: "none",
+                      borderTop: `1px solid ${COLOR.border}`,
+                      background: "transparent",
+                      color: COLOR.accent,
+                      cursor: "pointer",
+                      textAlign: "left",
+                      fontSize: 12,
+                      fontFamily: FONT.sans,
+                    }}
+                  >
+                    {scope.title}
+                  </button>
+                ))}
+              </div>
+            )}
             <button
               type="button"
               onClick={() => setUserCharacterEditor({ editingRecord: null })}
@@ -829,12 +986,18 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
               title="主要事件"
               items={(
                 <>
-                  {character.events.map((event, index) => {
-                    const userEntry = userEvents[character.id]?.find(
+                  {selectedMainEventItems.map(({ key, event, adaptation }) => {
+                    const userEntry = !adaptation ? userEvents[character.id]?.find(
                       (entry) => entry.event.title === event.title,
+                    ) : undefined;
+                    const other = adaptation
+                      ? effectiveDataset.characters.find((item) => item.id === adaptation.otherCharacterId)
+                      : null;
+                    const shouldContinueFromEvent = Boolean(
+                      userEntry || adaptation || event.source?.work.endsWith("-改编"),
                     );
                     return (
-                      <div key={`${event.title}-${index}`} style={{ marginBottom: 18 }}>
+                      <div key={key} style={{ marginBottom: 18 }}>
                         <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
                           <strong style={{ color: COLOR.accent, fontSize: 13, flex: 1 }}>
                             {event.title}
@@ -861,6 +1024,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                             </button>
                           )}
                         </div>
+                        {adaptation && (
+                          <div style={{ marginTop: 3, fontSize: 11, color: COLOR.textMuted }}>
+                            与 {other?.name_zh ?? adaptation.otherCharacterId}
+                          </div>
+                        )}
                         <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
                           {event.desc}
                         </div>
@@ -878,10 +1046,10 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                                 characterId: character.id,
                                 characterName: character.name_zh,
                                 eventTitle: event.title,
-                                premise: userEntry
+                                premise: shouldContinueFromEvent
                                   ? `假设${character.name_zh}经历了「${event.title}」：${event.desc}`
                                   : `如果${character.name_zh}没有「${event.title}」`,
-                                premiseType: userEntry ? "free_text" : "event_negative",
+                                premiseType: shouldContinueFromEvent ? "free_text" : "event_negative",
                               },
                             });
                           }}
@@ -899,7 +1067,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                           onMouseEnter={(ev) => (ev.currentTarget.style.opacity = "1")}
                           onMouseLeave={(ev) => (ev.currentTarget.style.opacity = "0.7")}
                         >
-                          {userEntry ? "⚡ 基于此事件推演" : "⚡ 假设这件事没发生"}
+                          {shouldContinueFromEvent ? "⚡ 基于此事件推演" : "⚡ 假设这件事没发生"}
                         </button>
                       </div>
                     );
@@ -911,30 +1079,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                 </>
               )}
             />
-            {selectedCharacterAdaptations.length > 0 && (
-              <Section
-                title="改编事件"
-                items={selectedCharacterAdaptations.map((adaptation) => {
-                  const other = effectiveDataset.characters.find((item) => item.id === adaptation.otherCharacterId);
-                  return (
-                    <div key={`${adaptation.relationId}:${adaptation.event.title}`} style={{ marginBottom: 16 }}>
-                      <strong style={{ color: COLOR.accent, fontSize: 13 }}>{adaptation.event.title}</strong>
-                      <div style={{ marginTop: 3, fontSize: 11, color: COLOR.textMuted }}>
-                        与 {other?.name_zh ?? adaptation.otherCharacterId}
-                      </div>
-                      <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
-                        {adaptation.event.desc}
-                      </div>
-                      {adaptation.event.source && (
-                        <div style={{ fontFamily: FONT.mono, fontSize: 10, color: COLOR.textMuted, marginTop: 4 }}>
-                          《{adaptation.event.source.work}》{adaptation.event.source.locus ?? ""}
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              />
-            )}
           </div>
         )}
 

@@ -19,6 +19,40 @@ const apiKey = process.env.CODING_API_KEY;
 const baseURL = process.env.CODING_BASE_URL || "https://ark.cn-beijing.volces.com/api/coding";
 const model = process.env.CODING_MODEL || "deepseek-v4-flash";
 
+const REFUSAL_PATTERNS = [
+  /无法给到相关内容/,
+  /无法识别/,
+  /(?:抱歉|对不起)[\s\S]{0,30}(?:无法|不能)[\s\S]{0,30}(?:提供|生成|回答|协助|处理)/,
+  /我(?:无法|不能)[\s\S]{0,30}(?:提供|生成|回答|协助|处理)/,
+];
+
+export class LLMRefusalError extends Error {
+  constructor(readonly raw: string) {
+    super("模型拒绝了本次文学推演内容。已自动改用非血腥、非操作性的表述重试，但仍未获得有效响应");
+    this.name = "LLMRefusalError";
+  }
+}
+
+function isLLMRefusal(text: string): boolean {
+  const compact = text.trim();
+  return compact.length <= 300 && REFUSAL_PATTERNS.some((pattern) => pattern.test(compact));
+}
+
+function buildRefusalRecoveryPrompt(user: string): string {
+  const softened = user
+    .replaceAll("夺权", "争取梁山内部主导权")
+    .replaceAll("刺杀", "袭击")
+    .replaceAll("杀手", "追兵")
+    .replaceAll("杀死", "击败")
+    .replaceAll("杀出重围", "脱离困境")
+    .replaceAll("项上人头", "性命")
+    .replaceAll("咽喉", "要害");
+
+  return `${softened}
+
+这是虚构文学作品的人物关系图谱推演。请用概括、非血腥、非操作性的方式表现冲突，保留人物关系与故事因果，不展开伤害细节。严格输出且只输出要求的三个区块，DIFF 必须是合法 JSON。`;
+}
+
 let client: Anthropic | null = null;
 
 function getClient(): Anthropic {
@@ -55,6 +89,7 @@ export async function callLLMStream(
     try {
       const c = getClient();
       let receivedText = false;
+      let stopReason: string | null = null;
       const stream = await c.messages.create(
         {
           model,
@@ -74,6 +109,16 @@ export async function callLLMStream(
           if (event.delta.text.length > 0) receivedText = true;
           onDelta(event.delta.text);
         }
+        if (event.type === "message_delta") {
+          stopReason = event.delta.stop_reason;
+        }
+      }
+      if (stopReason === "max_tokens") {
+        const limitError = new Error(
+          `LLM 输出 token 上限耗尽，响应可能只有思考过程或正文不完整（max_tokens=${maxTokens}）`,
+        );
+        limitError.name = "LLMOutputLimitError";
+        throw limitError;
       }
       if (!receivedText) {
         const emptyError = new Error("LLM 返回了空响应");
@@ -122,7 +167,9 @@ export async function generateParsedWhatIf(
     let fullText = "";
     const attemptUser = attempt === 1
       ? user
-      : `${user}\n\n上一次响应格式无效。请严格输出且只输出要求的三个区块，DIFF 必须是合法 JSON。`;
+      : lastParseError && isLLMRefusal(lastParseError.raw)
+        ? buildRefusalRecoveryPrompt(user)
+        : `${user}\n\n上一次响应格式无效。请严格输出且只输出要求的三个区块，DIFF 必须是合法 JSON。`;
 
     await callLLMStream(
       system,
@@ -143,7 +190,10 @@ export async function generateParsedWhatIf(
     } catch (error) {
       if (!(error instanceof LLMParseError)) throw error;
       lastParseError = error;
-      if (attempt === MAX_PARSE_ATTEMPTS) throw error;
+      if (attempt === MAX_PARSE_ATTEMPTS) {
+        if (isLLMRefusal(error.raw)) throw new LLMRefusalError(error.raw);
+        throw error;
+      }
       onReset();
     }
   }

@@ -12,6 +12,13 @@ export class UserCharacterGenerationError extends Error {
   }
 }
 
+export const USER_CHARACTER_OUTPUT_TOKEN_LIMIT = 100_000;
+
+export function targetSelectionTokenBudget(remainingCount: number): number {
+  void remainingCount;
+  return USER_CHARACTER_OUTPUT_TOKEN_LIMIT;
+}
+
 function extractJson(raw: string): unknown {
   const trimmed = raw.trim();
   const withoutFence = trimmed

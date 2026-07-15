@@ -3,9 +3,15 @@ import {
   UserCharacterGenerationError,
   parseGeneratedProfile,
   parseGeneratedRelationships,
+  targetSelectionTokenBudget,
 } from "@/lib/userCharacterGeneration";
 
 describe("user character LLM output parsing", () => {
+  it("reserves enough output budget for reasoning over the full character list", () => {
+    expect(targetSelectionTokenBudget(3)).toBe(100_000);
+    expect(targetSelectionTokenBudget(100)).toBe(100_000);
+  });
+
   it("accepts a fenced JSON object and validates the profile contract", () => {
     const profile = parseGeneratedProfile(`\n\`\`\`json\n{
       "nameEn": "Shen Yan",

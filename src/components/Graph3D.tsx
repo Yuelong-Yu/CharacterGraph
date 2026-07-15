@@ -21,7 +21,7 @@ import * as THREE from "three";
 import SpriteText from "three-spritetext";
 
 import type { Artifact, Dataset, Character, Relation } from "@/schemas/character";
-import type { WhatIfNodeChange } from "@/lib/whatif/graphView";
+import { resolveNodeChange, type WhatIfNodeChange } from "@/lib/whatif/graphView";
 import { COLOR, FONT } from "@/lib/tokens";
 import { useProjectConfig } from "@/lib/projectConfig";
 
@@ -1190,8 +1190,7 @@ export function Graph3D({
       const group = new THREE.Group();
       const isSelected = mode === "selected";
       const isHighlighted = mode === "highlighted";
-      const changeKind = whatIfNodeChanges?.get(node.id)
-        ?? (userAddedNodeIds?.has(node.id) ? "added" : undefined);
+      const changeKind = resolveNodeChange(node.id, whatIfNodeChanges, userAddedNodeIds);
       const isRemoved = changeKind === "removed";
       const entity = node.entity;
       // 是否需要绝对置顶（中心节点）— 巡游/聚焦的中心节点不被任何其他节点遮挡

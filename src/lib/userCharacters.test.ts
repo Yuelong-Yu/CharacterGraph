@@ -114,4 +114,24 @@ describe("user character graph overlay", () => {
     }]);
     expect(dataset.characters[0].events).toEqual([]);
   });
+
+  it("does not repeat a relation adaptation already shown as a main event", () => {
+    const duplicateRecord: UserCharacterRecord = {
+      ...record,
+      relations: [{
+        ...record.relations[0],
+        events: [{
+          ...record.relations[0].events[0],
+          title: record.character.events[0].title,
+          desc: record.character.events[0].desc,
+        }],
+      }],
+    };
+
+    expect(relationAdaptationsForCharacter(
+      [duplicateRecord],
+      duplicateRecord.id,
+      duplicateRecord.character.events,
+    )).toEqual([]);
+  });
 });

@@ -77,13 +77,18 @@ export function mergeUserCharacters(
 export function relationAdaptationsForCharacter(
   records: readonly UserCharacterRecord[],
   characterId: string,
+  existingEvents: readonly Character["events"][number][] = [],
 ): RelationAdaptation[] {
   const adaptations: RelationAdaptation[] = [];
+  const seenEvents = new Set(existingEvents.map(eventIdentity));
   for (const record of records) {
     for (const relation of record.relations) {
       if (relation.source !== characterId && relation.target !== characterId) continue;
       const otherCharacterId = relation.source === characterId ? relation.target : relation.source;
       for (const event of relation.events) {
+        const identity = eventIdentity(event);
+        if (seenEvents.has(identity)) continue;
+        seenEvents.add(identity);
         adaptations.push({
           recordId: record.id,
           relationId: relation.id,
@@ -94,6 +99,11 @@ export function relationAdaptationsForCharacter(
     }
   }
   return adaptations.sort((left, right) => left.event.era_order - right.event.era_order);
+}
+
+function eventIdentity(event: Pick<Character["events"][number], "title" | "desc">): string {
+  const normalize = (value: string) => value.trim().replace(/\s+/g, " ");
+  return `${normalize(event.title)}\u0000${normalize(event.desc)}`;
 }
 
 export function customDatasetOverlay(records: readonly UserCharacterRecord[]): Pick<Dataset, "characters" | "relations"> {

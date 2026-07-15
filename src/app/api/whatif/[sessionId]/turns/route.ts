@@ -24,7 +24,7 @@ import {
   type BranchPoint,
   type PriorTurnSummary,
 } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf } from "@/lib/whatif/llmClient";
+import { generateParsedWhatIf, LLMRefusalError } from "@/lib/whatif/llmClient";
 import { applyDiff, normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { ContinueTurnInput } from "@/schemas/whatif";
@@ -152,7 +152,10 @@ export async function POST(
 
   // 5. 重放 diff 得到 effective dataset（含 parent branch 的 inherited turns）
   const effectiveDataset = priorTurns.reduce<Dataset>(
-    (acc, t) => applyDiff(acc, t.diff),
+    (acc, t) => applyDiff(acc, normalizeDiffAgainstDataset(acc, t.diff, {
+      premise: t.premise,
+      narrative: t.narrative,
+    })),
     baseDataset,
   );
 
@@ -213,7 +216,10 @@ export async function POST(
         );
 
         // 8.5 清理重复新增；原典校验始终基于不可变 base dataset
-        const diff = normalizeDiffAgainstDataset(effectiveDataset, llmOutput.diff);
+        const diff = normalizeDiffAgainstDataset(effectiveDataset, llmOutput.diff, {
+          premise: input.userInput,
+          narrative: llmOutput.narrative,
+        });
         const validation = validateNarrative(
           llmOutput.narrative,
           baseDataset,
@@ -251,7 +257,9 @@ export async function POST(
           validation,
         });
       } catch (e) {
-        if (e instanceof LLMParseError) {
+        if (e instanceof LLMRefusalError) {
+          send("error", { code: "LLM_REFUSAL", message: e.message });
+        } else if (e instanceof LLMParseError) {
           send("error", { code: "PARSE_ERROR", message: e.message, raw: e.raw });
         } else {
           const message = e instanceof Error ? e.message : String(e);

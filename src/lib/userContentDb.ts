@@ -17,8 +17,25 @@ interface StoredEvents {
   events: UserEventsByCharacter;
 }
 
+export interface UserCharacterScope {
+  id: string;
+  projectSlug: string;
+  kind: "user-branch";
+  title: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+interface StoredScope extends UserCharacterScope {
+  key: string;
+}
+
 function recordKey(projectSlug: string, scopeId: string, id: string): string {
   return `${projectSlug}\u0000${scopeId}\u0000${id}`;
+}
+
+function scopeKey(projectSlug: string, scopeId: string): string {
+  return `${projectSlug}\u0000${scopeId}`;
 }
 
 function requestResult<T>(request: IDBRequest<T>): Promise<T> {
@@ -68,9 +85,9 @@ export async function loadOrInitializeUserCharacterScope(
   const database = await openDatabase();
   try {
     const transaction = database.transaction([CHARACTER_STORE, SCOPE_STORE], "readwrite");
-    const scopeKey = `${projectSlug}\u0000${scopeId}`;
+    const storedScopeKey = scopeKey(projectSlug, scopeId);
     const scope = await requestResult(
-      transaction.objectStore(SCOPE_STORE).get(scopeKey) as IDBRequest<{ key: string } | undefined>,
+      transaction.objectStore(SCOPE_STORE).get(storedScopeKey) as IDBRequest<{ key: string } | undefined>,
     );
     if (!scope) {
       const characterStore = transaction.objectStore(CHARACTER_STORE);
@@ -81,7 +98,7 @@ export async function loadOrInitializeUserCharacterScope(
           key: recordKey(projectSlug, scopeId, cloned.id),
         } satisfies StoredCharacter);
       }
-      transaction.objectStore(SCOPE_STORE).put({ key: scopeKey });
+      transaction.objectStore(SCOPE_STORE).put({ key: storedScopeKey });
       await transactionDone(transaction);
       return seedRecords.map((record) => ({ ...record, projectSlug, scopeId }));
     }
@@ -89,6 +106,89 @@ export async function loadOrInitializeUserCharacterScope(
     const rows = await requestResult(index.getAll(IDBKeyRange.only([projectSlug, scopeId])) as IDBRequest<StoredCharacter[]>);
     await transactionDone(transaction);
     return rows.map(({ key: _key, ...record }) => record);
+  } finally {
+    database.close();
+  }
+}
+
+export async function listUserCharacterScopes(projectSlug: string): Promise<UserCharacterScope[]> {
+  const database = await openDatabase();
+  try {
+    const transaction = database.transaction(SCOPE_STORE, "readonly");
+    const rows = await requestResult(
+      transaction.objectStore(SCOPE_STORE).getAll() as IDBRequest<Array<Partial<StoredScope> & { key: string }>>,
+    );
+    return rows
+      .filter((row): row is StoredScope => row.projectSlug === projectSlug && row.kind === "user-branch"
+        && typeof row.id === "string" && typeof row.title === "string"
+        && typeof row.createdAt === "string" && typeof row.updatedAt === "string")
+      .map(({ key: _key, ...scope }) => scope)
+      .sort((left, right) => right.updatedAt.localeCompare(left.updatedAt));
+  } finally {
+    database.close();
+  }
+}
+
+export async function createUserCharacterScope(
+  scope: UserCharacterScope,
+  seedRecords: readonly UserCharacterRecord[] = [],
+): Promise<void> {
+  const database = await openDatabase();
+  try {
+    const transaction = database.transaction([CHARACTER_STORE, SCOPE_STORE], "readwrite");
+    const characterStore = transaction.objectStore(CHARACTER_STORE);
+    for (const record of seedRecords) {
+      const scopedRecord = { ...record, projectSlug: scope.projectSlug, scopeId: scope.id };
+      characterStore.put({
+        ...scopedRecord,
+        key: recordKey(scope.projectSlug, scope.id, scopedRecord.id),
+      } satisfies StoredCharacter);
+    }
+    transaction.objectStore(SCOPE_STORE).put({
+      ...scope,
+      key: scopeKey(scope.projectSlug, scope.id),
+    } satisfies StoredScope);
+    await transactionDone(transaction);
+  } finally {
+    database.close();
+  }
+}
+
+export async function migrateBaseUserCharactersToScope(
+  projectSlug: string,
+  scope: UserCharacterScope,
+): Promise<UserCharacterRecord[]> {
+  const database = await openDatabase();
+  try {
+    const transaction = database.transaction([CHARACTER_STORE, SCOPE_STORE], "readwrite");
+    const characterStore = transaction.objectStore(CHARACTER_STORE);
+    const index = characterStore.index("projectScope");
+    const rows = await requestResult(
+      index.getAll(IDBKeyRange.only([projectSlug, "base"])) as IDBRequest<StoredCharacter[]>,
+    );
+    if (rows.length === 0) {
+      await transactionDone(transaction);
+      return [];
+    }
+
+    const migrated = rows.map(({ key: _key, ...record }) => ({
+      ...record,
+      projectSlug,
+      scopeId: scope.id,
+    }));
+    for (const row of rows) characterStore.delete(row.key);
+    for (const record of migrated) {
+      characterStore.put({
+        ...record,
+        key: recordKey(projectSlug, scope.id, record.id),
+      } satisfies StoredCharacter);
+    }
+    transaction.objectStore(SCOPE_STORE).put({
+      ...scope,
+      key: scopeKey(projectSlug, scope.id),
+    } satisfies StoredScope);
+    await transactionDone(transaction);
+    return migrated;
   } finally {
     database.close();
   }

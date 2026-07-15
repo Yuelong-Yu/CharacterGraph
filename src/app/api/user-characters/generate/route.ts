@@ -5,6 +5,8 @@ import {
   parseGeneratedProfile,
   parseGeneratedRelationships,
   parseGeneratedTargetIds,
+  targetSelectionTokenBudget,
+  USER_CHARACTER_OUTPUT_TOKEN_LIMIT,
   UserCharacterGenerationError,
 } from "@/lib/userCharacterGeneration";
 import { GenerateUserCharacterInput } from "@/schemas/userCharacter";
@@ -130,7 +132,7 @@ export async function POST(req: NextRequest) {
           selectedTargetIds = await generateStructured(
             targetSystem,
             targetUser,
-            Math.max(1024, remainingCount * 40),
+            targetSelectionTokenBudget(remainingCount),
             (raw) => parseGeneratedTargetIds(raw, allowed, remainingCount),
           );
           send("progress", { stage: "targets", completed: remainingCount, total: remainingCount });
@@ -158,7 +160,7 @@ export async function POST(req: NextRequest) {
         const profile = await generateStructured(
           profileSystem,
           profileUser,
-          4096,
+          USER_CHARACTER_OUTPUT_TOKEN_LIMIT,
           (raw) => {
             const generated = parseGeneratedProfile(raw);
             if (generated.events.length !== 3) {
@@ -187,6 +189,7 @@ export async function POST(req: NextRequest) {
             "输出 {\"relationships\":[...]}，每个对象包含 targetId、primaryType、compositeTypes、title、desc。",
             "每个指定 targetId 必须且只能出现一次。primaryType 和 compositeTypes 只能使用给定关系类型 id。",
             "每段故事是改编内容，写清人物如何相识、冲突或合作，不得声称来自原典。",
+            "关系事件必须是该 target 独有的互动，不得复制或复述人物资料中的主要事件；title 和 desc 均不得与 profile.events 相同。",
           ].join("\n");
           const relationUser = [
             `作品：${config.title}`,
@@ -200,7 +203,7 @@ export async function POST(req: NextRequest) {
           const batch = await generateStructured(
             relationSystem,
             relationUser,
-            Math.max(2048, batchTargetIds.length * 600),
+            USER_CHARACTER_OUTPUT_TOKEN_LIMIT,
             (raw) => parseGeneratedRelationships(raw, expected, allowedRelationTypes),
           );
           relationships.push(...batch);
