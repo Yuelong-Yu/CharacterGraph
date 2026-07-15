@@ -27,7 +27,15 @@ export async function GET(
     return NextResponse.json({ error: "Session not found" }, { status: 404 });
   }
 
-  return NextResponse.json({ session });
+  return NextResponse.json({
+    session: {
+      ...session,
+      branches: session.branches.map((branch) => ({
+        ...branch,
+        turns: branch.turns.filter((turn) => turn.status !== "deleted"),
+      })),
+    },
+  });
 }
 
 export async function DELETE(

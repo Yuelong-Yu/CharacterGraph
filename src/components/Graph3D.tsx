@@ -223,6 +223,8 @@ interface Props {
   dataset: Dataset;
   /** WhatIf 累计变更状态，用于绘制新增、修改和删除样式。 */
   whatIfNodeChanges?: ReadonlyMap<string, WhatIfNodeChange> | null;
+  /** 浏览器本地新增的人物，始终使用红色粗边。 */
+  userAddedNodeIds?: ReadonlySet<string>;
   /** 专注展示变更视图时忽略主图筛选条件。 */
   bypassFilters?: boolean;
   layoutMode: LayoutMode;
@@ -276,6 +278,7 @@ function nodeCoord(n: GraphNode): { x: number; y: number; z: number } {
 export function Graph3D({
   dataset,
   whatIfNodeChanges = null,
+  userAddedNodeIds,
   bypassFilters = false,
   layoutMode,
   selectedNodeId,
@@ -359,17 +362,71 @@ export function Graph3D({
     return m;
   }, [dataset]);
 
-  // ── 稳定的节点对象 — 仅 dataset 变化时重建 ──
+  // ── 稳定的节点对象 — Dataset 增量变化时按 id 复用，保留力导向坐标 ──
+  const nodeObjectCacheRef = useRef(new Map<string, GraphNode>());
   const nodes = useMemo<GraphNode[]>(() => {
-    const unsorted: GraphNode[] = [
-      ...dataset.characters.map((c): CharacterGraphNode => ({ id: c.id, kind: "character", entity: c })),
-      ...dataset.artifacts.map((a): ArtifactGraphNode => ({
-        id: a.id,
-        kind: "artifact",
-        entity: a,
-        eraLayer: artifactEraMap.get(a.id) ?? 2,
-      })),
-    ];
+    const cache = nodeObjectCacheRef.current;
+    const liveIds = new Set<string>();
+    const unsorted: GraphNode[] = [];
+
+    for (const character of dataset.characters) {
+      liveIds.add(character.id);
+      const cached = cache.get(character.id);
+      let node: CharacterGraphNode;
+      if (cached?.kind === "character") {
+        cached.entity = character;
+        node = cached;
+      } else {
+        node = { id: character.id, kind: "character", entity: character };
+        const relatedIds = dataset.relations.flatMap((relation) => {
+          if (relation.source === character.id) return [relation.target];
+          if (relation.target === character.id) return [relation.source];
+          return [];
+        });
+        const neighbors = relatedIds
+          .map((id) => cache.get(id))
+          .filter((neighbor): neighbor is GraphNode => Boolean(neighbor));
+        if (neighbors.length > 0) {
+          const center = neighbors.reduce(
+            (sum, neighbor) => ({
+              x: sum.x + (neighbor.x ?? neighbor.fx ?? 0),
+              y: sum.y + (neighbor.y ?? neighbor.fy ?? 0),
+              z: sum.z + (neighbor.z ?? neighbor.fz ?? 0),
+            }),
+            { x: 0, y: 0, z: 0 },
+          );
+          node.x = center.x / neighbors.length + 8;
+          node.y = center.y / neighbors.length;
+          node.z = center.z / neighbors.length + 8;
+        }
+        cache.set(character.id, node);
+      }
+      unsorted.push(node);
+    }
+
+    for (const artifact of dataset.artifacts) {
+      liveIds.add(artifact.id);
+      const cached = cache.get(artifact.id);
+      let node: ArtifactGraphNode;
+      if (cached?.kind === "artifact") {
+        cached.entity = artifact;
+        cached.eraLayer = artifactEraMap.get(artifact.id) ?? 2;
+        node = cached;
+      } else {
+        node = {
+          id: artifact.id,
+          kind: "artifact",
+          entity: artifact,
+          eraLayer: artifactEraMap.get(artifact.id) ?? 2,
+        };
+        cache.set(artifact.id, node);
+      }
+      unsorted.push(node);
+    }
+
+    for (const id of cache.keys()) {
+      if (!liveIds.has(id)) cache.delete(id);
+    }
 
     return unsorted.sort((a, b) => {
       const da = degreeMap.get(a.id) ?? 0;
@@ -380,7 +437,7 @@ export function Graph3D({
       if (eraA !== eraB) return eraA - eraB;
       return a.id.localeCompare(b.id);
     });
-  }, [dataset.characters, dataset.artifacts, artifactEraMap, degreeMap]);
+  }, [dataset.characters, dataset.artifacts, dataset.relations, artifactEraMap, degreeMap]);
   const artifactIdSet = useMemo(
     () => new Set(dataset.artifacts.map((a) => a.id)),
     [dataset.artifacts],
@@ -1133,7 +1190,8 @@ export function Graph3D({
       const group = new THREE.Group();
       const isSelected = mode === "selected";
       const isHighlighted = mode === "highlighted";
-      const changeKind = whatIfNodeChanges?.get(node.id);
+      const changeKind = whatIfNodeChanges?.get(node.id)
+        ?? (userAddedNodeIds?.has(node.id) ? "added" : undefined);
       const isRemoved = changeKind === "removed";
       const entity = node.entity;
       // 是否需要绝对置顶（中心节点）— 巡游/聚焦的中心节点不被任何其他节点遮挡
@@ -1193,7 +1251,25 @@ export function Graph3D({
           : changeKind === "modified"
             ? "#f4c430"
             : "#777777";
-        const frameGeo = new THREE.PlaneGeometry(spriteW + 2.4, spriteH + 2.4);
+        const frameW = spriteW + 2.4;
+        const frameH = spriteH + 2.4;
+        const borderWidth = changeKind === "removed" ? 0.7 : 1.15;
+        const frameShape = new THREE.Shape();
+        frameShape.moveTo(-frameW / 2, -frameH / 2);
+        frameShape.lineTo(frameW / 2, -frameH / 2);
+        frameShape.lineTo(frameW / 2, frameH / 2);
+        frameShape.lineTo(-frameW / 2, frameH / 2);
+        frameShape.closePath();
+        const frameHole = new THREE.Path();
+        const innerW = frameW - borderWidth * 2;
+        const innerH = frameH - borderWidth * 2;
+        frameHole.moveTo(-innerW / 2, -innerH / 2);
+        frameHole.lineTo(-innerW / 2, innerH / 2);
+        frameHole.lineTo(innerW / 2, innerH / 2);
+        frameHole.lineTo(innerW / 2, -innerH / 2);
+        frameHole.closePath();
+        frameShape.holes.push(frameHole);
+        const frameGeo = new THREE.ShapeGeometry(frameShape);
         const frameMat = new THREE.MeshBasicMaterial({
           color: frameColor,
           transparent: true,
@@ -1437,7 +1513,7 @@ export function Graph3D({
 
       return group;
     },
-    [whatIfNodeChanges, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
+    [whatIfNodeChanges, userAddedNodeIds, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
   );
 
   const nodeVisualEntriesRef = useRef(new Map<string, NodeVisualEntry>());

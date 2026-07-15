@@ -117,13 +117,14 @@ export interface ContinueTurnHandlers {
 export async function streamContinueTurn(
   sessionId: string,
   userInput: string,
+  datasetOverlay: CreateWhatIfSessionInput["datasetOverlay"],
   handlers: ContinueTurnHandlers,
   signal?: AbortSignal,
 ): Promise<void> {
   const resp = await fetch(`/api/whatif/${sessionId}/turns`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ userInput }),
+    body: JSON.stringify({ userInput, datasetOverlay }),
     signal,
   });
 
@@ -232,4 +233,33 @@ export async function switchBranch(
   }
   const data = await resp.json();
   return data.session as WhatIfSessionDetail;
+}
+
+export interface WhatIfTurnVersionSummary {
+  id: string;
+  version: number;
+  createdAt: string;
+}
+
+export async function listTurnVersions(
+  sessionId: string,
+  turnId: string,
+): Promise<WhatIfTurnVersionSummary[]> {
+  const response = await fetch(`/api/whatif/${sessionId}/turns/${turnId}/versions`);
+  if (!response.ok) throw new Error(`listTurnVersions HTTP ${response.status}`);
+  const data = await response.json();
+  return data.versions as WhatIfTurnVersionSummary[];
+}
+
+export async function restoreTurnVersion(
+  sessionId: string,
+  turnId: string,
+  versionId: string,
+): Promise<void> {
+  const response = await fetch(`/api/whatif/${sessionId}/turns/${turnId}/versions`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ versionId }),
+  });
+  if (!response.ok) throw new Error(`restoreTurnVersion HTTP ${response.status}`);
 }

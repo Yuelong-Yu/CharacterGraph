@@ -7,7 +7,7 @@ export interface UserEventEntry {
 
 export type UserEventsByCharacter = Record<string, UserEventEntry[]>;
 
-function adaptationWork(work: string): string {
+export function adaptationWork(work: string): string {
   const unwrapped = work.trim().replace(/^《|》$/g, "").replace(/-改编$/, "");
   return `${unwrapped}-改编`;
 }

@@ -15,7 +15,7 @@ const turn = { id: "turn-1" } as WhatIfTurnDetail;
 
 describe("whatIfWorkspaceReducer", () => {
   it("ignores a new turns array containing the same turn objects", () => {
-    const state = { config, turns: [turn], panelOpen: true };
+    const state = { config, turns: [turn], panelOpen: true, activeBranchId: "branch-1" };
 
     const result = whatIfWorkspaceReducer(state, {
       type: "set-turns",
@@ -27,22 +27,22 @@ describe("whatIfWorkspaceReducer", () => {
 
   it("keeps the active branch version when the panel is hidden", () => {
     const hidden = whatIfWorkspaceReducer(
-      { config, turns: [turn], panelOpen: true },
+      { config, turns: [turn], panelOpen: true, activeBranchId: "branch-1" },
       { type: "hide-panel" },
     );
 
-    expect(hidden).toEqual({ config, turns: [turn], panelOpen: false });
+    expect(hidden).toEqual({ config, turns: [turn], panelOpen: false, activeBranchId: "branch-1" });
 
     const reopened = whatIfWorkspaceReducer(hidden, { type: "show-panel" });
-    expect(reopened).toEqual({ config, turns: [turn], panelOpen: true });
+    expect(reopened).toEqual({ config, turns: [turn], panelOpen: true, activeBranchId: "branch-1" });
   });
 
   it("clears the branch version only when explicitly exiting", () => {
     const result = whatIfWorkspaceReducer(
-      { config, turns: [turn], panelOpen: false },
+      { config, turns: [turn], panelOpen: false, activeBranchId: "branch-1" },
       { type: "exit" },
     );
 
-    expect(result).toEqual({ config: null, turns: [], panelOpen: false });
+    expect(result).toEqual({ config: null, turns: [], panelOpen: false, activeBranchId: null });
   });
 });

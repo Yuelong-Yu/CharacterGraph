@@ -69,6 +69,7 @@ export async function POST(
       { status: 404 },
     );
   }
+  const parentBranch = session.branches.find((branch) => branch.id === parentTurn.branchId);
 
   // 用事务：取消其他 branch 的 active + 创建新 branch
   const newBranch = await prisma.$transaction(async (tx) => {
@@ -82,6 +83,7 @@ export async function POST(
         parentTurnId: input.parentTurnId,
         title: input.title ?? `分叉自 turn ${parentTurn.order}`,
         isActive: true,
+        datasetOverlay: parentBranch?.datasetOverlay ?? session.datasetOverlay ?? undefined,
       },
     });
   });

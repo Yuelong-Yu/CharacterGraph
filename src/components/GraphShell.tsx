@@ -3,13 +3,14 @@
 /**
  * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤 + 搜索过滤
  */
-import { useCallback, useEffect, useMemo, useReducer, useState } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import type { Artifact, Dataset, Character } from "@/schemas/character";
 import type { ClientProjectConfig } from "@/schemas/projectConfig";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
 import { WhatIfPanel } from "./whatif/WhatIfPanel";
+import { UserCharacterEditor } from "./UserCharacterEditor";
 import { buildWhatIfGraphView } from "@/lib/whatif/graphView";
 import {
   initialWhatIfWorkspaceState,
@@ -24,6 +25,27 @@ import {
   parseStoredUserEvents,
   type UserEventsByCharacter,
 } from "@/lib/userEvents";
+import {
+  BASE_USER_CHARACTER_SCOPE,
+  mergeUserCharacters,
+  relationAdaptationsForCharacter,
+  customDatasetOverlay,
+  type UserCharacterRecord,
+} from "@/lib/userCharacters";
+import {
+  deleteUserCharacterRecord,
+  loadOrInitializeUserCharacterScope,
+  loadUserCharacterRecords,
+  loadUserEvents,
+  saveUserCharacterRecord,
+  saveUserEvents,
+} from "@/lib/userContentDb";
+import {
+  deleteUserCharacterHistory,
+  fetchUserCharacterHistoryImpact,
+  regenerateUserCharacterHistory,
+  restoreUserCharacterHistory,
+} from "@/lib/userCharacterClient";
 
 type Selection =
   | { kind: "none" }
@@ -77,36 +99,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [draftQuery, setDraftQuery] = useState<string>("");
   const [committedQuery, setCommittedQuery] = useState<string>("");
 
-  const userEventStorageKey = `character-graph:${config.slug}:user-events:v1`;
-  const [userEvents, setUserEvents] = useState<UserEventsByCharacter>({});
-  const [loadedUserEventKey, setLoadedUserEventKey] = useState<string | null>(null);
-
-  useEffect(() => {
-    let stored: UserEventsByCharacter = {};
-    try {
-      const raw = window.localStorage.getItem(userEventStorageKey);
-      if (raw) stored = parseStoredUserEvents(JSON.parse(raw));
-    } catch {
-      stored = {};
-    }
-    setUserEvents(stored);
-    setLoadedUserEventKey(userEventStorageKey);
-  }, [userEventStorageKey]);
-
-  useEffect(() => {
-    if (loadedUserEventKey !== userEventStorageKey) return;
-    try {
-      window.localStorage.setItem(userEventStorageKey, JSON.stringify(userEvents));
-    } catch {
-      // 浏览器禁用或存储空间不足时，仅保留当前页面内的事件。
-    }
-  }, [loadedUserEventKey, userEventStorageKey, userEvents]);
-
-  const datasetWithUserEvents = useMemo(
-    () => mergeUserEvents(dataset, userEvents),
-    [dataset, userEvents],
-  );
-
   // WhatIf 模式：假设事件没发生，LLM 推演 + 图谱动态变化
   const [whatIfWorkspace, dispatchWhatIf] = useReducer(
     whatIfWorkspaceReducer,
@@ -116,7 +108,98 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     config: whatIfConfig,
     turns: whatIfTurns,
     panelOpen: whatIfPanelOpen,
+    activeBranchId,
   } = whatIfWorkspace;
+
+  const activeUserScopeId = activeBranchId ?? BASE_USER_CHARACTER_SCOPE;
+  const userEventStorageKey = `character-graph:${config.slug}:user-events:v1`;
+  const [userEvents, setUserEvents] = useState<UserEventsByCharacter>({});
+  const [loadedUserEventKey, setLoadedUserEventKey] = useState<string | null>(null);
+  const [userCharacterRecords, setUserCharacterRecords] = useState<UserCharacterRecord[]>([]);
+  const [loadedUserScopeId, setLoadedUserScopeId] = useState<string | null>(null);
+  const recordsRef = useRef<UserCharacterRecord[]>([]);
+  const [userCharacterEditor, setUserCharacterEditor] = useState<{
+    editingRecord: UserCharacterRecord | null;
+  } | null>(null);
+  const [deletedUserCharacter, setDeletedUserCharacter] = useState<{
+    record: UserCharacterRecord;
+    branchId: string | null;
+    turnIds: string[];
+  } | null>(null);
+  const [historyRefreshVersion, setHistoryRefreshVersion] = useState(0);
+
+  useEffect(() => {
+    recordsRef.current = userCharacterRecords;
+  }, [userCharacterRecords]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const legacy = (() => {
+      try {
+        const raw = window.localStorage.getItem(userEventStorageKey);
+        return raw ? parseStoredUserEvents(JSON.parse(raw)) : {};
+      } catch {
+        return {};
+      }
+    })();
+    loadUserEvents(config.slug, legacy)
+      .then((stored) => {
+        if (cancelled) return;
+        setUserEvents(stored);
+        setLoadedUserEventKey(userEventStorageKey);
+      })
+      .catch(() => {
+        if (cancelled) return;
+        setUserEvents(legacy);
+        setLoadedUserEventKey(userEventStorageKey);
+      });
+    return () => { cancelled = true; };
+  }, [config.slug, userEventStorageKey]);
+
+  useEffect(() => {
+    if (loadedUserEventKey !== userEventStorageKey) return;
+    void saveUserEvents(config.slug, userEvents).catch(() => {
+      // IndexedDB 不可用时仍保留当前页面状态。
+    });
+  }, [config.slug, loadedUserEventKey, userEventStorageKey, userEvents]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const load = activeUserScopeId === BASE_USER_CHARACTER_SCOPE
+      ? loadUserCharacterRecords(config.slug, activeUserScopeId)
+      : loadOrInitializeUserCharacterScope(config.slug, activeUserScopeId, recordsRef.current);
+    load.then((records) => {
+      if (cancelled) return;
+      setUserCharacterRecords(records);
+      setLoadedUserScopeId(activeUserScopeId);
+      setUserCharacterEditor(null);
+    }).catch(() => {
+      if (cancelled) return;
+      setUserCharacterRecords([]);
+      setLoadedUserScopeId(activeUserScopeId);
+    });
+    return () => { cancelled = true; };
+  }, [activeUserScopeId, config.slug]);
+
+  const datasetWithUserCharacters = useMemo(
+    () => mergeUserCharacters(dataset, userCharacterRecords),
+    [dataset, userCharacterRecords],
+  );
+  const datasetWithUserEvents = useMemo(
+    () => mergeUserEvents(datasetWithUserCharacters, userEvents),
+    [datasetWithUserCharacters, userEvents],
+  );
+  const userDatasetOverlay = useMemo(() => {
+    const custom = customDatasetOverlay(userCharacterRecords);
+    const changedCharacterIds = new Set([
+      ...userCharacterRecords.map((record) => record.id),
+      ...Object.keys(userEvents),
+    ]);
+    return {
+      characters: datasetWithUserEvents.characters.filter((character) => changedCharacterIds.has(character.id)),
+      relations: custom.relations,
+    };
+  }, [datasetWithUserEvents.characters, userCharacterRecords, userEvents]);
 
   const whatIfGraphView = useMemo(() => {
     if (!whatIfConfig || whatIfTurns.length === 0) return null;
@@ -186,6 +269,19 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const character = sel.kind === "node"
     ? effectiveDataset.characters.find((c) => c.id === sel.id)
     : null;
+  const selectedUserCharacterRecord = character
+    ? userCharacterRecords.find((record) => record.id === character.id) ?? null
+    : null;
+  const userAddedNodeIds = useMemo(
+    () => new Set(userCharacterRecords.map((record) => record.id)),
+    [userCharacterRecords],
+  );
+  const selectedCharacterAdaptations = useMemo(
+    () => character
+      ? relationAdaptationsForCharacter(userCharacterRecords, character.id)
+      : [],
+    [character, userCharacterRecords],
+  );
   const artifact = sel.kind === "node"
     ? effectiveDataset.artifacts.find((a) => a.id === sel.id)
     : null;
@@ -242,6 +338,98 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     dispatchWhatIf({ type: "set-turns", turns });
   }, []);
 
+  const handleActiveBranchChange = useCallback((branchId: string | null) => {
+    dispatchWhatIf({ type: "set-active-branch", branchId });
+  }, []);
+
+  const saveUserCharacter = async (record: UserCharacterRecord) => {
+    if (loadedUserScopeId !== activeUserScopeId) {
+      throw new Error("人物分支仍在载入，请稍后重试");
+    }
+    const previous = userCharacterRecords.find((item) => item.id === record.id);
+    const nextRecords = previous
+      ? userCharacterRecords.map((item) => item.id === record.id ? record : item)
+      : [...userCharacterRecords, record];
+    let impactCount = 0;
+    if (previous && activeBranchId) {
+      const impact = await fetchUserCharacterHistoryImpact(activeBranchId, record.id);
+      impactCount = impact.count;
+      if (!window.confirm(
+        impactCount > 0
+          ? `此次修改会影响当前分支的 ${impactCount} 条推演。确认保存并立即用豆包重新推演？`
+          : "当前分支没有引用该人物的推演。确认保存修改？",
+      )) return;
+    }
+    await saveUserCharacterRecord(record);
+    setUserCharacterRecords(nextRecords);
+    setDeletedUserCharacter(null);
+    if (previous && activeBranchId && impactCount > 0) {
+      try {
+        const custom = customDatasetOverlay(nextRecords);
+        const nextDataset = mergeUserEvents(mergeUserCharacters(dataset, nextRecords), userEvents);
+        const changedIds = new Set([...nextRecords.map((item) => item.id), ...Object.keys(userEvents)]);
+        await regenerateUserCharacterHistory({
+          projectSlug: config.slug,
+          branchId: activeBranchId,
+          characterId: record.id,
+          datasetOverlay: {
+            characters: nextDataset.characters.filter((character) => changedIds.has(character.id)),
+            relations: custom.relations,
+          },
+        });
+        setHistoryRefreshVersion((version) => version + 1);
+      } catch (historyError) {
+        setHistoryRefreshVersion((version) => version + 1);
+        throw new Error(`人物已保存，但部分推演待重试：${historyError instanceof Error ? historyError.message : String(historyError)}`);
+      }
+    }
+    setUserCharacterEditor(null);
+    setSel({ kind: "node", id: record.id });
+    setFocusId(record.id);
+    setFocusedId(record.id);
+  };
+
+  const removeUserCharacter = async (record: UserCharacterRecord) => {
+    const impact = activeBranchId
+      ? await fetchUserCharacterHistoryImpact(activeBranchId, record.id)
+      : { count: 0, turnIds: [] };
+    const message = [
+      `确定删除「${record.character.name_zh}」？`,
+      `将同时移除 ${record.character.events.length} 条人物事件和 ${record.relations.length} 条人物关系。`,
+      `当前分支中 ${impact.count} 条受影响推演也会被删除。`,
+    ].join("\n");
+    if (!window.confirm(message)) return;
+    await deleteUserCharacterRecord(record.projectSlug, record.scopeId, record.id);
+    const turnIds = activeBranchId
+      ? await deleteUserCharacterHistory({
+          projectSlug: config.slug,
+          branchId: activeBranchId,
+          characterId: record.id,
+        })
+      : [];
+    if (turnIds.length > 0) setHistoryRefreshVersion((version) => version + 1);
+    setUserCharacterRecords((records) => records.filter((item) => item.id !== record.id));
+    setDeletedUserCharacter({ record, branchId: activeBranchId, turnIds });
+    setSel({ kind: "none" });
+    setFocusedId(null);
+  };
+
+  const undoUserCharacterDelete = async () => {
+    if (!deletedUserCharacter) return;
+    await saveUserCharacterRecord(deletedUserCharacter.record);
+    if (deletedUserCharacter.branchId && deletedUserCharacter.turnIds.length > 0) {
+      await restoreUserCharacterHistory({
+        projectSlug: config.slug,
+        branchId: deletedUserCharacter.branchId,
+        characterId: deletedUserCharacter.record.id,
+        turnIds: deletedUserCharacter.turnIds,
+      });
+      setHistoryRefreshVersion((version) => version + 1);
+    }
+    setUserCharacterRecords((records) => [...records, deletedUserCharacter.record]);
+    setDeletedUserCharacter(null);
+  };
+
   const addUserEvent = (characterId: string, title: string, desc: string): string | null => {
     const normalizedTitle = title.trim();
     const normalizedDesc = desc.trim();
@@ -258,7 +446,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       event: {
         title: normalizedTitle,
         desc: normalizedDesc,
-        source: buildUserEventCitation(dataset, characterId),
+        source: buildUserEventCitation(datasetWithUserCharacters, characterId),
       },
     };
     setUserEvents((previous) => ({
@@ -409,6 +597,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         <Graph3D
           dataset={effectiveDataset}
           whatIfNodeChanges={whatIfGraphView?.nodeChanges ?? null}
+          userAddedNodeIds={userAddedNodeIds}
           bypassFilters={isWhatIfChangeView}
           layoutMode={layoutMode}
           selectedNodeId={sel.kind === "node" ? sel.id : null}
@@ -434,7 +623,39 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           borderLeft: `1px solid ${COLOR.border}`,
         }}
       >
-        {sel.kind === "none" && (
+        {deletedUserCharacter && !userCharacterEditor && (
+          <div
+            role="status"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: 10,
+              padding: "9px 10px",
+              marginBottom: 14,
+              border: `1px solid ${COLOR.border}`,
+              background: COLOR.bgRaised,
+              fontSize: 11,
+            }}
+          >
+            已删除「{deletedUserCharacter.record.character.name_zh}」
+            <button type="button" onClick={undoUserCharacterDelete} style={userEventSecondaryButtonStyle}>撤销</button>
+          </div>
+        )}
+
+        {userCharacterEditor && (
+          <UserCharacterEditor
+            key={`${activeUserScopeId}:${userCharacterEditor.editingRecord?.id ?? "new"}`}
+            dataset={effectiveDataset}
+            config={config}
+            scopeId={activeUserScopeId}
+            editingRecord={userCharacterEditor.editingRecord}
+            onCancel={() => setUserCharacterEditor(null)}
+            onSave={saveUserCharacter}
+          />
+        )}
+
+        {!userCharacterEditor && sel.kind === "none" && (
           <div style={{ color: COLOR.textMuted, fontSize: 13, lineHeight: 1.7 }}>
             <div style={{ fontFamily: FONT.serif, fontSize: 22, color: COLOR.text, marginBottom: 10 }}>
               {config.title}
@@ -448,12 +669,30 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
               · 左下角：切换分层 / 自由布局
             </div>
             <div style={{ marginTop: 24, fontSize: 12 }}>
-              数据：{dataset.characters.length} 人 · {dataset.artifacts.length} 件神器 · {dataset.relations.length} 条关系
+              数据：{effectiveDataset.characters.length} 人 · {effectiveDataset.artifacts.length} 件神器 · {effectiveDataset.relations.length} 条关系
             </div>
+            <button
+              type="button"
+              onClick={() => setUserCharacterEditor({ editingRecord: null })}
+              style={{
+                width: "100%",
+                marginTop: 18,
+                padding: "9px 12px",
+                border: `1px solid ${COLOR.accent}`,
+                borderRadius: 4,
+                background: COLOR.accent,
+                color: "#fff",
+                cursor: "pointer",
+                fontSize: 12,
+                fontFamily: FONT.sans,
+              }}
+            >
+              ＋ 添加人物
+            </button>
           </div>
         )}
 
-        {character && (
+        {!userCharacterEditor && character && (
           <div>
             <div
               style={{
@@ -467,23 +706,38 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                 border: `1px solid ${COLOR.border}`,
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={character.portrait}
-                alt={character.name_zh}
-                loading="lazy"
-                decoding="async"
-                style={{
+              {character.portrait ? (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img
+                  src={character.portrait}
+                  alt={character.name_zh}
+                  loading="lazy"
+                  decoding="async"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    display: "block",
+                    animation: "fadeIn 400ms ease-out",
+                  }}
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              ) : (
+                <div style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  animation: "fadeIn 400ms ease-out",
-                }}
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
+                  display: "grid",
+                  placeItems: "center",
+                  fontFamily: FONT.serif,
+                  fontSize: 72,
+                  color: COLOR.textMuted,
+                  background: "#eee9e1",
+                }}>
+                  {character.name_zh.slice(0, 1)}
+                </div>
+              )}
               <style>{`@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
             </div>
 
@@ -494,6 +748,29 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             <div style={{ fontFamily: FONT.mono, fontSize: 11, color: COLOR.textMuted, letterSpacing: "0.1em" }}>
               {character.name_en}
             </div>
+            {selectedUserCharacterRecord && (
+              <div style={{ marginTop: 10 }}>
+                <span style={{ display: "inline-block", padding: "3px 7px", border: "2px solid #d92d20", color: "#b42318", fontSize: 10 }}>
+                  用户新增
+                </span>
+                <div style={{ display: "flex", gap: 8, marginTop: 10 }}>
+                  <button
+                    type="button"
+                    onClick={() => setUserCharacterEditor({ editingRecord: selectedUserCharacterRecord })}
+                    style={userEventSecondaryButtonStyle}
+                  >
+                    编辑人物
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => void removeUserCharacter(selectedUserCharacterRecord)}
+                    style={{ ...userEventSecondaryButtonStyle, color: COLOR.accent, borderColor: COLOR.accent }}
+                  >
+                    删除人物
+                  </button>
+                </div>
+              </div>
+            )}
 
             {/* 2. 一句话人物概要（用 epithet） */}
             {character.epithet && (
@@ -634,10 +911,34 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                 </>
               )}
             />
+            {selectedCharacterAdaptations.length > 0 && (
+              <Section
+                title="改编事件"
+                items={selectedCharacterAdaptations.map((adaptation) => {
+                  const other = effectiveDataset.characters.find((item) => item.id === adaptation.otherCharacterId);
+                  return (
+                    <div key={`${adaptation.relationId}:${adaptation.event.title}`} style={{ marginBottom: 16 }}>
+                      <strong style={{ color: COLOR.accent, fontSize: 13 }}>{adaptation.event.title}</strong>
+                      <div style={{ marginTop: 3, fontSize: 11, color: COLOR.textMuted }}>
+                        与 {other?.name_zh ?? adaptation.otherCharacterId}
+                      </div>
+                      <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
+                        {adaptation.event.desc}
+                      </div>
+                      {adaptation.event.source && (
+                        <div style={{ fontFamily: FONT.mono, fontSize: 10, color: COLOR.textMuted, marginTop: 4 }}>
+                          《{adaptation.event.source.work}》{adaptation.event.source.locus ?? ""}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              />
+            )}
           </div>
         )}
 
-        {artifact && (
+        {!userCharacterEditor && artifact && (
           <div>
             <div
               style={{
@@ -753,7 +1054,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           </div>
         )}
 
-        {relation && relChars && (
+        {!userCharacterEditor && relation && relChars && (
           <div>
             <div style={{ fontFamily: FONT.serif, fontSize: 20, marginBottom: 4 }}>
               {relChars.source?.name_zh} ↔ {relChars.target?.name_zh}
@@ -792,6 +1093,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           premiseType={whatIfConfig.premiseType}
           onClose={() => dispatchWhatIf({ type: "hide-panel" })}
           onTurnsChange={handleWhatIfTurnsChange}
+          onActiveBranchChange={handleActiveBranchChange}
+          datasetOverlay={userDatasetOverlay}
+          historyRefreshVersion={historyRefreshVersion}
         />
       )}
     </div>

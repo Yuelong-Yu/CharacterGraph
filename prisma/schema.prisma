@@ -14,6 +14,7 @@ model WhatIfSession {
   characterId String         // 分支点人物 id（续写时复用）
   title       String
   status      String         @default("active") // active / archived
+  datasetOverlay Json?       // 创建会话时的用户人物/关系快照，保证后续推演可复现
   createdAt   DateTime       @default(now())
   updatedAt   DateTime       @updatedAt
   branches    WhatIfBranch[]
@@ -30,12 +31,29 @@ model WhatIfBranch {
   title        String // "主时间线" / "分叉-A"
   isActive     Boolean         @default(false) // 每 session 只一个 active
   createdAt    DateTime        @default(now())
+  datasetOverlay Json?         // 该分支的用户人物/关系快照
   session      WhatIfSession   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
   turns        WhatIfTurn[]
   parentTurn   WhatIfTurn?     @relation("BranchParent", fields: [parentTurnId], references: [id])
 
   @@index([sessionId])
   @@index([isActive])
+}
+
+/// 推演回合的旧版本，人物修改触发重新推演时保留最近 5 个
+model WhatIfTurnVersion {
+  id         String       @id @default(cuid())
+  turnId     String
+  version    Int
+  diff       Json
+  narrative  Json
+  choices    Json
+  validation Json?
+  createdAt  DateTime     @default(now())
+  turn       WhatIfTurn   @relation(fields: [turnId], references: [id], onDelete: Cascade)
+
+  @@unique([turnId, version])
+  @@index([turnId, createdAt])
 }
 
 /// 单次推演回合 - LLM 一次生成的 diff + 叙事 + 选项
@@ -54,6 +72,7 @@ model WhatIfTurn {
   createdAt        DateTime       @default(now())
   branch           WhatIfBranch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
   childBranches    WhatIfBranch[] @relation("BranchParent")
+  versions         WhatIfTurnVersion[]
 
   @@unique([branchId, order])
   @@index([branchId])

@@ -19,6 +19,7 @@ import { generateParsedWhatIf } from "@/lib/whatif/llmClient";
 import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
+import { mergeDatasetOverlay } from "@/lib/userCharacters";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -32,7 +33,7 @@ export async function GET(req: NextRequest) {
     orderBy: { createdAt: "desc" },
     include: {
       branches: {
-        select: { id: true, _count: { select: { turns: true } } },
+        select: { id: true, turns: { select: { status: true } } },
       },
     },
   });
@@ -45,7 +46,10 @@ export async function GET(req: NextRequest) {
     createdAt: s.createdAt,
     updatedAt: s.updatedAt,
     branchCount: s.branches.length,
-    turnCount: s.branches.reduce((sum, b) => sum + b._count.turns, 0),
+    turnCount: s.branches.reduce(
+      (sum, branch) => sum + branch.turns.filter((turn) => turn.status !== "deleted").length,
+      0,
+    ),
   }));
 
   return NextResponse.json({ sessions: summaries });
@@ -75,7 +79,9 @@ export async function POST(req: NextRequest) {
       { status: 400 },
     );
   }
-  const { dataset, config } = loaded;
+  const config = loaded.config;
+  const canonicalDataset = loaded.dataset;
+  const dataset = mergeDatasetOverlay(canonicalDataset, input.datasetOverlay);
 
   // 2. 构建上下文子集
   let subset;
@@ -131,11 +137,13 @@ export async function POST(req: NextRequest) {
             characterId: input.characterId,
             title: input.title,
             status: "active",
+            datasetOverlay: input.datasetOverlay as unknown as object | undefined,
             branches: {
               create: [
                 {
                   title: "主时间线",
                   isActive: true,
+                  datasetOverlay: input.datasetOverlay as unknown as object | undefined,
                   turns: {
                     create: [
                       {

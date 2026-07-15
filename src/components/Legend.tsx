@@ -98,6 +98,10 @@ export function Legend({
             );
           })}
 
+          <div style={{ marginTop: 8 }}>
+            <Row swatch={<Box color="#d92d20" />} label="用户新增人物" />
+          </div>
+
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginTop: 16, marginBottom: 8 }}>
             <Heading>神器类别 · 勾选过滤</Heading>
             <div style={{ display: "flex", gap: 8 }}>

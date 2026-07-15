@@ -30,6 +30,8 @@ import { validateNarrative } from "@/lib/whatif/validation";
 import { ContinueTurnInput } from "@/schemas/whatif";
 import type { Dataset } from "@/schemas/character";
 import type { GraphDiff, NarrativeSegment } from "@/schemas/whatif";
+import { mergeDatasetOverlay } from "@/lib/userCharacters";
+import { Dataset as DatasetSchema } from "@/schemas/character";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -88,7 +90,8 @@ export async function POST(
   }
 
   // 3. 组装 priorTurns：当前 branch 的 turns + 若有 parentTurnId，加上 parent branch 中 order ≤ parentTurn 的 turns
-  const ownTurns: PrismaTurn[] = branch.turns as unknown as PrismaTurn[];
+  const ownTurns: PrismaTurn[] = (branch.turns as unknown as PrismaTurn[])
+    .filter((turn) => turn.status !== "deleted");
 
   let parentTurns: PrismaTurn[] = [];
   if (branch.parentTurnId) {
@@ -103,7 +106,7 @@ export async function POST(
       });
       if (parentBranch) {
         parentTurns = (parentBranch.turns as unknown as PrismaTurn[]).filter(
-          (t) => t.order <= parentTurn.order,
+          (t) => t.status !== "deleted" && t.order <= parentTurn.order,
         );
       }
     }
@@ -127,7 +130,24 @@ export async function POST(
       { status: 500 },
     );
   }
-  const baseDataset = loaded.dataset;
+  const rawBranchOverlay = input.datasetOverlay ?? branch.datasetOverlay ?? session.datasetOverlay;
+  const storedOverlay = rawBranchOverlay && typeof rawBranchOverlay === "object"
+    ? rawBranchOverlay as { characters?: unknown; relations?: unknown }
+    : null;
+  const overlay = storedOverlay
+    ? {
+        characters: DatasetSchema.shape.characters.parse(storedOverlay.characters ?? []),
+        relations: DatasetSchema.shape.relations.parse(storedOverlay.relations ?? []),
+      }
+    : undefined;
+  const canonicalDataset = loaded.dataset;
+  const baseDataset = mergeDatasetOverlay(canonicalDataset, overlay);
+  if (input.datasetOverlay) {
+    await prisma.whatIfBranch.update({
+      where: { id: branch.id },
+      data: { datasetOverlay: input.datasetOverlay as unknown as object },
+    });
+  }
   const config = loaded.config;
 
   // 5. 重放 diff 得到 effective dataset（含 parent branch 的 inherited turns）
@@ -203,9 +223,8 @@ export async function POST(
 
         // 9. 落库新 turn
         // order 基于 branch 自己的 turns（不含 parent inherited），fork 后第一 turn order=1
-        const nextOrder = ownTurns.length > 0
-          ? ownTurns[ownTurns.length - 1].order + 1
-          : 1;
+        const allBranchTurns = branch.turns as unknown as PrismaTurn[];
+        const nextOrder = Math.max(0, ...allBranchTurns.map((turn) => turn.order)) + 1;
         const newTurn = await prisma.whatIfTurn.create({
           data: {
             branchId: branch.id,

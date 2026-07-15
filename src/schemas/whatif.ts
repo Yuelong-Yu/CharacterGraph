@@ -67,7 +67,7 @@ export type ValidationResult = z.infer<typeof ValidationResult>;
 export const PremiseType = z.enum(["event_negative", "free_text"]);
 export type PremiseType = z.infer<typeof PremiseType>;
 
-export const TurnStatus = z.enum(["composing", "streaming", "completed", "error"]);
+export const TurnStatus = z.enum(["composing", "streaming", "completed", "error", "updating", "stale", "deleted"]);
 export type TurnStatus = z.infer<typeof TurnStatus>;
 
 export const SessionStatus = z.enum(["active", "archived"]);
@@ -136,11 +136,19 @@ export const CreateWhatIfSessionInput = z.object({
   premise: z.string().min(1),
   premiseType: PremiseType,
   sourceEventTitle: z.string().nullish(),
+  datasetOverlay: z.object({
+    characters: z.array(Character),
+    relations: z.array(Relation),
+  }).optional(),
 });
 export type CreateWhatIfSessionInput = z.infer<typeof CreateWhatIfSessionInput>;
 
 /** POST /api/whatif/[sessionId]/turns - 续写 turn */
 export const ContinueTurnInput = z.object({
   userInput: z.string().min(1),
+  datasetOverlay: z.object({
+    characters: z.array(Character),
+    relations: z.array(Relation),
+  }).optional(),
 });
 export type ContinueTurnInput = z.infer<typeof ContinueTurnInput>;

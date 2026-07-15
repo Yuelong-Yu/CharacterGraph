@@ -17,7 +17,10 @@ import {
   streamContinueTurn,
   fetchSession,
   forkBranch,
+  listTurnVersions,
+  restoreTurnVersion,
   switchBranch,
+  type WhatIfTurnVersionSummary,
 } from "@/lib/whatif/client";
 import { NarrativeView } from "./NarrativeView";
 import { DiffPreview } from "./DiffPreview";
@@ -31,6 +34,7 @@ import type {
   WhatIfSessionDetail,
   WhatIfTurnDetail,
 } from "@/schemas/whatif";
+import type { Character, Relation } from "@/schemas/character";
 
 interface Props {
   isOpen: boolean;
@@ -42,6 +46,9 @@ interface Props {
   premiseType: PremiseType;
   onClose: () => void;
   onTurnsChange: (turns: WhatIfTurnDetail[]) => void;
+  onActiveBranchChange?: (branchId: string | null) => void;
+  datasetOverlay?: { characters: Character[]; relations: Relation[] };
+  historyRefreshVersion?: number;
 }
 
 interface StreamingState {
@@ -60,18 +67,40 @@ export function WhatIfPanel({
   premiseType,
   onClose,
   onTurnsChange,
+  onActiveBranchChange,
+  datasetOverlay,
+  historyRefreshVersion = 0,
 }: Props) {
   const [sessionDetail, setSessionDetail] = useState<WhatIfSessionDetail | null>(null);
   const [streaming, setStreaming] = useState<StreamingState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [freeInput, setFreeInput] = useState("");
   const [showSessionList, setShowSessionList] = useState(false);
+  const [versionPicker, setVersionPicker] = useState<{
+    turnId: string;
+    versions: WhatIfTurnVersionSummary[];
+  } | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
+  useEffect(() => {
+    if (!sessionDetail?.id || historyRefreshVersion === 0) return;
+    let cancelled = false;
+    void fetchSession(sessionDetail.id).then((fresh) => {
+      if (!cancelled) setSessionDetail(fresh);
+    }).catch(() => {});
+    return () => { cancelled = true; };
+    // Refresh is deliberately keyed only by the external mutation counter.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [historyRefreshVersion]);
+
   // 找 active branch
   const activeBranch = sessionDetail?.branches.find((b) => b.isActive) ?? sessionDetail?.branches[0] ?? null;
+
+  useEffect(() => {
+    onActiveBranchChange?.(activeBranch?.id ?? null);
+  }, [activeBranch?.id, onActiveBranchChange]);
 
   // 计算 prior turns（parent branch 的 inherited + active branch 自己的）
   // 用于 onTurnsChange 通知父组件重算 effectiveDataset
@@ -118,6 +147,7 @@ export function WhatIfPanel({
           premise,
           premiseType,
           sourceEventTitle: eventTitle ?? undefined,
+          datasetOverlay,
         },
         {
           onDelta: (text) => {
@@ -158,6 +188,7 @@ export function WhatIfPanel({
       await streamContinueTurn(
         sessionDetail.id,
         userInput,
+        datasetOverlay,
         {
           onDelta: (text) => {
             setStreaming((prev) => (prev ? { ...prev, text: prev.text + text } : prev));
@@ -208,6 +239,32 @@ export function WhatIfPanel({
     }
   }
 
+  async function handleShowVersions(turnId: string) {
+    if (!sessionDetail) return;
+    if (versionPicker?.turnId === turnId) {
+      setVersionPicker(null);
+      return;
+    }
+    setError(null);
+    try {
+      setVersionPicker({ turnId, versions: await listTurnVersions(sessionDetail.id, turnId) });
+    } catch (versionError) {
+      setError(versionError instanceof Error ? versionError.message : String(versionError));
+    }
+  }
+
+  async function handleRestoreVersion(turnId: string, versionId: string) {
+    if (!sessionDetail || !window.confirm("恢复此旧版本？当前版本会先自动归档。")) return;
+    setError(null);
+    try {
+      await restoreTurnVersion(sessionDetail.id, turnId, versionId);
+      setSessionDetail(await fetchSession(sessionDetail.id));
+      setVersionPicker(null);
+    } catch (versionError) {
+      setError(versionError instanceof Error ? versionError.message : String(versionError));
+    }
+  }
+
   function handleClose() {
     onClose();
   }
@@ -223,6 +280,7 @@ export function WhatIfPanel({
     streamingText: string;
     turnId: string | null;
     validation: ValidationResult[] | null;
+    status: WhatIfTurnDetail["status"] | "streaming";
   }> = [];
 
   if (activeBranch) {
@@ -237,6 +295,7 @@ export function WhatIfPanel({
         streamingText: "",
         turnId: t.id,
         validation: t.validation,
+        status: t.status,
       });
     }
   }
@@ -251,12 +310,14 @@ export function WhatIfPanel({
       streamingText: streaming.text,
       turnId: null,
       validation: null,
+      status: "streaming",
     });
   }
 
   const isStreaming = streaming !== null;
   const lastCommittedTurn = activeBranch?.turns[activeBranch.turns.length - 1] ?? null;
-  const showChoices = !isStreaming && lastCommittedTurn && lastCommittedTurn.choices.length > 0;
+  const historyAvailable = lastCommittedTurn?.status !== "stale" && lastCommittedTurn?.status !== "updating";
+  const showChoices = !isStreaming && historyAvailable && lastCommittedTurn && lastCommittedTurn.choices.length > 0;
 
   return (
     <div
@@ -407,25 +468,45 @@ export function WhatIfPanel({
             >
               <span>
                 ── Turn {i + 1} {turn.isStreaming ? "(生成中)" : ""}
+                {turn.status === "stale" ? "（待重新推演）" : ""}
+                {turn.status === "updating" ? "（更新中）" : ""}
               </span>
               {!turn.isStreaming && turn.turnId && (
-                <button
-                  onClick={() => handleFork(turn.turnId!)}
-                  style={{
-                    padding: "2px 6px",
-                    fontSize: 10,
-                    background: "transparent",
-                    color: "#fa0",
-                    border: "1px solid #660",
-                    borderRadius: 3,
-                    cursor: "pointer",
-                  }}
-                  title="从此处分叉出新分支"
-                >
-                  ⎇ fork
-                </button>
+                <span style={{ display: "flex", gap: 5 }}>
+                  <button
+                    onClick={() => handleShowVersions(turn.turnId!)}
+                    style={turnToolButtonStyle}
+                    title="查看重新推演前的旧版本"
+                  >
+                    版本
+                  </button>
+                  <button
+                    onClick={() => handleFork(turn.turnId!)}
+                    style={{ ...turnToolButtonStyle, color: "#fa0", borderColor: "#660" }}
+                    title="从此处分叉出新分支"
+                  >
+                    ⎇ fork
+                  </button>
+                </span>
               )}
             </div>
+
+            {turn.turnId && versionPicker?.turnId === turn.turnId && (
+              <div style={{ padding: 8, marginBottom: 8, background: "#242424", border: "1px solid #3a3a3a", fontSize: 11 }}>
+                {versionPicker.versions.length === 0 ? (
+                  <span style={{ color: "#777" }}>暂无旧版本</span>
+                ) : versionPicker.versions.map((version) => (
+                  <button
+                    key={version.id}
+                    type="button"
+                    onClick={() => handleRestoreVersion(turn.turnId!, version.id)}
+                    style={{ ...turnToolButtonStyle, display: "block", width: "100%", marginBottom: 5, textAlign: "left" }}
+                  >
+                    版本 {version.version} · {new Date(version.createdAt).toLocaleString("zh-CN")}
+                  </button>
+                ))}
+              </div>
+            )}
 
             <NarrativeView
               streamText={turn.streamingText}
@@ -602,3 +683,13 @@ export function WhatIfPanel({
     </div>
   );
 }
+
+const turnToolButtonStyle: React.CSSProperties = {
+  padding: "2px 6px",
+  fontSize: 10,
+  background: "transparent",
+  color: "#999",
+  border: "1px solid #444",
+  borderRadius: 3,
+  cursor: "pointer",
+};
