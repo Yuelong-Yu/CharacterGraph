@@ -3,12 +3,18 @@
 /**
  * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤 + 搜索过滤
  */
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useReducer, useState } from "react";
 import type { Artifact, Dataset, Character } from "@/schemas/character";
 import type { ClientProjectConfig } from "@/schemas/projectConfig";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
+import { WhatIfPanel } from "./whatif/WhatIfPanel";
+import { buildWhatIfGraphView } from "@/lib/whatif/graphView";
+import {
+  initialWhatIfWorkspaceState,
+  whatIfWorkspaceReducer,
+} from "@/lib/whatif/workspaceState";
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
 import { entityMatchesSearch } from "@/lib/searchMatch";
@@ -65,6 +71,23 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [draftQuery, setDraftQuery] = useState<string>("");
   const [committedQuery, setCommittedQuery] = useState<string>("");
 
+  // WhatIf 模式：假设事件没发生，LLM 推演 + 图谱动态变化
+  const [whatIfWorkspace, dispatchWhatIf] = useReducer(
+    whatIfWorkspaceReducer,
+    initialWhatIfWorkspaceState,
+  );
+  const {
+    config: whatIfConfig,
+    turns: whatIfTurns,
+    panelOpen: whatIfPanelOpen,
+  } = whatIfWorkspace;
+
+  const whatIfGraphView = useMemo(() => {
+    if (!whatIfConfig || whatIfTurns.length === 0) return null;
+    return buildWhatIfGraphView(dataset, whatIfTurns);
+  }, [dataset, whatIfConfig, whatIfTurns]);
+  const effectiveDataset = whatIfGraphView?.dataset ?? dataset;
+
   const searchItems = useMemo(
     () => [
       ...dataset.characters.map((entity) => ({ kind: "character" as const, entity })),
@@ -119,17 +142,17 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   }, [dataset]);
 
   const character = sel.kind === "node"
-    ? dataset.characters.find((c) => c.id === sel.id)
+    ? effectiveDataset.characters.find((c) => c.id === sel.id)
     : null;
   const artifact = sel.kind === "node"
-    ? dataset.artifacts.find((a) => a.id === sel.id)
+    ? effectiveDataset.artifacts.find((a) => a.id === sel.id)
     : null;
   const nodeById = useMemo(
-    () => new Map([...dataset.characters, ...dataset.artifacts].map((n) => [n.id, n])),
-    [dataset.characters, dataset.artifacts],
+    () => new Map([...effectiveDataset.characters, ...effectiveDataset.artifacts].map((n) => [n.id, n])),
+    [effectiveDataset.characters, effectiveDataset.artifacts],
   );
   const relation = sel.kind === "edge"
-    ? dataset.relations.find((r) => r.id === sel.id)
+    ? effectiveDataset.relations.find((r) => r.id === sel.id)
     : null;
   const relChars = relation
     ? {
@@ -166,6 +189,16 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 
   // 点击边：仅选中，不影响聚焦态
   const handleEdgeClick = (id: string) => setSel({ kind: "edge", id });
+
+  const handleExitWhatIf = () => {
+    dispatchWhatIf({ type: "exit" });
+    setFocusedId(null);
+    setSel({ kind: "none" });
+  };
+
+  const handleWhatIfTurnsChange = useCallback((turns: typeof whatIfTurns) => {
+    dispatchWhatIf({ type: "set-turns", turns });
+  }, []);
 
   // 类别勾选
   const toggleCategory = (cat: string) => {
@@ -207,50 +240,104 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       }}
     >
       <div style={{ borderRight: `1px solid ${COLOR.border}`, position: "relative" }}>
-        <SearchBox
-          items={searchItems}
-          query={draftQuery}
-          onQueryChange={handleSearchChange}
-          onPick={handleSearchPick}
-          onSubmitFilter={handleSearchSubmit}
-          onClear={handleSearchClear}
-          filterApplied={matchedIds !== null}
-          appliedCount={matchedIds?.size ?? 0}
-          totalCount={dataset.characters.length + dataset.artifacts.length}
-        />
-        <Legend
-          enabledCategories={enabledSet}
-          enabledArtifactCategories={enabledArtifactSet}
-          onCategoryToggle={toggleCategory}
-          onCategoriesAll={allCategories}
-          onCategoriesNone={noCategories}
-          onArtifactCategoryToggle={toggleArtifactCategory}
-          onArtifactCategoriesAll={allArtifactCategories}
-          onArtifactCategoriesNone={noArtifactCategories}
-        />
+        {whatIfConfig && (
+          <div
+            style={{
+              position: "absolute",
+              top: whatIfGraphView ? 16 : 68,
+              left: 16,
+              zIndex: 30,
+              display: "flex",
+              gap: 6,
+            }}
+          >
+            <button
+              onClick={() => dispatchWhatIf({
+                type: whatIfPanelOpen ? "hide-panel" : "show-panel",
+              })}
+              style={{
+                padding: "8px 12px",
+                border: `1px solid ${COLOR.accent}`,
+                borderRadius: 6,
+                background: COLOR.bgPanel,
+                color: COLOR.accent,
+                cursor: "pointer",
+                fontSize: 12,
+                fontFamily: FONT.sans,
+              }}
+            >
+              {whatIfPanelOpen ? "隐藏推演面板" : "打开推演面板"}
+            </button>
+            <button
+              onClick={handleExitWhatIf}
+              style={{
+                padding: "8px 12px",
+                border: `1px solid ${COLOR.border}`,
+                borderRadius: 6,
+                background: COLOR.bgPanel,
+                color: COLOR.textMuted,
+                cursor: "pointer",
+                fontSize: 12,
+                fontFamily: FONT.sans,
+              }}
+            >
+              退出分支版本
+            </button>
+          </div>
+        )}
+        {!whatIfGraphView && (
+          <>
+            <SearchBox
+              items={searchItems}
+              query={draftQuery}
+              onQueryChange={handleSearchChange}
+              onPick={handleSearchPick}
+              onSubmitFilter={handleSearchSubmit}
+              onClear={handleSearchClear}
+              filterApplied={matchedIds !== null}
+              appliedCount={matchedIds?.size ?? 0}
+              totalCount={dataset.characters.length + dataset.artifacts.length}
+            />
+            <Legend
+              enabledCategories={enabledSet}
+              enabledArtifactCategories={enabledArtifactSet}
+              onCategoryToggle={toggleCategory}
+              onCategoriesAll={allCategories}
+              onCategoriesNone={noCategories}
+              onArtifactCategoryToggle={toggleArtifactCategory}
+              onArtifactCategoriesAll={allArtifactCategories}
+              onArtifactCategoriesNone={noArtifactCategories}
+            />
+          </>
+        )}
         <LayoutToggle value={layoutMode} onChange={setLayoutMode} />
-        <AutoTourToggle value={autoTour} onChange={setAutoTour} />
-        <DegreeSlider
-          value={minDegree}
-          max={degreeInfo.max}
-          onChange={setMinDegree}
-          visibleCount={
-            Array.from(degreeInfo.map.entries()).filter(([, d]) => d >= minDegree).length
-          }
-          total={dataset.characters.length + dataset.artifacts.length}
-        />
+        {!whatIfGraphView && (
+          <>
+            <AutoTourToggle value={autoTour} onChange={setAutoTour} />
+            <DegreeSlider
+              value={minDegree}
+              max={degreeInfo.max}
+              onChange={setMinDegree}
+              visibleCount={
+                Array.from(degreeInfo.map.entries()).filter(([, d]) => d >= minDegree).length
+              }
+              total={dataset.characters.length + dataset.artifacts.length}
+            />
+          </>
+        )}
         <Graph3D
-          dataset={dataset}
+          dataset={effectiveDataset}
+          whatIfNodeChanges={whatIfGraphView?.nodeChanges ?? null}
           layoutMode={layoutMode}
           selectedNodeId={sel.kind === "node" ? sel.id : null}
           selectedEdgeId={sel.kind === "edge" ? sel.id : null}
-          focusedId={focusedId}
+          focusedId={whatIfGraphView ? null : focusedId}
           focusNodeId={focusId}
           enabledCategories={enabledSet}
           enabledArtifactCategories={enabledArtifactSet}
           minDegree={minDegree}
-          matchedIds={matchedIds}
-          autoTour={autoTour}
+          matchedIds={whatIfGraphView ? null : matchedIds}
+          autoTour={whatIfGraphView ? false : autoTour}
           onNodeSelect={handleNodeClick}
           onEdgeSelect={handleEdgeClick}
           onBackgroundClick={handleBackground}
@@ -392,6 +479,35 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                       《{e.source.work}》{e.source.locus ?? ""}
                     </div>
                   )}
+                  <button
+                    onClick={() => {
+                      dispatchWhatIf({
+                        type: "launch",
+                        config: {
+                          projectSlug: config.slug,
+                          characterId: character.id,
+                          characterName: character.name_zh,
+                          eventTitle: e.title,
+                          premise: `如果${character.name_zh}没有「${e.title}」`,
+                        },
+                      });
+                    }}
+                    style={{
+                      marginTop: 6,
+                      padding: "3px 8px",
+                      fontSize: 11,
+                      background: "transparent",
+                      color: COLOR.accent,
+                      border: `1px solid ${COLOR.accent}`,
+                      borderRadius: 3,
+                      cursor: "pointer",
+                      opacity: 0.7,
+                    }}
+                    onMouseEnter={(ev) => (ev.currentTarget.style.opacity = "1")}
+                    onMouseLeave={(ev) => (ev.currentTarget.style.opacity = "0.7")}
+                  >
+                    ⚡ 假设这件事没发生
+                  </button>
                 </div>
               ))}
             />
@@ -456,9 +572,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 
             <Section
               title="拥有/使用者"
-              items={dataset.relations
+              items={effectiveDataset.relations
                 .filter((r) => r.target === artifact.id)
-                .map((r) => dataset.characters.find((c) => c.id === r.source))
+                .map((r) => effectiveDataset.characters.find((c) => c.id === r.source))
                 .filter((owner): owner is Character => Boolean(owner))
                 .map((owner) => (
                   <button
@@ -541,6 +657,19 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           </div>
         )}
       </aside>
+
+      {whatIfConfig && (
+        <WhatIfPanel
+          isOpen={whatIfPanelOpen}
+          projectSlug={whatIfConfig.projectSlug}
+          characterId={whatIfConfig.characterId}
+          characterName={whatIfConfig.characterName}
+          eventTitle={whatIfConfig.eventTitle}
+          premise={whatIfConfig.premise}
+          onClose={() => dispatchWhatIf({ type: "hide-panel" })}
+          onTurnsChange={handleWhatIfTurnsChange}
+        />
+      )}
     </div>
     </ProjectConfigProvider>
   );

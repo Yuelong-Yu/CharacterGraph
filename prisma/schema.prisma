@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// 「如果」假设叙事会话 - 一次完整推演
+model WhatIfSession {
+  id          String         @id @default(cuid())
+  projectSlug String
+  characterId String         // 分支点人物 id（续写时复用）
+  title       String
+  status      String         @default("active") // active / archived
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+  branches    WhatIfBranch[]
+
+  @@index([projectSlug])
+  @@index([createdAt])
+}
+
+/// 分支 - 一条独立时间线，可从任意 turn fork
+model WhatIfBranch {
+  id           String          @id @default(cuid())
+  sessionId    String
+  parentTurnId String? // null = root branch
+  title        String // "主时间线" / "分叉-A"
+  isActive     Boolean         @default(false) // 每 session 只一个 active
+  createdAt    DateTime        @default(now())
+  session      WhatIfSession   @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  turns        WhatIfTurn[]
+  parentTurn   WhatIfTurn?     @relation("BranchParent", fields: [parentTurnId], references: [id])
+
+  @@index([sessionId])
+  @@index([isActive])
+}
+
+/// 单次推演回合 - LLM 一次生成的 diff + 叙事 + 选项
+model WhatIfTurn {
+  id               String         @id @default(cuid())
+  branchId         String
+  order            Int // branch 内顺序，1-based
+  premise          String
+  premiseType      String // event_negative / free_text
+  sourceEventTitle String? // 从 event 触发时记录 event.title
+  diff             Json // GraphDiff 结构
+  narrative        Json // NarrativeSegment[]
+  choices          Json // string[]
+  status           String         @default("completed") // composing / streaming / completed / error
+  validation       Json? // ValidationResult[]
+  createdAt        DateTime       @default(now())
+  branch           WhatIfBranch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  childBranches    WhatIfBranch[] @relation("BranchParent")
+
+  @@unique([branchId, order])
+  @@index([branchId])
+}

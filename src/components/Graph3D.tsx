@@ -21,6 +21,7 @@ import * as THREE from "three";
 import SpriteText from "three-spritetext";
 
 import type { Artifact, Dataset, Character, Relation } from "@/schemas/character";
+import type { WhatIfNodeChange } from "@/lib/whatif/graphView";
 import { COLOR, FONT } from "@/lib/tokens";
 import { useProjectConfig } from "@/lib/projectConfig";
 
@@ -33,7 +34,7 @@ const _texLoader = typeof window !== "undefined" ? new THREE.TextureLoader() : n
 const _preloadedImages = new Set<string>();
 
 function getThumbTexture(url: string): THREE.Texture | null {
-  if (!_texLoader) return null;
+  if (!_texLoader || !url) return null;
   const hit = _texCache.get(url);
   if (hit) return hit;
   const tex = _texLoader.load(url);
@@ -200,6 +201,8 @@ interface GraphLink {
 
 interface Props {
   dataset: Dataset;
+  /** WhatIf 累计变更状态；非 null 时 dataset 已是一跳变更视图。 */
+  whatIfNodeChanges?: ReadonlyMap<string, WhatIfNodeChange> | null;
   layoutMode: LayoutMode;
   /** 选中态（右侧人物面板）— 与 focusedId 解耦 */
   selectedNodeId?: string | null;
@@ -250,6 +253,7 @@ function nodeCoord(n: GraphNode): { x: number; y: number; z: number } {
 
 export function Graph3D({
   dataset,
+  whatIfNodeChanges = null,
   layoutMode,
   selectedNodeId,
   selectedEdgeId,
@@ -1057,6 +1061,7 @@ export function Graph3D({
   const nodeVisibility = useCallback(
     (raw: object) => {
       const n = raw as GraphNode;
+      if (whatIfNodeChanges) return true;
       // 聚焦模式：只显示聚焦节点及其邻居（豁免所有过滤）
       if (focusedId) {
         return n.id === focusedId || neighborSet.has(n.id);
@@ -1068,7 +1073,7 @@ export function Graph3D({
       if (matchedIds && !matchedIds.has(n.id)) return false;
       return true;
     },
-    [focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
+    [whatIfNodeChanges, focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   const linkVisibility = useCallback(
@@ -1076,6 +1081,7 @@ export function Graph3D({
       const l = raw as GraphLink;
       const sId = typeof l.source === "object" ? l.source.id : l.source;
       const tId = typeof l.target === "object" ? l.target.id : l.target;
+      if (whatIfNodeChanges) return true;
       // 聚焦模式：只显示与聚焦节点相关的边
       if (focusedId) {
         return sId === focusedId || tId === focusedId;
@@ -1094,7 +1100,7 @@ export function Graph3D({
       if (matchedIds && (!matchedIds.has(sId) || !matchedIds.has(tId))) return false;
       return true;
     },
-    [focusedId, nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
+    [whatIfNodeChanges, focusedId, nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   // ── 自定义节点 ──
@@ -1106,11 +1112,15 @@ export function Graph3D({
       const isFocused = node.id === focusedId;
       const isTourTarget = node.id === tourTargetId;
       const isHighlighted = isFocused || isTourTarget;
+      const changeKind = whatIfNodeChanges?.get(node.id);
+      const isRemoved = changeKind === "removed";
       const entity = node.entity;
       // 是否需要绝对置顶（中心节点）— 巡游/聚焦的中心节点不被任何其他节点遮挡
       const topMost = isHighlighted;
       const baseColor = new THREE.Color(
-        node.kind === "character"
+        isRemoved
+          ? "#8a8a8a"
+          : node.kind === "character"
           ? characterCategoryColor(node.entity.category)
           : artifactCategoryColor(node.entity.category),
       );
@@ -1156,6 +1166,30 @@ export function Graph3D({
       // 2) 头像 — Plane（手动 billboard：每帧让 plane 朝向相机）
       //    中心节点必须 transparent:true，才能进入"透明队列"压在其他节点的 SpriteText 文字标签之上
       //    （three.js 渲染顺序：opaque queue → transparent queue，renderOrder 只在同一队列内有效）
+      if (changeKind) {
+        const frameColor = changeKind === "added"
+          ? "#d92d20"
+          : changeKind === "modified"
+            ? "#f4c430"
+            : "#777777";
+        const frameGeo = new THREE.PlaneGeometry(spriteW + 2.4, spriteH + 2.4);
+        const frameMat = new THREE.MeshBasicMaterial({
+          color: frameColor,
+          transparent: true,
+          opacity: changeKind === "removed" ? 0.72 : 1,
+          depthTest: false,
+          depthWrite: false,
+          side: THREE.DoubleSide,
+        });
+        const frame = new THREE.Mesh(frameGeo, frameMat);
+        frame.position.set(0, spriteCenterY, 0.14);
+        frame.renderOrder = topMost ? 9990 : 599;
+        frame.onBeforeRender = (_r, _s, camera) => {
+          setCameraPlaneTransform(frame, camera, spriteCenterY, 0.14);
+        };
+        group.add(frame);
+      }
+
       const tex = getThumbTexture(entity.thumb);
       if (tex) {
         if (lightPortraits) {
@@ -1195,14 +1229,38 @@ export function Graph3D({
         }
 
         const planeGeo = new THREE.PlaneGeometry(spriteW, spriteH);
-        const planeMat = new THREE.MeshBasicMaterial({
-          map: tex,
-          transparent: topMost || lightPortraits,       // 浅色主题需要压过透明底/描边
-          alphaTest: 0,
-          depthTest: false,
-          depthWrite: false,
-          side: THREE.DoubleSide,
-        });
+        const planeMat = isRemoved
+          ? new THREE.ShaderMaterial({
+              uniforms: { map: { value: tex } },
+              vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                  vUv = uv;
+                  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+              `,
+              fragmentShader: `
+                uniform sampler2D map;
+                varying vec2 vUv;
+                void main() {
+                  vec4 pixel = texture2D(map, vUv);
+                  float gray = dot(pixel.rgb, vec3(0.299, 0.587, 0.114));
+                  gl_FragColor = vec4(vec3(gray * 0.72), pixel.a * 0.82);
+                }
+              `,
+              transparent: true,
+              depthTest: false,
+              depthWrite: false,
+              side: THREE.DoubleSide,
+            })
+          : new THREE.MeshBasicMaterial({
+              map: tex,
+              transparent: topMost || lightPortraits,
+              alphaTest: 0,
+              depthTest: false,
+              depthWrite: false,
+              side: THREE.DoubleSide,
+            });
         const plane = new THREE.Mesh(planeGeo, planeMat);
         plane.position.set(0, spriteCenterY, 0.2);
         plane.renderOrder = topMost ? 9991 : 600;
@@ -1211,6 +1269,21 @@ export function Graph3D({
           setCameraPlaneTransform(plane, camera, spriteCenterY, 0.2);
         };
         group.add(plane);
+      } else {
+        const placeholderGeo = new THREE.PlaneGeometry(spriteW, spriteH);
+        const placeholderMat = new THREE.MeshBasicMaterial({
+          color: isRemoved ? "#a3a3a3" : "#eee9e1",
+          depthTest: false,
+          depthWrite: false,
+          side: THREE.DoubleSide,
+        });
+        const placeholder = new THREE.Mesh(placeholderGeo, placeholderMat);
+        placeholder.position.set(0, spriteCenterY, 0.2);
+        placeholder.renderOrder = topMost ? 9991 : 600;
+        placeholder.onBeforeRender = (_r, _s, camera) => {
+          setCameraPlaneTransform(placeholder, camera, spriteCenterY, 0.2);
+        };
+        group.add(placeholder);
       }
 
       // 3) 落地阴影 — 跟随头像下沿
@@ -1240,7 +1313,7 @@ export function Graph3D({
         const labelPx = 64;
         const { texture: labelTex, aspect: labelAspect } = getLabelTexture(
           entity.name_zh,
-          COLOR.text,
+          isRemoved ? "#666666" : COLOR.text,
           "rgba(255,255,255,0.95)",
           FONT.serif,
           "600",
@@ -1266,7 +1339,7 @@ export function Graph3D({
         group.add(labelMesh);
       } else {
         const label = new SpriteText(entity.name_zh);
-        label.color = COLOR.text;
+        label.color = isRemoved ? "#666666" : COLOR.text;
         label.backgroundColor = "rgba(255,255,255,0.92)";
         label.padding = 2;
         label.borderRadius = 3;
@@ -1343,7 +1416,7 @@ export function Graph3D({
 
       return group;
     },
-    [selectedNodeId, focusedId, tourTargetId, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
+    [whatIfNodeChanges, selectedNodeId, focusedId, tourTargetId, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
   );
 
   // ── 边的样式 ──

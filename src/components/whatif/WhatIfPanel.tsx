@@ -1,0 +1,601 @@
+"use client";
+
+/**
+ * WhatIf 主面板（Week 5：支持多分支）
+ *
+ * 功能：
+ *   - 首次生成：调 streamWhatIf 创建 session + 第一 turn
+ *   - 续写：调 streamContinueTurn，用户选 choice 或自由输入
+ *   - 分支管理：fork from any turn / switch active branch
+ *   - 展示：流式叙事 + 标签着色 + diff 预览 + choices 按钮 + 分支列表
+ *   - 通知父组件：active branch 的 prior turns 变化时调 onTurnsChange
+ *     （prior turns = parent branch 的 inherited turns + active branch 自己的 turns）
+ */
+import { useState, useRef, useEffect, useCallback } from "react";
+import {
+  streamWhatIf,
+  streamContinueTurn,
+  fetchSession,
+  forkBranch,
+  switchBranch,
+} from "@/lib/whatif/client";
+import { NarrativeView } from "./NarrativeView";
+import { DiffPreview } from "./DiffPreview";
+import { ValidationResults } from "./ValidationResults";
+import { SessionList } from "./SessionList";
+import type {
+  GraphDiff,
+  NarrativeSegment,
+  ValidationResult,
+  WhatIfSessionDetail,
+  WhatIfTurnDetail,
+} from "@/schemas/whatif";
+
+interface Props {
+  isOpen: boolean;
+  projectSlug: string;
+  characterId: string;
+  characterName: string;
+  eventTitle: string | null;
+  premise: string;
+  onClose: () => void;
+  onTurnsChange: (turns: WhatIfTurnDetail[]) => void;
+}
+
+interface StreamingState {
+  text: string;
+  /** 在 displayTurns 中的索引位置（committed turns 之后追加） */
+  isContinue: boolean; // false = 首轮, true = 续写
+}
+
+export function WhatIfPanel({
+  isOpen,
+  projectSlug,
+  characterId,
+  characterName,
+  eventTitle,
+  premise,
+  onClose,
+  onTurnsChange,
+}: Props) {
+  const [sessionDetail, setSessionDetail] = useState<WhatIfSessionDetail | null>(null);
+  const [streaming, setStreaming] = useState<StreamingState | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [freeInput, setFreeInput] = useState("");
+  const [showSessionList, setShowSessionList] = useState(false);
+  const abortRef = useRef<AbortController | null>(null);
+
+  useEffect(() => () => abortRef.current?.abort(), []);
+
+  // 找 active branch
+  const activeBranch = sessionDetail?.branches.find((b) => b.isActive) ?? sessionDetail?.branches[0] ?? null;
+
+  // 计算 prior turns（parent branch 的 inherited + active branch 自己的）
+  // 用于 onTurnsChange 通知父组件重算 effectiveDataset
+  const computePriorTurns = useCallback((): WhatIfTurnDetail[] => {
+    if (!sessionDetail || !activeBranch) return [];
+    const ownTurns = activeBranch.turns;
+    if (!activeBranch.parentTurnId) return [...ownTurns];
+
+    // 找 parent turn 所属 branch
+    let parentBranch = null;
+    let parentOrder = 0;
+    for (const b of sessionDetail.branches) {
+      const pt = b.turns.find((t) => t.id === activeBranch.parentTurnId);
+      if (pt) {
+        parentBranch = b;
+        parentOrder = pt.order;
+        break;
+      }
+    }
+    if (!parentBranch) return [...ownTurns];
+
+    const inherited = parentBranch.turns.filter((t) => t.order <= parentOrder);
+    return [...inherited, ...ownTurns];
+  }, [sessionDetail, activeBranch]);
+
+  // sessionDetail 或 activeBranch 变化时通知父组件
+  useEffect(() => {
+    onTurnsChange(computePriorTurns());
+  }, [computePriorTurns, onTurnsChange]);
+
+  async function handleStart() {
+    setError(null);
+    setStreaming({ text: "", isContinue: false });
+
+    const controller = new AbortController();
+    abortRef.current = controller;
+
+    try {
+      await streamWhatIf(
+        {
+          projectSlug,
+          title: `${characterName} - ${eventTitle ?? "自由前提"}`,
+          characterId,
+          premise,
+          premiseType: "event_negative",
+          sourceEventTitle: eventTitle ?? undefined,
+        },
+        {
+          onDelta: (text) => {
+            setStreaming((prev) => (prev ? { ...prev, text: prev.text + text } : prev));
+          },
+          onReset: () => {
+            setStreaming((prev) => (prev ? { ...prev, text: "" } : prev));
+          },
+          onDone: async (data) => {
+            setStreaming(null);
+            // 拉取完整 session
+            const fresh = await fetchSession(data.sessionId);
+            setSessionDetail(fresh);
+          },
+          onError: (err) => {
+            setError(`${err.code}: ${err.message}`);
+            setStreaming(null);
+          },
+        },
+        controller.signal,
+      );
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+      setStreaming(null);
+    }
+  }
+
+  async function handleContinue(userInput: string) {
+    if (!sessionDetail || !activeBranch) return;
+    setError(null);
+    setFreeInput("");
+    setStreaming({ text: "", isContinue: true });
+
+    const controller = new AbortController();
+    abortRef.current = controller;
+
+    try {
+      await streamContinueTurn(
+        sessionDetail.id,
+        userInput,
+        {
+          onDelta: (text) => {
+            setStreaming((prev) => (prev ? { ...prev, text: prev.text + text } : prev));
+          },
+          onReset: () => {
+            setStreaming((prev) => (prev ? { ...prev, text: "" } : prev));
+          },
+          onDone: async () => {
+            setStreaming(null);
+            const fresh = await fetchSession(sessionDetail.id);
+            setSessionDetail(fresh);
+          },
+          onError: (err) => {
+            setError(`${err.code}: ${err.message}`);
+            setStreaming(null);
+          },
+        },
+        controller.signal,
+      );
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+      setStreaming(null);
+    }
+  }
+
+  async function handleFork(parentTurnId: string) {
+    if (!sessionDetail) return;
+    setError(null);
+    try {
+      const newBranchId = await forkBranch(sessionDetail.id, parentTurnId);
+      const fresh = await switchBranch(sessionDetail.id, newBranchId);
+      setSessionDetail(fresh);
+      setStreaming(null);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    }
+  }
+
+  async function handleSwitchBranch(branchId: string) {
+    if (!sessionDetail) return;
+    setError(null);
+    setStreaming(null);
+    try {
+      const fresh = await switchBranch(sessionDetail.id, branchId);
+      setSessionDetail(fresh);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    }
+  }
+
+  function handleClose() {
+    onClose();
+  }
+
+  // 组装显示用 turns：committed + streaming（若有）
+  const displayTurns: Array<{
+    key: string;
+    narrative: NarrativeSegment[];
+    diff: GraphDiff | null;
+    choices: string[];
+    premise: string;
+    isStreaming: boolean;
+    streamingText: string;
+    turnId: string | null;
+    validation: ValidationResult[] | null;
+  }> = [];
+
+  if (activeBranch) {
+    for (const t of activeBranch.turns) {
+      displayTurns.push({
+        key: t.id,
+        narrative: t.narrative,
+        diff: t.diff,
+        choices: t.choices,
+        premise: t.premise,
+        isStreaming: false,
+        streamingText: "",
+        turnId: t.id,
+        validation: t.validation,
+      });
+    }
+  }
+  if (streaming) {
+    displayTurns.push({
+      key: "streaming",
+      narrative: [],
+      diff: null,
+      choices: [],
+      premise: streaming.isContinue ? "(续写中)" : premise,
+      isStreaming: true,
+      streamingText: streaming.text,
+      turnId: null,
+      validation: null,
+    });
+  }
+
+  const isStreaming = streaming !== null;
+  const lastCommittedTurn = activeBranch?.turns[activeBranch.turns.length - 1] ?? null;
+  const showChoices = !isStreaming && lastCommittedTurn && lastCommittedTurn.choices.length > 0;
+
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        right: 0,
+        bottom: 0,
+        width: 460,
+        background: "#1a1a1a",
+        borderLeft: "1px solid #333",
+        display: isOpen ? "flex" : "none",
+        flexDirection: "column",
+        zIndex: 100,
+        fontFamily: "system-ui, sans-serif",
+        color: "#eee",
+      }}
+    >
+      {/* Header */}
+      <div
+        style={{
+          padding: "12px 16px",
+          borderBottom: "1px solid #333",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div>
+          <div style={{ fontSize: 16, fontWeight: 600 }}>如果模式</div>
+          <div style={{ fontSize: 12, color: "#888" }}>
+            {characterName}
+            {eventTitle ? ` · ${eventTitle}` : ""}
+          </div>
+        </div>
+        <button
+          onClick={handleClose}
+          style={{
+            background: "transparent",
+            color: "#888",
+            border: "1px solid #444",
+            borderRadius: 4,
+            padding: "4px 10px",
+            cursor: "pointer",
+            fontSize: 12,
+          }}
+        >
+          ✕ 关闭
+        </button>
+      </div>
+
+      {/* Branch list */}
+      {sessionDetail && sessionDetail.branches.length > 1 && (
+        <div
+          style={{
+            padding: "8px 16px",
+            borderBottom: "1px solid #2a2a2a",
+            display: "flex",
+            gap: 6,
+            flexWrap: "wrap",
+          }}
+        >
+          {sessionDetail.branches.map((b, i) => (
+            <button
+              key={b.id}
+              onClick={() => handleSwitchBranch(b.id)}
+              style={{
+                padding: "4px 10px",
+                fontSize: 11,
+                background: b.isActive ? "#4a9eff" : "#2a2a2a",
+                color: b.isActive ? "white" : "#aaa",
+                border: `1px solid ${b.isActive ? "#4a9eff" : "#444"}`,
+                borderRadius: 3,
+                cursor: "pointer",
+              }}
+            >
+              {b.title || `分支 ${i + 1}`} ({b.turns.length})
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Premise */}
+      <div style={{ padding: "8px 16px", fontSize: 13, color: "#aaa", borderBottom: "1px solid #2a2a2a" }}>
+        <strong style={{ color: "#4a9eff" }}>前提：</strong>
+        {premise}
+      </div>
+
+      {/* Turn list */}
+      <div style={{ flex: 1, overflowY: "auto", padding: "16px" }}>
+        {!sessionDetail && !streaming && !showSessionList && (
+          <div style={{ textAlign: "center", padding: "40px 20px" }}>
+            <button
+              onClick={handleStart}
+              style={{
+                padding: "10px 24px",
+                fontSize: 14,
+                background: "#4a9eff",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                cursor: "pointer",
+                marginRight: 8,
+              }}
+            >
+              开始推演
+            </button>
+            <button
+              onClick={() => setShowSessionList(true)}
+              style={{
+                padding: "10px 16px",
+                fontSize: 14,
+                background: "transparent",
+                color: "#aaa",
+                border: "1px solid #444",
+                borderRadius: 4,
+                cursor: "pointer",
+              }}
+            >
+              载入历史
+            </button>
+          </div>
+        )}
+
+        {showSessionList && (
+          <SessionList
+            projectSlug={projectSlug}
+            onLoad={(s) => {
+              setSessionDetail(s);
+              setShowSessionList(false);
+            }}
+            onClose={() => setShowSessionList(false)}
+          />
+        )}
+
+        {displayTurns.map((turn, i) => (
+          <div key={turn.key} style={{ marginBottom: 24 }}>
+            <div
+              style={{
+                fontSize: 12,
+                color: "#666",
+                marginBottom: 8,
+                fontFamily: "ui-monospace, monospace",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
+            >
+              <span>
+                ── Turn {i + 1} {turn.isStreaming ? "(生成中)" : ""}
+              </span>
+              {!turn.isStreaming && turn.turnId && (
+                <button
+                  onClick={() => handleFork(turn.turnId!)}
+                  style={{
+                    padding: "2px 6px",
+                    fontSize: 10,
+                    background: "transparent",
+                    color: "#fa0",
+                    border: "1px solid #660",
+                    borderRadius: 3,
+                    cursor: "pointer",
+                  }}
+                  title="从此处分叉出新分支"
+                >
+                  ⎇ fork
+                </button>
+              )}
+            </div>
+
+            <NarrativeView
+              streamText={turn.streamingText}
+              segments={turn.isStreaming ? null : turn.narrative}
+            />
+
+            {!turn.isStreaming && turn.diff && (
+              <details style={{ marginTop: 8 }}>
+                <summary
+                  style={{
+                    cursor: "pointer",
+                    fontSize: 12,
+                    color: "#888",
+                    userSelect: "none",
+                  }}
+                >
+                  图谱变化（点开查看）
+                </summary>
+                <div style={{ marginTop: 8 }}>
+                  <DiffPreview diff={turn.diff} />
+                </div>
+              </details>
+            )}
+
+            {!turn.isStreaming && (
+              <ValidationResults results={turn.validation} />
+            )}
+          </div>
+        ))}
+
+        {error && (
+          <div
+            style={{
+              padding: 12,
+              background: "#3a1a1a",
+              color: "#ff8080",
+              borderRadius: 4,
+              fontSize: 13,
+              whiteSpace: "pre-wrap",
+              marginBottom: 16,
+            }}
+          >
+            {error}
+          </div>
+        )}
+      </div>
+
+      {/* Input area: choices + free input */}
+      {showChoices && lastCommittedTurn && (
+        <div
+          style={{
+            padding: "12px 16px",
+            borderTop: "1px solid #333",
+            background: "#1f1f1f",
+          }}
+        >
+          <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>
+            选择后续方向，或自由输入：
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 8 }}>
+            {lastCommittedTurn.choices.map((c, i) => (
+              <button
+                key={i}
+                onClick={() => handleContinue(c)}
+                style={{
+                  padding: "8px 12px",
+                  fontSize: 13,
+                  background: "#2a2a2a",
+                  color: "#eee",
+                  border: "1px solid #444",
+                  borderRadius: 4,
+                  cursor: "pointer",
+                  textAlign: "left",
+                  lineHeight: 1.5,
+                }}
+              >
+                {i + 1}. {c}
+              </button>
+            ))}
+          </div>
+          <div style={{ display: "flex", gap: 6 }}>
+            <input
+              type="text"
+              value={freeInput}
+              onChange={(e) => setFreeInput(e.target.value)}
+              placeholder="或自由输入方向..."
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                fontSize: 13,
+                background: "#1a1a1a",
+                color: "#eee",
+                border: "1px solid #444",
+                borderRadius: 4,
+                outline: "none",
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && freeInput.trim()) {
+                  handleContinue(freeInput.trim());
+                }
+              }}
+            />
+            <button
+              onClick={() => freeInput.trim() && handleContinue(freeInput.trim())}
+              disabled={!freeInput.trim()}
+              style={{
+                padding: "8px 16px",
+                fontSize: 13,
+                background: freeInput.trim() ? "#4a9eff" : "#333",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                cursor: freeInput.trim() ? "pointer" : "not-allowed",
+              }}
+            >
+              发送
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* 空分支提示（fork 后还没续写） */}
+      {sessionDetail && activeBranch && activeBranch.turns.length === 0 && !streaming && (
+        <div
+          style={{
+            padding: "12px 16px",
+            borderTop: "1px solid #333",
+            background: "#1f1f1f",
+          }}
+        >
+          <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>
+            这是 fork 出的新分支，还没有自己的 turn。输入第一个续写方向：
+          </div>
+          <div style={{ display: "flex", gap: 6 }}>
+            <input
+              type="text"
+              value={freeInput}
+              onChange={(e) => setFreeInput(e.target.value)}
+              placeholder="输入新分支的起始方向..."
+              style={{
+                flex: 1,
+                padding: "8px 12px",
+                fontSize: 13,
+                background: "#1a1a1a",
+                color: "#eee",
+                border: "1px solid #444",
+                borderRadius: 4,
+                outline: "none",
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && freeInput.trim()) {
+                  handleContinue(freeInput.trim());
+                }
+              }}
+            />
+            <button
+              onClick={() => freeInput.trim() && handleContinue(freeInput.trim())}
+              disabled={!freeInput.trim()}
+              style={{
+                padding: "8px 16px",
+                fontSize: 13,
+                background: freeInput.trim() ? "#4a9eff" : "#333",
+                color: "white",
+                border: "none",
+                borderRadius: 4,
+                cursor: freeInput.trim() ? "pointer" : "not-allowed",
+              }}
+            >
+              发送
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

@@ -10,11 +10,20 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "postinstall": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.111.0",
     "@dagrejs/dagre": "^1.1.4",
+    "@prisma/client": "6.19.3",
     "@xyflow/react": "^12.4.4",
+    "eventsource-parser": "^3.1.0",
     "fuse.js": "^7.0.0",
     "next": "^15.1.4",
     "pinyin-pro": "^3.28.1",
@@ -30,9 +39,19 @@
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
     "@types/three": "^0.184.1",
+    "@vitest/coverage-v8": "^4.1.10",
     "eslint": "^9.18.0",
     "eslint-config-next": "^15.1.4",
-    "typescript": "^5.7.3"
+    "prisma": "6.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^4.1.10"
   },
-  "packageManager": "pnpm@10.33.0"
+  "packageManager": "pnpm@10.33.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma"
+    ]
+  }
 }
