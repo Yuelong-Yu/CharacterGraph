@@ -191,6 +191,26 @@ interface ArtifactGraphNode {
 }
 
 type GraphNode = CharacterGraphNode | ArtifactGraphNode;
+type NodeVisualMode = "normal" | "selected" | "highlighted";
+
+interface NodeVisualEntry {
+  outer: THREE.Group;
+  activeMode: NodeVisualMode;
+  variants: Map<NodeVisualMode, THREE.Group>;
+}
+
+function disposeNodeVisual(root: THREE.Object3D) {
+  root.traverse((object) => {
+    const renderable = object as THREE.Mesh;
+    renderable.geometry?.dispose();
+    const materials = Array.isArray(renderable.material)
+      ? renderable.material
+      : renderable.material
+        ? [renderable.material]
+        : [];
+    for (const material of materials) material.dispose();
+  });
+}
 
 interface GraphLink {
   id: string;
@@ -201,8 +221,10 @@ interface GraphLink {
 
 interface Props {
   dataset: Dataset;
-  /** WhatIf 累计变更状态；非 null 时 dataset 已是一跳变更视图。 */
+  /** WhatIf 累计变更状态，用于绘制新增、修改和删除样式。 */
   whatIfNodeChanges?: ReadonlyMap<string, WhatIfNodeChange> | null;
+  /** 专注展示变更视图时忽略主图筛选条件。 */
+  bypassFilters?: boolean;
   layoutMode: LayoutMode;
   /** 选中态（右侧人物面板）— 与 focusedId 解耦 */
   selectedNodeId?: string | null;
@@ -254,6 +276,7 @@ function nodeCoord(n: GraphNode): { x: number; y: number; z: number } {
 export function Graph3D({
   dataset,
   whatIfNodeChanges = null,
+  bypassFilters = false,
   layoutMode,
   selectedNodeId,
   selectedEdgeId,
@@ -370,6 +393,7 @@ export function Graph3D({
       .filter((r) => nodeIds.has(r.source) && nodeIds.has(r.target))
       .map((r) => ({ id: r.id, source: r.source, target: r.target, rel: r }));
   }, [dataset.characters, dataset.artifacts, dataset.relations]);
+  const graphData = useMemo(() => ({ nodes, links }), [nodes, links]);
 
   // ── 启动 zoom-to-fit 已移除：加载即进入巡游模式，由巡游接管相机 ──
 
@@ -1061,7 +1085,7 @@ export function Graph3D({
   const nodeVisibility = useCallback(
     (raw: object) => {
       const n = raw as GraphNode;
-      if (whatIfNodeChanges) return true;
+      if (bypassFilters) return true;
       // 聚焦模式：只显示聚焦节点及其邻居（豁免所有过滤）
       if (focusedId) {
         return n.id === focusedId || neighborSet.has(n.id);
@@ -1073,7 +1097,7 @@ export function Graph3D({
       if (matchedIds && !matchedIds.has(n.id)) return false;
       return true;
     },
-    [whatIfNodeChanges, focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
+    [bypassFilters, focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   const linkVisibility = useCallback(
@@ -1081,7 +1105,7 @@ export function Graph3D({
       const l = raw as GraphLink;
       const sId = typeof l.source === "object" ? l.source.id : l.source;
       const tId = typeof l.target === "object" ? l.target.id : l.target;
-      if (whatIfNodeChanges) return true;
+      if (bypassFilters) return true;
       // 聚焦模式：只显示与聚焦节点相关的边
       if (focusedId) {
         return sId === focusedId || tId === focusedId;
@@ -1100,18 +1124,15 @@ export function Graph3D({
       if (matchedIds && (!matchedIds.has(sId) || !matchedIds.has(tId))) return false;
       return true;
     },
-    [whatIfNodeChanges, focusedId, nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
+    [bypassFilters, focusedId, nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   // ── 自定义节点 ──
-  const nodeThreeObject = useCallback(
-    (raw: object) => {
-      const node = raw as GraphNode;
+  const createNodeVisual = useCallback(
+    (node: GraphNode, mode: NodeVisualMode) => {
       const group = new THREE.Group();
-      const isSelected = node.id === selectedNodeId;
-      const isFocused = node.id === focusedId;
-      const isTourTarget = node.id === tourTargetId;
-      const isHighlighted = isFocused || isTourTarget;
+      const isSelected = mode === "selected";
+      const isHighlighted = mode === "highlighted";
       const changeKind = whatIfNodeChanges?.get(node.id);
       const isRemoved = changeKind === "removed";
       const entity = node.entity;
@@ -1416,8 +1437,67 @@ export function Graph3D({
 
       return group;
     },
-    [whatIfNodeChanges, selectedNodeId, focusedId, tourTargetId, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
+    [whatIfNodeChanges, characterCategoryColor, artifactCategoryColor, config.nodeVisualTheme],
   );
+
+  const nodeVisualEntriesRef = useRef(new Map<string, NodeVisualEntry>());
+  const nodeVisualStateRef = useRef({ selectedNodeId, focusedId, tourTargetId });
+  nodeVisualStateRef.current = { selectedNodeId, focusedId, tourTargetId };
+
+  const visualModeForNode = useCallback((nodeId: string): NodeVisualMode => {
+    const state = nodeVisualStateRef.current;
+    if (nodeId === state.focusedId || nodeId === state.tourTargetId) return "highlighted";
+    if (nodeId === state.selectedNodeId) return "selected";
+    return "normal";
+  }, []);
+
+  const nodeThreeObject = useCallback(
+    (raw: object) => {
+      const node = raw as GraphNode;
+      const mode = visualModeForNode(node.id);
+      const visual = createNodeVisual(node, mode);
+      const outer = new THREE.Group();
+      outer.add(visual);
+      const previous = nodeVisualEntriesRef.current.get(node.id);
+      if (previous) {
+        for (const variant of previous.variants.values()) disposeNodeVisual(variant);
+      }
+      nodeVisualEntriesRef.current.set(node.id, {
+        outer,
+        activeMode: mode,
+        variants: new Map([[mode, visual]]),
+      });
+      return outer;
+    },
+    [createNodeVisual, visualModeForNode],
+  );
+
+  useEffect(() => {
+    const liveIds = new Set(nodes.map((node) => node.id));
+    for (const id of nodeVisualEntriesRef.current.keys()) {
+      if (liveIds.has(id)) continue;
+      const entry = nodeVisualEntriesRef.current.get(id);
+      if (entry) {
+        for (const variant of entry.variants.values()) disposeNodeVisual(variant);
+      }
+      nodeVisualEntriesRef.current.delete(id);
+    }
+
+    for (const node of nodes) {
+      const entry = nodeVisualEntriesRef.current.get(node.id);
+      if (!entry) continue;
+      const mode = visualModeForNode(node.id);
+      if (mode === entry.activeMode) continue;
+      let visual = entry.variants.get(mode);
+      if (!visual) {
+        visual = createNodeVisual(node, mode);
+        entry.variants.set(mode, visual);
+      }
+      entry.outer.clear();
+      entry.outer.add(visual);
+      entry.activeMode = mode;
+    }
+  }, [nodes, selectedNodeId, focusedId, tourTargetId, createNodeVisual, visualModeForNode]);
 
   // ── 边的样式 ──
   const linkColor = useCallback(
@@ -1447,7 +1527,7 @@ export function Graph3D({
           ref={fgRef}
           width={size.w}
           height={size.h}
-          graphData={{ nodes, links }}
+          graphData={graphData}
           backgroundColor={COLOR.bg}
           nodeThreeObject={nodeThreeObject}
           nodeLabel={(raw: object) => `${(raw as GraphNode).entity.name_zh} · ${(raw as GraphNode).entity.name_en}`}

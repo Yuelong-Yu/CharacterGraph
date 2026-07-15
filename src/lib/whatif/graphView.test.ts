@@ -151,4 +151,43 @@ describe("buildWhatIfGraphView", () => {
     expect(result.dataset.relations.map((edge) => edge.id)).toEqual(["b-c"]);
     expect(result.dataset.characters.map((node) => node.id).sort()).toEqual(["b", "c"]);
   });
+
+  it("shows the complete branch graph when the change panel is hidden", () => {
+    const turn = makeTurn(1, {
+      ...emptyDiff,
+      removedNodes: ["b"],
+      addedNodes: [makeCharacter("newcomer")],
+      addedEdges: [makeRelation("newcomer-c", "newcomer", "c")],
+      modifiedEvents: [
+        {
+          characterId: "a",
+          eventIndex: 0,
+          newEvent: { title: "改写事件", desc: "改写事件", source: null },
+        },
+      ],
+    });
+
+    const result = buildWhatIfGraphView(base, [turn], { scope: "all" });
+
+    expect(result.dataset.characters.map((node) => node.id).sort()).toEqual([
+      "a",
+      "b",
+      "c",
+      "d",
+      "newcomer",
+    ]);
+    expect(result.dataset.relations.map((edge) => edge.id).sort()).toEqual([
+      "a-b",
+      "b-c",
+      "c-d",
+      "newcomer-c",
+    ]);
+    expect(result.nodeChanges).toEqual(
+      new Map([
+        ["a", "modified"],
+        ["b", "removed"],
+        ["newcomer", "added"],
+      ]),
+    );
+  });
 });

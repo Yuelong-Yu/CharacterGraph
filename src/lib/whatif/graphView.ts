@@ -9,6 +9,10 @@ export interface WhatIfGraphView {
   nodeChanges: Map<string, WhatIfNodeChange>;
 }
 
+interface WhatIfGraphViewOptions {
+  scope?: "changes" | "all";
+}
+
 type GraphEntity = Character | Artifact;
 
 function entitiesById(dataset: Dataset): Map<string, GraphEntity> {
@@ -24,6 +28,7 @@ function entitiesById(dataset: Dataset): Map<string, GraphEntity> {
 export function buildWhatIfGraphView(
   base: Dataset,
   turns: WhatIfTurnDetail[],
+  options: WhatIfGraphViewOptions = {},
 ): WhatIfGraphView {
   let effective = base;
   const nodeChanges = new Map<string, WhatIfNodeChange>();
@@ -74,6 +79,22 @@ export function buildWhatIfGraphView(
   const changedIds = new Set(
     [...nodeChanges.keys()].filter((id) => liveIds.has(id)),
   );
+  if (options.scope === "all") {
+    return {
+      dataset: {
+        ...effective,
+        characters,
+        artifacts,
+        relations: effective.relations.filter(
+          (relation) => liveIds.has(relation.source) && liveIds.has(relation.target),
+        ),
+      },
+      nodeChanges: new Map(
+        [...nodeChanges].filter(([id]) => liveIds.has(id)),
+      ),
+    };
+  }
+
   const relations = effective.relations.filter(
     (relation) =>
       liveIds.has(relation.source) &&

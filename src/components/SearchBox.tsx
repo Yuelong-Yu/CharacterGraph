@@ -86,6 +86,8 @@ interface Props {
   appliedCount: number;
   /** 数据集总节点数 */
   totalCount: number;
+  /** 为右上角同排操作预留的空间。 */
+  rightOffset?: number;
 }
 
 export function SearchBox({
@@ -98,6 +100,7 @@ export function SearchBox({
   filterApplied,
   appliedCount,
   totalCount,
+  rightOffset = 16,
 }: Props) {
   const { config, characterCategoryColor, artifactCategoryColor } = useProjectConfig();
   const [focused, setFocused] = useState(false);
@@ -146,7 +149,7 @@ export function SearchBox({
         position: "absolute",
         top: 16,
         left: 16,
-        right: 16,
+        right: rightOffset,
         maxWidth: 480,
         zIndex: 20,
       }}
@@ -161,6 +164,7 @@ export function SearchBox({
           placeholder={config.searchPlaceholder}
           style={{
             width: "100%",
+            boxSizing: "border-box",
             padding: filterApplied ? "10px 180px 10px 14px" : "10px 14px",
             background: "oklch(99% 0 0 / 0.94)",
             border: `1px solid ${filterApplied ? COLOR.accent : COLOR.border}`,
