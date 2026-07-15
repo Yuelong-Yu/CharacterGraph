@@ -347,7 +347,7 @@ export function WhatIfPanel({
         }}
       >
         <div>
-          <div style={{ fontSize: 16, fontWeight: 600 }}>如果模式</div>
+          <div style={{ fontSize: 16, fontWeight: 600 }}>同人创作</div>
           <div style={{ fontSize: 12, color: "#888" }}>
             {characterName}
             {eventTitle ? ` · ${eventTitle}` : ""}

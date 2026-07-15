@@ -21,6 +21,7 @@ import * as THREE from "three";
 import SpriteText from "three-spritetext";
 
 import type { Artifact, Dataset, Character, Relation } from "@/schemas/character";
+import { isGraphNodeVisible } from "@/lib/graphVisibility";
 import { resolveNodeChange, type WhatIfNodeChange } from "@/lib/whatif/graphView";
 import { COLOR, FONT } from "@/lib/tokens";
 import { useProjectConfig } from "@/lib/projectConfig";
@@ -30,6 +31,7 @@ const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), { ssr: false 
 
 // ─── 纹理缓存 ───────────────────────────────────────────
 const _texCache = new Map<string, THREE.Texture>();
+const _placeholderTexCache = new Map<string, THREE.Texture>();
 const _texLoader = typeof window !== "undefined" ? new THREE.TextureLoader() : null;
 const _preloadedImages = new Set<string>();
 
@@ -41,6 +43,32 @@ function getThumbTexture(url: string): THREE.Texture | null {
   tex.colorSpace = THREE.SRGBColorSpace;
   _texCache.set(url, tex);
   return tex;
+}
+
+function getPlaceholderTexture(name: string): THREE.Texture {
+  const glyph = Array.from(name.trim())[0] ?? "?";
+  const cached = _placeholderTexCache.get(glyph);
+  if (cached) return cached;
+
+  const canvas = document.createElement("canvas");
+  canvas.width = 256;
+  canvas.height = 384;
+  const ctx = canvas.getContext("2d")!;
+  ctx.fillStyle = "#e8e0d5";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = "#9b8469";
+  ctx.lineWidth = 8;
+  ctx.strokeRect(12, 12, canvas.width - 24, canvas.height - 24);
+  ctx.fillStyle = "#504438";
+  ctx.font = `600 132px ${FONT.serif}`;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(glyph, canvas.width / 2, canvas.height / 2);
+
+  const texture = new THREE.CanvasTexture(canvas);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  _placeholderTexCache.set(glyph, texture);
+  return texture;
 }
 
 function preloadImageUrls(urls: string[]) {
@@ -1142,19 +1170,22 @@ export function Graph3D({
   const nodeVisibility = useCallback(
     (raw: object) => {
       const n = raw as GraphNode;
-      if (bypassFilters) return true;
-      // 聚焦模式：只显示聚焦节点及其邻居（豁免所有过滤）
-      if (focusedId) {
-        return n.id === focusedId || neighborSet.has(n.id);
-      }
-      // 普通模式 / 过滤平铺态:类别 ∧ 度数 ∧ 搜索命中
-      if (n.kind === "character" && !enabledCategories.has(n.entity.category)) return false;
-      if (n.kind === "artifact" && !enabledArtifactCategories.has(n.entity.category)) return false;
-      if ((degreeMap.get(n.id) ?? 0) < minDegree) return false;
-      if (matchedIds && !matchedIds.has(n.id)) return false;
-      return true;
+      const categoryEnabled = n.kind === "character"
+        ? enabledCategories.has(n.entity.category)
+        : enabledArtifactCategories.has(n.entity.category);
+      return isGraphNodeVisible({
+        nodeId: n.id,
+        selectedNodeId,
+        bypassFilters,
+        focusedId,
+        isFocusedNeighbor: neighborSet.has(n.id),
+        categoryEnabled,
+        degree: degreeMap.get(n.id) ?? 0,
+        minDegree,
+        matchesSearch: !matchedIds || matchedIds.has(n.id),
+      });
     },
-    [bypassFilters, focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
+    [selectedNodeId, bypassFilters, focusedId, neighborSet, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds],
   );
 
   const linkVisibility = useCallback(
@@ -1368,7 +1399,8 @@ export function Graph3D({
       } else {
         const placeholderGeo = new THREE.PlaneGeometry(spriteW, spriteH);
         const placeholderMat = new THREE.MeshBasicMaterial({
-          color: isRemoved ? "#a3a3a3" : "#eee9e1",
+          map: getPlaceholderTexture(entity.name_zh),
+          color: isRemoved ? "#a3a3a3" : "#ffffff",
           depthTest: false,
           depthWrite: false,
           side: THREE.DoubleSide,

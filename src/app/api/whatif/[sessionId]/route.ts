@@ -4,6 +4,7 @@
  */
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/whatif/db";
+import { removeBranchImages } from "@/lib/server/branchImageAssets";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -43,10 +44,22 @@ export async function DELETE(
   { params }: { params: Promise<{ sessionId: string }> },
 ) {
   const { sessionId } = await params;
+  const session = await prisma.whatIfSession.findUnique({
+    where: { id: sessionId },
+    select: { projectSlug: true, branches: { select: { id: true } } },
+  });
+  if (!session) {
+    return NextResponse.json({ error: "Session not found" }, { status: 404 });
+  }
   try {
     await prisma.whatIfSession.delete({ where: { id: sessionId } });
   } catch {
     return NextResponse.json({ error: "Session not found" }, { status: 404 });
   }
+  await Promise.all(session.branches.map((branch) => (
+    removeBranchImages(session.projectSlug, branch.id).catch((error) => {
+      console.error(`清理分支图像失败 ${branch.id}:`, error);
+    })
+  )));
   return NextResponse.json({ ok: true });
 }

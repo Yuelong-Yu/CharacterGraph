@@ -35,34 +35,44 @@ ROOT = Path(__file__).resolve().parents[2]
 load_dotenv(ROOT / ".env")
 
 IMAGE_API_KEY = os.getenv("IMAGE_API_KEY")
-if not IMAGE_API_KEY:
-    print("ERROR: IMAGE_API_KEY 未设置")
-    sys.exit(1)
-
 BASE_URL = os.getenv("IMAGE_BASE_URL", "https://ark.cn-beijing.volces.com/api/plan/v3")
 MODEL = os.getenv("IMAGE_MODEL", "doubao-seedream-5.0-lite")
 
-client = Ark(base_url=BASE_URL, api_key=IMAGE_API_KEY)
+client: Ark | None = None
+
+
+def get_client() -> Ark:
+    global client
+    if not IMAGE_API_KEY:
+        raise RuntimeError("IMAGE_API_KEY 未设置（检查仓库根 .env）")
+    if client is None:
+        client = Ark(base_url=BASE_URL, api_key=IMAGE_API_KEY)
+    return client
 
 
 # ─────────────────────────────────────────────────────────────
 # 项目上下文
 # ─────────────────────────────────────────────────────────────
 class ProjectCtx:
-    def __init__(self, slug: str) -> None:
+    def __init__(self, slug: str, branch: str | None = None) -> None:
         base = ROOT / "projects" / slug
         if not base.is_dir():
             sys.exit(f"项目不存在: {base}")
         self.slug = slug
-        self.prompts: dict[str, str] = json.loads((base / "prompts.json").read_text("utf-8"))
+        self.branch = branch
+        assets_base = base / "images" / "branches" / branch if branch else base / "images"
+        self.prompts_path = assets_base / "prompts.json" if branch else base / "prompts.json"
+        self.prompts: dict[str, str] = (
+            json.loads(self.prompts_path.read_text("utf-8")) if self.prompts_path.exists() else {}
+        )
         config = json.loads((base / "project.config.json").read_text("utf-8"))
         self.style_character: str = config["artStyle"]["character"]
         self.style_artifact: str = config["artStyle"]["artifact"]
         sources = json.loads((base / "sources.json").read_text("utf-8"))
         self.artifact_ids: set[str] = {a["slug"] for a in sources.get("artifacts", [])}
-        self.portraits_dir = base / "images" / "portraits"
-        self.thumbs_dir = base / "images" / "thumbs"
-        self.raw_dir = base / "images" / "raw"
+        self.portraits_dir = assets_base / "portraits"
+        self.thumbs_dir = assets_base / "thumbs"
+        self.raw_dir = assets_base / "raw"
         for d in (self.portraits_dir, self.thumbs_dir, self.raw_dir):
             d.mkdir(parents=True, exist_ok=True)
 
@@ -82,7 +92,7 @@ CTX: ProjectCtx | None = None
 def generate_one(slug: str, desc: str, base_style: str) -> bytes:
     """单图生成 + 下载,返回 PNG 字节。"""
     full_prompt = f"{base_style}。\n\n{desc}。"
-    resp = client.images.generate(
+    resp = get_client().images.generate(
         model=MODEL,
         prompt=full_prompt,
         size="2K",
@@ -99,8 +109,14 @@ def generate_one(slug: str, desc: str, base_style: str) -> bytes:
 
 
 def process_to_portrait_and_thumb(raw_png: bytes, slug: str, ctx: ProjectCtx) -> None:
-    """大图 → portraits/{slug}.webp (800×1200) + thumbs/{slug}.webp (128×192)。"""
-    (ctx.raw_dir / f"{slug}.png").write_bytes(raw_png)
+    """大图 → 三份临时产物全部成功后，再替换现有文件。"""
+    raw_path = ctx.raw_dir / f"{slug}.png"
+    portrait_path = ctx.portraits_dir / f"{slug}.webp"
+    thumb_path = ctx.thumbs_dir / f"{slug}.webp"
+    nonce = f"{os.getpid()}-{time.time_ns()}"
+    raw_tmp = raw_path.with_name(f".{raw_path.name}.{nonce}.tmp")
+    portrait_tmp = portrait_path.with_name(f".{portrait_path.name}.{nonce}.tmp")
+    thumb_tmp = thumb_path.with_name(f".{thumb_path.name}.{nonce}.tmp")
 
     img = Image.open(BytesIO(raw_png)).convert("RGB")
     target_w, target_h = 800, 1200
@@ -119,11 +135,17 @@ def process_to_portrait_and_thumb(raw_png: bytes, slug: str, ctx: ProjectCtx) ->
             img = img.crop((0, top, src_w, top + new_h))
 
     portrait = img.resize((target_w, target_h), Image.LANCZOS)
-    portrait.save(ctx.portraits_dir / f"{slug}.webp", "WEBP", quality=88, method=6)
-
-    # thumb：直接用整张立绘(已是 2:3)缩放到 128×192,不做胸像裁剪。
     thumb = portrait.resize((128, 192), Image.LANCZOS)
-    thumb.save(ctx.thumbs_dir / f"{slug}.webp", "WEBP", quality=85, method=6)
+    try:
+        raw_tmp.write_bytes(raw_png)
+        portrait.save(portrait_tmp, "WEBP", quality=88, method=6)
+        thumb.save(thumb_tmp, "WEBP", quality=85, method=6)
+        os.replace(raw_tmp, raw_path)
+        os.replace(portrait_tmp, portrait_path)
+        os.replace(thumb_tmp, thumb_path)
+    finally:
+        for temporary in (raw_tmp, portrait_tmp, thumb_tmp):
+            temporary.unlink(missing_ok=True)
 
 
 def _generate_and_save(slug: str) -> tuple[str, str | None]:
@@ -149,14 +171,15 @@ def _generate_and_save(slug: str) -> tuple[str, str | None]:
     return slug, None
 
 
-def main(project: str, target_slugs: list[str] | None, parallel: int) -> None:
+def main(project: str, target_slugs: list[str] | None, parallel: int, branch: str | None = None) -> None:
     global CTX
-    CTX = ProjectCtx(project)
+    CTX = ProjectCtx(project, branch=branch)
 
     if not target_slugs:
         target_slugs = list(CTX.prompts.keys())
 
-    print(f"[{project}] 准备生成 {len(target_slugs)} 张，并行 {parallel}")
+    scope = f" branch={branch}" if branch else ""
+    print(f"[{project}{scope}] 准备生成 {len(target_slugs)} 张，并行 {parallel}")
     print()
 
     ok = 0
@@ -182,7 +205,8 @@ def main(project: str, target_slugs: list[str] | None, parallel: int) -> None:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--project", required=True, help="项目 slug,如 greek(无默认)")
+    ap.add_argument("--branch", help="用户分支目录 key；读取 images/branches/<key>/prompts.json")
     ap.add_argument("--parallel", type=int, default=5)
     ap.add_argument("slugs", nargs="*", help="仅生成指定 slug;留空则全部")
     args = ap.parse_args()
-    main(args.project, args.slugs, parallel=args.parallel)
+    main(args.project, args.slugs, parallel=args.parallel, branch=args.branch)

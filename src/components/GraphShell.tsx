@@ -19,6 +19,12 @@ import {
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
 import { entityMatchesSearch } from "@/lib/searchMatch";
+import { applyCharacterImageOverrides } from "@/lib/characterImages";
+import {
+  fetchCharacterImageAssets,
+  generateCharacterImage,
+} from "@/lib/characterImageClient";
+import type { CharacterImageAsset } from "@/schemas/characterImage";
 import {
   buildUserEventCitation,
   mergeUserEvents,
@@ -59,6 +65,11 @@ type Selection =
 const SEARCH_TRIGGER_LEN = 2;
 
 type SearchEntity = Character | Artifact;
+
+interface CharacterImageJob {
+  status: "generating" | "success" | "error";
+  message?: string;
+}
 
 /**
  * 严格子串匹配:与 SearchBox.computeHits 同语义,仅返回 id 集。
@@ -135,6 +146,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     turnIds: string[];
   } | null>(null);
   const [historyRefreshVersion, setHistoryRefreshVersion] = useState(0);
+  const [characterImageAssets, setCharacterImageAssets] = useState<Map<string, CharacterImageAsset>>(new Map());
+  const [characterImageJobs, setCharacterImageJobs] = useState<Record<string, CharacterImageJob>>({});
 
   useEffect(() => {
     recordsRef.current = userCharacterRecords;
@@ -256,7 +269,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       scope: whatIfPanelOpen ? "changes" : "all",
     });
   }, [datasetWithUserEvents, whatIfConfig, whatIfPanelOpen, whatIfTurns]);
-  const effectiveDataset = whatIfGraphView?.dataset ?? datasetWithUserEvents;
+  const effectiveDatasetWithoutImages = whatIfGraphView?.dataset ?? datasetWithUserEvents;
+  const effectiveDataset = useMemo(
+    () => applyCharacterImageOverrides(effectiveDatasetWithoutImages, characterImageAssets),
+    [effectiveDatasetWithoutImages, characterImageAssets],
+  );
   const isWhatIfChangeView = Boolean(whatIfGraphView && whatIfPanelOpen);
 
   const searchItems = useMemo(
@@ -325,6 +342,107 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     () => new Set(userCharacterRecords.map((record) => record.id)),
     [userCharacterRecords],
   );
+  const activeImageBranchId = activeBranchId ?? localUserBranchId;
+  const activeImageBranchRef = useRef(activeImageBranchId);
+  activeImageBranchRef.current = activeImageBranchId;
+  const imageEligibleIds = useMemo(() => {
+    const ids = new Set(userAddedNodeIds);
+    for (const [id, change] of whatIfGraphView?.nodeChanges ?? []) {
+      if (change === "added") ids.add(id);
+    }
+    return [...ids].sort();
+  }, [userAddedNodeIds, whatIfGraphView?.nodeChanges]);
+  const imageEligibleKey = imageEligibleIds.join("\u0001");
+
+  useEffect(() => {
+    setCharacterImageAssets(new Map());
+  }, [activeImageBranchId]);
+
+  useEffect(() => {
+    let cancelled = false;
+    const characterIds = imageEligibleKey ? imageEligibleKey.split("\u0001") : [];
+    if (!activeImageBranchId || characterIds.length === 0) {
+      return () => { cancelled = true; };
+    }
+    void fetchCharacterImageAssets({
+      projectSlug: config.slug,
+      branchId: activeImageBranchId,
+      characterIds,
+    }).then((assets) => {
+      if (cancelled) return;
+      setCharacterImageAssets(new Map(
+        Object.entries(assets).filter((entry): entry is [string, CharacterImageAsset] => Boolean(entry[1])),
+      ));
+    }).catch(() => {});
+    return () => { cancelled = true; };
+  }, [activeImageBranchId, config.slug, imageEligibleKey]);
+
+  const selectedImageEligible = Boolean(
+    character
+    && activeImageBranchId
+    && (selectedUserCharacterRecord || whatIfGraphView?.nodeChanges.get(character.id) === "added"),
+  );
+  const selectedImageJobKey = character && activeImageBranchId
+    ? `${activeImageBranchId}\u0000${character.id}`
+    : null;
+  const selectedImageJob = selectedImageJobKey ? characterImageJobs[selectedImageJobKey] : undefined;
+
+  async function handleGenerateCharacterImage(target: Character) {
+    if (!activeImageBranchId) return;
+    const taskBranchId = activeImageBranchId;
+    const jobKey = `${taskBranchId}\u0000${target.id}`;
+    if (characterImageJobs[jobKey]?.status === "generating") return;
+    const regenerate = Boolean(target.portrait);
+    if (regenerate && !window.confirm("重新生成会产生模型费用，并覆盖当前分支中的人物形象。确认继续？")) {
+      return;
+    }
+    setCharacterImageJobs((current) => ({
+      ...current,
+      [jobKey]: { status: "generating" },
+    }));
+    try {
+      const record = userCharacterRecords.find((candidate) => candidate.id === target.id) ?? null;
+      const asset = await generateCharacterImage({
+        projectSlug: config.slug,
+        branchId: taskBranchId,
+        character: target,
+        background: record?.background,
+        regenerate,
+      });
+      if (activeImageBranchRef.current === taskBranchId) {
+        setCharacterImageAssets((current) => new Map(current).set(target.id, asset));
+      }
+      if (record) {
+        const updated = {
+          ...record,
+          updatedAt: new Date().toISOString(),
+          character: {
+            ...record.character,
+            portrait: asset.portrait,
+            thumb: asset.thumb,
+          },
+        } satisfies UserCharacterRecord;
+        await saveUserCharacterRecord(updated);
+        if (activeImageBranchRef.current === taskBranchId) {
+          setUserCharacterRecords((current) => current.map((candidate) => (
+            candidate.id === updated.id ? updated : candidate
+          )));
+        }
+      }
+      setCharacterImageJobs((current) => ({
+        ...current,
+        [jobKey]: { status: "success", message: "人物形象已生成" },
+      }));
+    } catch (error) {
+      setCharacterImageJobs((current) => ({
+        ...current,
+        [jobKey]: {
+          status: "error",
+          message: error instanceof Error ? error.message : String(error),
+        },
+      }));
+    }
+  }
   const selectedCharacterAdaptations = useMemo(
     () => character
       ? relationAdaptationsForCharacter(userCharacterRecords, character.id, character.events)
@@ -885,18 +1003,93 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                 <div style={{
                   width: "100%",
                   height: "100%",
-                  display: "grid",
-                  placeItems: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 24,
                   fontFamily: FONT.serif,
                   fontSize: 72,
                   color: COLOR.textMuted,
                   background: "#eee9e1",
                 }}>
-                  {character.name_zh.slice(0, 1)}
+                  <span>{character.name_zh.slice(0, 1)}</span>
+                  {selectedImageEligible && selectedImageJob?.status !== "generating" && (
+                    <button
+                      type="button"
+                      onClick={() => void handleGenerateCharacterImage(character)}
+                      style={{
+                        padding: "9px 14px",
+                        border: `1px solid ${COLOR.accent}`,
+                        borderRadius: 4,
+                        background: COLOR.bgPanel,
+                        color: COLOR.accent,
+                        cursor: "pointer",
+                        fontFamily: FONT.sans,
+                        fontSize: 12,
+                      }}
+                    >
+                      生成形象
+                    </button>
+                  )}
+                </div>
+              )}
+              {selectedImageEligible && character.portrait && selectedImageJob?.status !== "generating" && (
+                <button
+                  type="button"
+                  title="重新生成形象"
+                  onClick={() => void handleGenerateCharacterImage(character)}
+                  style={{
+                    position: "absolute",
+                    top: 10,
+                    right: 10,
+                    width: 34,
+                    height: 34,
+                    display: "grid",
+                    placeItems: "center",
+                    padding: 0,
+                    border: "1px solid rgba(255,255,255,0.78)",
+                    borderRadius: 4,
+                    background: "rgba(20,20,20,0.72)",
+                    color: "#fff",
+                    cursor: "pointer",
+                    fontFamily: FONT.sans,
+                    fontSize: 18,
+                  }}
+                  aria-label="重新生成形象"
+                >
+                  ↻
+                </button>
+              )}
+              {selectedImageJob?.status === "generating" && (
+                <div
+                  role="status"
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    display: "grid",
+                    placeItems: "center",
+                    background: "rgba(245,242,237,0.86)",
+                    color: COLOR.text,
+                    fontFamily: FONT.sans,
+                    fontSize: 13,
+                  }}
+                >
+                  形象生成中…
                 </div>
               )}
               <style>{`@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }`}</style>
             </div>
+            {selectedImageJob?.status === "error" && (
+              <div role="alert" style={{ color: COLOR.accent, fontSize: 11, lineHeight: 1.5, marginTop: -8, marginBottom: 14 }}>
+                {selectedImageJob.message}
+              </div>
+            )}
+            {selectedImageJob?.status === "success" && (
+              <div role="status" style={{ color: "#477a52", fontSize: 11, marginTop: -8, marginBottom: 14 }}>
+                {selectedImageJob.message}
+              </div>
+            )}
 
             {/* 1. 人名 */}
             <div style={{ fontFamily: FONT.serif, fontSize: 28, fontWeight: 600 }}>

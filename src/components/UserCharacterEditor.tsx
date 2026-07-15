@@ -257,8 +257,8 @@ export function UserCharacterEditor({
         skills: preview.profile.skills,
         domains: preview.profile.domains,
         mounts: preview.profile.mounts,
-        portrait: "",
-        thumb: "",
+        portrait: editingRecord?.character.portrait ?? "",
+        thumb: editingRecord?.character.thumb ?? "",
       },
       relations: preview.relationships.map((relationship, index) => ({
         schema_version: 3,

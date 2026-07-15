@@ -11,6 +11,7 @@ uv sync
 uv run health_check.py                         # 先用 1 张验证 API 可用性(项目无关)
 uv run generate_portraits.py --project greek   # 批量生成(已存在跳过)
 uv run generate_portraits.py --project greek zeus hera --parallel 1
+uv run generate_portraits.py --project shuihu --branch <branch-key> --parallel 1
 ```
 
 ## 输入
@@ -24,6 +25,10 @@ uv run generate_portraits.py --project greek zeus hera --parallel 1
 - `../../projects/<slug>/images/portraits/{id}.webp` — 800×1200 半身像/器物图
 - `../../projects/<slug>/images/thumbs/{id}.webp` — 128×192 缩略图
 - `../../projects/<slug>/images/raw/{id}.png` — AI 原图(不进 git)
+
+用户分支保持相同格式，位于
+`../../projects/<slug>/images/branches/<branch-key>/{raw,portraits,thumbs}`，
+提示词保存在该分支目录的 `prompts.json`。这些运行时产物不进 git。
 
 ## 注意
 
