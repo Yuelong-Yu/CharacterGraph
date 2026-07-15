@@ -10,6 +10,7 @@ import {
   resolveBranchLineage,
 } from "@/lib/server/branchImageAssets";
 import {
+  ImageGenerationTimeoutError,
   runBranchPortraitGeneration,
   synthesizeCharacterImagePrompt,
 } from "@/lib/server/characterImageGeneration";
@@ -83,6 +84,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "该人物的图像已经在生成中" }, { status: 409 });
   }
   activeCharacters.add(taskKey);
+  console.info(
+    `[character-image] task started project=${input.projectSlug} branch=${input.branchId} character=${character.id}`,
+  );
 
   try {
     const asset = await enqueueBranch(`${input.projectSlug}\u0000${input.branchId}`, async () => {
@@ -107,7 +111,10 @@ export async function POST(req: NextRequest) {
             background: input.background,
           });
           promptSource = "llm";
-        } catch {
+        } catch (error) {
+          console.warn(
+            `[character-image] prompt synthesis failed; using template: ${error instanceof Error ? error.message : String(error)}`,
+          );
           prompt = fallbackCharacterImagePrompt(character, input.background);
           promptSource = "template";
         }
@@ -127,7 +134,10 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json({ asset });
   } catch (error) {
-    return errorResponse(error);
+    console.error(
+      `[character-image] task failed project=${input.projectSlug} branch=${input.branchId} character=${character.id}: ${error instanceof Error ? error.message : String(error)}`,
+    );
+    return errorResponse(error, error instanceof ImageGenerationTimeoutError ? 504 : 500);
   } finally {
     activeCharacters.delete(taskKey);
   }

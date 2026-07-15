@@ -45,7 +45,9 @@ def main() -> None:
 
     ctx = ProjectCtx(project, branch=branch)
     raw = generate_one(character_id, prompt.strip(), ctx.base_style(character_id))
+    print("开始生成 portrait/thumb", file=sys.stderr, flush=True)
     process_to_portrait_and_thumb(raw, character_id, ctx)
+    print("portrait/thumb 写入完成", file=sys.stderr, flush=True)
 
     prompts = dict(ctx.prompts)
     prompts[character_id] = prompt.strip()

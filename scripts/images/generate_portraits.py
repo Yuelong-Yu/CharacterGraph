@@ -37,6 +37,9 @@ load_dotenv(ROOT / ".env")
 IMAGE_API_KEY = os.getenv("IMAGE_API_KEY")
 BASE_URL = os.getenv("IMAGE_BASE_URL", "https://ark.cn-beijing.volces.com/api/plan/v3")
 MODEL = os.getenv("IMAGE_MODEL", "doubao-seedream-5.0-lite")
+REQUEST_TIMEOUT_SECONDS = float(os.getenv("IMAGE_REQUEST_TIMEOUT_SECONDS", "600"))
+SDK_MAX_RETRIES = int(os.getenv("IMAGE_SDK_MAX_RETRIES", "2"))
+GENERATION_ATTEMPTS = int(os.getenv("IMAGE_GENERATION_ATTEMPTS", "3"))
 
 client: Ark | None = None
 
@@ -46,7 +49,12 @@ def get_client() -> Ark:
     if not IMAGE_API_KEY:
         raise RuntimeError("IMAGE_API_KEY 未设置（检查仓库根 .env）")
     if client is None:
-        client = Ark(base_url=BASE_URL, api_key=IMAGE_API_KEY)
+        client = Ark(
+            base_url=BASE_URL,
+            api_key=IMAGE_API_KEY,
+            timeout=REQUEST_TIMEOUT_SECONDS,
+            max_retries=SDK_MAX_RETRIES,
+        )
     return client
 
 
@@ -85,13 +93,18 @@ CTX: ProjectCtx | None = None
 
 
 @retry(
-    stop=stop_after_attempt(3),
+    stop=stop_after_attempt(GENERATION_ATTEMPTS),
     wait=wait_exponential(multiplier=3, min=3, max=30),
     retry=retry_if_exception_type(Exception),
 )
 def generate_one(slug: str, desc: str, base_style: str) -> bytes:
     """单图生成 + 下载,返回 PNG 字节。"""
     full_prompt = f"{base_style}。\n\n{desc}。"
+    print(
+        f"SeedDream 请求开始 model={MODEL} timeout={REQUEST_TIMEOUT_SECONDS:.0f}s retries={SDK_MAX_RETRIES}",
+        file=sys.stderr,
+        flush=True,
+    )
     resp = get_client().images.generate(
         model=MODEL,
         prompt=full_prompt,
@@ -102,9 +115,11 @@ def generate_one(slug: str, desc: str, base_style: str) -> bytes:
     )
     if not resp.data:
         raise RuntimeError(f"{slug}: no data returned")
+    print("SeedDream 已返回图片地址，开始下载", file=sys.stderr, flush=True)
     url = resp.data[0].url
     r = requests.get(url, timeout=60)
     r.raise_for_status()
+    print(f"图片下载完成 bytes={len(r.content)}", file=sys.stderr, flush=True)
     return r.content
 
 

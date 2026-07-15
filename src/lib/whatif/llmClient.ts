@@ -77,14 +77,15 @@ export async function callLLMStream(
   maxTokens: number,
   onDelta: (delta: string) => void,
   onRetry?: () => void,
+  options: { timeoutMs?: number; maxAttempts?: number } = {},
 ): Promise<void> {
-  const TIMEOUT_MS = 120_000;
-  const MAX_ATTEMPTS = 2;
+  const timeoutMs = options.timeoutMs ?? 120_000;
+  const maxAttempts = options.maxAttempts ?? 2;
 
   let lastError: unknown = null;
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
     const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
 
     try {
       const c = getClient();
@@ -138,7 +139,7 @@ export async function callLLMStream(
           e.message.includes("ECONNRESET") ||
           e.message.includes("ETIMEDOUT") ||
           e.message.includes("fetch failed"));
-      if (!isRetryable || attempt === MAX_ATTEMPTS) {
+      if (!isRetryable || attempt === maxAttempts) {
         throw e;
       }
       onRetry?.();
