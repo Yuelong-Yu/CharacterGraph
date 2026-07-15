@@ -3,7 +3,7 @@
 /**
  * 主页面客户端壳：3D 图谱 + 互斥选择 + 模式切换 + 类别过滤 + 搜索过滤
  */
-import { useCallback, useMemo, useReducer, useState } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useState } from "react";
 import type { Artifact, Dataset, Character } from "@/schemas/character";
 import type { ClientProjectConfig } from "@/schemas/projectConfig";
 import { Graph3D, type LayoutMode } from "./Graph3D";
@@ -18,6 +18,12 @@ import {
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
 import { entityMatchesSearch } from "@/lib/searchMatch";
+import {
+  buildUserEventCitation,
+  mergeUserEvents,
+  parseStoredUserEvents,
+  type UserEventsByCharacter,
+} from "@/lib/userEvents";
 
 type Selection =
   | { kind: "none" }
@@ -71,6 +77,36 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [draftQuery, setDraftQuery] = useState<string>("");
   const [committedQuery, setCommittedQuery] = useState<string>("");
 
+  const userEventStorageKey = `character-graph:${config.slug}:user-events:v1`;
+  const [userEvents, setUserEvents] = useState<UserEventsByCharacter>({});
+  const [loadedUserEventKey, setLoadedUserEventKey] = useState<string | null>(null);
+
+  useEffect(() => {
+    let stored: UserEventsByCharacter = {};
+    try {
+      const raw = window.localStorage.getItem(userEventStorageKey);
+      if (raw) stored = parseStoredUserEvents(JSON.parse(raw));
+    } catch {
+      stored = {};
+    }
+    setUserEvents(stored);
+    setLoadedUserEventKey(userEventStorageKey);
+  }, [userEventStorageKey]);
+
+  useEffect(() => {
+    if (loadedUserEventKey !== userEventStorageKey) return;
+    try {
+      window.localStorage.setItem(userEventStorageKey, JSON.stringify(userEvents));
+    } catch {
+      // 浏览器禁用或存储空间不足时，仅保留当前页面内的事件。
+    }
+  }, [loadedUserEventKey, userEventStorageKey, userEvents]);
+
+  const datasetWithUserEvents = useMemo(
+    () => mergeUserEvents(dataset, userEvents),
+    [dataset, userEvents],
+  );
+
   // WhatIf 模式：假设事件没发生，LLM 推演 + 图谱动态变化
   const [whatIfWorkspace, dispatchWhatIf] = useReducer(
     whatIfWorkspaceReducer,
@@ -84,11 +120,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 
   const whatIfGraphView = useMemo(() => {
     if (!whatIfConfig || whatIfTurns.length === 0) return null;
-    return buildWhatIfGraphView(dataset, whatIfTurns, {
+    return buildWhatIfGraphView(datasetWithUserEvents, whatIfTurns, {
       scope: whatIfPanelOpen ? "changes" : "all",
     });
-  }, [dataset, whatIfConfig, whatIfPanelOpen, whatIfTurns]);
-  const effectiveDataset = whatIfGraphView?.dataset ?? dataset;
+  }, [datasetWithUserEvents, whatIfConfig, whatIfPanelOpen, whatIfTurns]);
+  const effectiveDataset = whatIfGraphView?.dataset ?? datasetWithUserEvents;
   const isWhatIfChangeView = Boolean(whatIfGraphView && whatIfPanelOpen);
 
   const searchItems = useMemo(
@@ -205,6 +241,42 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const handleWhatIfTurnsChange = useCallback((turns: typeof whatIfTurns) => {
     dispatchWhatIf({ type: "set-turns", turns });
   }, []);
+
+  const addUserEvent = (characterId: string, title: string, desc: string): string | null => {
+    const normalizedTitle = title.trim();
+    const normalizedDesc = desc.trim();
+    const currentCharacter = datasetWithUserEvents.characters.find((item) => item.id === characterId);
+    if (currentCharacter?.events.some((event) => event.title.trim() === normalizedTitle)) {
+      return "该人物已存在同名事件";
+    }
+
+    const id = typeof crypto.randomUUID === "function"
+      ? crypto.randomUUID()
+      : `user-event-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    const entry = {
+      id,
+      event: {
+        title: normalizedTitle,
+        desc: normalizedDesc,
+        source: buildUserEventCitation(dataset, characterId),
+      },
+    };
+    setUserEvents((previous) => ({
+      ...previous,
+      [characterId]: [...(previous[characterId] ?? []), entry],
+    }));
+    return null;
+  };
+
+  const removeUserEvent = (characterId: string, eventId: string) => {
+    setUserEvents((previous) => {
+      const entries = (previous[characterId] ?? []).filter((entry) => entry.id !== eventId);
+      const next = { ...previous };
+      if (entries.length > 0) next[characterId] = entries;
+      else delete next[characterId];
+      return next;
+    });
+  };
 
   // 类别勾选
   const toggleCategory = (cat: string) => {
@@ -478,48 +550,89 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             {/* 9. 主要事件 */}
             <Section
               title="主要事件"
-              items={character.events.map((e) => (
-                <div key={e.title} style={{ marginBottom: 12 }}>
-                  <strong style={{ color: COLOR.accent, fontSize: 13 }}>{e.title}</strong>
-                  <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
-                    {e.desc}
-                  </div>
-                  {e.source && (
-                    <div style={{ fontFamily: FONT.mono, fontSize: 10, color: COLOR.textMuted, marginTop: 4 }}>
-                      《{e.source.work}》{e.source.locus ?? ""}
-                    </div>
-                  )}
-                  <button
-                    onClick={() => {
-                      dispatchWhatIf({
-                        type: "launch",
-                        config: {
-                          projectSlug: config.slug,
-                          characterId: character.id,
-                          characterName: character.name_zh,
-                          eventTitle: e.title,
-                          premise: `如果${character.name_zh}没有「${e.title}」`,
-                        },
-                      });
-                    }}
-                    style={{
-                      marginTop: 6,
-                      padding: "3px 8px",
-                      fontSize: 11,
-                      background: "transparent",
-                      color: COLOR.accent,
-                      border: `1px solid ${COLOR.accent}`,
-                      borderRadius: 3,
-                      cursor: "pointer",
-                      opacity: 0.7,
-                    }}
-                    onMouseEnter={(ev) => (ev.currentTarget.style.opacity = "1")}
-                    onMouseLeave={(ev) => (ev.currentTarget.style.opacity = "0.7")}
-                  >
-                    ⚡ 假设这件事没发生
-                  </button>
-                </div>
-              ))}
+              items={(
+                <>
+                  {character.events.map((event, index) => {
+                    const userEntry = userEvents[character.id]?.find(
+                      (entry) => entry.event.title === event.title,
+                    );
+                    return (
+                      <div key={`${event.title}-${index}`} style={{ marginBottom: 18 }}>
+                        <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
+                          <strong style={{ color: COLOR.accent, fontSize: 13, flex: 1 }}>
+                            {event.title}
+                          </strong>
+                          {userEntry && (
+                            <button
+                              type="button"
+                              aria-label={`删除事件：${event.title}`}
+                              title="删除此自定义事件"
+                              onClick={() => removeUserEvent(character.id, userEntry.id)}
+                              style={{
+                                width: 22,
+                                height: 22,
+                                padding: 0,
+                                border: "none",
+                                background: "transparent",
+                                color: COLOR.textMuted,
+                                cursor: "pointer",
+                                fontSize: 16,
+                                lineHeight: 1,
+                              }}
+                            >
+                              ×
+                            </button>
+                          )}
+                        </div>
+                        <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
+                          {event.desc}
+                        </div>
+                        {event.source && (
+                          <div style={{ fontFamily: FONT.mono, fontSize: 10, color: COLOR.textMuted, marginTop: 4 }}>
+                            《{event.source.work}》{event.source.locus ?? ""}
+                          </div>
+                        )}
+                        <button
+                          onClick={() => {
+                            dispatchWhatIf({
+                              type: "launch",
+                              config: {
+                                projectSlug: config.slug,
+                                characterId: character.id,
+                                characterName: character.name_zh,
+                                eventTitle: event.title,
+                                premise: userEntry
+                                  ? `假设${character.name_zh}经历了「${event.title}」：${event.desc}`
+                                  : `如果${character.name_zh}没有「${event.title}」`,
+                                premiseType: userEntry ? "free_text" : "event_negative",
+                              },
+                            });
+                          }}
+                          style={{
+                            marginTop: 6,
+                            padding: "3px 8px",
+                            fontSize: 11,
+                            background: "transparent",
+                            color: COLOR.accent,
+                            border: `1px solid ${COLOR.accent}`,
+                            borderRadius: 3,
+                            cursor: "pointer",
+                            opacity: 0.7,
+                          }}
+                          onMouseEnter={(ev) => (ev.currentTarget.style.opacity = "1")}
+                          onMouseLeave={(ev) => (ev.currentTarget.style.opacity = "0.7")}
+                        >
+                          {userEntry ? "⚡ 基于此事件推演" : "⚡ 假设这件事没发生"}
+                        </button>
+                      </div>
+                    );
+                  })}
+                  <AddUserEventForm
+                    key={character.id}
+                    onAdd={(title, desc) => addUserEvent(character.id, title, desc)}
+                  />
+                </>
+              )}
             />
           </div>
         )}
@@ -676,6 +789,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           characterName={whatIfConfig.characterName}
           eventTitle={whatIfConfig.eventTitle}
           premise={whatIfConfig.premise}
+          premiseType={whatIfConfig.premiseType}
           onClose={() => dispatchWhatIf({ type: "hide-panel" })}
           onTurnsChange={handleWhatIfTurnsChange}
         />
@@ -684,6 +798,145 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     </ProjectConfigProvider>
   );
 }
+
+function AddUserEventForm({
+  onAdd,
+}: {
+  onAdd: (title: string, desc: string) => string | null;
+}) {
+  const [open, setOpen] = useState(false);
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  const reset = () => {
+    setOpen(false);
+    setTitle("");
+    setDesc("");
+    setError(null);
+  };
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        style={{
+          width: "100%",
+          padding: "8px 10px",
+          border: `1px dashed ${COLOR.border}`,
+          borderRadius: 4,
+          background: "transparent",
+          color: COLOR.accent,
+          cursor: "pointer",
+          fontSize: 12,
+          fontFamily: FONT.sans,
+        }}
+      >
+        ＋ 添加事件
+      </button>
+    );
+  }
+
+  return (
+    <form
+      onSubmit={(event) => {
+        event.preventDefault();
+        if (!title.trim() || !desc.trim()) {
+          setError("请填写事件标题和内容");
+          return;
+        }
+        const addError = onAdd(title, desc);
+        if (addError) {
+          setError(addError);
+          return;
+        }
+        reset();
+      }}
+      style={{
+        paddingTop: 12,
+        borderTop: `1px solid ${COLOR.border}`,
+      }}
+    >
+      <label style={userEventLabelStyle}>
+        事件标题
+        <input
+          autoFocus
+          value={title}
+          maxLength={60}
+          onChange={(event) => {
+            setTitle(event.target.value);
+            setError(null);
+          }}
+          style={userEventInputStyle}
+        />
+      </label>
+      <label style={{ ...userEventLabelStyle, marginTop: 10 }}>
+        事件内容
+        <textarea
+          value={desc}
+          maxLength={500}
+          rows={4}
+          onChange={(event) => {
+            setDesc(event.target.value);
+            setError(null);
+          }}
+          style={{ ...userEventInputStyle, resize: "vertical", lineHeight: 1.55 }}
+        />
+      </label>
+      {error && (
+        <div role="alert" style={{ marginTop: 8, color: COLOR.accent, fontSize: 11 }}>
+          {error}
+        </div>
+      )}
+      <div style={{ display: "flex", justifyContent: "flex-end", gap: 8, marginTop: 10 }}>
+        <button type="button" onClick={reset} style={userEventSecondaryButtonStyle}>
+          取消
+        </button>
+        <button type="submit" style={userEventPrimaryButtonStyle}>
+          添加
+        </button>
+      </div>
+    </form>
+  );
+}
+
+const userEventLabelStyle: React.CSSProperties = {
+  display: "grid",
+  gap: 5,
+  color: COLOR.textMuted,
+  fontSize: 11,
+};
+
+const userEventInputStyle: React.CSSProperties = {
+  width: "100%",
+  boxSizing: "border-box",
+  padding: "8px 9px",
+  border: `1px solid ${COLOR.border}`,
+  borderRadius: 4,
+  background: COLOR.bg,
+  color: COLOR.text,
+  fontSize: 12,
+  fontFamily: FONT.sans,
+  outline: "none",
+};
+
+const userEventSecondaryButtonStyle: React.CSSProperties = {
+  padding: "6px 12px",
+  border: `1px solid ${COLOR.border}`,
+  borderRadius: 4,
+  background: "transparent",
+  color: COLOR.textMuted,
+  cursor: "pointer",
+  fontSize: 11,
+};
+
+const userEventPrimaryButtonStyle: React.CSSProperties = {
+  ...userEventSecondaryButtonStyle,
+  border: `1px solid ${COLOR.accent}`,
+  background: COLOR.accent,
+  color: "#fff",
+};
 
 function Section({ title, items }: { title: string; items: React.ReactNode }) {
   return (

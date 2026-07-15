@@ -26,6 +26,7 @@ import { SessionList } from "./SessionList";
 import type {
   GraphDiff,
   NarrativeSegment,
+  PremiseType,
   ValidationResult,
   WhatIfSessionDetail,
   WhatIfTurnDetail,
@@ -38,6 +39,7 @@ interface Props {
   characterName: string;
   eventTitle: string | null;
   premise: string;
+  premiseType: PremiseType;
   onClose: () => void;
   onTurnsChange: (turns: WhatIfTurnDetail[]) => void;
 }
@@ -55,6 +57,7 @@ export function WhatIfPanel({
   characterName,
   eventTitle,
   premise,
+  premiseType,
   onClose,
   onTurnsChange,
 }: Props) {
@@ -113,7 +116,7 @@ export function WhatIfPanel({
           title: `${characterName} - ${eventTitle ?? "自由前提"}`,
           characterId,
           premise,
-          premiseType: "event_negative",
+          premiseType,
           sourceEventTitle: eventTitle ?? undefined,
         },
         {

@@ -8,6 +8,7 @@ const config = {
   characterName: "林冲",
   eventTitle: "火并王伦",
   premise: "如果林冲没有「火并王伦」",
+  premiseType: "event_negative" as const,
 };
 
 const turn = { id: "turn-1" } as WhatIfTurnDetail;

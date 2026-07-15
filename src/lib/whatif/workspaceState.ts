@@ -1,4 +1,4 @@
-import type { WhatIfTurnDetail } from "@/schemas/whatif";
+import type { PremiseType, WhatIfTurnDetail } from "@/schemas/whatif";
 
 export interface WhatIfLaunchConfig {
   projectSlug: string;
@@ -6,6 +6,7 @@ export interface WhatIfLaunchConfig {
   characterName: string;
   eventTitle: string | null;
   premise: string;
+  premiseType: PremiseType;
 }
 
 export interface WhatIfWorkspaceState {
