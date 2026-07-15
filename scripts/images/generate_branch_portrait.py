@@ -68,4 +68,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as error:
+        print(f"{type(error).__name__}: {error}", file=sys.stderr, flush=True)
+        raise SystemExit(1) from None

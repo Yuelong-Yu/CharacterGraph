@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "doubao-seedream 半身像生成 + 缩略图处理"
 requires-python = ">=3.11"
 dependencies = [
+    "httpx>=0.28.0",
     "volcengine-python-sdk[ark]>=1.0.0",
     "pillow>=11.0.0",
     "python-dotenv>=1.0.0",

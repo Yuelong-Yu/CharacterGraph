@@ -26,6 +26,7 @@ from io import BytesIO
 from pathlib import Path
 
 from dotenv import load_dotenv
+import httpx
 from PIL import Image
 import requests
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
@@ -40,6 +41,12 @@ MODEL = os.getenv("IMAGE_MODEL", "doubao-seedream-5.0-lite")
 REQUEST_TIMEOUT_SECONDS = float(os.getenv("IMAGE_REQUEST_TIMEOUT_SECONDS", "600"))
 SDK_MAX_RETRIES = int(os.getenv("IMAGE_SDK_MAX_RETRIES", "2"))
 GENERATION_ATTEMPTS = int(os.getenv("IMAGE_GENERATION_ATTEMPTS", "3"))
+IMAGE_TRUST_ENV = os.getenv("IMAGE_TRUST_ENV", "false").strip().lower() in {
+    "1",
+    "true",
+    "yes",
+    "on",
+}
 
 client: Ark | None = None
 
@@ -49,13 +56,29 @@ def get_client() -> Ark:
     if not IMAGE_API_KEY:
         raise RuntimeError("IMAGE_API_KEY 未设置（检查仓库根 .env）")
     if client is None:
+        http_client = httpx.Client(
+            timeout=REQUEST_TIMEOUT_SECONDS,
+            trust_env=IMAGE_TRUST_ENV,
+        )
         client = Ark(
             base_url=BASE_URL,
             api_key=IMAGE_API_KEY,
             timeout=REQUEST_TIMEOUT_SECONDS,
             max_retries=SDK_MAX_RETRIES,
+            http_client=http_client,
         )
     return client
+
+
+def download_image(url: str) -> bytes:
+    session = requests.Session()
+    session.trust_env = IMAGE_TRUST_ENV
+    try:
+        response = session.get(url, timeout=60)
+        response.raise_for_status()
+        return response.content
+    finally:
+        session.close()
 
 
 # ─────────────────────────────────────────────────────────────
@@ -96,6 +119,7 @@ CTX: ProjectCtx | None = None
     stop=stop_after_attempt(GENERATION_ATTEMPTS),
     wait=wait_exponential(multiplier=3, min=3, max=30),
     retry=retry_if_exception_type(Exception),
+    reraise=True,
 )
 def generate_one(slug: str, desc: str, base_style: str) -> bytes:
     """单图生成 + 下载,返回 PNG 字节。"""
@@ -117,10 +141,9 @@ def generate_one(slug: str, desc: str, base_style: str) -> bytes:
         raise RuntimeError(f"{slug}: no data returned")
     print("SeedDream 已返回图片地址，开始下载", file=sys.stderr, flush=True)
     url = resp.data[0].url
-    r = requests.get(url, timeout=60)
-    r.raise_for_status()
-    print(f"图片下载完成 bytes={len(r.content)}", file=sys.stderr, flush=True)
-    return r.content
+    content = download_image(url)
+    print(f"图片下载完成 bytes={len(content)}", file=sys.stderr, flush=True)
+    return content
 
 
 def process_to_portrait_and_thumb(raw_png: bytes, slug: str, ctx: ProjectCtx) -> None:
