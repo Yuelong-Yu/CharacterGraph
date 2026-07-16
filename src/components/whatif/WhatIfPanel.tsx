@@ -459,6 +459,22 @@ export function WhatIfPanel({
             <div style={{ color: "#888", fontSize: 13, lineHeight: 1.7 }}>
               请通过页面顶部导航登录或注册 ChronChaos 账号。
             </div>
+            <button
+              type="button"
+              onClick={handleClose}
+              style={{
+                marginTop: 18,
+                padding: "9px 16px",
+                fontSize: 13,
+                background: "#2a2a2a",
+                color: "#eee",
+                border: "1px solid #4a4a4a",
+                borderRadius: 4,
+                cursor: "pointer",
+              }}
+            >
+              关闭提示，返回图谱
+            </button>
           </div>
         )}
 
