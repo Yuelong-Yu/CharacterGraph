@@ -1,4 +1,8 @@
-import type { PremiseType, WhatIfTurnDetail } from "@/schemas/whatif";
+import type {
+  PremiseType,
+  WhatIfSessionDetail,
+  WhatIfTurnDetail,
+} from "@/schemas/whatif";
 
 export interface WhatIfLaunchConfig {
   projectSlug: string;
@@ -22,6 +26,24 @@ export const initialWhatIfWorkspaceState: WhatIfWorkspaceState = {
   panelOpen: false,
   activeBranchId: null,
 };
+
+export function launchConfigFromSession(
+  session: WhatIfSessionDetail,
+  characterName: string,
+): WhatIfLaunchConfig | null {
+  const rootBranch = session.branches.find((branch) => branch.parentTurnId === null)
+    ?? session.branches[0];
+  const rootTurn = rootBranch?.turns[0];
+  if (!rootTurn) return null;
+  return {
+    projectSlug: session.projectSlug,
+    characterId: session.characterId,
+    characterName,
+    eventTitle: rootTurn.sourceEventTitle,
+    premise: rootTurn.premise,
+    premiseType: rootTurn.premiseType,
+  };
+}
 
 export type WhatIfWorkspaceAction =
   | { type: "launch"; config: WhatIfLaunchConfig }

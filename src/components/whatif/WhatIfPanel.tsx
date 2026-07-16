@@ -25,7 +25,6 @@ import {
 import { NarrativeView } from "./NarrativeView";
 import { DiffPreview } from "./DiffPreview";
 import { ValidationResults } from "./ValidationResults";
-import { SessionList } from "./SessionList";
 import type {
   GraphDiff,
   NarrativeSegment,
@@ -51,6 +50,8 @@ interface Props {
   onActiveBranchChange?: (branchId: string | null) => void;
   datasetOverlay?: { characters: Character[]; relations: Relation[] };
   historyRefreshVersion?: number;
+  initialSession?: WhatIfSessionDetail | null;
+  autoStart?: boolean;
 }
 
 interface StreamingState {
@@ -72,12 +73,13 @@ export function WhatIfPanel({
   onActiveBranchChange,
   datasetOverlay,
   historyRefreshVersion = 0,
+  initialSession = null,
+  autoStart = false,
 }: Props) {
-  const [sessionDetail, setSessionDetail] = useState<WhatIfSessionDetail | null>(null);
+  const [sessionDetail, setSessionDetail] = useState<WhatIfSessionDetail | null>(initialSession);
   const [streaming, setStreaming] = useState<StreamingState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [freeInput, setFreeInput] = useState("");
-  const [showSessionList, setShowSessionList] = useState(false);
   const [versionPicker, setVersionPicker] = useState<{
     turnId: string;
     versions: WhatIfTurnVersionSummary[];
@@ -85,6 +87,7 @@ export function WhatIfPanel({
   const [accountUser, setAccountUser] = useState<SessionUser | null | undefined>(undefined);
   const lastAccountIdRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
+  const autoStartAttemptedRef = useRef(false);
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
@@ -96,7 +99,6 @@ export function WhatIfPanel({
       const nextUser = response.ok ? payload.user ?? null : null;
       if (!nextUser || (lastAccountIdRef.current && lastAccountIdRef.current !== nextUser.id)) {
         setSessionDetail(null);
-        setShowSessionList(false);
         setStreaming(null);
         setVersionPicker(null);
         setError(null);
@@ -106,7 +108,6 @@ export function WhatIfPanel({
       setAccountUser(nextUser);
     } catch {
       setSessionDetail(null);
-      setShowSessionList(false);
       setError(null);
       lastAccountIdRef.current = null;
       setAccountUser(null);
@@ -116,6 +117,15 @@ export function WhatIfPanel({
   useEffect(() => {
     if (isOpen) void refreshAccount();
   }, [isOpen, refreshAccount]);
+
+  useEffect(() => {
+    if (!initialSession) return;
+    setSessionDetail(initialSession);
+    setStreaming(null);
+    setVersionPicker(null);
+    setError(null);
+    setFreeInput("");
+  }, [initialSession]);
 
   useEffect(() => {
     const refresh = () => { if (isOpen) void refreshAccount(); };
@@ -170,7 +180,7 @@ export function WhatIfPanel({
     onTurnsChange(computePriorTurns());
   }, [computePriorTurns, onTurnsChange]);
 
-  async function handleStart() {
+  const handleStart = useCallback(async () => {
     setError(null);
     setStreaming({ text: "", isContinue: false });
 
@@ -212,7 +222,28 @@ export function WhatIfPanel({
       setError(e instanceof Error ? e.message : String(e));
       setStreaming(null);
     }
-  }
+  }, [
+    projectSlug,
+    characterName,
+    eventTitle,
+    characterId,
+    premise,
+    premiseType,
+    datasetOverlay,
+  ]);
+
+  useEffect(() => {
+    if (
+      !autoStart
+      || !isOpen
+      || !accountUser
+      || sessionDetail
+      || streaming
+      || autoStartAttemptedRef.current
+    ) return;
+    autoStartAttemptedRef.current = true;
+    void handleStart();
+  }, [accountUser, autoStart, handleStart, isOpen, sessionDetail, streaming]);
 
   async function handleContinue(userInput: string) {
     if (!sessionDetail || !activeBranch) return;
@@ -362,7 +393,7 @@ export function WhatIfPanel({
     <div
       style={{
         position: "fixed",
-        top: 0,
+        top: 68,
         right: 0,
         bottom: 0,
         width: 460,
@@ -478,49 +509,10 @@ export function WhatIfPanel({
           </div>
         )}
 
-        {accountUser && !sessionDetail && !streaming && !showSessionList && (
-          <div style={{ textAlign: "center", padding: "40px 20px" }}>
-            <button
-              onClick={handleStart}
-              style={{
-                padding: "10px 24px",
-                fontSize: 14,
-                background: "#4a9eff",
-                color: "white",
-                border: "none",
-                borderRadius: 4,
-                cursor: "pointer",
-                marginRight: 8,
-              }}
-            >
-              开始推演
-            </button>
-            <button
-              onClick={() => setShowSessionList(true)}
-              style={{
-                padding: "10px 16px",
-                fontSize: 14,
-                background: "transparent",
-                color: "#aaa",
-                border: "1px solid #444",
-                borderRadius: 4,
-                cursor: "pointer",
-              }}
-            >
-              载入历史
-            </button>
+        {accountUser && autoStart && !sessionDetail && !streaming && !error && (
+          <div style={{ color: "#888", textAlign: "center", padding: 40 }}>
+            正在准备推演...
           </div>
-        )}
-
-        {accountUser && showSessionList && (
-          <SessionList
-            projectSlug={projectSlug}
-            onLoad={(s) => {
-              setSessionDetail(s);
-              setShowSessionList(false);
-            }}
-            onClose={() => setShowSessionList(false)}
-          />
         )}
 
         {accountUser && displayTurns.map((turn, i) => (
@@ -620,6 +612,25 @@ export function WhatIfPanel({
             }}
           >
             {error}
+            {autoStart && !sessionDetail && !streaming && (
+              <div style={{ marginTop: 10 }}>
+                <button
+                  type="button"
+                  onClick={() => void handleStart()}
+                  style={{
+                    padding: "7px 12px",
+                    fontSize: 12,
+                    background: "#2a2a2a",
+                    color: "#eee",
+                    border: "1px solid #555",
+                    borderRadius: 4,
+                    cursor: "pointer",
+                  }}
+                >
+                  重新推演
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>

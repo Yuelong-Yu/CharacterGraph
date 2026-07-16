@@ -10,11 +10,14 @@ import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
 import { Legend } from "./Legend";
 import { WhatIfPanel } from "./whatif/WhatIfPanel";
+import { SessionList } from "./whatif/SessionList";
 import { UserCharacterEditor } from "./UserCharacterEditor";
 import { buildWhatIfGraphView } from "@/lib/whatif/graphView";
 import {
   initialWhatIfWorkspaceState,
+  launchConfigFromSession,
   whatIfWorkspaceReducer,
+  type WhatIfLaunchConfig,
 } from "@/lib/whatif/workspaceState";
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
@@ -55,6 +58,7 @@ import { fetchUserProjectContent, importLocalUserContent, mutateUserContent } fr
 import type { UserProjectContentSnapshot } from "@/schemas/userContent";
 import type { SessionUser } from "@/lib/auth";
 import { withBasePath } from "@/lib/basePath";
+import type { WhatIfSessionDetail } from "@/schemas/whatif";
 
 type Selection =
   | { kind: "none" }
@@ -147,6 +151,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     turnIds: string[];
   } | null>(null);
   const [historyRefreshVersion, setHistoryRefreshVersion] = useState(0);
+  const [privateBranchBrowserOpen, setPrivateBranchBrowserOpen] = useState(false);
+  const [loadedWhatIfSession, setLoadedWhatIfSession] = useState<WhatIfSessionDetail | null>(null);
   const [characterImageAssets, setCharacterImageAssets] = useState<Map<string, CharacterImageAsset>>(new Map());
   const [characterImageJobs, setCharacterImageJobs] = useState<Record<string, CharacterImageJob>>({});
 
@@ -528,7 +534,28 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   // 点击边：仅选中，不影响聚焦态
   const handleEdgeClick = (id: string) => setSel({ kind: "edge", id });
 
+  const launchWhatIf = (launchConfig: WhatIfLaunchConfig) => {
+    setLoadedWhatIfSession(null);
+    setPrivateBranchBrowserOpen(false);
+    dispatchWhatIf({ type: "launch", config: launchConfig });
+  };
+
+  const handleLoadPrivateSession = (session: WhatIfSessionDetail) => {
+    const characterName = datasetWithUserEvents.characters.find(
+      (candidate) => candidate.id === session.characterId,
+    )?.name_zh ?? session.title.split(" - ")[0] ?? session.characterId;
+    const launchConfig = launchConfigFromSession(session, characterName);
+    if (!launchConfig) {
+      window.alert("这个私人分支还没有可载入的推演内容");
+      return;
+    }
+    setLoadedWhatIfSession(session);
+    setPrivateBranchBrowserOpen(false);
+    dispatchWhatIf({ type: "launch", config: launchConfig });
+  };
+
   const handleExitWhatIf = () => {
+    setLoadedWhatIfSession(null);
     dispatchWhatIf({ type: "exit" });
     setFocusedId(null);
     setSel({ kind: "none" });
@@ -792,7 +819,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             </button>
           </div>
         )}
-        {!whatIfConfig && localUserBranchId && (
+        {!whatIfConfig && (localUserBranchId || accountUser) && (
           <div
             style={{
               position: "absolute",
@@ -804,27 +831,51 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
               gap: 10,
             }}
           >
-            <span style={{ color: COLOR.textMuted, fontSize: 11, whiteSpace: "nowrap" }}>
-              {userCharacterScopes.find((scope) => scope.id === localUserBranchId)?.title ?? "用户改编分支"}
-            </span>
-            <button
-              type="button"
-              onClick={() => void activateLocalUserBranch(null)}
-              style={{
-                height: 38,
-                padding: "0 12px",
-                border: `1px solid ${COLOR.border}`,
-                borderRadius: 6,
-                background: COLOR.bgPanel,
-                color: COLOR.textMuted,
-                cursor: "pointer",
-                fontSize: 12,
-                fontFamily: FONT.sans,
-                whiteSpace: "nowrap",
-              }}
-            >
-              退出分支版本
-            </button>
+            {localUserBranchId && (
+              <>
+                <span style={{ color: COLOR.textMuted, fontSize: 11, whiteSpace: "nowrap" }}>
+                  {userCharacterScopes.find((scope) => scope.id === localUserBranchId)?.title ?? "用户改编分支"}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => void activateLocalUserBranch(null)}
+                  style={{
+                    height: 38,
+                    padding: "0 12px",
+                    border: `1px solid ${COLOR.border}`,
+                    borderRadius: 6,
+                    background: COLOR.bgPanel,
+                    color: COLOR.textMuted,
+                    cursor: "pointer",
+                    fontSize: 12,
+                    fontFamily: FONT.sans,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  退出分支版本
+                </button>
+              </>
+            )}
+            {accountUser && (
+              <button
+                type="button"
+                onClick={() => setPrivateBranchBrowserOpen((open) => !open)}
+                style={{
+                  height: 38,
+                  padding: "0 12px",
+                  border: `1px solid ${COLOR.accent}`,
+                  borderRadius: 6,
+                  background: COLOR.bgPanel,
+                  color: COLOR.accent,
+                  cursor: "pointer",
+                  fontSize: 12,
+                  fontFamily: FONT.sans,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {privateBranchBrowserOpen ? "关闭私人分支" : "打开私人分支"}
+              </button>
+            )}
           </div>
         )}
         {!isWhatIfChangeView && (
@@ -838,7 +889,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             filterApplied={matchedIds !== null}
             appliedCount={matchedIds?.size ?? 0}
             totalCount={effectiveDataset.characters.length + effectiveDataset.artifacts.length}
-            rightOffset={whatIfConfig ? 283 : localUserBranchId ? 270 : 16}
+            rightOffset={whatIfConfig ? 283 : localUserBranchId ? 390 : accountUser ? 150 : 16}
           />
         )}
         <Legend
@@ -1266,18 +1317,15 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                         )}
                         <button
                           onClick={() => {
-                            dispatchWhatIf({
-                              type: "launch",
-                              config: {
-                                projectSlug: config.slug,
-                                characterId: character.id,
-                                characterName: character.name_zh,
-                                eventTitle: event.title,
-                                premise: shouldContinueFromEvent
-                                  ? `假设${character.name_zh}经历了「${event.title}」：${event.desc}`
-                                  : `如果${character.name_zh}没有「${event.title}」`,
-                                premiseType: shouldContinueFromEvent ? "free_text" : "event_negative",
-                              },
+                            launchWhatIf({
+                              projectSlug: config.slug,
+                              characterId: character.id,
+                              characterName: character.name_zh,
+                              eventTitle: event.title,
+                              premise: shouldContinueFromEvent
+                                ? `假设${character.name_zh}经历了「${event.title}」：${event.desc}`
+                                : `如果${character.name_zh}没有「${event.title}」`,
+                              premiseType: shouldContinueFromEvent ? "free_text" : "event_negative",
                             });
                           }}
                           style={{
@@ -1453,8 +1501,33 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         )}
       </aside>
 
+      {!whatIfConfig && privateBranchBrowserOpen && accountUser && (
+        <div
+          style={{
+            position: "fixed",
+            top: 68,
+            right: 0,
+            bottom: 0,
+            width: 460,
+            background: "#1a1a1a",
+            borderLeft: "1px solid #333",
+            zIndex: 100,
+            color: "#eee",
+            fontFamily: "system-ui, sans-serif",
+          }}
+        >
+          <SessionList
+            projectSlug={config.slug}
+            onLoad={handleLoadPrivateSession}
+            onClose={() => setPrivateBranchBrowserOpen(false)}
+          />
+        </div>
+      )}
+
       {whatIfConfig && (
         <WhatIfPanel
+          key={loadedWhatIfSession?.id
+            ?? `${whatIfConfig.characterId}:${whatIfConfig.eventTitle ?? ""}:${whatIfConfig.premise}`}
           isOpen={whatIfPanelOpen}
           projectSlug={whatIfConfig.projectSlug}
           characterId={whatIfConfig.characterId}
@@ -1467,6 +1540,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           onActiveBranchChange={handleActiveBranchChange}
           datasetOverlay={userDatasetOverlay}
           historyRefreshVersion={historyRefreshVersion}
+          initialSession={loadedWhatIfSession}
+          autoStart={!loadedWhatIfSession}
         />
       )}
     </div>

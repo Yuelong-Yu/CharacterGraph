@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { whatIfWorkspaceReducer } from "@/lib/whatif/workspaceState";
-import type { WhatIfTurnDetail } from "@/schemas/whatif";
+import {
+  launchConfigFromSession,
+  whatIfWorkspaceReducer,
+} from "@/lib/whatif/workspaceState";
+import type { WhatIfSessionDetail, WhatIfTurnDetail } from "@/schemas/whatif";
 
 const config = {
   projectSlug: "shuihu",
@@ -44,5 +47,33 @@ describe("whatIfWorkspaceReducer", () => {
     );
 
     expect(result).toEqual({ config: null, turns: [], panelOpen: false, activeBranchId: null });
+  });
+
+  it("reconstructs a launch config when opening a private branch", () => {
+    const session = {
+      id: "session-1",
+      projectSlug: "shuihu",
+      characterId: "lin_chong",
+      title: "林冲 - 火并王伦",
+      status: "active",
+      branches: [{
+        id: "branch-1",
+        sessionId: "session-1",
+        parentTurnId: null,
+        title: "主时间线",
+        isActive: true,
+        turns: [{
+          ...turn,
+          premise: "如果林冲没有「火并王伦」",
+          premiseType: "event_negative",
+          sourceEventTitle: "火并王伦",
+        }],
+        createdAt: new Date(),
+      }],
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    } as WhatIfSessionDetail;
+
+    expect(launchConfigFromSession(session, "林冲")).toEqual(config);
   });
 });

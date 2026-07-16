@@ -1,9 +1,9 @@
 "use client";
 
 /**
- * 历史 session 列表
+ * 私人推演分支列表
  *
- * 列出项目的所有 session，点击载入，支持删除。
+ * 列出账号在当前项目下保存的推演，点击载入，支持删除。
  */
 import { useEffect, useState } from "react";
 import { listSessions, fetchSession, switchBranch } from "@/lib/whatif/client";
@@ -50,7 +50,7 @@ export function SessionList({ projectSlug, onLoad, onClose }: Props) {
   }
 
   async function handleDelete(sessionId: string) {
-    if (!confirm("确定删除这个 session？所有分支和 turn 都会丢失。")) return;
+    if (!confirm("确定删除这个私人分支？其中的所有时间线和推演内容都会丢失。")) return;
     try {
       const resp = await fetch(withBasePath(`/api/whatif/${sessionId}`), { method: "DELETE" });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -82,7 +82,7 @@ export function SessionList({ projectSlug, onLoad, onClose }: Props) {
           marginBottom: 16,
         }}
       >
-        <h2 style={{ margin: 0, fontSize: 18 }}>历史 Session</h2>
+        <h2 style={{ margin: 0, fontSize: 18 }}>私人分支</h2>
         <button
           onClick={onClose}
           style={{
@@ -118,7 +118,7 @@ export function SessionList({ projectSlug, onLoad, onClose }: Props) {
 
       {!loading && sessions.length === 0 && (
         <div style={{ color: "#888", textAlign: "center", padding: 40 }}>
-          还没有保存的 session
+          还没有保存的私人分支
         </div>
       )}
 
@@ -141,7 +141,7 @@ export function SessionList({ projectSlug, onLoad, onClose }: Props) {
                 {s.title}
               </div>
               <div style={{ fontSize: 11, color: "#888" }}>
-                {s.branchCount} 分支 · {s.turnCount} turn ·{" "}
+                {s.branchCount} 条时间线 · {s.turnCount} 次推演 ·{" "}
                 {new Date(s.createdAt).toLocaleString("zh-CN")}
               </div>
             </div>
