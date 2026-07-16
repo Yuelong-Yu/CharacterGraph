@@ -66,6 +66,17 @@ pnpm typecheck
 
 `pnpm dev` 和 `pnpm build` 会先运行 `scripts/link-assets.mjs`，自动重建图片软链。
 
+通过本地 ChronChaos 的 `/character-graph` 子路径联调时，在 `.env` 中设置
+`NEXT_PUBLIC_BASE_PATH=/character-graph`，并让 CharacterGraph 以开发模式监听
+3005：
+
+```bash
+pnpm exec next dev -p 3005
+```
+
+本地不要用 `next start` 测试运行时新增的分支图片；生产构建只会发现构建时
+已存在的 `public` 文件，而开发模式会即时伺服新生成的图片。
+
 ## 项目结构
 
 ```text
@@ -189,6 +200,7 @@ CODING_API_KEY
 CODING_BASE_URL
 CODING_MODEL
 NEXT_PUBLIC_BASE_PATH
+UV_BIN
 AUTH_SECRET
 ```
 
@@ -197,6 +209,8 @@ AUTH_SECRET
 - `IMAGE_*` 用于图像生成管线。
 - `CODING_*` 用于 LLM 结构化提取。
 - `NEXT_PUBLIC_BASE_PATH` 用于子路径部署，例如 `/character-graph`。
+- `UV_BIN` 可显式指定图像生成子进程使用的 `uv`；进程管理器无法继承 shell
+  `PATH` 时应填写绝对路径。
 - `AUTH_SECRET` 用于验签 chronchaos_gpt 签发的 `chron_user` Cookie；生产环境必须与 chronchaos_gpt 使用同一随机值。
 
 ## 与 ChronChaos 共用账号
