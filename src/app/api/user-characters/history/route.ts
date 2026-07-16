@@ -18,6 +18,7 @@ import {
 import { generateParsedWhatIf } from "@/lib/whatif/llmClient";
 import { validateNarrative } from "@/lib/whatif/validation";
 import type { Prisma } from "@prisma/client";
+import { getSessionUserFromHeaders } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -84,9 +85,9 @@ function parseTurn(turn: {
   };
 }
 
-async function loadBranch(branchId: string) {
-  return prisma.whatIfBranch.findUnique({
-    where: { id: branchId },
+async function loadBranch(branchId: string, ownerId: string) {
+  return prisma.whatIfBranch.findFirst({
+    where: { id: branchId, session: { ownerId } },
     include: {
       session: true,
       turns: { orderBy: { order: "asc" } },
@@ -100,13 +101,16 @@ function impactedIds(branch: NonNullable<Awaited<ReturnType<typeof loadBranch>>>
   return affectedTurnIds(turns, characterId);
 }
 
-async function inheritedTurns(branch: NonNullable<Awaited<ReturnType<typeof loadBranch>>>): Promise<ParsedTurn[]> {
+async function inheritedTurns(
+  branch: NonNullable<Awaited<ReturnType<typeof loadBranch>>>,
+  ownerId: string,
+): Promise<ParsedTurn[]> {
   if (!branch.parentTurnId) return [];
   const parentTurn = await prisma.whatIfTurn.findUnique({ where: { id: branch.parentTurnId } });
   if (!parentTurn) return [];
-  const parentBranch = await loadBranch(parentTurn.branchId);
+  const parentBranch = await loadBranch(parentTurn.branchId, ownerId);
   if (!parentBranch) return [];
-  const ancestors = await inheritedTurns(parentBranch);
+  const ancestors = await inheritedTurns(parentBranch, ownerId);
   const parentOwn = parentBranch.turns
     .filter((turn) => turn.status !== "deleted" && turn.order <= parentTurn.order)
     .map(parseTurn);
@@ -114,18 +118,22 @@ async function inheritedTurns(branch: NonNullable<Awaited<ReturnType<typeof load
 }
 
 export async function GET(req: NextRequest) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) return NextResponse.json({ error: "请先登录", code: "LOGIN_REQUIRED" }, { status: 401 });
   const branchId = req.nextUrl.searchParams.get("branchId");
   const characterId = req.nextUrl.searchParams.get("characterId");
   if (!branchId || !characterId) {
     return NextResponse.json({ error: "branchId and characterId are required" }, { status: 400 });
   }
-  const branch = await loadBranch(branchId);
+  const branch = await loadBranch(branchId, user.id);
   if (!branch) return NextResponse.json({ error: "Branch not found" }, { status: 404 });
   const turnIds = impactedIds(branch, characterId);
   return NextResponse.json({ count: turnIds.length, turnIds });
 }
 
 export async function POST(req: NextRequest) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) return NextResponse.json({ error: "请先登录", code: "LOGIN_REQUIRED" }, { status: 401 });
   let body: unknown;
   try {
     body = await req.json();
@@ -135,7 +143,7 @@ export async function POST(req: NextRequest) {
   const parsed = ActionInput.safeParse(body);
   if (!parsed.success) return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   const input = parsed.data;
-  const branch = await loadBranch(input.branchId);
+  const branch = await loadBranch(input.branchId, user.id);
   if (!branch || branch.session.projectSlug !== input.projectSlug) {
     return NextResponse.json({ error: "Branch not found" }, { status: 404 });
   }
@@ -166,7 +174,7 @@ export async function POST(req: NextRequest) {
   const loaded = loadDataset(input.projectSlug);
   const baseDataset = mergeDatasetOverlay(loaded.dataset, input.datasetOverlay);
   const canonicalSubset = buildContext(baseDataset, branch.session.characterId);
-  const inherited = await inheritedTurns(branch);
+  const inherited = await inheritedTurns(branch, user.id);
   const ownTurns = branch.turns.filter((turn) => turn.status !== "deleted").map(parseTurn);
   const firstAffectedIndex = ownTurns.findIndex((turn) => turn.id === turnIds[0]);
   const preservedOwn = ownTurns.slice(0, firstAffectedIndex);

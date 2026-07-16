@@ -14,6 +14,8 @@ import {
   runBranchPortraitGeneration,
   synthesizeCharacterImagePrompt,
 } from "@/lib/server/characterImageGeneration";
+import { getSessionUserFromHeaders } from "@/lib/auth";
+import { prisma } from "@/lib/whatif/db";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -41,6 +43,10 @@ function errorResponse(error: unknown, status = 500) {
 }
 
 export async function POST(req: NextRequest) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) {
+    return NextResponse.json({ error: "请先登录后使用分支图像", code: "LOGIN_REQUIRED" }, { status: 401 });
+  }
   let raw: unknown;
   try {
     raw = await req.json();
@@ -52,6 +58,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
   }
   const input = parsed.data;
+
+  if (!input.branchId.startsWith("user-branch:")) {
+    const ownedBranch = await prisma.whatIfBranch.findFirst({
+      where: {
+        id: input.branchId,
+        session: { ownerId: user.id, projectSlug: input.projectSlug },
+      },
+      select: { id: true },
+    });
+    if (!ownedBranch) return NextResponse.json({ error: "分支不存在" }, { status: 404 });
+  }
 
   let loaded;
   let lineage: string[];

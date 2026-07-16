@@ -8,6 +8,7 @@
 import { useEffect, useState } from "react";
 import { listSessions, fetchSession, switchBranch } from "@/lib/whatif/client";
 import type { WhatIfSessionDetail, WhatIfSessionSummary } from "@/schemas/whatif";
+import { withBasePath } from "@/lib/basePath";
 
 interface Props {
   projectSlug: string;
@@ -51,7 +52,7 @@ export function SessionList({ projectSlug, onLoad, onClose }: Props) {
   async function handleDelete(sessionId: string) {
     if (!confirm("确定删除这个 session？所有分支和 turn 都会丢失。")) return;
     try {
-      const resp = await fetch(`/api/whatif/${sessionId}`, { method: "DELETE" });
+      const resp = await fetch(withBasePath(`/api/whatif/${sessionId}`), { method: "DELETE" });
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       setSessions((prev) => prev.filter((s) => s.id !== sessionId));
     } catch (e) {

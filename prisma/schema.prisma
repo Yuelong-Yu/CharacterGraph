@@ -10,6 +10,7 @@ datasource db {
 /// 「如果」假设叙事会话 - 一次完整推演
 model WhatIfSession {
   id          String         @id @default(cuid())
+  ownerId     String?        // chronchaos_gpt User.id；外部账号标识，不跨数据库建外键
   projectSlug String
   characterId String         // 分支点人物 id（续写时复用）
   title       String
@@ -20,6 +21,7 @@ model WhatIfSession {
   branches    WhatIfBranch[]
 
   @@index([projectSlug])
+  @@index([ownerId, projectSlug, createdAt])
   @@index([createdAt])
 }
 

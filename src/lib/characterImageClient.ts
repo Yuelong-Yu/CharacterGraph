@@ -1,8 +1,9 @@
 import type { Character } from "@/schemas/character";
 import type { CharacterImageAsset } from "@/schemas/characterImage";
+import { withBasePath } from "@/lib/basePath";
 
 async function postCharacterImageRequest(body: unknown): Promise<Record<string, unknown>> {
-  const response = await fetch("/api/character-images", {
+  const response = await fetch(withBasePath("/api/character-images"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),

@@ -20,16 +20,21 @@ import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
 import { mergeDatasetOverlay } from "@/lib/userCharacters";
+import { getSessionUserFromHeaders } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
 export async function GET(req: NextRequest) {
+  const accountUser = getSessionUserFromHeaders(req.headers);
+  if (!accountUser) {
+    return NextResponse.json({ error: "请先登录后查看推演历史", code: "LOGIN_REQUIRED" }, { status: 401 });
+  }
   const projectSlug = req.nextUrl.searchParams.get("projectSlug");
 
   const sessions = await prisma.whatIfSession.findMany({
-    where: projectSlug ? { projectSlug } : undefined,
+    where: { ownerId: accountUser.id, ...(projectSlug ? { projectSlug } : {}) },
     orderBy: { createdAt: "desc" },
     include: {
       branches: {
@@ -56,6 +61,10 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const accountUser = getSessionUserFromHeaders(req.headers);
+  if (!accountUser) {
+    return NextResponse.json({ error: "请先登录后创建同人推演", code: "LOGIN_REQUIRED" }, { status: 401 });
+  }
   let body: unknown;
   try {
     body = await req.json();
@@ -136,6 +145,7 @@ export async function POST(req: NextRequest) {
         // 7. 落库：session + root branch + turn
         const session = await prisma.whatIfSession.create({
           data: {
+            ownerId: accountUser.id,
             projectSlug: input.projectSlug,
             characterId: input.characterId,
             title: input.title,

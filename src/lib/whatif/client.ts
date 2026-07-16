@@ -6,6 +6,7 @@
  */
 
 import { EventSourceParserStream } from "eventsource-parser/stream";
+import { withBasePath } from "@/lib/basePath";
 import type {
   CreateWhatIfSessionInput,
   GraphDiff,
@@ -38,7 +39,7 @@ export async function streamWhatIf(
   handlers: WhatIfStreamHandlers,
   signal?: AbortSignal,
 ): Promise<void> {
-  const resp = await fetch("/api/whatif", {
+  const resp = await fetch(withBasePath("/api/whatif"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),
@@ -121,7 +122,7 @@ export async function streamContinueTurn(
   handlers: ContinueTurnHandlers,
   signal?: AbortSignal,
 ): Promise<void> {
-  const resp = await fetch(`/api/whatif/${sessionId}/turns`, {
+  const resp = await fetch(withBasePath(`/api/whatif/${sessionId}/turns`), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ userInput, datasetOverlay }),
@@ -181,7 +182,7 @@ import type { WhatIfSessionDetail, WhatIfSessionSummary } from "@/schemas/whatif
 
 /** 拉取完整 session（含所有 branches + turns） */
 export async function fetchSession(sessionId: string): Promise<WhatIfSessionDetail> {
-  const resp = await fetch(`/api/whatif/${sessionId}`);
+  const resp = await fetch(withBasePath(`/api/whatif/${sessionId}`));
   if (!resp.ok) {
     throw new Error(`fetchSession HTTP ${resp.status}`);
   }
@@ -191,7 +192,7 @@ export async function fetchSession(sessionId: string): Promise<WhatIfSessionDeta
 
 /** 列出项目的所有 session 摘要 */
 export async function listSessions(projectSlug: string): Promise<WhatIfSessionSummary[]> {
-  const resp = await fetch(`/api/whatif?projectSlug=${encodeURIComponent(projectSlug)}`);
+  const resp = await fetch(withBasePath(`/api/whatif?projectSlug=${encodeURIComponent(projectSlug)}`));
   if (!resp.ok) {
     throw new Error(`listSessions HTTP ${resp.status}`);
   }
@@ -205,7 +206,7 @@ export async function forkBranch(
   parentTurnId: string,
   title?: string,
 ): Promise<string> {
-  const resp = await fetch(`/api/whatif/${sessionId}/branches`, {
+  const resp = await fetch(withBasePath(`/api/whatif/${sessionId}/branches`), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ parentTurnId, title }),
@@ -224,7 +225,7 @@ export async function switchBranch(
   branchId: string,
 ): Promise<WhatIfSessionDetail> {
   const resp = await fetch(
-    `/api/whatif/${sessionId}/branches/${branchId}`,
+    withBasePath(`/api/whatif/${sessionId}/branches/${branchId}`),
     { method: "PATCH" },
   );
   if (!resp.ok) {
@@ -245,7 +246,7 @@ export async function listTurnVersions(
   sessionId: string,
   turnId: string,
 ): Promise<WhatIfTurnVersionSummary[]> {
-  const response = await fetch(`/api/whatif/${sessionId}/turns/${turnId}/versions`);
+  const response = await fetch(withBasePath(`/api/whatif/${sessionId}/turns/${turnId}/versions`));
   if (!response.ok) throw new Error(`listTurnVersions HTTP ${response.status}`);
   const data = await response.json();
   return data.versions as WhatIfTurnVersionSummary[];
@@ -256,7 +257,7 @@ export async function restoreTurnVersion(
   turnId: string,
   versionId: string,
 ): Promise<void> {
-  const response = await fetch(`/api/whatif/${sessionId}/turns/${turnId}/versions`, {
+  const response = await fetch(withBasePath(`/api/whatif/${sessionId}/turns/${turnId}/versions`), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ versionId }),

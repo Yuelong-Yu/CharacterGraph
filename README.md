@@ -189,6 +189,7 @@ CODING_API_KEY
 CODING_BASE_URL
 CODING_MODEL
 NEXT_PUBLIC_BASE_PATH
+AUTH_SECRET
 ```
 
 说明：
@@ -196,6 +197,32 @@ NEXT_PUBLIC_BASE_PATH
 - `IMAGE_*` 用于图像生成管线。
 - `CODING_*` 用于 LLM 结构化提取。
 - `NEXT_PUBLIC_BASE_PATH` 用于子路径部署，例如 `/character-graph`。
+- `AUTH_SECRET` 用于验签 chronchaos_gpt 签发的 `chron_user` Cookie；生产环境必须与 chronchaos_gpt 使用同一随机值。
+
+## 与 ChronChaos 共用账号
+
+“如果”推演不复制账号或密码。chronchaos_gpt 负责登录、注册和签发
+`chron_user` HttpOnly Cookie，CharacterGraph 使用相同的 `AUTH_SECRET` 验签，
+并把 Cookie 中的 `User.id` 保存为 `WhatIfSession.ownerId`。两个应用可以使用
+不同的 PostgreSQL 数据库。
+
+部署或升级后先运行迁移：
+
+```bash
+pnpm exec prisma migrate deploy
+```
+
+新增 `ownerId` 前已经存在的推演会保留为未归属状态，并且不会显示给任何
+普通用户。如需将确认无误的旧数据交给某个账号，由管理员在 CharacterGraph
+数据库显式执行：
+
+```sql
+UPDATE "WhatIfSession"
+SET "ownerId" = '<chronchaos User.id>'
+WHERE "ownerId" IS NULL;
+```
+
+不要自动把旧数据分给首个登录用户，否则可能造成跨用户数据泄露。
 
 ## 图片服务
 

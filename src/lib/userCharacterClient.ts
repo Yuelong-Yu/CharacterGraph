@@ -4,6 +4,7 @@ import type {
   UserCharacterGenerationResult,
 } from "@/schemas/userCharacter";
 import type { Dataset } from "@/schemas/character";
+import { withBasePath } from "@/lib/basePath";
 
 export interface UserCharacterGenerationProgress {
   stage: "targets" | "profile" | "relationships";
@@ -20,7 +21,7 @@ export async function streamUserCharacterGeneration(
   },
   signal?: AbortSignal,
 ): Promise<void> {
-  const response = await fetch("/api/user-characters/generate", {
+  const response = await fetch(withBasePath("/api/user-characters/generate"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),
@@ -65,13 +66,13 @@ export async function fetchUserCharacterHistoryImpact(
   characterId: string,
 ): Promise<UserCharacterHistoryImpact> {
   const params = new URLSearchParams({ branchId, characterId });
-  const response = await fetch(`/api/user-characters/history?${params}`);
+  const response = await fetch(withBasePath(`/api/user-characters/history?${params}`));
   if (!response.ok) throw new Error(`读取受影响推演失败：HTTP ${response.status}`);
   return response.json() as Promise<UserCharacterHistoryImpact>;
 }
 
 async function postHistoryAction(body: unknown): Promise<Record<string, unknown>> {
-  const response = await fetch("/api/user-characters/history", {
+  const response = await fetch(withBasePath("/api/user-characters/history"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),

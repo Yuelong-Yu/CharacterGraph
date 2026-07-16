@@ -32,6 +32,7 @@ import type { Dataset } from "@/schemas/character";
 import type { GraphDiff, NarrativeSegment } from "@/schemas/whatif";
 import { mergeDatasetOverlay } from "@/lib/userCharacters";
 import { Dataset as DatasetSchema } from "@/schemas/character";
+import { getSessionUserFromHeaders } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -53,6 +54,10 @@ export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ sessionId: string }> },
 ) {
+  const accountUser = getSessionUserFromHeaders(req.headers);
+  if (!accountUser) {
+    return NextResponse.json({ error: "请先登录后续写推演", code: "LOGIN_REQUIRED" }, { status: 401 });
+  }
   const { sessionId } = await params;
 
   let body: unknown;
@@ -69,8 +74,8 @@ export async function POST(
   const input = parsed.data;
 
   // 1. 加载 session + branches + turns
-  const session = await prisma.whatIfSession.findUnique({
-    where: { id: sessionId },
+  const session = await prisma.whatIfSession.findFirst({
+    where: { id: sessionId, ownerId: accountUser.id },
     include: {
       branches: {
         orderBy: { createdAt: "asc" },

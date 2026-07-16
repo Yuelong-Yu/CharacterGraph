@@ -6,19 +6,24 @@
  */
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/whatif/db";
+import { getSessionUserFromHeaders } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 export async function PATCH(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ sessionId: string; branchId: string }> },
 ) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) {
+    return NextResponse.json({ error: "请先登录后切换分支", code: "LOGIN_REQUIRED" }, { status: 401 });
+  }
   const { sessionId, branchId } = await params;
 
   // 验证 branch 属于该 session
   const branch = await prisma.whatIfBranch.findFirst({
-    where: { id: branchId, sessionId },
+    where: { id: branchId, sessionId, session: { ownerId: user.id } },
   });
   if (!branch) {
     return NextResponse.json(
@@ -40,8 +45,8 @@ export async function PATCH(
   ]);
 
   // 返回完整 session
-  const session = await prisma.whatIfSession.findUnique({
-    where: { id: sessionId },
+  const session = await prisma.whatIfSession.findFirst({
+    where: { id: sessionId, ownerId: user.id },
     include: {
       branches: {
         orderBy: { createdAt: "asc" },

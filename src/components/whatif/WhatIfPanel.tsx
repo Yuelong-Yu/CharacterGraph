@@ -35,6 +35,8 @@ import type {
   WhatIfTurnDetail,
 } from "@/schemas/whatif";
 import type { Character, Relation } from "@/schemas/character";
+import type { SessionUser } from "@/lib/auth";
+import { withBasePath } from "@/lib/basePath";
 
 interface Props {
   isOpen: boolean;
@@ -80,9 +82,40 @@ export function WhatIfPanel({
     turnId: string;
     versions: WhatIfTurnVersionSummary[];
   } | null>(null);
+  const [accountUser, setAccountUser] = useState<SessionUser | null | undefined>(undefined);
+  const lastAccountIdRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
 
   useEffect(() => () => abortRef.current?.abort(), []);
+
+  const refreshAccount = useCallback(async () => {
+    setAccountUser(undefined);
+    try {
+      const response = await fetch(withBasePath("/api/auth/me"), { cache: "no-store" });
+      const payload = await response.json() as { user?: SessionUser | null };
+      const nextUser = response.ok ? payload.user ?? null : null;
+      if (!nextUser || (lastAccountIdRef.current && lastAccountIdRef.current !== nextUser.id)) {
+        setSessionDetail(null);
+        setShowSessionList(false);
+        setStreaming(null);
+        setVersionPicker(null);
+        setError(null);
+        setFreeInput("");
+      }
+      lastAccountIdRef.current = nextUser?.id ?? null;
+      setAccountUser(nextUser);
+    } catch {
+      setSessionDetail(null);
+      setShowSessionList(false);
+      setError(null);
+      lastAccountIdRef.current = null;
+      setAccountUser(null);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) void refreshAccount();
+  }, [isOpen, refreshAccount]);
 
   useEffect(() => {
     if (!sessionDetail?.id || historyRefreshVersion === 0) return;
@@ -349,7 +382,7 @@ export function WhatIfPanel({
         <div>
           <div style={{ fontSize: 16, fontWeight: 600 }}>同人创作</div>
           <div style={{ fontSize: 12, color: "#888" }}>
-            {characterName}
+            {accountUser ? `${accountUser.displayName} · ` : ""}{characterName}
             {eventTitle ? ` · ${eventTitle}` : ""}
           </div>
         </div>
@@ -370,7 +403,7 @@ export function WhatIfPanel({
       </div>
 
       {/* Branch list */}
-      {sessionDetail && sessionDetail.branches.length > 1 && (
+      {accountUser && sessionDetail && sessionDetail.branches.length > 1 && (
         <div
           style={{
             padding: "8px 16px",
@@ -401,14 +434,40 @@ export function WhatIfPanel({
       )}
 
       {/* Premise */}
-      <div style={{ padding: "8px 16px", fontSize: 13, color: "#aaa", borderBottom: "1px solid #2a2a2a" }}>
-        <strong style={{ color: "#4a9eff" }}>前提：</strong>
-        {premise}
-      </div>
+      {accountUser && (
+        <div style={{ padding: "8px 16px", fontSize: 13, color: "#aaa", borderBottom: "1px solid #2a2a2a" }}>
+          <strong style={{ color: "#4a9eff" }}>前提：</strong>
+          {premise}
+        </div>
+      )}
 
       {/* Turn list */}
       <div style={{ flex: 1, overflowY: "auto", padding: "16px" }}>
-        {!sessionDetail && !streaming && !showSessionList && (
+        {accountUser === undefined && (
+          <div style={{ color: "#888", textAlign: "center", padding: 40 }}>正在检查账号...</div>
+        )}
+
+        {accountUser === null && (
+          <div style={{ textAlign: "center", padding: "40px 20px" }}>
+            <div style={{ fontSize: 16, marginBottom: 10 }}>登录后保存你的同人分支</div>
+            <div style={{ color: "#888", fontSize: 13, lineHeight: 1.7, marginBottom: 18 }}>
+              这里直接使用 ChronChaos 的账号。请在网站首页登录或注册，完成后返回本页刷新账号状态。
+            </div>
+            <a
+              href="/"
+              target="_blank"
+              rel="noreferrer"
+              style={{ ...accountActionStyle, display: "inline-block", textDecoration: "none", marginRight: 8 }}
+            >
+              前往登录 / 注册
+            </a>
+            <button type="button" onClick={() => void refreshAccount()} style={accountActionStyle}>
+              我已登录，刷新
+            </button>
+          </div>
+        )}
+
+        {accountUser && !sessionDetail && !streaming && !showSessionList && (
           <div style={{ textAlign: "center", padding: "40px 20px" }}>
             <button
               onClick={handleStart}
@@ -442,7 +501,7 @@ export function WhatIfPanel({
           </div>
         )}
 
-        {showSessionList && (
+        {accountUser && showSessionList && (
           <SessionList
             projectSlug={projectSlug}
             onLoad={(s) => {
@@ -453,7 +512,7 @@ export function WhatIfPanel({
           />
         )}
 
-        {displayTurns.map((turn, i) => (
+        {accountUser && displayTurns.map((turn, i) => (
           <div key={turn.key} style={{ marginBottom: 24 }}>
             <div
               style={{
@@ -555,7 +614,7 @@ export function WhatIfPanel({
       </div>
 
       {/* Input area: choices + free input */}
-      {showChoices && lastCommittedTurn && (
+      {accountUser && showChoices && lastCommittedTurn && (
         <div
           style={{
             padding: "12px 16px",
@@ -629,7 +688,7 @@ export function WhatIfPanel({
       )}
 
       {/* 空分支提示（fork 后还没续写） */}
-      {sessionDetail && activeBranch && activeBranch.turns.length === 0 && !streaming && (
+      {accountUser && sessionDetail && activeBranch && activeBranch.turns.length === 0 && !streaming && (
         <div
           style={{
             padding: "12px 16px",
@@ -691,5 +750,15 @@ const turnToolButtonStyle: React.CSSProperties = {
   color: "#999",
   border: "1px solid #444",
   borderRadius: 3,
+  cursor: "pointer",
+};
+
+const accountActionStyle: React.CSSProperties = {
+  padding: "9px 14px",
+  fontSize: 13,
+  background: "#2a2a2a",
+  color: "#eee",
+  border: "1px solid #4a4a4a",
+  borderRadius: 4,
   cursor: "pointer",
 };

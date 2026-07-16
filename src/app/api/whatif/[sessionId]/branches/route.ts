@@ -15,6 +15,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/whatif/db";
 import { z } from "zod";
+import { getSessionUserFromHeaders } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -28,6 +29,10 @@ export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ sessionId: string }> },
 ) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) {
+    return NextResponse.json({ error: "请先登录后创建分支", code: "LOGIN_REQUIRED" }, { status: 401 });
+  }
   const { sessionId } = await params;
 
   let body: unknown;
@@ -44,8 +49,8 @@ export async function POST(
   const input = parsed.data;
 
   // 验证 session 存在
-  const session = await prisma.whatIfSession.findUnique({
-    where: { id: sessionId },
+  const session = await prisma.whatIfSession.findFirst({
+    where: { id: sessionId, ownerId: user.id },
     include: { branches: true },
   });
   if (!session) {

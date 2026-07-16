@@ -2,24 +2,27 @@ import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import type { Prisma } from "@prisma/client";
 import { prisma } from "@/lib/whatif/db";
+import { getSessionUserFromHeaders } from "@/lib/auth";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-async function findSessionTurn(sessionId: string, turnId: string) {
+async function findSessionTurn(sessionId: string, turnId: string, ownerId: string) {
   const turn = await prisma.whatIfTurn.findUnique({
     where: { id: turnId },
-    include: { branch: { select: { sessionId: true } } },
+    include: { branch: { select: { sessionId: true, session: { select: { ownerId: true } } } } },
   });
-  return turn?.branch.sessionId === sessionId ? turn : null;
+  return turn?.branch.sessionId === sessionId && turn.branch.session.ownerId === ownerId ? turn : null;
 }
 
 export async function GET(
-  _req: NextRequest,
+  req: NextRequest,
   { params }: { params: Promise<{ sessionId: string; turnId: string }> },
 ) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) return NextResponse.json({ error: "请先登录", code: "LOGIN_REQUIRED" }, { status: 401 });
   const { sessionId, turnId } = await params;
-  if (!await findSessionTurn(sessionId, turnId)) {
+  if (!await findSessionTurn(sessionId, turnId, user.id)) {
     return NextResponse.json({ error: "Turn not found" }, { status: 404 });
   }
   const versions = await prisma.whatIfTurnVersion.findMany({
@@ -36,8 +39,10 @@ export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ sessionId: string; turnId: string }> },
 ) {
+  const user = getSessionUserFromHeaders(req.headers);
+  if (!user) return NextResponse.json({ error: "请先登录", code: "LOGIN_REQUIRED" }, { status: 401 });
   const { sessionId, turnId } = await params;
-  const turn = await findSessionTurn(sessionId, turnId);
+  const turn = await findSessionTurn(sessionId, turnId, user.id);
   if (!turn) return NextResponse.json({ error: "Turn not found" }, { status: 404 });
   const input = RestoreInput.safeParse(await req.json().catch(() => null));
   if (!input.success) return NextResponse.json({ error: input.error.flatten() }, { status: 400 });
