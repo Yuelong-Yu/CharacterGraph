@@ -16,6 +16,7 @@ import {
 } from "@/lib/server/characterImageGeneration";
 import { getSessionUserFromHeaders } from "@/lib/auth";
 import { prisma } from "@/lib/whatif/db";
+import { ownsUserContentScope } from "@/lib/server/userProjectContent";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -59,7 +60,11 @@ export async function POST(req: NextRequest) {
   }
   const input = parsed.data;
 
-  if (!input.branchId.startsWith("user-branch:")) {
+  if (input.branchId.startsWith("user-branch:")) {
+    if (!await ownsUserContentScope(user.id, input.projectSlug, input.branchId)) {
+      return NextResponse.json({ error: "分支不存在" }, { status: 404 });
+    }
+  } else {
     const ownedBranch = await prisma.whatIfBranch.findFirst({
       where: {
         id: input.branchId,

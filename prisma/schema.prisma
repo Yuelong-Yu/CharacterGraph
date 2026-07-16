@@ -25,6 +25,24 @@ model WhatIfSession {
   @@index([createdAt])
 }
 
+/// 账号下的图谱创作内容。账号由 chronchaos_gpt 管理，这里只保存外部 ownerId。
+model UserProjectContent {
+  id                  String   @id @default(cuid())
+  ownerId             String
+  projectSlug         String
+  activeScopeId       String?
+  scopes              Json
+  characterRecords    Json
+  userEvents          Json
+  initializedScopeIds Json
+  revision            Int      @default(1)
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  @@unique([ownerId, projectSlug])
+  @@index([ownerId, updatedAt])
+}
+
 /// 分支 - 一条独立时间线，可从任意 turn fork
 model WhatIfBranch {
   id           String          @id @default(cuid())

@@ -39,15 +39,10 @@ import {
   type UserCharacterRecord,
 } from "@/lib/userCharacters";
 import {
-  createUserCharacterScope,
-  deleteUserCharacterRecord,
-  listUserCharacterScopes,
-  loadOrInitializeUserCharacterScope,
-  loadUserCharacterRecords,
-  loadUserEvents,
+  clearLegacyUserContent,
+  exportLegacyUserContent,
+  hasLegacyUserContent,
   migrateBaseUserCharactersToScope,
-  saveUserCharacterRecord,
-  saveUserEvents,
   type UserCharacterScope,
 } from "@/lib/userContentDb";
 import {
@@ -56,6 +51,10 @@ import {
   regenerateUserCharacterHistory,
   restoreUserCharacterHistory,
 } from "@/lib/userCharacterClient";
+import { fetchUserProjectContent, importLocalUserContent, mutateUserContent } from "@/lib/userContentClient";
+import type { UserProjectContentSnapshot } from "@/schemas/userContent";
+import type { SessionUser } from "@/lib/auth";
+import { withBasePath } from "@/lib/basePath";
 
 type Selection =
   | { kind: "none" }
@@ -127,16 +126,18 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   } = whatIfWorkspace;
 
   const userBranchStorageKey = `character-graph:${config.slug}:active-user-branch:v1`;
+  const [accountUser, setAccountUser] = useState<SessionUser | null | undefined>(undefined);
+  const [cloudContent, setCloudContent] = useState<UserProjectContentSnapshot | null>(null);
   const [localUserBranchId, setLocalUserBranchId] = useState<string | null>(null);
   const [userCharacterScopes, setUserCharacterScopes] = useState<UserCharacterScope[]>([]);
   const [userScopesReady, setUserScopesReady] = useState(false);
   const activeUserScopeId = activeBranchId ?? localUserBranchId ?? BASE_USER_CHARACTER_SCOPE;
   const userEventStorageKey = `character-graph:${config.slug}:user-events:v1`;
   const [userEvents, setUserEvents] = useState<UserEventsByCharacter>({});
-  const [loadedUserEventKey, setLoadedUserEventKey] = useState<string | null>(null);
   const [userCharacterRecords, setUserCharacterRecords] = useState<UserCharacterRecord[]>([]);
   const [loadedUserScopeId, setLoadedUserScopeId] = useState<string | null>(null);
   const recordsRef = useRef<UserCharacterRecord[]>([]);
+  const accountIdRef = useRef<string | null>(null);
   const [userCharacterEditor, setUserCharacterEditor] = useState<{
     editingRecord: UserCharacterRecord | null;
   } | null>(null);
@@ -153,9 +154,48 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     recordsRef.current = userCharacterRecords;
   }, [userCharacterRecords]);
 
-  useEffect(() => {
-    let cancelled = false;
+  const applyCloudContent = useCallback((content: UserProjectContentSnapshot) => {
+    setCloudContent(content);
+    setUserCharacterScopes(content.scopes);
+    setLocalUserBranchId(content.activeScopeId);
+    setUserEvents(content.userEvents);
+    const scopeId = activeBranchId ?? content.activeScopeId ?? BASE_USER_CHARACTER_SCOPE;
+    if (content.initializedScopeIds.includes(scopeId)) {
+      setUserCharacterRecords(content.characterRecords.filter((record) => record.scopeId === scopeId));
+      setLoadedUserScopeId(scopeId);
+    } else {
+      // Keep the previous scope in recordsRef until initialize-scope copies it.
+      setLoadedUserScopeId(null);
+    }
+    setUserCharacterEditor(null);
+    setUserScopesReady(true);
+  }, [activeBranchId]);
+
+  const loadAccountContent = useCallback(async () => {
     setUserScopesReady(false);
+    const response = await fetch(withBasePath("/api/auth/me"), { cache: "no-store" });
+    const payload = await response.json().catch(() => ({})) as { user?: SessionUser | null };
+    const user = response.ok ? payload.user ?? null : null;
+    setAccountUser(user);
+    if (!user) {
+      accountIdRef.current = null;
+      recordsRef.current = [];
+      setCloudContent(null);
+      setLocalUserBranchId(null);
+      setUserCharacterScopes([]);
+      setUserCharacterRecords([]);
+      setUserEvents({});
+      setLoadedUserScopeId(BASE_USER_CHARACTER_SCOPE);
+      setUserScopesReady(true);
+      return;
+    }
+    if (accountIdRef.current && accountIdRef.current !== user.id) {
+      recordsRef.current = [];
+      setUserCharacterRecords([]);
+      setCloudContent(null);
+    }
+    accountIdRef.current = user.id;
+
     const now = new Date().toISOString();
     const migrationScope: UserCharacterScope = {
       id: `user-branch:${typeof crypto.randomUUID === "function" ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`}`,
@@ -165,37 +205,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       createdAt: now,
       updatedAt: now,
     };
-    migrateBaseUserCharactersToScope(config.slug, migrationScope)
-      .then(async (migratedRecords) => {
-        if (migratedRecords.length > 0) {
-          window.localStorage.setItem(userBranchStorageKey, migrationScope.id);
-        }
-        const scopes = await listUserCharacterScopes(config.slug);
-        if (cancelled) return;
-        const storedBranchId = window.localStorage.getItem(userBranchStorageKey);
-        const migratedScope = migratedRecords.length > 0
-          ? scopes.find((scope) => scope.id === migrationScope.id) ?? migrationScope
-          : null;
-        const nextBranchId = migratedScope?.id
-          ?? (storedBranchId && scopes.some((scope) => scope.id === storedBranchId) ? storedBranchId : null);
-        setUserCharacterScopes(scopes);
-        setLocalUserBranchId(nextBranchId);
-        if (nextBranchId) window.localStorage.setItem(userBranchStorageKey, nextBranchId);
-        else window.localStorage.removeItem(userBranchStorageKey);
-        setUserScopesReady(true);
-      })
-      .catch(() => {
-        if (cancelled) return;
-        setLocalUserBranchId(null);
-        setUserCharacterScopes([]);
-        setUserScopesReady(true);
-      });
-    return () => { cancelled = true; };
-  }, [config.slug, userBranchStorageKey]);
-
-  useEffect(() => {
-    let cancelled = false;
-    const legacy = (() => {
+    const migratedRecords = await migrateBaseUserCharactersToScope(config.slug, migrationScope).catch(() => []);
+    if (migratedRecords.length > 0) window.localStorage.setItem(userBranchStorageKey, migrationScope.id);
+    const legacyEvents = (() => {
       try {
         const raw = window.localStorage.getItem(userEventStorageKey);
         return raw ? parseStoredUserEvents(JSON.parse(raw)) : {};
@@ -203,45 +215,51 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         return {};
       }
     })();
-    loadUserEvents(config.slug, legacy)
-      .then((stored) => {
-        if (cancelled) return;
-        setUserEvents(stored);
-        setLoadedUserEventKey(userEventStorageKey);
-      })
-      .catch(() => {
-        if (cancelled) return;
-        setUserEvents(legacy);
-        setLoadedUserEventKey(userEventStorageKey);
-      });
-    return () => { cancelled = true; };
-  }, [config.slug, userEventStorageKey]);
+    const legacy = await exportLegacyUserContent(
+      config.slug,
+      window.localStorage.getItem(userBranchStorageKey),
+      legacyEvents,
+    ).catch(() => null);
+    const content = legacy && hasLegacyUserContent(legacy)
+      ? await importLocalUserContent(config.slug, legacy)
+      : await fetchUserProjectContent(config.slug);
+    if (legacy && hasLegacyUserContent(legacy)) {
+      try {
+        await clearLegacyUserContent(config.slug);
+        window.localStorage.removeItem(userBranchStorageKey);
+        window.localStorage.removeItem(userEventStorageKey);
+      } catch {
+        // The cloud import is already durable and idempotent; retry cleanup on focus.
+      }
+    }
+    applyCloudContent(content);
+  }, [applyCloudContent, config.slug, userBranchStorageKey, userEventStorageKey]);
 
   useEffect(() => {
-    if (loadedUserEventKey !== userEventStorageKey) return;
-    void saveUserEvents(config.slug, userEvents).catch(() => {
-      // IndexedDB 不可用时仍保留当前页面状态。
+    void loadAccountContent().catch(() => {
+      setAccountUser((current) => current === undefined ? null : current);
+      setUserScopesReady(true);
     });
-  }, [config.slug, loadedUserEventKey, userEventStorageKey, userEvents]);
+    const refresh = () => { void loadAccountContent().catch(() => {}); };
+    window.addEventListener("focus", refresh);
+    return () => window.removeEventListener("focus", refresh);
+  }, [loadAccountContent]);
 
   useEffect(() => {
-    if (!userScopesReady) return;
-    let cancelled = false;
-    const load = activeUserScopeId === BASE_USER_CHARACTER_SCOPE
-      ? loadUserCharacterRecords(config.slug, activeUserScopeId)
-      : loadOrInitializeUserCharacterScope(config.slug, activeUserScopeId, recordsRef.current);
-    load.then((records) => {
-      if (cancelled) return;
+    if (!accountUser || !cloudContent || !userScopesReady) return;
+    const records = cloudContent.characterRecords.filter((record) => record.scopeId === activeUserScopeId);
+    if (cloudContent.initializedScopeIds.includes(activeUserScopeId)) {
       setUserCharacterRecords(records);
       setLoadedUserScopeId(activeUserScopeId);
       setUserCharacterEditor(null);
-    }).catch(() => {
-      if (cancelled) return;
-      setUserCharacterRecords([]);
-      setLoadedUserScopeId(activeUserScopeId);
-    });
-    return () => { cancelled = true; };
-  }, [activeUserScopeId, config.slug, userScopesReady]);
+      return;
+    }
+    void mutateUserContent(config.slug, {
+      action: "initialize-scope",
+      scopeId: activeUserScopeId,
+      seedRecords: recordsRef.current.map((record) => ({ ...record, scopeId: activeUserScopeId })),
+    }).then(applyCloudContent).catch(() => {});
+  }, [accountUser, activeUserScopeId, applyCloudContent, cloudContent, config.slug, userScopesReady]);
 
   const datasetWithUserCharacters = useMemo(
     () => mergeUserCharacters(dataset, userCharacterRecords),
@@ -378,7 +396,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   }, [activeImageBranchId, config.slug, imageEligibleKey]);
 
   const selectedImageEligible = Boolean(
-    character
+    accountUser
+    && character
     && activeImageBranchId
     && (selectedUserCharacterRecord || whatIfGraphView?.nodeChanges.get(character.id) === "added"),
   );
@@ -422,12 +441,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             thumb: asset.thumb,
           },
         } satisfies UserCharacterRecord;
-        await saveUserCharacterRecord(updated);
-        if (activeImageBranchRef.current === taskBranchId) {
-          setUserCharacterRecords((current) => current.map((candidate) => (
-            candidate.id === updated.id ? updated : candidate
-          )));
-        }
+        applyCloudContent(await mutateUserContent(config.slug, { action: "upsert-character", record: updated }));
       }
       setCharacterImageJobs((current) => ({
         ...current,
@@ -516,10 +530,13 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     setSel({ kind: "none" });
   };
 
-  const activateLocalUserBranch = (branchId: string | null) => {
-    setLocalUserBranchId(branchId);
-    if (branchId) window.localStorage.setItem(userBranchStorageKey, branchId);
-    else window.localStorage.removeItem(userBranchStorageKey);
+  const activateLocalUserBranch = async (branchId: string | null) => {
+    if (!accountUser) {
+      window.alert("请先登录 ChronChaos 账号");
+      return;
+    }
+    const content = await mutateUserContent(config.slug, { action: "set-active-scope", scopeId: branchId });
+    applyCloudContent(content);
     setFocusedId(null);
     setFocusId(null);
     setSel({ kind: "none" });
@@ -534,6 +551,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   }, []);
 
   const saveUserCharacter = async (record: UserCharacterRecord) => {
+    if (!accountUser) throw new Error("请先登录 ChronChaos 账号后保存人物");
     if (loadedUserScopeId !== activeUserScopeId) {
       throw new Error("人物分支仍在载入，请稍后重试");
     }
@@ -566,14 +584,15 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       )) return;
     }
     if (createdScope) {
-      await createUserCharacterScope(createdScope, [persistedRecord]);
-      setUserCharacterScopes((scopes) => [createdScope!, ...scopes]);
-      setLoadedUserScopeId(createdScope.id);
-      activateLocalUserBranch(createdScope.id);
+      applyCloudContent(await mutateUserContent(config.slug, {
+        action: "upsert-character",
+        record: persistedRecord,
+        scope: createdScope,
+        activateScope: true,
+      }));
     } else {
-      await saveUserCharacterRecord(persistedRecord);
+      applyCloudContent(await mutateUserContent(config.slug, { action: "upsert-character", record: persistedRecord }));
     }
-    setUserCharacterRecords(nextRecords);
     setDeletedUserCharacter(null);
     if (previous && activeBranchId && impactCount > 0) {
       try {
@@ -602,6 +621,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   };
 
   const removeUserCharacter = async (record: UserCharacterRecord) => {
+    if (!accountUser) throw new Error("请先登录 ChronChaos 账号");
     const impact = activeBranchId
       ? await fetchUserCharacterHistoryImpact(activeBranchId, record.id)
       : { count: 0, turnIds: [] };
@@ -611,7 +631,12 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       `当前分支中 ${impact.count} 条受影响推演也会被删除。`,
     ].join("\n");
     if (!window.confirm(message)) return;
-    await deleteUserCharacterRecord(record.projectSlug, record.scopeId, record.id);
+    const content = await mutateUserContent(config.slug, {
+      action: "delete-character",
+      scopeId: record.scopeId,
+      characterId: record.id,
+    });
+    applyCloudContent(content);
     const turnIds = activeBranchId
       ? await deleteUserCharacterHistory({
           projectSlug: config.slug,
@@ -620,7 +645,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         })
       : [];
     if (turnIds.length > 0) setHistoryRefreshVersion((version) => version + 1);
-    setUserCharacterRecords((records) => records.filter((item) => item.id !== record.id));
     setDeletedUserCharacter({ record, branchId: activeBranchId, turnIds });
     setSel({ kind: "none" });
     setFocusedId(null);
@@ -628,7 +652,12 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 
   const undoUserCharacterDelete = async () => {
     if (!deletedUserCharacter) return;
-    await saveUserCharacterRecord(deletedUserCharacter.record);
+    if (!accountUser) throw new Error("请先登录 ChronChaos 账号");
+    const content = await mutateUserContent(config.slug, {
+      action: "upsert-character",
+      record: deletedUserCharacter.record,
+    });
+    applyCloudContent(content);
     if (deletedUserCharacter.branchId && deletedUserCharacter.turnIds.length > 0) {
       await restoreUserCharacterHistory({
         projectSlug: config.slug,
@@ -638,11 +667,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       });
       setHistoryRefreshVersion((version) => version + 1);
     }
-    setUserCharacterRecords((records) => [...records, deletedUserCharacter.record]);
     setDeletedUserCharacter(null);
   };
 
-  const addUserEvent = (characterId: string, title: string, desc: string): string | null => {
+  const addUserEvent = async (characterId: string, title: string, desc: string): Promise<string | null> => {
+    if (!accountUser) return "请先登录 ChronChaos 账号后添加事件";
     const normalizedTitle = title.trim();
     const normalizedDesc = desc.trim();
     const currentCharacter = datasetWithUserEvents.characters.find((item) => item.id === characterId);
@@ -661,21 +690,13 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         source: buildUserEventCitation(datasetWithUserCharacters, characterId),
       },
     };
-    setUserEvents((previous) => ({
-      ...previous,
-      [characterId]: [...(previous[characterId] ?? []), entry],
-    }));
+    applyCloudContent(await mutateUserContent(config.slug, { action: "upsert-event", characterId, entry }));
     return null;
   };
 
-  const removeUserEvent = (characterId: string, eventId: string) => {
-    setUserEvents((previous) => {
-      const entries = (previous[characterId] ?? []).filter((entry) => entry.id !== eventId);
-      const next = { ...previous };
-      if (entries.length > 0) next[characterId] = entries;
-      else delete next[characterId];
-      return next;
-    });
+  const removeUserEvent = async (characterId: string, eventId: string) => {
+    if (!accountUser) return;
+    applyCloudContent(await mutateUserContent(config.slug, { action: "delete-event", characterId, eventId }));
   };
 
   // 类别勾选
@@ -784,7 +805,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             </span>
             <button
               type="button"
-              onClick={() => activateLocalUserBranch(null)}
+              onClick={() => void activateLocalUserBranch(null)}
               style={{
                 height: 38,
                 padding: "0 12px",
@@ -918,6 +939,13 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             <div style={{ marginTop: 24, fontSize: 12 }}>
               数据：{effectiveDataset.characters.length} 人 · {effectiveDataset.artifacts.length} 件神器 · {effectiveDataset.relations.length} 条关系
             </div>
+            <div style={{ marginTop: 14, fontSize: 11, color: accountUser ? "#477a52" : COLOR.accent }}>
+              {accountUser === undefined
+                ? "正在检查账号…"
+                : accountUser
+                  ? `创作内容已同步至 ${accountUser.displayName} 的账号`
+                  : "登录 ChronChaos 账号后可跨设备保存人物、事件和分支"}
+            </div>
             {!localUserBranchId && userCharacterScopes.length > 0 && (
               <div style={{ marginTop: 22, paddingTop: 16, borderTop: `1px solid ${COLOR.border}` }}>
                 <div style={{ color: COLOR.text, fontSize: 12, fontWeight: 600, marginBottom: 8 }}>
@@ -927,7 +955,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                   <button
                     key={scope.id}
                     type="button"
-                    onClick={() => activateLocalUserBranch(scope.id)}
+                    onClick={() => void activateLocalUserBranch(scope.id)}
                     style={{
                       width: "100%",
                       padding: "8px 0",
@@ -948,7 +976,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             )}
             <button
               type="button"
-              onClick={() => setUserCharacterEditor({ editingRecord: null })}
+              onClick={() => accountUser
+                ? setUserCharacterEditor({ editingRecord: null })
+                : window.alert("请先登录 ChronChaos 账号后添加人物")}
               style={{
                 width: "100%",
                 marginTop: 18,
@@ -1200,7 +1230,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                               type="button"
                               aria-label={`删除事件：${event.title}`}
                               title="删除此自定义事件"
-                              onClick={() => removeUserEvent(character.id, userEntry.id)}
+                              onClick={() => void removeUserEvent(character.id, userEntry.id)}
                               style={{
                                 width: 22,
                                 height: 22,
@@ -1443,7 +1473,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 function AddUserEventForm({
   onAdd,
 }: {
-  onAdd: (title: string, desc: string) => string | null;
+  onAdd: (title: string, desc: string) => Promise<string | null>;
 }) {
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState("");
@@ -1481,13 +1511,13 @@ function AddUserEventForm({
 
   return (
     <form
-      onSubmit={(event) => {
+      onSubmit={async (event) => {
         event.preventDefault();
         if (!title.trim() || !desc.trim()) {
           setError("请填写事件标题和内容");
           return;
         }
-        const addError = onAdd(title, desc);
+        const addError = await onAdd(title, desc);
         if (addError) {
           setError(addError);
           return;

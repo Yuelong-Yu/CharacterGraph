@@ -1,6 +1,7 @@
 import type { UserEventsByCharacter } from "@/lib/userEvents";
 import { parseStoredUserEvents } from "@/lib/userEvents";
 import type { UserCharacterRecord } from "@/lib/userCharacters";
+import type { UserContentImport } from "@/schemas/userContent";
 
 const DATABASE_NAME = "character-graph-user-content";
 const DATABASE_VERSION = 2;
@@ -292,6 +293,75 @@ export async function saveUserEvents(
   try {
     const transaction = database.transaction(EVENT_STORE, "readwrite");
     transaction.objectStore(EVENT_STORE).put({ projectSlug, events } satisfies StoredEvents);
+    await transactionDone(transaction);
+  } finally {
+    database.close();
+  }
+}
+
+/** Collects the pre-account browser data for a one-time, authenticated import. */
+export async function exportLegacyUserContent(
+  projectSlug: string,
+  activeScopeId: string | null,
+  legacyEvents?: unknown,
+): Promise<UserContentImport> {
+  const database = await openDatabase();
+  try {
+    const transaction = database.transaction([CHARACTER_STORE, EVENT_STORE, SCOPE_STORE], "readonly");
+    const [characterRows, scopeRows, storedEvents] = await Promise.all([
+      requestResult(transaction.objectStore(CHARACTER_STORE).getAll() as IDBRequest<StoredCharacter[]>),
+      requestResult(transaction.objectStore(SCOPE_STORE).getAll() as IDBRequest<Array<Partial<StoredScope> & { key: string }>>),
+      requestResult(transaction.objectStore(EVENT_STORE).get(projectSlug) as IDBRequest<StoredEvents | undefined>),
+    ]);
+    await transactionDone(transaction);
+    const projectPrefix = `${projectSlug}\u0000`;
+    const scopes = scopeRows
+      .filter((row): row is StoredScope => row.projectSlug === projectSlug && row.kind === "user-branch"
+        && typeof row.id === "string" && typeof row.title === "string"
+        && typeof row.createdAt === "string" && typeof row.updatedAt === "string")
+      .map(({ key: _key, ...scope }) => scope);
+    return {
+      activeScopeId,
+      scopes,
+      characterRecords: characterRows
+        .filter((row) => row.projectSlug === projectSlug)
+        .map(({ key: _key, ...record }) => record),
+      userEvents: storedEvents ? parseStoredUserEvents(storedEvents.events) : parseStoredUserEvents(legacyEvents),
+      initializedScopeIds: scopeRows
+        .filter((row) => row.key.startsWith(projectPrefix))
+        .map((row) => row.key.slice(projectPrefix.length))
+        .filter(Boolean),
+    };
+  } finally {
+    database.close();
+  }
+}
+
+export function hasLegacyUserContent(content: UserContentImport): boolean {
+  return Boolean(
+    content.activeScopeId
+    || content.scopes.length
+    || content.characterRecords.length
+    || Object.keys(content.userEvents).length
+    || content.initializedScopeIds.length,
+  );
+}
+
+/** Removes unowned browser data only after the server import succeeds. */
+export async function clearLegacyUserContent(projectSlug: string): Promise<void> {
+  const database = await openDatabase();
+  try {
+    const transaction = database.transaction([CHARACTER_STORE, EVENT_STORE, SCOPE_STORE], "readwrite");
+    const characterStore = transaction.objectStore(CHARACTER_STORE);
+    const scopeStore = transaction.objectStore(SCOPE_STORE);
+    const [characterRows, scopeRows] = await Promise.all([
+      requestResult(characterStore.getAll() as IDBRequest<StoredCharacter[]>),
+      requestResult(scopeStore.getAll() as IDBRequest<Array<{ key: string }>>),
+    ]);
+    for (const row of characterRows) if (row.projectSlug === projectSlug) characterStore.delete(row.key);
+    const projectPrefix = `${projectSlug}\u0000`;
+    for (const row of scopeRows) if (row.key.startsWith(projectPrefix)) scopeStore.delete(row.key);
+    transaction.objectStore(EVENT_STORE).delete(projectSlug);
     await transactionDone(transaction);
   } finally {
     database.close();
