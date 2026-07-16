@@ -242,7 +242,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     });
     const refresh = () => { void loadAccountContent().catch(() => {}); };
     window.addEventListener("focus", refresh);
-    return () => window.removeEventListener("focus", refresh);
+    window.addEventListener("chronchaos-auth-change", refresh);
+    return () => {
+      window.removeEventListener("focus", refresh);
+      window.removeEventListener("chronchaos-auth-change", refresh);
+    };
   }, [loadAccountContent]);
 
   useEffect(() => {
@@ -732,7 +736,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 380px",
-        height: "100vh",
+        height: "100%",
         background: COLOR.bg,
         color: COLOR.text,
         fontFamily: FONT.sans,

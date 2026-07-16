@@ -118,6 +118,12 @@ export function WhatIfPanel({
   }, [isOpen, refreshAccount]);
 
   useEffect(() => {
+    const refresh = () => { if (isOpen) void refreshAccount(); };
+    window.addEventListener("chronchaos-auth-change", refresh);
+    return () => window.removeEventListener("chronchaos-auth-change", refresh);
+  }, [isOpen, refreshAccount]);
+
+  useEffect(() => {
     if (!sessionDetail?.id || historyRefreshVersion === 0) return;
     let cancelled = false;
     void fetchSession(sessionDetail.id).then((fresh) => {

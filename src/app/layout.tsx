@@ -7,7 +7,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN">
       <body style={{ margin: 0, background: "oklch(99% 0 0)", color: "oklch(20% 0.012 270)" }}>
-        <div className="desktop-only">{children}</div>
+        <div className="desktop-only">
+          <ChronChaosNav />
+          <div className="charactergraph-content">{children}</div>
+        </div>
         <div className="mobile-block">
           <div>
             <div style={{ fontFamily: '"Cormorant Garamond", serif', fontSize: 40, marginBottom: 16 }}>
@@ -21,6 +24,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </div>
         <style>{`
           html, body { height: 100%; }
+          .desktop-only { height: 100vh; overflow: hidden; }
+          .charactergraph-content { height: calc(100vh - 68px); overflow: auto; }
           .mobile-block { display: none; }
           @media (max-width: 1023px) {
             .desktop-only { display: none !important; }
@@ -38,3 +43,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+import { ChronChaosNav } from "@/components/ChronChaosNav";
+import "@/components/chronChaosNav.css";

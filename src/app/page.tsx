@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main
       style={{
-        minHeight: "100vh",
+        minHeight: "100%",
         background: COLOR.bg,
         color: COLOR.text,
         fontFamily: FONT.sans,
