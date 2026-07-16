@@ -114,6 +114,7 @@ export function ChronChaosNav() {
         <nav className="chron-topnav" aria-label="ChronChaos 主导航">
           <a href="/">Reader Library</a>
           <a href="/studio">Author Studio</a>
+          <a aria-current="page" href="/character-graph">Multiverse</a>
         </nav>
 
         <div className="chron-auth-nav">
