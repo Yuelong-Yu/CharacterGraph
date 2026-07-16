@@ -544,13 +544,41 @@ export function Graph3D({
 
       // 相机平滑飞到聚焦视角
       const camDist = Math.max(180, radius * 2.8);
-      setTimeout(() => {
-        fgRef.current?.cameraPosition(
+      let settleTimer: ReturnType<typeof setTimeout> | null = null;
+      const cameraTimer = setTimeout(() => {
+        const graph = fgRef.current;
+        if (!graph) return;
+
+        // 节点点击期间，react-force-graph 可能会临时禁用 OrbitControls。
+        // 其 cameraPosition 在 controls.enabled=false 时不会同步 target，
+        // 导致用户之前的平移中心在控件恢复后重新生效，焦点节点随机偏离画布中心。
+        const controls = graph.controls?.();
+        controls?.target?.set(0, 0, 0);
+        controls?.update?.();
+
+        graph.cameraPosition(
           { x: 0, y: 0, z: camDist },
           { x: 0, y: 0, z: 0 },
           900,
         );
+
+        // controls 被禁用时，第三方库的注视点动画会早于相机位移动画结束。
+        // 动画完成后收束一次最终位置与朝向，确保原点准确投影到画布中心。
+        settleTimer = setTimeout(() => {
+          const currentGraph = fgRef.current;
+          if (!currentGraph) return;
+          const currentControls = currentGraph.controls?.();
+          const camera = currentGraph.camera?.();
+          camera?.position?.set(0, 0, camDist);
+          currentControls?.target?.set(0, 0, 0);
+          camera?.lookAt?.(0, 0, 0);
+          currentControls?.update?.();
+        }, 920);
       }, 50);
+      return () => {
+        clearTimeout(cameraTimer);
+        if (settleTimer) clearTimeout(settleTimer);
+      };
     } else if (matchedIds) {
       setInitialFitReady(false);
       // 过滤平铺态:把命中集按连通分量分组,每组中心+圆环;多个子图 bin-pack
