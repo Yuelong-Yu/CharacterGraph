@@ -456,20 +456,9 @@ export function WhatIfPanel({
         {accountUser === null && (
           <div style={{ textAlign: "center", padding: "40px 20px" }}>
             <div style={{ fontSize: 16, marginBottom: 10 }}>登录后保存你的同人分支</div>
-            <div style={{ color: "#888", fontSize: 13, lineHeight: 1.7, marginBottom: 18 }}>
-              这里直接使用 ChronChaos 的账号。请在网站首页登录或注册，完成后返回本页刷新账号状态。
+            <div style={{ color: "#888", fontSize: 13, lineHeight: 1.7 }}>
+              请通过页面顶部导航登录或注册 ChronChaos 账号。
             </div>
-            <a
-              href="/"
-              target="_blank"
-              rel="noreferrer"
-              style={{ ...accountActionStyle, display: "inline-block", textDecoration: "none", marginRight: 8 }}
-            >
-              前往登录 / 注册
-            </a>
-            <button type="button" onClick={() => void refreshAccount()} style={accountActionStyle}>
-              我已登录，刷新
-            </button>
           </div>
         )}
 
@@ -756,15 +745,5 @@ const turnToolButtonStyle: React.CSSProperties = {
   color: "#999",
   border: "1px solid #444",
   borderRadius: 3,
-  cursor: "pointer",
-};
-
-const accountActionStyle: React.CSSProperties = {
-  padding: "9px 14px",
-  fontSize: 13,
-  background: "#2a2a2a",
-  color: "#eee",
-  border: "1px solid #4a4a4a",
-  borderRadius: 4,
   cursor: "pointer",
 };
