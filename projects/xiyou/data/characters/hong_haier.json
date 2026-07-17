@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "hong_haier",
+  "name_zh": "红孩儿",
+  "name_en": "Red Boy",
+  "aliases": [
+    "红孩儿",
+    "Red Boy",
+    "圣婴大王",
+    "Boy Sage King",
+    "善财童子",
+    "Sudhana"
+  ],
+  "epithet": "圣婴大王 / 善财童子",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "红孩儿是牛魔王与铁扇公主之子，在火焰山修炼三百年，炼成三昧真火，盘踞号山枯松涧火云洞，自号“圣婴大王”。他外貌如幼童，性情骄横狠厉，善使丈八火尖枪，能从口鼻喷出三昧真火。为吃唐僧肉，他化作被缚孩童骗取同情，继而掳走唐僧；孙悟空请来四海龙王降雨，仍灭不了其真火。悟空借牛魔王身份诱骗未果，最终请观音菩萨降伏。观音以莲台、天罡刀化成的金箍和金紧禁三箍中的金箍制住红孩儿，收其为善财童子。红孩儿兼具妖王之子的家世、强悍法术与孩童外形，是《西游记》中反差最鲜明的妖怪之一。",
+  "events": [
+    {
+      "title": "号山设局擒唐僧",
+      "desc": "红孩儿听闻吃唐僧肉可以长生，变作被吊在树上的孩童呼救，利用唐僧的慈悲心接近取经队伍，随后刮起狂风将唐僧摄入火云洞。",
+      "source": { "work": "西游记", "locus": "第四十回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "三昧真火退悟空",
+      "desc": "红孩儿以丈八火尖枪迎战悟空、八戒，又从口鼻喷出三昧真火。四海龙王降下的凡水不能灭火，反使火势更盛，悟空被烟火所伤。",
+      "source": { "work": "西游记", "locus": "第四十一回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "假观音擒八戒",
+      "desc": "猪八戒前往南海请观音时，红孩儿抢先变作观音模样，将八戒骗入洞中擒住，显示出其机敏与变化本领。",
+      "source": { "work": "西游记", "locus": "第四十二回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "皈依成为善财童子",
+      "desc": "观音以莲台诱红孩儿坐上，又以天罡刀和金箍制住他，令其一步一拜皈依南海，成为善财童子。",
+      "source": { "work": "西游记", "locus": "第四十二回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["丈八火尖枪"],
+  "skills": ["三昧真火", "变化术", "狂风摄物"],
+  "domains": ["号山枯松涧", "火云洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/hong_haier.webp",
+  "thumb": "/p/xiyou/thumbs/hong_haier.webp"
+}

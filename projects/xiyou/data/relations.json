@@ -345,5 +345,267 @@
         "era_order": 2
       }
     ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hong_haier_niu_mowang",
+    "source": "hong_haier",
+    "target": "niu_mowang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "牛魔王之子",
+        "desc": "红孩儿是牛魔王与铁扇公主之子，继承妖王家世，自幼在火焰山修炼三百年，炼成三昧真火。悟空曾因与牛魔王结拜而自称红孩儿的叔叔。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十至四十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hong_haier_tieshan_gongzhu",
+    "source": "hong_haier",
+    "target": "tieshan_gongzhu",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "铁扇公主之子",
+        "desc": "红孩儿是铁扇公主的儿子。红孩儿被观音收为善财童子后，铁扇公主一直怨恨促成此事的孙悟空，成为后来拒借芭蕉扇的直接缘由。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十二回、第五十九回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_hong_haier",
+    "source": "guanyin",
+    "target": "hong_haier",
+    "primary_type": "enmity",
+    "composite_types": ["bond"],
+    "events": [
+      {
+        "title": "降伏圣婴大王",
+        "desc": "悟空不敌三昧真火，请观音出手。观音以莲台、天罡刀和金箍降伏红孩儿，令其一步一拜随往南海，收为善财童子。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hong_haier_sun_wukong",
+    "source": "hong_haier",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三昧真火大战悟空",
+        "desc": "悟空以牛魔王结拜兄弟的身份劝红孩儿放人，红孩儿拒不认亲，以火尖枪和三昧真火迎战，并识破悟空假扮牛魔王的计策。悟空最终请观音将其收服。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十至四十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hong_haier_tang_sanzang",
+    "source": "hong_haier",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "化作孩童掳走唐僧",
+        "desc": "红孩儿利用唐僧慈悲心，化作被吊在树上的孩童求救，趁机刮风摄走唐僧，准备蒸食其肉以求长生。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "niu_mowang_tieshan_gongzhu",
+    "source": "niu_mowang",
+    "target": "tieshan_gongzhu",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "结为夫妻",
+        "desc": "牛魔王与铁扇公主结为夫妻并生下红孩儿。牛魔王后来久居玉面公主的摩云洞，与铁扇公主分居，仍称她为正妻并供给日用。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十九至六十一回", "translator": null },
+        "era_order": 2
+      },
+      {
+        "title": "共同交出芭蕉扇",
+        "desc": "牛魔王遭天兵佛众围困后，铁扇公主为保丈夫性命献出真扇。悟空熄灭火焰山后归还宝扇，夫妻二人归隐修行。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sun_wukong_tieshan_gongzhu",
+    "source": "sun_wukong",
+    "target": "tieshan_gongzhu",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三借芭蕉扇",
+        "desc": "悟空为过火焰山向铁扇公主借扇。铁扇公主怨他使红孩儿被观音收走，先将他扇飞，后以假扇欺骗；悟空钻入她腹中，又变作牛魔王骗走真扇。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十九至六十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "liuer_mihou_sun_wukong",
+    "source": "liuer_mihou",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "真假美猴王",
+        "desc": "六耳猕猴从形貌、声音到神通兵器都变得与悟空相同。二猴从花果山打遍南海、天庭和地府，无人能公开辨明，最终由如来揭破六耳本相。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十七至五十八回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "liuer_mihou_tang_sanzang",
+    "source": "liuer_mihou",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "打伤唐僧夺取关文",
+        "desc": "六耳猕猴趁真悟空被逐，冒充悟空返回唐僧身边，突然将唐僧打倒，抢走行李和通关文牒，准备另组队伍冒名取经。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十六至五十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "liuer_mihou_rulai",
+    "source": "liuer_mihou",
+    "target": "rulai",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "如来识破混世四猴",
+        "desc": "真假悟空打到灵山后，如来说明周天之内另有混世四猴，辨认假悟空为六耳猕猴，并以金钵盂罩住，使其现出本相。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十八回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinjiao_dawang_taishang_laojun",
+    "source": "jinjiao_dawang",
+    "target": "taishang_laojun",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兜率宫看金炉童子",
+        "desc": "金角大王本是太上老君身边看守金炉的童子。观音为考验取经团队向老君借人，金角携老君宝物下界，事毕又被老君收回兜率宫。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinjiao_dawang_sun_wukong",
+    "source": "jinjiao_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "平顶山法宝斗智",
+        "desc": "金角以三山压悟空，又用葫芦、净瓶等宝物追捕。悟空变化身份、调包法宝，最终反用羊脂玉净瓶将金角收服。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十二至三十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinjiao_dawang_tang_sanzang",
+    "source": "jinjiao_dawang",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "莲花洞擒取经众",
+        "desc": "金角得知唐僧经过平顶山，派小妖巡山并亲自设伏，趁悟空受困擒走唐僧、八戒和沙僧，准备蒸食唐僧肉。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十二至三十三回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangmei_dawang_sun_wukong",
+    "source": "huangmei_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金铙与人种袋困悟空",
+        "desc": "悟空识破小雷音寺骗局后，被黄眉以金铙合住；脱身后多次请来天界援兵，又被后天人种袋尽数收走，最后借弥勒设局才制伏黄眉。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六十五至六十六回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangmei_dawang_tang_sanzang",
+    "source": "huangmei_dawang",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "假佛祖诱捕唐僧",
+        "desc": "黄眉利用唐僧虔诚拜佛之心，在小雷音寺冒充如来。唐僧不顾悟空警告入殿跪拜，随即与八戒、沙僧一同被群妖擒获。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
   }
 ]

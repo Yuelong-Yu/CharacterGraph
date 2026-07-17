@@ -89,6 +89,46 @@
       "epithet": "白骨夫人"
     },
     {
+      "slug": "hong_haier",
+      "name_zh": "红孩儿",
+      "name_en": "Red Boy",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "圣婴大王 / 善财童子"
+    },
+    {
+      "slug": "tieshan_gongzhu",
+      "name_zh": "铁扇公主",
+      "name_en": "Princess Iron Fan",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "罗刹女 / 铁扇仙"
+    },
+    {
+      "slug": "liuer_mihou",
+      "name_zh": "六耳猕猴",
+      "name_en": "Six-Eared Macaque",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "真假美猴王中的假悟空"
+    },
+    {
+      "slug": "jinjiao_dawang",
+      "name_zh": "金角大王",
+      "name_en": "Golden Horned King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "平顶山莲花洞妖王"
+    },
+    {
+      "slug": "huangmei_dawang",
+      "name_zh": "黄眉大王",
+      "name_en": "Yellow Brows Great King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "小雷音寺假佛祖"
+    },
+    {
       "slug": "tang_taizong",
       "name_zh": "唐太宗",
       "name_en": "Emperor Taizong of Tang",

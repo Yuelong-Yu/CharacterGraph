@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "huangmei_dawang",
+  "name_zh": "黄眉大王",
+  "name_en": "Yellow Brows Great King",
+  "aliases": [
+    "黄眉大王",
+    "Yellow Brows Great King",
+    "黄眉老怪",
+    "Yellow Brows Demon",
+    "黄眉童儿"
+  ],
+  "epithet": "小雷音寺假佛祖",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "黄眉大王本是东来佛祖弥勒座前敲磬的黄眉童儿，趁主人不在偷走金铙与后天人种袋，下界在小西天设立小雷音寺。他化作如来佛祖，让群妖伪装罗汉、金刚，引诱一心拜佛的唐僧师徒入殿。孙悟空识破后，黄眉以金铙将他合住，又凭人种袋多次将八戒、沙僧以及前来相助的二十八宿、龟蛇二将、五大神龙、小张太子等尽数收入袋中。悟空几番求援仍不能取胜，最后弥勒化作种瓜老人设局，让悟空变成西瓜钻入黄眉腹中，逼他交手；弥勒再用人种袋收服童儿，带回东来佛府。黄眉大王以“伪佛国”设局，是取经路上最具宗教讽刺意味的妖怪之一。",
+  "events": [
+    {
+      "title": "设小雷音寺冒充佛祖",
+      "desc": "黄眉大王在小西天建小雷音寺，自己端坐莲台假扮如来，令群妖装作佛众，利用唐僧虔诚礼佛之心将师徒诱入殿中。",
+      "source": { "work": "西游记", "locus": "第六十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "金铙困住孙悟空",
+      "desc": "悟空挥棒打向假佛祖时，黄眉抛出一副金铙将他合在其中。亢金龙以角钻入铙内，才将悟空救出。",
+      "source": { "work": "西游记", "locus": "第六十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "人种袋尽收诸神",
+      "desc": "黄眉多次祭起后天人种袋，把悟空、八戒、沙僧及二十八宿、五大神龙等援兵收入袋中，令悟空各处求援仍屡战屡败。",
+      "source": { "work": "西游记", "locus": "第六十五至六十六回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "弥勒设瓜局收童儿",
+      "desc": "弥勒佛化作种瓜老人，让悟空变成西瓜进入黄眉腹中折腾，诱其追出山门，随后以人种袋收服黄眉，带回东来佛府。",
+      "source": { "work": "西游记", "locus": "第六十六回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["短软狼牙棒", "金铙", "后天人种袋"],
+  "skills": ["变化佛祖", "金铙困敌", "人种袋收摄"],
+  "domains": ["小西天", "小雷音寺", "东来佛府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huangmei_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/huangmei_dawang.webp"
+}

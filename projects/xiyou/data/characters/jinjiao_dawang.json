@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "jinjiao_dawang",
+  "name_zh": "金角大王",
+  "name_en": "Golden Horned King",
+  "aliases": [
+    "金角大王",
+    "Golden Horned King",
+    "金角",
+    "Golden Horn"
+  ],
+  "epithet": "平顶山莲花洞妖王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "金角大王是平顶山莲花洞妖王，与银角大王本是太上老君兜率宫看守金炉、银炉的童子。他们奉命下界考验取经人的真心，带走老君的紫金红葫芦、羊脂玉净瓶、幌金绳、芭蕉扇和七星剑五件宝物。金角大王老谋深算，得知唐僧师徒经过平顶山后先派小妖巡山，又以移山法压住孙悟空，擒获唐僧、八戒与沙僧。他与悟空展开变化、计谋和法宝的多轮较量，还请来压龙山的母亲九尾狐狸共同对敌。最终悟空屡次设局调包法宝，反用紫金红葫芦收走银角，又用羊脂玉净瓶收服金角。太上老君现身说明二童子来历，收回法宝并带他们返回兜率宫。",
+  "events": [
+    {
+      "title": "携五件宝物下界为妖",
+      "desc": "金角与银角带着老君的紫金红葫芦、羊脂玉净瓶、幌金绳、芭蕉扇和七星剑来到平顶山莲花洞，聚众称王。",
+      "source": { "work": "西游记", "locus": "第三十二至三十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "移来三山压住悟空",
+      "desc": "金角大王施遣山法，先后调来须弥山、峨眉山与泰山压在悟空背上，趁机擒获唐僧、八戒和沙僧。",
+      "source": { "work": "西游记", "locus": "第三十三回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "围绕宝物斗智",
+      "desc": "悟空化作多种身份调换宝物，金角也以葫芦、净瓶和芭蕉扇追击。双方不断以呼名收人、变化脱身和假宝换真宝斗法。",
+      "source": { "work": "西游记", "locus": "第三十三至三十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "被老君收回兜率宫",
+      "desc": "悟空用羊脂玉净瓶收了金角。太上老君赶到，说明观音借童子与宝物试验取经人的真心，随后念咒放出二童子，带回兜率宫。",
+      "source": { "work": "西游记", "locus": "第三十五回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["七星剑", "紫金红葫芦", "羊脂玉净瓶", "幌金绳", "芭蕉扇"],
+  "skills": ["移山倒海", "呼名收人", "变化术"],
+  "domains": ["平顶山", "莲花洞", "兜率宫金炉"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jinjiao_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/jinjiao_dawang.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "liuer_mihou",
+  "name_zh": "六耳猕猴",
+  "name_en": "Six-Eared Macaque",
+  "aliases": [
+    "六耳猕猴",
+    "Six-Eared Macaque",
+    "假悟空",
+    "False Sun Wukong"
+  ],
+  "epithet": "真假美猴王中的假悟空",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "六耳猕猴是“真假美猴王”故事中的妖猴，属于如来所说不入周天十类的混世四猴之一。他善聆音、能察理，知前后、万物皆明，变成孙悟空后，从容貌、声音、神通到金箍棒都与真悟空毫无二致。他打伤唐僧、夺走行李，又在花果山变出假唐僧、假八戒、假沙僧，企图自行前往西天取经。真假悟空从花果山打到天庭、地府与南海，照妖镜、谛听和紧箍咒都无法公开分辨二者；最终如来以金钵盂罩住六耳猕猴，揭示其本相，被孙悟空一棒打死。六耳猕猴既是悟空最难辨认的对手，也常被视为悟空“二心”与心魔的具象化。",
+  "events": [
+    {
+      "title": "冒充悟空打伤唐僧",
+      "desc": "悟空被唐僧逐走后，六耳猕猴化成悟空模样返回，打倒唐僧并抢走行李关文，使沙僧误以为大师兄叛变。",
+      "source": { "work": "西游记", "locus": "第五十六至五十七回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "花果山另组取经队伍",
+      "desc": "六耳猕猴在花果山变出唐僧、八戒和沙僧，誊写关文，谋划由自己的假取经队伍去西天换取真经。",
+      "source": { "work": "西游记", "locus": "第五十七回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "诸天神佛难辨真假",
+      "desc": "两个悟空一路争斗，观音、玉帝、照妖镜、唐僧念咒与地藏王座下谛听都不能当众定夺真假，二猴的神通形貌完全相同。",
+      "source": { "work": "西游记", "locus": "第五十八回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "如来揭破六耳本相",
+      "desc": "如来辨明假悟空是六耳猕猴，以金钵盂罩住其变化。六耳现出本相后试图逃走，被孙悟空一棒打死。",
+      "source": { "work": "西游记", "locus": "第五十八回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["随心铁杆兵"],
+  "skills": ["聆音察理", "七十二般变化", "筋斗云", "拟态悟空"],
+  "domains": ["混世四猴", "花果山（冒据）"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/liuer_mihou.webp",
+  "thumb": "/p/xiyou/thumbs/liuer_mihou.webp"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "tieshan_gongzhu",
+  "name_zh": "铁扇公主",
+  "name_en": "Princess Iron Fan",
+  "aliases": [
+    "铁扇公主",
+    "Princess Iron Fan",
+    "罗刹女",
+    "Rakshasa Woman",
+    "铁扇仙"
+  ],
+  "epithet": "罗刹女 / 铁扇仙",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "铁扇公主又称罗刹女、铁扇仙，是牛魔王之妻、红孩儿之母，居住在翠云山芭蕉洞。她掌握能熄灭火焰山烈火的芭蕉扇，当地百姓每年奉献礼物求她扇风降雨，因此尊她为仙。孙悟空为护送唐僧过火焰山登门借扇，铁扇公主因红孩儿被观音收走而迁怒悟空，一扇将他扇到小须弥山；悟空借定风丹抵住神风，又钻入她腹中逼迫借扇，却只得到一柄越扇火越旺的假扇。后来悟空变作牛魔王骗得真扇，牛魔王又变作猪八戒夺回。牛魔王被天兵佛众降伏后，铁扇公主交出芭蕉扇，待悟空熄灭火焰山，收回宝扇归隐修行。",
+  "events": [
+    {
+      "title": "掌扇庇佑火焰山百姓",
+      "desc": "铁扇公主持芭蕉扇居翠云山。火焰山百姓须求她扇息火气，方能及时降雨、播种收获，因此奉她为铁扇仙。",
+      "source": { "work": "西游记", "locus": "第五十九回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "一扇吹走孙悟空",
+      "desc": "因怨恨悟空请观音收服红孩儿，铁扇公主拒绝借扇，以芭蕉扇将悟空扇到五万余里外的小须弥山。",
+      "source": { "work": "西游记", "locus": "第五十九回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "腹中受制借出假扇",
+      "desc": "悟空取得灵吉菩萨的定风丹后再度登门，趁铁扇公主饮茶钻入她腹中翻腾。她被迫交出的却是假扇，使火焰山烈焰更盛。",
+      "source": { "work": "西游记", "locus": "第五十九回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "交扇熄灭火焰山",
+      "desc": "牛魔王被众神围困后，铁扇公主为保丈夫性命献出真扇。悟空连扇四十九扇，断绝火根，随后将宝扇归还。",
+      "source": { "work": "西游记", "locus": "第六十一回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["芭蕉扇", "双剑"],
+  "skills": ["芭蕉扇神风", "剑术"],
+  "domains": ["翠云山", "芭蕉洞", "火焰山风雨"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/tieshan_gongzhu.webp",
+  "thumb": "/p/xiyou/thumbs/tieshan_gongzhu.webp"
+}
