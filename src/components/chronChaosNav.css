@@ -8,13 +8,13 @@
 .chron-brand-group { align-items: center; display: inline-flex; gap: 12px; min-width: 0; position: relative; }
 .chron-brand { align-items: center; display: inline-flex; font-size: 18px; font-weight: 760; gap: 10px; }
 .chron-brand svg { color: #ad5b36; }
-.chron-guide-trigger, .chron-auth-nav button, .chron-register-link {
+.chron-guide-trigger, .chron-auth-nav button {
   align-items: center; background: transparent; border: 1px solid transparent; border-radius: 7px; color: #3b4656;
   cursor: pointer; display: inline-flex; font: inherit; gap: 7px; justify-content: center; min-height: 34px; padding: 7px 10px;
 }
 .chron-guide-trigger { background: #fff; border-color: #c7d3dc; font-size: 14px; font-weight: 700; }
 .chron-guide-trigger svg { color: #115e59; }
-.chron-guide-trigger:hover, .chron-auth-nav button:hover, .chron-register-link:hover, .chron-auth-nav button.active {
+.chron-guide-trigger:hover, .chron-auth-nav button:hover, .chron-auth-nav button.active {
   background: #e8f3f1; border-color: #b8d9d4; color: #115e59;
 }
 .chron-guide-menu, .chron-popover {
@@ -37,7 +37,9 @@
 }
 .chron-login-popover input:focus { border-color: #0f766e; box-shadow: 0 0 0 3px rgba(15,118,110,.12); }
 .chron-auth-nav .chron-primary-button { background: #0f766e; border-color: #0f766e; color: #fff; width: 100%; }
-.chron-register-tip { color: #115e59 !important; font-size: 12px; text-align: center; }
+.chron-auth-nav .chron-register-tip {
+  background: transparent; border: 0; color: #115e59; font-size: 12px; min-height: 0; padding: 2px; text-align: center; width: 100%;
+}
 .chron-error { color: #b42318; font-size: 12px; margin: 0; }
 .chron-notification-bell {
   align-items: center; background: #fff; border: 1px solid #d5dee8; border-radius: 999px; color: #3b4656;
@@ -78,3 +80,40 @@
 .chron-upgrade-contact {
   background: #4f46e5; border-radius: 7px; color: #fff !important; display: inline-flex; font-weight: 800; margin-top: 18px; padding: 10px 14px;
 }
+.chron-captcha-backdrop {
+  align-items: center; background: rgba(15,23,42,.5); display: flex; inset: 0; justify-content: center; padding: 24px; position: fixed; z-index: 950;
+}
+.chron-captcha-modal {
+  background: #fff; border: 1px solid #d7dce5; border-radius: 9px; box-shadow: 0 24px 70px rgba(15,23,42,.25);
+  color: #17202c; display: grid; gap: 16px; padding: 20px; width: min(100%,360px);
+}
+.chron-captcha-head { align-items: flex-start; display: flex; justify-content: space-between; }
+.chron-captcha-head div { display: grid; gap: 3px; }
+.chron-captcha-head span { color: #667085; font-size: 12px; font-weight: 760; }
+.chron-captcha-head strong { font-size: 16px; }
+.chron-captcha-head button, .chron-captcha-refresh {
+  background: transparent; border: 1px solid #d7dce5; border-radius: 7px; color: #3b4656; cursor: pointer; min-height: 34px; padding: 7px 10px;
+}
+.chron-captcha-loading { align-items: center; display: flex; justify-content: center; min-height: 120px; }
+.chron-captcha-track {
+  background: linear-gradient(90deg,#eef4f8,#f7fafc); border: 1px solid #cbd5e1; height: 48px; overflow: hidden; position: relative;
+}
+.chron-captcha-target {
+  background: rgba(15,118,110,.18); border: 1px dashed #0f766e; bottom: 7px; position: absolute; top: 7px; width: 38px;
+}
+.chron-captcha-handle {
+  align-items: center; background: #0f766e; border: 1px solid #115e59; color: #fff; cursor: grab; display: flex; height: 46px;
+  justify-content: center; left: 0; position: absolute; top: 0; touch-action: none; width: 46px;
+}
+.chron-captcha-click { display: grid; gap: 10px; }
+.chron-captcha-order {
+  background: #f7fafc; border: 1px solid #d7dce5; color: #17202c; font-weight: 760; padding: 8px; text-align: center;
+}
+.chron-captcha-click-area {
+  background: linear-gradient(135deg,rgba(15,118,110,.08),transparent 42%),#fbfdff; border: 1px solid #d7dce5; height: 180px; position: relative;
+}
+.chron-captcha-click-area button {
+  align-items: center; background: #fff; border: 1px solid #9fb2c6; border-radius: 999px; color: #17202c; display: flex; height: 38px;
+  justify-content: center; position: absolute; transform: translate(-50%,-50%); width: 38px;
+}
+.chron-captcha-click-area button.selected { background: #e8f3f1; border-color: #0f766e; color: #0f766e; }

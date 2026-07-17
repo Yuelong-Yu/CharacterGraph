@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { BehaviorCaptcha } from "@/components/BehaviorCaptcha";
 import type { SessionUser } from "@/lib/auth";
 
 export const CHRONCHAOS_AUTH_CHANGE_EVENT = "chronchaos-auth-change";
@@ -8,6 +9,8 @@ export const CHRONCHAOS_AUTH_CHANGE_EVENT = "chronchaos-auth-change";
 export function ChronChaosNav() {
   const [user, setUser] = useState<SessionUser | null | undefined>(undefined);
   const [loginOpen, setLoginOpen] = useState(false);
+  const [registerOpen, setRegisterOpen] = useState(false);
+  const [captchaOpen, setCaptchaOpen] = useState(false);
   const [guideOpen, setGuideOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [upgradeOpen, setUpgradeOpen] = useState(false);
@@ -75,6 +78,47 @@ export function ChronChaosNav() {
     window.dispatchEvent(new Event(CHRONCHAOS_AUTH_CHANGE_EVENT));
   }
 
+  function beginRegistration() {
+    if (!username.trim() || !password) {
+      setMessage("请输入用户名和密码");
+      return;
+    }
+    setMessage("");
+    setCaptchaOpen(true);
+  }
+
+  async function register(behaviorCaptchaToken: string) {
+    setBusy(true);
+    setMessage("");
+    const response = await fetch("/api/auth/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: username.trim(),
+        password,
+        temporaryReaderId: window.localStorage.getItem("chron-reader-id") || undefined,
+        behaviorCaptchaToken,
+      }),
+    });
+    const payload = await response.json().catch(() => ({})) as { user?: SessionUser; error?: string };
+    if (!response.ok || !payload.user) {
+      setMessage(payload.error || "注册失败");
+      setBusy(false);
+      return;
+    }
+    setUser(payload.user);
+    setRegisterOpen(false);
+    setUsername("");
+    setPassword("");
+    setBusy(false);
+    window.dispatchEvent(new Event(CHRONCHAOS_AUTH_CHANGE_EVENT));
+  }
+
+  function handleCaptchaVerified(token: string) {
+    setCaptchaOpen(false);
+    void register(token);
+  }
+
   async function logout() {
     setBusy(true);
     await fetch("/api/auth/logout", { method: "POST" });
@@ -121,10 +165,28 @@ export function ChronChaosNav() {
           {user === undefined ? <span className="chron-auth-loading">账号载入中…</span> : null}
           {user === null ? (
             <>
-              <button className={loginOpen ? "active" : ""} type="button" onClick={() => setLoginOpen((open) => !open)}>
+              <button
+                className={loginOpen ? "active" : ""}
+                type="button"
+                onClick={() => {
+                  setLoginOpen((open) => !open);
+                  setRegisterOpen(false);
+                  setMessage("");
+                }}
+              >
                 登录
               </button>
-              <a className="chron-register-link" href="/">注册</a>
+              <button
+                className={registerOpen ? "active" : ""}
+                type="button"
+                onClick={() => {
+                  setRegisterOpen((open) => !open);
+                  setLoginOpen(false);
+                  setMessage("");
+                }}
+              >
+                注册
+              </button>
               {loginOpen && (
                 <div className="chron-popover chron-login-popover">
                   <strong>登录 ChronChaos</strong>
@@ -139,10 +201,42 @@ export function ChronChaosNav() {
                   <button className="chron-primary-button" disabled={busy} type="button" onClick={() => void login()}>
                     {busy ? "登录中…" : "登录"}
                   </button>
-                  <a className="chron-register-tip" href="/">没有账号？前往主站注册</a>
+                  <button
+                    className="chron-register-tip"
+                    type="button"
+                    onClick={() => {
+                      setLoginOpen(false);
+                      setRegisterOpen(true);
+                      setMessage("");
+                    }}
+                  >
+                    没有账号？在此注册
+                  </button>
                   {message ? <p className="chron-error">{message}</p> : null}
                 </div>
               )}
+              {registerOpen && (
+                <div className="chron-popover chron-login-popover">
+                  <strong>注册 ChronChaos</strong>
+                  <input value={username} onChange={(event) => setUsername(event.target.value)} placeholder="用户名" />
+                  <input
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)}
+                    onKeyDown={(event) => { if (event.key === "Enter") beginRegistration(); }}
+                    placeholder="密码"
+                    type="password"
+                  />
+                  <button className="chron-primary-button" disabled={busy} type="button" onClick={beginRegistration}>
+                    {busy ? "注册中…" : "创建账号"}
+                  </button>
+                  {message ? <p className="chron-error">{message}</p> : null}
+                </div>
+              )}
+              <BehaviorCaptcha
+                onCancel={() => setCaptchaOpen(false)}
+                onVerified={handleCaptchaVerified}
+                open={captchaOpen}
+              />
             </>
           ) : null}
           {user ? (
