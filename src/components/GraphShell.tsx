@@ -939,7 +939,15 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       </div>
 
       <aside
+        data-character-detail-panel
         style={{
+          position: "fixed",
+          top: 68,
+          right: 0,
+          bottom: 0,
+          width: 380,
+          boxSizing: "border-box",
+          zIndex: 40,
           background: COLOR.bgPanel,
           padding: 20,
           overflowY: "auto",
