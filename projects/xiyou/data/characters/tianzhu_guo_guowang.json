@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "tianzhu_guo_guowang",
+  "name_zh": "天竺国国王",
+  "name_en": "King of India",
+  "aliases": [
+    "天竺国国王",
+    "King of India",
+    "天竺国王"
+  ],
+  "epithet": "天竺国外郡国王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "天竺国王因真公主被玉兔精摄走，以假公主为女而不知。假公主抛绣球选中唐僧，国王准备招其为驸马；悟空揭破妖身、太阴星君收兔后，国王寻回真女并礼送取经团队。",
+  "events": [
+    {
+      "title": "为假公主举行抛绣球",
+      "desc": "国王在凤仙郡后方天竺国为公主择婿，绣球落到唐僧头上。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "认回真公主",
+      "desc": "玉兔被收后，寺中真公主身份得证，国王父女重聚。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治国",
+    "礼制"
+  ],
+  "domains": [
+    "天竺国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/tianzhu_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/tianzhu_guo_guowang.webp"
+}

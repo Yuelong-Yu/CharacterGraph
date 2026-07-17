@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "gao_cuilan",
+  "name_zh": "高翠兰",
+  "name_en": "Gao Cuilan",
+  "aliases": [
+    "高翠兰",
+    "Gao Cuilan",
+    "高小姐",
+    "高三姑娘"
+  ],
+  "epithet": "高老庄三小姐",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "高太公幼女、猪八戒在高老庄强娶的妻子。八戒初来勤劳能干，成婚后酒醉显露猪脸并将她锁在后宅；孙悟空变成翠兰套问真情，引八戒出战，唐僧最终收其为徒，使翠兰恢复自由。",
+  "events": [
+    {
+      "title": "被八戒锁在后宅",
+      "desc": "猪八戒现出本相后怕高家退婚，将翠兰长期关在房中。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "悟空变作翠兰诱妖",
+      "desc": "悟空冒充翠兰与八戒周旋，诱其出庄后现身交战。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十八回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "坚忍",
+    "持家"
+  ],
+  "domains": [
+    "高老庄"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/gao_cuilan.webp",
+  "thumb": "/p/xiyou/thumbs/gao_cuilan.webp"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "nverguo_taishi",
+  "name_zh": "女儿国太师",
+  "name_en": "Grand Preceptor of the Women's Kingdom",
+  "aliases": [
+    "女儿国太师",
+    "Grand Preceptor of the Women's Kingdom",
+    "西梁太师",
+    "女太师"
+  ],
+  "epithet": "西梁女国太师",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "女儿国国王最倚重的女官，负责接待唐僧师徒、查验关文并代表女王向唐僧提亲。她多次在女王与取经团队之间传话，安排婚礼与出城送行，是女儿国政治和情感事件的重要推动者。",
+  "events": [
+    {
+      "title": "奉命向唐僧提亲",
+      "desc": "太师传达女王愿让国位、招唐僧为夫的意愿，并主持议婚。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "办理关文送行",
+      "desc": "她依女王命令倒换关文、安排仪仗，将唐僧师徒送出城外。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五十四回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "外交",
+    "礼制",
+    "说媒"
+  ],
+  "domains": [
+    "西梁女国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/nverguo_taishi.webp",
+  "thumb": "/p/xiyou/thumbs/nverguo_taishi.webp"
+}

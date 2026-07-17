@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "ruyi_zhenxian",
+  "name_zh": "如意真仙",
+  "name_en": "Ruyi Immortal",
+  "aliases": [
+    "如意真仙",
+    "Ruyi Immortal",
+    "牛魔王之弟",
+    "如意仙"
+  ],
+  "epithet": "落胎泉守泉妖仙",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "牛魔王之弟、红孩儿叔父，盘踞解阳山聚仙庵看守落胎泉。唐僧和猪八戒误饮子母河水后，孙悟空来求泉水，他因红孩儿之仇拒绝并持如意钩交战。悟空调虎离山，沙悟净趁机取水，才解师徒胎气。",
+  "events": [
+    {
+      "title": "拒借落胎泉",
+      "desc": "孙悟空为唐僧、八戒求水，如意真仙因红孩儿被收之事拒绝并动武。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "调虎离山失守",
+      "desc": "悟空将他引离庵门，沙悟净趁机取到落胎泉水。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "如意钩"
+  ],
+  "skills": [
+    "守泉斗法",
+    "解阳山法术"
+  ],
+  "domains": [
+    "解阳山",
+    "聚仙庵"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/ruyi_zhenxian.webp",
+  "thumb": "/p/xiyou/thumbs/ruyi_zhenxian.webp"
+}

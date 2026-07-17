@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "baborenben",
+  "name_zh": "灞波儿奔",
+  "name_en": "Babo'erben",
+  "aliases": [
+    "灞波儿奔",
+    "Babo'erben",
+    "黑鱼怪",
+    "灞波儿奔"
+  ],
+  "epithet": "碧波潭黑鱼怪",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "万圣龙王麾下黑鱼精，与奔波儿灞结伴在金光寺宝塔看守佛宝。二妖夜间饮酒，被孙悟空、猪八戒制服；它供出舍利被盗经过并带路前往乱石山碧波潭。",
+  "events": [
+    {
+      "title": "与奔波儿灞守塔",
+      "desc": "黑鱼精奉万圣龙王命令驻守宝塔，防止盗宝事泄。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被擒后带路认潭",
+      "desc": "悟空、八戒审问二妖并令其指明碧波潭龙宫。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "鱼叉"
+  ],
+  "skills": [
+    "水遁",
+    "巡塔"
+  ],
+  "domains": [
+    "碧波潭",
+    "金光寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/baborenben.webp",
+  "thumb": "/p/xiyou/thumbs/baborenben.webp"
+}

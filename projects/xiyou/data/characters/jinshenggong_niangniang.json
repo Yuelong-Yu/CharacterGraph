@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "jinshenggong_niangniang",
+  "name_zh": "金圣宫娘娘",
+  "name_en": "Lady of Golden Sage Palace",
+  "aliases": [
+    "金圣宫娘娘",
+    "Lady of Golden Sage Palace",
+    "金圣皇后",
+    "金圣宫"
+  ],
+  "epithet": "朱紫国金圣宫娘娘",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "朱紫国王后，端午游园时被赛太岁摄到獬豸洞三年。紫阳真人暗赐五彩仙衣护体，使妖王一触便如针刺，保全清白。她与潜入洞府的孙悟空配合盗取紫金铃，最终回宫与国王团聚。",
+  "events": [
+    {
+      "title": "五彩仙衣护身",
+      "desc": "紫阳真人暗中赐衣，使赛太岁三年不能近身。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "配合悟空盗铃脱困",
+      "desc": "娘娘帮助悟空探知紫金铃所在，妖怪被收后返回朱紫国。",
+      "source": {
+        "work": "西游记",
+        "locus": "第七十至七十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "坚忍",
+    "宫廷智慧"
+  ],
+  "domains": [
+    "朱紫国",
+    "獬豸洞"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jinshenggong_niangniang.webp",
+  "thumb": "/p/xiyou/thumbs/jinshenggong_niangniang.webp"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "moang_taizi",
+  "name_zh": "摩昂太子",
+  "name_en": "Crown Prince Mo'ang",
+  "aliases": [
+    "摩昂太子",
+    "Crown Prince Mo'ang",
+    "大太子摩昂",
+    "西海大太子"
+  ],
+  "epithet": "西海龙宫大太子",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "西海龙王敖闰长子、白龙马之兄。孙悟空到西海控告小鼍龙霸占黑水河后，摩昂主动请命，率虾兵蟹将出征，以三棱锏击败并擒回表弟，救出唐僧和猪八戒。",
+  "events": [
+    {
+      "title": "请命征讨小鼍龙",
+      "desc": "摩昂听闻表弟作乱，向父王请令率水军赴黑水河。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "擒妖救出师徒",
+      "desc": "摩昂与小鼍龙大战并将其锁拿，使悟空、沙僧救出唐僧和八戒。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "三棱锏"
+  ],
+  "skills": [
+    "水战",
+    "龙族法术"
+  ],
+  "domains": [
+    "西海龙宫",
+    "黑水河"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/moang_taizi.webp",
+  "thumb": "/p/xiyou/thumbs/moang_taizi.webp"
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "baoxiang_guo_guowang",
+  "name_zh": "宝象国国王",
+  "name_en": "King of Baoxiang Kingdom",
+  "aliases": [
+    "宝象国国王",
+    "King of Baoxiang Kingdom",
+    "宝象国王"
+  ],
+  "epithet": "百花羞之父",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "宝象国国王、百花羞公主之父。公主被黄袍怪掳走十三年后，唐僧带回家书，国王恳请八戒、沙僧救女；黄袍怪化作驸马入朝并把唐僧变虎，最终孙悟空降妖、奎木狼归天，父女团聚。",
+  "events": [
+    {
+      "title": "见家书求救公主",
+      "desc": "国王读到百花羞托唐僧带回的家书，命人迎救失踪十三年的女儿。",
+      "source": {
+        "work": "西游记",
+        "locus": "第二十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "迎回百花羞",
+      "desc": "悟空使黄袍怪归位后，国王与百花羞重新团聚并谢过师徒。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治国",
+    "识贤"
+  ],
+  "domains": [
+    "宝象国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/baoxiang_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/baoxiang_guo_guowang.webp"
+}

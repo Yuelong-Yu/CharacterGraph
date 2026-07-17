@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "gao_taigong",
+  "name_zh": "高太公",
+  "name_en": "Elder Gao",
+  "aliases": [
+    "高太公",
+    "Elder Gao",
+    "高老者",
+    "高员外"
+  ],
+  "epithet": "高老庄庄主",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "高老庄富户、高翠兰之父。猪八戒入赘后显露猪妖本相并把翠兰锁在后宅，太公四处请法师降妖；唐僧、孙悟空到庄后，他说明经过，最终接受八戒皈依取经并设宴送行。",
+  "events": [
+    {
+      "title": "请悟空降伏猪妖女婿",
+      "desc": "高太公向师徒诉说猪八戒强占女儿、盘踞庄院的经过。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "送八戒随唐僧西行",
+      "desc": "八戒受戒成为弟子后，高太公释怀并设宴为取经团队送行。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "庄园经营",
+    "待客"
+  ],
+  "domains": [
+    "高老庄"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/gao_taigong.webp",
+  "thumb": "/p/xiyou/thumbs/gao_taigong.webp"
+}

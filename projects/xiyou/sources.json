@@ -529,6 +529,326 @@
       "epithet": "受妖道迷惑的比丘国王"
     },
     {
+      "slug": "ruyi_zhenxian",
+      "name_zh": "如意真仙",
+      "name_en": "Ruyi Immortal",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "落胎泉守泉妖仙"
+    },
+    {
+      "slug": "laoyuan",
+      "name_zh": "老鼋",
+      "name_en": "Old Turtle",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "通天河老鼋"
+    },
+    {
+      "slug": "chechi_guo_guowang",
+      "name_zh": "车迟国国王",
+      "name_en": "King of Cart-Slow Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "尊道抑佛的车迟国王"
+    },
+    {
+      "slug": "jisai_guo_guowang",
+      "name_zh": "祭赛国国王",
+      "name_en": "King of Jisai Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "金光寺佛宝案君王"
+    },
+    {
+      "slug": "xiaozuanfeng",
+      "name_zh": "小钻风",
+      "name_en": "Little Drilling Wind",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "狮驼岭巡山小妖"
+    },
+    {
+      "slug": "hu_xianfeng",
+      "name_zh": "虎先锋",
+      "name_en": "Tiger Vanguard",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "黄风岭先锋大将"
+    },
+    {
+      "slug": "xiaotuolong",
+      "name_zh": "小鼍龙",
+      "name_en": "Young Dragon-Crocodile",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "黑水河鼍龙怪"
+    },
+    {
+      "slug": "nanji_shouxing",
+      "name_zh": "南极寿星",
+      "name_en": "South Pole Star of Longevity",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "南极长生大帝"
+    },
+    {
+      "slug": "taiyin_xingjun",
+      "name_zh": "太阴星君",
+      "name_en": "Lunar Star Lord",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "广寒宫月府之主"
+    },
+    {
+      "slug": "benboerba",
+      "name_zh": "奔波儿灞",
+      "name_en": "Benbo'erba",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "碧波潭鲇鱼怪"
+    },
+    {
+      "slug": "jinzha",
+      "name_zh": "金吒",
+      "name_en": "Jinzha",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "如来前部护法"
+    },
+    {
+      "slug": "moang_taizi",
+      "name_zh": "摩昂太子",
+      "name_en": "Crown Prince Mo'ang",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "西海龙宫大太子"
+    },
+    {
+      "slug": "wuchao_chanshi",
+      "name_zh": "乌巢禅师",
+      "name_en": "Zen Master of the Crow's Nest",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "浮屠山乌巢禅师"
+    },
+    {
+      "slug": "wuji_guo_guowang",
+      "name_zh": "乌鸡国国王",
+      "name_en": "King of Wuji Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "被沉井三年的乌鸡国王"
+    },
+    {
+      "slug": "baoxiang_guo_guowang",
+      "name_zh": "宝象国国王",
+      "name_en": "King of Baoxiang Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "百花羞之父"
+    },
+    {
+      "slug": "zhuzi_guo_guowang",
+      "name_zh": "朱紫国国王",
+      "name_en": "King of Zhuzi Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "思念金圣宫的朱紫国王"
+    },
+    {
+      "slug": "nverguo_taishi",
+      "name_zh": "女儿国太师",
+      "name_en": "Grand Preceptor of the Women's Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "西梁女国太师"
+    },
+    {
+      "slug": "yumian_huli",
+      "name_zh": "玉面狐狸",
+      "name_en": "Jade-Faced Fox",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "积雷山玉面公主"
+    },
+    {
+      "slug": "jiuwei_huli",
+      "name_zh": "九尾狐狸",
+      "name_en": "Nine-Tailed Fox",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "压龙山老奶奶"
+    },
+    {
+      "slug": "kangjinlong",
+      "name_zh": "亢金龙",
+      "name_en": "Horn Wood Dragon",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "二十八宿亢宿星官"
+    },
+    {
+      "slug": "huoyanshan_tudi",
+      "name_zh": "火焰山土地",
+      "name_en": "Land God of Flaming Mountains",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "火焰山土地神"
+    },
+    {
+      "slug": "hu_aqi_dawang",
+      "name_zh": "狐阿七大王",
+      "name_en": "Fox King Number Seven",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "平顶山狐妖王"
+    },
+    {
+      "slug": "jinshenggong_niangniang",
+      "name_zh": "金圣宫娘娘",
+      "name_en": "Lady of Golden Sage Palace",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "朱紫国金圣宫娘娘"
+    },
+    {
+      "slug": "chen_cheng",
+      "name_zh": "陈澄",
+      "name_en": "Chen Cheng",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "陈家庄庄主"
+    },
+    {
+      "slug": "wansheng_longpo",
+      "name_zh": "万圣龙婆",
+      "name_en": "Wansheng Dragon Matriarch",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "碧波潭老龙后"
+    },
+    {
+      "slug": "baborenben",
+      "name_zh": "灞波儿奔",
+      "name_en": "Babo'erben",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "碧波潭黑鱼怪"
+    },
+    {
+      "slug": "xiaotian_quan",
+      "name_zh": "哮天犬",
+      "name_en": "Howling Celestial Hound",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "二郎神座下神犬"
+    },
+    {
+      "slug": "meishan_liuxiongdi",
+      "name_zh": "梅山六兄弟",
+      "name_en": "Six Brothers of Mount Mei",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "二郎神结义兄弟组合"
+    },
+    {
+      "slug": "sida_tianwang",
+      "name_zh": "四大天王",
+      "name_en": "Four Heavenly Kings",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "南天门四方护法组合"
+    },
+    {
+      "slug": "juling_shen",
+      "name_zh": "巨灵神",
+      "name_en": "Giant Spirit God",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "天庭先锋巨将"
+    },
+    {
+      "slug": "qiyi_xiannu",
+      "name_zh": "七衣仙女",
+      "name_en": "Seven Fairy Maidens",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "王母瑶池采桃仙女组合"
+    },
+    {
+      "slug": "jinghe_longwang",
+      "name_zh": "泾河龙王",
+      "name_en": "Dragon King of Jing River",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "违犯天条的泾河龙王"
+    },
+    {
+      "slug": "cui_panguan",
+      "name_zh": "崔判官",
+      "name_en": "Judge Cui",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "地府掌生死文簿判官"
+    },
+    {
+      "slug": "wei_zheng",
+      "name_zh": "魏征",
+      "name_en": "Wei Zheng",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "梦斩泾河龙王的唐相"
+    },
+    {
+      "slug": "gao_taigong",
+      "name_zh": "高太公",
+      "name_en": "Elder Gao",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "高老庄庄主"
+    },
+    {
+      "slug": "gao_cuilan",
+      "name_zh": "高翠兰",
+      "name_en": "Gao Cuilan",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "高老庄三小姐"
+    },
+    {
+      "slug": "anuo_zunzhe",
+      "name_zh": "阿傩尊者",
+      "name_en": "Ananda",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "如来座下传经尊者"
+    },
+    {
+      "slug": "jiaye_zunzhe",
+      "name_zh": "迦叶尊者",
+      "name_en": "Kasyapa",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "如来座下传经尊者"
+    },
+    {
+      "slug": "tianzhu_guo_guowang",
+      "name_zh": "天竺国国王",
+      "name_en": "King of India",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "天竺国外郡国王"
+    },
+    {
+      "slug": "tianzhu_zhen_gongzhu",
+      "name_zh": "天竺国真公主",
+      "name_en": "True Princess of India",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "被玉兔替换的天竺公主"
+    },
+    {
       "slug": "tang_taizong",
       "name_zh": "唐太宗",
       "name_en": "Emperor Taizong of Tang",

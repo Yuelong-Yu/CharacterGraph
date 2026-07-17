@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "id": "jinzha",
+  "name_zh": "金吒",
+  "name_en": "Jinzha",
+  "aliases": [
+    "金吒",
+    "Jinzha",
+    "金吒太子",
+    "前部护法"
+  ],
+  "epithet": "如来前部护法",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "托塔天王李靖长子，哪吒、木吒之兄，在《西游记》神佛体系中归于灵山，担任如来前部护法。其身份把李靖家族与西天佛门连接起来，兼具天将武艺和护法职责。",
+  "events": [
+    {
+      "title": "列入李靖神将之家",
+      "desc": "金吒为李靖长子，与哪吒、木吒共同构成天王家族。",
+      "source": {
+        "work": "西游记",
+        "locus": "相关回目",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "侍奉灵山佛祖",
+      "desc": "金吒离天庭军职而在如来座前担任前部护法。",
+      "source": {
+        "work": "西游记",
+        "locus": "相关回目",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "遁龙桩",
+    "宝剑"
+  ],
+  "skills": [
+    "护法神通",
+    "天将武艺"
+  ],
+  "domains": [
+    "灵山",
+    "天庭"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jinzha.webp",
+  "thumb": "/p/xiyou/thumbs/jinzha.webp"
+}

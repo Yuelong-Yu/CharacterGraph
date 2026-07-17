@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "id": "nanji_shouxing",
+  "name_zh": "南极寿星",
+  "name_en": "South Pole Star of Longevity",
+  "aliases": [
+    "南极寿星",
+    "South Pole Star of Longevity",
+    "寿星",
+    "南极老人星"
+  ],
+  "epithet": "南极长生大帝",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "天庭福禄寿三星中的寿星，也是比丘国白鹿精的主人。孙悟空追击白鹿时，他从空中赶来说明坐骑走失，将白鹿收回，并送枣给比丘国王调养身体、解救国中孩童。",
+  "events": [
+    {
+      "title": "认领下界白鹿",
+      "desc": "寿星赶到比丘国，说明国丈是自己的白鹿坐骑并将其收回。",
+      "source": {
+        "work": "西游记",
+        "locus": "第七十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赐枣救治国王",
+      "desc": "寿星取出火枣给国王服下，使其病体恢复并劝其修善。",
+      "source": {
+        "work": "西游记",
+        "locus": "第七十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "龙头拐杖",
+    "寿桃葫芦"
+  ],
+  "skills": [
+    "延寿赐福",
+    "驾云"
+  ],
+  "domains": [
+    "南极仙境",
+    "比丘国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/nanji_shouxing.webp",
+  "thumb": "/p/xiyou/thumbs/nanji_shouxing.webp"
+}

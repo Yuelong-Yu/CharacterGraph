@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "xiaotian_quan",
+  "name_zh": "哮天犬",
+  "name_en": "Howling Celestial Hound",
+  "aliases": [
+    "哮天犬",
+    "Howling Celestial Hound",
+    "细犬",
+    "哮天神犬"
+  ],
+  "epithet": "二郎神座下神犬",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "二郎神随身神犬，嗅觉敏锐、撕咬凶猛。花果山之战中协助二郎神追捕孙悟空；碧波潭大战又突然扑出，咬掉九头虫一颗头，迫使其负伤逃往北海。",
+  "events": [
+    {
+      "title": "协助擒拿孙悟空",
+      "desc": "二郎神与悟空斗法时，哮天犬从侧后扑咬，配合老君金刚琢使悟空被擒。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "咬伤九头虫",
+      "desc": "碧波潭围战中哮天犬咬掉九头虫一头，使其负伤败逃。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "神嗅",
+    "扑咬",
+    "追踪"
+  ],
+  "domains": [
+    "灌江口",
+    "天庭"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/xiaotian_quan.webp",
+  "thumb": "/p/xiyou/thumbs/xiaotian_quan.webp"
+}

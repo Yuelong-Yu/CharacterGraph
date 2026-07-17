@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "qiyi_xiannu",
+  "name_zh": "七衣仙女",
+  "name_en": "Seven Fairy Maidens",
+  "aliases": [
+    "七衣仙女",
+    "Seven Fairy Maidens",
+    "七仙娥",
+    "采桃仙女"
+  ],
+  "epithet": "王母瑶池采桃仙女组合",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "王母娘娘座下红、橙、黄、绿、青、蓝、紫七位采桃仙女的组合节点。蟠桃会前奉命入园采桃，被孙悟空以定身法定住；她们说出宴会名单，使悟空发现自己未获邀请并转而大闹瑶池。",
+  "events": [
+    {
+      "title": "奉王母命入园采桃",
+      "desc": "七仙女携花篮进入蟠桃园，为瑶池大会采摘仙桃。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被悟空定住泄露宴讯",
+      "desc": "悟空施定身法并询问宴客名单，得知自己不在邀请之列。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "花篮"
+  ],
+  "skills": [
+    "采摘仙桃",
+    "云中飞行"
+  ],
+  "domains": [
+    "瑶池",
+    "蟠桃园"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/qiyi_xiannu.webp",
+  "thumb": "/p/xiyou/thumbs/qiyi_xiannu.webp"
+}

@@ -1316,5 +1316,3381 @@
   {
     "schema_version": 1, "id": "biqiu_guo_guowang_tang_sanzang", "source": "biqiu_guo_guowang", "target": "tang_sanzang", "primary_type": "bond", "composite_types": ["enmity"],
     "events": [{"title": "欲取僧心后悔悟", "desc": "国王一度听信国丈要取唐僧心肝，妖邪败露后悔悟并礼送取经团队。", "source": {"work": "西游记", "locus": "第七十八至七十九回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "ruyi_zhenxian_niu_mowang",
+    "source": "ruyi_zhenxian",
+    "target": "niu_mowang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "牛魔王之弟",
+        "desc": "如意真仙是牛魔王的弟弟，借兄长家族声势占据解阳山。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "ruyi_zhenxian_hong_haier",
+    "source": "ruyi_zhenxian",
+    "target": "hong_haier",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "为侄儿旧怨拒绝悟空",
+        "desc": "他因侄儿红孩儿被观音收走而迁怒孙悟空。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "ruyi_zhenxian_sun_wukong",
+    "source": "ruyi_zhenxian",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "落胎泉前斗法",
+        "desc": "悟空求泉遭拒，二人在聚仙庵外以如意钩和金箍棒交战。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "ruyi_zhenxian_zhu_bajie",
+    "source": "ruyi_zhenxian",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "拒绝救治八戒胎气",
+        "desc": "八戒误饮子母河水后需要泉水，如意真仙拒绝相救。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "ruyi_zhenxian_tang_sanzang",
+    "source": "ruyi_zhenxian",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阻拦取得落胎泉",
+        "desc": "唐僧身受胎气之苦，如意真仙因私怨阻挠取水。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "laoyuan_tang_sanzang",
+    "source": "laoyuan",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "驮唐僧渡河并托问寿数",
+        "desc": "驮唐僧渡河并托问寿数，归途又因唐僧忘记代问而翻身湿经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十九回、第九十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "laoyuan_sun_wukong",
+    "source": "laoyuan",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "感激悟空除去灵感大王",
+        "desc": "感激悟空除去灵感大王，归途又因唐僧忘记代问而翻身湿经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十九回、第九十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "laoyuan_zhu_bajie",
+    "source": "laoyuan",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "驮八戒越过通天河",
+        "desc": "驮八戒越过通天河，归途又因唐僧忘记代问而翻身湿经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十九回、第九十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "laoyuan_sha_wujing",
+    "source": "laoyuan",
+    "target": "sha_wujing",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "驮沙僧与经担过河",
+        "desc": "驮沙僧与经担过河，归途又因唐僧忘记代问而翻身湿经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十九回、第九十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "laoyuan_bai_long_ma",
+    "source": "laoyuan",
+    "target": "bai_long_ma",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "连白马一同负载渡河",
+        "desc": "连白马一同负载渡河，归途又因唐僧忘记代问而翻身湿经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十九回、第九十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chechi_guo_guowang_huli_daxian",
+    "source": "chechi_guo_guowang",
+    "target": "huli_daxian",
+    "primary_type": "bond",
+    "composite_types": [
+      "servant"
+    ],
+    "events": [
+      {
+        "title": "尊虎力为大国师",
+        "desc": "国王因祈雨之功宠信虎力，并听从其尊道抑佛。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十四至四十六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chechi_guo_guowang_luli_daxian",
+    "source": "chechi_guo_guowang",
+    "target": "luli_daxian",
+    "primary_type": "bond",
+    "composite_types": [
+      "servant"
+    ],
+    "events": [
+      {
+        "title": "尊鹿力为二国师",
+        "desc": "国王因祈雨之功宠信鹿力，并听从其尊道抑佛。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十四至四十六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chechi_guo_guowang_yangli_daxian",
+    "source": "chechi_guo_guowang",
+    "target": "yangli_daxian",
+    "primary_type": "bond",
+    "composite_types": [
+      "servant"
+    ],
+    "events": [
+      {
+        "title": "尊羊力为三国师",
+        "desc": "国王因祈雨之功宠信羊力，并听从其尊道抑佛。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十四至四十六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chechi_guo_guowang_tang_sanzang",
+    "source": "chechi_guo_guowang",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "主持与唐僧赌斗",
+        "desc": "国王准许唐僧与三国师比祈雨、坐禅等法，最终为其倒换关文。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十五至四十六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chechi_guo_guowang_sun_wukong",
+    "source": "chechi_guo_guowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "见悟空破三妖醒悟",
+        "desc": "悟空接连揭破三国师原形，国王由敌视转为礼送。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十五至四十六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jisai_guo_guowang_jiutouchong",
+    "source": "jisai_guo_guowang",
+    "target": "jiutouchong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "追究盗取佛宝主谋",
+        "desc": "九头虫参与盗走金光寺舍利，使祭赛国降下血雨。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二至六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jisai_guo_guowang_wansheng_longwang",
+    "source": "jisai_guo_guowang",
+    "target": "wansheng_longwang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "碧波潭窝藏佛宝",
+        "desc": "万圣龙王家族盗宝导致国王误囚寺僧。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二至六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jisai_guo_guowang_wansheng_gongzhu",
+    "source": "jisai_guo_guowang",
+    "target": "wansheng_gongzhu",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "追索舍利与灵芝",
+        "desc": "万圣公主偷走九叶灵芝并协助窝藏佛宝。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jisai_guo_guowang_tang_sanzang",
+    "source": "jisai_guo_guowang",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "听唐僧为寺僧申冤",
+        "desc": "唐僧扫塔查案，为受刑僧众洗清盗宝嫌疑。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jisai_guo_guowang_sun_wukong",
+    "source": "jisai_guo_guowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空夺宝复塔",
+        "desc": "悟空查出碧波潭并夺回舍利，国王重修宝塔。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二至六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaozuanfeng_qingshi_jing",
+    "source": "xiaozuanfeng",
+    "target": "qingshi_jing",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "巡山听命于青狮大王",
+        "desc": "小钻风负责狮驼岭山路巡查，听命于青狮大王。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaozuanfeng_baixiang_jing",
+    "source": "xiaozuanfeng",
+    "target": "baixiang_jing",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "巡山听命于白象二王",
+        "desc": "小钻风负责狮驼岭山路巡查，听命于白象二王。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaozuanfeng_jinchi_dapeng",
+    "source": "xiaozuanfeng",
+    "target": "jinchi_dapeng",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "巡山听命于大鹏三王",
+        "desc": "小钻风负责狮驼岭山路巡查，听命于大鹏三王。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaozuanfeng_sun_wukong",
+    "source": "xiaozuanfeng",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被悟空套话夺牌",
+        "desc": "悟空变小妖套出三魔情报，随后夺取小钻风腰牌。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaozuanfeng_tang_sanzang",
+    "source": "xiaozuanfeng",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "巡守取经必经山岭",
+        "desc": "小钻风巡山盘查，为三魔捕捉唐僧布置外围警戒。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_xianfeng_huangfeng_guai",
+    "source": "hu_xianfeng",
+    "target": "huangfeng_guai",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄风怪先锋",
+        "desc": "虎先锋奉黄风怪之命巡山并捕捉取经人。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_xianfeng_tang_sanzang",
+    "source": "hu_xianfeng",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金蝉脱壳摄走唐僧",
+        "desc": "虎先锋留下虎皮假身，趁乱把唐僧掳入黄风洞。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_xianfeng_sun_wukong",
+    "source": "hu_xianfeng",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄风岭双刀迎战",
+        "desc": "虎先锋以双刀与悟空交战并施脱壳之计。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_xianfeng_zhu_bajie",
+    "source": "hu_xianfeng",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被八戒一钯击败",
+        "desc": "八戒追上虎先锋，以九齿钉耙将其打死。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_xihai_longwang",
+    "source": "xiaotuolong",
+    "target": "xihai_longwang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西海龙王外甥",
+        "desc": "小鼍龙之母与西海龙王有亲，是西海龙宫外甥。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_bai_long_ma",
+    "source": "xiaotuolong",
+    "target": "bai_long_ma",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白龙马表弟",
+        "desc": "小鼍龙与西海三太子同属龙族表亲。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_jinghe_longwang",
+    "source": "xiaotuolong",
+    "target": "jinghe_longwang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "泾河龙王之子",
+        "desc": "小鼍龙是被魏征梦斩的泾河龙王之子。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_moang_taizi",
+    "source": "xiaotuolong",
+    "target": "moang_taizi",
+    "primary_type": "kinship",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "被表兄摩昂擒回",
+        "desc": "摩昂奉西海龙王命令降伏作乱的表弟。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_tang_sanzang",
+    "source": "xiaotuolong",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黑水河化船捉僧",
+        "desc": "小鼍龙化作艄公，沉船摄走唐僧。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_zhu_bajie",
+    "source": "xiaotuolong",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "一并擒入水府",
+        "desc": "猪八戒随唐僧上船，被小鼍龙沉入黑水河。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotuolong_sun_wukong",
+    "source": "xiaotuolong",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空赴西海追责",
+        "desc": "悟空查明妖怪来历，前往西海请龙族收伏。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanji_shouxing_bailu_jing",
+    "source": "nanji_shouxing",
+    "target": "bailu_jing",
+    "primary_type": "servant",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "白鹿坐骑私逃下界",
+        "desc": "白鹿是南极寿星坐骑，私逃比丘国作国丈。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanji_shouxing_huli_meihou",
+    "source": "nanji_shouxing",
+    "target": "huli_meihou",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "揭破白鹿携带的狐女",
+        "desc": "寿星收鹿后，狐狸美后失去妖道庇护并现出原形。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanji_shouxing_biqiu_guo_guowang",
+    "source": "nanji_shouxing",
+    "target": "biqiu_guo_guowang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赐火枣救治国王",
+        "desc": "寿星赠火枣恢复国王元气并劝其修善。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanji_shouxing_sun_wukong",
+    "source": "nanji_shouxing",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赶到比丘国收鹿",
+        "desc": "悟空追击白鹿时寿星现身说明坐骑身份。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanji_shouxing_yudi",
+    "source": "nanji_shouxing",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "南极长生星官",
+        "desc": "南极寿星属于天庭长生仙官体系，朝礼玉帝。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taiyin_xingjun_yutu_jing",
+    "source": "taiyin_xingjun",
+    "target": "yutu_jing",
+    "primary_type": "servant",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "月宫玉兔私逃",
+        "desc": "玉兔是太阴星君座下灵兽，私逃天竺冒充公主。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taiyin_xingjun_change",
+    "source": "taiyin_xingjun",
+    "target": "change",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "率嫦娥仙众临凡",
+        "desc": "太阴星君带领嫦娥等月宫仙子到天竺收兔。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taiyin_xingjun_sun_wukong",
+    "source": "taiyin_xingjun",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "喝止悟空打兔",
+        "desc": "太阴星君及时出现，请悟空留下玉兔性命。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taiyin_xingjun_tang_sanzang",
+    "source": "taiyin_xingjun",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "解除假公主婚局",
+        "desc": "玉兔被收后，唐僧得以摆脱招亲继续西行。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taiyin_xingjun_yudi",
+    "source": "taiyin_xingjun",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "月府星君受天庭统辖",
+        "desc": "太阴星君掌月府星辰，属于玉帝所辖天庭星官。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "benboerba_wansheng_longwang",
+    "source": "benboerba",
+    "target": "wansheng_longwang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉龙王命令守塔",
+        "desc": "奔波儿灞受万圣龙王差遣在金光寺看守盗宝秘密。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "benboerba_jiutouchong",
+    "source": "benboerba",
+    "target": "jiutouchong",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "替九头驸马掩护盗宝",
+        "desc": "二妖驻塔防止舍利失窃案被追查到碧波潭。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "benboerba_baborenben",
+    "source": "benboerba",
+    "target": "baborenben",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "鲇鱼黑鱼结伴守塔",
+        "desc": "奔波儿灞与灞波儿奔共同饮酒巡塔并一同被擒。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "benboerba_sun_wukong",
+    "source": "benboerba",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被悟空夜探宝塔擒获",
+        "desc": "悟空在塔顶制服鲇鱼精并审问佛宝下落。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "benboerba_zhu_bajie",
+    "source": "benboerba",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被八戒协助押解",
+        "desc": "猪八戒协助制服和看守两名水族小妖。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinzha_li_jing",
+    "source": "jinzha",
+    "target": "li_jing",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "李靖长子",
+        "desc": "金吒与父亲李靖共同构成托塔天王家族。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinzha_nezha",
+    "source": "jinzha",
+    "target": "nezha",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "哪吒长兄",
+        "desc": "金吒是哪吒的兄长，同出李靖之家。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinzha_muzha",
+    "source": "jinzha",
+    "target": "muzha",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "木吒长兄",
+        "desc": "金吒与木吒分别在灵山和南海担任护法。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinzha_rulai",
+    "source": "jinzha",
+    "target": "rulai",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "如来前部护法",
+        "desc": "金吒在灵山侍奉如来，担任前部护法。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "moang_taizi_xihai_longwang",
+    "source": "moang_taizi",
+    "target": "xihai_longwang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西海龙王长子",
+        "desc": "摩昂奉父王之命统率西海水军。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "moang_taizi_bai_long_ma",
+    "source": "moang_taizi",
+    "target": "bai_long_ma",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白龙马兄长",
+        "desc": "摩昂与敖烈同为西海龙王之子。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "moang_taizi_sun_wukong",
+    "source": "moang_taizi",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "应悟空之请出兵",
+        "desc": "悟空到西海告状后，摩昂主动率兵降妖。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "moang_taizi_zhu_bajie",
+    "source": "moang_taizi",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "救出被擒八戒",
+        "desc": "摩昂降伏小鼍龙，使八戒得以从水府脱困。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuchao_chanshi_tang_sanzang",
+    "source": "wuchao_chanshi",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "传授多心经",
+        "desc": "乌巢禅师将《多心经》传给唐僧一路持诵。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuchao_chanshi_zhu_bajie",
+    "source": "wuchao_chanshi",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "与八戒旧识重逢",
+        "desc": "乌巢禅师认得八戒并主动招呼，说明二人早有渊源。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuchao_chanshi_sun_wukong",
+    "source": "wuchao_chanshi",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "偈语讥刺引悟空举棒",
+        "desc": "悟空因禅师说破前路而恼怒，禅师化金光避开。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuchao_chanshi_sha_wujing",
+    "source": "wuchao_chanshi",
+    "target": "sha_wujing",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "预示取经队伍前程",
+        "desc": "禅师偈语涵盖西行诸难，沙僧随众听法。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuji_guo_guowang_qingshi_jing",
+    "source": "wuji_guo_guowang",
+    "target": "qingshi_jing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被青狮推井夺位",
+        "desc": "青狮变化道士将国王推入井中并冒名三年。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十七至三十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuji_guo_guowang_wenshu_pusa",
+    "source": "wuji_guo_guowang",
+    "target": "wenshu_pusa",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "文殊试探引出青狮因果",
+        "desc": "国王曾将文殊变化的僧人浸水，遂有青狮下界磨难。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuji_guo_guowang_tang_sanzang",
+    "source": "wuji_guo_guowang",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "魂入梦中向唐僧诉冤",
+        "desc": "国王鬼魂在宝林寺托梦，请唐僧师徒辨明真假。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十七回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wuji_guo_guowang_sun_wukong",
+    "source": "wuji_guo_guowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空取丹还魂复位",
+        "desc": "悟空救尸并求得还魂丹，帮助真王揭破妖怪。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十八至三十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baoxiang_guo_guowang_baihuaxiu",
+    "source": "baoxiang_guo_guowang",
+    "target": "baihuaxiu",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "百花羞公主之父",
+        "desc": "国王思念被掳十三年的女儿，见家书后急切营救。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baoxiang_guo_guowang_huangpao_guai",
+    "source": "baoxiang_guo_guowang",
+    "target": "huangpao_guai",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄袍怪掳走公主乱宫",
+        "desc": "黄袍怪化驸马入朝，并将唐僧变虎欺骗国王。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十九至三十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baoxiang_guo_guowang_tang_sanzang",
+    "source": "baoxiang_guo_guowang",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "唐僧带回百花羞家书",
+        "desc": "唐僧从波月洞脱身后把公主求救信交给国王。",
+        "source": {
+          "work": "西游记",
+          "locus": "第二十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baoxiang_guo_guowang_sun_wukong",
+    "source": "baoxiang_guo_guowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空降妖促父女团聚",
+        "desc": "悟空迫使奎木狼归天并救回百花羞。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zhuzi_guo_guowang_saitaisui",
+    "source": "zhuzi_guo_guowang",
+    "target": "saitaisui",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赛太岁掳走金圣宫",
+        "desc": "王后被掳三年，使国王忧思成疾。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十八至七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zhuzi_guo_guowang_jinshenggong_niangniang",
+    "source": "zhuzi_guo_guowang",
+    "target": "jinshenggong_niangniang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "朱紫国王后",
+        "desc": "国王与金圣宫感情深厚，分别三年后重新团聚。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十八至七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zhuzi_guo_guowang_sun_wukong",
+    "source": "zhuzi_guo_guowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空医病救后",
+        "desc": "悟空以乌金丹治病并盗铃降妖，救回金圣宫。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十八至七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zhuzi_guo_guowang_tang_sanzang",
+    "source": "zhuzi_guo_guowang",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "礼遇取经师徒",
+        "desc": "国王为师徒倒换关文并感谢救治之恩。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十八至七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "zhuzi_guo_guowang_guanyin",
+    "source": "zhuzi_guo_guowang",
+    "target": "guanyin",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "观音收回金毛犼",
+        "desc": "观音现身收回坐骑，终结国王三年苦难。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nverguo_taishi_nverguo_guowang",
+    "source": "nverguo_taishi",
+    "target": "nverguo_guowang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "女王首席辅臣",
+        "desc": "太师奉女王命令主持接待、提亲和送行事务。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nverguo_taishi_tang_sanzang",
+    "source": "nverguo_taishi",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "代表女王向唐僧提亲",
+        "desc": "太师传达让位招赘条件，并多次劝说唐僧。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nverguo_taishi_sun_wukong",
+    "source": "nverguo_taishi",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "与悟空议定倒换关文",
+        "desc": "悟空以假亲计争取关文，太师负责宫廷安排。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nverguo_taishi_zhu_bajie",
+    "source": "nverguo_taishi",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "接待取经使团",
+        "desc": "太师安排八戒等人在馆驿候旨并参加送行。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "yumian_huli_niu_mowang",
+    "source": "yumian_huli",
+    "target": "niu_mowang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "招牛魔王入赘",
+        "desc": "玉面狐狸以百万家私招赘牛魔王并同住摩云洞。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "yumian_huli_tieshan_gongzhu",
+    "source": "yumian_huli",
+    "target": "tieshan_gongzhu",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "牛魔王两处家室之争",
+        "desc": "牛魔王长期住在玉面狐狸处，使铁扇公主怨恨。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "yumian_huli_sun_wukong",
+    "source": "yumian_huli",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "摩云洞拒见引发冲突",
+        "desc": "悟空寻牛魔王借扇，玉面狐狸呼兵围攻。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "yumian_huli_zhu_bajie",
+    "source": "yumian_huli",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被八戒攻入洞府",
+        "desc": "八戒随悟空攻打摩云洞并击败玉面狐狸。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiuwei_huli_jinjiao_dawang",
+    "source": "jiuwei_huli",
+    "target": "jinjiao_dawang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金角认作干娘",
+        "desc": "金角派人请九尾狐携幌金绳赴莲花洞。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiuwei_huli_yinjiao_dawang",
+    "source": "jiuwei_huli",
+    "target": "yinjiao_dawang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "银角认作干娘",
+        "desc": "银角与兄长共同奉九尾狐为老奶奶。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiuwei_huli_hu_aqi_dawang",
+    "source": "jiuwei_huli",
+    "target": "hu_aqi_dawang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "狐阿七之姐",
+        "desc": "九尾狐被杀后，弟弟狐阿七率群妖为她报仇。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiuwei_huli_sun_wukong",
+    "source": "jiuwei_huli",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "途中被悟空夺绳冒名",
+        "desc": "悟空击杀九尾狐，夺幌金绳并变作她入洞。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "kangjinlong_huangmei_dawang",
+    "source": "kangjinlong",
+    "target": "huangmei_dawang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "星角破金铙救人",
+        "desc": "亢金龙协助破解黄眉大王的金铙法宝。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "kangjinlong_sun_wukong",
+    "source": "kangjinlong",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "让悟空沿龙角钻孔",
+        "desc": "亢金龙把角伸入铙缝，悟空借角尖打孔逃脱。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "kangjinlong_tang_sanzang",
+    "source": "kangjinlong",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "参与小雷音救援",
+        "desc": "亢金龙随二十八宿协助营救被黄眉擒住的师徒。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "kangjinlong_yudi",
+    "source": "kangjinlong",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉玉帝旨意下界",
+        "desc": "亢金龙作为二十八宿之一奉天庭命令助战。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huoyanshan_tudi_niu_mowang",
+    "source": "huoyanshan_tudi",
+    "target": "niu_mowang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "率阴兵围困牛魔王",
+        "desc": "土地协助天兵佛众堵截牛魔王变化逃遁。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huoyanshan_tudi_tieshan_gongzhu",
+    "source": "huoyanshan_tudi",
+    "target": "tieshan_gongzhu",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "说明芭蕉扇与山火因果",
+        "desc": "土地向悟空讲明铁扇掌握芭蕉扇和山民求雨旧例。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huoyanshan_tudi_sun_wukong",
+    "source": "huoyanshan_tudi",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "为悟空提供牛家情报",
+        "desc": "土地说明牛魔王住在摩云洞并协助第三次借扇。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十至六十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huoyanshan_tudi_zhu_bajie",
+    "source": "huoyanshan_tudi",
+    "target": "zhu_bajie",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "与八戒共同助战",
+        "desc": "土地阴兵与八戒在火焰山大战中协力围妖。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huoyanshan_tudi_yudi",
+    "source": "huoyanshan_tudi",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "天庭册封地方土地",
+        "desc": "火焰山土地属于玉帝统辖的地方地祇体系。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_aqi_dawang_jinjiao_dawang",
+    "source": "hu_aqi_dawang",
+    "target": "jinjiao_dawang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金角名义舅父",
+        "desc": "狐阿七作为九尾狐之弟，被金角称作舅爷。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_aqi_dawang_yinjiao_dawang",
+    "source": "hu_aqi_dawang",
+    "target": "yinjiao_dawang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "银角名义舅父",
+        "desc": "银角同样借九尾狐亲缘与狐阿七结盟。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_aqi_dawang_sun_wukong",
+    "source": "hu_aqi_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "为姐报仇围攻悟空",
+        "desc": "狐阿七率群狐赶到莲花洞追杀孙悟空。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "hu_aqi_dawang_zhu_bajie",
+    "source": "hu_aqi_dawang",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "方天戟战九齿钯",
+        "desc": "狐阿七与八戒交战，最终被钉耙击败。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinshenggong_niangniang_saitaisui",
+    "source": "jinshenggong_niangniang",
+    "target": "saitaisui",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被赛太岁掳入獬豸洞",
+        "desc": "赛太岁强掳金圣宫三年，却被五彩霞衣阻隔。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十九至七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinshenggong_niangniang_sun_wukong",
+    "source": "jinshenggong_niangniang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "配合悟空盗取紫金铃",
+        "desc": "悟空潜入洞府后与娘娘互通消息并设法调包宝铃。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinshenggong_niangniang_guanyin",
+    "source": "jinshenggong_niangniang",
+    "target": "guanyin",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "观音收妖使王后还宫",
+        "desc": "观音收回金毛犼，金圣宫得以结束三年囚居。",
+        "source": {
+          "work": "西游记",
+          "locus": "第七十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chen_cheng_linggan_dawang",
+    "source": "chen_cheng",
+    "target": "linggan_dawang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被迫年年献祭童男童女",
+        "desc": "灵感大王威胁陈家庄，轮到陈澄女儿时他向师徒求救。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十七回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chen_cheng_tang_sanzang",
+    "source": "chen_cheng",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "留宿取经团队",
+        "desc": "陈澄接待师徒并诉说通天河祭祀苦情。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十七回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chen_cheng_sun_wukong",
+    "source": "chen_cheng",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "请悟空代童降妖",
+        "desc": "悟空变化童女进入灵感庙，替陈家庄破除祭祀。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十七至四十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "chen_cheng_guanyin",
+    "source": "chen_cheng",
+    "target": "guanyin",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "见证观音收回金鱼",
+        "desc": "观音以竹篮收走灵感大王后，陈澄率庄民拜谢。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wansheng_longpo_wansheng_longwang",
+    "source": "wansheng_longpo",
+    "target": "wansheng_longwang",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "碧波潭龙王夫妇",
+        "desc": "龙婆与万圣龙王共同经营水府并窝藏佛宝。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wansheng_longpo_wansheng_gongzhu",
+    "source": "wansheng_longpo",
+    "target": "wansheng_gongzhu",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "万圣公主之母",
+        "desc": "龙婆参与女儿与九头虫的盗宝同盟。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wansheng_longpo_jiutouchong",
+    "source": "wansheng_longpo",
+    "target": "jiutouchong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "九头驸马岳母",
+        "desc": "龙婆接纳九头虫入赘并共同保守佛宝秘密。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wansheng_longpo_sun_wukong",
+    "source": "wansheng_longpo",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "水府败后被悟空审问",
+        "desc": "悟空再入碧波潭擒住龙婆，追查舍利与灵芝。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wansheng_longpo_zhu_bajie",
+    "source": "wansheng_longpo",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "八戒协助扫荡龙宫",
+        "desc": "八戒与悟空共同清剿碧波潭并押住龙婆。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baborenben_wansheng_longwang",
+    "source": "baborenben",
+    "target": "wansheng_longwang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉龙王命令驻守宝塔",
+        "desc": "灞波儿奔替碧波潭监视金光寺动静。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baborenben_jiutouchong",
+    "source": "baborenben",
+    "target": "jiutouchong",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "替九头驸马保守盗宝秘密",
+        "desc": "黑鱼精与同伴看护宝塔并阻断追查。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baborenben_sun_wukong",
+    "source": "baborenben",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夜间守塔被悟空擒获",
+        "desc": "悟空在塔顶抓住黑鱼精并逼其招供。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baborenben_zhu_bajie",
+    "source": "baborenben",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被八戒押往王宫",
+        "desc": "八戒协助制服灞波儿奔并押解供词。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotian_quan_erlang_shen",
+    "source": "xiaotian_quan",
+    "target": "erlang_shen",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "二郎神随身神犬",
+        "desc": "哮天犬听从二郎神号令，随其征战和追踪妖魔。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六回、第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotian_quan_sun_wukong",
+    "source": "xiaotian_quan",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "花果山追咬悟空",
+        "desc": "二郎神与悟空斗法时，哮天犬从侧后扑咬协助擒拿。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotian_quan_jiutouchong",
+    "source": "xiaotian_quan",
+    "target": "jiutouchong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "咬掉九头虫一头",
+        "desc": "碧波潭大战中哮天犬突袭九头虫，使其负伤逃走。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiaotian_quan_yudi",
+    "source": "xiaotian_quan",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随二郎神奉旨征讨",
+        "desc": "哮天犬作为灌江口神兽随主人执行玉帝诏令。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "meishan_liuxiongdi_erlang_shen",
+    "source": "meishan_liuxiongdi",
+    "target": "erlang_shen",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "二郎神结义兄弟与部将",
+        "desc": "六兄弟长期随二郎神驻守灌江口并统率草头神。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "meishan_liuxiongdi_sun_wukong",
+    "source": "meishan_liuxiongdi",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "由围剿旧敌到碧波潭盟友",
+        "desc": "六兄弟曾围悟空，后又与他共同围攻九头虫。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六回、第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "meishan_liuxiongdi_jiutouchong",
+    "source": "meishan_liuxiongdi",
+    "target": "jiutouchong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "碧波潭合围九头虫",
+        "desc": "六兄弟布阵协助二郎神和悟空逼退九头虫。",
+        "source": {
+          "work": "西游记",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sida_tianwang_yudi",
+    "source": "sida_tianwang",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "镇守四方天门",
+        "desc": "四大天王受玉帝统辖，负责天门与四方天兵。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sida_tianwang_li_jing",
+    "source": "sida_tianwang",
+    "target": "li_jing",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随托塔天王布天罗地网",
+        "desc": "四天王配合李靖统领十万天兵围攻花果山。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sida_tianwang_nezha",
+    "source": "sida_tianwang",
+    "target": "nezha",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "天庭讨逆同阵神将",
+        "desc": "四天王与哪吒同属李靖讨伐齐天大圣的军阵。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四至第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sida_tianwang_sun_wukong",
+    "source": "sida_tianwang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "封锁四方围剿花果山",
+        "desc": "四天王布下天罗地网阻止悟空和猴群突围。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "juling_shen_yudi",
+    "source": "juling_shen",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉玉帝命令征花果山",
+        "desc": "巨灵神随天庭讨逆军下界捉拿孙悟空。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "juling_shen_li_jing",
+    "source": "juling_shen",
+    "target": "li_jing",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "李靖麾下先锋",
+        "desc": "巨灵神向托塔天王请令，首先出阵挑战。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "juling_shen_nezha",
+    "source": "juling_shen",
+    "target": "nezha",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "先锋败后由哪吒接战",
+        "desc": "巨灵神败退后，哪吒继而出阵与悟空交锋。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "juling_shen_sun_wukong",
+    "source": "juling_shen",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "花果山板斧战金箍棒",
+        "desc": "悟空打断巨灵神斧柄，使天庭先锋败回本阵。",
+        "source": {
+          "work": "西游记",
+          "locus": "第四回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qiyi_xiannu_wangmu_niangniang",
+    "source": "qiyi_xiannu",
+    "target": "wangmu_niangniang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王母座下采桃仙女",
+        "desc": "七仙女奉王母命令为蟠桃大会入园采桃。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qiyi_xiannu_yudi",
+    "source": "qiyi_xiannu",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "瑶池天宫女官",
+        "desc": "七衣仙女属于天庭瑶池女官体系。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qiyi_xiannu_sun_wukong",
+    "source": "qiyi_xiannu",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被悟空定身询问宴会",
+        "desc": "悟空定住七仙女并得知自己未被蟠桃会邀请。",
+        "source": {
+          "work": "西游记",
+          "locus": "第五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qiyi_xiannu_change",
+    "source": "qiyi_xiannu",
+    "target": "change",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同属天庭女仙宴班",
+        "desc": "七衣仙女与嫦娥均参与瑶池及天宫女仙仪礼。",
+        "source": {
+          "work": "西游记",
+          "locus": "相关回目",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinghe_longwang_tang_taizong",
+    "source": "jinghe_longwang",
+    "target": "tang_taizong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "求救未成后魂索太宗",
+        "desc": "龙王托太宗拖住魏征，死后认为太宗失信而索命。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinghe_longwang_yanluo_wang",
+    "source": "jinghe_longwang",
+    "target": "yanluo_wang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "龙魂案牵动幽冥审理",
+        "desc": "泾河龙王死后申诉，使唐太宗魂入地府对案。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinghe_longwang_wei_zheng",
+    "source": "jinghe_longwang",
+    "target": "wei_zheng",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉天命梦斩泾河龙王",
+        "desc": "魏征在梦中登剐龙台执行斩龙天刑。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinghe_longwang_cui_panguan",
+    "source": "jinghe_longwang",
+    "target": "cui_panguan",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "龙魂索命引出判官接引",
+        "desc": "泾河龙王事件使太宗入冥，崔判官负责查簿还魂。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cui_panguan_tang_taizong",
+    "source": "cui_panguan",
+    "target": "tang_taizong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "改簿添寿护送还阳",
+        "desc": "崔判官为太宗增加二十年阳寿并指引还魂。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十至十一回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cui_panguan_yanluo_wang",
+    "source": "cui_panguan",
+    "target": "yanluo_wang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "十殿阎王属下判官",
+        "desc": "崔判官掌管生死文簿，协助阎王审理阳寿。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "cui_panguan_sun_wukong",
+    "source": "cui_panguan",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "生死簿旧案中的阴司判官",
+        "desc": "悟空大闹地府时曾令判官取出猴属生死簿。",
+        "source": {
+          "work": "西游记",
+          "locus": "第三回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wei_zheng_tang_taizong",
+    "source": "wei_zheng",
+    "target": "tang_taizong",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "唐太宗刚直宰相",
+        "desc": "魏征辅佐太宗，又在陪弈时奉天命梦斩龙王。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "wei_zheng_tang_sanzang",
+    "source": "wei_zheng",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "参与水陆大会与取经缘起",
+        "desc": "太宗还阳后，魏征等群臣协助推举高僧筹办法会。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十一至十二回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_taigong_zhu_bajie",
+    "source": "gao_taigong",
+    "target": "zhu_bajie",
+    "primary_type": "kinship",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "猪八戒岳父",
+        "desc": "高太公曾招八戒为婿，后来因其猪妖本相四处求法师。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_taigong_gao_cuilan",
+    "source": "gao_taigong",
+    "target": "gao_cuilan",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "高翠兰之父",
+        "desc": "太公因女儿被锁后宅而忧惧，恳请悟空营救。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_taigong_tang_sanzang",
+    "source": "gao_taigong",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "留宿唐僧并送徒",
+        "desc": "唐僧在高老庄收八戒为徒，太公设宴相送。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十八至十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_taigong_sun_wukong",
+    "source": "gao_taigong",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "请悟空降伏女婿",
+        "desc": "悟空听取太公诉说，变化翠兰引八戒出战。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_cuilan_zhu_bajie",
+    "source": "gao_cuilan",
+    "target": "zhu_bajie",
+    "primary_type": "kinship",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "高老庄夫妻",
+        "desc": "八戒入赘后显露本相并强留翠兰，皈依后离庄取经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十八至十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_cuilan_tang_sanzang",
+    "source": "gao_cuilan",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "唐僧收徒使其脱困",
+        "desc": "唐僧接受八戒皈依，结束翠兰被困的生活。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十九回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "gao_cuilan_sun_wukong",
+    "source": "gao_cuilan",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空变化翠兰探情",
+        "desc": "悟空先救出翠兰，再变成她诱八戒说出真情。",
+        "source": {
+          "work": "西游记",
+          "locus": "第十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "anuo_zunzhe_rulai",
+    "source": "anuo_zunzhe",
+    "target": "rulai",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "如来座下传经弟子",
+        "desc": "阿傩奉如来命令开启藏经楼并点交经卷。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "anuo_zunzhe_tang_sanzang",
+    "source": "anuo_zunzhe",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "索人事后交付真经",
+        "desc": "阿傩先传无字经，收下紫金钵盂后交付有字经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "anuo_zunzhe_sun_wukong",
+    "source": "anuo_zunzhe",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "被悟空揭露白本",
+        "desc": "悟空发现经卷无字，拉住阿傩、迦叶返回佛前申诉。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "anuo_zunzhe_jiaye_zunzhe",
+    "source": "anuo_zunzhe",
+    "target": "jiaye_zunzhe",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共同掌管藏经传法",
+        "desc": "阿傩与迦叶一同索礼、点经并交付三藏。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiaye_zunzhe_rulai",
+    "source": "jiaye_zunzhe",
+    "target": "rulai",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "如来座下首座弟子",
+        "desc": "迦叶在大雷音寺协助佛祖管理经藏。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiaye_zunzhe_tang_sanzang",
+    "source": "jiaye_zunzhe",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "参与两次点交经卷",
+        "desc": "迦叶与阿傩先给白本，后重新交付真经。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiaye_zunzhe_sun_wukong",
+    "source": "jiaye_zunzhe",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "随阿傩被悟空拉回佛前",
+        "desc": "无字经败露后，悟空带二尊者向如来质问。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十八回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_guo_guowang_yutu_jing",
+    "source": "tianzhu_guo_guowang",
+    "target": "yutu_jing",
+    "primary_type": "kinship",
+    "composite_types": [
+      "enmity"
+    ],
+    "events": [
+      {
+        "title": "误认玉兔为亲生公主",
+        "desc": "玉兔冒充公主一年，国王为她举办抛绣球招亲。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十三至九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_guo_guowang_tianzhu_zhen_gongzhu",
+    "source": "tianzhu_guo_guowang",
+    "target": "tianzhu_zhen_gongzhu",
+    "primary_type": "kinship",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "真公主父女重聚",
+        "desc": "玉兔被收后，国王认回流落布金寺的亲生女儿。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_guo_guowang_tang_sanzang",
+    "source": "tianzhu_guo_guowang",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "准备招唐僧为驸马",
+        "desc": "假公主绣球选中唐僧，国王安排婚礼并倒换关文。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十三至九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_guo_guowang_sun_wukong",
+    "source": "tianzhu_guo_guowang",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "悟空揭破真假公主",
+        "desc": "悟空识破玉兔妖身并帮助国王寻回真女。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_zhen_gongzhu_yutu_jing",
+    "source": "tianzhu_zhen_gongzhu",
+    "target": "yutu_jing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "被玉兔摄走替身",
+        "desc": "玉兔把真公主抛到城外并冒用她的身份入宫。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_zhen_gongzhu_tang_sanzang",
+    "source": "tianzhu_zhen_gongzhu",
+    "target": "tang_sanzang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "真假公主案解除招亲",
+        "desc": "真公主身份恢复后，唐僧得以继续西行。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_zhen_gongzhu_sun_wukong",
+    "source": "tianzhu_zhen_gongzhu",
+    "target": "sun_wukong",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "向悟空诉说身世",
+        "desc": "悟空在布金寺发现真公主并查明玉兔替身。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tianzhu_zhen_gongzhu_taiyin_xingjun",
+    "source": "tianzhu_zhen_gongzhu",
+    "target": "taiyin_xingjun",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "太阴收兔使其复位",
+        "desc": "太阴星君带走玉兔后，真公主得以返回王宫。",
+        "source": {
+          "work": "西游记",
+          "locus": "第九十五回",
+          "translator": null
+        },
+        "era_order": 2
+      }
+    ]
   }
 ]

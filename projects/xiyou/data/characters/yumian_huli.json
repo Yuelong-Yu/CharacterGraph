@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "yumian_huli",
+  "name_zh": "玉面狐狸",
+  "name_en": "Jade-Faced Fox",
+  "aliases": [
+    "玉面狐狸",
+    "Jade-Faced Fox",
+    "玉面公主",
+    "玉面狐狸精"
+  ],
+  "epithet": "积雷山玉面公主",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "万岁狐王之女，继承百万家私后招牛魔王入赘，居住积雷山摩云洞。铁扇公主因牛魔王长期与她同住而怨恨；孙悟空为借芭蕉扇寻到摩云洞，玉面狐狸与牛魔王卷入火焰山大战，最终被猪八戒击杀。",
+  "events": [
+    {
+      "title": "招赘牛魔王",
+      "desc": "玉面狐狸以家财供养牛魔王，使其长住摩云洞，与铁扇公主形成矛盾。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "摩云洞遭八戒击杀",
+      "desc": "悟空寻牛魔王借扇引发冲突，八戒攻入洞府击败玉面狐狸。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "双股剑"
+  ],
+  "skills": [
+    "狐魅",
+    "变化"
+  ],
+  "domains": [
+    "积雷山",
+    "摩云洞"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/yumian_huli.webp",
+  "thumb": "/p/xiyou/thumbs/yumian_huli.webp"
+}

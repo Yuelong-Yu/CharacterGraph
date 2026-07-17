@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "id": "meishan_liuxiongdi",
+  "name_zh": "梅山六兄弟",
+  "name_en": "Six Brothers of Mount Mei",
+  "aliases": [
+    "梅山六兄弟",
+    "Six Brothers of Mount Mei",
+    "梅山兄弟",
+    "梅山六圣"
+  ],
+  "epithet": "二郎神结义兄弟组合",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "二郎神麾下康、张、姚、李、郭申、直健六位结义兄弟的组合节点。他们随二郎神围剿花果山，后在碧波潭偶遇孙悟空，放下旧怨共同围攻九头虫，体现灌江口神将集团。",
+  "events": [
+    {
+      "title": "围剿花果山",
+      "desc": "六兄弟率草头神协助二郎神围困孙悟空和猴群。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "助战碧波潭",
+      "desc": "他们与二郎神、悟空、八戒联手围攻九头虫并夺回佛宝。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "刀枪剑戟"
+  ],
+  "skills": [
+    "合击阵法",
+    "变化",
+    "天兵统御"
+  ],
+  "domains": [
+    "灌江口",
+    "梅山"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/meishan_liuxiongdi.webp",
+  "thumb": "/p/xiyou/thumbs/meishan_liuxiongdi.webp"
+}

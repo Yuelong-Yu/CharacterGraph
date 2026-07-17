@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "jiuwei_huli",
+  "name_zh": "九尾狐狸",
+  "name_en": "Nine-Tailed Fox",
+  "aliases": [
+    "九尾狐狸",
+    "Nine-Tailed Fox",
+    "九尾狐老奶奶",
+    "压龙洞老狐"
+  ],
+  "epithet": "压龙山老奶奶",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "压龙山压龙洞九尾老狐狸，被金角、银角大王认作干娘，掌有幌金绳。两魔派小妖请她赴莲花洞吃唐僧肉，孙悟空途中将她打死，夺走幌金绳并冒充其身份潜入妖洞。",
+  "events": [
+    {
+      "title": "携幌金绳赴莲花洞",
+      "desc": "金角、银角遣人请干娘同享唐僧肉，九尾狐带宝绳启程。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被悟空截杀夺宝",
+      "desc": "悟空在途中击杀九尾狐，夺取幌金绳并变作她混入妖洞。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十四回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "幌金绳"
+  ],
+  "skills": [
+    "九尾变化",
+    "狐魅"
+  ],
+  "domains": [
+    "压龙山",
+    "压龙洞"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jiuwei_huli.webp",
+  "thumb": "/p/xiyou/thumbs/jiuwei_huli.webp"
+}

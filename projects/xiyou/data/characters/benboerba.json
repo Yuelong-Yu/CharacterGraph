@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "benboerba",
+  "name_zh": "奔波儿灞",
+  "name_en": "Benbo'erba",
+  "aliases": [
+    "奔波儿灞",
+    "Benbo'erba",
+    "鲇鱼怪",
+    "奔波儿灞"
+  ],
+  "epithet": "碧波潭鲇鱼怪",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "万圣龙王麾下鲇鱼精，与灞波儿奔奉命驻守金光寺宝塔、看护盗来的舍利。二妖在塔顶饮酒时被孙悟空、猪八戒擒获，供出碧波潭龙宫与九头虫的盗宝真相。",
+  "events": [
+    {
+      "title": "奉命守护佛宝",
+      "desc": "奔波儿灞与同伴在宝塔顶饮酒巡守，掩护龙宫盗宝。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被擒供出碧波潭",
+      "desc": "悟空、八戒夜探宝塔擒住二妖，逼问出万圣龙王一家。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "鱼叉"
+  ],
+  "skills": [
+    "水遁",
+    "守塔"
+  ],
+  "domains": [
+    "碧波潭",
+    "金光寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/benboerba.webp",
+  "thumb": "/p/xiyou/thumbs/benboerba.webp"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "jisai_guo_guowang",
+  "name_zh": "祭赛国国王",
+  "name_en": "King of Jisai Kingdom",
+  "aliases": [
+    "祭赛国国王",
+    "King of Jisai Kingdom",
+    "祭赛国王"
+  ],
+  "epithet": "金光寺佛宝案君王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "祭赛国国王因金光寺宝塔失去舍利、天降血雨，误认寺僧盗宝，将众僧下狱。唐僧师徒查明佛宝被万圣龙王一家盗走，孙悟空与猪八戒夺回舍利和九叶灵芝。国王释放僧众，重修宝塔并改寺名伏龙寺。",
+  "events": [
+    {
+      "title": "误囚金光寺僧",
+      "desc": "佛宝失窃后国王震怒，将守塔僧人锁拿拷问。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "迎回舍利重修宝塔",
+      "desc": "悟空夺回佛宝后，国王赦僧、重修宝塔并厚谢师徒。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治国",
+    "审案"
+  ],
+  "domains": [
+    "祭赛国",
+    "金光寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jisai_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/jisai_guo_guowang.webp"
+}

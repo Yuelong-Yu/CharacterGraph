@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "chechi_guo_guowang",
+  "name_zh": "车迟国国王",
+  "name_en": "King of Cart-Slow Kingdom",
+  "aliases": [
+    "车迟国国王",
+    "King of Cart-Slow Kingdom",
+    "车迟国王"
+  ],
+  "epithet": "尊道抑佛的车迟国王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "车迟国国王因虎力、鹿力、羊力三大仙求雨有功，尊他们为国师并强迫僧人服苦役。唐僧师徒到来后，他主持祈雨、坐禅、猜物及多场赌斗；三国师败亡现出原形，他方知受妖邪蒙蔽，释放僧众并礼送取经人。",
+  "events": [
+    {
+      "title": "尊三妖为国师",
+      "desc": "国王因三大仙祈雨有功而尊道灭佛，驱使僧侣服役。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赌斗后悔悟",
+      "desc": "三大仙相继在赌斗中现出兽形，国王醒悟并恢复佛门。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十五至四十六回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治国",
+    "主持赌斗"
+  ],
+  "domains": [
+    "车迟国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/chechi_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/chechi_guo_guowang.webp"
+}

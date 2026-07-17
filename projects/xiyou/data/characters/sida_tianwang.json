@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "id": "sida_tianwang",
+  "name_zh": "四大天王",
+  "name_en": "Four Heavenly Kings",
+  "aliases": [
+    "四大天王",
+    "Four Heavenly Kings",
+    "四天王",
+    "护世四天王"
+  ],
+  "epithet": "南天门四方护法组合",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "持国、增长、广目、多闻四位天王的组合节点，分别镇守四方天门，统领天兵并护持天庭秩序。孙悟空大闹天宫时，他们随李靖布下天罗地网；西行途中也多次奉旨率兵或借宝降妖。",
+  "events": [
+    {
+      "title": "布天罗地网围花果山",
+      "desc": "四天王随李靖率十万天兵围剿花果山，封锁四方。",
+      "source": {
+        "work": "西游记",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "多次奉旨助悟空",
+      "desc": "取经途中四天王作为天庭护法，多次配合天兵围困强敌。",
+      "source": {
+        "work": "西游记",
+        "locus": "相关回目",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "琵琶",
+    "宝剑",
+    "赤龙",
+    "宝伞"
+  ],
+  "skills": [
+    "四方结界",
+    "天兵统御"
+  ],
+  "domains": [
+    "南天门",
+    "天庭"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/sida_tianwang.webp",
+  "thumb": "/p/xiyou/thumbs/sida_tianwang.webp"
+}

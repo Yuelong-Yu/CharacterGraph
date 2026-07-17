@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "hu_aqi_dawang",
+  "name_zh": "狐阿七大王",
+  "name_en": "Fox King Number Seven",
+  "aliases": [
+    "狐阿七大王",
+    "Fox King Number Seven",
+    "阿七大王",
+    "狐舅爷"
+  ],
+  "epithet": "平顶山狐妖王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "九尾狐狸之弟、金角银角名义上的舅父，住在压龙山附近。九尾狐被孙悟空打死后，他率狐群持方天戟前来报仇，与猪八戒交战，最终被八戒筑死。",
+  "events": [
+    {
+      "title": "率群狐为姐报仇",
+      "desc": "狐阿七得知九尾狐被杀，带妖兵赶往莲花洞助金角银角。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与八戒交战败亡",
+      "desc": "狐阿七持戟迎战猪八戒，最终被九齿钉耙击败。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "方天画戟"
+  ],
+  "skills": [
+    "狐群统领",
+    "变化"
+  ],
+  "domains": [
+    "压龙山",
+    "平顶山"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/hu_aqi_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/hu_aqi_dawang.webp"
+}

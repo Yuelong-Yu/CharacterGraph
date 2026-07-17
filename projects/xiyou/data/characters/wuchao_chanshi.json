@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "wuchao_chanshi",
+  "name_zh": "乌巢禅师",
+  "name_en": "Zen Master of the Crow's Nest",
+  "aliases": [
+    "乌巢禅师",
+    "Zen Master of the Crow's Nest",
+    "乌巢和尚",
+    "浮屠山禅师"
+  ],
+  "epithet": "浮屠山乌巢禅师",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "居于浮屠山香桧树柴草巢中的神秘禅师，与猪八戒旧识。他向唐僧传授《多心经》，点明西行道路与前方妖难；孙悟空因其话中讥刺挥棒时，禅师化作金光升空。",
+  "events": [
+    {
+      "title": "传授多心经",
+      "desc": "禅师将《摩诃般若波罗蜜多心经》传给唐僧，成为一路持诵心法。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "说破前路后化光",
+      "desc": "他以偈语点出黄风怪等前程，避开悟空金箍棒后化金光离去。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "传授心经",
+    "预知劫难",
+    "金光遁"
+  ],
+  "domains": [
+    "浮屠山",
+    "乌巢"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wuchao_chanshi.webp",
+  "thumb": "/p/xiyou/thumbs/wuchao_chanshi.webp"
+}

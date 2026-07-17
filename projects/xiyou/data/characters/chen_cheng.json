@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "chen_cheng",
+  "name_zh": "陈澄",
+  "name_en": "Chen Cheng",
+  "aliases": [
+    "陈澄",
+    "Chen Cheng",
+    "陈老者",
+    "陈家庄主"
+  ],
+  "epithet": "陈家庄庄主",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "通天河畔陈家庄富户，与弟陈清供奉灵感大王多年。轮到他的女儿一秤金和侄儿陈关保献祭时，唐僧师徒借宿庄中；悟空、八戒变作童子赴庙降妖，陈澄由此摆脱河神祭祀。",
+  "events": [
+    {
+      "title": "恳请师徒救童",
+      "desc": "陈澄说明灵感大王每年索取童男童女，请悟空搭救一秤金与陈关保。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "见证灵感大王被收",
+      "desc": "观音收回金鱼精后，陈澄率庄民感谢师徒并送行。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "乡里组织",
+    "待客"
+  ],
+  "domains": [
+    "陈家庄",
+    "通天河"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/chen_cheng.webp",
+  "thumb": "/p/xiyou/thumbs/chen_cheng.webp"
+}

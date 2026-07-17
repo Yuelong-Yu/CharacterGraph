@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "zhuzi_guo_guowang",
+  "name_zh": "朱紫国国王",
+  "name_en": "King of Zhuzi Kingdom",
+  "aliases": [
+    "朱紫国国王",
+    "King of Zhuzi Kingdom",
+    "朱紫国王"
+  ],
+  "epithet": "思念金圣宫的朱紫国王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "朱紫国国王因金圣宫娘娘被赛太岁掳走三年，忧思成疾并张榜求医。孙悟空悬丝诊脉、炼制乌金丹治其心病，又潜入獬豸洞盗取紫金铃，最终救回娘娘。",
+  "events": [
+    {
+      "title": "忧思成疾张榜求医",
+      "desc": "金圣宫被掳后，国王三年积忧成病，张榜招医遇到孙悟空。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与金圣宫重聚",
+      "desc": "悟空降伏赛太岁，国王迎回娘娘并设宴感谢取经团队。",
+      "source": {
+        "work": "西游记",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治国",
+    "求贤"
+  ],
+  "domains": [
+    "朱紫国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/zhuzi_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/zhuzi_guo_guowang.webp"
+}

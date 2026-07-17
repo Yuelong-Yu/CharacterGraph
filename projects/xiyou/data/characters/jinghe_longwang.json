@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "jinghe_longwang",
+  "name_zh": "泾河龙王",
+  "name_en": "Dragon King of Jing River",
+  "aliases": [
+    "泾河龙王",
+    "Dragon King of Jing River",
+    "泾河老龙"
+  ],
+  "epithet": "违犯天条的泾河龙王",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "泾河水府龙王，为胜过术士袁守诚而私改降雨时辰与点数，触犯天条，被判由魏征梦斩。他求唐太宗拖住魏征却未成功，死后魂魄纠缠太宗索命，引出地府还魂与水陆大会。",
+  "events": [
+    {
+      "title": "私改雨数触犯天条",
+      "desc": "龙王为赌胜袁守诚，擅改玉帝降雨旨意而获死罪。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "梦斩后索命唐太宗",
+      "desc": "魏征梦中斩龙，龙魂认为太宗失信，入宫纠缠使其惊亡。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "龙王剑"
+  ],
+  "skills": [
+    "行云布雨",
+    "水府统御"
+  ],
+  "domains": [
+    "泾河",
+    "长安"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jinghe_longwang.webp",
+  "thumb": "/p/xiyou/thumbs/jinghe_longwang.webp"
+}

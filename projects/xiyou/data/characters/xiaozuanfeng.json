@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "id": "xiaozuanfeng",
+  "name_zh": "小钻风",
+  "name_en": "Little Drilling Wind",
+  "aliases": [
+    "小钻风",
+    "Little Drilling Wind",
+    "巡山小妖",
+    "小钻风儿"
+  ],
+  "epithet": "狮驼岭巡山小妖",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "狮驼岭巡山小妖，手持“总钻风”令牌巡查山路，熟知青狮、白象、大鹏三魔的本领与洞府部署。孙悟空变成小妖套问情报，又吞下真正的小钻风取得腰牌，借其身份潜入狮驼洞。",
+  "events": [
+    {
+      "title": "泄露三魔情报",
+      "desc": "悟空变化小妖套话，小钻风详细说出三位大王的神通。",
+      "source": {
+        "work": "西游记",
+        "locus": "第七十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被悟空夺牌冒名",
+      "desc": "悟空吞下小钻风并取走腰牌，冒充其身份进入妖洞。",
+      "source": {
+        "work": "西游记",
+        "locus": "第七十四回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "巡山旗",
+    "腰牌"
+  ],
+  "skills": [
+    "巡山盘查",
+    "识别口令"
+  ],
+  "domains": [
+    "狮驼岭",
+    "狮驼洞"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/xiaozuanfeng.webp",
+  "thumb": "/p/xiyou/thumbs/xiaozuanfeng.webp"
+}

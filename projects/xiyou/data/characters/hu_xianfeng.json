@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "hu_xianfeng",
+  "name_zh": "虎先锋",
+  "name_en": "Tiger Vanguard",
+  "aliases": [
+    "虎先锋",
+    "Tiger Vanguard",
+    "黄风怪先锋",
+    "虎精"
+  ],
+  "epithet": "黄风岭先锋大将",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "黄风怪麾下先锋，是一只斑斓猛虎成精。它用金蝉脱壳之计留下虎皮假身，趁乱摄走唐僧；随后持双刀与孙悟空、猪八戒交战，最终被八戒一钯筑死。",
+  "events": [
+    {
+      "title": "金蝉脱壳摄走唐僧",
+      "desc": "虎先锋以虎皮假身迷惑悟空、八戒，趁机将唐僧掳入黄风洞。",
+      "source": {
+        "work": "西游记",
+        "locus": "第二十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "双刀战八戒败亡",
+      "desc": "虎先锋出洞迎战，被猪八戒追上后以九齿钉耙击败。",
+      "source": {
+        "work": "西游记",
+        "locus": "第二十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "双刀"
+  ],
+  "skills": [
+    "金蝉脱壳",
+    "摄人妖风"
+  ],
+  "domains": [
+    "黄风岭",
+    "黄风洞"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/hu_xianfeng.webp",
+  "thumb": "/p/xiyou/thumbs/hu_xianfeng.webp"
+}

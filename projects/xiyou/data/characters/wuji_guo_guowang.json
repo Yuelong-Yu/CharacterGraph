@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "id": "wuji_guo_guowang",
+  "name_zh": "乌鸡国国王",
+  "name_en": "King of Wuji Kingdom",
+  "aliases": [
+    "乌鸡国国王",
+    "King of Wuji Kingdom",
+    "乌鸡国真王"
+  ],
+  "epithet": "被沉井三年的乌鸡国王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "乌鸡国真国王，因好善斋僧引来文殊菩萨试探，后被青狮精推入井中、冒名占据王位三年。其魂魄夜入唐僧梦中诉冤，孙悟空从井底救出尸身并向太上老君求得还魂丹，使其复位。",
+  "events": [
+    {
+      "title": "托梦唐僧诉冤",
+      "desc": "国王魂魄夜入宝林寺，向唐僧说明青狮精夺位经过并留下金厢白玉圭。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "服还魂丹复位",
+      "desc": "悟空从井中救出尸身，以老君还魂丹救活国王并揭穿假王。",
+      "source": {
+        "work": "西游记",
+        "locus": "第三十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治国",
+    "托梦"
+  ],
+  "domains": [
+    "乌鸡国"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wuji_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/wuji_guo_guowang.webp"
+}

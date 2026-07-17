@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "laoyuan",
+  "name_zh": "老鼋",
+  "name_en": "Old Turtle",
+  "aliases": [
+    "老鼋",
+    "Old Turtle",
+    "通天河老鼋",
+    "老白鼋"
+  ],
+  "epithet": "通天河老鼋",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "通天河中修行千年的巨鼋，灵感大王被观音收走后驮唐僧师徒渡河，并托唐僧向如来询问自己何时能脱本壳成人身。取经归途唐僧忘记代问，老鼋得知后将师徒连经卷抛入河中，促成第八十一难。",
+  "events": [
+    {
+      "title": "驮师徒过通天河",
+      "desc": "老鼋感激悟空除去灵感大王，主动驮五众越过八百里通天河。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "湿经成全八十一难",
+      "desc": "归途中得知唐僧忘记代问寿数，老鼋翻身将师徒与经卷落入水中。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "负山渡水",
+    "水府修行"
+  ],
+  "domains": [
+    "通天河"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/laoyuan.webp",
+  "thumb": "/p/xiyou/thumbs/laoyuan.webp"
+}

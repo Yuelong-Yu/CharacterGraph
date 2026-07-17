@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "xiaotuolong",
+  "name_zh": "小鼍龙",
+  "name_en": "Young Dragon-Crocodile",
+  "aliases": [
+    "小鼍龙",
+    "Young Dragon-Crocodile",
+    "鼍龙怪",
+    "黑水河妖王"
+  ],
+  "epithet": "黑水河鼍龙怪",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "泾河龙王之子、西海龙王外甥，霸占黑水河神府并设法捉走唐僧和猪八戒。孙悟空查明其龙族亲缘后去西海问罪，西海大太子摩昂率兵将他擒回。",
+  "events": [
+    {
+      "title": "化船摄走唐僧八戒",
+      "desc": "小鼍龙变作艄公，引唐僧、八戒上船后沉入黑水河。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被摩昂太子擒回",
+      "desc": "孙悟空到西海告状，摩昂太子率水军降伏表弟小鼍龙。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "竹节钢鞭"
+  ],
+  "skills": [
+    "控水",
+    "变化"
+  ],
+  "domains": [
+    "黑水河",
+    "衡阳峪"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/xiaotuolong.webp",
+  "thumb": "/p/xiyou/thumbs/xiaotuolong.webp"
+}

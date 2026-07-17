@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "huoyanshan_tudi",
+  "name_zh": "火焰山土地",
+  "name_en": "Land God of Flaming Mountains",
+  "aliases": [
+    "火焰山土地",
+    "Land God of Flaming Mountains",
+    "火焰山土地公"
+  ],
+  "epithet": "火焰山土地神",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "掌管火焰山一带的土地神，熟知八卦炉砖坠落成山及牛魔王家族旧事。他向孙悟空解释牛魔王与铁扇公主、玉面狐狸的关系，并率阴兵协助围困牛魔王，为三借芭蕉扇提供关键情报与战力。",
+  "events": [
+    {
+      "title": "说明火焰山来历",
+      "desc": "土地向悟空讲明炉砖成山、铁扇掌扇及牛魔王家事。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "率阴兵围困牛魔王",
+      "desc": "大战中土地带阴兵助阵，与天兵佛众共同堵住牛魔王退路。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "土地杖"
+  ],
+  "skills": [
+    "地遁",
+    "召集阴兵"
+  ],
+  "domains": [
+    "火焰山"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huoyanshan_tudi.webp",
+  "thumb": "/p/xiyou/thumbs/huoyanshan_tudi.webp"
+}

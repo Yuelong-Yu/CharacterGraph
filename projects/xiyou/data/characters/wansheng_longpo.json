@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "wansheng_longpo",
+  "name_zh": "万圣龙婆",
+  "name_en": "Wansheng Dragon Matriarch",
+  "aliases": [
+    "万圣龙婆",
+    "Wansheng Dragon Matriarch",
+    "万圣老龙婆",
+    "碧波潭龙后"
+  ],
+  "epithet": "碧波潭老龙后",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "万圣龙王之妻、万圣公主之母，居于碧波潭龙宫。她参与保管从金光寺盗来的舍利与王母九叶灵芝，龙王被杀后仍守在潭中；孙悟空、猪八戒再入水府追查宝物时将她擒住审问。",
+  "events": [
+    {
+      "title": "参与窝藏佛宝灵芝",
+      "desc": "龙婆与龙王、公主、九头虫共同保管盗来的舍利和九叶灵芝。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被悟空八戒擒问",
+      "desc": "龙宫败亡后，悟空与八戒擒住龙婆，追问宝物下落。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "龙头杖"
+  ],
+  "skills": [
+    "水府法术",
+    "藏匿宝物"
+  ],
+  "domains": [
+    "碧波潭"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wansheng_longpo.webp",
+  "thumb": "/p/xiyou/thumbs/wansheng_longpo.webp"
+}

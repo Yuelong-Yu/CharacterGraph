@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "kangjinlong",
+  "name_zh": "亢金龙",
+  "name_en": "Horn Wood Dragon",
+  "aliases": [
+    "亢金龙",
+    "Horn Wood Dragon",
+    "亢宿",
+    "亢金龙星官"
+  ],
+  "epithet": "二十八宿亢宿星官",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "二十八宿之一，龙形星官。孙悟空被黄眉大王收入金铙无法脱身，亢金龙奉玉帝旨意赶到小雷音寺，把角尖伸入铙缝让悟空钻孔脱出，自己的角一度被箍住。",
+  "events": [
+    {
+      "title": "以角钻入金铙",
+      "desc": "亢金龙将角尖伸进金铙缝隙，帮助困在其中的悟空打孔。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "协助悟空脱困",
+      "desc": "悟空沿龙角钻出的孔化气逃出，众星宿随后继续围攻黄眉。",
+      "source": {
+        "work": "西游记",
+        "locus": "第六十五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "星角"
+  ],
+  "skills": [
+    "星宿神力",
+    "龙角破器"
+  ],
+  "domains": [
+    "天庭",
+    "小雷音寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/kangjinlong.webp",
+  "thumb": "/p/xiyou/thumbs/kangjinlong.webp"
+}

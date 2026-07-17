@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "id": "cui_panguan",
+  "name_zh": "崔判官",
+  "name_en": "Judge Cui",
+  "aliases": [
+    "崔判官",
+    "Judge Cui",
+    "崔珏",
+    "崔府君"
+  ],
+  "epithet": "地府掌生死文簿判官",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "地府判官、唐太宗旧臣崔珏的阴司身份。太宗魂游地府时，他暗中修改生死簿，为太宗增添二十年阳寿，并一路护送还魂；此举推动太宗举办水陆大会、选唐僧西行。",
+  "events": [
+    {
+      "title": "为太宗添寿二十年",
+      "desc": "崔判官在生死簿上改动数字，使唐太宗得以还阳续寿。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "护送太宗还魂",
+      "desc": "他引导太宗经过枉死城并交代还阳后举办水陆大会。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "判官笔",
+    "生死簿"
+  ],
+  "skills": [
+    "查改寿籍",
+    "阴司法令"
+  ],
+  "domains": [
+    "幽冥地府",
+    "长安"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/cui_panguan.webp",
+  "thumb": "/p/xiyou/thumbs/cui_panguan.webp"
+}

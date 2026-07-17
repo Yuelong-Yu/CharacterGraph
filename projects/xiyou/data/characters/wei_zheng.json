@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "wei_zheng",
+  "name_zh": "魏征",
+  "name_en": "Wei Zheng",
+  "aliases": [
+    "魏征",
+    "Wei Zheng",
+    "魏丞相",
+    "魏玄成"
+  ],
+  "epithet": "梦斩泾河龙王的唐相",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "唐太宗名臣，兼具人臣与天曹执行官身份。泾河龙王被判斩首后，太宗故意留魏征下棋，魏征却伏案入梦，在天庭刑场斩龙；后来又与群臣协助太宗筹办水陆大会。",
+  "events": [
+    {
+      "title": "梦斩泾河龙王",
+      "desc": "魏征陪太宗下棋时入梦，奉天命在剐龙台斩杀泾河龙王。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "协助筹办水陆大会",
+      "desc": "太宗还阳后广做善事，魏征等群臣参与推举高僧与大会筹备。",
+      "source": {
+        "work": "西游记",
+        "locus": "第十一至十二回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "斩龙剑"
+  ],
+  "skills": [
+    "梦入天曹",
+    "治国"
+  ],
+  "domains": [
+    "长安",
+    "唐廷"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wei_zheng.webp",
+  "thumb": "/p/xiyou/thumbs/wei_zheng.webp"
+}

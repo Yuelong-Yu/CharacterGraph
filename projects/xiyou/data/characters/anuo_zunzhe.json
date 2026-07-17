@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "anuo_zunzhe",
+  "name_zh": "阿傩尊者",
+  "name_en": "Ananda",
+  "aliases": [
+    "阿傩尊者",
+    "Ananda",
+    "阿难",
+    "阿傩伽叶之一"
+  ],
+  "epithet": "如来座下传经尊者",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "如来佛祖座下弟子，与迦叶共同负责向唐僧师徒交付经卷。二尊者因未得人事，先给无字经；白雄尊者揭破后，师徒返回雷音寺，以紫金钵盂作人事才取得有字真经。",
+  "events": [
+    {
+      "title": "索人事传无字经",
+      "desc": "阿傩、迦叶向唐僧索取礼物未果，先交付无字白本。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "收钵盂交付真经",
+      "desc": "师徒返回后以唐王所赐紫金钵盂作礼，阿傩交出有字经卷。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十八回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "佛法",
+    "传经"
+  ],
+  "domains": [
+    "灵山",
+    "大雷音寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/anuo_zunzhe.webp",
+  "thumb": "/p/xiyou/thumbs/anuo_zunzhe.webp"
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "taiyin_xingjun",
+  "name_zh": "太阴星君",
+  "name_en": "Lunar Star Lord",
+  "aliases": [
+    "太阴星君",
+    "Lunar Star Lord",
+    "太阴君",
+    "月府星君"
+  ],
+  "epithet": "广寒宫月府之主",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "月宫太阴星君，是玉兔的主人。玉兔下界冒充天竺公主欲招唐僧为驸马，悟空追打至王宫时，太阴星君率嫦娥仙子降临，喝止悟空并将玉兔收回广寒宫。",
+  "events": [
+    {
+      "title": "率众仙降临天竺",
+      "desc": "悟空将要打死玉兔时，太阴星君率月宫仙众现身阻止。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "收回玉兔",
+      "desc": "太阴星君说明妖精本是广寒玉兔，将其抱回月宫。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "月轮宝镜"
+  ],
+  "skills": [
+    "太阴月华",
+    "驾月临凡"
+  ],
+  "domains": [
+    "广寒宫",
+    "月府"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/taiyin_xingjun.webp",
+  "thumb": "/p/xiyou/thumbs/taiyin_xingjun.webp"
+}

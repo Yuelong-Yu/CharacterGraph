@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "tianzhu_zhen_gongzhu",
+  "name_zh": "天竺国真公主",
+  "name_en": "True Princess of India",
+  "aliases": [
+    "天竺国真公主",
+    "True Princess of India",
+    "真公主",
+    "布金寺女子"
+  ],
+  "epithet": "被玉兔替换的天竺公主",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "天竺国真正的公主，一年前在御花园被玉兔精刮风摄走并抛到荒野，后被布金禅寺僧人收留。她夜间哭泣引起孙悟空注意，诉说身世；玉兔败露后，她回宫与父王相认。",
+  "events": [
+    {
+      "title": "被玉兔摄走替身",
+      "desc": "玉兔精把真公主抛到城外，自己变作公主入宫。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "在布金寺诉说身世",
+      "desc": "真公主向悟空说明遭遇，最终在玉兔被收后回宫认亲。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "宫廷礼仪",
+    "坚忍"
+  ],
+  "domains": [
+    "天竺国",
+    "布金禅寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/tianzhu_zhen_gongzhu.webp",
+  "thumb": "/p/xiyou/thumbs/tianzhu_zhen_gongzhu.webp"
+}

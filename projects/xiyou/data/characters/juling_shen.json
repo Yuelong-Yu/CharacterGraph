@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "juling_shen",
+  "name_zh": "巨灵神",
+  "name_en": "Giant Spirit God",
+  "aliases": [
+    "巨灵神",
+    "Giant Spirit God",
+    "巨灵天将"
+  ],
+  "epithet": "天庭先锋巨将",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "李靖麾下天庭先锋，身形巨大、持宣花板斧。玉帝命托塔天王讨伐自号齐天大圣的孙悟空时，巨灵神首先出阵，在水帘洞外挑战，数合后斧柄被金箍棒打断而败退。",
+  "events": [
+    {
+      "title": "请令先锋出战",
+      "desc": "巨灵神随李靖下界，主动在水帘洞外挑战孙悟空。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "板斧折断败退",
+      "desc": "悟空以金箍棒打断斧柄，巨灵神败回阵中险遭军法。",
+      "source": {
+        "work": "西游记",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "宣花板斧"
+  ],
+  "skills": [
+    "巨力",
+    "法天巨身"
+  ],
+  "domains": [
+    "天庭",
+    "花果山"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/juling_shen.webp",
+  "thumb": "/p/xiyou/thumbs/juling_shen.webp"
+}

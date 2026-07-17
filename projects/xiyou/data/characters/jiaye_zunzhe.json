@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "jiaye_zunzhe",
+  "name_zh": "迦叶尊者",
+  "name_en": "Kasyapa",
+  "aliases": [
+    "迦叶尊者",
+    "Kasyapa",
+    "摩诃迦叶",
+    "迦叶"
+  ],
+  "epithet": "如来座下传经尊者",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "如来佛祖座下大弟子，与阿傩共同管理藏经楼和传经事务。他参与索要人事、交付无字经及第二次发放真经，体现灵山传法中的世情考验。",
+  "events": [
+    {
+      "title": "与阿傩交付白本",
+      "desc": "迦叶陪同阿傩开启经柜，把无字经卷交给取经团队。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "重新点交有字真经",
+      "desc": "骗局被揭后，迦叶与阿傩重新按经目点交三藏真经。",
+      "source": {
+        "work": "西游记",
+        "locus": "第九十八回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "佛法",
+    "守藏"
+  ],
+  "domains": [
+    "灵山",
+    "大雷音寺"
+  ],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jiaye_zunzhe.webp",
+  "thumb": "/p/xiyou/thumbs/jiaye_zunzhe.webp"
+}
