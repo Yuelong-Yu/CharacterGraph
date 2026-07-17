@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "baiyan_mojun",
+  "name_zh": "百眼魔君",
+  "name_en": "Hundred-Eyed Demon Lord",
+  "aliases": ["百眼魔君", "Hundred-Eyed Demon Lord", "多目怪", "Many-Eyed Demon", "蜈蚣精", "Centipede Demon"],
+  "epithet": "黄花观多目怪",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "百眼魔君是黄花观道士，原形为七尺长的大蜈蚣，也是七蜘蛛精的师兄。他表面以道士身份接待唐僧师徒，得知七位师妹被欺负后，在茶中下毒，令唐僧、八戒和沙僧腹痛倒地。他手持宝剑迎战悟空，危急时脱去道袍，露出两肋下密布的千只眼睛，放出万道金光，结成金光黄雾阵罩住悟空。悟空变作穿山甲才从地下逃脱，经黎山老母指点，请来毗蓝婆菩萨。毗蓝婆以昴日星官眼中炼成的绣花针破去金光，降伏蜈蚣精并带往紫云山看守门户。百眼魔君将道观、毒茶、千眼和蜈蚣真身融为一体，是法术设定极鲜明的妖怪。",
+  "events": [
+    {
+      "title": "毒茶暗算取经众",
+      "desc": "百眼魔君在黄花观假意款待唐僧师徒，暗中把毒枣制成的毒药放入茶中，使唐僧、八戒和沙僧中毒倒地。",
+      "source": { "work": "西游记", "locus": "第七十三回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "千眼金光困悟空",
+      "desc": "百眼魔君掀开衣襟，露出两肋下密密麻麻的眼睛，放出金光黄雾罩住山谷。悟空变穿山甲钻地才勉强逃生。",
+      "source": { "work": "西游记", "locus": "第七十三回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "毗蓝婆金针破阵",
+      "desc": "毗蓝婆菩萨用昴日星官眼中炼成的绣花针破开金光，百眼魔君现出大蜈蚣原形，被菩萨收去守护千花洞。",
+      "source": { "work": "西游记", "locus": "第七十三回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["宝剑", "千眼金光"],
+  "skills": ["毒茶", "千眼金光阵", "蜈蚣真身"],
+  "domains": ["黄花观", "紫云山千花洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/baiyan_mojun.webp",
+  "thumb": "/p/xiyou/thumbs/baiyan_mojun.webp"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "qizhi_zhizhu_jing",
+  "name_zh": "七蜘蛛精",
+  "name_en": "Seven Spider Demons",
+  "aliases": ["七蜘蛛精", "Seven Spider Demons", "盘丝洞七女妖", "Seven Spider Sisters"],
+  "epithet": "盘丝洞七女妖",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "七蜘蛛精是盘丝岭盘丝洞中修炼成精的七只蜘蛛，平日化作七名美貌女子。她们见唐僧独自化斋，便用蛛丝将他缚住，准备蒸食；又在濯垢泉沐浴时被猪八戒撞见，双方一番争斗。七妖从肚脐喷出无数蛛丝，结成遮天罗网困住八戒与沙僧，随后逃往师兄百眼魔君的黄花观求助。悟空救出唐僧后追至黄花观，百眼魔君用毒茶暗算取经众，七蜘蛛又放出蠦蜂、蚂蜂等虫群迎战。悟空破开蛛网，将七只蜘蛛全部打死。这个群像节点兼具盘丝、蛛网、女妖与毒虫元素，是全书视觉辨识度最高的妖怪组合之一。",
+  "events": [
+    {
+      "title": "盘丝洞缚住唐僧",
+      "desc": "唐僧独自前往盘丝洞化斋，七蜘蛛精现出妖性，从肚脐喷出蛛丝将他层层缚住，准备洗浴后蒸食。",
+      "source": { "work": "西游记", "locus": "第七十二回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "濯垢泉大战八戒",
+      "desc": "猪八戒变作鲇鱼戏弄正在濯垢泉沐浴的七妖，随后现身交战。蜘蛛精结成巨大蛛网，困住八戒、沙僧后逃往黄花观。",
+      "source": { "work": "西游记", "locus": "第七十二回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "黄花观放虫被诛",
+      "desc": "七蜘蛛精投奔师兄百眼魔君，并放出蜂群围攻悟空。悟空破开蛛网，先将七妖打死，再寻找破解金光阵的方法。",
+      "source": { "work": "西游记", "locus": "第七十三回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["盘丝蛛网"],
+  "skills": ["脐孔吐丝", "蛛网困敌", "役使毒虫"],
+  "domains": ["盘丝岭", "盘丝洞", "濯垢泉"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/qizhi_zhizhu_jing.webp",
+  "thumb": "/p/xiyou/thumbs/qizhi_zhizhu_jing.webp"
+}

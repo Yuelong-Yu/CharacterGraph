@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "jiuling_yuansheng",
+  "name_zh": "九灵元圣",
+  "name_en": "Nine-Headed Lion",
+  "aliases": ["九灵元圣", "Nine-Headed Lion", "九头狮子", "Nine-Spirited Sage"],
+  "epithet": "九曲盘桓洞九头狮祖翁",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "九灵元圣本是太乙救苦天尊座下九头狮子，趁狮奴醉酒偷饮轮回琼液时下界，居竹节山九曲盘桓洞。他辈分极高，是黄狮精等七位狮怪尊奉的祖翁，与一般贪吃唐僧肉的妖怪不同，最初只为替被悟空、八戒打死的黄狮精报仇。九灵元圣神通深厚，无须兵器法宝，只把九个头一张，便先后衔走悟空、沙僧以及玉华州王室众人。悟空调查其来历后前往东极妙岩宫，请来太乙救苦天尊。天尊骑九色莲花，以一声呼唤便让九灵元圣伏地现出本相，重新套上项圈带回天宫。九灵元圣以压倒性实力和不食唐僧肉的克制，在群妖中格外特殊。",
+  "events": [
+    {
+      "title": "为黄狮精复仇",
+      "desc": "黄狮精因偷走悟空三人的兵器被打死后，九灵元圣念及徒孙情分，率群狮攻入玉华州，擒走王室与取经众人。",
+      "source": { "work": "西游记", "locus": "第八十九回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "九口擒拿悟空沙僧",
+      "desc": "九灵元圣显出九头狮子威能，将九个头伸张开来，轻易衔住悟空、沙僧等人，表现出远超普通妖王的实力。",
+      "source": { "work": "西游记", "locus": "第九十回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "天尊一喝归伏",
+      "desc": "太乙救苦天尊随悟空来到竹节山，端坐九色莲花高呼狮子。九灵元圣立刻伏地，被套回项圈带往东极妙岩宫。",
+      "source": { "work": "西游记", "locus": "第九十回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["九首利齿"],
+  "skills": ["九头擒拿", "一吼摄敌", "九头狮真身"],
+  "domains": ["竹节山", "九曲盘桓洞", "东极妙岩宫"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jiuling_yuansheng.webp",
+  "thumb": "/p/xiyou/thumbs/jiuling_yuansheng.webp"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "xiezi_jing",
+  "name_zh": "蝎子精",
+  "name_en": "Scorpion Demoness",
+  "aliases": ["蝎子精", "Scorpion Demoness", "琵琶精", "Pipa Cave Demoness"],
+  "epithet": "毒敌山琵琶洞女妖",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "蝎子精是毒敌山琵琶洞女妖，原形为修炼成精的巨大琵琶蝎子。她曾在雷音寺听佛谈经，如来推她一把时，她以尾上毒钩扎伤如来手指，随后逃到西梁女国附近。唐僧离开女儿国时，蝎子精刮起旋风将他摄入洞府，逼其成亲。她手使三股钢叉，武艺可同时抵挡悟空、八戒，绝技“倒马毒桩”更先后刺伤悟空头部与八戒嘴部，令二人疼痛难忍。观音指出她的克星是昴日星官；昴日星官现出大公鸡本相，连啼两声，蝎子精便现出原形死于坡前。她以强悍武艺、女性妖王身份和能伤如来的剧毒著称。",
+  "events": [
+    {
+      "title": "毒敌山逼唐僧成亲",
+      "desc": "唐僧师徒离开女儿国时，蝎子精刮风摄走唐僧，在琵琶洞摆下酒宴逼他成亲，唐僧坚持戒律拒绝。",
+      "source": { "work": "西游记", "locus": "第五十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "倒马毒桩连伤悟空八戒",
+      "desc": "蝎子精以三股钢叉独战悟空、八戒，又从尾部使出倒马毒桩，先刺悟空头部，再刺八戒嘴唇，使二人无法再战。",
+      "source": { "work": "西游记", "locus": "第五十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "昴日星官啼死蝎精",
+      "desc": "观音指明蝎子精惧怕昴日星官。星官现出双冠大公鸡本相，两声长啼破其妖法，蝎子精显出琵琶大小的原形而死。",
+      "source": { "work": "西游记", "locus": "第五十五回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["三股钢叉", "倒马毒桩"],
+  "skills": ["剧毒尾钩", "旋风摄人", "叉术"],
+  "domains": ["毒敌山", "琵琶洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/xiezi_jing.webp",
+  "thumb": "/p/xiyou/thumbs/xiezi_jing.webp"
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "heixiong_jing",
+  "name_zh": "黑熊精",
+  "name_en": "Black Bear Demon",
+  "aliases": ["黑熊精", "Black Bear Demon", "黑风怪", "Black Wind Demon", "熊罴怪", "守山大神"],
+  "epithet": "黑风山熊罴怪 / 守山大神",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "黑熊精是黑风山黑风洞的熊罴精，爱好谈禅论道，与观音禅院金池长老常有往来。禅院因金池长老贪图唐僧锦襕袈裟而失火时，黑熊精本想救火，却见宝袈裟后起了贪念，趁乱盗走并准备召开“佛衣会”赏宝。他手持黑缨长枪，武艺高强，与孙悟空多次交战都不分胜负，又识破悟空变作凌虚子的计策。悟空请来观音，观音变成凌虚仙子，悟空化作仙丹；黑熊精吞下仙丹后被悟空在腹中折腾，观音再给他戴上禁箍将其降伏。因黑熊精有修行根基且未曾伤人，观音没有杀他，而是收为珞珈山守山大神。",
+  "events": [
+    {
+      "title": "观音禅院盗取袈裟",
+      "desc": "金池长老纵火谋夺锦襕袈裟，黑熊精赶来本想救火，见到佛衣后临时起意，趁乱将袈裟盗回黑风洞。",
+      "source": { "work": "西游记", "locus": "第十六回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "黑风山大战悟空",
+      "desc": "黑熊精以黑缨长枪与悟空多次交战，自早至午难分胜负，并邀请群妖举行佛衣会，展示所盗袈裟。",
+      "source": { "work": "西游记", "locus": "第十七回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "皈依成为守山大神",
+      "desc": "观音与悟空设计让黑熊精吞下悟空所变仙丹，再以禁箍制住。黑熊精皈依后被带往珞珈山，成为守山大神。",
+      "source": { "work": "西游记", "locus": "第十七回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["黑缨长枪"],
+  "skills": ["枪术", "黑风遁形", "谈禅论道"],
+  "domains": ["黑风山", "黑风洞", "珞珈山"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/heixiong_jing.webp",
+  "thumb": "/p/xiyou/thumbs/heixiong_jing.webp"
+}

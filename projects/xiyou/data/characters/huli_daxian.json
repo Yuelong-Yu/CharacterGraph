@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "huli_daxian",
+  "name_zh": "虎力大仙",
+  "name_en": "Tiger Power Immortal",
+  "aliases": ["虎力大仙", "Tiger Power Immortal", "虎力国师", "Tiger Power Grand Preceptor", "虎精"],
+  "epithet": "车迟国大国师",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "虎力大仙是车迟国三位国师之首，原形为黄毛虎，与鹿力大仙、羊力大仙在二十年前来到车迟国。他们祈雨救旱得到国王尊崇，却借机排斥佛门，强迫两千名和尚为道士服役。唐僧师徒经过车迟国时，虎力大仙先与唐僧、悟空比试登坛祈雨；悟空上天阻止风雨雷电诸神听令，使虎力失败。双方又比赛云梯显圣、隔板猜物与砍头重生。悟空用毫毛变黄犬叼走虎力大仙被砍下的头颅，虎力无法接头，现出无头黄毛虎原形而死。虎力大仙既能召遣风云雷雨，也因滥用宗教权力和争胜之心走向覆灭。",
+  "events": [
+    {
+      "title": "车迟国尊为大国师",
+      "desc": "虎力大仙与鹿力、羊力祈雨解救车迟国旱灾，被国王封为国师；此后尊道灭佛，强迫城中和尚服苦役。",
+      "source": { "work": "西游记", "locus": "第四十四回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "登坛与悟空赌雨",
+      "desc": "虎力登五凤楼作法求雨，悟空暗中命风婆、雷公、电母和龙王不得听令，再由唐僧登坛，依次召来风云雷雨。",
+      "source": { "work": "西游记", "locus": "第四十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "砍头赌赛现虎形",
+      "desc": "虎力与悟空比赛砍头重生。悟空变出黄犬叼走虎力首级，虎力无法续头，倒地现出无头黄毛虎原形。",
+      "source": { "work": "西游记", "locus": "第四十六回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["七星宝剑", "五雷法牌"],
+  "skills": ["五雷法", "祈雨术", "砍头重生"],
+  "domains": ["车迟国", "三清观"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huli_daxian.webp",
+  "thumb": "/p/xiyou/thumbs/huli_daxian.webp"
+}

@@ -607,5 +607,454 @@
         "era_order": 2
       }
     ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinjiao_dawang_yinjiao_dawang",
+    "source": "jinjiao_dawang",
+    "target": "yinjiao_dawang",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兜率宫童子结伴下界",
+        "desc": "金角与银角原是太上老君看守金炉、银炉的童子，携五件宝物下界后在莲花洞结为两位妖王，共同设局考验取经团队。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十二至三十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "taishang_laojun_yinjiao_dawang",
+    "source": "taishang_laojun",
+    "target": "yinjiao_dawang",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "银炉童子归还兜率宫",
+        "desc": "银角本是老君看守银炉的童子。悟空将其收入葫芦后，老君赶来收回五件宝物，放出童子并带回兜率宫。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "sun_wukong_yinjiao_dawang",
+    "source": "sun_wukong",
+    "target": "yinjiao_dawang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "移山、幌金绳与葫芦斗智",
+        "desc": "银角变老道士移来三山压住悟空，又以幌金绳和葫芦擒他；悟空用毫毛脱身、调包法宝，最终反用真葫芦收服银角。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十三至三十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qingniu_jing_taishang_laojun",
+    "source": "qingniu_jing",
+    "target": "taishang_laojun",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "老君板角青牛",
+        "desc": "独角兕大王本是太上老君的板角青牛，偷走金刚琢下界。老君找到金兜洞后用芭蕉扇将其扇倒，骑牛归天。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qingniu_jing_sun_wukong",
+    "source": "qingniu_jing",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金刚琢套走金箍棒",
+        "desc": "青牛精以点钢枪与悟空久战，又用金刚琢套走金箍棒和各路援军法宝。悟空经如来暗示请来老君才将其收回。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十至五十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nezha_qingniu_jing",
+    "source": "nezha",
+    "target": "qingniu_jing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "六般兵器尽被套走",
+        "desc": "哪吒奉玉帝旨意协助悟空，显出三头六臂以六般兵器围攻青牛精，却被金刚琢一次全部套走。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangfeng_guai_sun_wukong",
+    "source": "huangfeng_guai",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三昧神风伤火眼金睛",
+        "desc": "黄风怪以三股钢叉和悟空大战，随后吹出三昧神风，刮伤悟空双眼。悟空请灵吉菩萨以定风丹和飞龙宝杖降伏妖怪。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第二十至二十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiezi_jing_sun_wukong",
+    "source": "xiezi_jing",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "倒马毒桩刺伤悟空",
+        "desc": "蝎子精独战悟空、八戒，以尾钩倒马毒桩刺中悟空头部。悟空无法抵御其毒，最终请昴日星官以鸡鸣破敌。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "tang_sanzang_xiezi_jing",
+    "source": "tang_sanzang",
+    "target": "xiezi_jing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "琵琶洞逼婚",
+        "desc": "蝎子精从女儿国摄走唐僧，在琵琶洞以酒宴和美色逼迫唐僧成亲。唐僧坚守戒律，始终拒绝。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "rulai_xiezi_jing",
+    "source": "rulai",
+    "target": "xiezi_jing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "雷音寺毒伤如来",
+        "desc": "蝎子精曾在雷音寺听经，如来推她时，她转过毒钩扎伤如来左手拇指，随后畏罪逃往毒敌山。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第五十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baiyan_mojun_qizhi_zhizhu_jing",
+    "source": "baiyan_mojun",
+    "target": "qizhi_zhizhu_jing",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄花观师兄妹",
+        "desc": "七蜘蛛精称百眼魔君为师兄。她们从盘丝洞逃到黄花观求助，百眼魔君为替师妹报仇，以毒茶暗算唐僧师徒。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七十三回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "qizhi_zhizhu_jing_tang_sanzang",
+    "source": "qizhi_zhizhu_jing",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盘丝缚住唐僧",
+        "desc": "唐僧独自到盘丝洞化斋，七蜘蛛精从脐孔吐丝将他缚住，准备蒸食。悟空打死看守小妖后将师父救出。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七十二回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "baiyan_mojun_sun_wukong",
+    "source": "baiyan_mojun",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "千眼金光阵困悟空",
+        "desc": "百眼魔君两肋千眼齐放金光黄雾，将悟空困在阵中。悟空变穿山甲逃出，后请毗蓝婆菩萨用金针破阵。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七十三回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinchi_dapeng_rulai",
+    "source": "jinchi_dapeng",
+    "target": "rulai",
+    "primary_type": "kinship",
+    "composite_types": ["enmity"],
+    "events": [
+      {
+        "title": "佛母之弟终被如来收服",
+        "desc": "大鹏与孔雀同为凤凰所生；孔雀被如来封作佛母，因此大鹏自称如来的娘舅。狮驼国一战后，如来亲自布阵将其收服。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jinchi_dapeng_sun_wukong",
+    "source": "jinchi_dapeng",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阴阳瓶与云程万里鹏",
+        "desc": "大鹏参与将悟空装入阴阳二气瓶，又凭一翅九万里的速度追上筋斗云，以利爪擒住悟空，迫使他请如来出手。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第七十五至七十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "jiuling_yuansheng_sun_wukong",
+    "source": "jiuling_yuansheng",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "九口轻取孙悟空",
+        "desc": "九灵元圣为替黄狮精报仇出战，张开九头之口便擒住悟空与沙僧。悟空查明来历后请太乙救苦天尊将其召回。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第八十九至九十回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "erlang_shen_yudi",
+    "source": "erlang_shen",
+    "target": "yudi",
+    "primary_type": "kinship",
+    "composite_types": ["servant"],
+    "events": [
+      {
+        "title": "玉帝外甥奉旨降妖",
+        "desc": "二郎神是玉帝外甥，听调不听宣。悟空大闹天宫时，玉帝采纳观音建议，下旨调二郎与梅山六兄弟围剿花果山。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "erlang_shen_sun_wukong",
+    "source": "erlang_shen",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": ["bond"],
+    "events": [
+      {
+        "title": "七十二变大战",
+        "desc": "二郎神与悟空武艺、法天象地和七十二变逐项较量，在老君和哮天犬协助下擒住悟空。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六回", "translator": null },
+        "era_order": 1
+      },
+      {
+        "title": "祭赛国并肩降妖",
+        "desc": "取经途中悟空邀请二郎神兄弟共同对付九头虫。昔日对手并肩作战，哮天犬咬掉九头虫一首。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六十三回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nezha_yudi",
+    "source": "nezha",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "天庭三坛海会大神",
+        "desc": "哪吒是天庭三坛海会大神，多次奉玉帝旨意随托塔天王出征，先后参与围剿悟空、援助金兜山和围捕牛魔王。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四回、第五十一回、第六十一回", "translator": null },
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "nezha_niu_mowang",
+    "source": "nezha",
+    "target": "niu_mowang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "风火轮降伏白牛",
+        "desc": "哪吒以斩妖剑连斩牛魔王头颅，又把风火轮套在双角焚烧，配合李天王照妖镜封住变化，迫使牛魔王归顺。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第六十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangpao_guai_yudi",
+    "source": "huangpao_guai",
+    "target": "yudi",
+    "primary_type": "servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奎木狼私离天庭",
+        "desc": "黄袍怪本是玉帝麾下二十八宿之一的奎木狼，私自下界十三日。玉帝查明后令二十七宿将其召回并处罚。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第三十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangpao_guai_tang_sanzang",
+    "source": "huangpao_guai",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "将唐僧变作猛虎",
+        "desc": "黄袍怪在宝象国化作驸马，反诬唐僧是虎精，并施法将唐僧变成斑斓猛虎囚入铁笼，直到悟空回归才获救。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第二十九至三十一回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "guanyin_heixiong_jing",
+    "source": "guanyin",
+    "target": "heixiong_jing",
+    "primary_type": "enmity",
+    "composite_types": ["bond"],
+    "events": [
+      {
+        "title": "禁箍降伏守山大神",
+        "desc": "观音与悟空设计让黑熊精吞下悟空所变仙丹，再用禁箍将其制住。因他有修行根基，观音收其为珞珈山守山大神。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "heixiong_jing_sun_wukong",
+    "source": "heixiong_jing",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黑风山争夺锦襕袈裟",
+        "desc": "黑熊精盗走锦襕袈裟，与悟空以黑缨枪多次激战不分胜负。悟空最终请观音设局，进入熊精腹中将其降伏。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第十六至十七回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huli_daxian_sun_wukong",
+    "source": "huli_daxian",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "车迟国登坛斗法",
+        "desc": "虎力大仙与悟空先后比祈雨、云梯显圣、隔板猜物和砍头重生。悟空暗中调度诸神并施变化，逐项破解其法术。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十五至四十六回", "translator": null },
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 1,
+    "id": "huli_daxian_tang_sanzang",
+    "source": "huli_daxian",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "佛道祈雨赌胜",
+        "desc": "虎力大仙代表车迟国道士与唐僧比试登坛祈雨。悟空让诸神只响应唐僧号令，唐僧成功降雨，虎力因此落败。",
+        "desc_long": null,
+        "source": { "work": "西游记", "locus": "第四十五回", "translator": null },
+        "era_order": 2
+      }
+    ]
   }
 ]

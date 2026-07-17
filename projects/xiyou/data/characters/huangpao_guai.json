@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "huangpao_guai",
+  "name_zh": "黄袍怪",
+  "name_en": "Yellow Robe Demon",
+  "aliases": ["黄袍怪", "Yellow Robe Demon", "奎木狼", "Kui Mulang", "奎星"],
+  "epithet": "碗子山波月洞妖王 / 奎木狼",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "黄袍怪本是天庭二十八宿中的奎木狼，因与披香殿侍香玉女相恋，玉女先投胎为宝象国百花羞公主，奎木狼随后私自下界，在碗子山波月洞与她生活十三年，生下两个孩子。唐僧误入波月洞被擒，百花羞暗中放走他并托带家书；黄袍怪追到宝象国，化作俊美驸马反诬唐僧为虎精，又施法将唐僧变成斑斓猛虎囚入笼中。八戒、沙僧和白龙马都不能取胜，八戒只得用激将法请孙悟空回归。悟空救出唐僧后上天查明黄袍怪是奎木狼，玉帝命二十七宿将其召回，罚往兜率宫为太上老君烧火。",
+  "events": [
+    {
+      "title": "与百花羞十三年姻缘",
+      "desc": "奎木狼追随投胎为百花羞的侍香玉女下界，在波月洞与公主结为夫妻十三年并生下两个孩子。",
+      "source": { "work": "西游记", "locus": "第二十八至三十一回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "变唐僧为斑斓猛虎",
+      "desc": "黄袍怪化作俊美驸马进入宝象国，反诬唐僧为妖，并施法把唐僧变成猛虎囚在铁笼中，使国王深信不疑。",
+      "source": { "work": "西游记", "locus": "第二十九至三十回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "奎木狼被召回天庭",
+      "desc": "悟空从天庭查出黄袍怪是缺席十三日的奎木狼。玉帝命二十七宿召其归位，并罚他到兜率宫为老君烧火。",
+      "source": { "work": "西游记", "locus": "第三十一回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["追魂刀"],
+  "skills": ["变化俊生", "变虎术", "奎星神力"],
+  "domains": ["碗子山", "波月洞", "二十八宿"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huangpao_guai.webp",
+  "thumb": "/p/xiyou/thumbs/huangpao_guai.webp"
+}

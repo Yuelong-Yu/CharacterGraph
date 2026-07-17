@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "huangfeng_guai",
+  "name_zh": "黄风怪",
+  "name_en": "Yellow Wind Demon",
+  "aliases": ["黄风怪", "Yellow Wind Demon", "黄风大王", "Yellow Wind King", "黄毛貂鼠"],
+  "epithet": "黄风岭黄风大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "黄风怪原是灵山脚下得道的黄毛貂鼠，因偷吃琉璃盏内清油，担心金刚捉拿而逃到黄风岭黄风洞称王。他手持三股钢叉，最厉害的本领是三昧神风：风起时天地昏暗、飞沙走石，能刮伤孙悟空的火眼金睛。虎先锋以金蝉脱壳之计掳走唐僧后，黄风怪本不愿招惹悟空，却仍为守洞与其大战。悟空请护法伽蓝医眼，又经太白金星指点寻找灵吉菩萨。灵吉以定风丹镇住神风，以飞龙宝杖化作八爪金龙擒住黄毛貂鼠，押回灵山。黄风怪的三昧神风是《西游记》中最具环境破坏力的妖术之一。",
+  "events": [
+    {
+      "title": "虎先锋掳走唐僧",
+      "desc": "黄风怪部下虎先锋以金蝉脱壳之计刮起旋风，将唐僧摄入黄风洞。黄风怪得知惹上孙悟空后整备迎战。",
+      "source": { "work": "西游记", "locus": "第二十回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "三昧神风伤悟空",
+      "desc": "黄风怪与悟空战至三十余合，随后吹起三昧神风，刮得天地昏暗，并伤到悟空双眼，使其败退求医。",
+      "source": { "work": "西游记", "locus": "第二十一回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "灵吉菩萨降貂鼠",
+      "desc": "灵吉菩萨以定风丹镇风，抛出飞龙宝杖化作八爪金龙，抓住黄风怪并揭示其黄毛貂鼠本相。",
+      "source": { "work": "西游记", "locus": "第二十一回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["三股钢叉"],
+  "skills": ["三昧神风", "叉术", "黄毛貂鼠真身"],
+  "domains": ["黄风岭", "黄风洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huangfeng_guai.webp",
+  "thumb": "/p/xiyou/thumbs/huangfeng_guai.webp"
+}

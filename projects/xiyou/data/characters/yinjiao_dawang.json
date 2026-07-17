@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "yinjiao_dawang",
+  "name_zh": "银角大王",
+  "name_en": "Silver Horned King",
+  "aliases": ["银角大王", "Silver Horned King", "银角", "Silver Horn"],
+  "epithet": "平顶山莲花洞二大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "银角大王是平顶山莲花洞二大王，与金角大王本为太上老君兜率宫看守银炉、金炉的童子。他携紫金红葫芦、羊脂玉净瓶、幌金绳、芭蕉扇和七星剑下界，以五件法宝考验取经团队。银角善于亲自巡山和变化设局：他变作跌断腿的老道士让孙悟空背负，暗中调来须弥山、峨眉山和泰山压住悟空，趁机擒走唐僧等人；又凭幌金绳和紫金红葫芦多次困住悟空。悟空以毫毛化身、调包法宝和假名应答反制，最后用真葫芦将银角收入其中。太上老君现身说明二童子是观音借来试验取经人真心，收回法宝并将他们带回兜率宫。",
+  "events": [
+    {
+      "title": "变老道移山困悟空",
+      "desc": "银角变作受伤老道士让悟空背负，暗中遣来须弥山、峨眉山和泰山压住悟空，趁机擒获唐僧、八戒与沙僧。",
+      "source": { "work": "西游记", "locus": "第三十三回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "幌金绳与葫芦斗法",
+      "desc": "银角以幌金绳捆住悟空，又用紫金红葫芦呼名收人；悟空靠毫毛化身脱身，并以假葫芦骗走真宝。",
+      "source": { "work": "西游记", "locus": "第三十三至三十四回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "被真葫芦收服",
+      "desc": "悟空夺得紫金红葫芦后反呼银角姓名，将其收入葫芦。太上老君随后念咒放出童子，带回兜率宫。",
+      "source": { "work": "西游记", "locus": "第三十五回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["紫金红葫芦", "幌金绳", "七星剑", "芭蕉扇", "羊脂玉净瓶"],
+  "skills": ["遣山移山", "变化术", "呼名收人"],
+  "domains": ["平顶山", "莲花洞", "兜率宫银炉"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/yinjiao_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/yinjiao_dawang.webp"
+}

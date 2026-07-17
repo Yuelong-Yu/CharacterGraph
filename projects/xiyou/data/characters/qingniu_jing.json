@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "qingniu_jing",
+  "name_zh": "青牛精",
+  "name_en": "Azure Bull Demon",
+  "aliases": ["青牛精", "Azure Bull Demon", "独角兕大王", "Single-Horned Rhinoceros King", "兕怪"],
+  "epithet": "独角兕大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "青牛精本是太上老君的板角青牛，趁看守童儿睡着，偷走老君的金刚琢下界，在金兜山金兜洞自号独角兕大王。他武艺强悍，手持点钢枪能与孙悟空久战，更凭金刚琢套走如意金箍棒以及哪吒、火德星君、十八罗汉等各路神佛的兵器与法宝。唐僧、八戒、沙僧因误入洞府取衣被擒，悟空遍请天兵、火神、水神和佛门援军仍不能取胜。如来暗示妖怪来历，悟空到兜率宫寻见太上老君。老君以芭蕉扇扇倒青牛，骑上其背，将金刚琢穿回牛鼻，带回天庭。青牛精是取经路上少数同时依靠本领与顶级法宝压制大批神将的妖王。",
+  "events": [
+    {
+      "title": "金兜洞擒取经众",
+      "desc": "唐僧等人误入妖怪点化的庄院取衣，庄院恢复成洞穴后被青牛精擒住。悟空赶回与独角兕大王大战。",
+      "source": { "work": "西游记", "locus": "第五十回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "金刚琢套尽神兵",
+      "desc": "青牛精以金刚琢先后套走金箍棒、哪吒六般兵器、火德星君火器、十八罗汉金丹砂等，使悟空请来的援兵接连败退。",
+      "source": { "work": "西游记", "locus": "第五十至五十二回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "老君骑牛归天",
+      "desc": "悟空经如来暗示找到太上老君。老君持芭蕉扇扇倒妖王，收回金刚琢，跨上青牛背部返回兜率宫。",
+      "source": { "work": "西游记", "locus": "第五十二回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["金刚琢", "点钢枪"],
+  "skills": ["金刚琢套物", "枪术", "变化庄院"],
+  "domains": ["金兜山", "金兜洞", "兜率宫"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/qingniu_jing.webp",
+  "thumb": "/p/xiyou/thumbs/qingniu_jing.webp"
+}

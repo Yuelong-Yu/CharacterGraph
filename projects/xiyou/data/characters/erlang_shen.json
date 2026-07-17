@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "erlang_shen",
+  "name_zh": "二郎神",
+  "name_en": "Erlang Shen",
+  "aliases": ["二郎神", "Erlang Shen", "杨戬", "Yang Jian", "二郎显圣真君", "灌口二郎"],
+  "epithet": "清源妙道真君",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "二郎神是玉皇大帝的外甥，受封昭惠灵显王、清源妙道真君，居灌江口，与梅山六兄弟和哮天犬相随。他仪容俊秀，额生天眼，手持三尖两刃刀，精通七十二般变化。孙悟空大闹天宫时，观音举荐二郎神助天庭围剿；二人从武艺斗到变化，先后化作雀鹰、鱼鸟、水蛇等相克之物，难分高下。太上老君以金刚琢偷袭，哮天犬扑咬，二郎神才擒住悟空。取经途中，悟空在祭赛国遇九头虫，又邀请二郎神与梅山兄弟相助；两位昔日对手并肩作战，哮天犬咬掉九头虫一颗头。二郎神因此同时连接天庭围剿与西行降妖两条主线。",
+  "events": [
+    {
+      "title": "奉旨围剿花果山",
+      "desc": "观音向玉帝举荐二郎神，二郎率梅山六兄弟和一千二百草头神围住花果山，与孙悟空正面交战。",
+      "source": { "work": "西游记", "locus": "第六回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "七十二变斗悟空",
+      "desc": "二郎神与悟空斗变化，双方化作飞禽、水族与庙宇相互追逐；在老君金刚琢和哮天犬相助下，二郎最终擒住悟空。",
+      "source": { "work": "西游记", "locus": "第六回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "祭赛国共战九头虫",
+      "desc": "悟空在碧波潭遇见二郎神兄弟，主动请他们助战。二郎神以弹弓、哮天犬配合悟空、八戒，击退偷取佛宝的九头虫。",
+      "source": { "work": "西游记", "locus": "第六十三回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["三尖两刃刀", "金弓银弹"],
+  "skills": ["七十二般变化", "天眼", "法天象地", "弹弓术", "役使哮天犬"],
+  "domains": ["灌江口", "天庭司法与征伐"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/erlang_shen.webp",
+  "thumb": "/p/xiyou/thumbs/erlang_shen.webp"
+}

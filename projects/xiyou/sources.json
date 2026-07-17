@@ -129,6 +129,110 @@
       "epithet": "小雷音寺假佛祖"
     },
     {
+      "slug": "yinjiao_dawang",
+      "name_zh": "银角大王",
+      "name_en": "Silver Horned King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "平顶山莲花洞二大王"
+    },
+    {
+      "slug": "qingniu_jing",
+      "name_zh": "青牛精",
+      "name_en": "Azure Bull Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "独角兕大王"
+    },
+    {
+      "slug": "huangfeng_guai",
+      "name_zh": "黄风怪",
+      "name_en": "Yellow Wind Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "黄风岭黄风大王"
+    },
+    {
+      "slug": "xiezi_jing",
+      "name_zh": "蝎子精",
+      "name_en": "Scorpion Demoness",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "毒敌山琵琶洞女妖"
+    },
+    {
+      "slug": "qizhi_zhizhu_jing",
+      "name_zh": "七蜘蛛精",
+      "name_en": "Seven Spider Demons",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "盘丝洞七女妖"
+    },
+    {
+      "slug": "baiyan_mojun",
+      "name_zh": "百眼魔君",
+      "name_en": "Hundred-Eyed Demon Lord",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "黄花观多目怪"
+    },
+    {
+      "slug": "jinchi_dapeng",
+      "name_zh": "金翅大鹏雕",
+      "name_en": "Golden-Winged Great Peng",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "狮驼岭三魔之三大王"
+    },
+    {
+      "slug": "jiuling_yuansheng",
+      "name_zh": "九灵元圣",
+      "name_en": "Nine-Headed Lion",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "九曲盘桓洞九头狮祖翁"
+    },
+    {
+      "slug": "erlang_shen",
+      "name_zh": "二郎神",
+      "name_en": "Erlang Shen",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "清源妙道真君"
+    },
+    {
+      "slug": "nezha",
+      "name_zh": "哪吒",
+      "name_en": "Nezha",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "三坛海会大神"
+    },
+    {
+      "slug": "huangpao_guai",
+      "name_zh": "黄袍怪",
+      "name_en": "Yellow Robe Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "碗子山波月洞妖王 / 奎木狼"
+    },
+    {
+      "slug": "heixiong_jing",
+      "name_zh": "黑熊精",
+      "name_en": "Black Bear Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "黑风山熊罴怪 / 守山大神"
+    },
+    {
+      "slug": "huli_daxian",
+      "name_zh": "虎力大仙",
+      "name_en": "Tiger Power Immortal",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "车迟国大国师"
+    },
+    {
       "slug": "tang_taizong",
       "name_zh": "唐太宗",
       "name_en": "Emperor Taizong of Tang",

@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "jinchi_dapeng",
+  "name_zh": "金翅大鹏雕",
+  "name_en": "Golden-Winged Great Peng",
+  "aliases": ["金翅大鹏雕", "Golden-Winged Great Peng", "大鹏金翅雕", "Peng Demon King", "云程万里鹏"],
+  "epithet": "狮驼岭三魔之三大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "金翅大鹏雕是狮驼岭三魔中的三大王，与青狮、白象结拜。他原是凤凰所生，因孔雀被如来封为佛母孔雀大明王，大鹏按辈分成为如来的娘舅。大鹏占据狮驼国，吃尽满城君臣百姓，令妖怪建立起一座妖国。他手持方天画戟，阴阳二气瓶能将人化成脓血；展翅一次便有九万里，速度甚至使孙悟空难以逃脱。大鹏多次识破悟空计策，以利爪擒住悟空，又联合二魔掳走唐僧。悟空无计可施，到灵山向如来求助；如来率诸佛菩萨布下天罗地网，以舍利金光制住大鹏，令其皈依护持佛法。",
+  "events": [
+    {
+      "title": "狮驼国建立妖国",
+      "desc": "大鹏占据狮驼国，吃尽城中君臣百姓，让群妖接管城池，与狮驼岭青狮、白象互为声援。",
+      "source": { "work": "西游记", "locus": "第七十四至七十七回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "阴阳二气瓶困悟空",
+      "desc": "大鹏等三魔将悟空装入阴阳二气瓶，瓶内烈火蛇龙欲将他化为脓血。悟空用观音所赐救命毫毛钻破瓶底逃出。",
+      "source": { "work": "西游记", "locus": "第七十五回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "如来布阵收大鹏",
+      "desc": "大鹏展翅追赶悟空，反将其擒住。悟空请来如来与诸佛菩萨，如来以舍利金光封住四方，亲手制住大鹏，使其皈依。",
+      "source": { "work": "西游记", "locus": "第七十七回", "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["方天画戟", "阴阳二气瓶", "利爪"],
+  "skills": ["云程九万里", "鹏鸟真身", "阴阳二气炼化"],
+  "domains": ["狮驼岭", "狮驼国"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jinchi_dapeng.webp",
+  "thumb": "/p/xiyou/thumbs/jinchi_dapeng.webp"
+}
