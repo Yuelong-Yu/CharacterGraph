@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "lingji_pusa",
+  "name_zh": "灵吉菩萨",
+  "name_en": "Lingji Bodhisattva",
+  "aliases": ["灵吉菩萨", "Lingji Bodhisattva", "大须弥山菩萨"],
+  "epithet": "小须弥山镇风菩萨",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "灵吉菩萨住小须弥山，奉如来法旨看管黄毛貂鼠，拥有克制三昧神风的定风丹和飞龙宝杖。黄风怪吹伤悟空双眼后，太白金星指点悟空求助灵吉。灵吉以定风丹镇住狂风，抛出飞龙宝杖化作八爪金龙，抓住黄风怪并揭示其灵山貂鼠本相。火焰山故事中，铁扇公主将悟空扇飞后，他又从灵吉处借得定风丹，得以抵御芭蕉扇神风。",
+  "events": [
+    {"title": "飞龙宝杖降黄风怪", "desc": "灵吉以定风丹镇住三昧神风，宝杖化为八爪金龙，将黄毛貂鼠从半空擒下。", "source": {"work": "西游记", "locus": "第二十一回", "translator": null}, "canon": null},
+    {"title": "借定风丹助过火焰山", "desc": "悟空被芭蕉扇扇至小须弥山，灵吉借给他定风丹，使其再战铁扇公主时立定不动。", "source": {"work": "西游记", "locus": "第五十九回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["飞龙宝杖", "定风丹"],
+  "skills": ["镇定神风", "宝杖化龙", "佛法降妖"],
+  "domains": ["小须弥山"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/lingji_pusa.webp",
+  "thumb": "/p/xiyou/thumbs/lingji_pusa.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "luli_daxian",
+  "name_zh": "鹿力大仙",
+  "name_en": "Deer Power Immortal",
+  "aliases": ["鹿力大仙", "Deer Power Immortal", "鹿力国师", "鹿精"],
+  "epithet": "车迟国二国师",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "鹿力大仙是车迟国三位国师中的二国师，原形为白毛角鹿，与虎力、羊力以祈雨术获得国王信任，长期压迫佛门和尚。他在祈雨失败后继续与唐僧师徒赌斗，参与云梯显圣与隔板猜物；悟空暗中把柜中宫衣、仙桃和道童分别变成破烂、桃核与和尚，使三仙屡猜不中。最后鹿力与悟空比赛剖腹剜心，悟空令鹰叼走其内脏，鹿力无法复原，现出白毛角鹿原形而死。",
+  "events": [
+    {"title": "隔板猜物连败", "desc": "鹿力大仙与唐僧师徒猜柜中物品，悟空潜入柜内变化物件，使三场答案全部落空。", "source": {"work": "西游记", "locus": "第四十六回", "translator": null}, "canon": null},
+    {"title": "剖腹赌赛现鹿形", "desc": "鹿力和悟空比赛剖腹剜心，悟空令鹰叼走其内脏，鹿力倒地现出白毛角鹿原形。", "source": {"work": "西游记", "locus": "第四十六回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["松纹宝剑", "道家法牌"],
+  "skills": ["祈雨术", "隔板猜物", "剖腹重生"],
+  "domains": ["车迟国", "三清观"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/luli_daxian.webp",
+  "thumb": "/p/xiyou/thumbs/luli_daxian.webp"
+}

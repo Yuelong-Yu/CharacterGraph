@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "wansheng_longwang",
+  "name_zh": "万圣龙王",
+  "name_en": "Wansheng Dragon King",
+  "aliases": ["万圣龙王", "Wansheng Dragon King", "碧波潭老龙王", "Bibotan Dragon King"],
+  "epithet": "乱石山碧波潭龙王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "万圣龙王是乱石山碧波潭水族之主、万圣公主之父。他招九头虫为驸马，率水族在祭赛国降下血雨，盗走金光寺塔顶佛宝舍利，使寺院失去祥光、僧人蒙冤受罚。悟空得知真相后，与八戒潜入碧波潭索宝。老龙王率水族迎战，最终被八戒一耙筑死。其余龙子龙孙被擒，龙婆交代舍利与九叶灵芝下落，宝塔因而重放金光。",
+  "events": [
+    {"title": "血雨盗走金光寺佛宝", "desc": "万圣龙王与九头虫在祭赛国降下血雨，趁乱盗走宝塔舍利，藏入碧波潭龙宫。", "source": {"work": "西游记", "locus": "第六十二回", "translator": null}, "canon": null},
+    {"title": "碧波潭迎战八戒身亡", "desc": "悟空、八戒入水索宝，万圣龙王率水族出战，被八戒以九齿钉耙打死。", "source": {"work": "西游记", "locus": "第六十三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["龙头刀", "避水令旗"],
+  "skills": ["兴云降雨", "统御水族", "龙形变化"],
+  "domains": ["乱石山", "碧波潭"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wansheng_longwang.webp",
+  "thumb": "/p/xiyou/thumbs/wansheng_longwang.webp"
+}

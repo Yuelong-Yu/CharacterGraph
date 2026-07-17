@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "huli_meihou",
+  "name_zh": "狐狸美后",
+  "name_en": "Fox Queen",
+  "aliases": ["狐狸美后", "Fox Queen", "白面狐狸", "比丘国美后"],
+  "epithet": "比丘国美后",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "狐狸美后是白面狐狸精，被白鹿精带到比丘国献给国王。她以绝美容貌获得专宠，使国王沉迷声色、身体日渐虚损；白鹿精趁机以国丈身份献药，再提出用大量童心和唐僧心肝作药引。悟空在宫中揭破阴谋后，美后惊慌逃回清华洞府。八戒追入洞中，将她一耙打死，现出白面狐狸原形。她虽战斗能力有限，却是比丘国妖局中迷惑国王、制造政治灾难的关键一环。",
+  "events": [
+    {"title": "入宫迷惑比丘国王", "desc": "白鹿精将白面狐狸献入宫中，国王沉迷美色而精神衰弱，尊白鹿道人为国丈求取延寿药。", "source": {"work": "西游记", "locus": "第七十八回", "translator": null}, "canon": null},
+    {"title": "清华洞现狐狸原形", "desc": "阴谋败露后美后逃回洞府，被八戒追入一耙打死，现出白面狐狸本相。", "source": {"work": "西游记", "locus": "第七十九回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["迷魂香扇"],
+  "skills": ["媚术", "变化美人", "白狐真身"],
+  "domains": ["比丘国王宫", "清华洞府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huli_meihou.webp",
+  "thumb": "/p/xiyou/thumbs/huli_meihou.webp"
+}

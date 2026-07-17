@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "li_jing",
+  "name_zh": "托塔天王李靖",
+  "name_en": "Li Jing",
+  "aliases": ["托塔天王李靖", "Li Jing", "李天王", "Pagoda-Bearing Heavenly King", "降魔大元帅"],
+  "epithet": "托塔天王 / 降魔大元帅",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "李靖是天庭托塔天王、降魔大元帅，哪吒之父，标志是手托玲珑宝塔。他统率天兵天将，多次奉玉帝旨意征讨下界妖魔：率哪吒围剿花果山，参与捕捉大闹天宫的孙悟空；取经途中又奉旨支援金兜山、火焰山。围捕牛魔王时，李靖以照妖镜照定其本相，封死七十二变的逃路，配合哪吒将其降伏。他还因金鼻白毛老鼠精在陷空山供奉自己的牌位，被悟空告到天庭，最终忆起曾饶过鼠精性命的旧事。",
+  "events": [
+    {"title": "统兵围剿花果山", "desc": "李靖率哪吒、巨灵神等天兵下界征讨孙悟空，后又参与天庭第二次大规模围捕。", "source": {"work": "西游记", "locus": "第四至六回", "translator": null}, "canon": null},
+    {"title": "照妖镜困住牛魔王", "desc": "火焰山大战中，李靖用照妖镜照定牛魔王本相，使他无法变化逃脱，配合哪吒完成降伏。", "source": {"work": "西游记", "locus": "第六十一回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["玲珑宝塔", "照妖镜", "宝剑"],
+  "skills": ["统御天兵", "宝塔镇妖", "照妖镜定形"],
+  "domains": ["天庭兵马", "降魔征伐"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/li_jing.webp",
+  "thumb": "/p/xiyou/thumbs/li_jing.webp"
+}

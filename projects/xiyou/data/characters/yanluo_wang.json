@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "yanluo_wang",
+  "name_zh": "阎罗王",
+  "name_en": "King Yama",
+  "aliases": ["阎罗王", "King Yama", "阎王", "Yama", "十代冥王"],
+  "epithet": "幽冥地府冥王",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "阎罗王是幽冥地府十代冥王的代表，统领判官、鬼差并掌管生死簿。孙悟空被勾魂至地府后大闹森罗殿，强令取出猴属生死文簿，划去自己和花果山群猴姓名，阎王只得上天告状。唐太宗因泾河龙王索命魂游地府时，十王又礼待太宗，判官崔珏暗改寿数，使其还阳，并嘱咐他举行水陆大会超度孤魂。阎罗王由此连接悟空不服生死与唐僧取经缘起两大主线。",
+  "events": [
+    {"title": "悟空大闹幽冥界", "desc": "悟空打入森罗殿，划去猴属姓名，使花果山群猴摆脱地府拘管；十王随后向玉帝告御状。", "source": {"work": "西游记", "locus": "第三回", "translator": null}, "canon": null},
+    {"title": "唐太宗地府还魂", "desc": "泾河龙王索命后，唐太宗魂至地府，十王查明阳寿未尽，送其还阳并促成水陆大会。", "source": {"work": "西游记", "locus": "第十至十一回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["生死簿", "判官笔", "冥王笏"],
+  "skills": ["审判亡魂", "查定寿数", "统御鬼差"],
+  "domains": ["幽冥地府", "森罗殿"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/yanluo_wang.webp",
+  "thumb": "/p/xiyou/thumbs/yanluo_wang.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "wansheng_gongzhu",
+  "name_zh": "万圣公主",
+  "name_en": "Wansheng Princess",
+  "aliases": ["万圣公主", "Wansheng Princess", "碧波潭龙女", "Dragon Princess of Bibotan"],
+  "epithet": "碧波潭龙女 / 九头虫之妻",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "万圣公主是碧波潭万圣龙王之女、九头虫之妻，容貌美丽而心性贪婪。她与父亲、丈夫合谋盗取祭赛国金光寺佛宝舍利，又潜入天庭大罗天上，从王母处偷来九叶灵芝草，用以温养舍利宝光。悟空、八戒追查佛宝进入碧波潭后，八戒打死万圣龙王，公主也在乱战中被一耙打死。悟空随后从龙宫取回舍利与灵芝草，使金光寺宝塔重放光明。",
+  "events": [
+    {"title": "盗取九叶灵芝草", "desc": "万圣公主潜入天庭，从王母处偷走九叶灵芝草，放在碧波潭中温养金光寺舍利。", "source": {"work": "西游记", "locus": "第六十二至六十三回", "translator": null}, "canon": null},
+    {"title": "碧波潭乱战身亡", "desc": "悟空、八戒追入龙宫索宝，万圣公主在混战中被八戒一耙打死，所盗佛宝与灵芝草均被取回。", "source": {"work": "西游记", "locus": "第六十三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["龙女双剑", "九叶灵芝草"],
+  "skills": ["水遁", "变化仙女", "潜入天庭"],
+  "domains": ["碧波潭", "龙宫"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wansheng_gongzhu.webp",
+  "thumb": "/p/xiyou/thumbs/wansheng_gongzhu.webp"
+}

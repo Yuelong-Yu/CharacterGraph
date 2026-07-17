@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "donghai_longwang",
+  "name_zh": "东海龙王",
+  "name_en": "Dragon King of the East Sea",
+  "aliases": ["东海龙王", "Dragon King of the East Sea", "敖广", "Ao Guang"],
+  "epithet": "东海广德王敖广",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "东海龙王敖广是四海龙王之首，居东海水晶宫，掌管东方海域与行云布雨。孙悟空学艺归山后闯入龙宫索要兵器，最终取走定海神针如意金箍棒，又向四海龙王索得凤翅紫金冠、锁子黄金甲和藕丝步云履。敖广随后与阎王上天告御状，引出悟空第一次招安。西行途中，悟空又多次召敖广兄弟降雨灭火、助战妖魔；红孩儿之难中，四海龙王的雨水却无法扑灭三昧真火。",
+  "events": [
+    {"title": "赠出定海神针", "desc": "悟空到东海龙宫求兵器，拔起重一万三千五百斤的定海神珍铁，将其化为如意金箍棒。", "source": {"work": "西游记", "locus": "第三回", "translator": null}, "canon": null},
+    {"title": "四海龙王降雨助战", "desc": "取经途中敖广多次应悟空召唤，与三位龙王共同布雨；面对红孩儿三昧真火时，凡水反被烈火蒸散。", "source": {"work": "西游记", "locus": "第四十一回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["龙王宝剑", "水晶令牌"],
+  "skills": ["行云布雨", "统御水族", "龙形变化"],
+  "domains": ["东海", "水晶宫"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/donghai_longwang.webp",
+  "thumb": "/p/xiyou/thumbs/donghai_longwang.webp"
+}

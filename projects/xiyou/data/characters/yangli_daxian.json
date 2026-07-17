@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "yangli_daxian",
+  "name_zh": "羊力大仙",
+  "name_en": "Antelope Power Immortal",
+  "aliases": ["羊力大仙", "Antelope Power Immortal", "羊力国师", "羊精"],
+  "epithet": "车迟国三国师",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "羊力大仙是车迟国三国师中的末位，原形为羚羊，与虎力、鹿力共同尊道灭佛。他擅长冷龙祈雨等旁门法术，在虎力、鹿力先后赌斗身亡后仍不服输，提出与悟空比赛下滚油锅洗澡。羊力依靠冷龙护身，能在滚油中安坐；悟空识破后让北海龙王收走冷龙，自己再下锅戏弄。失去护持的羊力被热油煮死，现出羊形。车迟国王至此才醒悟三位国师都是妖怪。",
+  "events": [
+    {"title": "依靠冷龙护身", "desc": "羊力大仙进入滚油锅仍安然无恙，悟空发现锅底有冷龙盘护，遂请北海龙王将其收走。", "source": {"work": "西游记", "locus": "第四十六回", "translator": null}, "canon": null},
+    {"title": "油锅赌赛现羊形", "desc": "冷龙被收走后油温骤升，羊力无法脱身，被滚油煮死并现出羚羊原形。", "source": {"work": "西游记", "locus": "第四十六回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["道家宝剑", "冷龙符"],
+  "skills": ["冷龙祈雨", "油锅护身", "道家法术"],
+  "domains": ["车迟国", "三清观"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/yangli_daxian.webp",
+  "thumb": "/p/xiyou/thumbs/yangli_daxian.webp"
+}

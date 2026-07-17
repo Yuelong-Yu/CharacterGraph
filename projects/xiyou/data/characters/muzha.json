@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "muzha",
+  "name_zh": "木吒",
+  "name_en": "Muzha",
+  "aliases": ["木吒", "Muzha", "惠岸行者", "Hui'an", "木叉"],
+  "epithet": "观音弟子惠岸行者",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "木吒又称惠岸行者，是托塔天王李靖次子、哪吒之兄，也是观音菩萨的护法弟子。他随观音从灵山前往东土寻找取经人，沿途参与点化沙悟净等人。流沙河收徒时，木吒手持浑铁棍与沙悟净大战，随后说明取经使命，促成沙僧皈依。红孩儿之难中，他奉观音命借来天罡刀，又与红孩儿交锋。木吒兼具天庭神将家世与佛门行者身份，是连接李靖家族、观音和取经团队的重要桥梁。",
+  "events": [
+    {"title": "流沙河点化沙悟净", "desc": "木吒与流沙河妖怪交战并认出其为卷帘大将，随后说明观音使命，使沙悟净等待取经人。", "source": {"work": "西游记", "locus": "第八回", "translator": null}, "canon": null},
+    {"title": "协助观音降红孩儿", "desc": "观音命木吒向李天王借天罡刀布成莲台，又派他与红孩儿交战，为最终收服圣婴大王作准备。", "source": {"work": "西游记", "locus": "第四十二回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["浑铁棍", "天罡刀"],
+  "skills": ["棍术", "佛门护法", "腾云"],
+  "domains": ["南海珞珈山", "观音护法"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/muzha.webp",
+  "thumb": "/p/xiyou/thumbs/muzha.webp"
+}

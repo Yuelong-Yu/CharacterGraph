@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "laoshu_jing",
+  "name_zh": "金鼻白毛老鼠精",
+  "name_en": "Golden-Nosed White-Haired Mouse Demon",
+  "aliases": ["金鼻白毛老鼠精", "Golden-Nosed White-Haired Mouse Demon", "地涌夫人", "Lady Earth Flow", "半截观音", "姹女"],
+  "epithet": "陷空山无底洞地涌夫人",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "金鼻白毛老鼠精是陷空山无底洞女妖，曾在灵山偷吃如来香花宝烛，被李靖、哪吒捉住后饶命，遂在洞中供奉二人为义父义兄。她变化成被绑女子混入取经队伍，趁机摄走唐僧，逼其成亲；又多次施遗鞋计、变化花鞋与替身迷惑悟空。悟空在洞中发现李天王父子牌位，持牌上天告状。李靖起初否认，哪吒提醒旧事后，父子奉旨下界收妖，将老鼠精缚回天庭。",
+  "events": [
+    {"title": "变化女子掳走唐僧", "desc": "老鼠精化作被缚美女博取唐僧同情，混入镇海寺后摄走唐僧，带入无底洞逼婚。", "source": {"work": "西游记", "locus": "第八十至八十二回", "translator": null}, "canon": null},
+    {"title": "李天王父子下界收妖", "desc": "悟空发现供奉李靖、哪吒的牌位并上天告状，李靖父子忆起旧事，奉玉帝旨意将义女缚回天庭。", "source": {"work": "西游记", "locus": "第八十三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["双股宝剑", "绣花鞋"],
+  "skills": ["遗鞋计", "替身变化", "地遁", "白鼠真身"],
+  "domains": ["陷空山", "无底洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/laoshu_jing.webp",
+  "thumb": "/p/xiyou/thumbs/laoshu_jing.webp"
+}

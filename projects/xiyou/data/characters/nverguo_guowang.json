@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "nverguo_guowang",
+  "name_zh": "女儿国国王",
+  "name_en": "Queen of the Women's Kingdom",
+  "aliases": ["女儿国国王", "Queen of the Women's Kingdom", "西梁女王", "女儿国女王"],
+  "epithet": "西梁女国国王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "女儿国国王是西梁女国的统治者，端庄聪慧，国中只有女子，靠子母河水繁衍。唐僧师徒误饮河水怀胎并化解后，女王见唐僧相貌堂堂，愿以一国之富招其为王夫。她请太师说媒，表示愿把王位让给唐僧，自己做王后。唐僧为取得通关文牒，依悟空之计假意应允，出城后才说明仍要西行。女王虽不愿放手，最终仍开关送行；紧接着蝎子精刮风摄走唐僧。她是取经路上最真挚、最著名的人间情感角色。",
+  "events": [
+    {"title": "愿以国位招赘唐僧", "desc": "女王见唐僧后倾心，请太师提亲，愿将一国之富与王位相让，与唐僧结为夫妻。", "source": {"work": "西游记", "locus": "第五十四回", "translator": null}, "canon": null},
+    {"title": "送别御弟哥哥", "desc": "唐僧借倒换关文之机出城，表明取经志愿。女王含泪送别，唐僧随即被蝎子精摄走。", "source": {"work": "西游记", "locus": "第五十四回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["治国", "外交", "识人"],
+  "domains": ["西梁女国"],
+  "mounts": ["金辇"],
+  "portrait": "/p/xiyou/portraits/nverguo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/nverguo_guowang.webp"
+}

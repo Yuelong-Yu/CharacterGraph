@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "puxian_pusa",
+  "name_zh": "普贤菩萨",
+  "name_en": "Samantabhadra Bodhisattva",
+  "aliases": ["普贤菩萨", "Samantabhadra Bodhisattva", "普贤", "Puxian"],
+  "epithet": "大行普贤菩萨",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "普贤菩萨象征广大行愿，常以六牙白象为坐骑。白象私下灵山后在狮驼岭成为二大王，与青狮、大鹏结盟，凭长鼻卷人和长枪阻拦取经团队。悟空最终请来如来，普贤随佛众降临狮驼岭，以咒语令白象放下兵器、现出原形，重新成为座下坐骑。普贤虽登场集中，却是狮驼岭三魔关系闭环中不可缺少的佛门主人。",
+  "events": [
+    {"title": "随如来降临狮驼岭", "desc": "悟空请来如来后，普贤与文殊一同到达妖城，分别认领白象与青狮。", "source": {"work": "西游记", "locus": "第七十七回", "translator": null}, "canon": null},
+    {"title": "念咒收回六牙白象", "desc": "普贤念动真言，白象丢下长枪现出六牙白象本相，伏地成为菩萨坐骑。", "source": {"work": "西游记", "locus": "第七十七回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["如意", "莲花"],
+  "skills": ["行愿佛法", "念咒收骑", "六牙白象法相"],
+  "domains": ["峨眉山", "大行法门"],
+  "mounts": ["白象精"],
+  "portrait": "/p/xiyou/portraits/puxian_pusa.webp",
+  "thumb": "/p/xiyou/thumbs/puxian_pusa.webp"
+}

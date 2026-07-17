@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "baixiang_jing",
+  "name_zh": "白象精",
+  "name_en": "White Elephant Demon",
+  "aliases": ["白象精", "White Elephant Demon", "黄牙老象", "狮驼岭二大王", "六牙白象"],
+  "epithet": "普贤坐骑 / 狮驼岭二大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "白象精是普贤菩萨座下六牙白象，下界后与青狮、金翅大鹏结拜，成为狮驼岭二大王。他体型高大，手持长枪，最强本领是柔韧有力的象鼻，能瞬间将对手卷住。悟空变化小妖打探虚实时，白象参与识破并围捕；正面交战中，他用鼻子卷住八戒，又一度缠住悟空。悟空让金箍棒在鼻孔中变粗，才逼白象松开。最终普贤随如来降临，念咒让白象放下兵器，恢复六牙白象本相。",
+  "events": [
+    {"title": "长鼻卷住八戒悟空", "desc": "白象以长枪迎战，并用象鼻先后卷住八戒、悟空；悟空在鼻孔中撑大金箍棒才得脱身。", "source": {"work": "西游记", "locus": "第七十五至七十六回", "translator": null}, "canon": null},
+    {"title": "普贤收回六牙白象", "desc": "如来围住狮驼国后，普贤念咒，白象丢下长枪现出六牙本相，重新成为菩萨坐骑。", "source": {"work": "西游记", "locus": "第七十七回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["长枪", "象鼻", "象牙"],
+  "skills": ["象鼻卷敌", "六牙白象真身", "枪术"],
+  "domains": ["狮驼岭", "狮驼洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/baixiang_jing.webp",
+  "thumb": "/p/xiyou/thumbs/baixiang_jing.webp"
+}

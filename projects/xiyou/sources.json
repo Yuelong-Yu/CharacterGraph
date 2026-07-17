@@ -233,6 +233,302 @@
       "epithet": "车迟国大国师"
     },
     {
+      "slug": "puti_zushi",
+      "name_zh": "菩提祖师",
+      "name_en": "Patriarch Subhuti",
+      "category": "immortal",
+      "era_layer": 0,
+      "epithet": "斜月三星洞祖师"
+    },
+    {
+      "slug": "taibai_jinxing",
+      "name_zh": "太白金星",
+      "name_en": "Taibai Jinxing",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "天庭招安使者"
+    },
+    {
+      "slug": "li_jing",
+      "name_zh": "托塔天王李靖",
+      "name_en": "Li Jing",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "托塔天王 / 降魔大元帅"
+    },
+    {
+      "slug": "muzha",
+      "name_zh": "木吒",
+      "name_en": "Muzha",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "观音弟子惠岸行者"
+    },
+    {
+      "slug": "mile_fo",
+      "name_zh": "弥勒佛",
+      "name_en": "Maitreya Buddha",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "东来佛祖"
+    },
+    {
+      "slug": "zhenyuan_daxian",
+      "name_zh": "镇元大仙",
+      "name_en": "Zhenyuan Daxian",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "地仙之祖"
+    },
+    {
+      "slug": "wangmu_niangniang",
+      "name_zh": "王母娘娘",
+      "name_en": "Queen Mother of the West",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "瑶池金母"
+    },
+    {
+      "slug": "change",
+      "name_zh": "嫦娥",
+      "name_en": "Chang'e",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "广寒宫太阴仙子"
+    },
+    {
+      "slug": "donghai_longwang",
+      "name_zh": "东海龙王",
+      "name_en": "Dragon King of the East Sea",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "东海广德王敖广"
+    },
+    {
+      "slug": "xihai_longwang",
+      "name_zh": "西海龙王",
+      "name_en": "Dragon King of the West Sea",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "西海广顺王敖闰"
+    },
+    {
+      "slug": "yanluo_wang",
+      "name_zh": "阎罗王",
+      "name_en": "King Yama",
+      "category": "immortal",
+      "era_layer": 1,
+      "epithet": "幽冥地府冥王"
+    },
+    {
+      "slug": "dizang_wang",
+      "name_zh": "地藏王菩萨",
+      "name_en": "Ksitigarbha Bodhisattva",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "幽冥教主"
+    },
+    {
+      "slug": "diting",
+      "name_zh": "谛听",
+      "name_en": "Diting",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "地藏王座下通灵神兽"
+    },
+    {
+      "slug": "lingji_pusa",
+      "name_zh": "灵吉菩萨",
+      "name_en": "Lingji Bodhisattva",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "小须弥山镇风菩萨"
+    },
+    {
+      "slug": "wenshu_pusa",
+      "name_zh": "文殊菩萨",
+      "name_en": "Manjusri Bodhisattva",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "大智文殊菩萨"
+    },
+    {
+      "slug": "puxian_pusa",
+      "name_zh": "普贤菩萨",
+      "name_en": "Samantabhadra Bodhisattva",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "大行普贤菩萨"
+    },
+    {
+      "slug": "lishan_laomu",
+      "name_zh": "黎山老母",
+      "name_en": "Old Mother of Mount Li",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "黎山仙府老母"
+    },
+    {
+      "slug": "pilanpo_pusa",
+      "name_zh": "毗蓝婆菩萨",
+      "name_en": "Pilanpo Bodhisattva",
+      "category": "buddha",
+      "era_layer": 2,
+      "epithet": "紫云山千花洞菩萨"
+    },
+    {
+      "slug": "maori_xingguan",
+      "name_zh": "昴日星官",
+      "name_en": "Mao Day Star Officer",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "二十八宿昴日鸡"
+    },
+    {
+      "slug": "taiyi_jiuku_tianzun",
+      "name_zh": "太乙救苦天尊",
+      "name_en": "Taiyi Jiuku Tianzun",
+      "category": "immortal",
+      "era_layer": 2,
+      "epithet": "东极青华大帝"
+    },
+    {
+      "slug": "nverguo_guowang",
+      "name_zh": "女儿国国王",
+      "name_en": "Queen of the Women's Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "西梁女国国王"
+    },
+    {
+      "slug": "baihuaxiu",
+      "name_zh": "百花羞公主",
+      "name_en": "Princess Baihuaxiu",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "宝象国公主 / 侍香玉女转世"
+    },
+    {
+      "slug": "jinchi_zhanglao",
+      "name_zh": "金池长老",
+      "name_en": "Elder Jinchi",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "观音禅院老院主"
+    },
+    {
+      "slug": "qingshi_jing",
+      "name_zh": "青狮精",
+      "name_en": "Azure Lion Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "文殊坐骑 / 狮驼岭大大王"
+    },
+    {
+      "slug": "baixiang_jing",
+      "name_zh": "白象精",
+      "name_en": "White Elephant Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "普贤坐骑 / 狮驼岭二大王"
+    },
+    {
+      "slug": "luli_daxian",
+      "name_zh": "鹿力大仙",
+      "name_en": "Deer Power Immortal",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "车迟国二国师"
+    },
+    {
+      "slug": "yangli_daxian",
+      "name_zh": "羊力大仙",
+      "name_en": "Antelope Power Immortal",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "车迟国三国师"
+    },
+    {
+      "slug": "linggan_dawang",
+      "name_zh": "灵感大王",
+      "name_en": "King of Spiritual Touch",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "通天河金鱼精"
+    },
+    {
+      "slug": "saitaisui",
+      "name_zh": "赛太岁",
+      "name_en": "Sai Tai Sui",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "麒麟山獬豸洞妖王"
+    },
+    {
+      "slug": "laoshu_jing",
+      "name_zh": "金鼻白毛老鼠精",
+      "name_en": "Golden-Nosed White-Haired Mouse Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "陷空山无底洞地涌夫人"
+    },
+    {
+      "slug": "jiutouchong",
+      "name_zh": "九头虫",
+      "name_en": "Nine-Headed Beast",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "碧波潭九头驸马"
+    },
+    {
+      "slug": "yutu_jing",
+      "name_zh": "玉兔精",
+      "name_en": "Jade Rabbit Spirit",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "广寒宫玉兔 / 天竺假公主"
+    },
+    {
+      "slug": "wansheng_gongzhu",
+      "name_zh": "万圣公主",
+      "name_en": "Wansheng Princess",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "碧波潭龙女 / 九头虫之妻"
+    },
+    {
+      "slug": "wansheng_longwang",
+      "name_zh": "万圣龙王",
+      "name_en": "Wansheng Dragon King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "乱石山碧波潭龙王"
+    },
+    {
+      "slug": "bailu_jing",
+      "name_zh": "白鹿精",
+      "name_en": "White Deer Spirit",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "比丘国国丈 / 南极寿星坐骑"
+    },
+    {
+      "slug": "huli_meihou",
+      "name_zh": "狐狸美后",
+      "name_en": "Fox Queen",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "比丘国美后"
+    },
+    {
+      "slug": "biqiu_guo_guowang",
+      "name_zh": "比丘国国王",
+      "name_en": "King of Bhiksu Kingdom",
+      "category": "mortal",
+      "era_layer": 2,
+      "epithet": "受妖道迷惑的比丘国王"
+    },
+    {
       "slug": "tang_taizong",
       "name_zh": "唐太宗",
       "name_en": "Emperor Taizong of Tang",

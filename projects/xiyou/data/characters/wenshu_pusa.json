@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "wenshu_pusa",
+  "name_zh": "文殊菩萨",
+  "name_en": "Manjusri Bodhisattva",
+  "aliases": ["文殊菩萨", "Manjusri Bodhisattva", "文殊师利", "Manjushri"],
+  "epithet": "大智文殊菩萨",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "文殊菩萨象征大智，座下坐骑是青毛狮子。乌鸡国国王曾将前来度他的文殊浸在御水河三日，文殊遂令青狮下界将国王推入井中，化身国王三年以报前怨，同时保全国运。悟空查明后，文殊现身收回青狮。狮驼岭三魔之首青狮再次为妖时，文殊与普贤随如来降临，各自收回坐骑。文殊由此连接乌鸡国、狮驼岭和佛门坐骑下界的主题。",
+  "events": [
+    {"title": "乌鸡国收回青狮", "desc": "悟空揭破假国王后，文殊说明前因，念咒使青狮现形并将其收回。", "source": {"work": "西游记", "locus": "第三十九回", "translator": null}, "canon": null},
+    {"title": "狮驼岭再收坐骑", "desc": "如来率众佛围住狮驼岭，文殊念咒制住青狮，使其伏地恢复坐骑本相。", "source": {"work": "西游记", "locus": "第七十七回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["智慧剑", "青莲"],
+  "skills": ["智慧佛法", "狮子吼", "念咒收骑"],
+  "domains": ["五台山", "大智法门"],
+  "mounts": ["青狮精"],
+  "portrait": "/p/xiyou/portraits/wenshu_pusa.webp",
+  "thumb": "/p/xiyou/thumbs/wenshu_pusa.webp"
+}

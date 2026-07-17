@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "saitaisui",
+  "name_zh": "赛太岁",
+  "name_en": "Sai Tai Sui",
+  "aliases": ["赛太岁", "Sai Tai Sui", "金毛犼", "Golden-Haired Hou", "麒麟山妖王"],
+  "epithet": "麒麟山獬豸洞妖王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "赛太岁本是观音菩萨坐骑金毛犼，趁牧童打盹挣脱金链，下界占据麒麟山獬豸洞。他掳走朱紫国金圣宫娘娘三年，拥有太上老君赠给观音的三个紫金铃：第一铃喷火，第二铃喷烟，第三铃喷黄沙。悟空变化有来有去、宫女等身份潜入洞中，先用假铃调包真铃，又借金圣宫的五色仙衣护体。赛太岁失去宝铃后败于悟空，观音现身说明坐骑来历，将其收回。",
+  "events": [
+    {"title": "掳走金圣宫娘娘", "desc": "赛太岁在朱紫国端阳节刮起妖风，掳走金圣宫娘娘，逼迫国王长期忧病。", "source": {"work": "西游记", "locus": "第六十八至六十九回", "translator": null}, "canon": null},
+    {"title": "紫金铃被悟空调包", "desc": "悟空变化潜入獬豸洞，用假铃换走三枚真紫金铃，反以火、烟、沙困住妖王，观音随后收回金毛犼。", "source": {"work": "西游记", "locus": "第七十至七十一回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["紫金铃", "宣花钺斧"],
+  "skills": ["喷火", "喷烟", "喷黄沙", "金毛犼真身"],
+  "domains": ["麒麟山", "獬豸洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/saitaisui.webp",
+  "thumb": "/p/xiyou/thumbs/saitaisui.webp"
+}

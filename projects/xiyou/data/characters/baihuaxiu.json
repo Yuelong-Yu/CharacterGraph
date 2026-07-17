@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "baihuaxiu",
+  "name_zh": "百花羞公主",
+  "name_en": "Princess Baihuaxiu",
+  "aliases": ["百花羞", "Princess Baihuaxiu", "百花羞公主", "披香殿侍香玉女"],
+  "epithet": "宝象国公主 / 侍香玉女转世",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "百花羞是宝象国三公主，前世为天庭披香殿侍香玉女，与奎木狼相爱后投胎下界。黄袍怪随之下凡，将她带到波月洞共同生活十三年并育有两个孩子。她表面是被妖怪掳走的公主，却与黄袍怪有复杂前缘；唐僧误入洞府时，百花羞暗中求情放他离开，并托带家书向父王求救。黄袍怪追至宝象国后，她在亲情、前世姻缘和子女之间备受冲突。奎木狼被召回天庭后，百花羞终于回归王宫。",
+  "events": [
+    {"title": "波月洞托书唐僧", "desc": "百花羞劝黄袍怪放走唐僧，并将家书缝在衣内，请唐僧带给宝象国父王。", "source": {"work": "西游记", "locus": "第二十九回", "translator": null}, "canon": null},
+    {"title": "前世侍香玉女姻缘", "desc": "奎木狼被召回后说明百花羞前世是披香殿玉女，两人因天庭难以相会而约定下界成婚。", "source": {"work": "西游记", "locus": "第三十一回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["周旋求情", "宫廷礼仪"],
+  "domains": ["宝象国", "波月洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/baihuaxiu.webp",
+  "thumb": "/p/xiyou/thumbs/baihuaxiu.webp"
+}

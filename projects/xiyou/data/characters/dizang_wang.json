@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "dizang_wang",
+  "name_zh": "地藏王菩萨",
+  "name_en": "Ksitigarbha Bodhisattva",
+  "aliases": ["地藏王菩萨", "Ksitigarbha Bodhisattva", "地藏王", "Dizang"],
+  "epithet": "幽冥教主",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "地藏王菩萨驻锡幽冥界翠云宫，以大愿守护地狱众生，座下神兽谛听能辨三界万物。真假美猴王一路打到地府时，地藏命谛听伏地聆听。谛听已经辨出假悟空是六耳猕猴，却担心说破后地府无人能够制伏，地藏遂建议二猴前往灵山请如来裁定。地藏王在这一情节中表现出洞察、克制与对后果的判断，是连接佛门、地府和六耳猕猴事件的关键人物。",
+  "events": [
+    {"title": "令谛听辨真假悟空", "desc": "两个悟空闹到幽冥界，地藏王命谛听伏地聆察。谛听辨明真伪，却建议不可在地府公开。", "source": {"work": "西游记", "locus": "第五十八回", "translator": null}, "canon": null},
+    {"title": "指引二猴前往灵山", "desc": "因地府无力擒住六耳猕猴，地藏王让真假悟空到如来面前分辨，最终促成妖猴现形。", "source": {"work": "西游记", "locus": "第五十八回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["锡杖", "如意宝珠"],
+  "skills": ["幽冥佛法", "超度亡魂", "大愿神通"],
+  "domains": ["翠云宫", "幽冥界"],
+  "mounts": ["谛听"],
+  "portrait": "/p/xiyou/portraits/dizang_wang.webp",
+  "thumb": "/p/xiyou/thumbs/dizang_wang.webp"
+}

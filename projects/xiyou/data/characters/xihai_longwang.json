@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "xihai_longwang",
+  "name_zh": "西海龙王",
+  "name_en": "Dragon King of the West Sea",
+  "aliases": ["西海龙王", "Dragon King of the West Sea", "敖闰", "Ao Run"],
+  "epithet": "西海广顺王敖闰",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "西海龙王敖闰是四海龙王之一、白龙马敖烈之父，居西海龙宫。敖烈纵火烧毁殿上明珠后，敖闰以忤逆罪上表天庭，玉帝判其死罪；观音救下敖烈，令其等待取经人。悟空早年向四海龙王索取披挂时，敖闰献出锁子黄金甲。西行途中，他也与其他龙王一同接受悟空召请，在红孩儿、车迟国等故事中行云布雨。西海龙王使白龙马的家庭前史与四海水族体系得以完整连接。",
+  "events": [
+    {"title": "上表告子忤逆", "desc": "三太子敖烈纵火烧了殿上明珠，敖闰上表玉帝告其忤逆；观音后来救下敖烈，使其成为取经坐骑。", "source": {"work": "西游记", "locus": "第八回", "translator": null}, "canon": null},
+    {"title": "献锁子黄金甲", "desc": "悟空向四海龙王索要披挂，西海龙王献出锁子黄金甲，与其他三海宝物配成齐天大圣战装。", "source": {"work": "西游记", "locus": "第三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["龙王宝剑", "西海令旗"],
+  "skills": ["行云布雨", "统御西海", "龙形变化"],
+  "domains": ["西海", "西海龙宫"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/xihai_longwang.webp",
+  "thumb": "/p/xiyou/thumbs/xihai_longwang.webp"
+}

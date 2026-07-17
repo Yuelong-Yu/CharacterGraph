@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "jiutouchong",
+  "name_zh": "九头虫",
+  "name_en": "Nine-Headed Beast",
+  "aliases": ["九头虫", "Nine-Headed Beast", "九头驸马", "Nine-Headed Prince Consort", "九头鸟"],
+  "epithet": "碧波潭九头驸马",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "九头虫是碧波潭万圣龙王女婿、万圣公主丈夫，原形为九头巨鸟。他帮助龙王降下血雨，盗走祭赛国金光寺佛宝舍利，又让万圣公主偷来王母九叶灵芝草温养宝物。九头虫手持月牙铲，能显出九首十八眼的巨鸟本相，一头咬住猪八戒。悟空在碧波潭巧遇二郎神，与梅山兄弟联手围攻；哮天犬咬掉九头虫一颗头，他带伤逃往北海，悟空未再追赶。九头虫是少数在原著中逃出生天的妖怪。",
+  "events": [
+    {"title": "盗取佛宝舍利", "desc": "九头虫与万圣龙王盗走金光寺塔顶舍利，使寺中无宝光、僧众遭国王惩罚。", "source": {"work": "西游记", "locus": "第六十二回", "translator": null}, "canon": null},
+    {"title": "二郎神助战断其一首", "desc": "悟空请二郎神和梅山兄弟围攻，哮天犬跃起咬掉九头虫一颗头；妖怪负伤逃往北海。", "source": {"work": "西游记", "locus": "第六十三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["月牙铲", "九首利喙"],
+  "skills": ["九头鸟真身", "水遁", "飞行", "九首擒敌"],
+  "domains": ["碧波潭", "乱石山"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jiutouchong.webp",
+  "thumb": "/p/xiyou/thumbs/jiutouchong.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "qingshi_jing",
+  "name_zh": "青狮精",
+  "name_en": "Azure Lion Demon",
+  "aliases": ["青狮精", "Azure Lion Demon", "青毛狮子", "狮驼岭大大王", "乌鸡国假国王"],
+  "epithet": "文殊坐骑 / 狮驼岭大大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "青狮精是文殊菩萨座下青毛狮子，曾两度在取经途中形成劫难。乌鸡国故事中，他将国王推入井中，变化国王治理国家三年，最终被悟空识破、由文殊收回。后来他又与白象、金翅大鹏在狮驼岭结拜为三魔，自称大大王。青狮手持钢刀，张开巨口能吞下大批天兵，也曾一口吞入孙悟空；悟空在其腹中翻腾才脱身。狮驼岭最终由如来率文殊、普贤等佛众降伏，青狮再次回到文殊座下。",
+  "events": [
+    {"title": "变化乌鸡国国王", "desc": "青狮把真国王推入井中，变化其模样执政三年；悟空救活国王后，文殊现身收回坐骑。", "source": {"work": "西游记", "locus": "第三十七至三十九回", "translator": null}, "canon": null},
+    {"title": "狮驼岭吞下悟空", "desc": "青狮张开城门般巨口吞入悟空，悟空在其腹中竖起金箍棒、翻腾威胁，迫使青狮放人。", "source": {"work": "西游记", "locus": "第七十五回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["明晃钢刀", "吞天巨口"],
+  "skills": ["变化国王", "狮口吞敌", "青狮真身"],
+  "domains": ["乌鸡国", "狮驼岭"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/qingshi_jing.webp",
+  "thumb": "/p/xiyou/thumbs/qingshi_jing.webp"
+}

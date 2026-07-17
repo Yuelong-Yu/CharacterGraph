@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "change",
+  "name_zh": "嫦娥",
+  "name_en": "Chang'e",
+  "aliases": ["嫦娥", "Chang'e", "太阴仙子", "Moon Goddess"],
+  "epithet": "广寒宫太阴仙子",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "嫦娥是广寒宫月府仙子，在《西游记》中既代表月宫女仙，也连接猪八戒与玉兔精两段重要前史。天蓬元帅在蟠桃会后醉酒闯入广寒宫，纠缠嫦娥，因而被玉帝重罚下界，错投猪胎。西行末段，玉兔偷开玉关金锁下界，冒充天竺公主；悟空将其逼出原形后，太阴星君率众嫦娥前来说明缘由，带玉兔返回月宫。嫦娥虽直接出场不多，却是猪八戒命运转折和天竺国收妖的核心人物。",
+  "events": [
+    {"title": "天蓬醉闯广寒宫", "desc": "天蓬元帅酒后纠缠嫦娥，被纠察灵官奏明玉帝，遭重责并贬下凡间，成为日后的猪八戒。", "source": {"work": "西游记", "locus": "第八回", "translator": null}, "canon": null},
+    {"title": "月宫收回玉兔", "desc": "玉兔精在天竺国败于悟空后，太阴星君率嫦娥仙子降临，带玉兔回归广寒宫。", "source": {"work": "西游记", "locus": "第九十五回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["月桂枝", "玉轮"],
+  "skills": ["太阴月华", "月宫仙舞", "腾云"],
+  "domains": ["广寒宫", "月府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/change.webp",
+  "thumb": "/p/xiyou/thumbs/change.webp"
+}

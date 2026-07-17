@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "lishan_laomu",
+  "name_zh": "黎山老母",
+  "name_en": "Old Mother of Mount Li",
+  "aliases": ["黎山老母", "Old Mother of Mount Li", "骊山老母", "Lishan Laomu"],
+  "epithet": "黎山仙府老母",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "黎山老母是道行深厚的女仙，与观音、文殊、普贤往来密切。四圣试禅时，她化作富贵寡妇，三位菩萨化作女儿，以招赘试探唐僧师徒取经意志；八戒贪恋婚姻，被吊在树上受罚。百眼魔君以千眼金光困住悟空后，黎山老母又化作送丧老妇，向悟空指出毗蓝婆菩萨住处和破解方法。她兼具考验者与指路人身份，是西行中多次推动悟空求得正确援军的隐秘仙长。",
+  "events": [
+    {"title": "四圣试禅心", "desc": "黎山老母与三位菩萨设下富贵庄院，以母女招亲试探师徒；只有八戒动心，被惩戒示众。", "source": {"work": "西游记", "locus": "第二十三回", "translator": null}, "canon": null},
+    {"title": "指点破解千眼金光", "desc": "悟空逃出金光阵后，黎山老母化作老妇，指引他到紫云山请毗蓝婆菩萨。", "source": {"work": "西游记", "locus": "第七十三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["龙头拐杖", "仙篮"],
+  "skills": ["变化老妇", "幻化庄院", "预知指引"],
+  "domains": ["黎山", "女仙法脉"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/lishan_laomu.webp",
+  "thumb": "/p/xiyou/thumbs/lishan_laomu.webp"
+}

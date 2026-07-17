@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "mile_fo",
+  "name_zh": "弥勒佛",
+  "name_en": "Maitreya Buddha",
+  "aliases": ["弥勒佛", "Maitreya Buddha", "东来佛祖", "Buddha Who Shall Succeed", "笑和尚"],
+  "epithet": "东来佛祖",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "弥勒佛又称东来佛祖，是黄眉童儿的主人，形象常为袒胸露腹、笑口常开的布袋和尚。黄眉偷走金铙和后天人种袋，在小西天设小雷音寺冒充如来，悟空遍请援军皆败。弥勒在瓜田现身，化作种瓜老人设计：让悟空变成西瓜钻入黄眉腹中，自己再以人种袋收服童儿。弥勒以轻松诙谐的方式破解全书最棘手的法宝困局，也揭示小雷音寺“伪佛”背后的真实佛门归属。",
+  "events": [
+    {"title": "瓜田点破黄眉来历", "desc": "悟空求援无门时遇见弥勒，得知黄眉是其敲磬童儿，金铙与人种袋都是佛祖宝物。", "source": {"work": "西游记", "locus": "第六十六回", "translator": null}, "canon": null},
+    {"title": "种瓜局收回童儿", "desc": "弥勒让悟空变作熟瓜被黄眉吞下，诱妖怪追出山门，再以人种袋将其收服并带回佛府。", "source": {"work": "西游记", "locus": "第六十六回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["后天人种袋", "金铙", "磬槌"],
+  "skills": ["变化种瓜老人", "人种袋收摄", "佛法神通"],
+  "domains": ["东来佛府", "未来佛"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/mile_fo.webp",
+  "thumb": "/p/xiyou/thumbs/mile_fo.webp"
+}

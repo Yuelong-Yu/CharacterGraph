@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "zhenyuan_daxian",
+  "name_zh": "镇元大仙",
+  "name_en": "Zhenyuan Daxian",
+  "aliases": ["镇元大仙", "Zhenyuan Daxian", "镇元子", "Great Immortal Zhenyuan", "地仙之祖"],
+  "epithet": "地仙之祖",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "镇元大仙是万寿山五庄观观主、地仙之祖，供奉天地二字，掌管三千年开花、三千年结果的人参果树。他与唐僧前世金蝉子有旧，吩咐清风、明月以两枚人参果款待。悟空等人偷果并推倒果树后，镇元子以袖里乾坤将取经众人连人带马擒回，无论悟空如何逃脱都能再度收摄。悟空遍访三岛神仙，最终请观音以甘露救活果树。镇元大仙与悟空化敌为友，设宴庆贺并结为兄弟。",
+  "events": [
+    {"title": "袖里乾坤擒取经众", "desc": "悟空推倒人参果树后，镇元大仙追上取经团队，以袖里乾坤将师徒与白马全部收入袖中。", "source": {"work": "西游记", "locus": "第二十五回", "translator": null}, "canon": null},
+    {"title": "果树复生与悟空结拜", "desc": "观音用净瓶甘露救活人参果树，镇元大仙设人参果会谢众仙，并与孙悟空结为兄弟。", "source": {"work": "西游记", "locus": "第二十六回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["玉麈", "袖里乾坤"],
+  "skills": ["袖里乾坤", "地仙道法", "人参果培育"],
+  "domains": ["万寿山", "五庄观", "人参果园"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/zhenyuan_daxian.webp",
+  "thumb": "/p/xiyou/thumbs/zhenyuan_daxian.webp"
+}

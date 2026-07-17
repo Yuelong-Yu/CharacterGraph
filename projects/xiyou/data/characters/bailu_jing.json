@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "bailu_jing",
+  "name_zh": "白鹿精",
+  "name_en": "White Deer Spirit",
+  "aliases": ["白鹿精", "White Deer Spirit", "比丘国国丈", "Imperial Father-in-Law", "寿星白鹿"],
+  "epithet": "比丘国国丈 / 南极寿星坐骑",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "白鹿精本是南极寿星座下白鹿，私自下界后化作道人，把白面狐狸献给比丘国王为美后，自己成为国丈。他以延寿为名迷惑国王，先用药物耗损龙体，再声称需一千一百一十一个小儿心肝作药引；全城孩童被关入鹅笼等待宰杀。悟空救走孩子并变化唐僧，诱国丈前来取心，随后现身交战。白鹿精败逃时，南极寿星赶到，以一声呼唤使其现出白鹿本相并收回。",
+  "events": [
+    {"title": "谋取一千一百一十一个童心", "desc": "白鹿精以国丈身份献药，声称用一千一百一十一个小儿心肝可治国王虚损，使全城陷入恐慌。", "source": {"work": "西游记", "locus": "第七十八回", "translator": null}, "canon": null},
+    {"title": "寿星收回白鹿", "desc": "悟空识破国丈并追至柳林，南极寿星现身呼唤，妖怪立刻现出白鹿本相伏地。", "source": {"work": "西游记", "locus": "第七十九回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["蟠龙拐杖", "延寿药丸"],
+  "skills": ["变化道人", "制药迷心", "白鹿真身"],
+  "domains": ["比丘国", "清华洞府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/bailu_jing.webp",
+  "thumb": "/p/xiyou/thumbs/bailu_jing.webp"
+}

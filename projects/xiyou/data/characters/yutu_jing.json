@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "yutu_jing",
+  "name_zh": "玉兔精",
+  "name_en": "Jade Rabbit Spirit",
+  "aliases": ["玉兔精", "Jade Rabbit Spirit", "天竺假公主", "Moon Rabbit", "玉兔"],
+  "epithet": "广寒宫玉兔 / 天竺假公主",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "玉兔精本是广寒宫捣药玉兔，因与素娥仙子有旧怨，趁太阴星君赴会时偷开玉关金锁下界。素娥投胎成为天竺国公主，玉兔将真公主摄到布金寺，自己冒充公主抛绣球招亲，选中唐僧，企图吸取元阳。悟空识破后，玉兔以捣药杵迎战并现出白兔本相。太阴星君率嫦娥仙子到来，说明前因，喝止悟空棒下留情，将玉兔抱回月宫；真公主也得以还朝。",
+  "events": [
+    {"title": "冒充公主绣球招亲", "desc": "玉兔把真公主摄往布金寺，自己在天竺国抛绣球招亲，故意击中唐僧，谋取其元阳。", "source": {"work": "西游记", "locus": "第九十三至九十四回", "translator": null}, "canon": null},
+    {"title": "太阴星君收回玉兔", "desc": "悟空打破捣药杵将妖怪逼出城外，太阴星君率嫦娥降临，玉兔现出本相被抱回广寒宫。", "source": {"work": "西游记", "locus": "第九十五回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["短棍", "捣药杵"],
+  "skills": ["变化公主", "月华遁术", "玉兔真身"],
+  "domains": ["广寒宫", "天竺国"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/yutu_jing.webp",
+  "thumb": "/p/xiyou/thumbs/yutu_jing.webp"
+}

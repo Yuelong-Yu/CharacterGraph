@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "puti_zushi",
+  "name_zh": "菩提祖师",
+  "name_en": "Patriarch Subhuti",
+  "aliases": ["菩提祖师", "Patriarch Subhuti", "须菩提祖师", "灵台方寸山祖师"],
+  "epithet": "斜月三星洞祖师",
+  "category": "immortal",
+  "era_layer": 0,
+  "bio": "菩提祖师隐居西牛贺洲灵台方寸山斜月三星洞，兼通佛道诸家法门，是孙悟空真正的启蒙恩师。石猴漂洋过海拜入门下，祖师赐名“孙悟空”，传授长生妙道、七十二般变化与筋斗云。悟空学成后在人前卖弄变化，祖师预见他日后必惹大祸，将其逐出师门，并严令不得泄露师承。菩提祖师此后不再直接登场，却奠定了悟空几乎全部核心神通，是《西游记》前世缘起层最重要的人物之一。",
+  "events": [
+    {"title": "赐名孙悟空", "desc": "石猴寻仙至斜月三星洞，祖师根据猢狲之意为他取姓孙，以门中排行赐法名悟空。", "source": {"work": "西游记", "locus": "第一回", "translator": null}, "canon": null},
+    {"title": "传授七十二变与筋斗云", "desc": "祖师暗中传悟空长生口诀、七十二般变化和筋斗云；悟空因卖弄本领被逐出师门，并被命不得说出师父姓名。", "source": {"work": "西游记", "locus": "第二回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["戒尺", "拂尘"],
+  "skills": ["长生妙道", "七十二般变化", "筋斗云传法", "预知祸福"],
+  "domains": ["灵台方寸山", "斜月三星洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/puti_zushi.webp",
+  "thumb": "/p/xiyou/thumbs/puti_zushi.webp"
+}

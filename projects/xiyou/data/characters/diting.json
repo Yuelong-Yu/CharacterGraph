@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "diting",
+  "name_zh": "谛听",
+  "name_en": "Diting",
+  "aliases": ["谛听", "Diting", "地听", "Truth-Listening Beast"],
+  "epithet": "地藏王座下通灵神兽",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "谛听是地藏王菩萨座下通灵神兽，伏地一听便能分辨三界众生的善恶贤愚与前因后果。真假美猴王来到幽冥界后，谛听受命辨认，立即知道假悟空是六耳猕猴，也知道其姓名来历。然而它判断地府没有能够擒拿此妖的力量，若当面说破反会招致祸患，因此只将答案暗告地藏王，建议二猴去灵山。谛听的选择使它不只是鉴别工具，也体现了知情之后的审慎与智慧。",
+  "events": [
+    {"title": "伏地听辨六耳猕猴", "desc": "谛听伏地片刻，便听出两个悟空的真伪，知晓六耳猕猴的本相和来历。", "source": {"work": "西游记", "locus": "第五十八回", "translator": null}, "canon": null},
+    {"title": "知而不言避祸", "desc": "谛听认为地府无人能制假悟空，不宜当面说破，遂暗告地藏王并建议前往灵山。", "source": {"work": "西游记", "locus": "第五十八回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["聆听三界", "辨识真伪", "察知因果"],
+  "domains": ["幽冥界", "翠云宫"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/diting.webp",
+  "thumb": "/p/xiyou/thumbs/diting.webp"
+}

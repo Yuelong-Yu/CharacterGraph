@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "biqiu_guo_guowang",
+  "name_zh": "比丘国国王",
+  "name_en": "King of Bhiksu Kingdom",
+  "aliases": ["比丘国国王", "King of Bhiksu Kingdom", "比丘国王", "小子城国王"],
+  "epithet": "受妖道迷惑的比丘国王",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "比丘国国王因宠爱狐狸美后而纵欲伤身，又信任白鹿精所化国丈，服用邪药求长生。国丈声称需一千一百一十一个小儿心肝，国王竟下令把全城孩子装入鹅笼，准备取心；悟空夜间施法救走孩童。唐僧入朝后，国丈又改称唐僧心肝更胜童心。悟空变化唐僧揭开胸腹，取出一串象征各种贪欲的红心，随后现形追妖。国王目睹真相后悔悟，释放僧众、救济百姓，恢复正常政务。",
+  "events": [
+    {"title": "下令鹅笼关押孩童", "desc": "国王听信国丈邪方，把一千一百一十一个孩子装入鹅笼，准备取心配制延寿药。", "source": {"work": "西游记", "locus": "第七十八回", "translator": null}, "canon": null},
+    {"title": "妖邪败露后悔悟", "desc": "悟空揭破国丈与美后真身，国王得寿星赐枣调养，悔过并重整朝政。", "source": {"work": "西游记", "locus": "第七十九回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["治国", "朝会"],
+  "domains": ["比丘国", "小子城"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/biqiu_guo_guowang.webp",
+  "thumb": "/p/xiyou/thumbs/biqiu_guo_guowang.webp"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "taiyi_jiuku_tianzun",
+  "name_zh": "太乙救苦天尊",
+  "name_en": "Taiyi Jiuku Tianzun",
+  "aliases": ["太乙救苦天尊", "Taiyi Jiuku Tianzun", "东极青华大帝", "Taiyi Savior"],
+  "epithet": "东极青华大帝",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "太乙救苦天尊居东极妙岩宫，是九灵元圣的主人，坐九色莲花宝座，具有救苦度亡之神职。狮奴偷喝轮回琼液醉倒后，九头狮子私下凡间三年，在竹节山成为群狮祖翁。悟空查明来历，到东极请天尊。天尊预先推算因果，带悟空来到九曲盘桓洞，只高声呼唤一声，威势强大的九灵元圣便立刻伏地。天尊给狮子重新戴上项圈，骑回天宫，展现主人对坐骑的绝对制约。",
+  "events": [
+    {"title": "查明九头狮私下凡间", "desc": "悟空到东极妙岩宫求助，天尊询问狮奴后得知九灵元圣已失踪三年。", "source": {"work": "西游记", "locus": "第九十回", "translator": null}, "canon": null},
+    {"title": "一声召回九灵元圣", "desc": "天尊坐九色莲花来到竹节山，呼唤狮子，九灵元圣立即伏地，被套上项圈带回东极。", "source": {"work": "西游记", "locus": "第九十回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["九色莲花", "狮子项圈", "杨柳甘露"],
+  "skills": ["救苦度亡", "莲花神光", "号令九灵"],
+  "domains": ["东极妙岩宫", "青华长乐界"],
+  "mounts": ["九灵元圣"],
+  "portrait": "/p/xiyou/portraits/taiyi_jiuku_tianzun.webp",
+  "thumb": "/p/xiyou/thumbs/taiyi_jiuku_tianzun.webp"
+}

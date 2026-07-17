@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "jinchi_zhanglao",
+  "name_zh": "金池长老",
+  "name_en": "Elder Jinchi",
+  "aliases": ["金池长老", "Elder Jinchi", "金池上人", "观音禅院老院主"],
+  "epithet": "观音禅院老院主",
+  "category": "mortal",
+  "era_layer": 2,
+  "bio": "金池长老是观音禅院二百七十岁的老院主，酷爱收藏袈裟，积累数百件华美僧衣。唐僧借宿时，悟空炫耀观音所赐锦襕袈裟，金池见宝后嫉妒贪婪，先借去观看一夜，又听从小和尚计策放火烧死师徒以夺袈裟。悟空借避火罩护住唐僧，反将火势吹遍禅院；黑熊精趁乱盗走佛衣。金池见寺院尽毁、宝衣失踪，羞惧之下撞墙身亡。他以高寿高僧身份反衬无法放下贪念，是西行早期极具警示意味的人物。",
+  "events": [
+    {"title": "贪看锦襕袈裟", "desc": "金池展示收藏袈裟后见到唐僧佛衣，自惭不如，借去观看并因贪念彻夜哭泣。", "source": {"work": "西游记", "locus": "第十六回", "translator": null}, "canon": null},
+    {"title": "纵火夺衣反毁禅院", "desc": "金池默许众僧纵火谋害唐僧，火势反烧毁整个禅院，锦襕袈裟又被黑熊精盗走，最终撞墙而死。", "source": {"work": "西游记", "locus": "第十六回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["佛门讲经", "袈裟鉴赏"],
+  "domains": ["观音禅院"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/jinchi_zhanglao.webp",
+  "thumb": "/p/xiyou/thumbs/jinchi_zhanglao.webp"
+}

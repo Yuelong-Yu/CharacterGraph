@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "linggan_dawang",
+  "name_zh": "灵感大王",
+  "name_en": "King of Spiritual Touch",
+  "aliases": ["灵感大王", "King of Spiritual Touch", "金鱼精", "Goldfish Demon", "灵感王"],
+  "epithet": "通天河金鱼精",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "灵感大王本是观音莲花池中每日听经的金鱼，趁海潮泛涨逃入通天河，居水鼋之第。他以呼风唤雪、冻结河面等法术控制陈家庄，要求村民每年献一对童男童女。悟空、八戒变作祭品进入庙宇，灵感识破后与师徒大战，又冻结通天河诱唐僧踏冰，将其沉入水府。悟空难以在水中降伏，最终请观音以未编完的紫竹篮收妖。灵感现出金鱼本相，被带回南海莲池。",
+  "events": [
+    {"title": "索要童男女祭祀", "desc": "灵感大王控制陈家庄风雨，要求每年供奉童男童女；悟空、八戒变化陈关保与一秤金赴祭。", "source": {"work": "西游记", "locus": "第四十七至四十八回", "translator": null}, "canon": null},
+    {"title": "观音竹篮收金鱼", "desc": "观音赶到通天河，以紫竹篮念咒收摄，灵感大王现出金鱼原形，被带回莲花池。", "source": {"work": "西游记", "locus": "第四十九回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["九瓣赤铜锤", "寒冰法术"],
+  "skills": ["冻结通天河", "呼风唤雪", "金鱼真身"],
+  "domains": ["通天河", "水鼋之第", "南海莲池"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/linggan_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/linggan_dawang.webp"
+}

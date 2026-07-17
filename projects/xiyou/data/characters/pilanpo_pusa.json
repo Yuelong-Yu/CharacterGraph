@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "pilanpo_pusa",
+  "name_zh": "毗蓝婆菩萨",
+  "name_en": "Pilanpo Bodhisattva",
+  "aliases": ["毗蓝婆菩萨", "Pilanpo Bodhisattva", "毗蓝婆", "Pilampo"],
+  "epithet": "紫云山千花洞菩萨",
+  "category": "buddha",
+  "era_layer": 2,
+  "bio": "毗蓝婆菩萨隐居紫云山千花洞，是昴日星官之母，长年不赴佛会。百眼魔君的千眼金光阵令悟空无计可施，黎山老母指点他前来求助。毗蓝婆取出一枚由昴日星官眼中炼成的绣花针，抛入金光便使阵势消散；又用丹药救醒中毒的唐僧、八戒和沙僧。蜈蚣精现出原形后，她将其收为看门之物。毗蓝婆以极小金针破解宏大金光，是全书以物性相克降妖的经典人物。",
+  "events": [
+    {"title": "金针破千眼金光", "desc": "毗蓝婆把昴日星官眼中炼成的绣花针抛向阵心，百眼魔君的万道金光立即消散。", "source": {"work": "西游记", "locus": "第七十三回", "translator": null}, "canon": null},
+    {"title": "救醒师徒收蜈蚣", "desc": "她以丹药解开毒茶之毒，并令百眼魔君现出大蜈蚣本相，带回千花洞看守门户。", "source": {"work": "西游记", "locus": "第七十三回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["昴日金针", "解毒丹"],
+  "skills": ["金针破光", "解毒救命", "佛法收妖"],
+  "domains": ["紫云山", "千花洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/pilanpo_pusa.webp",
+  "thumb": "/p/xiyou/thumbs/pilanpo_pusa.webp"
+}

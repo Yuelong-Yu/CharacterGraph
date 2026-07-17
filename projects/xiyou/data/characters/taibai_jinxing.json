@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "taibai_jinxing",
+  "name_zh": "太白金星",
+  "name_en": "Taibai Jinxing",
+  "aliases": ["太白金星", "Taibai Jinxing", "李长庚", "Venus Star Lord", "长庚星"],
+  "epithet": "天庭招安使者",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "太白金星是玉皇大帝近臣，白发长须，常以温和谋略化解天庭与下界的冲突。孙悟空闯龙宫、改生死簿后，众神主张征讨，太白两次主张招安，先引悟空担任弼马温，后建议封为齐天大圣。他在取经途中也多次暗中提醒或直接帮助悟空：黄风岭化作老人示警、平顶山告知前方妖魔凶险。太白金星虽然战斗不多，却贯穿大闹天宫与西行故事，是天庭最活跃的外交、传令和调停者。",
+  "events": [
+    {"title": "两次招安孙悟空", "desc": "太白向玉帝建议以招安代替征讨，两次下花果山宣旨，先授悟空弼马温，后促成齐天大圣封号。", "source": {"work": "西游记", "locus": "第三至四回", "translator": null}, "canon": null},
+    {"title": "西行途中多次示警", "desc": "太白在黄风岭、平顶山等地化身老人，为取经团队指出妖怪来历与前路危险。", "source": {"work": "西游记", "locus": "第二十一回、第三十二回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["拂尘", "玉笏"],
+  "skills": ["星遁", "变化老人", "调停宣旨"],
+  "domains": ["长庚星", "天庭外交"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/taibai_jinxing.webp",
+  "thumb": "/p/xiyou/thumbs/taibai_jinxing.webp"
+}

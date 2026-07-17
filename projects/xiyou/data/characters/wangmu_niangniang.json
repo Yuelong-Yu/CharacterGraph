@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "wangmu_niangniang",
+  "name_zh": "王母娘娘",
+  "name_en": "Queen Mother of the West",
+  "aliases": ["王母娘娘", "Queen Mother of the West", "西王母", "王母"],
+  "epithet": "瑶池金母",
+  "category": "immortal",
+  "era_layer": 1,
+  "bio": "王母娘娘是天庭瑶池女仙之主，掌管蟠桃园和蟠桃胜会。园中蟠桃分三千年、六千年、九千年成熟，分别具有轻身健体、长生不老、与天地齐寿的神效。孙悟空任齐天大圣后被派看守蟠桃园，却偷吃熟桃；得知王母举办蟠桃会未邀请自己，又假传旨意骗走赴会群仙，偷饮仙酒并转入兜率宫。王母派七衣仙女采桃这一事件，直接触发悟空从偷桃到再次大闹天宫的关键转折。",
+  "events": [
+    {"title": "举办蟠桃胜会", "desc": "王母在瑶池设蟠桃大会，命七衣仙女到果园采桃，邀请诸天神佛赴宴。", "source": {"work": "西游记", "locus": "第五回", "translator": null}, "canon": null},
+    {"title": "悟空偷桃乱会", "desc": "悟空偷吃蟠桃，又因未获邀请而定住仙女、骗走赴会群仙，闯入瑶池偷饮御酒，搅乱蟠桃会。", "source": {"work": "西游记", "locus": "第五回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["蟠桃仙枝", "玉如意"],
+  "skills": ["统御女仙", "瑶池仙法", "培育蟠桃"],
+  "domains": ["瑶池", "蟠桃园", "女仙之首"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/wangmu_niangniang.webp",
+  "thumb": "/p/xiyou/thumbs/wangmu_niangniang.webp"
+}

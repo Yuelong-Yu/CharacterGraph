@@ -1,0 +1,22 @@
+{
+  "schema_version": 3,
+  "id": "maori_xingguan",
+  "name_zh": "昴日星官",
+  "name_en": "Mao Day Star Officer",
+  "aliases": ["昴日星官", "Mao Day Star Officer", "昴日鸡", "Rooster Star", "昴宿"],
+  "epithet": "二十八宿昴日鸡",
+  "category": "immortal",
+  "era_layer": 2,
+  "bio": "昴日星官是二十八宿之一，本相为六七尺高的双冠大公鸡，也是毗蓝婆菩萨之子。蝎子精的倒马毒桩连如来、悟空都曾受伤，观音指出只有昴日星官能够克制。悟空到光明宫请来星官，他先现人形立于山坡，随后显出大公鸡本相，对着蝎子精连续长鸣。第一声令妖怪现形，第二声使其浑身酥软，当场死于坡前。昴日星官体现生肖天敌和星宿神力相结合的降妖逻辑。",
+  "events": [
+    {"title": "奉请前往毒敌山", "desc": "观音指明蝎子精的克星后，悟空到光明宫请昴日星官下界相助。", "source": {"work": "西游记", "locus": "第五十五回", "translator": null}, "canon": null},
+    {"title": "鸡鸣降伏蝎子精", "desc": "星官显出双冠大公鸡本相，两声长鸣令蝎子精现形、酥软而死，破解倒马毒桩。", "source": {"work": "西游记", "locus": "第五十五回", "translator": null}, "canon": null}
+  ],
+  "quotes": [],
+  "weapons": ["星宿令牌", "鸡鸣神音"],
+  "skills": ["昴宿神光", "破邪鸡鸣", "大公鸡真身"],
+  "domains": ["光明宫", "二十八宿"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/maori_xingguan.webp",
+  "thumb": "/p/xiyou/thumbs/maori_xingguan.webp"
+}
