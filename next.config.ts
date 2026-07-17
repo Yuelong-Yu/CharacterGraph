@@ -6,6 +6,7 @@ const config: NextConfig = {
   basePath,
   outputFileTracingRoot: process.cwd(),
   reactStrictMode: true,
+  transpilePackages: ["@chronchaos/auth-registration"],
   images: {
     formats: ["image/webp"],
   },

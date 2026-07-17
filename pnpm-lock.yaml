@@ -11,6 +11,9 @@ importers:
       '@anthropic-ai/sdk':
         specifier: ^0.111.0
         version: 0.111.0(zod@3.25.76)
+      '@chronchaos/auth-registration':
+        specifier: file:../chronchaos_gpt/packages/auth-registration
+        version: file:../chronchaos_gpt/packages/auth-registration(react@19.2.7)
       '@dagrejs/dagre':
         specifier: ^1.1.4
         version: 1.1.8
@@ -121,6 +124,11 @@ packages:
   '@bcoe/v8-coverage@1.0.2':
     resolution: {integrity: sha512-6zABk/ECA/QYSCQ1NGiVwwbQerUCZ+TQbp64Q3AgmfNvurHH0j8TtXa1qbShXA6qqkpAj4V5W8pP6mLe1mcMqA==}
     engines: {node: '>=18'}
+
+  '@chronchaos/auth-registration@file:../chronchaos_gpt/packages/auth-registration':
+    resolution: {directory: ../chronchaos_gpt/packages/auth-registration, type: directory}
+    peerDependencies:
+      react: '>=19'
 
   '@dagrejs/dagre@1.1.8':
     resolution: {integrity: sha512-5SEDlndt4W/LaVzPYJW+bSmSEZc9EzTf8rJ20WCKvjS5EAZAN0b+x0Yww7VMT4R3Wootkg+X9bUfUxazYw6Blw==}
@@ -2582,6 +2590,10 @@ snapshots:
       '@babel/helper-validator-identifier': 7.29.7
 
   '@bcoe/v8-coverage@1.0.2': {}
+
+  '@chronchaos/auth-registration@file:../chronchaos_gpt/packages/auth-registration(react@19.2.7)':
+    dependencies:
+      react: 19.2.7
 
   '@dagrejs/dagre@1.1.8':
     dependencies:

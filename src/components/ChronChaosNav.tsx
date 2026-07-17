@@ -1,6 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import {
+  buildRegistrationRequest,
+  isRegistrationComplete,
+  normalizeRegistrationValues
+} from "@chronchaos/auth-registration/contract";
+import type { RegistrationValues } from "@chronchaos/auth-registration/contract";
+import { RegistrationFields } from "@chronchaos/auth-registration/react";
 import { BehaviorCaptcha } from "@/components/BehaviorCaptcha";
 import type { SessionUser } from "@/lib/auth";
 
@@ -14,9 +21,7 @@ export function ChronChaosNav() {
   const [guideOpen, setGuideOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [upgradeOpen, setUpgradeOpen] = useState(false);
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [registration, setRegistration] = useState<RegistrationValues>(() => normalizeRegistrationValues());
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
   const [notificationCount, setNotificationCount] = useState(0);
@@ -54,7 +59,7 @@ export function ChronChaosNav() {
   }, [user]);
 
   async function login() {
-    if (!username.trim() || !password) {
+    if (!registration.username.trim() || !registration.password) {
       setMessage("请输入用户名和密码");
       return;
     }
@@ -63,7 +68,10 @@ export function ChronChaosNav() {
     const response = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username: username.trim(), password }),
+      body: JSON.stringify({
+        username: registration.username.trim(),
+        password: registration.password
+      }),
     });
     const payload = await response.json().catch(() => ({})) as { user?: SessionUser; error?: string };
     if (!response.ok || !payload.user) {
@@ -73,14 +81,13 @@ export function ChronChaosNav() {
     }
     setUser(payload.user);
     setLoginOpen(false);
-    setUsername("");
-    setPassword("");
+    setRegistration(normalizeRegistrationValues());
     setBusy(false);
     window.dispatchEvent(new Event(CHRONCHAOS_AUTH_CHANGE_EVENT));
   }
 
   function beginRegistration() {
-    if (!username.trim() || !email.trim() || !password) {
+    if (!isRegistrationComplete(registration)) {
       setMessage("请输入用户名、Email 和密码");
       return;
     }
@@ -94,13 +101,10 @@ export function ChronChaosNav() {
     const response = await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: username.trim(),
-        email: email.trim(),
-        password,
+      body: JSON.stringify(buildRegistrationRequest(registration, {
         temporaryReaderId: window.localStorage.getItem("chron-reader-id") || undefined,
         behaviorCaptchaToken,
-      }),
+      })),
     });
     const payload = await response.json().catch(() => ({})) as { user?: SessionUser; error?: string };
     if (!response.ok || !payload.user) {
@@ -110,9 +114,7 @@ export function ChronChaosNav() {
     }
     setUser(payload.user);
     setRegisterOpen(false);
-    setUsername("");
-    setEmail("");
-    setPassword("");
+    setRegistration(normalizeRegistrationValues());
     setBusy(false);
     window.dispatchEvent(new Event(CHRONCHAOS_AUTH_CHANGE_EVENT));
   }
@@ -193,10 +195,14 @@ export function ChronChaosNav() {
               {loginOpen && (
                 <div className="chron-popover chron-login-popover">
                   <strong>登录 ChronChaos</strong>
-                  <input value={username} onChange={(event) => setUsername(event.target.value)} placeholder="用户名" />
                   <input
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
+                    value={registration.username}
+                    onChange={(event) => setRegistration({ ...registration, username: event.target.value })}
+                    placeholder="用户名"
+                  />
+                  <input
+                    value={registration.password}
+                    onChange={(event) => setRegistration({ ...registration, password: event.target.value })}
                     onKeyDown={(event) => { if (event.key === "Enter") void login(); }}
                     placeholder="密码"
                     type="password"
@@ -221,20 +227,11 @@ export function ChronChaosNav() {
               {registerOpen && (
                 <div className="chron-popover chron-login-popover">
                   <strong>注册 ChronChaos</strong>
-                  <input value={username} onChange={(event) => setUsername(event.target.value)} placeholder="用户名" />
-                  <input
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                    placeholder="Email"
-                    required
-                    type="email"
-                  />
-                  <input
-                    value={password}
-                    onChange={(event) => setPassword(event.target.value)}
-                    onKeyDown={(event) => { if (event.key === "Enter") beginRegistration(); }}
-                    placeholder="密码"
-                    type="password"
+                  <RegistrationFields
+                    onChange={setRegistration}
+                    onPasswordKeyDown={(event) => { if (event.key === "Enter") beginRegistration(); }}
+                    placeholders={{ username: "用户名", password: "密码" }}
+                    value={registration}
                   />
                   <button className="chron-primary-button" disabled={busy} type="button" onClick={beginRegistration}>
                     {busy ? "注册中…" : "创建账号"}

@@ -36,7 +36,13 @@
 
 ## 快速开始
 
+CharacterGraph 通过相邻的 `chronchaos_gpt/packages/auth-registration`
+共享注册 contract 与表单字段。请将两个仓库分别以 `chronchaos_gpt/` 和
+`CharacterGraph/` 的名称放在同一父目录下，并先安装 `chronchaos_gpt`。
+
 ```bash
+cd ../chronchaos_gpt && npm install
+cd ../CharacterGraph
 pnpm install
 pnpm dev
 ```

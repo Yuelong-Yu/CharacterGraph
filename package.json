@@ -19,6 +19,7 @@
     "db:studio": "prisma studio"
   },
   "dependencies": {
+    "@chronchaos/auth-registration": "file:../chronchaos_gpt/packages/auth-registration",
     "@anthropic-ai/sdk": "^0.111.0",
     "@dagrejs/dagre": "^1.1.4",
     "@prisma/client": "6.19.3",
