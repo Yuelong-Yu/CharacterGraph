@@ -37,6 +37,76 @@ export interface SystemPromptOptions {
   knownCharacters?: Array<{ id: string; name_zh: string }>;
 }
 
+function equalPromptValue(left: unknown, right: unknown): boolean {
+  return JSON.stringify(left) === JSON.stringify(right);
+}
+
+function changedFields(
+  canonical: Record<string, unknown>,
+  branch: Record<string, unknown>,
+): Record<string, unknown> {
+  return Object.fromEntries(
+    Object.entries(branch).filter(([key, value]) => (
+      key !== "id" && !equalPromptValue(canonical[key], value)
+    )),
+  );
+}
+
+function collectionDelta<T extends { id: string }>(
+  canonicalItems: T[],
+  branchItems: T[],
+): Record<string, unknown> | null {
+  const canonicalById = new Map(canonicalItems.map((item) => [item.id, item]));
+  const branchById = new Map(branchItems.map((item) => [item.id, item]));
+  const added = branchItems.filter((item) => !canonicalById.has(item.id));
+  const removedIds = canonicalItems
+    .filter((item) => !branchById.has(item.id))
+    .map((item) => item.id);
+  const modified = branchItems.flatMap((item) => {
+    const canonicalItem = canonicalById.get(item.id);
+    if (!canonicalItem) return [];
+    const changes = changedFields(
+      canonicalItem as unknown as Record<string, unknown>,
+      item as unknown as Record<string, unknown>,
+    );
+    return Object.keys(changes).length > 0 ? [{ id: item.id, changes }] : [];
+  });
+
+  const delta: Record<string, unknown> = {};
+  if (added.length > 0) delta.added = added;
+  if (removedIds.length > 0) delta.removedIds = removedIds;
+  if (modified.length > 0) delta.modified = modified;
+  return Object.keys(delta).length > 0 ? delta : null;
+}
+
+/** 只序列化当前分支相对原典发生变化的字段，避免重复发送完整子图。 */
+function formatBranchDeltaForPrompt(
+  canonicalSubset: GraphSubset,
+  branchSubset: GraphSubset,
+): string {
+  const coreChanges = changedFields(
+    canonicalSubset.core as unknown as Record<string, unknown>,
+    branchSubset.core as unknown as Record<string, unknown>,
+  );
+  const delta: Record<string, unknown> = {};
+  if (Object.keys(coreChanges).length > 0) {
+    delta.core = { id: branchSubset.core.id, changes: coreChanges };
+  }
+  const collections = {
+    neighbors: collectionDelta(canonicalSubset.neighbors, branchSubset.neighbors),
+    secondDegree: collectionDelta(canonicalSubset.secondDegree, branchSubset.secondDegree),
+    artifacts: collectionDelta(canonicalSubset.artifacts, branchSubset.artifacts),
+  };
+  for (const [key, value] of Object.entries(collections)) {
+    if (value) delta[key] = value;
+  }
+  if (Object.keys(delta).length === 0) {
+    delta.status = "当前分支子图与不可变原典子图一致";
+  }
+
+  return JSON.stringify(delta, null, 2);
+}
+
 /**
  * 构建 system prompt：角色定义 + 图谱子集 + 标注规则 + 输出格式 + 合法 category/relationType 清单
  */
@@ -48,7 +118,7 @@ export function buildSystemPrompt(
   const charCategories = Object.keys(config.characterCategories).join("、");
   const relTypes = Object.keys(config.relationTypes).join("、");
   const branchState = options.branchSubset
-    ? formatSubsetForPrompt(options.branchSubset)
+    ? formatBranchDeltaForPrompt(canonicalSubset, options.branchSubset)
     : "（首轮推演，尚无历史分支状态）";
   const knownCharacters = options.knownCharacters?.length
     ? options.knownCharacters.map((c) => `${c.id}:${c.name_zh}`).join("、")
@@ -65,7 +135,7 @@ export function buildSystemPrompt(
 # 不可变原典图谱子集
 ${formatSubsetForPrompt(canonicalSubset)}
 
-# 当前分支状态（假设）
+# 当前分支相对原典的变化（假设）
 ${branchState}
 
 # 已存在人物索引
@@ -74,7 +144,7 @@ ${knownCharacters}
 # 标注规则（严格遵守）
 每段叙事开头必须加标签：
 - 【原典】完全基于原著/史实的内容，未做任何推演。只有不可变原典图谱子集中的 events/bio 才能作为原典依据。
-- 【假设】用户输入的分支前提，或前几轮已经在当前分支成立的内容。即使它出现在“当前分支状态”的 events/bio 中，也绝不能标成原典。
+- 【假设】用户输入的分支前提，或前几轮已经在当前分支成立的内容。即使它出现在“当前分支相对原典的变化”中，也绝不能标成原典。
 - 【推演】本轮基于原典和假设进行的合理推导，虽未发生但符合人物性格和背景。
 - 【杜撰】完全创造性内容，用于填补叙事空白或推进情节。
 

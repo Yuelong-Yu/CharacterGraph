@@ -31,6 +31,27 @@ function makeSubset(eventTitle: string): GraphSubset {
   };
 }
 
+function makeNeighbor(
+  id: string,
+  name: string,
+  relationType: string,
+): GraphSubset["neighbors"][number] {
+  return {
+    id,
+    name_zh: name,
+    name_en: name,
+    category: "liangshan",
+    epithet: null,
+    era_layer: 1,
+    relation: {
+      id: `song_jiang-${id}`,
+      primary_type: relationType,
+      composite_types: [],
+      events: [],
+    },
+  };
+}
+
 const testConfig = {
   schema_version: 3,
   slug: "test",
@@ -351,19 +372,50 @@ no labels here
 });
 
 describe("multi-turn prompt provenance", () => {
-  it("separates immutable canon from the current branch state", () => {
-    const prompt = buildSystemPrompt(makeSubset("原典事件"), testConfig, {
-      branchSubset: makeSubset("上一轮杜撰事件"),
+  it("separates immutable canon from a compact current branch delta", () => {
+    const canonicalSubset = makeSubset("原典事件");
+    canonicalSubset.core.bio = "这段不可变原典简介只能出现一次";
+    const branchSubset = makeSubset("上一轮杜撰事件");
+    branchSubset.core.bio = canonicalSubset.core.bio;
+
+    const prompt = buildSystemPrompt(canonicalSubset, testConfig, {
+      branchSubset,
       knownCharacters: [{ id: "gao_qiu", name_zh: "高俅" }],
     });
 
     expect(prompt).toContain("# 不可变原典图谱子集");
-    expect(prompt).toContain("# 当前分支状态（假设）");
+    expect(prompt).toContain("# 当前分支相对原典的变化（假设）");
     expect(prompt).toContain("原典事件");
     expect(prompt).toContain("上一轮杜撰事件");
+    expect(prompt.match(/这段不可变原典简介只能出现一次/g)).toHaveLength(1);
+    expect(prompt).toContain('"core"');
+    expect(prompt).toContain('"changes"');
     expect(prompt).toContain("只有不可变原典图谱子集");
     expect(prompt).toContain("gao_qiu:高俅");
     expect(prompt).toContain("source.work 必须写成对应的“著作名-改编”");
+  });
+
+  it("describes collection additions, removals, and modifications in the branch delta", () => {
+    const canonicalSubset = makeSubset("原典事件");
+    canonicalSubset.neighbors = [
+      makeNeighbor("wu_yong", "吴用", "ally"),
+      makeNeighbor("lin_chong", "林冲", "ally"),
+    ];
+    const branchSubset = makeSubset("原典事件");
+    branchSubset.neighbors = [
+      makeNeighbor("wu_yong", "吴用", "rival"),
+      makeNeighbor("lu_junyi", "卢俊义", "ally"),
+    ];
+
+    const prompt = buildSystemPrompt(canonicalSubset, testConfig, { branchSubset });
+
+    expect(prompt).toContain('"neighbors"');
+    expect(prompt).toContain('"added"');
+    expect(prompt).toContain('"lu_junyi"');
+    expect(prompt).toContain('"removedIds"');
+    expect(prompt).toContain('"lin_chong"');
+    expect(prompt).toContain('"modified"');
+    expect(prompt).toContain('"primary_type": "rival"');
   });
 
   it("feeds every prior narrative to the next turn as 假设", () => {
