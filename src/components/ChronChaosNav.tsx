@@ -15,6 +15,7 @@ export function ChronChaosNav() {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
   const [upgradeOpen, setUpgradeOpen] = useState(false);
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
@@ -79,8 +80,8 @@ export function ChronChaosNav() {
   }
 
   function beginRegistration() {
-    if (!username.trim() || !password) {
-      setMessage("请输入用户名和密码");
+    if (!username.trim() || !email.trim() || !password) {
+      setMessage("请输入用户名、Email 和密码");
       return;
     }
     setMessage("");
@@ -95,6 +96,7 @@ export function ChronChaosNav() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         username: username.trim(),
+        email: email.trim(),
         password,
         temporaryReaderId: window.localStorage.getItem("chron-reader-id") || undefined,
         behaviorCaptchaToken,
@@ -109,6 +111,7 @@ export function ChronChaosNav() {
     setUser(payload.user);
     setRegisterOpen(false);
     setUsername("");
+    setEmail("");
     setPassword("");
     setBusy(false);
     window.dispatchEvent(new Event(CHRONCHAOS_AUTH_CHANGE_EVENT));
@@ -219,6 +222,13 @@ export function ChronChaosNav() {
                 <div className="chron-popover chron-login-popover">
                   <strong>注册 ChronChaos</strong>
                   <input value={username} onChange={(event) => setUsername(event.target.value)} placeholder="用户名" />
+                  <input
+                    value={email}
+                    onChange={(event) => setEmail(event.target.value)}
+                    placeholder="Email"
+                    required
+                    type="email"
+                  />
                   <input
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
