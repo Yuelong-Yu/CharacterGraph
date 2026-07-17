@@ -171,7 +171,6 @@ export function ChronChaosNav() {
                   <button type="button" onClick={() => { setUpgradeOpen(true); setUserMenuOpen(false); }}>
                     <CrownIcon />升级用户
                   </button>
-                  <a href="/messages"><BellIcon />消息中心</a>
                   <button disabled={busy} type="button" onClick={() => void logout()}>
                     <LogoutIcon />退出登录
                   </button>
