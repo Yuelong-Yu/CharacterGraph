@@ -1,0 +1,132 @@
+{
+  "schema_version": 3,
+  "id": "huang_zhong",
+  "name_zh": "黄忠",
+  "name_en": "Huang Zhong",
+  "aliases": [
+    "汉升",
+    "Hansheng",
+    "刚侯"
+  ],
+  "epithet": "老当益壮·后将军",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "黄忠（？—220年），字汉升，南阳（今河南南阳）人。东汉末年刘备麾下名将。初为刘表部将，任中郎将，奉命与刘磐共守长沙。刘表死后，刘琮投降曹操，黄忠被任命为裨将军，仍留长沙。赤壁之战后，刘备攻占荆州南部，黄忠随长沙太守韩玄归顺刘备。此后随刘备入蜀，参与攻取益州之战，常先登陷阵，勇冠三军。益州平定后，被拜为讨虏将军。建安二十二年（217年），刘备进攻汉中，黄忠随征。二十四年（219年），在定军山之战中，黄忠率军突袭曹军，阵斩魏将夏侯渊，大获全胜，被升为征西将军。同年，刘备称汉中王，欲封黄忠为后将军，与关羽、张飞、马超同列。诸葛亮担心关羽不服，刘备仍坚持任命，并派费诗前往荆州解释。黄忠受封后将军，赐关内侯。章武元年（220年），黄忠病逝，追谥刚侯。其子黄叙早逝，无后。黄忠在后世被誉为“老当益壮”的典型，在《三国演义》中被列为五虎上将之一，其勇猛善战、箭术高超的形象深入人心。",
+  "events": [
+    {
+      "title": "初仕刘表守长沙",
+      "desc": "黄忠最初在刘表麾下担任中郎将，与刘磐共同镇守长沙郡。刘表去世后，刘琮投降曹操，黄忠被任命为裨将军，继续在长沙任职。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "归顺刘备",
+      "desc": "赤壁之战后，刘备与孙权联军夺取荆州南部，长沙太守韩玄投降，黄忠因此转投刘备麾下。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻取益州先登陷阵",
+      "desc": "刘备入蜀夺取益州期间，黄忠常率先冲入敌阵，勇猛无匹，为攻占益州立下战功，战后被任命为讨虏将军。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "定军山之战阵斩夏侯渊",
+      "desc": "建安二十四年（219年），黄忠在定军山之战中率军发动突袭，击溃曹军，斩杀魏军主帅夏侯渊，为刘备夺取汉中奠定基础。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "拜征西将军",
+      "desc": "因定军山大捷，黄忠被刘备拜为征西将军，以示嘉奖。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "封后将军赐关内侯",
+      "desc": "刘备称汉中王后，欲封黄忠为后将军，与关羽、张飞、马超同列，虽有诸葛亮劝阻，刘备仍坚持，并赐关内侯爵位。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "病逝追谥刚侯",
+      "desc": "黄忠于公元220年病逝，具体死因不详。260年，后主刘禅追谥其为刚侯。其子黄叙早逝，无后。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "小说中被列为五虎上将",
+      "desc": "在《三国演义》中，刘备称汉中王后，封黄忠为五虎上将之一，与关羽、张飞、赵云、马超并列。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "小说中战死夷陵之战",
+      "desc": "在《三国演义》中，黄忠随刘备征讨东吴，在夷陵之战中中箭受伤，不治身亡，与历史中的病逝不同。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "黄忠、赵云强挚壮猛，并作爪牙，其灌、滕之徒欤？",
+      "source": {
+        "work": "《三国志》",
+        "locus": "黄忠传",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "冲锋陷阵",
+    "阵斩敌将",
+    "箭术高超"
+  ],
+  "domains": [
+    "军事",
+    "武勇",
+    "防御"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/huang_zhong.webp",
+  "thumb": "/p/sanguo/thumbs/huang_zhong.webp"
+}

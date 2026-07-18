@@ -1,0 +1,75 @@
+{
+  "schema_version": 3,
+  "id": "zhurong_furen",
+  "name_zh": "祝融夫人",
+  "name_en": "Lady Zhurong",
+  "aliases": [
+    "祝融夫人",
+    "Lady Zhurong",
+    "Madam Zhurong",
+    "Zhu Rong"
+  ],
+  "epithet": "南中女将·火神之后",
+  "category": "qun",
+  "era_layer": 3,
+  "bio": "祝融夫人是《三国演义》中的虚构人物，南蛮首领孟获之妻，传说为火神祝融氏后裔。她以丈八长标为主武器，背插五口飞刀，善使飞刀百发百中，是小说中唯一正式上战场的女性。诸葛亮南征时，祝融夫人与孟获共同抵抗蜀军。在三江城战役中，她用飞刀击伤张嶷左臂，并设绊马索生擒张嶷和马忠。后因追击辱骂蜀兵而深入险地，被马岱以绊马索俘获。诸葛亮以礼相待，释放她并提议换俘，孟获同意后她返回。此后祝融夫人又先后两次被蜀军俘获，最终在孟获被七擒七纵后，随孟获归顺蜀汉，继续统治南中地区，不再反叛。她的事迹主要见于《三国演义》第九十回。",
+  "events": [
+    {
+      "title": "三江城之战，飞刀伤敌将",
+      "desc": "祝融夫人率军与蜀军交战，使用飞刀击伤张嶷左臂，并设绊马索生擒张嶷和马忠，展现其武艺与谋略。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第九十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "追击蜀军，中计被俘",
+      "desc": "祝融夫人追击辱骂蜀兵的魏延，深入山谷，被马岱以绊马索擒获，押送至蜀营。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第九十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "换俘释放，返回孟获",
+      "desc": "诸葛亮礼待祝融夫人，提议用她换回被俘的张嶷和马忠，孟获同意，祝融夫人得以返回。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第九十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "再次被俘，最终归顺",
+      "desc": "祝融夫人与孟获轻信假情报，误以为蜀军已败，倾巢而出，却遭蜀军伏击，再次被俘。经七擒七纵后，随孟获归顺蜀汉。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第九十回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "丈八长标",
+    "飞刀"
+  ],
+  "skills": [
+    "投掷飞刀",
+    "诱敌追击",
+    "统领军队"
+  ],
+  "domains": [
+    "军事",
+    "南中地区"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhurong_furen.webp",
+  "thumb": "/p/sanguo/thumbs/zhurong_furen.webp"
+}

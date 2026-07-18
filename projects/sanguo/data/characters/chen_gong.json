@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "id": "chen_gong",
+  "name_zh": "陈宫",
+  "name_en": "Chen Gong",
+  "aliases": [
+    "公台",
+    "Gongtai",
+    "Chen Gong"
+  ],
+  "epithet": "吕布谋主·公台",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "陈宫（？－199年2月7日），字公台，东郡东武阳人，东汉末年吕布帐下首席谋士。性情刚直，足智多谋，年少时与海内知名之士相互结交。初平三年（192年），兖州刺史刘岱在讨伐青州黄巾时战死，陈宫等人主张曹操接任兖州牧，因而被曹操视为心腹。后来，陈宫游说张邈背叛曹操迎吕布入兖州，辅助吕布攻打曹操并先后取得兖州与徐州。下邳城中，吕布不听陈宫两面互补之计，以致失败。陈宫战败后，随吕布等一同被曹操所擒，拒绝曹操招降，决意赴死。曹操感其忠义，厚待其家人。",
+  "events": [
+    {
+      "title": "游说曹操入主兖州",
+      "desc": "初平三年（192年），兖州刺史刘岱战死，州中无主。陈宫等人游说曹操接任兖州牧，为曹操日后的崛起奠定基础。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "背叛曹操迎吕布",
+      "desc": "兴平元年（194年），曹操征讨徐州陶谦，陈宫与张邈趁机背叛曹操，迎吕布入兖州，迅速占领大部分地区。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "濮阳之战劝谏吕布",
+      "desc": "曹操回军围攻濮阳，陈宫劝吕布主动出击，但吕布听信妻子之言，坚守不出，最终因粮荒撤退。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "下邳之战献策",
+      "desc": "吕布被曹操围困于下邳，陈宫建议吕布出城屯兵，互为犄角，但吕布不听，导致失败。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被俘拒降赴死",
+      "desc": "下邳城破，陈宫被俘。曹操念及旧情劝降，陈宫拒绝，慷慨赴死。曹操为之流泪，并厚养其家人。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义：弃官追随曹操",
+      "desc": "在《三国演义》中，陈宫时任中牟县令，因敬佩曹操刺杀董卓的义举，弃官追随曹操。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义：目睹杀吕伯奢后离去",
+      "desc": "途中曹操误杀吕伯奢全家，并说出“宁教我负天下人，休教天下人负我”，陈宫心寒，夜离曹操。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义：濮阳诱敌计",
+      "desc": "曹操围攻濮阳，陈宫设计诈降，诱曹操入城，几乎将其围杀。曹操作战失败，险些被吕布所擒。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/chen_gong.webp",
+  "thumb": "/p/sanguo/thumbs/chen_gong.webp"
+}

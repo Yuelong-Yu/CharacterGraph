@@ -1,0 +1,103 @@
+{
+  "schema_version": 3,
+  "id": "wang_ping",
+  "name_zh": "王平",
+  "name_en": "Wang Ping",
+  "aliases": [
+    "何平",
+    "子均",
+    "Zijun"
+  ],
+  "epithet": "蜀汉镇北大将军",
+  "category": "shu",
+  "era_layer": 3,
+  "bio": "王平（？—248年），字子均，巴西宕渠人，三国时期蜀汉将领。早年依附巴地首领杜濩、朴胡，后随其归附曹操，在夏侯渊麾下任代理校尉。219年，汉中之战中王平脱离曹魏投奔刘备，被任命为牙门将、裨将军。他虽出身行伍、不识字，但善于听取下属意见，治军严谨，以纪律严明著称。228年，随马谡守街亭，王平力劝马谡勿屯兵山上，马谡不听致败；王平率千余士兵击鼓疑兵，收拢残兵，保全力量，获诸葛亮赏识，升任讨寇将军。231年，卤城之战中王平坚守阵地，成功击退张郃的进攻。234年，诸葛亮去世后，魏延与杨仪内讧，王平奉命率军平定魏延之乱，因功任后典军、安汉将军、汉中太守。237年，接替吴懿任汉中都督。244年，魏将曹爽率十万大军攻汉中，王平以不足三万兵力，采纳刘敏建议，占据兴势山险要，坚壁清野，最终等来费祎援军，迫使魏军撤退。此后升任镇北大将军，继续统领汉中防务。王平一生忠诚勇敢，虽因文化程度低而自卑，但处理军务条理清晰，常令他人诵读史书并讨论。他与邓芝、马忠并称，各有功绩。248年去世，其子王训袭爵。",
+  "events": [
+    {
+      "title": "街亭劝谏与补救",
+      "desc": "228年，诸葛亮首次北伐，马谡任先锋，王平为其副将。马谡违背诸葛亮部署，屯兵山上，王平反复劝谏，马谡不听。后魏将张郃切断水源，蜀军溃败。王平率千余军士擂鼓造势，使张郃疑有伏兵不敢追击，得以收拢残兵、运送物资，为失败保存了最后力量。诸葛亮论功，王平被提升为讨寇将军。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "卤城防御张郃",
+      "desc": "231年，诸葛亮第四次北伐，派王平驻守卤城以南的山丘。司马懿率主力攻诸葛亮，张郃则进攻王平。王平凭借坚固防御，成功抵挡住张郃的猛攻，为蜀军主力赢得时间，最终迫使魏军退却。此战再次展现了王平出色的防御能力。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定魏延之乱",
+      "desc": "234年，诸葛亮病逝五丈原，魏延与杨仪因指挥权爆发冲突，魏延率军阻断蜀军归路。杨仪派王平率军迎战。王平阵前斥责魏延：‘丞相刚去世，尸骨未寒，你怎敢如此！’魏延部众知理亏，瞬间溃散，魏延逃往汉中后被马岱斩杀。王平因功出任后典军、安汉将军、汉中太守。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "兴势之战抵御曹爽",
+      "desc": "244年，魏大将军曹爽统领十万大军进攻汉中。当时汉中守军不足三万，诸将主张退守二城，王平力排众议，采纳护军刘敏的建议，先遣刘敏、杜参军据守兴势山，自己率部为后援，并在山上遍插旗帜以壮声势。曹爽军被阻于险要，无法前进，最终蜀军援兵到达，魏军被迫撤退。此战是王平军事生涯的巅峰。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "小说中汉中之战投奔刘备",
+      "desc": "在《三国演义》中，汉中之战时王平仍为曹魏将领，随徐晃出战。徐晃不听王平劝告，执意渡过汉水背水列阵，结果大败。徐晃迁怒王平，欲杀之，王平遂夜烧营寨，率部投奔刘备。刘备大喜，封王平为偏将军，并任命为牙门将。此为小说虚构情节。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "His Excellency had just died and his body had yet to turn cold, and now you dare to do something like this!",
+      "source": {
+        "work": "《三国志·魏延传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "But now, the right course of action is to first send Liu Min and the Army Advisor Du to occupy the Xingshi's mountain while I will serve as the rear guard. If the enemy send a division toward Huangjin valley then I will lead a thousand men down there to defeat them. I will defend this position until the Fu army arrive. This is the best plan.",
+      "source": {
+        "work": "《三国志·王平传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "防守山隘",
+    "击鼓疑兵",
+    "劝谏战术",
+    "坚守阵地",
+    "治军严明"
+  ],
+  "domains": [
+    "军事",
+    "防御",
+    "汉中防务"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/wang_ping.webp",
+  "thumb": "/p/sanguo/thumbs/wang_ping.webp"
+}

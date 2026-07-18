@@ -1,0 +1,127 @@
+{
+  "schema_version": 3,
+  "id": "zhang_liao",
+  "name_zh": "张辽",
+  "name_en": "Zhang Liao",
+  "aliases": [
+    "张辽",
+    "张文远",
+    "Zhang Liao",
+    "Wenyuan",
+    "刚侯"
+  ],
+  "epithet": "五子良将·威震逍遥津",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "张辽（169年—222年），字文远，雁门马邑（今山西朔州）人，三国时期曹魏名将。他是聂壹的后人，因避祸改姓张。早年先后效力于丁原、何进、董卓、吕布，吕布败亡后归顺曹操。此后参与官渡之战、征讨袁绍残余势力、白狼山之战等，屡立战功。建安二十年（215年）合肥之战中，张辽率八百将士突袭东吴十万大军，直冲孙权主帅旗，大破吴军，威震江东，史称“张辽止啼”。战后任征东将军。曹丕即位后迁前将军，封晋阳侯。黄初三年（222年）带病攻吴，破吕范，不久病逝于江都，谥曰刚侯。张辽被陈寿列为五子良将之一，后世亦列入古今六十四名将。",
+  "events": [
+    {
+      "title": "说服昌豨投降",
+      "desc": "建安六年（201年），张辽与夏侯渊围攻昌豨于东海，数月不下。张辽观察昌豨犹豫，主动前往劝降，以曹公威德说服昌豨归顺，并独自入其家以示诚意。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "白狼山之战",
+      "desc": "建安十二年（207年），张辽随曹操征乌桓，在白狼山遇敌。张辽力劝急攻，曹操授其指挥旗。张辽率先锋突袭，大破乌桓军，斩杀单于蹋顿。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定军中叛乱",
+      "desc": "建安十三年（208年），张辽驻军长社，夜间军中有人纵火谋反。张辽判断叛军人数有限，下令不动，率亲卫平定叛乱，诛杀首谋。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻灭陈兰、梅成",
+      "desc": "建安十四年（209年），陈兰、梅成叛，张辽率张合、牛盖攻天柱山。山路险峻，部下劝退，张辽言“勇者得前”，终破敌，斩陈兰、梅成。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "合肥之战·突袭孙权",
+      "desc": "建安二十年（215年），孙权率十万大军攻合肥。张辽遵曹操密令，率八百死士清晨突袭，直冲孙权麾下，杀数十人，吴军溃败。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "逍遥津追击",
+      "desc": "孙权撤军时，张辽率军追击，在逍遥津北再次大破吴军，差点活捉孙权。甘宁、凌统拼死掩护，孙权才得以逃脱。此役后，张辽威震江东。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "病逝江都",
+      "desc": "黄初三年（222年），张辽抱病攻吴，破吴将吕范，但病情加重，不久卒于江都。曹丕谥曰刚侯，其子张虎袭爵。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "此所谓一与一，勇者得前耳。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "彼其心不定，是以不力战耳。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [
+    "戟"
+  ],
+  "skills": [
+    "突袭",
+    "破阵",
+    "说服降将",
+    "冷静平叛",
+    "勇猛冲锋"
+  ],
+  "domains": [
+    "军事",
+    "防御",
+    "边疆"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhang_liao.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_liao.webp"
+}

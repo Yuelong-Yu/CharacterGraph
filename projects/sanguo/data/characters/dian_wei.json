@@ -1,0 +1,132 @@
+{
+  "schema_version": 3,
+  "id": "dian_wei",
+  "name_zh": "典韦",
+  "name_en": "Dian Wei",
+  "aliases": [
+    "古之恶来",
+    "Dian Wei"
+  ],
+  "epithet": "古之恶来·曹操宿卫",
+  "category": "wei",
+  "era_layer": 1,
+  "bio": "典韦，陈留己吾（今河南宁陵）人，东汉末年曹操麾下猛将，以膂力过人、勇猛无畏著称。早年因替人报仇刺杀县吏李永，名震乡里。初平年间（190-193年）应募从军，初属张邈部下赵宠，后转投夏侯惇，因战功拜司马。兴平二年（195年）曹操与吕布在兖州濮阳交战，典韦率数十人持戟拒敌，投掷短戟杀伤甚众，曹操赞其勇，拜都尉，引为亲卫，统领数百宿卫。建安二年（197年）曹操征张绣于宛城，张绣先降后叛，突袭曹营。典韦据守营门，以长戟力战，身被数十创仍持敌尸挥舞，最终瞋目大骂而死。曹操退至舞阴，闻典韦死讯痛哭，亲为其举丧，葬于襄邑。曹操后每过其墓必祭奠。典韦子典满受封郎中，后迁司马、都尉，封关内侯。典韦勇武忠诚，被曹操誉为“古之恶来”，是三国时期最著名的护卫将领之一。",
+  "events": [
+    {
+      "title": "刺杀李永",
+      "desc": "典韦为襄邑刘氏报仇，伪装成候者，驾车载酒肉至前县令李永家，趁其不备以匕首刺杀李永及其妻，随后从容取剑戟离去。数百人追捕，无人敢近。典韦步行四五里与同伴会合，终脱险，由此以侠义闻名。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "濮阳之战勇退吕布",
+      "desc": "曹操夜袭吕布营寨，得手欲归时遭吕布亲自援军突袭。典韦率数十人着双层甲、弃盾，持长戟待敌。吕布军箭如雨下，典韦令部下待敌至十步、五步时告之，及敌近，他掷出十余支短戟，每戟击杀一人，无一虚发。吕布军退，曹操因此拜典韦为都尉，命其统领亲卫。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "宛城死战护主",
+      "desc": "建安二年（197年），曹操驻宛城，张绣突然反叛，夜袭曹营。典韦守卫营门，以长戟力战，每击断敌十余支枪。部下死伤殆尽，他身中数十创，仍持两个敌人尸体挥舞，敌不敢近前。最终奋力杀敌数人，瞋目大骂而死，敌军确认其死后才敢上前割首。曹操得以安全撤退。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义初遇曹操",
+      "desc": "据《三国演义》第10回，夏侯惇向曹操推荐典韦，称其曾为张邈部将，因杀人逃入山中。夏侯惇猎时见典韦逐鹿过涧，引之见曹操。曹操令其试力，典韦单手擎起欲倒的大旗，曹操惊叹“此古之恶来也”，即拜为都尉。",
+      "source": {
+        "work": "Romance of the Three Kingdoms (Sanguo Yanyi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义宛城战死细节",
+      "desc": "《三国演义》第16回对典韦之死有更夸张描写：典韦以双戟御敌，戟坏后徒手抓起敌兵尸体挥舞，直至被乱箭射中、背后中枪，仍屹立不倒，死后半晌无人敢近。曹操逃至舞阴，闻讯大哭曰：“吾折长子、爱侄，俱无深痛，独号泣典韦也！”",
+      "source": {
+        "work": "Romance of the Three Kingdoms (Sanguo Yanyi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "待敌十步乃告我。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "待敌五步乃告我。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "敌已至矣！",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "此古之恶来也！",
+      "source": {
+        "work": "Romance of the Three Kingdoms (Sanguo Yanyi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "text": "吾折长子、爱侄，俱无深痛，独号泣典韦也！",
+      "source": {
+        "work": "Romance of the Three Kingdoms (Sanguo Yanyi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "weapons": [
+    "双戟",
+    "大斧",
+    "长戟"
+  ],
+  "skills": [
+    "刺杀",
+    "投掷短戟",
+    "单手举旗",
+    "力战群敌"
+  ],
+  "domains": [
+    "宿卫",
+    "勇力",
+    "先锋"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/dian_wei.webp",
+  "thumb": "/p/sanguo/thumbs/dian_wei.webp"
+}

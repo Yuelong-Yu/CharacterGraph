@@ -1,0 +1,145 @@
+{
+  "schema_version": 3,
+  "id": "sun_jian",
+  "name_zh": "孙坚",
+  "name_en": "Sun Jian",
+  "aliases": [
+    "孙文台",
+    "破虏将军",
+    "武烈皇帝",
+    "Sun Jian",
+    "Wentai"
+  ],
+  "epithet": "江东猛虎·武烈皇帝",
+  "category": "wu",
+  "era_layer": 1,
+  "bio": "孙坚（155—191？），字文台，吴郡富春（今浙江富阳）人，相传为孙武后裔。年少时任县吏，16岁在钱塘智退海盗，名声始显。172年以代理都尉身份参与平定许昌起义，因功被荐为县丞。184年随朱儁征讨黄巾军，率先登城，破敌于宛城。后随张温西征凉州，曾建议诛杀董卓，未被采纳。187年任长沙太守，一月内平定区星叛乱，并平定零陵、桂阳的贼寇，封乌程侯。189年董卓乱政，孙坚起兵响应反董联盟，杀荆州刺史王睿、南阳太守张咨，投靠袁术，被表为破虏将军、豫州刺史。190年，在梁东被董卓军包围，令祖茂以红巾诱敌，得以突围。后在阳人大败董卓军，斩杀华雄。袁术听信谗言断粮，孙坚连夜赶回说服袁术，继续进军。191年攻入洛阳，修复被董卓发掘的汉室陵墓，据传得传国玉玺。同年，受袁术命攻荆州刘表，被刘表部将黄祖伏兵射杀于岘山，享年约37岁。孙坚有五子，长子孙策、次子孙权继承其业。孙权称帝后追尊其为武烈皇帝。",
+  "events": [
+    {
+      "title": "少年智退海盗",
+      "desc": "孙坚16岁时随父至钱塘，见海盗分赃，遂持刀登岸，佯装指挥士兵包围，海盗惊逃，孙坚追斩一人，自此闻名乡里。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "讨伐黄巾军",
+      "desc": "184年黄巾起义爆发，孙坚随朱儁征讨豫州，孤身登城，率先攻破宛城，大败黄巾军。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "建议诛杀董卓",
+      "desc": "凉州叛乱时，孙坚随张温西征，建议张温诛杀违抗军令的董卓，张温未从，后董卓果然为祸朝政。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定长沙叛乱",
+      "desc": "187年长沙贼区星等作乱，孙坚被任命为长沙太守，月内平定叛乱，并击破零陵、桂阳的贼寇，因功封乌程侯。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "加入反董卓联盟",
+      "desc": "190年孙坚起兵响应讨董联盟，途中诛杀不愿合作的荆州刺史王睿、南阳太守张咨，投靠袁术，被表为破虏将军、豫州刺史。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "梁东突围",
+      "desc": "孙坚在梁东被董卓大军包围，仅率数十骑突围，命亲信祖茂戴上其红巾引开追兵，祖茂将红巾挂于柱上，敌军上当，孙坚得以脱险。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "阳人大破董卓军",
+      "desc": "191年孙坚在阳人击败董卓军，斩杀都督华雄，取得联盟军少有的大胜。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "说服袁术继续供粮",
+      "desc": "袁术听信谗言停止供应军粮，孙坚连夜骑马百余里赶到鲁阳，当面陈述利害，袁术惭愧，遂恢复粮草供应。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "修复洛阳汉陵",
+      "desc": "孙坚率军攻入洛阳后，见汉室陵墓被董卓发掘，下令重新安葬，并据传在井中发现传国玉玺，秘而不宣。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》注引《吴书》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻打刘表阵亡",
+      "desc": "191年袁术派孙坚进攻荆州刘表，孙坚击败刘表部将黄祖，追击至岘山时，被黄祖伏兵射杀，年仅37岁。",
+      "source": {
+        "work": "《三国志·孙破虏讨逆传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "I put myself in danger during battle, firstly to eliminate the villain (Dong Zhuo) for the Han Empire, and secondly to avenge the deaths of your family members. I have no personal grudge against Dong Zhuo. Yet you believe slanderous talks and suspect me!",
+      "source": {
+        "work": "《吴录》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "智退海盗",
+    "单骑登城",
+    "游说诸侯",
+    "领军作战"
+  ],
+  "domains": [
+    "军事",
+    "谋略",
+    "领导"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/sun_jian.webp",
+  "thumb": "/p/sanguo/thumbs/sun_jian.webp"
+}

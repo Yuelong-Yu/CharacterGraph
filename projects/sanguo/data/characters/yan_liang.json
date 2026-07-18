@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "id": "yan_liang",
+  "name_zh": "颜良",
+  "name_en": "Yan Liang",
+  "aliases": [
+    "颜良",
+    "Yan Liang"
+  ],
+  "epithet": "河北名将·勇冠三军",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "颜良（？—200年），东汉末年袁绍麾下猛将，与文丑并称，以骁勇闻名。建安五年（200年），袁绍与曹操决战官渡，命颜良率军进攻白马，以掩护主力渡河。曹操采纳荀攸声东击西之策，亲率轻兵急袭白马。颜良仓促应战，被关羽在阵中斩杀，其军溃败，白马之围遂解。史书称其勇武，但荀彧认为其勇不过匹夫之勇，不可独任。明代小说《三国演义》进一步渲染其勇，描写他连斩曹将宋宪、魏续，击败徐晃，最终被关羽突袭斩首，成为烘托关羽神勇的经典情节。",
+  "events": [
+    {
+      "title": "与文丑并称勇将",
+      "desc": "颜良与文丑同为袁绍麾下猛将，以勇武著称。孔融曾列举二人为袁绍优势，但荀彧认为其勇不过匹夫之勇，不足为虑。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "白马之战攻曹",
+      "desc": "200年，袁绍派颜良率军进攻白马，为大军渡河建立据点。曹操采用荀攸声东击西之计，亲率轻兵突袭白马，颜良仓促应战。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被关羽斩杀",
+      "desc": "战斗中，关羽在阵中望见颜良麾盖，策马冲入敌阵，斩颜良首级而还。曹军趁势攻击，颜良军溃败。此战为官渡之战前哨战，严重打击袁绍军士气。",
+      "source": {
+        "work": "三国志·关羽传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "演义中连斩曹将",
+      "desc": "《三国演义》中，颜良在白马之战中先后斩杀曹操部将宋宪、魏续，并二十回合击败徐晃，使曹军诸将悚然。曹操只得请关羽出战。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第二十五回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义中被关羽突袭斩首",
+      "desc": "次日，关羽骑赤兔马冲入颜良阵中，颜良未及反应，被关羽一刀斩于马下。关羽提其首级回营，颜良军大败。袁绍得知后欲杀刘备。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第二十五回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/yan_liang.webp",
+  "thumb": "/p/sanguo/thumbs/yan_liang.webp"
+}

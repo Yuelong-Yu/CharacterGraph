@@ -1,0 +1,141 @@
+{
+  "schema_version": 3,
+  "id": "li_dian",
+  "name_zh": "李典",
+  "name_en": "Li Dian",
+  "aliases": [
+    "曼成",
+    "Mancheng",
+    "Li Mancheng"
+  ],
+  "epithet": "儒将长者·合肥御敌",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "李典（约180-约217），字曼成，山阳郡钜野县（今山东巨野）人，东汉末年曹魏名将。早年随叔父李乾投靠曹操，参与平定黄巾军、征讨袁术和陶谦。李乾被吕布部将杀害后，李典接管部众，先后任颍阴令、中郎将、离狐太守等职，以好学不乐兵事著称，熟读《春秋》《左传》。官渡之战中负责运送粮草，后与程昱击败高蕃打通水路。在博望坡之战中识破刘备伪遁之计，劝阻夏侯惇勿追，后及时救援。逍遥津之战中，与张辽、乐进摒弃前嫌，合力击退孙权大军。李典为人谦逊，不争功，尊重儒士，曾主动将宗族三千余户迁至邺城以示忠诚，被曹操拜为破虏将军。三十六岁去世，曹丕追谥为愍侯。",
+  "events": [
+    {
+      "title": "随叔投曹，平定黄巾",
+      "desc": "初平年间，李典随叔父李乾率部众投奔曹操，在寿张县击败黄巾军，后参与征讨袁术、陶谦等战役，奠定曹氏基业。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "李乾遇害，接管部曲",
+      "desc": "吕布部将薛兰、李封劝降李乾不成，将其杀害。曹操令李乾之子李整统领其众，击败薛兰、李封。李整死后，李典接任颍阴令、中郎将，统领宗族部曲。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "官渡押运，保障补给",
+      "desc": "200年官渡之战期间，李典率宗族部众为前线运送粮草器械，战后被曹操任命为裨将军，驻守安民。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "渡河破敌，打通水路",
+      "desc": "202-203年黎阳之战中，袁尚部将高蕃阻断黄河水路。李典判断敌军轻装懈怠，说服程昱共同渡河突袭，击败高蕃，保障了曹军粮道。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻取壶关，讨平高干",
+      "desc": "204年邺城之战后，李典与乐进奉命攻打壶关的高干，后又击败管承于长广县，因功升任捕虏将军，封都亭侯。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "博望识计，救援夏侯",
+      "desc": "202年刘备北伐，夏侯惇追击时李典识破其伪遁诱敌之计，劝谏无效。夏侯惇中伏后，李典率军救援，刘备见援军至而退。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "迁宗族于邺，明忠心事",
+      "desc": "李典提出将乘氏县的宗族三千余户迁至魏郡邺城，曹操笑问是否效仿耿纯，李典答以谦卑之心和稳定帝国之需，曹操赞许，升其为破虏将军。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "逍遥津合战，共拒孙权",
+      "desc": "214-215年孙权进攻合肥，李典与张辽、乐进三人本有矛盾，但李典以国事为重，配合张辽突袭，大破孙权军，加封食邑至三百户。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "高蕃之兵皆轻甲，且阻水为固，是懈惰也，可击之。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "此国家大事，顾君计何如耳，吾岂可以私憾而忘公义乎？",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "将军自度能当之乎？且备乃天下雄，诈术多端，不可以小敌而轻之也。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "吾自度怯，而功微，而赏过厚，是以举宗共承，庶几称效。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/li_dian.webp",
+  "thumb": "/p/sanguo/thumbs/li_dian.webp"
+}

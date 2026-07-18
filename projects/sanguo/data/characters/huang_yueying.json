@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "huang_yueying",
+  "name_zh": "黄月英",
+  "name_en": "Huang Yueying",
+  "aliases": [
+    "黄月英",
+    "黄氏",
+    "Lady Huang",
+    "Huang Yueying",
+    "Yue Ying",
+    "Yueying"
+  ],
+  "epithet": "卧龙贤妻·巧思才女",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "黄月英，本名未载于史册，黄月英为后世虚构之名。她是沔南名士黄承彦之女，三国时期蜀汉丞相诸葛亮之妻。据《襄阳记》记载，黄承彦曾对诸葛亮说：“闻君择妇，身有丑女，黄头黑面，才堪相配。”诸葛亮遂娶其女。当时乡间有谚语：“莫作孔明择妇，正得阿承丑女。” 在民间传说中，黄月英聪慧博学，精通战略、地理、天文、占卜，并发明了木牛流马及烹饪机器人等奇巧之物。相传她曾以丑貌考验求婚者，诸葛亮独能识破其伪装，终得佳偶。诸葛亮去世后不久，黄月英亦病逝，临终前嘱托儿子诸葛瞻要忠孝两全。其纪念地存在于今湖北襄阳黄家湾。",
+  "events": [
+    {
+      "title": "黄承彦为女求婚",
+      "desc": "黄承彦主动向诸葛亮提亲，称自己有一女，黄发黑肤，容貌丑陋，但才华与诸葛亮相配。诸葛亮应允，娶其女为妻。此事载于《襄阳记》，后由裴松之注引于《三国志》。",
+      "source": {
+        "work": "襄阳记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "诸葛亮娶黄氏",
+      "desc": "诸葛亮依约迎娶黄承彦之女。乡人对此婚事议论纷纷，形成谚语流传。诸葛亮并未因妻子容貌而嫌弃，且黄氏后来成为其贤内助，助其成就事业。",
+      "source": {
+        "work": "三国志注",
+        "locus": "诸葛亮传注引襄阳记",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "乡谚流传",
+      "desc": "由于诸葛亮娶了黄承彦的丑女，乡间流传谚语：“莫作孔明择妇，正得阿承丑女。” 以此调侃诸葛亮择妻的标准。该谚语作为历史佐证，被《襄阳记》收录。",
+      "source": {
+        "work": "襄阳记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "传说考验求婚者",
+      "desc": "民间传说中，黄月英自称丑陋，以面纱遮面考验求婚者。其他男子皆退缩，唯诸葛亮登门入室，亲手揭开面纱，发现黄月英实为美女。此举赢得月英芳心，二人结为夫妻。",
+      "source": null,
+      "canon": null
+    },
+    {
+      "title": "传说发明木牛流马",
+      "desc": "民间传说黄月英才智超群，曾协助诸葛亮发明木牛流马等运输工具，并制造出自动烹饪的机器人，展现了非凡的机械与工程才能。",
+      "source": null,
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "闻君择妇，身有丑女，黄头黑面，才堪相配。",
+      "source": {
+        "work": "襄阳记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "莫作孔明择妇，正得阿承丑女。",
+      "source": {
+        "work": "襄阳记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "精通战略、地理、天文、占卜",
+    "发明木牛流马",
+    "制造烹饪机器人",
+    "考验求婚者智慧",
+    "教导子嗣忠孝"
+  ],
+  "domains": [
+    "机械发明",
+    "天文地理",
+    "占卜星象",
+    "家庭伦理",
+    "民间传说"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/huang_yueying.webp",
+  "thumb": "/p/sanguo/thumbs/huang_yueying.webp"
+}

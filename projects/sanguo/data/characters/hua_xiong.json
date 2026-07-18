@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "id": "hua_xiong",
+  "name_zh": "华雄",
+  "name_en": "Hua Xiong",
+  "aliases": [
+    "华雄",
+    "Hua Xiong",
+    "叶雄"
+  ],
+  "epithet": "董卓麾下猛将",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "华雄（？—191年），东汉末年董卓麾下都督。据《三国志》记载，初平二年（191年）孙坚在阳人之战中击溃董卓军，斩杀华雄；北宋《资治通鉴》亦载孙坚“枭其都督华雄”。在小说《三国演义》中，华雄被塑造为董卓部将，镇守汜水关，连斩鲍忠、祖茂、俞涉、潘凤四将，后关羽主动请战，在温酒未冷之际斩其首级，留下“温酒斩华雄”的典故。其形象被描述为“身长九尺、虎体狼腰”，该情节在评书《美髯公温酒斩华雄》中被扩展为近万字名篇。关于其姓氏存在争议，卢弼《三国志集解》引潘眉观点认为应作“叶雄”，而胡三省注《资治通鉴》仍维持“华雄”写法。",
+  "events": [
+    {
+      "title": "阳人之战被孙坚斩杀",
+      "desc": "初平二年（191年），孙坚在阳人（今河南汝州温泉附近）与董卓军交战，董卓部将胡轸、吕布相互不和，孙坚趁机击败二人，并斩杀了华雄。",
+      "source": {
+        "work": "三国志",
+        "locus": "吴书一·孙破虏讨逆传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "镇守汜水关连斩四将",
+      "desc": "在《三国演义》中，华雄奉董卓之命守汜水关，先后斩杀鲍忠、祖茂、俞涉、潘凤，令诸侯联军震恐。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "关羽温酒斩华雄",
+      "desc": "关羽主动请缨出战华雄，曹操斟热酒一杯，关羽未饮即出阵，片刻提华雄首级而归，酒尚温热，成为经典桥段。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "割鸡焉用牛刀？不劳温侯亲往。吾斩众诸侯首级，如探囊取物耳！",
+      "source": {
+        "work": "三国演义",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/hua_xiong.webp",
+  "thumb": "/p/sanguo/thumbs/hua_xiong.webp"
+}

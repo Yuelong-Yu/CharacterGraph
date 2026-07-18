@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "id": "zhang_jiao",
+  "name_zh": "张角",
+  "name_en": "Zhang Jue",
+  "aliases": [
+    "张角",
+    "Zhang Jue",
+    "Zhang Jiao",
+    "大贤良师",
+    "天公将军",
+    "黄天"
+  ],
+  "epithet": "大贤良师·天公将军",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "张角（？-184年），钜鹿人，东汉末年太平道创始人、黄巾起义领袖。他因得到道士于吉等人所传《太平清领书》，创立太平道，以符水治病，在青、徐、幽、冀等八州发展信徒数十万，自称大贤良师。中平元年（184年），张角以“苍天已死，黄天当立，岁在甲子，天下大吉”为口号发动黄巾起义，自称天公将军，号令三十六万部众同日举事。起义军头戴黄巾，迅速席卷中原，但围攻洛阳失败。张角于同年十月病逝，起义军被皇甫嵩等将领镇压，张宝、张梁战死。黄巾起义沉重打击了东汉王朝的统治，导致军阀割据，最终走向灭亡。张角所创的太平道被视为道教正式开端，对后世道教发展影响深远。在小说《三国演义》中，张角被描绘为遇南华老仙传授《太平要术》的术士，能呼风唤雨，最终病死，首级被送洛阳。",
+  "events": [
+    {
+      "title": "创立太平道",
+      "desc": "张角得到道士于吉等人所传《太平清领书》，创立太平道，以宗教救世为己任，开始在各地传道。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "符水治病，发展信徒",
+      "desc": "张角通过符水治疗病人，在青、徐、幽、冀等八州发展了数十万信徒，信徒们尊称他为大贤良师。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "发动黄巾起义",
+      "desc": "中平元年（184年），张角以'苍天已死，黄天当立，岁在甲子，天下大吉'为口号，发动黄巾起义，自称天公将军，各地信徒同时起事，起义军头戴黄巾，迅速席卷中原。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "围攻洛阳失败",
+      "desc": "黄巾军进攻首都洛阳，但被汉朝将领何进、卢植、董卓、皇甫嵩、朱儁等率军击退，未能攻克。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "张角病逝",
+      "desc": "184年10月，张角在起义军与汉军交战期间病死，起义军失去核心领袖，逐渐被镇压。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "黄巾起义被镇压",
+      "desc": "张角死后，其弟张宝、张梁先后被皇甫嵩击败斩杀，起义军主力被消灭，残部流散，部分后来加入曹操。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "遇仙人授《太平要术》",
+      "desc": "在小说《三国演义》中，张角入山采药，遇一老人（南华老仙）授予三卷天书《太平要术》，并要他代天宣化，普救世人。张角日夜研习，能呼风唤雨，自号太平道人。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第一回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "张角病死被斩首",
+      "desc": "在小说中，张角在皇甫嵩到来之前已病死，死后被割下首级送往洛阳。其弟张宝被部将严政所杀，张梁战死。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第二回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "呼风唤雨",
+    "符水治病"
+  ],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhang_jiao.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_jiao.webp"
+}

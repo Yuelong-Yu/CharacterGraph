@@ -1,0 +1,124 @@
+{
+  "schema_version": 3,
+  "id": "ma_teng",
+  "name_zh": "马腾",
+  "name_en": "Ma Teng",
+  "aliases": [
+    "马腾",
+    "Ma Teng",
+    "马寿成",
+    "Shoucheng"
+  ],
+  "epithet": "西凉军阀·伏波之后",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "马腾，字寿成，右扶风茂陵人，东汉末年军事将领，汉末群雄之一。他是伏波将军马援的后代，父亲马平曾任天水郡小吏，后因事罢官，与羌女结婚，生马腾。马腾年少家贫，以砍柴为生，成年后身高八尺余，容貌雄伟，性格温厚。184年，凉州羌人叛乱，马腾应募从军，因军功累迁至军司马、偏将军、征西将军。后与韩遂合兵，割据凉州。192年，与韩遂一同进攻李傕、郭汜，战败退回凉州。后与韩遂反目成仇，互相攻杀。199年，在钟繇调解下，马腾与韩遂归顺曹操，马腾被任命为前将军，封槐里侯。208年，曹操征召马腾入朝为卫尉，其子马休、马铁亦被任命为官，长子马超留守凉州。211年，马超联合韩遂反曹，马腾受牵连，于212年被曹操下令诛杀，夷灭三族。在小说《三国演义》中，马腾被描绘成汉室忠臣，曾参与董承、刘备的衣带诏密谋，后与黄奎再次策划刺杀曹操，事泄被杀。",
+  "events": [
+    {
+      "title": "应募从军平定羌乱",
+      "desc": "184年，凉州羌人叛乱，北宫玉、李文侯等起兵，韩遂、边章加入。凉州刺史耿鄙招募当地勇士，马腾以步兵身份应募，因作战勇猛被提升为军司马。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与韩遂合兵割据凉州",
+      "desc": "耿鄙战死后，马腾转而加入韩遂的叛军。叛乱被皇甫嵩镇压后，马腾与韩遂逃回凉州，朝廷为安抚授予他们军职，马腾从此割据凉州。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "进攻李傕郭汜战败",
+      "desc": "192年，马腾因私事求于李傕未允，与韩遂联合进攻长安，被李傕部将郭汜、樊稠击败，损失万余人，被迫退回凉州。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与韩遂反目成仇",
+      "desc": "马腾与韩遂最初亲如兄弟，后因部属冲突演变为敌对，互相攻伐。韩遂曾杀死马腾的妻子儿女，两人成为死敌。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "归顺曹操受封槐里侯",
+      "desc": "199年，曹操派钟繇调解马腾与韩遂，二人归顺汉廷，派子为质。马腾被任命为前将军、假节，封槐里侯，屯兵槐里。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "入朝为卫尉",
+      "desc": "208年，曹操征荆州，为消除后顾之忧，召马腾入邺城，任命为卫尉，其子马休、马铁亦得官职，马超留镇凉州。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "因马超反曹被夷三族",
+      "desc": "211年，马超联合韩遂反曹，战败。212年，汉献帝下诏将马腾及其在邺城的家人全部处死，夷灭三族。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与衣带诏密谋",
+      "desc": "在《三国演义》中，马腾加入董承、刘备等人的衣带诏联盟，企图刺杀曹操，事败后逃回凉州。",
+      "source": {
+        "work": "Romance of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "与黄奎密谋刺曹被杀",
+      "desc": "马腾被曹操召回许昌，与黄奎合谋再次刺杀曹操，计划泄露，马腾与二子马休、马铁一同被处斩。",
+      "source": {
+        "work": "Romance of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "统率骑兵",
+    "抵御羌胡",
+    "举荐贤才",
+    "安抚百姓"
+  ],
+  "domains": [
+    "凉州",
+    "军事指挥",
+    "地方治理"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/ma_teng.webp",
+  "thumb": "/p/sanguo/thumbs/ma_teng.webp"
+}

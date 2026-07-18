@@ -1,0 +1,170 @@
+{
+  "schema_version": 3,
+  "id": "zhang_he",
+  "name_zh": "张郃",
+  "name_en": "Zhang He",
+  "aliases": [
+    "儁乂",
+    "Junyi"
+  ],
+  "epithet": "五子良将·巧变名将",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "张郃（？—231年），字儁乂，河间郡鄚县（今河北省任丘市）人，汉末三国时期魏国名将。早年参与镇压黄巾起义，后归附袁绍，在击破公孙瓒的战役中立功，升任宁国中郎将。官渡之战中，张郃建议袁绍救援乌巢，但袁绍听从郭图之计攻打曹营，导致乌巢被毁，最终战败。郭图因羞愧而诬陷张郃，张郃恐惧之下投降曹操，被曹操任命为偏将军，封都亭侯。此后随曹操征战河北、淮南、凉州、汉中等地，屡建战功。建安二十年（215年），张郃进军巴西，试图迁徙民众，但在宕渠被张飞击败，弃马步行逃脱。建安二十三年（218年），刘备进攻汉中，张郃与夏侯渊驻守定军山。夏侯渊战死后，张郃在郭淮等将领的支持下代理主帅，稳定军心，后安全撤退。曹丕称帝后，张郃升任左将军，封鄚侯。太和二年（228年），随曹真抵御诸葛亮北伐，在街亭之战中大破马谡，迫使诸葛亮退军。太和五年（231年），在木门道追击蜀军时中伏，被流矢射中身亡，谥号壮侯。陈寿在《三国志》中将张郃列为五子良将之一。",
+  "events": [
+    {
+      "title": "参与镇压黄巾起义",
+      "desc": "东汉末年黄巾起义爆发时，张郃响应朝廷号召从军，被任命为司马，在冀州刺史韩馥麾下参与平叛。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "归附袁绍并击破公孙瓒",
+      "desc": "191年，韩馥将冀州让给袁绍后，张郃转而效力袁绍，任校尉。在袁绍与公孙瓒的战争中，张郃屡立战功，于199年公孙瓒覆灭后被升为宁国中郎将。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "官渡之战建议不被采纳",
+      "desc": "200年官渡之战初期，张郃建议袁绍轻骑袭扰曹军后方，袁绍不听。乌巢受袭时，张郃主张立即救援，郭图却建议攻曹营，袁绍从郭图之策，导致乌巢被毁，全军溃败。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "投降曹操",
+      "desc": "官渡战败后，郭图因羞愧而诬陷张郃幸灾乐祸，张郃恐惧之下投降曹操。曹操大喜，将其比作微子和韩信，任命为偏将军，封都亭侯。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随曹操征战河北与淮南",
+      "desc": "200-207年间，张郃随曹操征讨袁绍残余势力，参与邺城、渤海、柳城等战役，升任平狄将军。209年，随张辽平定陈兰、梅成叛乱。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定凉州叛乱",
+      "desc": "211-214年间，张郃随夏侯渊征讨马超、韩遂等凉州军阀，攻破杨秋、梁兴等，并平定宋建叛乱，进一步巩固了曹操对西北的统治。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "宕渠之战被张飞击败",
+      "desc": "215年，张郃奉命进军巴西，欲将当地居民迁往汉中。在宕渠被张飞率军阻击，张郃大败，弃马攀山逃回南郑，后被升为荡寇将军。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "定军山之战代理主帅",
+      "desc": "218年，刘备进攻汉中，张郃与夏侯渊驻守阳平关。张郃在广石成功抵御刘备的夜袭。219年，夏侯渊在定军山战死，张郃在郭淮推举下代理主帅，稳定军心并安全撤退。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "街亭之战大破马谡",
+      "desc": "228年，诸葛亮第一次北伐，张郃随曹真迎战。在街亭，张郃切断蜀将马谡的水源，随后发动猛攻，大破蜀军，迫使诸葛亮退回汉中，张郃因功升任征西车骑将军。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "木门道中伏身亡",
+      "desc": "231年，诸葛亮第四次北伐，司马懿命张郃追击撤军。张郃虽劝谏不应追击，但被迫领兵，在木门道遭遇蜀军埋伏，被流矢射中右膝而亡，谥号壮侯。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Cao Cao's forces are well-trained so they will definitely defeat Chunyu Qiong. If Chunyu Qiong is defeated, all is lost for you, General. You should immediately dispatch forces to reinforce Wuchao.",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "Cao Cao's camp is well-defended and can't be conquered easily. If Chunyu Qiong is taken captive, we will all become prisoners-of-war.",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "In the past, Wu Zixu failed to understand the situation and met his downfall. What if he had abandoned Yin like Weizi and defected to Han like Han Xin?",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "General Zhang (He) is a famous general in the Empire. Even Liu Bei is afraid of him. He is the only person capable of restoring stability in this hour of peril.",
+      "source": {
+        "work": "Weilüe",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "奇袭敌军",
+    "断水困敌",
+    "坚守阵地",
+    "统帅部队"
+  ],
+  "domains": [
+    "军事",
+    "战略",
+    "防御",
+    "统率"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhang_he.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_he.webp"
+}

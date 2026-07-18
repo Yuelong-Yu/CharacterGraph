@@ -1,0 +1,120 @@
+{
+  "schema_version": 3,
+  "id": "xiahou_dun",
+  "name_zh": "夏侯惇",
+  "name_en": "Xiahou Dun",
+  "aliases": [
+    "夏侯惇",
+    "元让",
+    "盲夏侯",
+    "Xiahou Dun",
+    "Yuanrang"
+  ],
+  "epithet": "盲夏侯·曹魏元勋",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "夏侯惇（？—220年6月13日），字元让，沛国谯郡（今安徽亳州）人，西汉开国功臣夏侯婴的后代。东汉末年，他年十四时因杀人辱师者而闻名。曹操起兵，夏侯惇是最早追随的将领之一，初任司马。190年参与讨董之战，后随曹操征战。曹操东征陶谦时，夏侯惇留守濮阳，遭遇吕布叛乱，曾被诈降者劫持，幸得部将韩浩解救。兖州之战中，夏侯惇左眼被流矢射中，此后被称为“盲夏侯”。战后历任陈留、济阴太守，封高安乡侯。他率军民截断太寿水筑塘灌溉，缓解旱灾蝗灾，深得民心。后任河南尹、伏波将军，镇守后方。202年博望坡之战中，夏侯惇中刘备诱敌之计而败，幸得李典救援。215年随曹操征汉中，协助攻破张鲁。216年随征孙权，后屯驻居巢。219年随曹操南援樊城，被授前将军。曹操去世后，曹丕拜夏侯惇为大将军，数月后病逝。他一生俭朴，赏赐分给将士，不治产业，且虽在军旅仍亲迎师受业，陈寿评其“性清俭，有余财辄以分施”。",
+  "events": [
+    {
+      "title": "年少杀师辱者",
+      "desc": "夏侯惇14岁时，有人侮辱他的老师，他愤而将那人杀死，从此以勇气闻名乡里。",
+      "source": {
+        "work": "三国志·魏书·夏侯惇传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随曹操起兵",
+      "desc": "190年，曹操起兵讨伐董卓，夏侯惇担任司马，成为曹操早期将领之一，随曹操募兵并参与对徐荣等战役。",
+      "source": {
+        "work": "三国志·魏书·夏侯惇传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "兖州保卫战被劫持",
+      "desc": "193年曹操东征陶谦，夏侯惇留守濮阳。吕布趁虚夺取兖州，夏侯惇轻军赴援鄄城，途中遇吕布军，濮阳被占。吕布派人诈降，将夏侯惇劫持为人质，部将韩浩处决劫持者，救出夏侯惇。",
+      "source": {
+        "work": "三国志·魏书·夏侯惇传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "左眼中箭失明",
+      "desc": "在与吕布的兖州争夺战中，夏侯惇被流矢射中左眼，从此失明。军中称其为“盲夏侯”，他厌恶此绰号，见镜辄怒。",
+      "source": {
+        "work": "三国志·魏书·夏侯惇传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "兴修水利赈济灾民",
+      "desc": "任陈留、济阴太守时，遭遇大旱蝗灾，夏侯惇率军民截断太寿水，筑堰蓄水，开垦农田，帮助百姓度过饥荒。",
+      "source": {
+        "work": "三国志·魏书·夏侯惇传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "博望坡败于刘备",
+      "desc": "202年刘备从荆州北侵，夏侯惇与于禁、李典率军抵御。刘备火烧营地佯退，夏侯惇中计追击，被伏兵击败，幸得李典率援军接应，刘备退兵。",
+      "source": {
+        "work": "三国志·魏书·武帝纪",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "劝曹操称帝",
+      "desc": "219年前后，夏侯惇与陈群、桓阶等人劝曹操称帝。夏侯惇称汉室已衰，曹操应顺天应人即帝位，曹操以“若天命在吾，吾为周文王”婉拒。",
+      "source": {
+        "work": "三国志·魏书·武帝纪",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹丕拜为大将军",
+      "desc": "220年曹操去世，曹丕继位魏王，于4月23日任命夏侯惇为大将军，但夏侯惇仅任职不到两个月便病逝于6月13日。",
+      "source": {
+        "work": "三国志·魏书·文帝纪",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Everyone in the Empire knows that the Han dynasty's lifespan has come to an end and that there are many contenders seeking to replace it. Since ancient times, whoever succeeds in eliminating the people's troubles will win the hearts of the people and become their ruler. As of now, Your Highness has been fighting battles for over 30 years, you've made outstanding achievements and the hearts of the people are with you. You should follow the will of Heaven and the people. What's there to hesitate about?",
+      "source": {
+        "work": "三国志·魏书·武帝纪（裴松之注引《魏略》）",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [
+    "军事",
+    "农业",
+    "水利"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/xiahou_dun.webp",
+  "thumb": "/p/sanguo/thumbs/xiahou_dun.webp"
+}

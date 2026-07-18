@@ -1,0 +1,97 @@
+{
+  "schema_version": 3,
+  "id": "zhang_bao",
+  "name_zh": "张苞",
+  "name_en": "Zhang Bao",
+  "aliases": [],
+  "epithet": "张飞之子·虎翼少将",
+  "category": "shu",
+  "era_layer": 3,
+  "bio": "张苞，涿郡（今河北省涿州市）人，三国时期蜀汉名将张飞长子。据《三国志》记载，张苞早卒，无生平事迹可考，仅知其有一子张遵。但在后世民间信仰及文艺作品中，张苞常被塑造为其父张飞的继承者或侍卫形象，尤其在小说《三国演义》中，他成为一位骁勇善战的蜀汉将领。演义中，张苞随刘备伐吴，于夷陵之战中射杀东吴将领谢旌，与关兴并称“小关张”，深受器重。此后多次随诸葛亮北伐，参与街亭之战等战役。诸葛亮第三次北伐时，张苞在追击魏将郭淮、孙礼的过程中，因坐骑失蹄跌入山涧，头部受重伤，被救回成都后伤重不治而亡。在陕西勉县武侯祠等地的诸葛亮塑像旁，常有张苞与关兴的塑像侍立两侧，体现了其在民间文化中的忠勇形象。正史与演义对张苞的记载差异显著，正史中他早逝无事迹，演义则赋予其丰富的征战经历。",
+  "events": [
+    {
+      "title": "正史早卒无事迹",
+      "desc": "据《三国志》记载，张苞为张飞长子，早卒，仅留有一子张遵，并无任何征战或任职记录。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随刘备伐吴射杀谢旌",
+      "desc": "在《三国演义》中，刘备伐吴时，张苞随军出征，在夷陵之战中与关兴并肩作战，张苞一箭射杀东吴将领谢旌，展现其勇猛。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "与关兴并称小关张",
+      "desc": "张苞与关羽之子关兴在演义中经常一同出战，二人武艺出众，配合默契，被蜀军将士并称为“小关张”，视为张飞、关羽的继承者。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "随诸葛亮北伐",
+      "desc": "诸葛亮首次北伐期间，张苞作为蜀汉将领参与多次战斗，包括街亭之战等，与魏军交战，表现出色。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "追击郭淮孙礼时坠涧",
+      "desc": "诸葛亮第三次北伐中，张苞奉命追击魏将郭淮、孙礼，在途中因坐骑失蹄，连人带马跌入山涧，头部受重伤，导致昏迷。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "伤重不治而亡",
+      "desc": "张苞被救回成都后，因头部伤势过重，虽经医治，最终仍伤重不治，英年早逝，令诸葛亮深感悲痛。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "武侯祠配享塑像",
+      "desc": "在陕西勉县武侯祠等地的诸葛亮塑像旁，常塑有张苞与关兴的侍立像，象征二人作为蜀汉忠勇后辈的陪祀身份。",
+      "source": {
+        "work": "民间信仰建筑",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "射杀敌军将领",
+    "骑术",
+    "冲锋陷阵"
+  ],
+  "domains": [
+    "军事",
+    "战斗"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhang_bao.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_bao.webp"
+}

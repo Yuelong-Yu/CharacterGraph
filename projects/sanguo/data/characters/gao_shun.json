@@ -1,0 +1,147 @@
+{
+  "schema_version": 3,
+  "id": "gao_shun",
+  "name_zh": "高顺",
+  "name_en": "Gao Shun",
+  "aliases": [],
+  "epithet": "陷阵营统领·忠烈名将",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "高顺（？－199年2月7日），东汉末年名将，吕布部下中郎将。他来自上党郡，为人清白有威严，少言语，不饮酒，不受馈赠。所统率部队仅七百人，但精锐非常，装备精良，训练有素，每次进攻皆能突破敌阵，被称为“陷阵营”。高顺曾因臧霸食言而谏阻吕布亲自讨要财物，吕布不听，结果臧霸及泰山群寇不再听命。196年，吕布部将郝萌叛乱，高顺连夜率军平定，斩郝萌。吕布虽知高顺忠诚，却因郝萌之乱而更加猜忌，夺其兵权交予亲信魏续，但每逢战事又令其复统原部。高顺始终无怨，屡次直言劝谏吕布，指出其轻率决策、善恶不分，吕布知其忠而不能用。198年，吕布命高顺与张辽攻打刘备于沛城，击败刘备援军夏侯惇，迫刘备投奔曹操。同年冬，曹操与刘备反攻下邳，吕布部将侯成、宋宪、魏续擒高顺、陈宫投降。吕布随之投降。199年2月7日，高顺与吕布、陈宫一同被处斩，首级送许都。在《三国演义》中，高顺曾与夏侯惇单挑四十余合不敌，后被曹性射伤夏侯惇左眼，但最终被俘，面对曹操默然不语，从容就义。",
+  "events": [
+    {
+      "title": "统领陷阵营",
+      "desc": "高顺所部仅七百人，但装备精良、训练有素，每次冲锋必能突破敌阵，即便被包围也能力战，被敌军称为“陷阵营”。",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "谏阻吕布索要臧霸财物",
+      "desc": "臧霸原承诺将掠得的财物献于吕布，后反悔。吕布欲亲自前往索要，高顺劝谏说您的威名远扬，何必亲自讨要，若不成反失颜面。吕布不听，结果臧霸拒绝，泰山群寇不再听命。",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定郝萌之乱",
+      "desc": "196年，吕布部将郝萌夜袭下邳，吕布逃至高顺营中，高顺判断郝萌为河内人，迅速率军平叛，次日清晨郝萌退守本营，其部将曹兴反戈，与郝萌互伤，高顺最终斩杀郝萌。",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被夺兵权后复职",
+      "desc": "吕布经郝萌之乱后，对高顺的忠诚产生怀疑，将高顺的部队转交其亲信魏续，但每逢战事又令高顺重新统率。高顺始终无怨无悔。",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "多次谏言吕布",
+      "desc": "高顺常劝谏吕布：“您做事从不深思，每逢成败抉择总是选错。”又说：“亡国者并非没有忠臣良将，而是君主不听其言。将军您不愿深思，错误数不胜数。”吕布虽知其忠，却不能采纳。",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "击败刘备与夏侯惇联军",
+      "desc": "198年，吕布派高顺与张辽攻打刘备于沛城。曹操派夏侯惇援救，高顺击败联军，迫使刘备弃城投奔曹操。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被俘遭斩",
+      "desc": "198年冬，曹操与刘备反攻下邳，吕布部将侯成、宋宪、魏续擒高顺、陈宫投降。吕布随后投降。199年2月7日，高顺与吕布、陈宫一同被处斩，首级送许都。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义中与夏侯惇单挑",
+      "desc": "在《三国演义》第18回，高顺与夏侯惇交战四十余合不敌，后退时被曹性暗箭射中夏侯惇左眼，夏侯惇拔矢啖睛，刺死曹性。高顺回军反攻，击败夏侯惇。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第18回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义中从容就义",
+      "desc": "第19回，高顺与张辽被水淹下邳俘获，被押至曹操面前，曹操问其有何话说，高顺默然不语，拒绝投降，遂与陈宫一同被斩。",
+      "source": {
+        "work": "三国演义",
+        "locus": "第19回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "Your authority and reputation are known and respected everywhere. How can you ask for something and fail to obtain it? Yet you are going in person to beg for a present. If for some reason you are not successful, you will surely lose face.",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "When you start something, you never think of the details. Whenever there is a choice between the way to success or the possibility of failure, you always make the wrong decisions!",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "Those who lost their homes and states did not do so because they lacked loyal ministers and wise advisers. They did so because they wouldn't listen to those men. General, you are reluctant to think things through carefully before you act, and thus you commit mistakes, which are too many to count.",
+      "source": {
+        "work": "英雄记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "统领陷阵营",
+    "陷阵冲锋",
+    "平定叛乱",
+    "谏言劝主"
+  ],
+  "domains": [
+    "军事",
+    "陷阵",
+    "忠义"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/gao_shun.webp",
+  "thumb": "/p/sanguo/thumbs/gao_shun.webp"
+}

@@ -79,6 +79,646 @@
       "category": "qun",
       "era_layer": 1,
       "epithet": "闭月·连环计"
+    },
+    {
+      "slug": "dong_zhuo",
+      "name_zh": "董卓",
+      "name_en": "Dong Zhuo",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "凉州枭雄·太师"
+    },
+    {
+      "slug": "sima_yi",
+      "name_zh": "司马懿",
+      "name_en": "Sima Yi",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "冢虎·晋宣帝"
+    },
+    {
+      "slug": "yuan_shao",
+      "name_zh": "袁绍",
+      "name_en": "Yuan Shao",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "四世三公·河北霸主"
+    },
+    {
+      "slug": "cao_pi",
+      "name_zh": "曹丕",
+      "name_en": "Cao Pi",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "魏文帝"
+    },
+    {
+      "slug": "sun_ce",
+      "name_zh": "孙策",
+      "name_en": "Sun Ce",
+      "category": "wu",
+      "era_layer": 1,
+      "epithet": "江东小霸王"
+    },
+    {
+      "slug": "lu_su",
+      "name_zh": "鲁肃",
+      "name_en": "Lu Su",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "东吴都督·战略家"
+    },
+    {
+      "slug": "lyu_meng",
+      "name_zh": "吕蒙",
+      "name_en": "Lü Meng",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "白衣渡江·吴下阿蒙"
+    },
+    {
+      "slug": "wang_yun",
+      "name_zh": "王允",
+      "name_en": "Wang Yun",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "汉司徒·连环计主谋"
+    },
+    {
+      "slug": "zhang_liao",
+      "name_zh": "张辽",
+      "name_en": "Zhang Liao",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "五子良将·威震逍遥津"
+    },
+    {
+      "slug": "lu_xun",
+      "name_zh": "陆逊",
+      "name_en": "Lu Xun",
+      "category": "wu",
+      "era_layer": 3,
+      "epithet": "东吴大都督·夷陵破蜀"
+    },
+    {
+      "slug": "xun_yu",
+      "name_zh": "荀彧",
+      "name_en": "Xun Yu",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "王佐之才·荀令君"
+    },
+    {
+      "slug": "pang_tong",
+      "name_zh": "庞统",
+      "name_en": "Pang Tong",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "凤雏·军师中郎将"
+    },
+    {
+      "slug": "ma_chao",
+      "name_zh": "马超",
+      "name_en": "Ma Chao",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "锦马超·神威天将军"
+    },
+    {
+      "slug": "huang_zhong",
+      "name_zh": "黄忠",
+      "name_en": "Huang Zhong",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "老当益壮·后将军"
+    },
+    {
+      "slug": "xiahou_dun",
+      "name_zh": "夏侯惇",
+      "name_en": "Xiahou Dun",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "盲夏侯·曹魏元勋"
+    },
+    {
+      "slug": "guo_jia",
+      "name_zh": "郭嘉",
+      "name_en": "Guo Jia",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "鬼才·奉孝"
+    },
+    {
+      "slug": "cao_ren",
+      "name_zh": "曹仁",
+      "name_en": "Cao Ren",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "曹魏名将·大司马"
+    },
+    {
+      "slug": "liu_shan",
+      "name_zh": "刘禅",
+      "name_en": "Liu Shan",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "蜀汉后主·安乐公"
+    },
+    {
+      "slug": "jiang_wei",
+      "name_zh": "姜维",
+      "name_en": "Jiang Wei",
+      "category": "shu",
+      "era_layer": 4,
+      "epithet": "天水麒麟儿·蜀汉大将军"
+    },
+    {
+      "slug": "wei_yan",
+      "name_zh": "魏延",
+      "name_en": "Wei Yan",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "蜀汉名将·镇北将军"
+    },
+    {
+      "slug": "huang_gai",
+      "name_zh": "黄盖",
+      "name_en": "Huang Gai",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "江东宿将·苦肉计"
+    },
+    {
+      "slug": "yuan_shu",
+      "name_zh": "袁术",
+      "name_en": "Yuan Shu",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "仲氏皇帝·淮南枭雄"
+    },
+    {
+      "slug": "emperor_xian",
+      "name_zh": "汉献帝",
+      "name_en": "Emperor Xian of Han",
+      "category": "qun",
+      "era_layer": 2,
+      "epithet": "东汉末代天子"
+    },
+    {
+      "slug": "chen_gong",
+      "name_zh": "陈宫",
+      "name_en": "Chen Gong",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "吕布谋主·公台"
+    },
+    {
+      "slug": "jia_xu",
+      "name_zh": "贾诩",
+      "name_en": "Jia Xu",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "毒士·算无遗策"
+    },
+    {
+      "slug": "xu_chu",
+      "name_zh": "许褚",
+      "name_en": "Xu Chu",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "虎痴·曹操宿卫"
+    },
+    {
+      "slug": "gan_ning",
+      "name_zh": "甘宁",
+      "name_en": "Gan Ning",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "锦帆贼·江表虎臣"
+    },
+    {
+      "slug": "liu_biao",
+      "name_zh": "刘表",
+      "name_en": "Liu Biao",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "荆州牧·八俊之一"
+    },
+    {
+      "slug": "xiao_qiao",
+      "name_zh": "小乔",
+      "name_en": "Xiao Qiao",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "江东二乔·周瑜之妻"
+    },
+    {
+      "slug": "hua_xiong",
+      "name_zh": "华雄",
+      "name_en": "Hua Xiong",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "董卓麾下猛将"
+    },
+    {
+      "slug": "sun_jian",
+      "name_zh": "孙坚",
+      "name_en": "Sun Jian",
+      "category": "wu",
+      "era_layer": 1,
+      "epithet": "江东猛虎·武烈皇帝"
+    },
+    {
+      "slug": "dian_wei",
+      "name_zh": "典韦",
+      "name_en": "Dian Wei",
+      "category": "wei",
+      "era_layer": 1,
+      "epithet": "古之恶来·曹操宿卫"
+    },
+    {
+      "slug": "xiahou_yuan",
+      "name_zh": "夏侯渊",
+      "name_en": "Xiahou Yuan",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "虎步关右·征西将军"
+    },
+    {
+      "slug": "zhang_he",
+      "name_zh": "张郃",
+      "name_en": "Zhang He",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "五子良将·巧变名将"
+    },
+    {
+      "slug": "xu_huang",
+      "name_zh": "徐晃",
+      "name_en": "Xu Huang",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "五子良将·周亚夫之风"
+    },
+    {
+      "slug": "pang_de",
+      "name_zh": "庞德",
+      "name_en": "Pang De",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "白马将军·抬榇决战"
+    },
+    {
+      "slug": "taishi_ci",
+      "name_zh": "太史慈",
+      "name_en": "Taishi Ci",
+      "category": "wu",
+      "era_layer": 1,
+      "epithet": "东莱义士·神亭酣战"
+    },
+    {
+      "slug": "cheng_pu",
+      "name_zh": "程普",
+      "name_en": "Cheng Pu",
+      "category": "wu",
+      "era_layer": 1,
+      "epithet": "东吴三世宿将·程公"
+    },
+    {
+      "slug": "zhou_tai",
+      "name_zh": "周泰",
+      "name_en": "Zhou Tai",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "十二伤将军·奋命护主"
+    },
+    {
+      "slug": "ling_tong",
+      "name_zh": "凌统",
+      "name_en": "Ling Tong",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "东吴烈将·国士之风"
+    },
+    {
+      "slug": "sun_shangxiang",
+      "name_zh": "孙尚香",
+      "name_en": "Lady Sun",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "弓腰姬·孙刘联姻"
+    },
+    {
+      "slug": "da_qiao",
+      "name_zh": "大乔",
+      "name_en": "Da Qiao",
+      "category": "wu",
+      "era_layer": 1,
+      "epithet": "江东二乔·孙策之妻"
+    },
+    {
+      "slug": "xu_shu",
+      "name_zh": "徐庶",
+      "name_en": "Xu Shu",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "单福军师·走马荐诸葛"
+    },
+    {
+      "slug": "fa_zheng",
+      "name_zh": "法正",
+      "name_en": "Fa Zheng",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "蜀汉奇谋·翼侯"
+    },
+    {
+      "slug": "guan_ping",
+      "name_zh": "关平",
+      "name_en": "Guan Ping",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "关羽之子·忠勇少将"
+    },
+    {
+      "slug": "ma_dai",
+      "name_zh": "马岱",
+      "name_en": "Ma Dai",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "西凉骁将·斩魏延"
+    },
+    {
+      "slug": "wang_ping",
+      "name_zh": "王平",
+      "name_en": "Wang Ping",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "蜀汉镇北大将军"
+    },
+    {
+      "slug": "liao_hua",
+      "name_zh": "廖化",
+      "name_en": "Liao Hua",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "蜀汉老将·历仕三朝"
+    },
+    {
+      "slug": "ma_su",
+      "name_zh": "马谡",
+      "name_en": "Ma Su",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "言过其实·失守街亭"
+    },
+    {
+      "slug": "gongsun_zan",
+      "name_zh": "公孙瓒",
+      "name_en": "Gongsun Zan",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "白马将军·幽州牧"
+    },
+    {
+      "slug": "ma_teng",
+      "name_zh": "马腾",
+      "name_en": "Ma Teng",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "西凉军阀·伏波之后"
+    },
+    {
+      "slug": "zhang_xiu",
+      "name_zh": "张绣",
+      "name_en": "Zhang Xiu",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "宛城侯·北地枪王"
+    },
+    {
+      "slug": "liu_zhang",
+      "name_zh": "刘璋",
+      "name_en": "Liu Zhang",
+      "category": "qun",
+      "era_layer": 2,
+      "epithet": "益州牧·守成之主"
+    },
+    {
+      "slug": "zhang_jiao",
+      "name_zh": "张角",
+      "name_en": "Zhang Jue",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "大贤良师·天公将军"
+    },
+    {
+      "slug": "yan_liang",
+      "name_zh": "颜良",
+      "name_en": "Yan Liang",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "河北名将·勇冠三军"
+    },
+    {
+      "slug": "wen_chou",
+      "name_zh": "文丑",
+      "name_en": "Wen Chou",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "河北双雄·袁绍猛将"
+    },
+    {
+      "slug": "gao_shun",
+      "name_zh": "高顺",
+      "name_en": "Gao Shun",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "陷阵营统领·忠烈名将"
+    },
+    {
+      "slug": "sima_zhao",
+      "name_zh": "司马昭",
+      "name_en": "Sima Zhao",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "晋文帝·其心路人皆知"
+    },
+    {
+      "slug": "deng_ai",
+      "name_zh": "邓艾",
+      "name_en": "Deng Ai",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "偷渡阴平·灭蜀名将"
+    },
+    {
+      "slug": "zhong_hui",
+      "name_zh": "钟会",
+      "name_en": "Zhong Hui",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "谋谟之士·剑阁风云"
+    },
+    {
+      "slug": "yu_jin",
+      "name_zh": "于禁",
+      "name_en": "Yu Jin",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "五子良将·毅重严整"
+    },
+    {
+      "slug": "yue_jin",
+      "name_zh": "乐进",
+      "name_en": "Yue Jin",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "五子良将·骁果显名"
+    },
+    {
+      "slug": "li_dian",
+      "name_zh": "李典",
+      "name_en": "Li Dian",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "儒将长者·合肥御敌"
+    },
+    {
+      "slug": "cheng_yu",
+      "name_zh": "程昱",
+      "name_en": "Cheng Yu",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "魏国谋臣·刚戾多谋"
+    },
+    {
+      "slug": "cao_rui",
+      "name_zh": "曹叡",
+      "name_en": "Cao Rui",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "魏明帝·烈祖"
+    },
+    {
+      "slug": "cao_zhi",
+      "name_zh": "曹植",
+      "name_en": "Cao Zhi",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "陈思王·才高八斗"
+    },
+    {
+      "slug": "sima_shi",
+      "name_zh": "司马师",
+      "name_en": "Sima Shi",
+      "category": "wei",
+      "era_layer": 3,
+      "epithet": "晋景帝·魏国权臣"
+    },
+    {
+      "slug": "yang_xiu",
+      "name_zh": "杨修",
+      "name_en": "Yang Xiu",
+      "category": "wei",
+      "era_layer": 2,
+      "epithet": "恃才放旷·鸡肋之谜"
+    },
+    {
+      "slug": "huang_yueying",
+      "name_zh": "黄月英",
+      "name_en": "Huang Yueying",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "卧龙贤妻·巧思才女"
+    },
+    {
+      "slug": "guan_xing",
+      "name_zh": "关兴",
+      "name_en": "Guan Xing",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "关羽次子·龙骧将军"
+    },
+    {
+      "slug": "zhang_bao",
+      "name_zh": "张苞",
+      "name_en": "Zhang Bao",
+      "category": "shu",
+      "era_layer": 3,
+      "epithet": "张飞之子·虎翼少将"
+    },
+    {
+      "slug": "liu_feng",
+      "name_zh": "刘封",
+      "name_en": "Liu Feng",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "刘备养子·刚猛将领"
+    },
+    {
+      "slug": "meng_da",
+      "name_zh": "孟达",
+      "name_en": "Meng Da",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "反复之将·新城太守"
+    },
+    {
+      "slug": "yan_yan",
+      "name_zh": "严颜",
+      "name_en": "Yan Yan",
+      "category": "shu",
+      "era_layer": 2,
+      "epithet": "巴郡老将·义不受辱"
+    },
+    {
+      "slug": "meng_huo",
+      "name_zh": "孟获",
+      "name_en": "Meng Huo",
+      "category": "qun",
+      "era_layer": 3,
+      "epithet": "南中首领·七擒七纵"
+    },
+    {
+      "slug": "zhurong_furen",
+      "name_zh": "祝融夫人",
+      "name_en": "Lady Zhurong",
+      "category": "qun",
+      "era_layer": 3,
+      "epithet": "南中女将·火神之后"
+    },
+    {
+      "slug": "han_dang",
+      "name_zh": "韩当",
+      "name_en": "Han Dang",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "东吴三朝宿将"
+    },
+    {
+      "slug": "ding_feng",
+      "name_zh": "丁奉",
+      "name_en": "Ding Feng",
+      "category": "wu",
+      "era_layer": 3,
+      "epithet": "雪中奋短兵·吴国名将"
+    },
+    {
+      "slug": "zhuge_jin",
+      "name_zh": "诸葛瑾",
+      "name_en": "Zhuge Jin",
+      "category": "wu",
+      "era_layer": 2,
+      "epithet": "东吴重臣·诸葛子瑜"
+    },
+    {
+      "slug": "cai_wenji",
+      "name_zh": "蔡文姬",
+      "name_en": "Cai Yan",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "乱世才女·胡笳十八拍"
     }
   ],
   "artifacts": [
@@ -145,6 +785,7 @@
     { "owner": "lyu_bu", "artifact": "fangtian_huaji", "canon": "romance", "title": "吕布执方天画戟", "desc": "《三国演义》中吕布以方天画戟纵横，辕门射戟解纷、虎牢关前独抗三英，画戟与赤兔并为‘人中吕布’的标识。正史载其用矛，画戟为演义艺术加工。", "work": "《三国演义》" },
     { "owner": "liu_bei", "artifact": "shuanggu_jian", "canon": "romance", "title": "刘备佩雌雄双股剑", "desc": "《三国演义》中刘备以雌雄双股剑为兵，桃园结义后三英战吕布时与关张并力。双股剑为其仁主而能战的象征。", "work": "《三国演义》" },
     { "owner": "cao_cao", "artifact": "qixing_baodao", "canon": "romance", "title": "曹操借七星刀刺董", "desc": "《三国演义》中曹操借司徒王允七星宝刀行刺董卓，事败遂以献刀为名脱身，是为‘孟德献刀’，刀旋归王允。", "work": "《三国演义》" },
+    { "owner": "wang_yun", "artifact": "qixing_baodao", "canon": "romance", "title": "王允藏七星宝刀", "desc": "《三国演义》中七星宝刀原为司徒王允所藏，王允将宝刀借给曹操刺杀董卓，使王允、曹操与七星刀节点形成直接关联。", "work": "《三国演义》" },
     { "owner": "lyu_bu", "artifact": "chitu_ma", "canon": "both", "title": "吕布有良马赤兔", "desc": "《三国志·吕布传》载‘布有良马曰赤兔’，能驰城飞堑；演义更以‘人中吕布，马中赤兔’传世。赤兔为吕布征战坐骑。", "work": "《三国志·吕布传》" },
     { "owner": "guan_yu", "artifact": "chitu_ma", "canon": "romance", "title": "关羽得赤兔马", "desc": "《三国演义》中曹操以赤兔马赠关羽以收其心，关羽谢曰得马可一日见兄。后关羽败亡，赤兔绝食而死，演义以此成全忠义意象。正史中赤兔随吕布之死即失记载。", "work": "《三国演义》" },
     { "owner": "liu_bei", "artifact": "dilu_ma", "canon": "both", "title": "刘备乘的卢跃檀溪", "desc": "的卢为刘备坐骑，《世说新语》及演义载其‘妨主’之说；刘备困于荆州，纵马跃过数丈檀溪脱险，‘的卢飞快’遂传为名马典故。", "work": "《世说新语》" },
@@ -154,6 +795,15 @@
   "en_title_override": {
     "lyu_bu": "Lü Bu",
     "diao_chan": "Diaochan",
+    "sun_shangxiang": "Lady Sun",
+    "da_qiao": "Two Qiaos",
+    "wang_ping": "Wang Ping (Three Kingdoms)",
+    "zhang_jiao": "Zhang Jue",
+    "zhang_bao": "Zhang Bao (general)",
+    "liu_feng": "Liu Feng (Three Kingdoms)",
+    "yan_yan": "Yan Yan (Three Kingdoms)",
+    "ding_feng": "Ding Feng (general)",
+    "cai_wenji": "Cai Yan",
     "qinglong_yanyue_dao": "Guandao",
     "chitu_ma": "Red Hare",
     "dilu_ma": "Dilu (horse)"

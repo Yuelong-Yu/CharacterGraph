@@ -1,0 +1,138 @@
+{
+  "schema_version": 3,
+  "id": "gan_ning",
+  "name_zh": "甘宁",
+  "name_en": "Gan Ning",
+  "aliases": [
+    "兴霸",
+    "甘兴霸",
+    "Gan Xingba",
+    "锦帆贼",
+    "江表虎臣"
+  ],
+  "epithet": "锦帆贼·江表虎臣",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "甘宁，字兴霸，巴郡临江（今重庆忠县）人，三国时期孙吴名将。少年时，他聚集游手好闲之徒，劫掠财物，以“锦帆贼”闻名。后弃盗从文，读诸子百家，率八百人投靠荆州牧刘表，不受重用，转而依附江夏太守黄祖。在203年孙吴征讨黄祖的战役中，甘宁射杀孙吴将领凌操，救黄祖一命，但黄祖仍不赏识他。在部将苏飞的帮助下，甘宁率众投奔孙权，获周瑜、吕蒙推荐，深受孙权器重。他建议孙权先攻黄祖，再图荆益，并亲自参与208年的江夏之战擒获黄祖，又救下恩人苏飞。同年冬，他随周瑜参加赤壁之战，击败曹军，并在后续的江陵之战中攻占夷陵，以数百兵抵御曹仁数千围攻，坚守待援。215年，甘宁随鲁肃镇守益阳，与关羽对峙，主动请缨率三百人堵截关羽渡河，展现胆略。同年参与逍遥津之战，保护孙权突围，又率百骑夜袭曹营，斩首数十而还。甘宁性情粗猛，但豪爽重义，轻财敬士，深得士卒爱戴，官至西陵太守、折冲将军，位列“江表之虎臣”。约建安二十五年（220年）去世。",
+  "events": [
+    {
+      "title": "少年为盗号锦帆贼",
+      "desc": "甘宁年轻时聚集游侠，劫掠船只，身佩铃铛，衣着华丽，以‘锦帆贼’闻名巴郡。后读诸子，停止劫掠，率八百人投刘表。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "射杀凌操救黄祖",
+      "desc": "203年，孙吴攻击黄祖，甘宁在战事中射杀孙吴将领凌操，使黄祖脱险，但黄祖仍不重用他。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "投奔孙权献战略",
+      "desc": "经苏飞帮助，甘宁率数百人投奔孙权，献计先攻黄祖、再取荆益，获孙权赏识，驳回张昭反对。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与江夏之战擒黄祖",
+      "desc": "208年春，孙吴出兵江夏，甘宁随军作战，成功擒获黄祖，孙权命其驻守当口。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "力保恩人苏飞获赦",
+      "desc": "战后苏飞被俘，甘宁向孙权叩头流血求情，以己命担保，孙权赦免苏飞并善待之。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "赤壁之战与乌林破敌",
+      "desc": "208-209年，甘宁随周瑜参加赤壁之战，在乌林击败曹军，并参与后续江陵之战。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻占夷陵抗曹仁围攻",
+      "desc": "周瑜攻江陵时，甘宁率数百人攻占夷陵，曹仁派五六千人围城，甘宁坚守待援，最终与周瑜、吕蒙里应外合解围。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "浅滩对峙关羽",
+      "desc": "215年，甘宁随鲁肃镇守益阳，关羽欲率五千精兵夜渡浅滩，甘宁主动请缨以三百兵堵截，关羽闻讯放弃渡河。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "逍遥津之战护孙权",
+      "desc": "215年逍遥津之战，孙权被张辽围困，甘宁与吕蒙等力战保护孙权，使其成功突围。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "夜袭曹营斩首数十",
+      "desc": "甘宁曾率百余骑兵夜袭曹营，斩杀数十人，无一伤亡，令曹军震动。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "射箭",
+    "夜袭",
+    "劝谏主公",
+    "指挥水战",
+    "坚守城池",
+    "招募兵士"
+  ],
+  "domains": [
+    "水战",
+    "军事",
+    "谋略",
+    "冒险"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/gan_ning.webp",
+  "thumb": "/p/sanguo/thumbs/gan_ning.webp"
+}

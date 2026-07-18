@@ -1,0 +1,115 @@
+{
+  "schema_version": 3,
+  "id": "meng_da",
+  "name_zh": "孟达",
+  "name_en": "Meng Da",
+  "aliases": [
+    "子度",
+    "子敬",
+    "Zidu",
+    "Zijing"
+  ],
+  "epithet": "反复之将·新城太守",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "孟达（？-228年），字子度，本字子敬，扶风郡平陵县人，东汉凉州刺史孟佗之子。初随法正入蜀依附益州牧刘璋，后于刘备攻取益州时投降刘备，被任命为宜都太守。219年，奉刘备之命率军攻取房陵、上庸等地，与刘备义子刘封会师。同年，关羽在荆州被围时向刘封、孟达求援，二人拒绝出兵，导致关羽败亡。孟达因畏惧刘备追究罪责，又与刘封不和，遂于220年率部众四千余人叛降曹魏。魏文帝曹丕厚待孟达，合房陵、上庸、西城三郡为新城郡，任命孟达为新城太守，封平阳亭侯，委以西南边防重任。曹丕去世后，孟达与魏明帝曹叡关系不睦，昔日好友夏侯尚、桓阶亦相继去世，故渐生叛意。蜀汉丞相诸葛亮多次写信诱劝孟达归蜀，孟达遂暗中联络，准备于228年响应诸葛亮北伐而举兵反魏。然而其叛谋被魏兴太守申仪泄露，司马懿以八日急行军突袭新城，孟达部将李辅、外甥邓贤出卖城池，孟达兵败被擒，遭司马懿斩杀。",
+  "events": [
+    {
+      "title": "随法正入蜀附刘璋",
+      "desc": "孟达与法正一同自关中入蜀，投靠益州牧刘璋，成为其部属。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "投降刘备",
+      "desc": "刘备攻取益州时，孟达与法正等转而归附刘备，被任命为宜都太守。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻取房陵、上庸",
+      "desc": "219年，孟达自秭归率军攻占房陵郡，继而北上与刘封会师，攻克上庸郡，巩固了刘备在荆襄北部的控制。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "拒绝援助关羽",
+      "desc": "关羽围樊城、襄阳时，曾向刘封、孟达求援，二人以山城初附、不可轻动为由拒绝出兵，间接导致关羽败亡。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "叛蜀降魏",
+      "desc": "220年，孟达因畏惧刘备追究拒援关羽之罪，且与刘封关系恶化，率部曲四千余家叛投曹魏，曹丕大喜，封为散骑常侍、建武将军、平阳亭侯。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "写信劝降刘封",
+      "desc": "孟达降魏后致信刘封，称刘备身边有人谗害刘封，劝其降魏；刘封不从，返回成都后被刘备赐死。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "出任新城太守",
+      "desc": "曹丕合并房陵、上庸、西城三郡为新城郡，任命孟达为太守，负责防御蜀汉与孙吴的边境，孟达由此成为魏国西南重镇长官。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与诸葛亮通信密谋",
+      "desc": "曹丕去世后，蜀汉丞相诸葛亮多次致书孟达，劝其回归蜀汉；孟达态度反复，最终决意反魏归蜀，为228年叛乱埋下伏笔。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "新城叛乱被司马懿镇压",
+      "desc": "228年，孟达举兵叛魏，司马懿先以书信迷惑孟达，随即率军八日疾驰至新城城下；孟达外甥邓贤、部将李辅开门投降，孟达兵败被擒斩。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/meng_da.webp",
+  "thumb": "/p/sanguo/thumbs/meng_da.webp"
+}

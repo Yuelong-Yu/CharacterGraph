@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "wang_yun",
+  "name_zh": "王允",
+  "name_en": "Wang Yun",
+  "aliases": [
+    "子师",
+    "Wang Yun"
+  ],
+  "epithet": "汉司徒·连环计主谋",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "王允（137年-192年7月4日），字子师，太原祁县（今属山西）人，东汉末年大臣。年少时研习经传，练习骑射。初为郡吏，捕杀为害全县的宦官党羽，声名渐起。光和七年（184年），参与镇压黄巾起义军，截获宦官张让与黄巾军勾结的书信，张让因此受责于汉灵帝，怀恨在心，两次陷害王允入狱。后得大将军何进、太尉袁隗、司徒杨赐一再上书求免，方获赦免。出狱后改名换姓，隐于民间。汉献帝即位后，征拜为太仆，迁尚书令，兼代杨彪为司徒。董卓专权时，封王允为温侯。王允暗结董卓部将吕布为内应，成功诛杀董卓。此后欲解散董卓的凉州旧部，致使部众自危，董卓部将李傕、郭汜合谋为乱，攻破长安，王允被杀。董卓与王允的相继垮台，重创凉州军阀，波及关中及文士集团，影响深远。",
+  "events": [
+    {
+      "title": "捕杀宦官党羽",
+      "desc": "王允初为郡吏时，捕杀为害全县的宦官党羽，展现了果敢与正义，赢得地方声望。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与镇压黄巾起义",
+      "desc": "光和七年（184年），王允参与镇压黄巾起义军，截获张让与黄巾军往来书信，揭露宦官勾结叛军，张让因此被汉灵帝责罚。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "两次被陷害入狱",
+      "desc": "张让怀恨在心，两次陷害王允下狱。幸得大将军何进、太尉袁隗、司徒杨赐等联名上书求免，王允才得以获赦。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "隐姓埋名于民间",
+      "desc": "获赦后，王允为躲避张让进一步迫害，改名换姓，隐居于民间，直至汉献帝即位。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "拜司徒封温侯",
+      "desc": "汉献帝即位后，王允被征召为太仆，后迁尚书令，代杨彪为司徒。董卓专权时，封王允为温侯，以示笼络。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "诛杀董卓",
+      "desc": "王允暗结董卓部将吕布，以连环计离间董卓与吕布，最终使吕布刺杀董卓，成功铲除权臣。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "凉州兵乱与身亡",
+      "desc": "王允决意解散董卓的凉州旧部，引发李傕、郭汜等将领恐慌，合兵攻入长安。王允兵败被杀，时年五十六岁。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "骑射",
+    "研习经传"
+  ],
+  "domains": [
+    "政治",
+    "军事",
+    "谋略"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/wang_yun.webp",
+  "thumb": "/p/sanguo/thumbs/wang_yun.webp"
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "id": "liu_zhang",
+  "name_zh": "刘璋",
+  "name_en": "Liu Zhang",
+  "aliases": [
+    "季玉",
+    "Jiyu",
+    "刘璋"
+  ],
+  "epithet": "益州牧·守成之主",
+  "category": "qun",
+  "era_layer": 2,
+  "bio": "刘璋（？—221年），字季玉，江夏竟陵（今湖北天门）人，东汉末年宗室、军阀，益州牧刘焉幼子。刘焉死后，刘璋继任益州牧，为人懦弱多疑。汉中张鲁骄纵，不听号令，刘璋杀其母弟，双方结仇。刘璋派庞羲攻张鲁，战败。后益州内部发生赵韪之乱，虽平定，但势力受损。曹操即将南下征伐的消息传来，刘璋听从张松、法正之言，迎刘备入益州，欲借刘备之力抵抗曹操。不料刘备反戈，在法正内应下进逼成都。成都吏民欲战，刘璋为保全百姓，开城出降，众人无不流泪。刘备占据成都后，以刘璋为振威将军，迁往荆州居住。关羽失荆州后，刘璋归属东吴，孙权任命其为益州牧。刘备东征孙权时，刘璋去世。刘璋虽无雄才大略，但在乱世中能顾全百姓，亦有仁厚之心。",
+  "events": [
+    {
+      "title": "继任益州牧",
+      "desc": "刘焉病逝后，刘璋以幼子身份继承益州牧之位，统治益州，但性格懦弱，无法有效驾驭下属。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与张鲁结仇",
+      "desc": "张鲁在汉中骄纵跋扈，不听刘璋号令，刘璋怒而杀死张鲁的母亲和弟弟，双方从此成为死敌。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "庞羲攻张鲁战败",
+      "desc": "刘璋派庞羲率军讨伐张鲁，但庞羲作战不利，被张鲁击败，刘璋的势力进一步削弱。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定赵韪之乱",
+      "desc": "益州豪强赵韪起兵反叛刘璋，刘璋经过艰苦作战才平定叛乱，但内部损耗严重，统治基础动摇。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "迎刘备入蜀",
+      "desc": "听闻曹操即将进攻益州，刘璋在张松、法正劝说下，邀请刘备率军入蜀，希望借刘备之力抵御曹操。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "刘备反攻，刘璋投降",
+      "desc": "刘备入蜀后，与刘璋反目，在法正内应下进攻成都。刘璋为免百姓涂炭，开城投降，部下无不流泪。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "迁居荆州，归属东吴",
+      "desc": "刘备占据成都后，将刘璋迁往荆州居住。关羽失荆州后，刘璋被东吴俘获，孙权任命其为益州牧，以图牵制刘备。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "去世",
+      "desc": "刘备东征孙权时，刘璋去世，结束其动荡的一生。",
+      "source": {
+        "work": "《三国志》",
+        "locus": "蜀书·刘璋传",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/liu_zhang.webp",
+  "thumb": "/p/sanguo/thumbs/liu_zhang.webp"
+}

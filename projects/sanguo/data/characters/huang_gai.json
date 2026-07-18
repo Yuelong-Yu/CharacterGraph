@@ -1,0 +1,84 @@
+{
+  "schema_version": 3,
+  "id": "huang_gai",
+  "name_zh": "黄盖",
+  "name_en": "Huang Gai",
+  "aliases": [
+    "公覆",
+    "黄公覆",
+    "Huang Gai"
+  ],
+  "epithet": "江东宿将·苦肉计",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "黄盖（生卒年不详），字公覆，零陵郡泉陵县（今湖南省永州市）人。汉末三国时期孙吴将领。黄盖喜读书，讲兵事，初为郡吏。初平元年（190年），黄盖跟随孙坚讨伐董卓，南破山越，北退董卓，升任别部司马。孙坚亡后，随其子孙策、孙权作战。历任春谷、浔阳等九县守长，任内安定。继为丹阳郡都尉，抑强扶弱，山越人纷纷归附。建安十三年（208年），随周瑜在赤壁抵抗曹军，与之隔江相望。建策火攻，并遣人送伪降书于曹操。调集蒙冲、斗舰数十艘，装满浸油柴草，裹以帷幕，后跟走舸。引船驶向对岸，纵火焚烧曹军船只和军营，最终大败曹军，升武锋中郎将。后领武陵太守，果敢作战，仅以五百兵平息郡内动乱，官至偏将军。黄盖面容严毅，善待士众，后病逝，东吴国人画像祭拜。",
+  "events": [
+    {
+      "title": "随孙坚讨董卓",
+      "desc": "初平元年（190年），黄盖跟随孙坚参与讨伐董卓的战役，南破山越，北退董卓，因功升任别部司马。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "历任九县守长",
+      "desc": "孙坚死后，黄盖随孙策、孙权作战，历任春谷、浔阳等九县守长，任内安定地方，治理有方。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "丹阳都尉治山越",
+      "desc": "黄盖任丹阳郡都尉，抑强扶弱，山越人纷纷归附，郡内秩序井然。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "赤壁之战献火攻",
+      "desc": "建安十三年（208年），黄盖随周瑜在赤壁抵抗曹军，建议采用火攻，并亲自送伪降书，率装满柴草的战船冲入曹军水寨纵火，大败曹军。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "领武陵太守平乱",
+      "desc": "赤壁之战后，黄盖领武陵太守，率五百兵平息郡内动乱，果敢作战，稳定地方。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "官至偏将军病逝",
+      "desc": "黄盖因功官至偏将军，后病逝，东吴国人画像祭拜，以示怀念。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/huang_gai.webp",
+  "thumb": "/p/sanguo/thumbs/huang_gai.webp"
+}

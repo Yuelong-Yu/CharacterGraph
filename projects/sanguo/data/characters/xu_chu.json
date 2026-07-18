@@ -1,0 +1,164 @@
+{
+  "schema_version": 3,
+  "id": "xu_chu",
+  "name_zh": "许褚",
+  "name_en": "Xu Chu",
+  "aliases": [
+    "虎痴",
+    "仲康",
+    "Tiger Fool"
+  ],
+  "epithet": "虎痴·曹操宿卫",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "许褚，字仲康，谯国谯县人，三国时期曹魏名将。他身高八尺余，腰大十围，容貌雄毅，勇力绝人。早年聚众数千家，筑坞堡抵御黄巾军，曾以投石击敌、曳牛百步令贼众畏惧。197年率部众归顺曹操，曹操赞其“此吾樊哙也”，任都尉，统领虎士。征张绣时先登杀敌，升校尉。200年官渡之战中，徐他等人谋刺曹操，许褚察觉并击杀之，从此更受信任。204年围邺，赐关内侯。211年潼关之战，曹操北渡渭河，马超率万骑追至，许褚举马鞍挡箭，一手撑船救曹操脱险。后与马超会谈，瞪眼吓退马超。军中以其力大如虎、憨直，号“虎痴”。曹仁求私谈，许褚以内外有别拒绝，曹操益重之，升中坚将军。220年曹操去世，许褚悲痛吐血。曹丕即位后，封万年亭侯，升武卫将军，总督禁军。曹叡即位后，封牟乡侯，食邑七百户。死后谥壮侯。其子许仪因修路不力被钟会斩杀，孙许综嗣爵。兄许定亦为将军。陈寿评其与典韦皆为樊哙之流。",
+  "events": [
+    {
+      "title": "聚众筑坞，曳牛退敌",
+      "desc": "许褚聚集数千宗族，筑坞堡抵御黄巾军。万余贼寇来攻，箭矢用尽，许褚令男女收集石块掷击，敌兵骨碎不敢近。粮尽时假意以牛换粮，牛惊走，许褚曳牛尾行百余步，贼众惊骇逃散。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "归顺曹操，被赞樊哙",
+      "desc": "197年，曹操至汝南、淮南，许褚率众归附。曹操见其勇力，赞叹道：“此吾樊哙也！”当即任命为都尉，统领贴身虎士。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "征张绣先登，杀敌无数",
+      "desc": "许褚随曹操征讨张绣，率虎士先登陷阵，斩杀大量敌军，因功升为校尉。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "官渡诛徐他，护主有功",
+      "desc": "200年官渡之战期间，刺客徐他等人密谋暗杀曹操，因畏惧许褚而待其休息时行动。许褚预感不安，返回帐中，徐他等惊愕失色，许褚察觉遂尽杀之。此后曹操更加信任，出入不离左右。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "潼关护渡，举鞍撑船",
+      "desc": "211年潼关之战，曹操北渡渭河，大军已过，曹操与虎士殿后。马超率万骑突至，矢如雨下。许褚左手举马鞍挡箭，右手持剑杀敌，又撑船离岸，护曹操脱险。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "潼关会谈，瞪眼吓退马超",
+      "desc": "曹操与马超、韩遂会谈，仅带许褚随行。马超欲乘机擒曹，但素闻许褚威名，问曹操：“虎侯安在？”曹操指许褚，许褚怒目而视，马超畏惧不敢动。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "义拒曹仁，内外有别",
+      "desc": "曹操封王后，曹仁从荆州来见，欲与许褚私聊。许褚拒绝，称：“彼虽亲重，外藩也。褚备内臣，众谈足矣，入室何私乎？”曹操闻后更加器重，升中坚将军。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹操去世，痛哭吐血",
+      "desc": "220年曹操逝世，许褚悲痛过度，以致吐血，可见其忠心。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹丕封赏，统领禁军",
+      "desc": "曹丕代汉称帝后，封许褚为万年亭侯，升武卫将军，总督中军宿卫禁兵，原虎士多被提拔为军官。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹叡封侯，谥曰壮侯",
+      "desc": "魏明帝曹叡即位，封许褚为牟乡侯，食邑七百户，并赐其一子关内侯。许褚死后，追谥壮侯。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "此吾樊哙也。",
+      "source": {
+        "work": "三国志·许褚传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "彼虽亲重，外藩也。褚备内臣，众谈足矣，入室何私乎？",
+      "source": {
+        "work": "三国志·许褚传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "虎侯安在？",
+      "source": {
+        "work": "三国志·许褚传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [
+    "剑"
+  ],
+  "skills": [
+    "投掷巨石",
+    "曳牛百步",
+    "举鞍挡箭",
+    "撑船渡河",
+    "瞪眼慑敌"
+  ],
+  "domains": [
+    "护卫",
+    "宿卫",
+    "内卫"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/xu_chu.webp",
+  "thumb": "/p/sanguo/thumbs/xu_chu.webp"
+}

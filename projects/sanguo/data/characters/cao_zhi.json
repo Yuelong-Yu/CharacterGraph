@@ -1,0 +1,124 @@
+{
+  "schema_version": 3,
+  "id": "cao_zhi",
+  "name_zh": "曹植",
+  "name_en": "Cao Zhi",
+  "aliases": [
+    "子建",
+    "Zijian",
+    "陈思王",
+    "Prince Si of Chen",
+    "Cao Zijian"
+  ],
+  "epithet": "陈思王·才高八斗",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "曹植（192年－232年12月27日），字子建，沛国谯人，曹操与武宣卞皇后所生第三子，三国时期曹魏文学家、诗人。少年早慧，十岁余便能诵读诗论及辞赋数十万言，深受曹操宠爱，一度有立为太子之意。但因任性饮酒、行为不检，逐渐失宠。建安二十二年（217年），曹操最终立曹丕为嗣。曹植曾醉酒擅闯司马门，其妻崔氏因服饰逾制被赐死，谋士杨修被诛，从此一蹶不振。曹丕即位后，将曹植与诸兄弟遣往封地，严禁参与朝政。曹植多次上书求用，均遭曹丕、曹叡父子拒绝，前后十一年间三徙封地。最终在陈王任上抑郁而终，年仅四十一岁。曹植是建安文学的代表人物，现存诗九十余首，尤以五言诗成就最高，代表作有《白马篇》《七步诗》（存疑）等，其诗风慷慨悲凉，对后世五言诗发展影响深远。",
+  "events": [
+    {
+      "title": "才华早显，受宠于父",
+      "desc": "曹植少年时即能背诵《诗经》《论语》及辞赋数十万言，援笔成文，深得曹操喜爱，曾被视为太子候选人之一。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "醉酒闯司马门失宠",
+      "desc": "约建安二十二年（217年），曹植醉酒后擅自乘坐马车沿帝王专用驰道行驶，并闯过司马门，曹操大怒，处死车夫，从此对曹植失望。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "妻子崔氏因服饰逾制被赐死",
+      "desc": "曹植之妻崔氏穿着过于华丽，且服饰僭越身份，被曹操认为违礼，下令其自杀。此事发生在曹丕被立为太子之后，意在打压曹植势力。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "谋士杨修被诛",
+      "desc": "曹操为巩固曹丕的继承地位，以“交构”罪名处死曹植的主要谋士杨修，曹植因此失去重要臂助，地位更加动摇。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "醉酒误事，错失救援曹仁",
+      "desc": "建安二十四年（219年），樊城被关羽围攻，曹操命曹植率军救援，但曹植因饮酒过量无法领命，曹操彻底放弃他。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹丕即位后遭贬逐",
+      "desc": "曹丕登基后，立即处死曹植的支持者丁仪、丁廙，并将曹植与其他兄弟遣往封地，禁止参与中央政治，曹植从此远离权力中心。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "多次上书求用被拒",
+      "desc": "曹丕死后，曹植多次向侄儿曹叡上书，请求给予官职以施展才能，但曹叡始终猜忌不予重用，仅徙封其地。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "七步诗故事（演义）",
+      "desc": "《三国演义》中，曹丕为迫害曹植，命其七步内作诗，否则处死。曹植应声吟出《七步诗》，以豆萁相煎比喻兄弟相残，曹丕感动，将其贬爵。",
+      "source": {
+        "work": "Romance of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "郁郁而终",
+      "desc": "曹植因长期不得志，又闻将再次迁徙封地，忧愤成疾，于232年12月27日去世，临终嘱薄葬。其子曹志嗣位，不久封地转至济北。",
+      "source": {
+        "work": "Records of the Three Kingdoms",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "作诗赋",
+    "即兴创作",
+    "文学创作"
+  ],
+  "domains": [
+    "诗歌",
+    "文学",
+    "建安文学"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/cao_zhi.webp",
+  "thumb": "/p/sanguo/thumbs/cao_zhi.webp"
+}

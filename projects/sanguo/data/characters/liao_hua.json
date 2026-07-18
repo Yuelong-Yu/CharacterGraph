@@ -1,0 +1,146 @@
+{
+  "schema_version": 3,
+  "id": "liao_hua",
+  "name_zh": "廖化",
+  "name_en": "Liao Hua",
+  "aliases": [
+    "廖淳",
+    "廖元俭",
+    "Liao Chun",
+    "Yuanjian"
+  ],
+  "epithet": "蜀汉老将·历仕三朝",
+  "category": "shu",
+  "era_layer": 3,
+  "bio": "廖化（？—264年），本名淳，字元俭，荆州南郡襄阳中卢人，三国时期蜀汉将领。初为关羽主簿，建安二十四年（219年）关羽败亡，廖化被东吴俘获，诈死携母西逃，途中遇刘备，被任命为宜都太守。后历任广武督、阴平太守、右车骑将军、并州刺史，封中乡侯。景初二年（238年）率军攻击魏雍州刺史郭淮，识破敌军分兵之计，击败王赟、游奕，王赟中箭身亡。廖化参与姜维北伐，但对其连年用兵持批评态度，曾引用《诗经》劝谏。景耀六年（263年）蜀汉灭亡，咸熙元年（264年）被迁往洛阳，途中病逝，享年约七十余岁。廖化历仕蜀汉始终，以忠勇著称，后世有“蜀中无大将，廖化作先锋”之谚。",
+  "events": [
+    {
+      "title": "诈死携母归蜀",
+      "desc": "关羽败亡后，廖化被东吴俘虏，假装死亡，骗过看守，带着母亲向西逃往蜀地，途中遇到刘备。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被任命为宜都太守",
+      "desc": "221年刘备称帝后，在秭归遇到廖化，非常高兴，任命他为宜都郡太守。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "击败魏将王赟、游奕",
+      "desc": "238年9月，廖化率军攻击魏雍州刺史郭淮驻防的营地，郭淮派王赟、游奕分兵反击，廖化识破敌军分散部署，趁其不备击败他们，王赟被箭射死。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与姜维北伐",
+      "desc": "廖化参加了姜维的第三、四次北伐（247年、249年），与魏军交战。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "引用《诗经》劝谏姜维",
+      "desc": "262年姜维即将发动第十一次北伐，廖化引用《诗经》“不自我先，不自我后”等语，批评姜维智谋兵力均不如敌却屡次出兵，如同自焚。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "蜀国灭亡后病逝",
+      "desc": "263年蜀汉投降，264年廖化被命令迁往洛阳，途中病逝，享年七十余岁。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义救刘备夫人拒追随",
+      "desc": "《三国演义》中，廖化原是黄巾余党，遇见关羽护送刘备夫人，从同伙杜远手中救出甘、糜二夫人，关羽感谢但因其出身不收留，廖化离去。",
+      "source": {
+        "work": "三國演義",
+        "locus": "第27回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义诱敌夺取樊城",
+      "desc": "演义中廖化在关羽攻打襄阳时担任先锋，成功引诱曹仁、翟元出城，使关羽得以夺取城池。",
+      "source": {
+        "work": "三國演義",
+        "locus": "第73回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义追击司马懿砍中树",
+      "desc": "演义中廖化在上方谷追击司马懿，挥剑砍中树木，让司马懿逃脱，但夺得金盔，被诸葛亮记为头功，引起魏延不满。",
+      "source": {
+        "work": "三國演義",
+        "locus": "第103回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义蜀亡后忧愤而死",
+      "desc": "演义中刘禅投降后，廖化悲痛过度，忧愤而死。",
+      "source": {
+        "work": "三國演義",
+        "locus": "第119回",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "不自我先，不自我后。",
+      "source": {
+        "work": "三國志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "诈死逃生",
+    "带母西行",
+    "识破敌计",
+    "领兵破敌",
+    "诱敌伏击"
+  ],
+  "domains": [
+    "军事",
+    "边防",
+    "忠义",
+    "劝谏"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/liao_hua.webp",
+  "thumb": "/p/sanguo/thumbs/liao_hua.webp"
+}

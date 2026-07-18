@@ -1,0 +1,109 @@
+{
+  "schema_version": 3,
+  "id": "han_dang",
+  "name_zh": "韩当",
+  "name_en": "Han Dang",
+  "aliases": [
+    "义公",
+    "Yigong"
+  ],
+  "epithet": "东吴三朝宿将",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "韩当（？—226年），字义公，辽西郡令支县（今河北迁安）人。东汉末年至三国时期孙吴名将。他膂力过人，精于骑射。早年追随孙坚，参与征讨黄巾、讨伐董卓等战役，任别部司马。孙坚死后，转投其子孙策，随其平定江东，为东吴基业立下汗马功劳，升任先登校尉。孙策遇刺后，韩当继续效力于孙权，参与讨伐刘勋、江夏之战，并平定鄱阳山越。建安十三年（208年），随周瑜参加赤壁之战，大破曹军。建安二十四年（219年），随吕蒙袭取荆州，擒杀关羽，升任偏将军、永昌太守。黄初二年（221年）至黄初三年（222年），韩当参与夷陵之战，与陆逊等合力击败刘备，转任威烈将军，封都亭侯。黄初四年（223年），参与江陵之战，抵御曹真。后任昭武将军、冠军太守、都督，统兵万人平定丹阳贼寇。黄武五年（226年），韩当去世。其子韩综后叛投曹魏，最终被吴将诸葛恪斩杀。韩当历仕孙氏三代，作战勇猛，治军严整，被陈寿誉为“江表之虎臣”。",
+  "events": [
+    {
+      "title": "随孙坚征讨黄巾",
+      "desc": "韩当在孙坚麾下参与讨伐黄巾军，表现出色，但因多为游侠性质，未获显职。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随孙策平定江东",
+      "desc": "孙坚死后，韩当转投孙策，随其渡江夺取江东六郡，被任命为先登校尉，统领二千兵士。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与赤壁之战",
+      "desc": "建安十三年（208年），韩当随周瑜在赤壁与曹操大军交战，利用火攻大破曹军。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随吕蒙袭取荆州",
+      "desc": "建安二十四年（219年），韩当随吕蒙白衣渡江，奇袭荆州，迫使关羽败走，助孙权夺取荆州全境。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与夷陵之战",
+      "desc": "黄初二年（221年）至三年（222年），韩当随陆逊在夷陵抵御刘备的复仇进攻，最终大败蜀军，升任威烈将军、都亭侯。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与江陵之战",
+      "desc": "黄初四年（223年），韩当参与江陵之战，与朱然等共同抵抗魏将曹真、夏侯尚的进攻，成功守城。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定丹阳山贼",
+      "desc": "韩当任昭武将军、冠军太守时，率一万精锐讨伐丹阳郡的贼寇，将其彻底平定。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "韩当去世",
+      "desc": "黄武五年（226年），韩当病逝，其子韩综袭爵，后因叛逃曹魏，最终被吴将诸葛恪斩杀。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "骑射",
+    "冲锋陷阵"
+  ],
+  "domains": [
+    "军事",
+    "征讨"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/han_dang.webp",
+  "thumb": "/p/sanguo/thumbs/han_dang.webp"
+}

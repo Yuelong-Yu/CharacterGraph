@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "liu_feng",
+  "name_zh": "刘封",
+  "name_en": "Liu Feng",
+  "aliases": [
+    "刘封",
+    "Liu Feng"
+  ],
+  "epithet": "刘备养子·刚猛将领",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "刘封（？—220年），汉族，长沙（今湖南湘阴）人，东汉末年将领，蜀汉昭烈帝刘备养子。有武艺，性格刚猛，气力过人。随赵云、张飞等扫荡西川，颇有战功，而后又统领孟达攻取上庸，深为刘备信任。但后来关羽北伐曹魏，多次要求刘封起兵相助，刘封不从。而后又侵凌孟达，致其降魏。孟达与徐晃共袭刘封，并劝刘封投降，刘封不降，又遭部下叛变，败归成都。刘备在诸葛亮的建议下赐死刘封，刘封自裁，刘备深表痛惜。",
+  "events": [
+    {
+      "title": "随赵云张飞扫荡西川",
+      "desc": "刘封随赵云、张飞等将领参与刘备夺取益州的战役，奋勇作战，立下战功，深得刘备赏识。",
+      "source": null,
+      "canon": "history"
+    },
+    {
+      "title": "统领孟达攻取上庸",
+      "desc": "刘封受命与孟达共同进攻上庸，成功攻占该地，被刘备任命为副军将军，驻守上庸，势力得以扩张。",
+      "source": null,
+      "canon": "history"
+    },
+    {
+      "title": "关羽北伐时拒不出兵",
+      "desc": "关羽北伐襄樊，多次要求刘封从上庸发兵相助，但刘封以山郡初附、未可动摇为由拒绝，导致关羽孤立无援，最终兵败身亡。",
+      "source": null,
+      "canon": "history"
+    },
+    {
+      "title": "侵凌孟达致其降魏",
+      "desc": "刘封与孟达关系恶化，刘封夺其鼓吹、侵凌其部，孟达惧罪降魏，并引魏军反攻上庸，刘封形势危急。",
+      "source": null,
+      "canon": "history"
+    },
+    {
+      "title": "孟达徐晃攻袭败归成都",
+      "desc": "孟达与魏将徐晃合兵攻打上庸，刘封部将叛变，城池失守，刘封逃回成都，向刘备请罪。",
+      "source": null,
+      "canon": "history"
+    },
+    {
+      "title": "被赐死自裁",
+      "desc": "刘备在诸葛亮建议下，以刘封刚猛难制、且不救关羽为由，赐死刘封。刘封自杀，刘备闻讯痛哭。",
+      "source": null,
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/liu_feng.webp",
+  "thumb": "/p/sanguo/thumbs/liu_feng.webp"
+}

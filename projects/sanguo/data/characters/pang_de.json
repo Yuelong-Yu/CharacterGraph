@@ -1,0 +1,166 @@
+{
+  "schema_version": 3,
+  "id": "pang_de",
+  "name_zh": "庞德",
+  "name_en": "Pang De",
+  "aliases": [
+    "字令明",
+    "白马将军",
+    "Pang De",
+    "Pang Lingming"
+  ],
+  "epithet": "白马将军·抬榇决战",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "庞德（？—219年），字令明，东汉末年南安郡豲道（今甘肃天水武山县）人。早年任郡吏，后随马腾征讨羌、氐等叛乱，因功升任校尉。202年，随马超在平阳迎战郭援，亲斩郭援首级，拜中郎将，封都亭侯。后随马腾镇压张白骑叛乱。马腾入朝后，庞德留属马超。211年，马超联合关中诸将反曹，在潼关之战中被曹操击败，庞德随马超逃往汉中投奔张鲁。214年，马超转投刘备，庞德则留在张鲁处。215年，曹操攻占汉中，庞德随张鲁投降，曹操素闻其勇，拜为立义将军，封关门亭侯。219年，庞德随曹仁平定宛城侯音、卫开之乱，后驻守樊城抵御关羽。因常骑白马，关羽部将称其为“白马将军”。时逢汉水暴涨，关羽乘船水淹七军，庞德率部力战，箭尽援绝，被俘后誓死不降，怒斥关羽，终被斩杀。曹操闻之悲痛落泪。曹丕称帝后，追谥庞德为“壮侯”，并厚待其子孙。庞德以其忠勇节义名垂后世，陈寿在《三国志》中将其与不屈于项羽的周苛相提并论。",
+  "events": [
+    {
+      "title": "随马腾征讨羌氐叛乱",
+      "desc": "东汉初平年间（190-193），凉州发生叛乱，庞德加入马腾军，参与镇压羌、氐部落的起义，因战功升任校尉。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平阳之战斩郭援",
+      "desc": "202年，曹操征袁谭、袁尚，命钟繇从凉州征兵。马腾派马超、庞德支援。庞德率先锋与郭援交战，斩杀郭援，但不知其身份。后向钟繇献上首级，钟繇见是外甥大哭，仍赞其义举。庞德因此升中郎将，封都亭侯。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随马腾平定张白骑",
+      "desc": "庞德随后跟随马腾在殽县镇压张白骑叛乱，战斗中常亲自冲锋陷阵，以勇猛著称。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参加潼关之战",
+      "desc": "211年，马超联合关中诸将反曹，庞德随马超参与潼关之战。曹操击败马超联军，庞德随马超退至凉州，后辗转投奔汉中张鲁。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随马超投奔张鲁",
+      "desc": "潼关之战后，马超一度占据凉州，但被逐出，庞德随马超前往汉中，依附张鲁，成为张鲁部将。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随张鲁降曹操",
+      "desc": "215年，曹操攻汉中，张鲁投降，庞德随之归顺。曹操久闻其勇，拜为立义将军，封关门亭侯，赐三百户。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定侯音、卫开之乱",
+      "desc": "219年，侯音、卫开在宛城叛乱，勾结关羽。庞德随曹仁镇压，斩杀叛军首领，随后驻守樊城。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "樊城之战射中关羽额头",
+      "desc": "庞德在樊城外与关羽交战，曾一箭射中关羽额头，几乎杀死关羽。关羽军因庞德常骑白马，称其为“白马将军”，甚为畏惧。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "汉水泛滥被俘不屈而死",
+      "desc": "219年秋，连降大雨，汉水暴涨，关羽率水军乘船进攻。庞德率部退至堤坝，箭矢用尽后短兵相接，拒绝投降，被俘后大骂关羽，宁死不屈，终被斩杀。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "曹丕追谥壮侯",
+      "desc": "220年曹丕称帝后，追念庞德忠义，追谥为“壮侯”，并派使者到其墓前宣读诏书，封赏其四子各为关内侯。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "我受国恩，义在效死。我欲身自击羽。今年我不杀羽，羽当杀我。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "吾闻良将不怯死以苟免，烈士不毁节以求生，今日，我死日也。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "竖子，何谓降也！魏王带甲百万，威振天下。汝刘备庸才耳，岂能敌邪？我宁为国家鬼，不为贼将也。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": "vol. 18",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [
+    "弓箭",
+    "短刀"
+  ],
+  "skills": [
+    "冲锋陷阵",
+    "箭无虚发",
+    "斩将夺旗"
+  ],
+  "domains": [
+    "弓箭",
+    "战场",
+    "忠义"
+  ],
+  "mounts": [
+    "白马"
+  ],
+  "portrait": "/p/sanguo/portraits/pang_de.webp",
+  "thumb": "/p/sanguo/thumbs/pang_de.webp"
+}

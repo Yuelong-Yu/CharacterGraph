@@ -1,0 +1,95 @@
+{
+  "schema_version": 3,
+  "id": "deng_ai",
+  "name_zh": "邓艾",
+  "name_en": "Deng Ai",
+  "aliases": [
+    "邓士载",
+    "邓范",
+    "Shizai"
+  ],
+  "epithet": "偷渡阴平·灭蜀名将",
+  "category": "wei",
+  "era_layer": 3,
+  "bio": "邓艾（约197年—264年），字士载，原名邓范，义阳郡棘阳县（今河南新野）人。三国时期曹魏名将、政治家。出身贫寒，幼年丧父，曾为农田小吏，因口吃未得升迁。后遇司马懿，被赏识提拔，任尚书郎。邓艾善于农业水利，提出《济河论》，在淮河区域开凿漕渠，灌溉农田，使魏国粮草丰足，为日后征伐吴、蜀奠定基础。军事上，他多次参与抵御蜀汉姜维的北伐，在洮河之战中预判敌情，成功防守洮城。后迁任城阳、汝南太守，政绩卓著。255年，参与平定毌丘俭、文钦之乱，晋升为征西将军。263年，邓艾与钟会分兵伐蜀，他率军偷渡阴平小道，翻越险峻山地，直逼成都，迫使蜀汉后主刘禅投降，灭蜀功勋卓著。然而邓艾自恃功高，行事傲慢，不经请示擅自封赏蜀汉降臣，引起钟会猜忌和司马昭怀疑。264年，钟会诬告邓艾谋反，司马昭下令逮捕邓艾，邓艾与其子邓忠被押送洛阳途中，遭卫瓘指使的田续杀害。其家属被流放，直至西晋建立后才获赦免。邓艾文武双全，内政军事皆有建树，其灭蜀之战为后世典范，然因性格缺陷惨遭冤杀，令人扼腕。",
+  "events": [
+    {
+      "title": "提出《济河论》兴修水利",
+      "desc": "邓艾奉命考察陈、项至寿春一带农田，认为土地肥沃但缺水，建议开凿漕渠引水灌溉，并撰写《济河论》详述方案。司马懿采纳其建议，于241年完成广漕渠等工程，使魏国在淮河流域实现农业丰收，并可通过水路运输军队，极大增强了东南防御和进攻东吴的能力。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": "Volume 28, Biography of Deng Ai",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "洮河之战预判防守",
+      "desc": "249年，邓艾随郭淮抵御姜维入侵。蜀军退后，邓艾建议分兵防其回击。随后姜维派廖化佯攻，邓艾识破其声东击西之计，连夜率军赶往60里外的洮城加强防御，成功阻止姜维攻占该城。因功封关内侯，升讨寇将军。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": "Volume 28, Biography of Deng Ai",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与平定毌丘俭文钦之乱",
+      "desc": "255年，毌丘俭、文钦在寿春起兵反叛司马师。邓艾奉命率军参与平叛，与诸军协同作战，最终击败叛军。邓艾因功晋升为征西将军，都督陇右诸军事，成为魏国西线最高指挥官。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": "Volume 28, Biography of Deng Ai",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "多次抵御姜维北伐",
+      "desc": "从255年至262年，邓艾长期镇守魏国西部边境，多次击退姜维率领的蜀军进攻。他擅长利用地形和防御工事，以少胜多，使姜维始终无法突破魏国防线。其中在段谷之战中，邓艾与姜维交战，蜀军大败，死伤惨重。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": "Volume 28, Biography of Deng Ai",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "偷渡阴平灭蜀",
+      "desc": "263年，邓艾与钟会分兵伐蜀。钟会主力被姜维阻于剑阁，邓艾率军自阴平小道翻越无人山区，凿山开路，裹毡而下，突然出现在蜀汉腹地江油。蜀军惊慌失措，邓艾在绵竹击败诸葛瞻后，直逼成都，刘禅出降，蜀汉灭亡。此战为三国时期最经典的奇袭之一。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": "Volume 28, Biography of Deng Ai",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "遭钟会陷害被冤杀",
+      "desc": "灭蜀后，邓艾居功自傲，擅自以天子名义封赏蜀汉降臣，引起司马昭不满。钟会趁机诬告邓艾谋反，司马昭命令卫瓘逮捕邓艾。264年，邓艾父子被押送洛阳，途中钟会谋反失败被杀，但卫瓘因曾参与陷害邓艾，担心被报复，派田续在绵竹西三造亭杀害邓艾父子。其家属被流放西域。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": "Volume 28, Biography of Deng Ai",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "兴修水利工程",
+    "率军翻越险隘",
+    "预测敌军动向",
+    "统领军队防御",
+    "实施屯田开荒"
+  ],
+  "domains": [
+    "军事战略",
+    "农业水利",
+    "边境防御",
+    "后勤补给"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/deng_ai.webp",
+  "thumb": "/p/sanguo/thumbs/deng_ai.webp"
+}

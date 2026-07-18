@@ -1,0 +1,103 @@
+{
+  "schema_version": 3,
+  "id": "xun_yu",
+  "name_zh": "荀彧",
+  "name_en": "Xun Yu",
+  "aliases": [
+    "文若",
+    "荀令君"
+  ],
+  "epithet": "王佐之才·荀令君",
+  "category": "wei",
+  "era_layer": 2,
+  "bio": "荀彧（163年－212年），字文若，颍川郡颍阴县（今河南许昌）人，东汉末年政治家、战略家，曹操麾下首席谋臣。出身官宦世家，祖父荀淑有八子，人称“八龙”，叔父荀爽官至三公。荀彧年轻时即被名士何颙赞为“王佐之才”。189年举孝廉，任守宫令，因董卓乱政弃官归乡，率宗族避难冀州，先依袁绍，后料其不能成事，于191年投奔曹操。曹操见之大喜，称“吾之子房”，任命为司马。此后荀彧为曹操规划战略，举荐了荀攸、郭嘉、钟繇、陈群、司马懿等大量人才，并多次在关键时刻提出正确建议。194年吕布偷袭兖州，荀彧坚守鄄城，保住了基地；196年劝曹操迎汉献帝迁都许县，实现了“奉天子以令不臣”的政治优势；200年官渡之战中劝阻曹操退兵，奠定了河北统一的基础。战后建议先巩固河北再南下，使曹操迅速平定袁氏。荀彧官至侍中、守尚书令，封万岁亭侯，居中持重十数年，被尊为“荀令君”。然而他内心忠于汉室，反对曹操称魏公，于212年因此被调离中枢，在随征孙权途中于寿春忧郁而亡（一说服毒自尽），谥号“敬”。265年追赠太尉。",
+  "events": [
+    {
+      "title": "弃袁绍投奔曹操",
+      "desc": "191年，荀彧认为袁绍不能成大事，离开袁绍投奔曹操。曹操见后称赞他是自己的张良（子房），任命为司马，从此荀彧成为曹操的核心谋士。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "兖州保卫战",
+      "desc": "194年，曹操东征徐州陶谦，吕布趁机袭击兖州。荀彧留守鄄城，果断应对，联合程昱、夏侯惇等保住了鄄城、范县、东阿三城，为曹操返回收复兖州保住了根基。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "劝迎汉献帝",
+      "desc": "196年，汉献帝流落洛阳，荀彧建议曹操迎奉天子，以“奉天子以令不臣”的策略获得政治优势。曹操采纳，将献帝迁至许昌，此后得以挟天子以令诸侯。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "官渡之战劝阻退兵",
+      "desc": "200年官渡之战相持期间，曹操粮草耗尽欲退兵，写信问荀彧。荀彧回信分析曹军优势，劝其坚守待机。曹操听从，最终奇袭乌巢大败袁绍，奠定北方霸主地位。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "献计平定河北",
+      "desc": "官渡战后，曹操想南征刘表，荀彧建议乘胜追击袁绍残部，巩固河北。曹操采纳，迅速平定冀州、青州、并州等地，统一北方。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "反对曹操称魏公",
+      "desc": "212年，董昭等人提议曹操进爵魏公，荀彧认为曹操本应匡扶汉室，不应称公，因此反对。此举触怒曹操，导致荀彧被调离中枢，后忧郁而死。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "寿春去世",
+      "desc": "212年，荀彧被派往谯县慰劳征讨孙权的军队，途中在寿春病重去世（一说服毒自尽），享年五十岁。谥号“敬”，后追赠太尉。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "制定战略",
+    "举荐贤才",
+    "统筹后方",
+    "政治谋划"
+  ],
+  "domains": [
+    "政治",
+    "战略",
+    "人事",
+    "内政"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/xun_yu.webp",
+  "thumb": "/p/sanguo/thumbs/xun_yu.webp"
+}

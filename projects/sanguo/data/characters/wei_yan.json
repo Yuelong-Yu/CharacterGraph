@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "id": "wei_yan",
+  "name_zh": "魏延",
+  "name_en": "Wei Yan",
+  "aliases": [
+    "文长",
+    "Wei Yan"
+  ],
+  "epithet": "蜀汉名将·镇北将军",
+  "category": "shu",
+  "era_layer": 3,
+  "bio": "魏延（？—234年），字文长，义阳人，三国时期蜀汉名将。早年随刘备入蜀，屡立战功，升任牙门将军。219年，刘备任命其为汉中太守、镇远将军，镇守汉中，魏延自信回答“若曹操举天下而来，请为大王拒之”。221年刘备称帝后升为镇北将军。223年封都亭侯。227年起随诸葛亮北伐，多次提出子午谷奇谋但被拒绝。230年，魏延率军大破魏将郭淮、费曜于阳溪。231年，在祁山之战中大败司马懿，升任前军师、征西大将军、南郑侯。234年，诸葛亮病逝于五丈原，魏延与长史杨仪冲突，不愿撤退，烧毁栈道，被指控谋反，最终被马岱斩杀，并被灭族。魏延善养士卒，勇猛过人，但性格高傲，与同僚不合，其死被认为是蜀汉内部矛盾的结果。",
+  "events": [
+    {
+      "title": "随刘备入蜀，夺取益州",
+      "desc": "214年，魏延随刘备入蜀，参与攻打刘璋，在广汉等地立功，升任牙门将军。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被任命为汉中太守",
+      "desc": "219年，刘备夺取汉中后，意外任命魏延为汉中太守、镇远将军，魏延表示将全力防御曹魏进攻。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "提出子午谷奇谋",
+      "desc": "227年，诸葛亮第一次北伐时，魏延请求率万人出子午谷奇袭长安，但被诸葛亮认为风险太大而拒绝。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "大破郭淮、费曜",
+      "desc": "230年，魏延率军与郭淮、费曜交战于阳溪，大败魏军，因功升为前军师、征西大将军。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "祁山之战大胜司马懿",
+      "desc": "231年，魏延与高翔、吴班在祁山击败司马懿，斩杀三千魏军，缴获大量物资。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与杨仪冲突，被指控谋反",
+      "desc": "234年诸葛亮病逝后，魏延不愿服从杨仪撤退命令，烧毁栈道，双方互相指控谋反，最终魏延部下离散，被马岱斩杀并被灭族。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "若曹操举天下而来，请为大王拒之；若偏将十万之众至，请为大王吞之。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "丞相虽亡，吾自见在。府亲官属便可将丧还葬，吾自当率诸军击贼，云何以一人死废天下之事邪？且魏延何人，当为杨仪所部勒，作断后将乎！",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "勇猛善战",
+    "重门之策",
+    "指挥北伐"
+  ],
+  "domains": [
+    "军事",
+    "防御",
+    "北伐"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/wei_yan.webp",
+  "thumb": "/p/sanguo/thumbs/wei_yan.webp"
+}

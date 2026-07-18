@@ -1,0 +1,104 @@
+{
+  "schema_version": 3,
+  "id": "guan_ping",
+  "name_zh": "关平",
+  "name_en": "Guan Ping",
+  "aliases": [
+    "关平",
+    "Guan Ping",
+    "坦之"
+  ],
+  "epithet": "关羽之子·忠勇少将",
+  "category": "shu",
+  "era_layer": 2,
+  "bio": "关平（178年—220年），字坦之，东汉末年名将关羽长子。史书记载甚少，仅知建安二十四年（219年）随关羽北伐曹仁，荆州失守后与父同退守麦城，次年被东吴伏击俘获，于临沮遇害。其子关樾据载因母赵氏隐姓幸存，后恢复关姓并获世袭恩赐。史籍对其身份存在争议，《三国志》记为亲子，《华阳国志》及明清方志多持义子说。宋崇宁元年（1102年）被封武宁侯，明万历四十二年（1614年）追封竭忠王，清顺治九年（1652年）随父获称“关圣太子”。在小说《三国演义》中，关平被塑造为关羽的义子，原为农夫关定次子，关羽过五关时收为养子。此后他参与博望坡之战、益州之战，后随关羽镇守荆州。219年樊城之战中，他随关羽水淹七军，初战告捷，但因东吴吕蒙偷袭荆州，关羽父子败走麦城，突围时被伏兵俘虏，拒绝投降而被杀。后世关帝庙中常与周仓同列配祀，形象多为捧印白面神将。",
+  "events": [
+    {
+      "title": "随父北伐曹仁",
+      "desc": "建安二十四年（219年），关平随关羽率军北攻樊城曹仁，初期水淹七军，威震华夏。但东吴吕蒙趁机偷袭荆州，导致后方失守。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "麦城被俘",
+      "desc": "荆州失守后，关羽与关平退守麦城。建安二十五年（220年）正月，在突围途中于麦城以西被东吴伏兵擒获。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "临沮遇害",
+      "desc": "被俘后不久，关平与父亲关羽一同在临沮（今湖北南漳）被东吴处斩，壮烈殉国。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义中成为关羽义子",
+      "desc": "在《三国演义》中，关羽过五关时遇到农夫关定一家，见其次子关平气度不凡，遂收为义子，改名关平，此后随关羽征战。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "参与博望坡之战",
+      "desc": "关羽、关平与周仓率三百人前往救援被张郃攻击的刘备，关平首次在演义中出战。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "参与樊城之战",
+      "desc": "219年，关平随关羽围攻樊城，水淹七军，擒于禁、斩庞德，取得重大胜利。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "被俘不屈遇害",
+      "desc": "麦城突围时，关平与关羽一同被东吴伏兵擒获。孙权劝降，关平与父亲皆拒绝，遂被杀害。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "后世追封配祀",
+      "desc": "宋崇宁元年（1102年）封武宁侯，明万历四十二年（1614年）追封竭忠王，清顺治九年（1652年）随关羽获称“关圣太子”。明清关帝庙中常与周仓同列，形象为捧印白面神将。",
+      "source": {
+        "work": "荆州府志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/guan_ping.webp",
+  "thumb": "/p/sanguo/thumbs/guan_ping.webp"
+}

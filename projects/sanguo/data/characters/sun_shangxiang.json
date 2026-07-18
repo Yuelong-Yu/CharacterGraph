@@ -1,0 +1,101 @@
+{
+  "schema_version": 3,
+  "id": "sun_shangxiang",
+  "name_zh": "孙尚香",
+  "name_en": "Lady Sun",
+  "aliases": [
+    "孙仁",
+    "Sun Ren",
+    "孙尚香",
+    "Sun Shangxiang",
+    "枭姬",
+    "弓腰姬",
+    "Lady Sun",
+    "Sun Shang-hsiang",
+    "Xiao Ji",
+    "Gongyao Ji"
+  ],
+  "epithet": "弓腰姬·孙刘联姻",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "孙尚香，本名未载于正史，民间称孙尚香，又称孙夫人。她是东汉末年军阀孙坚之女，孙策、孙权的妹妹。建安十四年（209年），为巩固孙刘联盟，孙权将年约二十的妹妹嫁给时年四十九岁的刘备。孙夫人才智敏捷，性格刚烈勇猛，有兄长之风，身边侍婢百余人，皆持刀剑护卫。刘备对她既疑且惧，连蜀汉丞相诸葛亮也担心她会生事。211年，刘备入蜀时，孙权派人接回妹妹，孙夫人企图带走刘备之子刘禅，被赵云、张飞截回。此后她返回东吴，再无音讯。在小说《三国演义》中，她名为孙仁，被描绘成精通武艺、性情刚烈的女子，并参与了周瑜的美人计，最终在听闻刘备死讯后投江殉情。后世戏曲、游戏等文艺作品常以“孙尚香”之名塑造其形象，成为三国时期著名的女性角色。",
+  "events": [
+    {
+      "title": "孙刘联姻",
+      "desc": "建安十四年（209年），孙权为巩固与刘备的同盟关系，将妹妹孙夫人嫁给刘备。婚礼地点可能在荆州公安县，当时刘备名义上担任荆州牧。",
+      "source": {
+        "work": "《三国志·蜀书·先主传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "刘备畏惧孙夫人",
+      "desc": "孙夫人性格刚烈，侍女皆持刀侍卫，刘备每次入内房都感到恐惧。诸葛亮曾评论说刘备在公安时，既怕北方的曹操，又怕东方的孙权，还担心孙夫人在内部制造麻烦。",
+      "source": {
+        "work": "《三国志·蜀书·诸葛亮传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "法正劝谏送归",
+      "desc": "法正因孙夫人骄横，建议刘备与她保持距离。刘备在公安县筑孱陵城（又称孙夫人城），让孙夫人及其侍从单独居住。",
+      "source": {
+        "work": "《三国志·蜀书·法正传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "孙权迎回孙夫人",
+      "desc": "211年，刘备入蜀征讨刘璋，孙权派船接回妹妹。孙夫人企图带走刘禅，被赵云、张飞率兵拦截，夺回刘禅。此后孙夫人回到东吴，史书再无记载。",
+      "source": {
+        "work": "《三国志·蜀书·赵云传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义中的美人计",
+      "desc": "在《三国演义》中，周瑜设计以孙夫人为诱饵，诱使刘备到东吴成亲，企图以联姻之名扣留刘备。但诸葛亮识破计谋，刘备最终成功娶孙夫人并返回荆州。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "演义中投江殉情",
+      "desc": "《三国演义》中，孙夫人听说刘备在夷陵之战中战死的假消息后，悲痛欲绝，驱车至江边，投江而死。后人有诗赞其贞烈。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "弓",
+    "剑"
+  ],
+  "skills": [
+    "骑射",
+    "使剑",
+    "统领女兵"
+  ],
+  "domains": [
+    "联姻",
+    "家族关系"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/sun_shangxiang.webp",
+  "thumb": "/p/sanguo/thumbs/sun_shangxiang.webp"
+}

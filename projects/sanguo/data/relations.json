@@ -978,5 +978,5024 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dong_zhuo-lyu_bu",
+    "source": "dong_zhuo",
+    "target": "lyu_bu",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "收为义子终遭反噬",
+        "desc": "董卓以厚赏和赤兔马招揽吕布，收为义子；吕布后来受王允策动，在长安诛杀董卓。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "diao_chan-dong_zhuo",
+    "source": "diao_chan",
+    "target": "dong_zhuo",
+    "primary_type": "hostile",
+    "composite_types": [
+      "marriage"
+    ],
+    "events": [
+      {
+        "title": "连环计离间董吕",
+        "desc": "演义中王允以貂蝉周旋于董卓、吕布之间，引发二人决裂。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dong_zhuo-wang_yun",
+    "source": "dong_zhuo",
+    "target": "wang_yun",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王允谋诛董卓",
+        "desc": "王允联合吕布诛杀把持朝政的董卓，随后主持长安政局。",
+        "source": {
+          "work": "《后汉书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-dong_zhuo",
+    "source": "cao_cao",
+    "target": "dong_zhuo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "起兵讨伐董卓",
+        "desc": "曹操逃离洛阳后起兵，并参与关东诸侯讨董联盟。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dong_zhuo-emperor_xian",
+    "source": "dong_zhuo",
+    "target": "emperor_xian",
+    "primary_type": "lord_subject",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "废立天子把持朝政",
+        "desc": "董卓废少帝、立刘协为帝，并挟持汉献帝迁都长安。",
+        "source": {
+          "work": "《后汉书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dong_zhuo-hua_xiong",
+    "source": "dong_zhuo",
+    "target": "hua_xiong",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西凉猛将守关",
+        "desc": "华雄在董卓麾下抵御关东联军，成为汜水关战事的重要将领。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dong_zhuo-yuan_shao",
+    "source": "dong_zhuo",
+    "target": "yuan_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "盟主讨董",
+        "desc": "袁绍被推为关东联军盟主，联合诸侯讨伐董卓。",
+        "source": {
+          "work": "《后汉书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-yuan_shao",
+    "source": "cao_cao",
+    "target": "yuan_shao",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "由旧交到官渡决战",
+        "desc": "曹操与袁绍早年交好并共同讨董，后在官渡展开决定北方归属的决战。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-yuan_shao",
+    "source": "liu_bei",
+    "target": "yuan_shao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兵败暂投袁绍",
+        "desc": "刘备在徐州失利后一度投奔袁绍，并借机离开河北重整势力。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-yuan_shao",
+    "source": "guan_yu",
+    "target": "yuan_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白马斩颜良",
+        "desc": "关羽随曹军解白马之围，斩杀袁绍大将颜良。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-cao_pi",
+    "source": "cao_cao",
+    "target": "cao_pi",
+    "primary_type": "blood",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "父子奠定曹魏",
+        "desc": "曹丕继承曹操的魏王基业，受禅称帝并建立曹魏。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-sima_yi",
+    "source": "cao_cao",
+    "target": "sima_yi",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "征辟司马懿",
+        "desc": "曹操征召司马懿入仕，使其进入曹魏权力核心。",
+        "source": {
+          "work": "《晋书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_pi-sima_yi",
+    "source": "cao_pi",
+    "target": "sima_yi",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "托付朝政重臣",
+        "desc": "曹丕重用司马懿，并将其列为辅佐后嗣的重要大臣。",
+        "source": {
+          "work": "《晋书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_yi-zhuge_liang",
+    "source": "sima_yi",
+    "target": "zhuge_liang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祁山对峙",
+        "desc": "诸葛亮北伐期间，司马懿统率魏军与蜀军长期对峙。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_ce-sun_quan",
+    "source": "sun_ce",
+    "target": "sun_quan",
+    "primary_type": "blood",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "兄终弟承江东",
+        "desc": "孙策临终将江东基业托付给弟弟孙权。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_ce-zhou_yu",
+    "source": "sun_ce",
+    "target": "zhou_yu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "总角之交共定江东",
+        "desc": "孙策与周瑜少年相交，周瑜率军协助孙策平定江东。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_ce-yuan_shu",
+    "source": "sun_ce",
+    "target": "yuan_shu",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "借兵起家终与袁术决裂",
+        "desc": "孙策早年依附袁术并借兵渡江，袁术称帝后与其断绝关系。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_su-sun_quan",
+    "source": "lu_su",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "榻上策规划江东",
+        "desc": "鲁肃向孙权提出据有江东、鼎足天下的长期战略。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_su-zhou_yu",
+    "source": "lu_su",
+    "target": "zhou_yu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "周瑜荐鲁肃",
+        "desc": "周瑜向孙权举荐鲁肃，二人共同支撑孙吴早期战略。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-lu_su",
+    "source": "liu_bei",
+    "target": "lu_su",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "推动孙刘联盟",
+        "desc": "鲁肃主张联合刘备抗曹，并多次协调荆州问题。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-lu_su",
+    "source": "guan_yu",
+    "target": "lu_su",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "单刀会与荆州交涉",
+        "desc": "鲁肃与关羽围绕荆州归属多次交涉，既维持联盟又彼此戒备。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_su-zhuge_liang",
+    "source": "lu_su",
+    "target": "zhuge_liang",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共促赤壁联盟",
+        "desc": "鲁肃与诸葛亮共同推动孙刘两家联合抗曹。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lyu_meng-sun_quan",
+    "source": "lyu_meng",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孙权劝学成长为帅",
+        "desc": "孙权劝吕蒙读书进学，吕蒙后来成为东吴大都督。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-lyu_meng",
+    "source": "guan_yu",
+    "target": "lyu_meng",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白衣渡江夺荆州",
+        "desc": "吕蒙趁关羽北伐发动袭击，夺取荆州并导致关羽败亡。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_xun-lyu_meng",
+    "source": "lu_xun",
+    "target": "lyu_meng",
+    "primary_type": "alliance",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "接替防线迷惑关羽",
+        "desc": "陆逊配合吕蒙部署荆州行动，以谦卑书信麻痹关羽。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lu_xun-sun_quan",
+    "source": "lu_xun",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "受命统帅东吴",
+        "desc": "孙权重用陆逊，使其先后统领荆州战事与夷陵之战。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-lu_xun",
+    "source": "liu_bei",
+    "target": "lu_xun",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夷陵之战",
+        "desc": "陆逊在夷陵以火攻击败为关羽复仇的刘备。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-xun_yu",
+    "source": "cao_cao",
+    "target": "xun_yu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王佐之才辅佐曹操",
+        "desc": "荀彧为曹操规划战略、举荐人才并主持后方政务。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_xian-xun_yu",
+    "source": "emperor_xian",
+    "target": "xun_yu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "心存汉室",
+        "desc": "荀彧以汉臣自居，在曹操进爵问题上坚持维护汉室名义。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-pang_tong",
+    "source": "liu_bei",
+    "target": "pang_tong",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "凤雏助取益州",
+        "desc": "庞统投效刘备并献取蜀三策，随军进攻益州。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pang_tong-zhuge_liang",
+    "source": "pang_tong",
+    "target": "zhuge_liang",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "卧龙凤雏并称",
+        "desc": "庞统与诸葛亮同为刘备的重要军师，后世并称卧龙、凤雏。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-ma_chao",
+    "source": "liu_bei",
+    "target": "ma_chao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归附刘备镇守西境",
+        "desc": "马超在汉中归附刘备，成为蜀汉重要将领。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_chao-zhang_fei",
+    "source": "ma_chao",
+    "target": "zhang_fei",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "葭萌关交锋后同殿为臣",
+        "desc": "演义中马超与张飞激战，马超归刘后成为同僚。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-ma_chao",
+    "source": "cao_cao",
+    "target": "ma_chao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "潼关大战",
+        "desc": "马超联合关中诸将反曹，在潼关与曹操激战。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_chao-xu_chu",
+    "source": "ma_chao",
+    "target": "xu_chu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "裸衣斗马超",
+        "desc": "演义中许褚在潼关与马超大战，成为双方勇武对决。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_zhong-liu_bei",
+    "source": "huang_zhong",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归蜀封后将军",
+        "desc": "黄忠归附刘备，在汉中之战立功并受封后将军。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-huang_zhong",
+    "source": "guan_yu",
+    "target": "huang_zhong",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "长沙交锋后同属蜀汉",
+        "desc": "演义中关羽与黄忠在长沙交锋，黄忠归刘后成为同僚。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_zhong-zhao_yun",
+    "source": "huang_zhong",
+    "target": "zhao_yun",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉中并肩作战",
+        "desc": "黄忠与赵云共同参与汉中战事，彼此策应。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-xiahou_dun",
+    "source": "cao_cao",
+    "target": "xiahou_dun",
+    "primary_type": "blood",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "宗亲元勋追随起兵",
+        "desc": "夏侯惇是曹操宗亲和最早追随者之一，长期镇守后方。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-xiahou_dun",
+    "source": "guan_yu",
+    "target": "xiahou_dun",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄河渡口追击",
+        "desc": "演义中夏侯惇追击千里寻兄的关羽，双方交战。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-guo_jia",
+    "source": "cao_cao",
+    "target": "guo_jia",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "君臣相知定河北",
+        "desc": "郭嘉为曹操谋划击吕布、定袁氏和北征乌桓等战略。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guo_jia-yuan_shao",
+    "source": "guo_jia",
+    "target": "yuan_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "十胜十败论袁曹",
+        "desc": "郭嘉分析曹操十胜、袁绍十败，坚定曹军决战信心。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-cao_ren",
+    "source": "cao_cao",
+    "target": "cao_ren",
+    "primary_type": "blood",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "宗亲大将镇守要地",
+        "desc": "曹仁作为曹操宗亲大将，长期统军镇守荆襄等战略要地。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_ren-zhou_yu",
+    "source": "cao_ren",
+    "target": "zhou_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "南郡争夺战",
+        "desc": "曹仁守江陵，与周瑜率领的吴军激战一年有余。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_ren-guan_yu",
+    "source": "cao_ren",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "樊城攻防",
+        "desc": "关羽北伐围攻樊城，曹仁坚守等待援军。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-liu_shan",
+    "source": "liu_bei",
+    "target": "liu_shan",
+    "primary_type": "blood",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "白帝托孤",
+        "desc": "刘备临终将后主刘禅和蜀汉国事托付诸葛亮。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_shan-zhuge_liang",
+    "source": "liu_shan",
+    "target": "zhuge_liang",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "后主与丞相",
+        "desc": "刘禅即位后由诸葛亮辅政，支持其治理蜀汉与北伐。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_shan-zhao_yun",
+    "source": "liu_shan",
+    "target": "zhao_yun",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "长坂救主终身辅汉",
+        "desc": "赵云在长坂保护幼主刘禅，后继续辅佐蜀汉。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_wei-zhuge_liang",
+    "source": "jiang_wei",
+    "target": "zhuge_liang",
+    "primary_type": "mentor",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "承继北伐遗志",
+        "desc": "姜维归蜀后受诸葛亮器重，后来继续推进北伐。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_wei-liu_shan",
+    "source": "jiang_wei",
+    "target": "liu_shan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "后期统领蜀军",
+        "desc": "刘禅时期姜维官至大将军，多次率军北伐。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-wei_yan",
+    "source": "liu_bei",
+    "target": "wei_yan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "破格镇守汉中",
+        "desc": "刘备提拔魏延为汉中都督，使其镇守蜀汉北门。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wei_yan-zhuge_liang",
+    "source": "wei_yan",
+    "target": "zhuge_liang",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "北伐同僚的长期分歧",
+        "desc": "魏延随诸葛亮北伐，但在作战方略和撤军问题上屡有分歧。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_gai-sun_quan",
+    "source": "huang_gai",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三世宿将辅佐孙权",
+        "desc": "黄盖历仕孙坚、孙策、孙权，是江东资深将领。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_gai-zhou_yu",
+    "source": "huang_gai",
+    "target": "zhou_yu",
+    "primary_type": "alliance",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "苦肉诈降火攻赤壁",
+        "desc": "黄盖向周瑜献火攻之策，并以诈降船队冲击曹军。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-huang_gai",
+    "source": "cao_cao",
+    "target": "huang_gai",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "火船破曹军",
+        "desc": "黄盖率蒙冲斗舰冲入曹军水寨，成为赤壁破曹关键。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yuan_shao-yuan_shu",
+    "source": "yuan_shao",
+    "target": "yuan_shu",
+    "primary_type": "hostile",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "袁氏兄弟争雄",
+        "desc": "袁绍与袁术出自同族，却因嫡庶、联盟和地盘长期对立。",
+        "source": {
+          "work": "《后汉书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-yuan_shu",
+    "source": "liu_bei",
+    "target": "yuan_shu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "徐州与淮南争战",
+        "desc": "刘备奉命阻击袁术，双方围绕徐州和淮南多次交战。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lyu_bu-yuan_shu",
+    "source": "lyu_bu",
+    "target": "yuan_shu",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "时盟时叛的徐州关系",
+        "desc": "袁术与吕布时而联合、时而交恶，并曾谋求联姻。",
+        "source": {
+          "work": "《后汉书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-yuan_shu",
+    "source": "cao_cao",
+    "target": "yuan_shu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "讨灭僭号者",
+        "desc": "袁术称帝后遭曹操等势力夹击，最终败亡。",
+        "source": {
+          "work": "《后汉书》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-emperor_xian",
+    "source": "cao_cao",
+    "target": "emperor_xian",
+    "primary_type": "lord_subject",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "奉天子都许",
+        "desc": "曹操迎汉献帝都许，以汉廷名义号令诸侯，同时掌握实权。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_pi-emperor_xian",
+    "source": "cao_pi",
+    "target": "emperor_xian",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "禅让与曹魏建立",
+        "desc": "曹丕接受汉献帝禅让，东汉灭亡、曹魏建立。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_xian-liu_bei",
+    "source": "emperor_xian",
+    "target": "liu_bei",
+    "primary_type": "alliance",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "奉汉室正统之名",
+        "desc": "刘备以汉室宗亲自居，其政治事业始终以扶汉为号召。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-chen_gong",
+    "source": "cao_cao",
+    "target": "chen_gong",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "由相助到决裂",
+        "desc": "陈宫早年支持曹操，后来反曹并辅佐吕布，最终在下邳被俘。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chen_gong-lyu_bu",
+    "source": "chen_gong",
+    "target": "lyu_bu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "谋主辅佐吕布",
+        "desc": "陈宫为吕布谋划兖州与徐州战事，最终一同败于下邳。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-jia_xu",
+    "source": "cao_cao",
+    "target": "jia_xu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "纳降毒士倚为谋臣",
+        "desc": "贾诩劝张绣归降曹操，后成为曹魏重要谋臣。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_pi-jia_xu",
+    "source": "cao_pi",
+    "target": "jia_xu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "拥立曹丕",
+        "desc": "贾诩在继承问题上支持曹丕，曹丕称帝后任其为太尉。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-xu_chu",
+    "source": "cao_cao",
+    "target": "xu_chu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "虎士宿卫",
+        "desc": "许褚统领虎士护卫曹操，多次在危急时刻保全主公。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gan_ning-sun_quan",
+    "source": "gan_ning",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "锦帆归吴",
+        "desc": "甘宁投奔孙权后屡立战功，被孙权视为可比张辽的猛将。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gan_ning-zhou_yu",
+    "source": "gan_ning",
+    "target": "zhou_yu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随周瑜攻南郡",
+        "desc": "甘宁随周瑜参与赤壁与南郡战事，并据守夷陵。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gan_ning-huang_gai",
+    "source": "gan_ning",
+    "target": "huang_gai",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "江东水军并肩",
+        "desc": "甘宁与黄盖同属孙吴水军体系，共同参与对曹作战。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-liu_biao",
+    "source": "liu_bei",
+    "target": "liu_biao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "客居荆州",
+        "desc": "刘备兵败后依附刘表，在新野驻军抵御曹操。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-liu_biao",
+    "source": "cao_cao",
+    "target": "liu_biao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "南征荆州",
+        "desc": "曹操南征荆州时刘表病逝，其子刘琮随后投降。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_biao-sun_quan",
+    "source": "liu_biao",
+    "target": "sun_quan",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "荆州江东长期对峙",
+        "desc": "刘表势力与孙氏围绕江夏和长江中游长期交战。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xiao_qiao-zhou_yu",
+    "source": "xiao_qiao",
+    "target": "zhou_yu",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "周郎与小乔",
+        "desc": "周瑜攻取皖城后迎娶小乔，二人成为江东名门佳偶。",
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-hua_xiong",
+    "source": "guan_yu",
+    "target": "hua_xiong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "温酒斩华雄",
+        "desc": "演义中关羽请战，在酒尚温时斩杀华雄而归。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hua_xiong-yuan_shao",
+    "source": "hua_xiong",
+    "target": "yuan_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汜水关阻击联军",
+        "desc": "华雄代表董卓军迎战以袁绍为盟主的关东联军。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "diao_chan-wang_yun",
+    "source": "diao_chan",
+    "target": "wang_yun",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共同施行连环计",
+        "desc": "演义中王允收貂蝉为义女，并与她共同设下离间董卓、吕布的连环计。",
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_yun-qixing_baodao",
+    "source": "wang_yun",
+    "target": "qixing_baodao",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王允藏七星宝刀",
+        "desc": "《三国演义》中七星宝刀原为司徒王允所藏，王允将宝刀借给曹操刺杀董卓，使王允、曹操与七星刀节点形成直接关联。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lyu_bu-zhang_liao",
+    "source": "lyu_bu",
+    "target": "zhang_liao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随吕布转战",
+        "desc": "张辽早年隶属吕布麾下，随军辗转中原，直至下邳陷落后改投曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": "魏书·张乐于张徐传",
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-zhang_liao",
+    "source": "cao_cao",
+    "target": "zhang_liao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "下邳降曹",
+        "desc": "吕布败亡后张辽归附曹操，历任中郎将、荡寇将军，成为曹魏重要将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": "魏书·张乐于张徐传",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "镇守合肥",
+        "desc": "曹操命张辽与乐进、李典等镇守合肥，张辽由此建立威震江东的战功。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": "魏书·张乐于张徐传",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_yu-zhang_liao",
+    "source": "guan_yu",
+    "target": "zhang_liao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白马之战并肩破敌",
+        "desc": "官渡之战前夕，关羽与张辽同为曹军先锋驰援白马，共同击破袁绍军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": "蜀书·关张马黄赵传；魏书·张乐于张徐传",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "故交相劝",
+        "desc": "演义中张辽念及旧日交情，在关羽被围后入营劝降，使两人的惺惺相惜更为鲜明。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_jian-sun_ce",
+    "source": "sun_jian",
+    "target": "sun_ce",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子奠定江东基业",
+        "desc": "孙策是孙坚长子，继承父亲旧部并开拓江东。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_jian-sun_quan",
+    "source": "sun_jian",
+    "target": "sun_quan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子相承",
+        "desc": "孙权是孙坚之子，后来在江东基业上建立孙吴。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_jian-dong_zhuo",
+    "source": "sun_jian",
+    "target": "dong_zhuo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "讨董先锋",
+        "desc": "孙坚参加关东联军并进逼洛阳，是讨伐董卓最坚决的诸侯之一。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_jian-yuan_shao",
+    "source": "sun_jian",
+    "target": "yuan_shao",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "同盟讨董",
+        "desc": "孙坚与袁绍同属讨董联军，后因传国玺传闻产生猜忌。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_jian-hua_xiong",
+    "source": "sun_jian",
+    "target": "hua_xiong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汜水关交锋",
+        "desc": "孙坚军在汜水关一线与华雄所部交战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dian_wei-cao_cao",
+    "source": "dian_wei",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "舍命护主",
+        "desc": "典韦担任曹操宿卫，在宛城兵变中力战至死掩护曹操突围。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dian_wei-zhang_xiu",
+    "source": "dian_wei",
+    "target": "zhang_xiu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宛城死战",
+        "desc": "张绣反叛曹操时突袭营地，典韦守门力战而亡。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dian_wei-xu_chu",
+    "source": "dian_wei",
+    "target": "xu_chu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹营两代宿卫",
+        "desc": "典韦与许褚先后以勇力承担曹操近身护卫。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xiahou_yuan-cao_cao",
+    "source": "xiahou_yuan",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "虎步关右",
+        "desc": "夏侯渊长期追随曹操，负责平定关中并镇守汉中。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xiahou_yuan-xiahou_dun",
+    "source": "xiahou_yuan",
+    "target": "xiahou_dun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夏侯宗亲名将",
+        "desc": "夏侯渊与夏侯惇同族，并为曹魏早期宗亲将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xiahou_yuan-huang_zhong",
+    "source": "xiahou_yuan",
+    "target": "huang_zhong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "定军山决战",
+        "desc": "定军山之战中黄忠突袭斩杀夏侯渊。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xiahou_yuan-ma_chao",
+    "source": "xiahou_yuan",
+    "target": "ma_chao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "关中征战",
+        "desc": "夏侯渊参与平定马超等关中势力，并继续经营凉州。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_he-yuan_shao",
+    "source": "zhang_he",
+    "target": "yuan_shao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "河北旧将",
+        "desc": "张郃早年在袁绍麾下作战，官渡失利后转投曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_he-cao_cao",
+    "source": "zhang_he",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归曹建功",
+        "desc": "张郃在官渡之战中归附曹操，成为五子良将之一。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_he-zhuge_liang",
+    "source": "zhang_he",
+    "target": "zhuge_liang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "北伐宿敌",
+        "desc": "张郃多次抵御诸葛亮北伐，最终在木门道中伏身亡。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_he-ma_su",
+    "source": "zhang_he",
+    "target": "ma_su",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "街亭破蜀",
+        "desc": "张郃在街亭击败马谡，迫使诸葛亮第一次北伐撤军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_huang-cao_cao",
+    "source": "xu_huang",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "治军严整",
+        "desc": "徐晃归附曹操后屡立战功，位列五子良将。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_huang-guan_yu",
+    "source": "xu_huang",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "樊城解围",
+        "desc": "徐晃率军击退围攻樊城的关羽，双方虽为旧交仍在阵前交战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_huang-cao_ren",
+    "source": "xu_huang",
+    "target": "cao_ren",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "驰援樊城",
+        "desc": "徐晃率援军打破关羽围势，解救驻守樊城的曹仁。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pang_de-ma_chao",
+    "source": "pang_de",
+    "target": "ma_chao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西凉旧部",
+        "desc": "庞德早年追随马超征战关中，后因局势分离。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pang_de-cao_cao",
+    "source": "pang_de",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归魏受任",
+        "desc": "庞德归降曹操后被授官，参与樊城之战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pang_de-guan_yu",
+    "source": "pang_de",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "抬榇战关羽",
+        "desc": "演义中庞德抬棺出战关羽，正史亦载其射中关羽额头。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pang_de-yu_jin",
+    "source": "pang_de",
+    "target": "yu_jin",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同率七军",
+        "desc": "庞德随于禁救援樊城，后遭汉水暴涨而败。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "taishi_ci-sun_ce",
+    "source": "taishi_ci",
+    "target": "sun_ce",
+    "primary_type": "lord_subject",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "神亭酣战后归附",
+        "desc": "太史慈与孙策激战后归附，成为孙氏开拓江东的重要将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "taishi_ci-sun_quan",
+    "source": "taishi_ci",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "受命拒刘磐",
+        "desc": "孙权继业后继续任用太史慈镇守南方边境。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_pu-sun_jian",
+    "source": "cheng_pu",
+    "target": "sun_jian",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "追随江东猛虎",
+        "desc": "程普早年追随孙坚征战，是孙氏最资深的宿将之一。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_pu-sun_ce",
+    "source": "cheng_pu",
+    "target": "sun_ce",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "助定江东",
+        "desc": "孙坚死后程普追随孙策攻取江东。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_pu-sun_quan",
+    "source": "cheng_pu",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三世宿将",
+        "desc": "程普继续辅佐孙权，并参加赤壁之战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_pu-zhou_yu",
+    "source": "cheng_pu",
+    "target": "zhou_yu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共破曹军",
+        "desc": "程普与周瑜分任左右都督，共同指挥赤壁战事。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_pu-huang_gai",
+    "source": "cheng_pu",
+    "target": "huang_gai",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "江东老将",
+        "desc": "程普与黄盖同为孙氏三代宿将，并肩参与多场战役。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhou_tai-sun_ce",
+    "source": "zhou_tai",
+    "target": "sun_ce",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "从孙策平江东",
+        "desc": "周泰早年归附孙策，参与江东征战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhou_tai-sun_quan",
+    "source": "zhou_tai",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奋命护权",
+        "desc": "周泰多次以身护卫孙权，遍体创伤而受厚赏。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ling_tong-sun_quan",
+    "source": "ling_tong",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "江表虎臣",
+        "desc": "凌统继承父职效力孙权，多次在前线奋战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ling_tong-gan_ning",
+    "source": "ling_tong",
+    "target": "gan_ning",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "由杀父之仇到并肩作战",
+        "desc": "凌统因父仇怨恨甘宁，但在孙权麾下共同御敌。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ling_tong-lyu_meng",
+    "source": "ling_tong",
+    "target": "lyu_meng",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同为吴军锋锐",
+        "desc": "凌统与吕蒙多次共同参加孙权对荆州与合肥的军事行动。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_shangxiang-sun_quan",
+    "source": "sun_shangxiang",
+    "target": "sun_quan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹联姻布局",
+        "desc": "孙尚香是孙权之妹，其婚姻成为孙刘联盟的重要环节。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_shangxiang-liu_bei",
+    "source": "sun_shangxiang",
+    "target": "liu_bei",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孙刘联姻",
+        "desc": "孙尚香嫁给刘备，以婚姻维系一度脆弱的孙刘联盟。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_shangxiang-zhao_yun",
+    "source": "sun_shangxiang",
+    "target": "zhao_yun",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "截江夺阿斗",
+        "desc": "演义中赵云截江阻止孙夫人携刘禅回吴。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "da_qiao-sun_ce",
+    "source": "da_qiao",
+    "target": "sun_ce",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "皖城结缘",
+        "desc": "孙策攻取皖城后娶大乔为妻。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "da_qiao-xiao_qiao",
+    "source": "da_qiao",
+    "target": "xiao_qiao",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "江东二乔",
+        "desc": "大乔与小乔为姐妹，并分别嫁给孙策、周瑜。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "da_qiao-zhou_yu",
+    "source": "da_qiao",
+    "target": "zhou_yu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "连襟同族",
+        "desc": "大乔嫁孙策、小乔嫁周瑜，使两家成为亲近姻亲。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_shu-liu_bei",
+    "source": "xu_shu",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "新野献策",
+        "desc": "徐庶曾辅佐刘备，在新野击破曹军并举荐诸葛亮。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_shu-zhuge_liang",
+    "source": "xu_shu",
+    "target": "zhuge_liang",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "走马荐卧龙",
+        "desc": "徐庶离开刘备前举荐诸葛亮，使卧龙出山。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_shu-cao_cao",
+    "source": "xu_shu",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "北归曹营",
+        "desc": "徐庶因母亲被俘而赴曹操阵营，后在曹魏任职。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fa_zheng-liu_zhang",
+    "source": "fa_zheng",
+    "target": "liu_zhang",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "益州旧臣",
+        "desc": "法正原为刘璋部下，因不得志而谋求迎接刘备入蜀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fa_zheng-liu_bei",
+    "source": "fa_zheng",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奇谋定蜀汉",
+        "desc": "法正辅佐刘备夺取益州并在汉中之战中献策。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fa_zheng-zhuge_liang",
+    "source": "fa_zheng",
+    "target": "zhuge_liang",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "蜀汉文臣并立",
+        "desc": "法正与诸葛亮分掌谋略和政务，共同辅佐刘备。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fa_zheng-huang_zhong",
+    "source": "fa_zheng",
+    "target": "huang_zhong",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "定军山献策",
+        "desc": "法正在汉中前线辅佐刘备，黄忠依部署取得定军山大捷。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_ping-guan_yu",
+    "source": "guan_ping",
+    "target": "guan_yu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子守荆州",
+        "desc": "关平随父亲关羽镇守荆州并参加襄樊之战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_ping-liu_bei",
+    "source": "guan_ping",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "蜀汉少将",
+        "desc": "关平作为关羽之子随刘备集团征战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_ping-lyu_meng",
+    "source": "guan_ping",
+    "target": "lyu_meng",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "荆州败亡",
+        "desc": "吕蒙袭取荆州后，关平随关羽败走并被擒杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_dai-ma_chao",
+    "source": "ma_dai",
+    "target": "ma_chao",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西凉宗族",
+        "desc": "马岱是马超族弟，长期随其辗转并加入蜀汉。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_dai-zhuge_liang",
+    "source": "ma_dai",
+    "target": "zhuge_liang",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "北伐受命",
+        "desc": "马岱在诸葛亮北伐期间担任蜀军将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_dai-wei_yan",
+    "source": "ma_dai",
+    "target": "wei_yan",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "奉令斩魏延",
+        "desc": "演义中马岱依诸葛亮遗计斩杀魏延，正史亦载其追斩魏延。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ping-cao_cao",
+    "source": "wang_ping",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉中归蜀之前",
+        "desc": "王平早年随曹操进入汉中，后转投刘备。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ping-liu_bei",
+    "source": "wang_ping",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉中降蜀",
+        "desc": "王平在汉中之战后归附刘备并受任用。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ping-zhuge_liang",
+    "source": "wang_ping",
+    "target": "zhuge_liang",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "北伐稳健之将",
+        "desc": "王平随诸葛亮北伐，以谨慎治军受到重用。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ping-ma_su",
+    "source": "wang_ping",
+    "target": "ma_su",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "街亭苦谏",
+        "desc": "王平劝马谡据守要道未果，败后收拢残军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liao_hua-guan_yu",
+    "source": "liao_hua",
+    "target": "guan_yu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "关羽主簿",
+        "desc": "廖化早年为关羽主簿，荆州失陷后辗转归蜀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liao_hua-liu_bei",
+    "source": "liao_hua",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归返蜀汉",
+        "desc": "廖化回归刘备阵营并继续为蜀汉效力。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liao_hua-jiang_wei",
+    "source": "liao_hua",
+    "target": "jiang_wei",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "蜀汉末期同军",
+        "desc": "廖化在蜀汉后期与姜维共同参加北伐和防御。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_su-zhuge_liang",
+    "source": "ma_su",
+    "target": "zhuge_liang",
+    "primary_type": "mentor",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "器重与挥泪斩马谡",
+        "desc": "诸葛亮器重马谡才学，街亭失守后依法处置。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_su-sima_yi",
+    "source": "ma_su",
+    "target": "sima_yi",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "街亭对魏",
+        "desc": "马谡守街亭时面对魏军攻势，演义将司马懿置于魏军统帅位置。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gongsun_zan-liu_bei",
+    "source": "gongsun_zan",
+    "target": "liu_bei",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同门与旧交",
+        "desc": "公孙瓒与刘备同受业于卢植，后来收留并任用刘备。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gongsun_zan-zhao_yun",
+    "source": "gongsun_zan",
+    "target": "zhao_yun",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赵云初投白马将军",
+        "desc": "赵云早年率众投奔公孙瓒，后追随刘备。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gongsun_zan-yuan_shao",
+    "source": "gongsun_zan",
+    "target": "yuan_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "河北争霸",
+        "desc": "公孙瓒与袁绍长期争夺河北，最终败亡于易京。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_teng-ma_chao",
+    "source": "ma_teng",
+    "target": "ma_chao",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "西凉父子",
+        "desc": "马超是马腾之子，继承其在凉州的军事势力。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_teng-cao_cao",
+    "source": "ma_teng",
+    "target": "cao_cao",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "入朝受职",
+        "desc": "马腾一度响应朝廷入邺任职，后其家族与曹操集团决裂。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_teng-dong_zhuo",
+    "source": "ma_teng",
+    "target": "dong_zhuo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "关中起兵",
+        "desc": "马腾曾参与关中势力对抗董卓旧部及长安政权。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_xiu-jia_xu",
+    "source": "zhang_xiu",
+    "target": "jia_xu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "纳贾诩之谋",
+        "desc": "贾诩辅佐张绣，并劝其在合适时机归降曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_xiu-cao_cao",
+    "source": "zhang_xiu",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "宛城反叛与归降",
+        "desc": "张绣在宛城突袭曹操，后来听从贾诩建议正式归附。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_zhang-liu_bei",
+    "source": "liu_zhang",
+    "target": "liu_bei",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "迎刘备入蜀而失益州",
+        "desc": "刘璋迎刘备入蜀抵御张鲁，双方最终决裂，成都归刘备。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_zhang-pang_tong",
+    "source": "liu_zhang",
+    "target": "pang_tong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "益州攻守",
+        "desc": "庞统为刘备谋取益州，成为刘璋政权的直接对手。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_jiao-liu_bei",
+    "source": "zhang_jiao",
+    "target": "liu_bei",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "涿郡起兵破黄巾",
+        "desc": "刘备以镇压黄巾起义起家，演义将其置于讨伐张角的主线。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_jiao-cao_cao",
+    "source": "zhang_jiao",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "讨伐黄巾",
+        "desc": "曹操在汉末镇压黄巾军的战争中建立早期军功。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_jiao-sun_jian",
+    "source": "zhang_jiao",
+    "target": "sun_jian",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄巾战场建功",
+        "desc": "孙坚随官军征讨黄巾，以勇猛获得声名。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yan_liang-yuan_shao",
+    "source": "yan_liang",
+    "target": "yuan_shao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "河北上将",
+        "desc": "颜良是袁绍倚重的主要将领，率军进攻白马。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yan_liang-guan_yu",
+    "source": "yan_liang",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白马斩颜良",
+        "desc": "关羽在白马之战突入袁军斩杀颜良。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yan_liang-cao_cao",
+    "source": "yan_liang",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "白马之战",
+        "desc": "颜良率袁军攻白马，与曹操援军交锋。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wen_chou-yuan_shao",
+    "source": "wen_chou",
+    "target": "yuan_shao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "河北猛将",
+        "desc": "文丑与颜良并称袁绍麾下勇将。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wen_chou-guan_yu",
+    "source": "wen_chou",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "延津诛文丑",
+        "desc": "演义中关羽在延津追击并斩杀文丑。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wen_chou-cao_cao",
+    "source": "wen_chou",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "延津战死",
+        "desc": "文丑率骑兵追击曹操军，在延津乱战中败亡。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_shun-lyu_bu",
+    "source": "gao_shun",
+    "target": "lyu_bu",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "陷阵营效忠吕布",
+        "desc": "高顺统率精锐陷阵营，对吕布忠诚却常不被尽用。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_shun-chen_gong",
+    "source": "gao_shun",
+    "target": "chen_gong",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同守下邳",
+        "desc": "高顺与陈宫共同辅佐吕布并守卫下邳。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gao_shun-cao_cao",
+    "source": "gao_shun",
+    "target": "cao_cao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "下邳不屈",
+        "desc": "曹操攻破下邳后高顺拒不投降，最终被处死。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_zhao-sima_yi",
+    "source": "sima_zhao",
+    "target": "sima_yi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "司马父子",
+        "desc": "司马昭是司马懿次子，继承并扩大司马氏权势。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_zhao-sima_shi",
+    "source": "sima_zhao",
+    "target": "sima_shi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄弟承权",
+        "desc": "司马师死后，司马昭接掌魏国军政大权。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_zhao-deng_ai",
+    "source": "sima_zhao",
+    "target": "deng_ai",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "命将伐蜀",
+        "desc": "司马昭部署灭蜀战争，邓艾率军偷渡阴平。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_zhao-zhong_hui",
+    "source": "sima_zhao",
+    "target": "zhong_hui",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "授钺西征",
+        "desc": "司马昭任命钟会统领主力进攻蜀汉。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_zhao-liu_shan",
+    "source": "sima_zhao",
+    "target": "liu_shan",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "魏军灭蜀",
+        "desc": "司马昭主政期间发动灭蜀战争，刘禅投降。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "deng_ai-jiang_wei",
+    "source": "deng_ai",
+    "target": "jiang_wei",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "陇西多年对阵",
+        "desc": "邓艾多次抵御姜维北伐，并在灭蜀战役中绕过剑阁。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "deng_ai-liu_shan",
+    "source": "deng_ai",
+    "target": "liu_shan",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兵临成都受降",
+        "desc": "邓艾偷渡阴平攻入成都，接受刘禅投降。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "deng_ai-zhong_hui",
+    "source": "deng_ai",
+    "target": "zhong_hui",
+    "primary_type": "hostile",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "灭蜀争功",
+        "desc": "邓艾与钟会在灭蜀后互相猜忌，钟会构陷邓艾。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhong_hui-jiang_wei",
+    "source": "zhong_hui",
+    "target": "jiang_wei",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "剑阁对峙与成都密谋",
+        "desc": "钟会先与姜维敌对，灭蜀后又共同策划反叛。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhong_hui-liu_shan",
+    "source": "zhong_hui",
+    "target": "liu_shan",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "统军伐蜀",
+        "desc": "钟会统领魏军主力突破汉中并牵制剑阁蜀军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yu_jin-cao_cao",
+    "source": "yu_jin",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "毅重名将",
+        "desc": "于禁从曹操起兵，治军严整并位列五子良将。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yu_jin-guan_yu",
+    "source": "yu_jin",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "水淹七军",
+        "desc": "樊城之战中汉水暴涨，于禁所部被关羽击破并投降。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yu_jin-cao_ren",
+    "source": "yu_jin",
+    "target": "cao_ren",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "救援樊城",
+        "desc": "于禁奉命率七军援救曹仁守卫的樊城。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yue_jin-cao_cao",
+    "source": "yue_jin",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "先登骁将",
+        "desc": "乐进追随曹操多年，以胆烈和先登战功著称。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yue_jin-zhang_liao",
+    "source": "yue_jin",
+    "target": "zhang_liao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "合肥共守",
+        "desc": "乐进与张辽、李典共同承担合肥防务。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yue_jin-li_dian",
+    "source": "yue_jin",
+    "target": "li_dian",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "合肥同袍",
+        "desc": "乐进与李典同为合肥守将，协力抵御孙权。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_dian-cao_cao",
+    "source": "li_dian",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "儒将从曹",
+        "desc": "李典追随曹操征战，性情好学而能顾全大局。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_dian-zhang_liao",
+    "source": "li_dian",
+    "target": "zhang_liao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "释嫌破吴",
+        "desc": "合肥之战前李典不计私怨，与张辽共同出战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_yu-cao_cao",
+    "source": "cheng_yu",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "守兖州定大计",
+        "desc": "程昱长期为曹操谋划，在兖州危局中坚定支持。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_yu-xun_yu",
+    "source": "cheng_yu",
+    "target": "xun_yu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹营谋臣",
+        "desc": "程昱与荀彧同为曹操早期核心谋士，分担军政谋划。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cheng_yu-liu_bei",
+    "source": "cheng_yu",
+    "target": "liu_bei",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "识刘备为雄",
+        "desc": "程昱曾提醒曹操刘备有雄才，不宜放任。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_rui-cao_pi",
+    "source": "cao_rui",
+    "target": "cao_pi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子继统",
+        "desc": "曹叡是曹丕之子，继位成为魏明帝。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_rui-sima_yi",
+    "source": "cao_rui",
+    "target": "sima_yi",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "托付与倚重",
+        "desc": "曹叡任用司马懿抵御蜀吴，并在临终前安排辅政。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_rui-zhuge_liang",
+    "source": "cao_rui",
+    "target": "zhuge_liang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "抵御诸葛北伐",
+        "desc": "曹叡在位期间组织曹魏应对诸葛亮多次北伐。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_zhi-cao_cao",
+    "source": "cao_zhi",
+    "target": "cao_cao",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "建安父子",
+        "desc": "曹植是曹操之子，以文学才华深得父亲一度宠爱。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_zhi-cao_pi",
+    "source": "cao_zhi",
+    "target": "cao_pi",
+    "primary_type": "blood",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "世子之争",
+        "desc": "曹植与曹丕在继承问题上竞争，曹丕即位后对其严加防范。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_zhi-yang_xiu",
+    "source": "cao_zhi",
+    "target": "yang_xiu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "才士相交",
+        "desc": "杨修参与曹植集团，以才智协助其应对曹操考验。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_shi-sima_yi",
+    "source": "sima_shi",
+    "target": "sima_yi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "继承父业",
+        "desc": "司马师是司马懿长子，继承父亲掌握的军政权力。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_shi-cao_rui",
+    "source": "sima_shi",
+    "target": "cao_rui",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "魏廷任职",
+        "desc": "司马师早年在曹魏任职，其家族在明帝时期不断积累影响。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sima_shi-ding_feng",
+    "source": "sima_shi",
+    "target": "ding_feng",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "东兴败兵",
+        "desc": "司马师主政时魏军进攻东兴，被丁奉率吴军击败。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yang_xiu-cao_cao",
+    "source": "yang_xiu",
+    "target": "cao_cao",
+    "primary_type": "lord_subject",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "主簿之死",
+        "desc": "杨修担任曹操主簿，因屡次揣摩并泄露主意最终被杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yang_xiu-cao_pi",
+    "source": "yang_xiu",
+    "target": "cao_pi",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "继嗣党争",
+        "desc": "杨修倾向曹植一方，在曹丕与曹植的继嗣竞争中卷入政治风险。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_yueying-zhuge_liang",
+    "source": "huang_yueying",
+    "target": "zhuge_liang",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "卧龙夫妇",
+        "desc": "黄月英是诸葛亮之妻，后世传说她才思敏捷并擅长机关。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_xing-guan_yu",
+    "source": "guan_xing",
+    "target": "guan_yu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "将门父子",
+        "desc": "关兴是关羽之子，年少即受诸葛亮器重。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_xing-liu_bei",
+    "source": "guan_xing",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随军伐吴",
+        "desc": "演义中关兴随刘备参加夷陵之战并为父报仇。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guan_xing-zhang_bao",
+    "source": "guan_xing",
+    "target": "zhang_bao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "小关张结义",
+        "desc": "演义中关兴与张苞结义并并肩作战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_bao-zhang_fei",
+    "source": "zhang_bao",
+    "target": "zhang_fei",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "虎将父子",
+        "desc": "张苞是张飞之子，演义着重描写其继承父亲勇武。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_bao-liu_bei",
+    "source": "zhang_bao",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随征东吴",
+        "desc": "演义中张苞作为蜀军青年先锋随刘备伐吴。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_feng-liu_bei",
+    "source": "liu_feng",
+    "target": "liu_bei",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "刘备养子",
+        "desc": "刘封被刘备收为养子，曾在蜀汉扩张中担任将领。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_feng-guan_yu",
+    "source": "liu_feng",
+    "target": "guan_yu",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "拒绝发兵救援",
+        "desc": "关羽围樊城时求援上庸，刘封与孟达没有出兵，成为其后获罪原因。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_feng-meng_da",
+    "source": "liu_feng",
+    "target": "meng_da",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "共守上庸而反目",
+        "desc": "刘封与孟达共同经略上庸，后来因矛盾与失援责任而决裂。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_da-liu_bei",
+    "source": "meng_da",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "入蜀与守上庸",
+        "desc": "孟达随刘璋旧部归刘备，后来与刘封攻取上庸。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_da-cao_pi",
+    "source": "meng_da",
+    "target": "cao_pi",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "降魏受宠",
+        "desc": "孟达投降曹魏后得到曹丕优待，出任新城太守。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_da-sima_yi",
+    "source": "meng_da",
+    "target": "sima_yi",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "新城速决",
+        "desc": "孟达谋反时司马懿急行军包围新城，将其击杀。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yan_yan-liu_zhang",
+    "source": "yan_yan",
+    "target": "liu_zhang",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "巴郡守将",
+        "desc": "严颜原为刘璋麾下巴郡将领，负责抵御入蜀的刘备军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yan_yan-zhang_fei",
+    "source": "yan_yan",
+    "target": "zhang_fei",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "义释严颜",
+        "desc": "张飞攻破巴郡后敬重严颜不屈，将其释放并收为助力。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yan_yan-liu_bei",
+    "source": "yan_yan",
+    "target": "liu_bei",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "归附入蜀军",
+        "desc": "严颜获释后成为刘备取蜀故事中的老将。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_huo-zhurong_furen",
+    "source": "meng_huo",
+    "target": "zhurong_furen",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "南中首领夫妇",
+        "desc": "演义中祝融夫人是孟获之妻，亲自率军迎战蜀军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_huo-zhuge_liang",
+    "source": "meng_huo",
+    "target": "zhuge_liang",
+    "primary_type": "alliance",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "七擒七纵",
+        "desc": "诸葛亮南征多次擒纵孟获，最终使其心服。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_huo-liu_shan",
+    "source": "meng_huo",
+    "target": "liu_shan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "南中归附蜀汉",
+        "desc": "南中平定后地方势力承认蜀汉政权。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhurong_furen-zhuge_liang",
+    "source": "zhurong_furen",
+    "target": "zhuge_liang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "南征交锋",
+        "desc": "演义中祝融夫人率军与诸葛亮南征军交战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "han_dang-sun_jian",
+    "source": "han_dang",
+    "target": "sun_jian",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "从孙坚起兵",
+        "desc": "韩当早年追随孙坚，转战南北。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "han_dang-sun_ce",
+    "source": "han_dang",
+    "target": "sun_ce",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随定江东",
+        "desc": "孙坚死后韩当继续追随孙策。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "han_dang-sun_quan",
+    "source": "han_dang",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三朝效力",
+        "desc": "韩当在孙权时期参与赤壁、濡须等大战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "han_dang-huang_gai",
+    "source": "han_dang",
+    "target": "huang_gai",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "江东宿将同袍",
+        "desc": "韩当与黄盖同为孙氏早期宿将，长期并肩征战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ding_feng-sun_quan",
+    "source": "ding_feng",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "吴军老将",
+        "desc": "丁奉自孙权时期起历经多朝，以勇猛升迁。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ding_feng-lu_xun",
+    "source": "ding_feng",
+    "target": "lu_xun",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "随军征战",
+        "desc": "丁奉早年在甘宁、陆逊等将领麾下参与吴国战事。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_jin-zhuge_liang",
+    "source": "zhuge_jin",
+    "target": "zhuge_liang",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛兄弟分仕吴蜀",
+        "desc": "诸葛瑾与诸葛亮为兄弟，分别效力孙吴与蜀汉。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_jin-sun_quan",
+    "source": "zhuge_jin",
+    "target": "sun_quan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "吴主腹心",
+        "desc": "诸葛瑾深受孙权信任，长期负责政务与外交。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_jin-lu_xun",
+    "source": "zhuge_jin",
+    "target": "lu_xun",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共辅东吴",
+        "desc": "诸葛瑾与陆逊同为孙权倚重的大臣与统帅。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cai_wenji-cao_cao",
+    "source": "cai_wenji",
+    "target": "cao_cao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赎归汉土",
+        "desc": "曹操念及蔡邕旧交，以重金从南匈奴赎回蔡文姬并命其整理典籍。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
   }
 ]

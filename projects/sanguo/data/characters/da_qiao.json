@@ -1,0 +1,56 @@
+{
+  "schema_version": 3,
+  "id": "da_qiao",
+  "name_zh": "大乔",
+  "name_en": "Da Qiao",
+  "aliases": [
+    "大乔",
+    "桥大乔",
+    "桥氏",
+    "Da Qiao",
+    "Da Qiao"
+  ],
+  "epithet": "江东二乔·孙策之妻",
+  "category": "wu",
+  "era_layer": 1,
+  "bio": "大乔，本姓桥，庐江郡皖县（今安徽潜山）人，东汉末年江东孙策的夫人。建安四年（199年）十二月，皖城被孙策攻陷，大乔被孙策所纳，成为其妻。其妹小乔嫁与周瑜。孙策曾戏言：“桥公二女虽流离，得吾二人为婿，亦足为欢。”孙策于次年去世，大乔寡居。正史中关于大乔的记载极少，其生平多在后世传说中流传。清朝薛福成《庸盦笔记》记载她因哀伤哭泣数月而卒，但此说不足为凭。在小说《三国演义》中，大乔与小乔被描绘为绝世美女，曹操因觊觎二乔而发动赤壁之战，成为故事的重要导火索。大乔在戏曲及现代影视游戏中亦有出现，但其形象多为艺术虚构。",
+  "events": [
+    {
+      "title": "嫁孙策",
+      "desc": "建安四年（199年）十二月，孙策攻破皖城，纳大乔为妻。大乔遂成为孙策夫人，与妹小乔分别嫁与江东两位英杰。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "孙策去世，大乔寡居",
+      "desc": "建安五年（200年），孙策遇刺身亡。大乔成为寡妇，此后正史未载其事迹。清朝传说称她哀泣数月而卒，但无可靠史料佐证。",
+      "source": {
+        "work": "Records of the Three Kingdoms (Sanguozhi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义中成为赤壁之战诱因",
+      "desc": "在小说《三国演义》中，曹操觊觎二乔美貌，其在铜雀台赋中表露心意。诸葛亮借机激怒周瑜，促使孙刘联盟，引发赤壁之战。大乔作为关键人物之一，间接推动了战役爆发。",
+      "source": {
+        "work": "Romance of the Three Kingdoms (Sanguo Yanyi)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/da_qiao.webp",
+  "thumb": "/p/sanguo/thumbs/da_qiao.webp"
+}

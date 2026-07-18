@@ -1,0 +1,95 @@
+{
+  "schema_version": 3,
+  "id": "meng_huo",
+  "name_zh": "孟获",
+  "name_en": "Meng Huo",
+  "aliases": [
+    "孟获",
+    "Meng Huo",
+    "南中首领",
+    "南蛮王"
+  ],
+  "epithet": "南中首领·七擒七纵",
+  "category": "qun",
+  "era_layer": 3,
+  "bio": "孟获是三国时期南中地区首领，其历史形象与文学形象差异明显。正史相关记载简略，裴松之注引《汉晋春秋》称诸葛亮南征时七擒七纵孟获，使其心服，并以当地人治理南中。后世学者对七擒地点、次数以及孟获身份均有讨论。《三国演义》大幅扩展了这一故事，将孟获塑造成统领南中诸部的“南蛮王”：他联合各洞首领、藤甲军和木鹿大王等多次抵抗蜀军，每次被擒后都以尚未心服为由获释，直至第七次败北才真心归顺。小说借这条主线突出诸葛亮攻心为上、安定后方的政治谋略，也使孟获成为南中篇最具代表性的人物。",
+  "events": [
+    {
+      "title": "诸葛亮率军南征",
+      "desc": "蜀汉建兴三年，诸葛亮在平定南中叛乱的过程中与孟获势力交战。",
+      "source": {
+        "work": "《三国志·诸葛亮传》裴松之注引《汉晋春秋》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "七擒七纵",
+      "desc": "相关史料称诸葛亮七次擒获又释放孟获，希望使南中民众真正信服蜀汉。",
+      "source": {
+        "work": "《汉晋春秋》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "联合南中诸部抗蜀",
+      "desc": "《三国演义》中孟获召集各洞首领与蜀军周旋，先后运用伏兵、毒泉、猛兽和藤甲军。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": "第八十七回至第九十回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "祝融夫人出阵",
+      "desc": "孟获之妻祝融夫人亲自率军，以飞刀击伤并俘获蜀将，成为南中阵营的重要战力。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": "第九十回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "藤甲军败于火攻",
+      "desc": "孟获借乌戈国藤甲军再战，诸葛亮利用盘蛇谷地势施行火攻，彻底击破其最后倚仗。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": "第九十回",
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "心服归顺蜀汉",
+      "desc": "第七次被擒后孟获不再求释，表示南中人永不反叛；诸葛亮仍让当地首领自治。",
+      "source": {
+        "work": "《汉晋春秋》；《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "大刀"
+  ],
+  "skills": [
+    "统领南中诸部",
+    "山地作战",
+    "结盟与动员"
+  ],
+  "domains": [
+    "南中",
+    "军事",
+    "地方治理"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/meng_huo.webp",
+  "thumb": "/p/sanguo/thumbs/meng_huo.webp"
+}

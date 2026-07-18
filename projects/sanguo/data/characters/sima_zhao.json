@@ -1,0 +1,125 @@
+{
+  "schema_version": 3,
+  "id": "sima_zhao",
+  "name_zh": "司马昭",
+  "name_en": "Sima Zhao",
+  "aliases": [
+    "Zishang",
+    "子上",
+    "文王",
+    "晋文帝",
+    "太祖",
+    "Sima Zhao"
+  ],
+  "epithet": "晋文帝·其心路人皆知",
+  "category": "wei",
+  "era_layer": 3,
+  "bio": "司马昭（211年－265年9月6日），字子上，河内温县人，三国时期曹魏权臣，西晋王朝奠基人之一。司马懿与张春华次子，司马师之弟。早年随父抗击蜀汉，历任洛阳典农中郎将、散骑常侍等职，因功封新城乡侯。正元二年（255年）其兄司马师病逝，继任大将军，独揽朝政。甘露五年（260年），魏帝曹髦不甘傀儡，率众讨伐司马昭，被贾充指使成济杀害，事后司马昭处死成济，立曹奂为帝，从此完全控制魏国。景元四年（263年），他力排众议，遣钟会、邓艾、诸葛绪三路伐蜀，成功灭亡蜀汉，受封晋公，次年进爵晋王。咸熙二年（265年）病逝，谥号文王。其子司马炎随即篡魏建晋，追尊司马昭为文皇帝，庙号太祖。曹髦曾言“司马昭之心，路人皆知”，此语成为后世形容野心昭彰的典故。",
+  "events": [
+    {
+      "title": "高平陵之变",
+      "desc": "公元249年，司马昭协助其父司马懿发动政变，铲除权臣曹爽，司马氏开始掌控曹魏朝政。",
+      "source": {
+        "work": "《晋书》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "东兴之战惨败",
+      "desc": "公元253年，司马昭率军征讨东吴，因轻敌被丁奉、吕据击败，战后推卸责任，处死部将王仪。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "继承兄位执政",
+      "desc": "公元255年，司马师病逝，司马昭违抗皇帝曹髦令其留守许昌的诏命，率军返回洛阳，迫使朝野承认其执政地位。",
+      "source": {
+        "work": "《晋书》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定诸葛诞之乱",
+      "desc": "公元257-258年，诸葛诞联合东吴在寿春反叛，司马昭率军围城，最终攻克，斩杀诸葛诞，并善待降卒与百姓，收揽人心。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹髦遇弑事件",
+      "desc": "公元260年，魏帝曹髦不甘受制，亲率侍卫讨伐司马昭，被贾充指使成济杀害。司马昭随后处死成济，立曹奂为帝，完全掌控朝政。",
+      "source": {
+        "work": "《三国志·魏书·三少帝纪》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "灭亡蜀汉",
+      "desc": "公元263年，司马昭力排众议，派钟会、邓艾、诸葛绪三路伐蜀。邓艾偷渡阴平，逼降后主刘禅，蜀汉灭亡。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "进爵晋王",
+      "desc": "公元264年，灭蜀后，司马昭进爵晋王，加九锡，为篡位做好准备。",
+      "source": {
+        "work": "《晋书》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "病逝追尊",
+      "desc": "公元265年，司马昭病逝，谥号文王。其子司马炎随即篡魏建晋，追尊他为文皇帝，庙号太祖。",
+      "source": {
+        "work": "《晋书》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "司马昭之心，路人所知也。",
+      "source": {
+        "work": "《三国志·魏书·三少帝纪》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "统率大军",
+    "权谋平衡",
+    "决策用人"
+  ],
+  "domains": [
+    "政治",
+    "军事",
+    "权谋"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/sima_zhao.webp",
+  "thumb": "/p/sanguo/thumbs/sima_zhao.webp"
+}
