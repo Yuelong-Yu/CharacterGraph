@@ -57,6 +57,7 @@ import {
 import { fetchUserProjectContent, importLocalUserContent, mutateUserContent } from "@/lib/userContentClient";
 import type { UserProjectContentSnapshot } from "@/schemas/userContent";
 import type { SessionUser } from "@/lib/auth";
+import { fetchSessionUser } from "@/lib/authClient";
 import { withBasePath } from "@/lib/basePath";
 import type { WhatIfSessionDetail } from "@/schemas/whatif";
 
@@ -179,9 +180,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 
   const loadAccountContent = useCallback(async () => {
     setUserScopesReady(false);
-    const response = await fetch(withBasePath("/api/auth/me"), { cache: "no-store" });
-    const payload = await response.json().catch(() => ({})) as { user?: SessionUser | null };
-    const user = response.ok ? payload.user ?? null : null;
+    const user = await fetchSessionUser();
     setAccountUser(user);
     if (!user) {
       accountIdRef.current = null;

@@ -35,7 +35,7 @@ import type {
 } from "@/schemas/whatif";
 import type { Character, Relation } from "@/schemas/character";
 import type { SessionUser } from "@/lib/auth";
-import { withBasePath } from "@/lib/basePath";
+import { fetchSessionUser } from "@/lib/authClient";
 
 interface Props {
   isOpen: boolean;
@@ -94,9 +94,7 @@ export function WhatIfPanel({
   const refreshAccount = useCallback(async () => {
     setAccountUser(undefined);
     try {
-      const response = await fetch(withBasePath("/api/auth/me"), { cache: "no-store" });
-      const payload = await response.json() as { user?: SessionUser | null };
-      const nextUser = response.ok ? payload.user ?? null : null;
+      const nextUser = await fetchSessionUser();
       if (!nextUser || (lastAccountIdRef.current && lastAccountIdRef.current !== nextUser.id)) {
         setSessionDetail(null);
         setStreaming(null);

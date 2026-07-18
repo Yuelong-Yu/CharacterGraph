@@ -10,6 +10,7 @@ import type { RegistrationValues } from "@chronchaos/auth-registration/contract"
 import { RegistrationFields } from "@chronchaos/auth-registration/react";
 import { BehaviorCaptcha } from "@/components/BehaviorCaptcha";
 import type { SessionUser } from "@/lib/auth";
+import { fetchSessionUser } from "@/lib/authClient";
 
 export const CHRONCHAOS_AUTH_CHANGE_EVENT = "chronchaos-auth-change";
 
@@ -28,9 +29,7 @@ export function ChronChaosNav() {
 
   const refreshUser = useCallback(async () => {
     try {
-      const response = await fetch("/api/auth/me", { cache: "no-store" });
-      const payload = await response.json() as { user?: SessionUser | null };
-      setUser(response.ok ? payload.user ?? null : null);
+      setUser(await fetchSessionUser());
     } catch {
       setUser(null);
     }
