@@ -1,0 +1,61 @@
+{
+  "schema_version": 3,
+  "id": "guo_sheng_eunuch",
+  "name_zh": "郭胜",
+  "name_en": "Guo Sheng",
+  "aliases": [
+    "郭常侍"
+  ],
+  "epithet": "中常侍·反杀蹇硕",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "郭胜是汉灵帝晚年的中常侍，也是《三国演义》十常侍名单中的一员。他与何进同乡，何皇后得以入宫也与郭胜等宦官的帮助有关，因此在宦官集团内部更亲近何氏。灵帝死后，蹇硕谋杀何进并拥立刘协，写信联络赵忠等；郭胜反对蹇硕，把密谋泄露给何进。史书写何进由此杀蹇硕，演义则直接写郭胜在御花园杀死蹇硕。此后何进仍决意尽诛宦官，郭胜最终也未能逃脱集团覆灭。",
+  "events": [
+    {
+      "title": "协助何后入宫",
+      "desc": "郭胜与何进同郡，宦官势力曾帮助何氏进入宫廷并成为皇后，因此郭胜与何氏保持特殊联系。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "泄露蹇硕密谋",
+      "desc": "蹇硕联络赵忠等谋除何进时，郭胜不愿加害何氏，把计划泄露，促使何进先行捕杀蹇硕。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义御园杀蹇硕",
+      "desc": "《三国演义》把冲突写得更直接：蹇硕逃入御花园后，被中常侍郭胜杀死。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "短刀"
+  ],
+  "skills": [
+    "周旋两派",
+    "泄露密谋"
+  ],
+  "domains": [
+    "宦官",
+    "何氏",
+    "宫变"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/guo_sheng_eunuch.webp",
+  "thumb": "/p/sanguo/thumbs/guo_sheng_eunuch.webp"
+}

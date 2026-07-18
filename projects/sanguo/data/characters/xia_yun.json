@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "xia_yun",
+  "name_zh": "夏恽",
+  "name_en": "Xia Yun",
+  "aliases": [
+    "夏惲"
+  ],
+  "epithet": "十常侍·封侯贵宠",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "夏恽是《后汉书》记载的汉灵帝时期中常侍之一，也被《三国演义》列入十常侍。史书把他与张让、赵忠、郭胜等并列，称这些宦官封侯贵宠，父兄子弟分布州郡、侵夺百姓。关于夏恽个人活动的材料很少，主要能确认其属于灵帝晚年的宦官权力网络。何进被杀后，袁绍等率军诛宦，宦官集团覆灭。档案保留其真实列名和集团性责任，同时避免为他杜撰独占的宫廷阴谋。",
+  "events": [
+    {
+      "title": "封侯贵宠",
+      "desc": "《后汉书》把夏恽与张让、赵忠等并列为中常侍，称其封侯受宠，亲族势力延伸到州郡。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "列入演义十常侍",
+      "desc": "《三国演义》第一回把夏恽列为十常侍之一，以十人群像概括灵帝朝宦官专权。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "洛阳诛宦",
+      "desc": "何进被杀后袁绍等率军攻入宫中，灵帝晚年的宦官权力网络在暴力清洗中瓦解。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "操持内廷",
+    "庇护宗亲"
+  ],
+  "domains": [
+    "宦官",
+    "封侯",
+    "地方亲党"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/xia_yun.webp",
+  "thumb": "/p/sanguo/thumbs/xia_yun.webp"
+}

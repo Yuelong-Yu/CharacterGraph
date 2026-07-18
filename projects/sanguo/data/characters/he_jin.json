@@ -1,0 +1,62 @@
+{
+  "schema_version": 3,
+  "id": "he_jin",
+  "name_zh": "何进",
+  "name_en": "He Jin",
+  "aliases": [
+    "何遂高",
+    "何国舅"
+  ],
+  "epithet": "大将军·外戚领袖",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "何进，字遂高，南阳宛人，出身屠户之家，因异母妹成为汉灵帝皇后而进入仕途，黄巾起义时任大将军，掌握京师军权。灵帝去世后，何进拥立外甥刘辩即位，与袁绍等谋划诛除宦官集团，却受何太后阻挠。何进又召董卓、丁原等外军进京施压，此举被曹操等人批评为授人以柄。张让等先发制人，将何进诱入宫中杀害；袁绍随后纵兵诛宦，洛阳秩序崩溃，为董卓入京专权打开道路。",
+  "events": [
+    {
+      "title": "黄巾乱中掌禁军",
+      "desc": "黄巾起义爆发后，何进以大将军身份镇守京师、整饬兵备，外戚集团由此掌握朝廷重要军权。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "拥立刘辩",
+      "desc": "汉灵帝去世后，何进凭借大将军和皇后兄长身份拥立刘辩即位，成为少年天子最重要的外戚辅政者。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "谋诛宦官反被杀",
+      "desc": "何进接受袁绍建议谋除宦官，又召董卓等外兵进京；张让等将他诱入宫中杀害，引发袁绍纵兵诛宦与洛阳大乱。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "长剑"
+  ],
+  "skills": [
+    "统领禁军",
+    "召集外镇"
+  ],
+  "domains": [
+    "外戚",
+    "朝政",
+    "禁军"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/he_jin.webp",
+  "thumb": "/p/sanguo/thumbs/he_jin.webp"
+}

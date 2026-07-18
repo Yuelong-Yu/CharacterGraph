@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "cheng_kuang",
+  "name_zh": "程旷",
+  "name_en": "Cheng Kuang",
+  "aliases": [
+    "程曠"
+  ],
+  "epithet": "十常侍·演义宦官",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "程旷是《三国演义》第一回列出的十常侍之一，主要作为宦官集团群像成员出现。与张让、赵忠、蹇硕等有较多史料者不同，程旷缺乏可靠的独立生平记载，不能把其他宦官的事迹强行移植到他身上。小说用十人朋比为奸、卖官鬻爵的概括描写说明其政治位置；灵帝死后，何进与宦官集团冲突升级，袁绍军入宫诛宦，十常侍集团随之覆灭。人物节点的意义在于把演义明确列名的十人完整拆分，而非虚构额外个人功绩。",
+  "events": [
+    {
+      "title": "列名十常侍",
+      "desc": "《三国演义》第一回明确把程旷列入十常侍，称十人朋比为奸、把持汉灵帝内廷。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "宦官集团干政",
+      "desc": "程旷在小说中以十常侍群像成员出现，参与的是宦党卖官聚敛、排斥士人的总体政治背景。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "宫变中宦党覆灭",
+      "desc": "何进与宦官冲突最终引发洛阳宫变，袁绍军大举诛杀宦官，十常侍集团退出政治舞台。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "侍奉宫禁",
+    "联络宦党"
+  ],
+  "domains": [
+    "宦官",
+    "内廷",
+    "十常侍"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/cheng_kuang.webp",
+  "thumb": "/p/sanguo/thumbs/cheng_kuang.webp"
+}

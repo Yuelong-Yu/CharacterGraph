@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "xu_shao",
+  "name_zh": "许劭",
+  "name_en": "Xu Shao",
+  "aliases": [
+    "许子将"
+  ],
+  "epithet": "月旦评宗主·识鉴名士",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "许劭，字子将，汝南平舆人，东汉末年著名人物品评家。他与从兄许靖每月初一品评乡党人物，意见更换便称“月旦评”，对士人名望影响极大。曹操年轻时设法求其品题，许劭留下“治世之能臣，乱世之奸雄”一类著名评价，成为后世理解曹操性格的核心话语。天下大乱后，许劭先后辗转投靠孔伷、陶谦、刘繇等势力，保持名士声望，最终病逝于豫章。其节点连接曹操与汉末清议文化。",
+  "events": [
+    {
+      "title": "主持汝南月旦评",
+      "desc": "许劭与许靖在汝南品评乡党人物，每月初一更换题目，士人声价常因其褒贬而升降，世称月旦评。",
+      "source": {
+        "work": "《后汉书·许劭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "品评青年曹操",
+      "desc": "曹操年轻时求许劭品题，许劭以治世能臣、乱世奸雄一类评语概括其才干与危险性，曹操闻后大笑。",
+      "source": {
+        "work": "《三国志·武帝纪》裴松之注引《异同杂语》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "避乱江南",
+      "desc": "汉末战乱中许劭离开汝南，辗转依附孔伷、陶谦、刘繇等人，最终在豫章病逝。",
+      "source": {
+        "work": "《后汉书·许劭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "品评人物",
+    "鉴别名士"
+  ],
+  "domains": [
+    "月旦评",
+    "名望",
+    "人物品鉴"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/xu_shao.webp",
+  "thumb": "/p/sanguo/thumbs/xu_shao.webp"
+}

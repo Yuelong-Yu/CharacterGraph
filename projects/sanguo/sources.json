@@ -1039,6 +1039,134 @@
       "category": "qun",
       "era_layer": 1,
       "epithet": "袁术上将·三尖刀"
+    },
+    {
+      "slug": "he_jin",
+      "name_zh": "何进",
+      "name_en": "He Jin",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "大将军·外戚领袖"
+    },
+    {
+      "slug": "zhang_rang",
+      "name_zh": "张让",
+      "name_en": "Zhang Rang",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "十常侍之首·阿父"
+    },
+    {
+      "slug": "zhao_zhong",
+      "name_zh": "赵忠",
+      "name_en": "Zhao Zhong",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "中常侍·灵帝呼母"
+    },
+    {
+      "slug": "feng_xu",
+      "name_zh": "封谞",
+      "name_en": "Feng Xu",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "十常侍·黄巾内应"
+    },
+    {
+      "slug": "duan_gui",
+      "name_zh": "段珪",
+      "name_en": "Duan Gui",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "十常侍·挟帝北邙"
+    },
+    {
+      "slug": "cao_jie_eunuch",
+      "name_zh": "曹节",
+      "name_en": "Cao Jie",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "中常侍·宦党宿老"
+    },
+    {
+      "slug": "hou_lan",
+      "name_zh": "侯览",
+      "name_en": "Hou Lan",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "中常侍·聚敛巨富"
+    },
+    {
+      "slug": "jian_shuo",
+      "name_zh": "蹇硕",
+      "name_en": "Jian Shuo",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "上军校尉·西园统帅"
+    },
+    {
+      "slug": "cheng_kuang",
+      "name_zh": "程旷",
+      "name_en": "Cheng Kuang",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "十常侍·演义宦官"
+    },
+    {
+      "slug": "xia_yun",
+      "name_zh": "夏恽",
+      "name_en": "Xia Yun",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "十常侍·封侯贵宠"
+    },
+    {
+      "slug": "guo_sheng_eunuch",
+      "name_zh": "郭胜",
+      "name_en": "Guo Sheng",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "中常侍·反杀蹇硕"
+    },
+    {
+      "slug": "xu_shao",
+      "name_zh": "许劭",
+      "name_en": "Xu Shao",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "月旦评宗主·识鉴名士"
+    },
+    {
+      "slug": "ding_yuan",
+      "name_zh": "丁原",
+      "name_en": "Ding Yuan",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "并州刺史·吕布故主"
+    },
+    {
+      "slug": "emperor_shao",
+      "name_zh": "汉少帝",
+      "name_en": "Emperor Shao of Han",
+      "category": "qun",
+      "era_layer": 1,
+      "epithet": "刘辩·被废少年天子"
+    },
+    {
+      "slug": "zhang_bao_taiping",
+      "name_zh": "张宝",
+      "name_en": "Zhang Bao",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "地公将军·张角之弟"
+    },
+    {
+      "slug": "zhang_liang_taiping",
+      "name_zh": "张梁",
+      "name_en": "Zhang Liang",
+      "category": "qun",
+      "era_layer": 0,
+      "epithet": "人公将军·黄巾先锋"
     }
   ],
   "artifacts": [
@@ -1737,7 +1865,12 @@
     "wang_lang": "Wang Lang (Cao Wei)",
     "qinglong_yanyue_dao": "Guandao",
     "chitu_ma": "Red Hare",
-    "dilu_ma": "Dilu (horse)"
+    "dilu_ma": "Dilu (horse)",
+    "emperor_shao": "Emperor Shao of Han",
+    "zhang_bao_taiping": "Zhang Bao (Yellow Turban)",
+    "zhang_liang_taiping": "Zhang Liang (Yellow Turban)",
+    "cao_jie_eunuch": "Cao Jie (eunuch)",
+    "guo_sheng_eunuch": "Guo Sheng (eunuch)"
   },
   "zh_title_override": {
     "shuanggu_jian": "双股剑",

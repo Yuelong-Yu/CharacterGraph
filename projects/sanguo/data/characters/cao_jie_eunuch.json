@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "cao_jie_eunuch",
+  "name_zh": "曹节",
+  "name_en": "Cao Jie",
+  "aliases": [
+    "曹常侍"
+  ],
+  "epithet": "中常侍·宦党宿老",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "曹节是东汉桓帝、灵帝时期的重要宦官，历任中常侍等职，是前期宦官集团的宿老。史书中的曹节曾参与对付窦武、陈蕃等士大夫势力，因拥立灵帝等功封侯，长期干预朝政，死于中平元年以前。《三国演义》为集中表现宦官乱政，把曹节与张让等并列进十常侍名单，时间线与正史并不完全一致。项目同时保留两层叙事：正史中的前代宦党领袖，以及演义中十常侍集团的一员。",
+  "events": [
+    {
+      "title": "参与宦官反击",
+      "desc": "桓帝、灵帝之际，曹节参与宦官集团对窦武、陈蕃等外戚士人的反击，成为内廷权力核心。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "封侯干预朝政",
+      "desc": "曹节因拥立等功受封，长期利用中常侍身份干预诏令与官员任免，是党锢时期宦权的重要代表。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义列入十常侍",
+      "desc": "《三国演义》第一回把曹节与张让、赵忠等并列为十常侍，以群像方式概括汉末宦官乱政。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "操纵诏令",
+    "结党固权"
+  ],
+  "domains": [
+    "宦官",
+    "内廷",
+    "党锢"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/cao_jie_eunuch.webp",
+  "thumb": "/p/sanguo/thumbs/cao_jie_eunuch.webp"
+}

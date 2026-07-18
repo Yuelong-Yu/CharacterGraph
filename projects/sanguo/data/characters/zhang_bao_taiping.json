@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "id": "zhang_bao_taiping",
+  "name_zh": "张宝",
+  "name_en": "Zhang Bao",
+  "aliases": [
+    "地公将军"
+  ],
+  "epithet": "地公将军·张角之弟",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "张宝，巨鹿人，张角之弟、张梁之兄，黄巾起义时号称地公将军。《三国演义》中他善用符水、风雷与幻术，在阳城一带对抗汉军和刘备兄弟，曾借妖术制造黑气、飞沙和兵马幻象。朱儁围攻阳城后，张宝部将严政见势已败，刺杀张宝并献首。正史对其个人事迹记载简略，只确认张角兄弟共同发动起义、张宝在战乱中被杀。本项目使用“zhang_bao_taiping”区分已有的蜀将张苞。",
+  "events": [
+    {
+      "title": "号地公将军",
+      "desc": "张角发动黄巾起义后自称天公将军，张宝称地公将军，与张梁分领黄巾军。",
+      "source": {
+        "work": "《后汉书·皇甫嵩传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "阳城施术拒敌",
+      "desc": "演义中张宝在阳城外以披发仗剑、符水作法制造风雷黑气，与刘备、朱儁等汉军交战。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "严政刺杀张宝",
+      "desc": "阳城危急时，部将严政刺杀张宝、献首投降，地公将军一支由此覆灭。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "松纹古剑",
+    "符水"
+  ],
+  "skills": [
+    "统领黄巾军",
+    "施展妖术"
+  ],
+  "domains": [
+    "黄巾",
+    "太平道",
+    "地公将军"
+  ],
+  "mounts": [
+    "黄骠战马"
+  ],
+  "portrait": "/p/sanguo/portraits/zhang_bao_taiping.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_bao_taiping.webp"
+}

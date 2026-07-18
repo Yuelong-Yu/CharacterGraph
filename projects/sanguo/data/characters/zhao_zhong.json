@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "zhao_zhong",
+  "name_zh": "赵忠",
+  "name_en": "Zhao Zhong",
+  "aliases": [
+    "赵常侍"
+  ],
+  "epithet": "中常侍·灵帝呼母",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "赵忠是汉灵帝时期权势最盛的中常侍之一，与张让并列为宦官集团领袖。史书称灵帝常说“张常侍是我公，赵常侍是我母”，足见其受宠程度。赵忠获封列侯，家族与宾客依仗权势侵夺州郡；黄巾乱前后，朝臣多次把民变根源归咎于宦官及其亲党。灵帝死后，赵忠参与对抗何进外戚集团，何进被杀后袁绍率军冲入宫中，赵忠等宦官在清洗中被诛。演义把他列入十常侍，常与张让并称。",
+  "events": [
+    {
+      "title": "灵帝宠信赵常侍",
+      "desc": "赵忠与张让同受汉灵帝宠信，灵帝甚至以母亲比称赵忠，使其成为内廷最显赫的宦官之一。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "宦官亲党遍州郡",
+      "desc": "赵忠等人的父兄子弟和宾客遍布地方，凭借内廷权势聚敛侵夺，成为士人与百姓批评的对象。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "宫变中被诛",
+      "desc": "何进被宦官杀害后，袁绍、袁术等率军冲入宫中大规模诛杀宦官，赵忠死于这场宫变。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "经营内廷",
+    "聚敛财富"
+  ],
+  "domains": [
+    "宦官",
+    "内廷",
+    "权势"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhao_zhong.webp",
+  "thumb": "/p/sanguo/thumbs/zhao_zhong.webp"
+}

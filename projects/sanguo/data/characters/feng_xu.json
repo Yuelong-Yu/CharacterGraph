@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "feng_xu",
+  "name_zh": "封谞",
+  "name_en": "Feng Xu",
+  "aliases": [
+    "封諝"
+  ],
+  "epithet": "十常侍·黄巾内应",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "封谞是《三国演义》列出的十常侍之一，也是黄巾起义前宫廷内应线索中的关键人物。小说写张角弟子唐周告密，揭发马元义在洛阳筹划起事，并牵出封谞等宦官与黄巾方面暗通消息；何进随即捕杀马元义，收捕封谞等人。史籍中也有宦官封谞、徐奉与张角交通的记载。封谞的个人生平材料很少，但其节点能把十常侍、何进与张角三方直接连接起来，体现汉末内廷腐败与民变网络相互渗透。",
+  "events": [
+    {
+      "title": "与太平道暗通",
+      "desc": "黄巾起义前，张角方面在洛阳联络内应，封谞等宦官被揭发与太平道交通。",
+      "source": {
+        "work": "《后汉书·皇甫嵩传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "唐周告密",
+      "desc": "演义中唐周向朝廷告发起事计划，马元义被捕，封谞等宫中内应也随之暴露。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "何进收捕封谞",
+      "desc": "起事阴谋暴露后，何进奉命调兵搜捕相关人员，封谞被作为宫中内应收押。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "传递密信",
+    "经营宫禁"
+  ],
+  "domains": [
+    "宦官",
+    "密谋",
+    "黄巾"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/feng_xu.webp",
+  "thumb": "/p/sanguo/thumbs/feng_xu.webp"
+}

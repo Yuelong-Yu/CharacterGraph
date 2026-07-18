@@ -10187,5 +10187,785 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-emperor_shao",
+    "source": "he_jin",
+    "target": "emperor_shao",
+    "primary_type": "blood",
+    "composite_types": [
+      "lord_subject"
+    ],
+    "events": [
+      {
+        "title": "舅父拥立外甥",
+        "desc": "何进是刘辩的舅父，又以大将军身份拥立刘辩即位并辅政。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-zhang_rang",
+    "source": "he_jin",
+    "target": "zhang_rang",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "外戚宦官决裂",
+        "desc": "何进谋诛张让等宦官，张让先将何进诱入宫中杀害。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-zhao_zhong",
+    "source": "he_jin",
+    "target": "zhao_zhong",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "谋诛中常侍",
+        "desc": "何进试图清除赵忠等中常侍，双方冲突最终演变为洛阳宫变。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-jian_shuo",
+    "source": "he_jin",
+    "target": "jian_shuo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "争夺禁军与帝位",
+        "desc": "蹇硕谋杀何进、拥立刘协；何进获知后反杀蹇硕并兼并西园军。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-duan_gui",
+    "source": "he_jin",
+    "target": "duan_gui",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宫变死敌",
+        "desc": "段珪所属宦官集团参与杀害何进，并在袁绍军入宫后挟帝出逃。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-ding_yuan",
+    "source": "he_jin",
+    "target": "ding_yuan",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "召丁原兵入洛阳",
+        "desc": "何进为压制宦官召丁原等外军入京，丁原率并州军到达洛阳。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "he_jin-cao_cao",
+    "source": "he_jin",
+    "target": "cao_cao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操劝阻召外兵",
+        "desc": "曹操参与何进幕府议事，认为诛宦只需一狱吏，不应召外兵入京，但何进未采纳。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-zhao_zhong",
+    "source": "zhang_rang",
+    "target": "zhao_zhong",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宦官两大领袖",
+        "desc": "张让与赵忠同受灵帝宠信，是十常侍集团最重要的两位领袖。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·宦者列传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-feng_xu",
+    "source": "zhang_rang",
+    "target": "feng_xu",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十常侍",
+        "desc": "演义把封谞与张让并列为十常侍，二人同属灵帝内廷宦官集团。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-duan_gui",
+    "source": "zhang_rang",
+    "target": "duan_gui",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "共同挟帝出逃",
+        "desc": "何进死后张让、段珪等挟持少帝与陈留王逃往北邙。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-cao_jie_eunuch",
+    "source": "zhang_rang",
+    "target": "cao_jie_eunuch",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "演义十常侍同党",
+        "desc": "演义把曹节和张让并列进十常侍群像，概括汉末宦党专权。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-hou_lan",
+    "source": "zhang_rang",
+    "target": "hou_lan",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "演义十常侍同党",
+        "desc": "侯览在演义中与张让同列十常侍，代表宦官集团长期聚敛干政。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-jian_shuo",
+    "source": "zhang_rang",
+    "target": "jian_shuo",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宦官军政联盟",
+        "desc": "蹇硕掌西园军，张让掌内廷，两人同属灵帝晚年的宦官权力集团。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-cheng_kuang",
+    "source": "zhang_rang",
+    "target": "cheng_kuang",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十常侍",
+        "desc": "程旷与张让在演义第一回同列十常侍。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-xia_yun",
+    "source": "zhang_rang",
+    "target": "xia_yun",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十常侍",
+        "desc": "夏恽与张让同为中常侍、封侯贵宠，并被演义并列为十常侍。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·宦者列传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-guo_sheng_eunuch",
+    "source": "zhang_rang",
+    "target": "guo_sheng_eunuch",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列中常侍",
+        "desc": "郭胜与张让同属汉灵帝内廷中常侍集团，亦同列演义十常侍。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·宦者列传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_rang-emperor_shao",
+    "source": "zhang_rang",
+    "target": "emperor_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "挟持少帝逃亡",
+        "desc": "袁绍军入宫后，张让挟持刘辩与刘协逃向北邙，使少年天子陷入险境。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "feng_xu-zhang_jiao",
+    "source": "feng_xu",
+    "target": "zhang_jiao",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宫中暗应太平道",
+        "desc": "封谞被揭发与张角集团交通，是黄巾起义在洛阳的宫廷内应之一。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇甫嵩传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "feng_xu-he_jin",
+    "source": "feng_xu",
+    "target": "he_jin",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "何进收捕封谞",
+        "desc": "唐周告密后，何进调兵捕杀马元义并收捕封谞等宫中内应。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "duan_gui-emperor_shao",
+    "source": "duan_gui",
+    "target": "emperor_shao",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "挟少帝至北邙",
+        "desc": "洛阳宫变时段珪等挟持少帝刘辩和陈留王刘协逃出宫城。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jian_shuo-guo_sheng_eunuch",
+    "source": "jian_shuo",
+    "target": "guo_sheng_eunuch",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "郭胜泄谋杀蹇硕",
+        "desc": "郭胜因亲近何氏而泄露蹇硕谋杀何进的计划，演义更写郭胜亲手杀死蹇硕。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "guo_sheng_eunuch-he_jin",
+    "source": "guo_sheng_eunuch",
+    "target": "he_jin",
+    "primary_type": "alliance",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "郭胜暗助何氏",
+        "desc": "郭胜与何进同乡并亲近何氏，在蹇硕谋害何进时选择向何进告密。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·何进传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_shao-cao_cao",
+    "source": "xu_shao",
+    "target": "cao_cao",
+    "primary_type": "appraisal",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "月旦评识曹操",
+        "desc": "许劭品评青年曹操，以治世能臣、乱世奸雄一类评语概括其才能与危险。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·武帝纪》裴松之注",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ding_yuan-lyu_bu",
+    "source": "ding_yuan",
+    "target": "lyu_bu",
+    "primary_type": "lord_subject",
+    "composite_types": [
+      "hostile"
+    ],
+    "events": [
+      {
+        "title": "丁原任用吕布",
+        "desc": "丁原任吕布为主簿并倚重其勇武；董卓利诱吕布后，吕布反杀丁原。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·吕布传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ding_yuan-dong_zhuo",
+    "source": "ding_yuan",
+    "target": "dong_zhuo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "洛阳兵锋相对",
+        "desc": "丁原率并州军反对董卓专权，董卓遂策反吕布杀丁原并吞其部众。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·吕布传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_shao-emperor_xian",
+    "source": "emperor_shao",
+    "target": "emperor_xian",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉室兄弟与废立",
+        "desc": "刘辩与刘协是兄弟，董卓废刘辩、立刘协，使兄弟命运因政变彻底改写。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇后纪》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_shao-dong_zhuo",
+    "source": "emperor_shao",
+    "target": "dong_zhuo",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "董卓废少帝",
+        "desc": "董卓入京后废刘辩为弘农王，改立刘协，随后又逼迫刘辩服毒。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇后纪》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_shao-ding_yuan",
+    "source": "emperor_shao",
+    "target": "ding_yuan",
+    "primary_type": "lord_subject",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丁原维护少帝朝廷",
+        "desc": "丁原奉何进之召率兵入洛阳，并反对董卓控制和改造朝廷秩序。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_jiao-zhang_bao_taiping",
+    "source": "zhang_jiao",
+    "target": "zhang_bao_taiping",
+    "primary_type": "blood",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "天公与地公兄弟",
+        "desc": "张角与张宝是兄弟，共同发动黄巾起义，分别号天公将军、地公将军。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇甫嵩传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_jiao-zhang_liang_taiping",
+    "source": "zhang_jiao",
+    "target": "zhang_liang_taiping",
+    "primary_type": "blood",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "天公与人公兄弟",
+        "desc": "张角与张梁是兄弟，共同领导黄巾起义，分别号天公将军、人公将军。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇甫嵩传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_bao_taiping-zhang_liang_taiping",
+    "source": "zhang_bao_taiping",
+    "target": "zhang_liang_taiping",
+    "primary_type": "blood",
+    "composite_types": [
+      "alliance"
+    ],
+    "events": [
+      {
+        "title": "地公与人公并肩",
+        "desc": "张宝、张梁为兄弟，分领黄巾军协助张角反抗东汉朝廷。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_bao_taiping-liu_bei",
+    "source": "zhang_bao_taiping",
+    "target": "liu_bei",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "阳城斗法交战",
+        "desc": "演义中刘备兄弟随朱儁攻打张宝，借破除妖术与黄巾军交战。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_bao_taiping-huangfu_song",
+    "source": "zhang_bao_taiping",
+    "target": "huangfu_song",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉军镇压黄巾",
+        "desc": "张宝是黄巾三大首领之一，皇甫嵩统领汉军在北方战场持续打击黄巾主力。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇甫嵩传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_liang_taiping-huangfu_song",
+    "source": "zhang_liang_taiping",
+    "target": "huangfu_song",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "广宗夜袭斩张梁",
+        "desc": "皇甫嵩乘夜突袭广宗黄巾军，张梁战死，黄巾主力遭到重创。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书·皇甫嵩传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_liang_taiping-liu_bei",
+    "source": "zhang_liang_taiping",
+    "target": "liu_bei",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄巾战场相敌",
+        "desc": "演义把刘备兄弟的起兵首功置于讨伐张角三兄弟的黄巾战争中。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
   }
 ]

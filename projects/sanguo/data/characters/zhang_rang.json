@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "zhang_rang",
+  "name_zh": "张让",
+  "name_en": "Zhang Rang",
+  "aliases": [
+    "张常侍"
+  ],
+  "epithet": "十常侍之首·阿父",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "张让，颍川人，汉灵帝时期最受宠信的中常侍之一，是宦官集团的核心人物。史书记载灵帝把张让比作自己的父亲，张让与赵忠等封侯贵宠，亲族遍布州郡，聚敛财富、干预政务。灵帝死后，何进谋诛宦官，张让等抢先把何进诱入宫中杀害。袁绍率军入宫诛宦后，张让、段珪等挟持少帝刘辩和陈留王刘协出逃，走投无路时投河而死。演义将他置于十常侍之首，作为汉末朝政败坏的重要象征。",
+  "events": [
+    {
+      "title": "灵帝呼为阿父",
+      "desc": "张让深受汉灵帝宠信，与赵忠共同成为内廷权势核心，史称灵帝常把张让比作父亲。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "诱杀何进",
+      "desc": "何进谋诛宦官之事泄露后，张让等假借何太后之命召何进入宫，在嘉德殿前将其杀害。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "挟帝出逃投河",
+      "desc": "袁绍率兵入宫后，张让等挟持少帝与陈留王逃往北邙；追兵迫近，张让走投无路投河而死。",
+      "source": {
+        "work": "《后汉书·宦者列传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "操控内廷",
+    "联结宦官"
+  ],
+  "domains": [
+    "宦官",
+    "内廷",
+    "权术"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhang_rang.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_rang.webp"
+}

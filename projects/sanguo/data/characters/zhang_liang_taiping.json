@@ -1,0 +1,63 @@
+{
+  "schema_version": 3,
+  "id": "zhang_liang_taiping",
+  "name_zh": "张梁",
+  "name_en": "Zhang Liang",
+  "aliases": [
+    "人公将军"
+  ],
+  "epithet": "人公将军·黄巾先锋",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "张梁，巨鹿人，张角、张宝之弟，黄巾起义时号称人公将军，率军在广宗一带作战。张角病死后，皇甫嵩夜袭黄巾军营，张梁战败身亡，数万黄巾军被杀或溺死，广宗主力由此覆灭。《三国演义》也写张梁与兄长共同起兵，并把刘备等人的早期战功纳入黄巾战争。相比以宗教领袖形象出现的张角和善施术的张宝，张梁更接近坚守前线、亲自统兵冲阵的黄巾武将。",
+  "events": [
+    {
+      "title": "号人公将军",
+      "desc": "黄巾起义爆发后，张梁号称人公将军，与天公将军张角、地公将军张宝共同领导起义。",
+      "source": {
+        "work": "《后汉书·皇甫嵩传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "坚守广宗",
+      "desc": "张梁率黄巾主力在广宗抵抗汉军。张角病死后，黄巾军仍依托营垒与皇甫嵩对峙。",
+      "source": {
+        "work": "《后汉书·皇甫嵩传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "皇甫嵩夜袭斩梁",
+      "desc": "皇甫嵩闭营休士后乘夜突袭，黄巾军大败，张梁战死，广宗主力遭到毁灭性打击。",
+      "source": {
+        "work": "《后汉书·皇甫嵩传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "长柄战刀"
+  ],
+  "skills": [
+    "指挥黄巾军",
+    "坚守广宗"
+  ],
+  "domains": [
+    "黄巾",
+    "太平道",
+    "人公将军"
+  ],
+  "mounts": [
+    "黑鬃战马"
+  ],
+  "portrait": "/p/sanguo/portraits/zhang_liang_taiping.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_liang_taiping.webp"
+}

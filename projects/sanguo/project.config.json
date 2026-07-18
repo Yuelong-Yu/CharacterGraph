@@ -24,7 +24,8 @@
     "hostile": { "label": "敌对/宿敌", "color": "#b8332b" },
     "mentor": { "label": "师徒", "color": "#8b8230" },
     "owns": { "label": "拥有/使用", "color": "#1f8a7a" },
-    "alliance": { "label": "盟友", "color": "#2e6cb8" }
+    "alliance": { "label": "盟友", "color": "#2e6cb8" },
+    "appraisal": { "label": "品评/识才", "color": "#6f5a8a" }
   },
   "eraLayers": {
     "0": "汉末·黄巾",

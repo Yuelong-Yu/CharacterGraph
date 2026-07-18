@@ -1,0 +1,65 @@
+{
+  "schema_version": 3,
+  "id": "ding_yuan",
+  "name_zh": "丁原",
+  "name_en": "Ding Yuan",
+  "aliases": [
+    "丁建阳",
+    "执金吾丁原"
+  ],
+  "epithet": "并州刺史·吕布故主",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "丁原，字建阳，东汉末年并州刺史，以骑都尉吕布为主簿，倚重其勇武。汉灵帝去世后，何进召外军进京，丁原率并州军抵达洛阳，后任执金吾。董卓也入京争夺朝权，丁原公开反对董卓，双方在城外对峙。董卓忌惮吕布，命李肃以赤兔马和金珠游说；《三国演义》中吕布因利杀死丁原，转投董卓，正史也记吕布受董卓诱使杀丁原。丁原之死使董卓吞并并州军，迅速控制京师。",
+  "events": [
+    {
+      "title": "统率并州军",
+      "desc": "丁原在并州任职，任用骁勇的吕布为主簿，掌握一支善于骑战的并州军队。",
+      "source": {
+        "work": "《后汉书·吕布传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "奉召入洛阳",
+      "desc": "何进谋以外军压制宦官，丁原率兵进入洛阳地区，何进死后继续以武力参与京师争夺。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "吕布杀丁原投董",
+      "desc": "董卓利诱吕布杀死丁原，并吞其并州军。演义以李肃赠赤兔、吕布夜斩丁原强化这一转折。",
+      "source": {
+        "work": "《后汉书·吕布传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "长槊",
+    "佩剑"
+  ],
+  "skills": [
+    "统领并州骑兵",
+    "镇守洛阳"
+  ],
+  "domains": [
+    "并州",
+    "骑兵",
+    "反董"
+  ],
+  "mounts": [
+    "并州战马"
+  ],
+  "portrait": "/p/sanguo/portraits/ding_yuan.webp",
+  "thumb": "/p/sanguo/thumbs/ding_yuan.webp"
+}

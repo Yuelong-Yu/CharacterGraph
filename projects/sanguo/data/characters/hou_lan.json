@@ -1,0 +1,59 @@
+{
+  "schema_version": 3,
+  "id": "hou_lan",
+  "name_zh": "侯览",
+  "name_en": "Hou Lan",
+  "aliases": [
+    "侯常侍"
+  ],
+  "epithet": "中常侍·聚敛巨富",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "侯览是汉桓帝、灵帝时期的中常侍，以家族聚敛和侵占民产著称。史书记载其兄侯参任益州刺史时残暴贪婪，侯览本人也广建宅第、侵夺田地，遭官员弹劾后被迫交还印绶并自杀。《三国演义》仍把侯览列入十常侍，以其姓名代表延续多年的宦官贪腐。与曹节相似，侯览在正史和演义的时间位置并不完全相同，因此人物档案分别标注史实事件与小说群像，不把演义名单误当作同年在世的严格史表。",
+  "events": [
+    {
+      "title": "亲族侵夺州郡",
+      "desc": "侯览及其亲族凭借中常侍权势侵夺民田、聚敛财富，其兄侯参在地方任职时也以贪残闻名。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "遭弹劾自杀",
+      "desc": "侯览罪行受到官员追究，被迫交还印绶，最终自杀，家属受到处置。",
+      "source": {
+        "work": "《后汉书·宦者列传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义列名十常侍",
+      "desc": "《三国演义》把侯览列入十常侍群像，用来概括宦官集团卖官聚敛、把持朝政的长期弊政。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "聚敛庄宅",
+    "庇护亲党"
+  ],
+  "domains": [
+    "宦官",
+    "财富",
+    "庄园"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/hou_lan.webp",
+  "thumb": "/p/sanguo/thumbs/hou_lan.webp"
+}

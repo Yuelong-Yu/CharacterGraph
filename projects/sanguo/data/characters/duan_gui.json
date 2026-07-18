@@ -1,0 +1,61 @@
+{
+  "schema_version": 3,
+  "id": "duan_gui",
+  "name_zh": "段珪",
+  "name_en": "Duan Gui",
+  "aliases": [
+    "段圭"
+  ],
+  "epithet": "十常侍·挟帝北邙",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "段珪是汉灵帝末年的中常侍，也是史书与《三国演义》都记载的宦官集团成员。何进被杀、袁绍等率军入宫后，段珪与张让等挟持少帝刘辩和陈留王刘协逃出洛阳，奔向北邙山一带。卢植等追赶救驾，宦官集团迅速瓦解。演义将段珪列为十常侍，并让他参与最后的挟帝出逃；这一事件使少年皇帝流落荒野，随后被董卓迎回，成为董卓控制朝廷、废立皇帝的直接契机。",
+  "events": [
+    {
+      "title": "参与诱杀何进",
+      "desc": "何进进入宫中后遭宦官集团伏杀，段珪作为张让集团成员卷入这场改变洛阳政局的宫变。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "挟持二帝出宫",
+      "desc": "袁绍军冲入宫中诛杀宦官时，段珪与张让等挟持少帝刘辩和陈留王刘协逃向北邙。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "北邙宦党覆灭",
+      "desc": "卢植等率兵追赶救驾，段珪等失去依托，宦官集团在逃亡中覆灭，少帝与陈留王随后遇到董卓军。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "短剑"
+  ],
+  "skills": [
+    "控制宫门",
+    "挟持出逃"
+  ],
+  "domains": [
+    "宦官",
+    "宫变",
+    "北邙"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/duan_gui.webp",
+  "thumb": "/p/sanguo/thumbs/duan_gui.webp"
+}

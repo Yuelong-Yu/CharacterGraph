@@ -1,0 +1,61 @@
+{
+  "schema_version": 3,
+  "id": "jian_shuo",
+  "name_zh": "蹇硕",
+  "name_en": "Jian Shuo",
+  "aliases": [
+    "蹇上军"
+  ],
+  "epithet": "上军校尉·西园统帅",
+  "category": "qun",
+  "era_layer": 0,
+  "bio": "蹇硕是汉灵帝晚年最受重用的宦官武官，体格健壮，任西园八校尉中的上军校尉，名义上统辖袁绍、曹操等校尉。灵帝偏爱幼子刘协，临终前把托付刘协之事交给蹇硕；蹇硕企图先杀何进、再立刘协，但何进察觉后逃脱。刘辩即位后，蹇硕写信联络赵忠等共同除去何进，郭胜因亲近何氏而把密谋泄露，何进遂捕杀蹇硕并兼并其兵。演义也写郭胜在御花园杀死蹇硕。",
+  "events": [
+    {
+      "title": "统率西园八校尉",
+      "desc": "汉灵帝设置西园军，以蹇硕为上军校尉，地位在袁绍、曹操等校尉之上，宦官由此直接掌握禁军。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "谋杀何进立刘协",
+      "desc": "灵帝临终托意于蹇硕，蹇硕试图先除何进再拥立刘协，何进察觉危险而未入宫。",
+      "source": {
+        "work": "《后汉书·何进传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "郭胜泄谋被杀",
+      "desc": "刘辩即位后蹇硕联络赵忠等谋诛何进，郭胜把计划泄露给何氏，蹇硕被捕杀，部众归何进掌握。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "环首刀"
+  ],
+  "skills": [
+    "统率西园军",
+    "策划废立"
+  ],
+  "domains": [
+    "宦官",
+    "禁军",
+    "皇位继承"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/jian_shuo.webp",
+  "thumb": "/p/sanguo/thumbs/jian_shuo.webp"
+}

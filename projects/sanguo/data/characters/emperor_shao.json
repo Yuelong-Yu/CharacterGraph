@@ -1,0 +1,60 @@
+{
+  "schema_version": 3,
+  "id": "emperor_shao",
+  "name_zh": "汉少帝",
+  "name_en": "Emperor Shao of Han",
+  "aliases": [
+    "刘辩",
+    "弘农王",
+    "汉少帝刘辩"
+  ],
+  "epithet": "刘辩·被废少年天子",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "汉少帝刘辩，汉灵帝与何皇后之子，汉献帝刘协的异母兄。中平六年灵帝去世，十四岁的刘辩在舅父何进和何太后支持下即位。何进被十常侍杀害后，张让、段珪等挟持刘辩与刘协逃往北邙，兄弟二人途中被董卓迎回洛阳。董卓认为刘辩怯弱，强行废其为弘农王，改立刘协。次年董卓派人逼迫刘辩饮鸩而死。刘辩短暂的皇位见证了外戚、宦官与军阀三方冲突最终摧毁东汉中央权威。",
+  "events": [
+    {
+      "title": "十四岁即位",
+      "desc": "汉灵帝去世后，何进与何太后拥立刘辩为帝。少年天子缺乏自主权，朝政掌握在外戚和宦官手中。",
+      "source": {
+        "work": "《后汉书·皇后纪》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "被宦官挟至北邙",
+      "desc": "何进被杀、袁绍军入宫后，张让、段珪等挟持刘辩与刘协出逃北邙，皇帝一度流落荒野。",
+      "source": {
+        "work": "《后汉书·何进传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "董卓废立逼死",
+      "desc": "董卓入京后废刘辩为弘农王，改立刘协；不久又命人逼刘辩服毒，少年废帝身亡。",
+      "source": {
+        "work": "《后汉书·皇后纪》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "承受朝仪"
+  ],
+  "domains": [
+    "东汉皇室",
+    "废立",
+    "少年天子"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/emperor_shao.webp",
+  "thumb": "/p/sanguo/thumbs/emperor_shao.webp"
+}
