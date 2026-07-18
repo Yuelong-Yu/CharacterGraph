@@ -1,0 +1,111 @@
+{
+  "schema_version": 3,
+  "id": "lu_zhi",
+  "name_zh": "卢植",
+  "name_en": "Lu Zhi",
+  "aliases": [
+    "子干",
+    "Zigan"
+  ],
+  "epithet": "海内大儒·刘备之师",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "卢植（？－192年），字子干，东汉末年涿郡涿县（今河北涿州）人。他是东汉名臣、经学家，曾师从马融，与郑玄、管宁等同门。以博士入仕，历任九江、庐江太守。参与校勘儒学经典，续写《东观汉记》，并在缑氏山教学，门生包括公孙瓒、刘备。184年黄巾起义，卢植任北中郎将，率军击败张角，围困广宗，但因拒绝贿赂宦官而被诬陷下狱。后复任尚书。189年董卓欲废少帝，卢植挺身反对，险遭杀害，遂辞官隐居上谷军都山。袁绍请他出山，他拒绝。192年去世。卢植文武兼备，刚直不阿，曹操赞其“名著海内，学为儒宗，士之楷模，国之桢干”。著有《尚书章句》《三礼解诂》，已佚。唐代配享孔庙，北宋追封良乡伯。范阳卢氏以他为始祖。",
+  "events": [
+    {
+      "title": "师从马融专注学业",
+      "desc": "卢植在太儒马融门下求学，马融家富且多歌舞伎，卢植始终专心研读经典，从未斜视歌舞，深得马融敬重。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "谏阻窦武接受封赏",
+      "desc": "168年，卢植以平民身份写信给窦武，劝其拒绝因拥立汉灵帝而获封的爵位，窦武未采纳。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "出任九江太守平定叛乱",
+      "desc": "175年，九江郡发生蛮族叛乱，卢植因文武兼备被任命为太守，到任后叛军不战而降，随后卢植称病辞职。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "参与编纂《东观汉记》",
+      "desc": "卢植与马日磾、蔡邕等学者在东观校勘儒学经典，并续写东汉国史《东观汉记》，为当时最著名的史学家之一。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "率军击黄巾被诬陷下狱",
+      "desc": "184年黄巾起义，卢植任北中郎将，率军击败张角并将之围困于广宗，因拒绝贿赂宦官左丰，被诬告作战不力而革职下狱。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "反对董卓废立险遭杀害",
+      "desc": "189年，董卓欲废汉少帝刘辩，百官无人敢言，卢植独挺身而出，据理力争，董卓怒欲杀之，经蔡邕劝止，卢植得以免死。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "辞官隐居拒袁绍之邀",
+      "desc": "卢植预感到董卓会加害自己，便称病辞官，从小路逃往上谷郡军都山隐居。袁绍起兵后多次邀请他出山，均被拒绝。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "名著海内，学为儒宗，士之楷模，国之桢干也。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "率军平叛",
+    "校勘经籍",
+    "授徒讲学"
+  ],
+  "domains": [
+    "军事",
+    "经学",
+    "教育"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/lu_zhi.webp",
+  "thumb": "/p/sanguo/thumbs/lu_zhi.webp"
+}

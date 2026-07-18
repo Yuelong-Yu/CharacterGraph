@@ -1,0 +1,116 @@
+{
+  "schema_version": 3,
+  "id": "han_sui",
+  "name_zh": "韩遂",
+  "name_en": "Han Sui",
+  "aliases": [
+    "韩约",
+    "文约",
+    "Wenyue",
+    "Han Sui",
+    "Han Yue"
+  ],
+  "epithet": "西凉军阀·凉州宿雄",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "韩遂（约140年代－215年），原名韩约，字文约，凉州金城郡人，东汉末年军阀、将领，汉末群雄之一。最初闻名于西州，被羌胡叛军劫持并推举为首领，以诛杀宦官为名举兵十万叛乱，先后与皇甫嵩、张温、董卓、孙坚等名将抗衡。后接受朝廷招安，拥兵割据凉州三十余年。曾与马腾结为异姓兄弟，后又反目成仇。曹操击败袁绍后，派钟繇调解韩遂与马腾，二人归附曹操。马腾入朝为质后，韩遂与马超共同统领凉州。211年，关西诸侯推举韩遂为都督，起兵反曹操，在渭南之战中被曹操用离间计击败。韩遂逃回凉州，后遭夏侯渊征讨，兵败后欲投益州，被部下劝说未果。最终被部下杀害（或病死），首级送交曹操，享年七十余岁。",
+  "events": [
+    {
+      "title": "参与凉州叛乱",
+      "desc": "韩遂在凉州与羌人联合，以诛杀宦官为名举兵反汉，与边章、北宫伯玉、李文侯等结盟，一度击败汉军，但被董卓击败。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与马腾结盟并共治凉州",
+      "desc": "韩遂与马腾结为异姓兄弟，先后推举王国为首领，后王国被皇甫嵩击败，韩遂与马腾随即自任凉州共主，割据一方。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "兵败长安",
+      "desc": "192年，韩遂与马腾联合刘焉攻打长安，被李傕、郭汜等击败于长安城西十三里，因粮尽退回凉州。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与马腾反目成仇",
+      "desc": "韩遂与马腾因争夺凉州控制权而互相攻伐，甚至杀害对方妻子儿女，关系破裂。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "归附曹操",
+      "desc": "200年曹操在官渡之战后，派钟繇调解韩遂与马腾，两人接受招安，协助曹操对抗袁绍残余势力。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "渭南之战被离间",
+      "desc": "211年，韩遂被关西诸侯推举为都督，与马超等联合反曹。曹操用贾诩之计，在阵前与韩遂假装叙旧，离间其与马超的关系，导致联军分裂，韩遂大败。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "败于夏侯渊",
+      "desc": "韩遂退回凉州后，夏侯渊率军征讨，韩遂战败，欲投奔益州，被部下成公英劝阻，继续抵抗。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "遇害身亡",
+      "desc": "215年，韩遂被部下杀害（或病死），首级被送往曹操处，所部投降。享年七十余岁。",
+      "source": {
+        "work": "三国志",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义中投降曹操",
+      "desc": "在《三国演义》中，韩遂被曹操离间后，被马超砍断左臂，逃往曹营投降，被曹操接纳并继续任职。",
+      "source": {
+        "work": "三国演义",
+        "locus": "",
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/han_sui.webp",
+  "thumb": "/p/sanguo/thumbs/han_sui.webp"
+}

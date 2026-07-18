@@ -1,0 +1,113 @@
+{
+  "schema_version": 3,
+  "id": "zhang_zhao",
+  "name_zh": "张昭",
+  "name_en": "Zhang Zhao",
+  "aliases": [
+    "张子布",
+    "Zhang Zhao",
+    "张公"
+  ],
+  "epithet": "东吴股肱·内事托张昭",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "张昭，字子布，彭城人，是东汉末年至孙吴时期的重要政治家与经学家。徐州战乱后他避难江东，受到孙策礼遇，出任长史、抚军中郎将，负责文书政务并安定士民。孙策临终将弟弟孙权托付给张昭，张昭在政权交接之际率群僚确立孙权地位，此后长期主持江东内政。建安十三年曹操南下，张昭等人从实力判断主张迎降，与周瑜、鲁肃的抗战意见形成鲜明对照。孙权称帝前后虽然没有让张昭出任丞相，却始终敬重其资望。张昭性情严正，屡次当面劝谏孙权，甚至因争执闭门不出，又被孙权以土封门，君臣关系紧张而深厚。嘉禾五年张昭去世，享年八十一，谥文侯。",
+  "events": [
+    {
+      "title": "避乱江东，辅佐孙策",
+      "desc": "徐州战乱后张昭南渡江东，孙策任命他为长史、抚军中郎将，将重要政务与文书托付给他。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "协助孙策安定江东",
+      "desc": "张昭以名望和行政能力招抚士人、处理州郡事务，成为孙策政权的文臣之首。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "受孙策临终托孤",
+      "desc": "孙策遇刺临终时召张昭等人托付孙权，并表示若孙权不能胜任，可由张昭自行处置江东局势。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "扶立孙权稳定政局",
+      "desc": "孙策去世后孙权悲伤未能视事，张昭劝其承担大业，并率领群臣确立新的统治秩序。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "曹操南下时主张迎降",
+      "desc": "赤壁之战前曹操大军进入荆州，张昭等人认为长江天险已与曹军共有，主张暂时迎降。",
+      "source": {
+        "work": "《三国志·吴书·周瑜传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    },
+    {
+      "title": "以严正著称，屡谏孙权",
+      "desc": "张昭不避孙权盛怒，多次就宴饮、狩猎和政务直言劝谏，君臣之间时有激烈冲突。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "未任丞相，进封娄侯",
+      "desc": "孙权称吴王、称帝后两次另选丞相，张昭则受封辅吴将军、娄侯，以元老身份继续居朝。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "嘉禾五年去世",
+      "desc": "公元236年张昭去世，享年八十一，孙权素服临吊，谥号文侯。",
+      "source": {
+        "work": "《三国志·吴书·张昭传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "内政治理",
+    "经学",
+    "直言劝谏",
+    "安定士民"
+  ],
+  "domains": [
+    "孙吴政治",
+    "江东士族",
+    "儒家经学"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/zhang_zhao.webp",
+  "thumb": "/p/sanguo/thumbs/zhang_zhao.webp"
+}

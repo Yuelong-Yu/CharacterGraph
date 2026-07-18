@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "cai_mao",
+  "name_zh": "蔡瑁",
+  "name_en": "Cai Mao",
+  "aliases": [
+    "德珪",
+    "Degui"
+  ],
+  "epithet": "荆州水军都督",
+  "category": "qun",
+  "era_layer": 2,
+  "bio": "蔡瑁，字德珪，襄阳郡襄阳县人，东汉末年荆州名族。父蔡讽，姑母嫁太尉张温，两姐分别嫁黄承彦与刘表。蔡瑁性情傲慢，初平元年（190年）协助刘表平定荆州宗贼之乱，历任江夏、南郡、章陵等郡太守。刘表获封镇南将军时，蔡瑁任其军师。刘表病亡后，蔡瑁与蔡夫人等拥立刘琮继位，并劝说刘琮投降曹操。曹操因与蔡瑁有旧，厚待之，任其为从事中郎、司马、长水校尉，封汉阳亭侯。在《三国演义》中，蔡瑁与张允统领荆州水军，赤壁之战时建议连锁战船，后被周瑜用反间计致使曹操误杀二人。",
+  "events": [
+    {
+      "title": "协助刘表平定荆州",
+      "desc": "190年，刘表初任荆州刺史，当地宗贼横行，蔡瑁与蒯良、蒯越等人协助刘表平定叛乱，巩固了对荆州的控制。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "历任荆襄诸郡太守",
+      "desc": "蔡瑁在刘表麾下先后担任江夏太守、南郡太守、章陵太守等职，治理地方。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "拥立刘琮为荆州之主",
+      "desc": "刘表病逝后，蔡瑁与蔡夫人、张允等不顾刘表遗愿，支持刘琮继任荆州牧，排挤长子刘琦。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "劝说刘琮投降曹操",
+      "desc": "208年，曹操南征荆州，蔡瑁与蒯越、张允等力劝刘琮投降，刘琮听从，荆州遂归曹操。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "归降曹操受封重用",
+      "desc": "蔡瑁因与曹操旧识，降后受到礼遇，历任从事中郎、司马、长水校尉，封汉阳亭侯。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "统领水军参与赤壁之战",
+      "desc": "在《三国演义》中，蔡瑁与张允担任曹操水军都督，统领荆州降军，初战失利后建议连锁战船以提高稳定性。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "被周瑜反间计杀害",
+      "desc": "周瑜使蒋干盗书，伪造蔡瑁、张允通敌信件，曹操中计将二人斩首，事后醒悟但为时已晚。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "指挥水军",
+    "建议连锁战船"
+  ],
+  "domains": [
+    "水军",
+    "荆州",
+    "军事"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/cai_mao.webp",
+  "thumb": "/p/sanguo/thumbs/cai_mao.webp"
+}

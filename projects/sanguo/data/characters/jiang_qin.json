@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "id": "jiang_qin",
+  "name_zh": "蒋钦",
+  "name_en": "Jiang Qin",
+  "aliases": [
+    "蒋钦",
+    "Jiang Qin",
+    "公奕",
+    "蒋公奕"
+  ],
+  "epithet": "江表虎臣·水军名将",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "蒋钦（？—219年/220年初），字公奕，九江郡寿春县（今安徽寿县）人，东汉末年孙吴将领，以水军专长著称。早年与周泰一同投靠孙策，随孙策平定江东诸郡，历任别部司马、葛阳尉、西部都尉等职。后率军平定会稽东部五县吕合、秦狼之乱，升讨越中郎将。孙权时期，参与逍遥津之战，奋勇作战，升荡寇将军。217年与吕蒙共督濡须水军，抵御曹操，虽遭风暴损失大将董袭，但最终迫使曹操退兵。后任右护军，负责军队纪律。219年参与吕蒙袭取荆州之役，率水军沿沔水防备关羽。战后班师时病逝，孙权素服吊唁，并赐其家属芜湖田地与民户。蒋钦以清廉节俭闻名，孙权曾亲自探访其家，见其母用粗布帷帐，妻妾穿布衣，大为感动，下令为其改善生活。又曾与徐盛有隙，但在军中不记私怨，推举徐盛，受到孙权赞赏。其子蒋壹、蒋休继承爵位，蒋壹战死夷陵之战。蒋钦在《三国演义》中亦有登场，参与赤壁之战、拦截刘备等情节。",
+  "events": [
+    {
+      "title": "随孙策平定江东",
+      "desc": "194年，蒋钦与周泰在孙策麾下任职，随孙策渡江，攻占丹阳、吴、会稽、豫章等郡，任别部司马。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "平定会稽五县叛乱",
+      "desc": "吕合、秦狼在会稽东部五县起兵，蒋钦率军讨伐，擒获二首领，平定金区，升讨越中郎将。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "逍遥津浴血护卫",
+      "desc": "214-215年，蒋钦随孙权攻合肥，在逍遥津遇张辽突袭，蒋钦力战保护孙权，战后升荡寇将军。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "督率濡须水军拒曹",
+      "desc": "217年，蒋钦与吕蒙共同指挥濡须防御，掌管水军，虽遭风暴损失董袭，但成功逼退曹操。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "担任右护军掌军纪",
+      "desc": "蒋钦被召回京，任右护军，负责军队纪律，以公正严明著称。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "率水军袭取荆州",
+      "desc": "219年，随吕蒙征讨关羽，蒋钦率水军沿沔水向上游，防备关羽反击。战后病逝于归途。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "孙权嘉其清廉节俭",
+      "desc": "孙权曾到蒋钦家，见其母床帐粗陋、妻妾布衣，深为感动，下令赐予锦缎帷帐等物。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "不记私怨推举徐盛",
+      "desc": "徐盛曾因军法问题与蒋钦结怨，后蒋钦在濡须负责军纪时不仅不报复，反而称赞徐盛，孙权将之比作祁奚。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "率众投奔孙策",
+      "desc": "《三国演义》中，蒋钦与周泰原为山贼，听闻孙策招贤，率三百人投奔，在孙策攻刘繇时火烧张英营寨，迫使刘繇退兵。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "赤壁之战指挥右翼",
+      "desc": "周瑜火攻赤壁时，蒋钦率右翼水军，配合黄盖火船，大败曹军。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "拦截刘备与孙夫人",
+      "desc": "刘备携孙夫人由东吴返回荆州，蒋钦与徐盛、丁奉等奉周瑜之命追击，但被诸葛亮设计阻止。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "我听说不应让个人私怨影响公事。徐盛忠诚勤勉，有勇有谋，足以统率千军。如今大业未成，我应当帮助发现并推荐人才，而不是让私心蒙蔽判断。",
+      "source": {
+        "work": "《三国志·吴书·蒋钦传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "统率水军",
+    "平定叛乱",
+    "督率军队",
+    "推荐贤才"
+  ],
+  "domains": [
+    "水军",
+    "军事",
+    "军队纪律",
+    "讨伐山越"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/jiang_qin.webp",
+  "thumb": "/p/sanguo/thumbs/jiang_qin.webp"
+}

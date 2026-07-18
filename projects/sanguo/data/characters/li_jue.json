@@ -1,0 +1,113 @@
+{
+  "schema_version": 3,
+  "id": "li_jue",
+  "name_zh": "李傕",
+  "name_en": "Li Jue",
+  "aliases": [
+    "稚然",
+    "李稚然"
+  ],
+  "epithet": "董卓旧部·劫持天子",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "李傕（？—198年），字稚然，北地郡人，东汉末年军阀、权臣，汉末群雄之一。初为董卓部将，董卓被吕布杀死后，李傕与郭汜、张济等上表请求赦免未果，在谋士贾诩建议下率军攻入长安，击败吕布，杀死司徒王允，控制朝政。此后李傕与郭汜、樊稠共秉朝政，任车骑将军，领司隶校尉。后因猜忌内讧，李傕先杀樊稠，又与郭汜相攻数月，双方死者数以万计，汉献帝乘机东归。李傕与郭汜后悔，联合追击，在弘农东涧大破护驾军队，杀害公卿大臣。建安三年（198年），朝廷派裴茂率段煨等讨伐，李傕战败，被诛灭三族。李傕当政时放纵子弟钞掠百姓，导致三辅地区大乱，两三年间关中杳无人迹。",
+  "events": [
+    {
+      "title": "贾诩献策攻长安",
+      "desc": "董卓被杀后，李傕等部将请求赦免未果，听从贾诩建议，率军西攻长安，沿途收拢兵众，至长安时已达十余万人。",
+      "source": {
+        "work": "三国志",
+        "locus": "卷六·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "攻破长安杀王允",
+      "desc": "李傕与郭汜、樊稠等合兵围攻长安，城破后吕布败走，王允被杀，李傕控制朝政，自为车骑将军。",
+      "source": {
+        "work": "后汉书",
+        "locus": "卷七十二·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "共秉朝政",
+      "desc": "李傕、郭汜、樊稠三人共同执掌朝政，李傕为车骑将军领司隶校尉，郭汜为后将军，樊稠为右将军，分据要职。",
+      "source": {
+        "work": "后汉书",
+        "locus": "卷七十二·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "内讧杀樊稠",
+      "desc": "李傕因猜忌樊稠，在一次宴会上命部下将樊稠刺杀，并吞并其部众，引起郭汜不安。",
+      "source": {
+        "work": "三国志",
+        "locus": "卷六·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "劫持汉献帝",
+      "desc": "李傕与郭汜相攻期间，李傕将汉献帝劫持到自己的军营中，焚烧宫殿，企图挟天子以令诸侯。",
+      "source": {
+        "work": "后汉书",
+        "locus": "卷七十二·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与郭汜相攻数月",
+      "desc": "李傕与郭汜在长安城中连月交战，死者数以万计，长安城几乎成为废墟，百姓逃散。",
+      "source": {
+        "work": "三国志",
+        "locus": "卷六·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "追击献帝东归",
+      "desc": "汉献帝东归洛阳，李傕与郭汜后悔，联合出兵追击，在弘农东涧大破汉军，杀司徒赵温等公卿。",
+      "source": {
+        "work": "后汉书",
+        "locus": "卷七十二·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "三辅大乱",
+      "desc": "李傕当政时放纵子弟钞掠百姓，导致三辅地区饥荒，人相食，两三年间关中再无行人踪迹。",
+      "source": {
+        "work": "后汉书",
+        "locus": "卷七十二·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被段煨击败夷三族",
+      "desc": "建安三年（198年），朝廷派裴茂率段煨等讨伐李傕，李傕战败，退往黄白城，途中被部下所杀，首级传至许都，夷灭三族。",
+      "source": {
+        "work": "三国志",
+        "locus": "卷六·董卓传",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/li_jue.webp",
+  "thumb": "/p/sanguo/thumbs/li_jue.webp"
+}

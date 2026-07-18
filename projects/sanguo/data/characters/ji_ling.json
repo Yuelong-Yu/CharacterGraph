@@ -1,0 +1,65 @@
+{
+  "schema_version": 3,
+  "id": "ji_ling",
+  "name_zh": "纪灵",
+  "name_en": "Ji Ling",
+  "aliases": [
+    "纪灵",
+    "Ji Ling"
+  ],
+  "epithet": "袁术上将·三尖刀",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "纪灵，东汉末年将领，袁术部将。建安元年（196年），袁术命纪灵率步骑三万攻打刘备，刘备向吕布求救。吕布率军至沛县，纪灵闻讯敛兵不敢进攻。吕布设宴调和，辕门射戟，一箭正中戟小支，纪灵等大惊，次日罢兵。此后正史无载。在《三国演义》中，纪灵为山东人，手持三尖两刃刀，与关羽大战三十余合不分胜负；袁术败亡时，随行北上，被张飞斩杀。纪灵在历史上仅有一事，演义则将其塑造为袁术麾下重要将领。",
+  "events": [
+    {
+      "title": "率军进攻刘备",
+      "desc": "建安元年（196年），袁术派遣纪灵率步骑三万进攻刘备。刘备向吕布求救，吕布率军前来支援，纪灵闻讯后撤兵，不敢进攻。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "辕门射戟（正史）",
+      "desc": "纪灵围攻刘备，吕布为调解双方，在营门举戟，一箭射中戟小支，震慑纪灵等人。次日双方罢兵。此为纪灵在正史中唯一记载。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与关羽单挑",
+      "desc": "在《三国演义》中，纪灵与关羽大战三十余合不分胜负，后纪灵退回阵中，派副将荀正出战，被关羽斩杀。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "被张飞斩杀",
+      "desc": "在《三国演义》中，袁术失势后，纪灵随袁术北上投靠袁绍，途中遭遇刘备军，与张飞单挑，被张飞一矛刺死。",
+      "source": {
+        "work": "三国演义",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "三尖两刃刀"
+  ],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/ji_ling.webp",
+  "thumb": "/p/sanguo/thumbs/ji_ling.webp"
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 3,
+  "id": "guo_si",
+  "name_zh": "郭汜",
+  "name_en": "Guo Si",
+  "aliases": [
+    "郭多",
+    "Guo Duo"
+  ],
+  "epithet": "董卓旧部·长安乱局",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "郭汜（？—197年），又名郭多，东汉末年军阀。早年为马贼，后投靠董卓，成为其麾下将领，参与讨伐黄巾军、凉州之战及对抗诸侯联军。董卓被吕布杀害后，郭汜与李傕、张济、樊稠等董卓旧部听从贾诩建议，反攻长安，击败吕布，诛杀王允，控制汉献帝，掌握朝政。郭汜被任命为后将军，封美阳侯。后因妻子嫉妒，怀疑郭汜与李傕妾室有染，导致郭汜与李傕相互猜忌，最终反目成仇，在长安城内混战，致使百姓死伤惨重，城空四十余日。后经张济调解，二人暂时和解，并护送献帝东归。但郭汜不久反悔，与李傕共同追击献帝，在弘农东涧、曹阳等地大败护驾军队，杀害多名公卿。建安二年（197年），郭汜被部将伍习杀害，势力瓦解。",
+  "events": [
+    {
+      "title": "投靠董卓参与战役",
+      "desc": "郭汜早年成为马贼，后投靠董卓，参与讨伐黄巾军、凉州之战以及对抗诸侯联军，曾与李傕在陈留、颍川等地进行劫掠。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "反攻长安杀王允",
+      "desc": "董卓被杀后，郭汜与李傕、张济、樊稠应贾诩之策，率军攻长安，击败吕布，迫使王允自杀，夺取长安控制权，挟持汉献帝。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "与吕布单挑受伤",
+      "desc": "在长安城外战斗中，郭汜亲自与吕布决斗，被吕布刺伤，但未被杀死，凉州军最终将吕布逼入城内。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "妻子挑拨与李傕反目",
+      "desc": "郭汜之妻怀疑丈夫与李傕的妾室有染，故意将李傕所赠食物下毒，并劝说郭汜提防李傕，导致二人互信破裂，最终爆发内战。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "长安内斗致城空",
+      "desc": "郭汜与李傕在长安城中持续交战，每日巷战数十次，导致百姓大量死亡，城市空荡四十余日，汉献帝借机逃离长安。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "追击献帝被击败",
+      "desc": "汉献帝东逃后，郭汜与李傕合兵追击，在弘农东涧、曹阳等地击败护驾军队，杀害公卿，但最终被杨奉、董承等人击退，退回关中。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被部将伍习杀害",
+      "desc": "建安二年（197年），郭汜的势力衰落，其部将伍习发动叛乱，将郭汜杀死，随后率部投靠李傕。",
+      "source": {
+        "work": "三国志",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/guo_si.webp",
+  "thumb": "/p/sanguo/thumbs/guo_si.webp"
+}

@@ -1,0 +1,173 @@
+{
+  "schema_version": 3,
+  "id": "jiang_wan",
+  "name_zh": "蒋琬",
+  "name_en": "Jiang Wan",
+  "aliases": [
+    "Jiang Wan",
+    "蒋琬",
+    "公琰",
+    "Gongyan"
+  ],
+  "epithet": "蜀汉大司马·继志丞相",
+  "category": "shu",
+  "era_layer": 3,
+  "bio": "蒋琬（？-246年），字公琰，零陵湘乡（今湖南湘乡）人。三国时期蜀汉重臣，初以州书佐随刘备入蜀，任广都长。因醉误事，刘备欲杀之，诸葛亮以“社稷之器”劝免。后任什邡令、丞相府东曹掾。诸葛亮北伐期间，蒋琬留守成都，负责后勤保障，深得信任。诸葛亮临终密表后主，指定蒋琬为接班人。234年诸葛亮病逝后，蒋琬继任执政，拜尚书令，加行都护、假节，领益州刺史，迁大将军，录尚书事，封安阳亭侯。238年受命开府，次年加大司马，总揽蜀汉军政。他修正诸葛亮北伐战略，主张改由水路攻魏，但被朝臣否决。243年因健康恶化，迁驻涪县，并荐江维为凉州刺史。244年因病辞政，将益州刺史让于费祎。246年去世。蒋琬执政期间，蜀国政通人和，经济复兴，边境安宁，堪称蜀汉后期中流砥柱。",
+  "events": [
+    {
+      "title": "广都长醉酒被责",
+      "desc": "担任广都长时，因醉酒怠政，刘备怒欲处死，诸葛亮以‘社稷之器’劝免，刘备遂罢其官。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "任丞相府东曹掾",
+      "desc": "诸葛亮建立幕府，任命蒋琬为东曹掾，并多次称赞其才能，认为他是可共赞王业之人。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "负责北伐后勤",
+      "desc": "228年至234年诸葛亮北伐期间，蒋琬留守成都，统筹后方，确保兵员与物资及时送达前线。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "诸葛亮临终指定接班人",
+      "desc": "234年诸葛亮病危，密表后主刘禅，称‘若臣不测，后事可以付琬’，明确蒋琬为继任者。",
+      "source": {
+        "work": "三国志·诸葛亮传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "继任执政，拜尚书令",
+      "desc": "诸葛亮去世后，蒋琬继任为尚书令，加行都护、假节，领益州刺史，总揽朝政，稳定人心。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "受封安阳亭侯，迁大将军",
+      "desc": "235年，蒋琬辞尚书令，升任大将军，录尚书事，封安阳亭侯，成为蜀汉最高军事长官。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "开府治事，加大司马",
+      "desc": "238年刘禅下诏令蒋琬开府，次年加封大司马，总揽军政，准备趁辽东之乱攻魏。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "提出水攻魏国计划被否决",
+      "desc": "蒋琬认为陆路难行，计划沿汉水造舰攻魏兴、上庸，但朝臣以风险太大为由反对，最终未实施。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "迁驻涪县，荐江维为凉州刺史",
+      "desc": "243年因健康恶化，移驻涪县，并上表建议以江维为凉州刺史，自率军支援，以图凉州。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "因病辞政，让益州刺史于费祎",
+      "desc": "244年病情加重，辞去大将军等职，并将益州刺史之位让给费祎，仅保留大司马虚衔。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "去世，谥号恭",
+      "desc": "246年十一月或十二月病逝，后主刘禅追谥为恭侯，蜀汉进入费祎执政时期。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "蒋琬，社稷之器，非百里之才也。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "若臣不测，后事可以付琬。",
+      "source": {
+        "work": "三国志·诸葛亮传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "text": "公琰之志，忠清亮直，当与共赞王业。",
+      "source": {
+        "work": "三国志·蒋琬传",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "治理内政",
+    "统筹后勤",
+    "制定军事战略",
+    "安抚百姓"
+  ],
+  "domains": [
+    "内政",
+    "后勤",
+    "军事",
+    "安民"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/jiang_wan.webp",
+  "thumb": "/p/sanguo/thumbs/jiang_wan.webp"
+}

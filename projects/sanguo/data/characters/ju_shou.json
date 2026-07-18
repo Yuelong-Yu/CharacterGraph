@@ -1,0 +1,122 @@
+{
+  "schema_version": 3,
+  "id": "ju_shou",
+  "name_zh": "沮授",
+  "name_en": "Ju Shou",
+  "aliases": [
+    "沮授",
+    "公与",
+    "Ju Shou"
+  ],
+  "epithet": "袁绍监军·忠谋之士",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "沮授（？－200年），字公与，广平人，东汉末年袁绍帐下重要谋士，官至监军、奋威将军。少有大志，多权略，初为韩馥别驾，举茂才，任两县县令。后韩馥让冀州于袁绍，沮授转而效力袁绍，献策先取河北四州，招揽人才，迎奉天子，袁绍纳之，遂助袁绍夺取青、并、幽三州，统一河北。195年，沮授劝袁绍迎汉献帝至邺城，以挟天子令诸侯，但袁绍听信郭图等言，认为天子是累赘，未从。次年曹操迎帝于许，得政治优势。袁绍欲分封诸子，沮授力谏不可，认为将引发内乱，袁绍不从，后果然袁谭、袁尚相争。199年，袁绍灭公孙瓒后整军攻曹操，沮授与田丰建议稳扎稳打，持久消耗，袁绍不听，仓促进军。200年，白马之战前沮授谏止用颜良为主将，颜良果败死。袁绍渡河前，沮授主张分兵袭扰，不宜全军压上，袁绍怒而夺其兵权。官渡对峙中，沮授又建议派蒋奇护卫乌巢粮草，未被采纳。乌巢被烧后袁绍大败，沮授被俘。曹操厚待之，沮授坚不投降，后企图逃归袁绍，事泄被杀。曹操曾叹息：“孤早相得，天下不足虑。”",
+  "events": [
+    {
+      "title": "投效袁绍，献统一河北之策",
+      "desc": "191年，韩馥让冀州于袁绍后，沮授转投袁绍，提出先取冀、青、并、幽四州，网罗人才，迎奉天子的战略规划。袁绍大喜，任命沮授为监军、奋威将军。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "劝迎天子，袁绍不从",
+      "desc": "195年汉献帝流落洛阳，沮授力劝袁绍迎帝至邺城，以挟天子令诸侯。袁绍初听，后因郭图等反对，认为迎帝受制，遂放弃。次年曹操迎帝于许，得政治优势。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "反对诸子分封，预言内乱",
+      "desc": "袁绍欲将四州分给三子一甥以考察能力，沮授强烈反对，认为此举会埋下内斗祸根。袁绍不听，后袁谭、袁尚果然在袁绍死后火并。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "建议缓进疲曹，袁绍不听",
+      "desc": "199年袁绍灭公孙瓒后计划攻曹操，沮授与田丰主张休养生息、分兵扰敌，以持久战消耗曹操，但袁绍急于决战，拒绝此议。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "谏阻颜良攻白马",
+      "desc": "200年白马之战前，沮授指出颜良性情狭隘，不宜独当重任。袁绍不听，仍命颜良进攻，结果颜良被关羽斩杀，袁军初战失利。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "建议分兵渡河，被夺兵权",
+      "desc": "袁绍主力欲渡黄河攻官渡，沮授建议主力留延津，另派偏师袭扰，袁绍不听，且因沮授称病不理事，袁绍将其兵权转交郭图。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "提议长期消耗战",
+      "desc": "延津之战失败后，沮授再次建议改打持久战，利用粮草优势拖垮曹操，但袁绍仍坚持速战，导致官渡决战。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "建议派蒋奇护粮，未被采纳",
+      "desc": "乌巢粮草囤积时，沮授请求派蒋奇率部护送粮队并加强乌巢防卫，袁绍不从，后曹操火烧乌巢，袁军大败。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "被俘不屈，欲逃被害",
+      "desc": "官渡战败后沮授被曹军俘虏，曹操厚待劝降，沮授坚决不降，后试图逃跑回袁绍处，事败被杀。",
+      "source": {
+        "work": "Sanguozhi",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "出谋划策",
+    "监统内外",
+    "劝谏谏言"
+  ],
+  "domains": [
+    "谋略",
+    "战略",
+    "军事"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/ju_shou.webp",
+  "thumb": "/p/sanguo/thumbs/ju_shou.webp"
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": 3,
+  "id": "tao_qian",
+  "name_zh": "陶谦",
+  "name_en": "Tao Qian",
+  "aliases": [
+    "恭祖"
+  ],
+  "epithet": "徐州牧·三让徐州",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "陶谦（132年/133年－194年/195年），字恭祖，丹阳人。东汉末年大臣，汉末群雄之一。陶谦最初为诸生，在州郡任职，被举茂才，历任舒、卢二县令、幽州刺史、议郎，性格刚直，有大志。后随左车骑将军皇甫嵩对抗北宫伯玉，任扬武校尉，之后又随张温征韩遂、边章。中平五年（188年），徐州黄巾起，陶谦被朝廷任为徐州刺史，击破徐州黄巾，并推行屯田，恢复生产。尔后听从王朗、赵昱建议遣使进京朝贡，获拜安东将军、徐州牧，封溧阳侯。陶谦晚年因战事上为曹操所败，徐州大半几乎遭兵祸所害，以致过度忧劳而逝，终年六十三岁。",
+  "events": [
+    {
+      "title": "举茂才任县令",
+      "desc": "陶谦被举为茂才，历任舒县、卢县县令，展现治理才能。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随皇甫嵩讨北宫伯玉",
+      "desc": "陶谦担任扬武校尉，随左车骑将军皇甫嵩征讨北宫伯玉。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随张温征韩遂边章",
+      "desc": "陶谦随车骑将军张温讨伐韩遂、边章，参与凉州战事。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "任徐州刺史击破黄巾",
+      "desc": "中平五年（188年），徐州黄巾起义，陶谦被任命为徐州刺史，率军击破黄巾军，稳定徐州局势。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "推行屯田恢复生产",
+      "desc": "陶谦在徐州推行屯田制度，鼓励农业生产，恢复战乱后的经济。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "遣使朝贡获封",
+      "desc": "陶谦听从王朗、赵昱建议，派遣使者向朝廷进贡，被拜为安东将军、徐州牧，封溧阳侯。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "为曹操所败",
+      "desc": "陶谦晚年与曹操交战，多次被曹操击败，徐州大半遭兵祸，导致陶谦忧劳成疾。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "忧劳而逝",
+      "desc": "陶谦因战事失利，过度忧劳，于194年或195年病逝，终年六十三岁。",
+      "source": {
+        "work": "后汉书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "治理州郡",
+    "统兵征讨",
+    "推行屯田"
+  ],
+  "domains": [
+    "行政",
+    "军事",
+    "农业"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/tao_qian.webp",
+  "thumb": "/p/sanguo/thumbs/tao_qian.webp"
+}

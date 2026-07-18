@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "mi_fang",
+  "name_zh": "糜芳",
+  "name_en": "Mi Fang",
+  "aliases": [
+    "子方",
+    "Mi Fang",
+    "麋芳"
+  ],
+  "epithet": "南郡失守·降吴之将",
+  "category": "wu",
+  "era_layer": 2,
+  "bio": "糜芳（？—223年后），字子方，东海郡朐县（今江苏连云港）人，出身巨富商贾之家，与兄糜竺并称。初随陶谦，后兄弟二人力劝刘备接管徐州，并将妹妹嫁给刘备。糜芳随刘备转战，先后经历吕布夺徐州、投奔曹操等艰险。刘备入荆州后，糜芳被任命为南郡太守，与关羽共守荆州。糜芳因南郡失火焚毁兵器遭关羽责备，又素与关羽不睦，心中恐惧。219年，关羽北伐襄樊，糜芳与公安太守士仁因供给不力被关羽扬言治罪，孙权和吕蒙趁机诱降。吕蒙袭取公安后，糜芳开城投降东吴，直接导致关羽腹背受敌，最终被俘杀。糜竺因弟弟叛变羞愤而死。糜芳降吴后，曾遭虞翻多次羞辱，但仍受孙权重用。223年，随贺齐讨伐叛魏的晋宗，此后史书无载。杨戏《季汉辅臣赞》将其列入叛臣，与士仁、郝普、潘濬并称。",
+  "events": [
+    {
+      "title": "随刘备入荆州任南郡太守",
+      "desc": "208年赤壁之战后，刘备向孙权借得南郡，糜芳被任命为南郡太守，驻守江陵，与关羽共事。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "南郡失火遭关羽责罚",
+      "desc": "糜芳治下的南郡发生火灾，军用器械被焚，关羽因此责备糜芳，并扬言北伐归来后将严惩。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "暗中与东吴勾结",
+      "desc": "孙权得知糜芳与关羽不和，私下派人联络，糜芳心生畏惧，暗中与东吴往来。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "开城投降东吴",
+      "desc": "219年，吕蒙袭取公安后，士仁被迫投降，吕蒙带士仁至江陵城下，糜芳遂开城降吴，导致荆州沦陷。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "关羽败亡",
+      "desc": "糜芳投降后，关羽后方尽失，被吕蒙、陆逊等夹击，最终在临沮被俘杀，孙吴取得荆州。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "随贺齐平定晋宗叛乱",
+      "desc": "223年六月，东吴蕲春守将晋宗叛投曹魏，孙权命贺齐讨伐，糜芳与刘邵、鲜于丹等将领一同出征，成功擒获晋宗，收复蕲春。",
+      "source": {
+        "work": "《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义中杀马忠降蜀被诛",
+      "desc": "《三国演义》中，糜芳与傅士仁在夷陵之战中杀死吴将马忠再度投降刘备，但刘备命关兴将其剥衣剐杀，以祭关羽。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "骑射"
+  ],
+  "domains": [
+    "南郡太守",
+    "军事",
+    "行政"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/mi_fang.webp",
+  "thumb": "/p/sanguo/thumbs/mi_fang.webp"
+}

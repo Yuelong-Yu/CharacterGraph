@@ -1,0 +1,109 @@
+{
+  "schema_version": 3,
+  "id": "shen_pei",
+  "name_zh": "审配",
+  "name_en": "Shen Pei",
+  "aliases": [
+    "正南",
+    "Shen Pei"
+  ],
+  "epithet": "袁氏忠臣·守邺不屈",
+  "category": "qun",
+  "era_layer": 1,
+  "bio": "审配（？－204年），字正南，魏郡阴安（今河南清丰北）人。东汉末年军阀袁绍帐下谋臣。他为人刚正不阿，但缺乏权变，早年效力于韩馥，后随袁绍夺取冀州，被委以腹心之任，总领幕府。官渡之战中，审配负责全军调度与协调，因逮捕许攸家人导致许攸叛逃，间接促成袁绍失败。战后其二子被曹军俘获，审配因流言受疑，幸得逢纪力保。袁绍死后，审配与逢纪伪造遗命立袁尚为嗣，引发袁谭与袁尚内斗。曹操趁机攻邺，审配死守数月，城破被擒，拒不投降，慷慨受死。审配以忠烈著称，是袁氏阵营中坚毅不屈的代表人物。",
+  "events": [
+    {
+      "title": "投效袁绍",
+      "desc": "初平二年（191年），韩馥将冀州让给袁绍后，审配转投袁绍，并因其正直与才能被袁绍倚为心腹，负责幕府事务。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "官渡总调度",
+      "desc": "建安五年（200年），官渡之战爆发，袁绍命审配统管全军调度与动员。审配在此期间逮捕了许攸的违法家属，导致许攸叛逃投曹，献计火烧乌巢，使袁军大败。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "二子被俘遭疑",
+      "desc": "官渡之战中，审配的两个儿子被曹军俘获。有人借机诬陷审配将叛变，袁绍一度怀疑，幸得逢纪出面担保，审配方得免罪。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "伪造遗命立袁尚",
+      "desc": "袁绍死后，审配与逢纪虑及袁谭强势，为避免袁尚失去继承权，伪造袁绍遗命，立袁尚为冀州牧，导致袁氏兄弟内斗加剧。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "死守邺城",
+      "desc": "建安九年（204年），曹操趁袁尚攻平原之机围攻邺城。审配与苏由留守，苏由欲叛被察觉而逃。审配率部坚守数月，用计与袁尚联络内外夹击，但袁尚兵败北逃。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "城破被俘",
+      "desc": "审配的侄子审荣在城破前夕打开城门投降曹军，邺城陷落。审配在城破前下令处死投敌的辛毗全家，随后被曹军俘虏，宁死不降。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "慷慨就义",
+      "desc": "曹操爱惜审配的才能，试图劝降，但审配坚称“吾君在北”，拒绝投降，最终被处死。其忠烈之举为后世称道。",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书六·袁绍传",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "strong of will but without tact",
+      "source": {
+        "work": "三国志",
+        "locus": "魏书十·荀彧传",
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "协调调度",
+    "死守城池"
+  ],
+  "domains": [
+    "军事",
+    "内政"
+  ],
+  "mounts": [],
+  "portrait": "/p/sanguo/portraits/shen_pei.webp",
+  "thumb": "/p/sanguo/thumbs/shen_pei.webp"
+}
