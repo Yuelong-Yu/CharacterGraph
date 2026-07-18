@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "qixing_deng",
+  "name_zh": "七星灯",
+  "name_en": "Seven-Star Lamps",
+  "aliases": [
+    "七星续命灯",
+    "禳星灯"
+  ],
+  "epithet": "五丈原禳星·七灯续命",
+  "category": "treasure",
+  "bio": "七星灯是《三国演义》五丈原禳星故事中的核心法器。诸葛亮自知将亡，在帐中按北斗方位布置七盏主灯，并设本命灯、祈禳旗幡，试图延续寿命以完成北伐。司马懿观察天象，魏延因紧急军情闯帐带风，主灯熄灭，姜维欲杀魏延而被诸葛亮制止。七星灯将诸葛亮、姜维、魏延和司马懿集中到“人谋能否胜天命”的悲剧节点。",
+  "events": [
+    {
+      "title": "五丈原禳星",
+      "desc": "诸葛亮病重时在中军帐内按北斗方位点起七星灯，设法禳星续命，希望延长时日完成北伐。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "魏延闯帐熄灯",
+      "desc": "魏延急报军情闯入帐中，带入的风扑灭主灯；姜维愤而拔剑，诸葛亮却认为天命如此，阻止追责。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "司马懿观星",
+      "desc": "司马懿在魏营观察将星变化，判断诸葛亮病势与蜀军动向，使七星灯事件与两位宿敌的最后较量相连。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "禳星",
+    "天命",
+    "五丈原"
+  ],
+  "portrait": "/p/sanguo/portraits/qixing_deng.webp",
+  "thumb": "/p/sanguo/thumbs/qixing_deng.webp"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "bawang_qiang",
+  "name_zh": "霸王枪",
+  "name_en": "Little Conqueror's Spear",
+  "aliases": [
+    "孙策霸王枪",
+    "霸王烈枪"
+  ],
+  "epithet": "江东小霸王·孙策长枪",
+  "category": "weapon",
+  "bio": "霸王枪是后世民间艺术和大众三国文化为孙策塑造的代表兵器，正史与《三国演义》正文没有明确这一枪名。孙策以勇锐善战、短期平定江东而获“小霸王”之称，后世遂以楚霸王意象为其长枪命名。霸王枪通常采用朱红枪杆、古铜兽纹吞口和吴地水波纹饰，表现孙策年轻、凌厉、富于进取心的江东创业者形象。",
+  "events": [
+    {
+      "title": "孙策横扫江东",
+      "desc": "孙策率旧部渡江创业，接连击破江东诸势力，凭勇锐与号召力奠定孙吴基业，时人称其小霸王。",
+      "source": {
+        "work": "《三国志·孙策传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "后世命名霸王枪",
+      "desc": "后世人物图像和大众三国文化把孙策使用的长枪称作霸王枪，以兵器名称强化其小霸王称号。",
+      "source": {
+        "work": "后世三国人物图像",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "枪术",
+    "江东",
+    "勇武"
+  ],
+  "portrait": "/p/sanguo/portraits/bawang_qiang.webp",
+  "thumb": "/p/sanguo/thumbs/bawang_qiang.webp"
+}

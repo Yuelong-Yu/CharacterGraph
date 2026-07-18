@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "zhaohuang_feidian",
+  "name_zh": "爪黄飞电",
+  "name_en": "Claw Yellow Flying Lightning",
+  "aliases": [
+    "爪黄飞電"
+  ],
+  "epithet": "曹操仪仗名驹·飞电流光",
+  "category": "mount",
+  "bio": "爪黄飞电是《三国演义》及后世三国文化中与曹操联系紧密的名马。其典型形象为通体雪白、四蹄呈淡金黄色，奔驰时如白色闪电，因此得名。它不像绝影那样以战场牺牲著称，而更常作为曹操凯旋、许田围猎或魏王仪仗中的华贵坐骑，象征曹操从征战诸侯走向一方霸主的权势与威仪。",
+  "events": [
+    {
+      "title": "曹操仪仗坐骑",
+      "desc": "后世三国叙事常将爪黄飞电作为曹操在盛大仪仗和凯旋场合使用的名驹，以雪白马身和黄蹄突出魏王威仪。",
+      "source": {
+        "work": "《三国演义》及后世三国叙事",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "飞电之名",
+      "desc": "马名以黄色四蹄和疾驰如电的特征组合而成，和以突围忠勇著称的绝影形成鲜明对照。",
+      "source": {
+        "work": "三国名马传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "速度",
+    "威仪",
+    "王权"
+  ],
+  "portrait": "/p/sanguo/portraits/zhaohuang_feidian.webp",
+  "thumb": "/p/sanguo/thumbs/zhaohuang_feidian.webp"
+}

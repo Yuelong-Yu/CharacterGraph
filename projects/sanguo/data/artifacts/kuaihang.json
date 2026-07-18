@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "kuaihang",
+  "name_zh": "快航",
+  "name_en": "Kuaihang",
+  "aliases": [
+    "快航马"
+  ],
+  "epithet": "孙权江东名驹·飞越断桥",
+  "category": "mount",
+  "bio": "快航是后世赋予孙权逍遥津坐骑的名号，并非《三国志》或《三国演义》正文明确写出的马名。史传和演义均有孙权在合肥撤退时骑马飞越断桥、脱离张辽追击的核心情节，后世遂以“快航”称呼这匹救主战马。它通常被塑造成适应江东湿润环境的赤栗色轻骑名驹，象征孙权在危局中的果断、冒险与绝处逢生。",
+  "events": [
+    {
+      "title": "逍遥津飞越断桥",
+      "desc": "合肥撤军时孙权遭张辽追击，桥梁已被破坏，他在谷利等人协助下策马奋跃，越过断桥脱险。史书记录跃桥事件，但未载坐骑名为快航。",
+      "source": {
+        "work": "《三国志·吴主传》裴松之注引《江表传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "后世命名快航",
+      "desc": "后世三国名马叙事把孙权跃桥坐骑称为快航，以其跨越断桥的迅疾姿态与刘备的卢跃檀溪并称。",
+      "source": {
+        "work": "后世三国名马传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "速度",
+    "脱险",
+    "江东"
+  ],
+  "portrait": "/p/sanguo/portraits/kuaihang.webp",
+  "thumb": "/p/sanguo/thumbs/kuaihang.webp"
+}

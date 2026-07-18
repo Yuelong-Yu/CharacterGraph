@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "id": "mengde_xinshu",
+  "name_zh": "孟德新书",
+  "name_en": "Mengde's New Book",
+  "aliases": [
+    "孟德新书十三篇"
+  ],
+  "epithet": "曹操兵书·张松倒背",
+  "category": "treasure",
+  "bio": "《孟德新书》是《三国演义》中曹操编撰的十三篇兵书，集中表现其军事经验与自负。益州使者张松入许都时受到轻慢，杨修取书给他观看；张松过目便能从头背诵，反称这是蜀中无名氏旧作。曹操惊疑之下将书烧毁。故事并非正史所载，却通过一部兵书串联曹操、杨修与益州人才，也表现曹操爱才、自负和多疑并存的性格。",
+  "events": [
+    {
+      "title": "曹操编成新书",
+      "desc": "演义称曹操把平生用兵经验写成《孟德新书》十三篇，自认为可传后世。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "杨修示书张松",
+      "desc": "张松出使许都遭冷遇，杨修把《孟德新书》给他观看，张松一览后竟能全文背诵。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "曹操疑而焚书",
+      "desc": "张松声称此书是蜀中旧作，曹操怀疑自己暗合古人，命人把《孟德新书》烧毁。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "兵法",
+    "著述",
+    "识才"
+  ],
+  "portrait": "/p/sanguo/portraits/mengde_xinshu.webp",
+  "thumb": "/p/sanguo/thumbs/mengde_xinshu.webp"
+}

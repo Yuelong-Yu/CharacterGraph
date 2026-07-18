@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "bailong_ju",
+  "name_zh": "白龙驹",
+  "name_en": "White Dragon Steed",
+  "aliases": [
+    "白龙马",
+    "照夜玉狮子"
+  ],
+  "epithet": "赵云白马·常山龙驹",
+  "category": "mount",
+  "bio": "白龙驹是后世民间艺术为赵云塑造的代表坐骑，并非正史或《三国演义》正文明确命名。它多被描绘为银白矫健的战马，与赵云白袍银甲、龙胆亮银枪组合，强化其清俊忠勇的视觉特征。此处白龙驹仅是三国武将坐骑，不涉及龙族变化、取经或西海龙王等《西游记》设定，应作为真实汉末军马呈现。",
+  "events": [
+    {
+      "title": "民间配属赵云",
+      "desc": "后世评书、戏曲和人物图像常以银白色白龙驹配赵云，使白马、银甲和亮银枪形成统一的常山赵子龙形象。",
+      "source": {
+        "work": "后世三国民间传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "长坂忠勇意象",
+      "desc": "民间作品常让白龙驹参与赵云长坂救主等传奇场景，但原著只写赵云骑马作战，并未给坐骑明确命名。",
+      "source": {
+        "work": "《三国演义》及后世改编",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "忠勇",
+    "速度",
+    "常山"
+  ],
+  "portrait": "/p/sanguo/portraits/bailong_ju.webp",
+  "thumb": "/p/sanguo/thumbs/bailong_ju.webp"
+}

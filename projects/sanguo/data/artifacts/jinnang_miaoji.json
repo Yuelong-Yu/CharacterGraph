@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "jinnang_miaoji",
+  "name_zh": "锦囊妙计",
+  "name_en": "Brocade Strategy Pouches",
+  "aliases": [
+    "三个锦囊",
+    "孔明锦囊"
+  ],
+  "epithet": "孔明三策·赵云启囊",
+  "category": "treasure",
+  "bio": "锦囊妙计是《三国演义》中诸葛亮远程运筹的经典道具。刘备赴东吴成亲前，诸葛亮交给赵云三个锦囊，规定在不同危急时刻依次开启。计策分别促成孙刘婚事公开、帮助刘备携孙尚香离开东吴，并利用孙夫人喝退追兵，使周瑜的谋划落空。三个小小锦囊把诸葛亮、赵云、刘备、孙尚香与周瑜连接在同一条叙事链上。",
+  "events": [
+    {
+      "title": "孔明授三锦囊",
+      "desc": "刘备赴东吴成亲前，诸葛亮把三个装有计策的锦囊交给赵云，叮嘱依次在南徐、岁末和危急追击时开启。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "赵云依计行事",
+      "desc": "赵云按时拆看锦囊，先使婚事尽人皆知，再催刘备离开东吴，最终请孙夫人出面喝退追兵。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "周郎妙计成空",
+      "desc": "三道锦囊计使周瑜软禁刘备的安排失败，留下赔了夫人又折兵的演义名场面。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "谋略",
+    "预判",
+    "联姻"
+  ],
+  "portrait": "/p/sanguo/portraits/jinnang_miaoji.webp",
+  "thumb": "/p/sanguo/thumbs/jinnang_miaoji.webp"
+}

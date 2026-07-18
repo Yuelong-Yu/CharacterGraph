@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "chuanguo_yuxi",
+  "name_zh": "传国玉玺",
+  "name_en": "Heirloom Seal of the Realm",
+  "aliases": [
+    "传国玺",
+    "和氏璧玉玺"
+  ],
+  "epithet": "受命于天·王朝正统",
+  "category": "treasure",
+  "bio": "传国玉玺是中国帝制正统的最高象征，相传由秦始皇以和氏璧制成。汉末天下大乱，《三国演义》叙孙坚在洛阳宫井中得到玉玺，秘藏后离开联军；孙策后来以玉玺质押袁术换取兵马，袁术则凭此僭号称帝，引来诸侯征讨。玉玺由此成为连接汉献帝、孙坚父子、袁术与曹操的重要宝物节点，也把私人野心与王朝合法性集中在一件器物之上。",
+  "events": [
+    {
+      "title": "洛阳宫井得玺",
+      "desc": "讨董联军进入残破洛阳后，孙坚军在宫井中发现传国玉玺。孙坚认出玺文后秘而不宣，决定率军返回江东。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "孙策质玺借兵",
+      "desc": "孙策为继承父志、经营江东，将传国玉玺质押给袁术，换得兵马与旧部，玉玺成为江东创业的政治筹码。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "袁术据玺称帝",
+      "desc": "袁术得到玉玺后自认为天命在己，于寿春僭号称帝，旋即遭到各方讨伐，势力迅速衰败。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "皇权",
+    "正统",
+    "天下"
+  ],
+  "portrait": "/p/sanguo/portraits/chuanguo_yuxi.webp",
+  "thumb": "/p/sanguo/thumbs/chuanguo_yuxi.webp"
+}

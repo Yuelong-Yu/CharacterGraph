@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "lianhuan_tiesuo",
+  "name_zh": "连环铁锁",
+  "name_en": "Linked Iron Chains",
+  "aliases": [
+    "连环锁",
+    "铁索连舟"
+  ],
+  "epithet": "铁索连舟·赤壁火攻",
+  "category": "treasure",
+  "bio": "连环铁锁是《三国演义》赤壁大战中把曹军战船连接起来的关键器械。庞统以北军不习水战为由献连环计，曹操命人用粗大铁链和木板把战船相互钉锁，使船面平稳如陆地；这一安排却为周瑜、黄盖的火攻创造条件，火船撞入后曹军舰队难以分散。铁锁因此把庞统的计谋、曹操的判断以及周瑜、黄盖的火攻串联为完整事件链。",
+  "events": [
+    {
+      "title": "庞统献连环计",
+      "desc": "演义中庞统向曹操建议以铁索连接大小战船，铺上阔板，使不习水战的北方军士可以在船上平稳行动。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "曹操铁索连舟",
+      "desc": "曹操采纳计策，命军士以粗大铁环和锁链将舰船连接，水寨看似稳固，却失去迅速疏散的能力。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "黄盖火船破连环",
+      "desc": "黄盖诈降率火船顺风冲入曹军水寨，连环战船无法分开，烈火迅速蔓延，形成赤壁之战的决定性场面。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "水战",
+    "连环计",
+    "赤壁"
+  ],
+  "portrait": "/p/sanguo/portraits/lianhuan_tiesuo.webp",
+  "thumb": "/p/sanguo/thumbs/lianhuan_tiesuo.webp"
+}

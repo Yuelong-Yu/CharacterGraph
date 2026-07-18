@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "xu_huang_dafu",
+  "name_zh": "徐晃大斧",
+  "name_en": "Xu Huang's Great Axe",
+  "aliases": [
+    "开山斧",
+    "大斧"
+  ],
+  "epithet": "周亚夫之风·开山大斧",
+  "category": "weapon",
+  "bio": "大斧是《三国演义》中曹魏名将徐晃最稳定的兵器标识。徐晃早年随杨奉时便持大斧出阵，归曹后参加官渡、关中、襄樊等战役；演义中他以大斧与许褚、关羽等猛将交锋。后世常称其为开山大斧，使宽阔斧刃与徐晃治军严整、勇而有谋的形象结合。其设计应是适于骑战的长柄战斧，而非短柄樵夫斧。",
+  "events": [
+    {
+      "title": "徐晃持斧归曹",
+      "desc": "演义中徐晃初随杨奉，手持大斧出战；满宠说降后转投曹操，成为曹魏重要将领。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "大斧对战关羽",
+      "desc": "襄樊战场上徐晃率援军解围，并在演义中以大斧同关羽交锋，展现公私分明和临阵勇决。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "武勇",
+    "破阵",
+    "曹魏"
+  ],
+  "portrait": "/p/sanguo/portraits/xu_huang_dafu.webp",
+  "thumb": "/p/sanguo/thumbs/xu_huang_dafu.webp"
+}

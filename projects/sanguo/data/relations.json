@@ -9285,5 +9285,907 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-jueying",
+    "source": "cao_cao",
+    "target": "jueying",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操乘绝影突围",
+        "desc": "宛城兵变中曹操乘坐骑突围，战马身中流矢仍负主疾驰；后世将此马明确称为绝影。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·武帝纪》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-zhaohuang_feidian",
+    "source": "cao_cao",
+    "target": "zhaohuang_feidian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操乘爪黄飞电",
+        "desc": "爪黄飞电在演义与后世形象中是曹操的华贵坐骑，常用于凯旋和王侯仪仗场面。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》及后世三国叙事",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_quan-kuaihang",
+    "source": "sun_quan",
+    "target": "kuaihang",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孙权乘快航跃桥",
+        "desc": "孙权逍遥津撤退时骑马飞越断桥而脱险；快航是后世对这匹坐骑的称呼，原始记载未明载马名。",
+        "desc_long": null,
+        "source": {
+          "work": "《江表传》及后世三国名马传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_hong-baihu_ma",
+    "source": "cao_hong",
+    "target": "baihu_ma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹洪以白鹄救主",
+        "desc": "曹洪兵败时让马给曹操并护其渡水；《拾遗记》又记曹家名马白鹤之神速。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·曹洪传》《拾遗记》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-baihu_ma",
+    "source": "cao_cao",
+    "target": "baihu_ma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操危难乘白鹄",
+        "desc": "曹操讨董失利后得到曹洪让出的坐骑，白鹄轶闻因而同时联系曹洪与曹操。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·曹洪传》《拾遗记》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_chao-lifeisha",
+    "source": "ma_chao",
+    "target": "lifeisha",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "马超乘里飞沙",
+        "desc": "后世戏曲与民间三国形象常以里飞沙作为锦马超的西凉坐骑，突出其骑战与地域特色。",
+        "desc_long": null,
+        "source": {
+          "work": "后世三国民间传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_fei-wuyun_taxue",
+    "source": "zhang_fei",
+    "target": "wuyun_taxue",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "张飞乘乌云踏雪",
+        "desc": "后世民间三国形象以乌云踏雪为张飞坐骑，使黑马白蹄与其勇猛形象相互映衬。",
+        "desc_long": null,
+        "source": {
+          "work": "后世三国民间传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhao_yun-bailong_ju",
+    "source": "zhao_yun",
+    "target": "bailong_ju",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赵云乘白龙驹",
+        "desc": "后世民间艺术以白龙驹配赵云，形成白马银甲的常山赵子龙经典视觉组合。",
+        "desc_long": null,
+        "source": {
+          "work": "后世三国民间传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_jian-chuanguo_yuxi",
+    "source": "sun_jian",
+    "target": "chuanguo_yuxi",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孙坚洛阳得玉玺",
+        "desc": "演义中孙坚军在洛阳宫井得到传国玉玺，孙坚秘藏此物并离开联军。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_ce-chuanguo_yuxi",
+    "source": "sun_ce",
+    "target": "chuanguo_yuxi",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孙策以玉玺质兵",
+        "desc": "孙策把父亲留下的传国玉玺质押给袁术，换取兵马渡江创业。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yuan_shu-chuanguo_yuxi",
+    "source": "yuan_shu",
+    "target": "chuanguo_yuxi",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "袁术据玺称帝",
+        "desc": "袁术取得传国玉玺后以天命自居，在寿春僭号称帝。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_xian-chuanguo_yuxi",
+    "source": "emperor_xian",
+    "target": "chuanguo_yuxi",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉室正统所系",
+        "desc": "传国玉玺象征汉帝国法统，汉献帝虽受权臣控制，仍是玉玺代表的名义天子。",
+        "desc_long": null,
+        "source": {
+          "work": "汉末传国玺传统",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-zhuge_baiyu_shan",
+    "source": "zhuge_liang",
+    "target": "zhuge_baiyu_shan",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮执白羽扇",
+        "desc": "传统三国形象以白羽扇配诸葛亮，象征其临阵从容和运筹帷幄。",
+        "desc_long": null,
+        "source": {
+          "work": "传统三国人物图像",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_yueying-zhuge_baiyu_shan",
+    "source": "huang_yueying",
+    "target": "zhuge_baiyu_shan",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄月英赠扇传说",
+        "desc": "后世民间故事常把诸葛亮白羽扇的来历与黄月英相连，作为夫妻智慧相契的象征。",
+        "desc_long": null,
+        "source": {
+          "work": "后世诸葛亮民间传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhang_jiao-taiping_yaoshu",
+    "source": "zhang_jiao",
+    "target": "taiping_yaoshu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "张角得太平要术",
+        "desc": "演义中张角获南华老仙授予太平要术，习得道法并以太平道聚众起事。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-muniu_liuma",
+    "source": "zhuge_liang",
+    "target": "muniu_liuma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮造木牛流马",
+        "desc": "诸葛亮北伐时制作木牛流马运输军粮，解决蜀道补给困难。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·诸葛亮传》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_wei-muniu_liuma",
+    "source": "jiang_wei",
+    "target": "muniu_liuma",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姜维承用蜀汉运粮机巧",
+        "desc": "姜维承继诸葛亮北伐事业，木牛流马作为蜀汉军需技术遗产与其后续北伐相连。",
+        "desc_long": null,
+        "source": {
+          "work": "蜀汉北伐叙事",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-zhuge_liannu",
+    "source": "zhuge_liang",
+    "target": "zhuge_liannu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮改制连弩",
+        "desc": "史籍记诸葛亮损益连弩，以元戎弩强化蜀汉军械。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·诸葛亮传》裴松之注",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_wei-zhuge_liannu",
+    "source": "jiang_wei",
+    "target": "zhuge_liannu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姜维承继连弩军械",
+        "desc": "姜维承继诸葛亮北伐事业，后世叙事将诸葛连弩视作蜀军延续使用的技术遗产。",
+        "desc_long": null,
+        "source": {
+          "work": "蜀汉军械传统",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-bazhen_tu",
+    "source": "zhuge_liang",
+    "target": "bazhen_tu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮作八阵图",
+        "desc": "史载诸葛亮推演兵法作八阵图，演义又以夔关石阵展现其阵法智慧。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·诸葛亮传》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-qixing_deng",
+    "source": "zhuge_liang",
+    "target": "qixing_deng",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮设七星灯禳命",
+        "desc": "演义中诸葛亮在五丈原军帐设置七星灯禳星续命，试图延续北伐大业。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-jinnang_miaoji",
+    "source": "zhuge_liang",
+    "target": "jinnang_miaoji",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮授三锦囊",
+        "desc": "刘备赴东吴前，诸葛亮预先写下三条计策并装入锦囊交给赵云。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhao_yun-jinnang_miaoji",
+    "source": "zhao_yun",
+    "target": "jinnang_miaoji",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赵云依次开启锦囊",
+        "desc": "赵云保管三个锦囊并按诸葛亮嘱咐依次开启，护送刘备与孙尚香脱险。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-mengde_xinshu",
+    "source": "cao_cao",
+    "target": "mengde_xinshu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操撰孟德新书",
+        "desc": "演义中曹操把用兵心得编成十三篇《孟德新书》，后因张松倒背而疑忌焚毁。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "yang_xiu-mengde_xinshu",
+    "source": "yang_xiu",
+    "target": "mengde_xinshu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "杨修持书示张松",
+        "desc": "杨修曾取出《孟德新书》给张松观看，使曹操兵书与益州使者的才辩发生联系。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhuge_liang-bingfa_ershisipian",
+    "source": "zhuge_liang",
+    "target": "bingfa_ershisipian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诸葛亮著兵法二十四篇",
+        "desc": "演义中诸葛亮将平生军事思想整理成二十四篇遗书。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_wei-bingfa_ershisipian",
+    "source": "jiang_wei",
+    "target": "bingfa_ershisipian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姜维受兵法遗书",
+        "desc": "诸葛亮临终把兵法二十四篇传给姜维，象征蜀汉北伐事业的师承。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "emperor_xian-yidai_zhao",
+    "source": "emperor_xian",
+    "target": "yidai_zhao",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "汉献帝密授衣带诏",
+        "desc": "汉献帝将讨曹密诏藏入衣带交出，试图借忠于汉室者摆脱曹操控制。",
+        "desc_long": null,
+        "source": {
+          "work": "《后汉书》《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-yidai_zhao",
+    "source": "liu_bei",
+    "target": "yidai_zhao",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "刘备响应衣带诏",
+        "desc": "演义中刘备在衣带诏密盟上署名，随后离开许都，与曹操关系转向公开敌对。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_bei-xichuan_dixing_tu",
+    "source": "liu_bei",
+    "target": "xichuan_dixing_tu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "刘备获西川地形图",
+        "desc": "演义中张松向刘备献出西川地形图，为其日后入蜀取得地理与军情先机。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fa_zheng-xichuan_dixing_tu",
+    "source": "fa_zheng",
+    "target": "xichuan_dixing_tu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "法正借图助刘备入蜀",
+        "desc": "法正参与迎刘备入蜀的谋划，西川地图代表益州内部人士为刘备提供的关键情报。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "meng_huo-tengjia",
+    "source": "meng_huo",
+    "target": "tengjia",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孟获借藤甲军再战",
+        "desc": "演义中孟获借乌戈国藤甲军对抗诸葛亮，利用藤甲刀箭难入、渡水不沉的特点。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-pili_che",
+    "source": "cao_cao",
+    "target": "pili_che",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操以霹雳车破橹",
+        "desc": "官渡之战中曹军制造发石车击破袁绍高橹，因声如雷震而称霹雳车。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国志·袁绍传》裴松之注",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "history",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-lianhuan_tiesuo",
+    "source": "cao_cao",
+    "target": "lianhuan_tiesuo",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操命铁索连舟",
+        "desc": "演义中曹操采纳庞统连环计，以铁锁连接战船，结果在赤壁火攻中难以疏散。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "huang_gai-huang_gai_tiebian",
+    "source": "huang_gai",
+    "target": "huang_gai_tiebian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "黄盖使用铁鞭",
+        "desc": "演义与传统三国人物形象常以硬质铁鞭作为黄盖的代表兵器。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》及传统三国人物图像",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xu_huang-xu_huang_dafu",
+    "source": "xu_huang",
+    "target": "xu_huang_dafu",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "徐晃使用大斧",
+        "desc": "演义中徐晃以长柄大斧为标志兵器，参与多场曹魏征战并与关羽交锋。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cao_cao-yitian_jian",
+    "source": "cao_cao",
+    "target": "yitian_jian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "曹操自佩倚天剑",
+        "desc": "演义称曹操有倚天、青釭两口宝剑，倚天由曹操亲自佩带。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "romance",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "gan_ning-gan_ning_tielian",
+    "source": "gan_ning",
+    "target": "gan_ning_tielian",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "甘宁使用铁链",
+        "desc": "传统三国人物形象常以单兵铁链作为甘宁奇袭与水战风格的代表兵器。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》及传统三国人物图像",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhao_yun-longdan_liangyin_qiang",
+    "source": "zhao_yun",
+    "target": "longdan_liangyin_qiang",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "赵云使用龙胆亮银枪",
+        "desc": "后世评书和人物图像以龙胆亮银枪作为赵云标志兵器，原著仅明确其用枪。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》及后世三国民间传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_chao-hutou_zhanjin_qiang",
+    "source": "ma_chao",
+    "target": "hutou_zhanjin_qiang",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "马超使用虎头湛金枪",
+        "desc": "后世三国民间艺术以虎头湛金枪作为锦马超的代表兵器，原著仅明确其持枪。",
+        "desc_long": null,
+        "source": {
+          "work": "《三国演义》及后世三国民间传说",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "sun_ce-bawang_qiang",
+    "source": "sun_ce",
+    "target": "bawang_qiang",
+    "primary_type": "owns",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "孙策使用霸王枪",
+        "desc": "后世三国人物图像以霸王枪配江东小霸王孙策，强化其横扫江东的勇锐形象。",
+        "desc_long": null,
+        "source": {
+          "work": "后世三国人物图像",
+          "locus": null,
+          "translator": null
+        },
+        "canon": null,
+        "era_order": 0
+      }
+    ]
   }
 ]

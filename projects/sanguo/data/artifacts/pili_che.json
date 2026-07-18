@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "pili_che",
+  "name_zh": "霹雳车",
+  "name_en": "Thunderclap Trebuchet",
+  "aliases": [
+    "发石车",
+    "抛石机"
+  ],
+  "epithet": "官渡发石·破袁楼橹",
+  "category": "treasure",
+  "bio": "霹雳车是官渡之战中曹军用于摧毁袁绍高橹与箭楼的发石器。袁军筑土山、起高橹向曹营密集射箭，曹操采纳刘晔建议制造发石车，以机械抛射石块击毁橹台，因石弹落下声如雷震而得名霹雳车。它代表汉末攻城机械在大型会战中的运用，也是官渡战场上曹操以技术手段破解袁绍兵力优势的重要器械节点。",
+  "events": [
+    {
+      "title": "袁绍筑橹射营",
+      "desc": "官渡相持时袁绍命军士筑土山、建高橹，从高处向曹营射箭，使曹军行动受到压制。",
+      "source": {
+        "work": "《三国志·袁绍传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹军造霹雳车",
+      "desc": "曹操采用发石车还击，抛出的石块击毁袁军楼橹，声震如雷，军中因此称为霹雳车。",
+      "source": {
+        "work": "《三国志·袁绍传》裴松之注",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义强化机关对抗",
+      "desc": "《三国演义》将霹雳车与掘子军、地道战等攻防手段并写，突出曹袁双方在官渡的器械较量。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "攻城",
+    "机械",
+    "官渡"
+  ],
+  "portrait": "/p/sanguo/portraits/pili_che.webp",
+  "thumb": "/p/sanguo/thumbs/pili_che.webp"
+}

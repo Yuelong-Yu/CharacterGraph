@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "huang_gai_tiebian",
+  "name_zh": "黄盖铁鞭",
+  "name_en": "Huang Gai's Iron Whip",
+  "aliases": [
+    "铁鞭"
+  ],
+  "epithet": "江东宿将·刚烈铁鞭",
+  "category": "weapon",
+  "bio": "铁鞭是《三国演义》中东吴老将黄盖的代表兵器。古代铁鞭并非柔软长鞭，而是硬质短柄打击兵器，鞭身分节、有棱，可破甲击骨。黄盖历仕孙坚、孙策、孙权，演义人物图像常以铁鞭表现其刚烈老将气质；赤壁之战中他又以苦肉计和火攻闻名，使铁鞭节点能够连接黄盖、周瑜与曹操的核心事件。",
+  "events": [
+    {
+      "title": "黄盖持铁鞭征战",
+      "desc": "演义及传统三国人物图像常以硬质铁鞭作为黄盖兵器，表现江东三世老将的刚猛与资历。",
+      "source": {
+        "work": "《三国演义》及传统三国人物图像",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "赤壁苦肉火攻",
+      "desc": "黄盖受周瑜杖责行苦肉计，随后率火船诈降曹操。铁鞭虽非火攻关键器械，却是其武将身份的鲜明标识。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "武勇",
+    "江东",
+    "近战"
+  ],
+  "portrait": "/p/sanguo/portraits/huang_gai_tiebian.webp",
+  "thumb": "/p/sanguo/thumbs/huang_gai_tiebian.webp"
+}

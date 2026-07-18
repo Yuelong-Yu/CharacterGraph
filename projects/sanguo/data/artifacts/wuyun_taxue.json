@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "wuyun_taxue",
+  "name_zh": "乌云踏雪",
+  "name_en": "Dark Cloud Treading Snow",
+  "aliases": [
+    "乌云踏雪马"
+  ],
+  "epithet": "张飞黑马·四蹄踏雪",
+  "category": "mount",
+  "bio": "乌云踏雪是后世民间为张飞配置的标志性坐骑，正史和《三国演义》正文没有明确记载这一马名。其典型外观为全身乌黑、四蹄雪白，黑白反差呼应张飞刚烈威猛的视觉形象。戏曲、评书和大众美术常让张飞骑此马持丈八蛇矛冲阵，使它成为张飞武将符号的一部分，也与关羽赤兔、刘备的卢形成兄弟三人的坐骑组合。",
+  "events": [
+    {
+      "title": "民间配属张飞",
+      "desc": "后世戏曲、评书和人物画常把乌云踏雪作为张飞坐骑，以黑马白蹄强化燕人张飞的勇猛形象。",
+      "source": {
+        "work": "后世三国民间传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "桃园兄弟坐骑组合",
+      "desc": "大众三国艺术常将乌云踏雪与关羽赤兔、刘备的卢并列，形成桃园三兄弟各具色彩的坐骑标识。",
+      "source": {
+        "work": "后世三国人物图像",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "勇猛",
+    "骑战",
+    "民间传说"
+  ],
+  "portrait": "/p/sanguo/portraits/wuyun_taxue.webp",
+  "thumb": "/p/sanguo/thumbs/wuyun_taxue.webp"
+}

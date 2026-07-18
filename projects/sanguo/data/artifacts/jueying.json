@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "jueying",
+  "name_zh": "绝影",
+  "name_en": "Jueying",
+  "aliases": [
+    "绝影马"
+  ],
+  "epithet": "曹操名驹·宛城负创",
+  "category": "mount",
+  "bio": "绝影是曹操早年的著名坐骑，其名寓意奔驰迅疾、连影子也追赶不上。建安二年宛城之战中，张绣突然反叛，曹操仓促突围；史籍记载曹操所乘马被流矢射中，绝影在负伤情况下仍驮主冲出乱军，最终力竭倒下。后世三国叙事将它塑造成舍命护主的黑色骏马，与曹昂、典韦之死共同构成宛城败局最悲壮的一幕。",
+  "events": [
+    {
+      "title": "宛城负创突围",
+      "desc": "张绣袭击曹营时，曹操所乘战马遭流矢射中仍继续奔驰，护送曹操脱离乱军，最后伤重倒下。绝影因这一事件成为三国名马中忠勇护主的代表。",
+      "source": {
+        "work": "《三国志·武帝纪》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义再现宛城之败",
+      "desc": "《三国演义》沿用曹操宛城中箭、坐骑受创的叙事，将名马的牺牲与典韦死守营门、曹昂让马救父并置。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "速度",
+    "忠勇",
+    "突围"
+  ],
+  "portrait": "/p/sanguo/portraits/jueying.webp",
+  "thumb": "/p/sanguo/thumbs/jueying.webp"
+}

@@ -1097,20 +1097,628 @@
       "name_en": "Dilu",
       "category": "mount",
       "epithet": "刘备坐骑·檀溪跃马"
+    },
+    {
+      "slug": "jueying",
+      "name_zh": "绝影",
+      "name_en": "Jueying",
+      "category": "mount",
+      "epithet": "曹操名驹·宛城负创"
+    },
+    {
+      "slug": "zhaohuang_feidian",
+      "name_zh": "爪黄飞电",
+      "name_en": "Claw Yellow Flying Lightning",
+      "category": "mount",
+      "epithet": "曹操仪仗名驹·飞电流光"
+    },
+    {
+      "slug": "kuaihang",
+      "name_zh": "快航",
+      "name_en": "Kuaihang",
+      "category": "mount",
+      "epithet": "孙权江东名驹·飞越断桥"
+    },
+    {
+      "slug": "baihu_ma",
+      "name_zh": "白鹄马",
+      "name_en": "White Swan Horse",
+      "category": "mount",
+      "epithet": "曹家白鹤·曹洪救主"
+    },
+    {
+      "slug": "lifeisha",
+      "name_zh": "里飞沙",
+      "name_en": "Lifeisha",
+      "category": "mount",
+      "epithet": "锦马超西凉名驹"
+    },
+    {
+      "slug": "wuyun_taxue",
+      "name_zh": "乌云踏雪",
+      "name_en": "Dark Cloud Treading Snow",
+      "category": "mount",
+      "epithet": "张飞黑马·四蹄踏雪"
+    },
+    {
+      "slug": "bailong_ju",
+      "name_zh": "白龙驹",
+      "name_en": "White Dragon Steed",
+      "category": "mount",
+      "epithet": "赵云白马·常山龙驹"
+    },
+    {
+      "slug": "chuanguo_yuxi",
+      "name_zh": "传国玉玺",
+      "name_en": "Heirloom Seal of the Realm",
+      "category": "treasure",
+      "epithet": "受命于天·王朝正统"
+    },
+    {
+      "slug": "zhuge_baiyu_shan",
+      "name_zh": "诸葛白羽扇",
+      "name_en": "Zhuge Liang's White Feather Fan",
+      "category": "treasure",
+      "epithet": "卧龙羽扇·运筹帷幄"
+    },
+    {
+      "slug": "taiping_yaoshu",
+      "name_zh": "太平要术",
+      "name_en": "Essential Arts of Great Peace",
+      "category": "treasure",
+      "epithet": "南华授书·黄巾道法"
+    },
+    {
+      "slug": "muniu_liuma",
+      "name_zh": "木牛流马",
+      "name_en": "Wooden Ox and Flowing Horse",
+      "category": "treasure",
+      "epithet": "蜀道运粮·孔明机巧"
+    },
+    {
+      "slug": "zhuge_liannu",
+      "name_zh": "诸葛连弩",
+      "name_en": "Zhuge Repeating Crossbow",
+      "category": "weapon",
+      "epithet": "元戎连弩·蜀汉机括"
+    },
+    {
+      "slug": "bazhen_tu",
+      "name_zh": "八阵图",
+      "name_en": "Eight Formation Diagram",
+      "category": "treasure",
+      "epithet": "孔明阵法·石阵困陆逊"
+    },
+    {
+      "slug": "qixing_deng",
+      "name_zh": "七星灯",
+      "name_en": "Seven-Star Lamps",
+      "category": "treasure",
+      "epithet": "五丈原禳星·七灯续命"
+    },
+    {
+      "slug": "jinnang_miaoji",
+      "name_zh": "锦囊妙计",
+      "name_en": "Brocade Strategy Pouches",
+      "category": "treasure",
+      "epithet": "孔明三策·赵云启囊"
+    },
+    {
+      "slug": "mengde_xinshu",
+      "name_zh": "孟德新书",
+      "name_en": "Mengde's New Book",
+      "category": "treasure",
+      "epithet": "曹操兵书·张松倒背"
+    },
+    {
+      "slug": "bingfa_ershisipian",
+      "name_zh": "兵法二十四篇",
+      "name_en": "Twenty-Four Chapters on Military Strategy",
+      "category": "treasure",
+      "epithet": "孔明遗书·姜维受业"
+    },
+    {
+      "slug": "yidai_zhao",
+      "name_zh": "衣带诏",
+      "name_en": "Girdle Edict",
+      "category": "treasure",
+      "epithet": "汉帝血诏·讨曹密盟"
+    },
+    {
+      "slug": "xichuan_dixing_tu",
+      "name_zh": "西川地形图",
+      "name_en": "Map of Western Sichuan",
+      "category": "treasure",
+      "epithet": "张松献图·入蜀先机"
+    },
+    {
+      "slug": "tengjia",
+      "name_zh": "藤甲",
+      "name_en": "Rattan Armor",
+      "category": "treasure",
+      "epithet": "南中藤甲·渡水不沉"
+    },
+    {
+      "slug": "pili_che",
+      "name_zh": "霹雳车",
+      "name_en": "Thunderclap Trebuchet",
+      "category": "treasure",
+      "epithet": "官渡发石·破袁楼橹"
+    },
+    {
+      "slug": "lianhuan_tiesuo",
+      "name_zh": "连环铁锁",
+      "name_en": "Linked Iron Chains",
+      "category": "treasure",
+      "epithet": "铁索连舟·赤壁火攻"
+    },
+    {
+      "slug": "huang_gai_tiebian",
+      "name_zh": "黄盖铁鞭",
+      "name_en": "Huang Gai's Iron Whip",
+      "category": "weapon",
+      "epithet": "江东宿将·刚烈铁鞭"
+    },
+    {
+      "slug": "xu_huang_dafu",
+      "name_zh": "徐晃大斧",
+      "name_en": "Xu Huang's Great Axe",
+      "category": "weapon",
+      "epithet": "周亚夫之风·开山大斧"
+    },
+    {
+      "slug": "yitian_jian",
+      "name_zh": "倚天剑",
+      "name_en": "Heaven's Reliance Sword",
+      "category": "weapon",
+      "epithet": "曹操佩剑·双剑之首"
+    },
+    {
+      "slug": "gan_ning_tielian",
+      "name_zh": "甘宁铁链",
+      "name_en": "Gan Ning's Iron Chain",
+      "category": "weapon",
+      "epithet": "锦帆游侠·百骑劫营"
+    },
+    {
+      "slug": "longdan_liangyin_qiang",
+      "name_zh": "龙胆亮银枪",
+      "name_en": "Dragon Courage Silver Spear",
+      "category": "weapon",
+      "epithet": "常山赵云·一身是胆"
+    },
+    {
+      "slug": "hutou_zhanjin_qiang",
+      "name_zh": "虎头湛金枪",
+      "name_en": "Tiger-Head Gilt Spear",
+      "category": "weapon",
+      "epithet": "锦马超·西凉金枪"
+    },
+    {
+      "slug": "bawang_qiang",
+      "name_zh": "霸王枪",
+      "name_en": "Little Conqueror's Spear",
+      "category": "weapon",
+      "epithet": "江东小霸王·孙策长枪"
     }
   ],
   "owns": [
-    { "owner": "guan_yu", "artifact": "qinglong_yanyue_dao", "canon": "romance", "title": "关羽持青龙偃月刀", "desc": "《三国演义》中关羽以青龙偃月刀(冷艳锯)为标志兵器，温酒斩华雄、斩颜良诛文丑皆仗此刀。偃月刀实为宋代仪仗器，演义将其安于关羽，铸成武圣意象。", "work": "《三国演义》" },
-    { "owner": "zhang_fei", "artifact": "zhangba_shemao", "canon": "romance", "title": "张飞使丈八蛇矛", "desc": "《三国演义》中张飞惯用丈八蛇矛，当阳长坂据水断桥、横矛立马一声断喝吓退曹军，蛇矛遂为其勇烈象征。", "work": "《三国演义》" },
-    { "owner": "lyu_bu", "artifact": "fangtian_huaji", "canon": "romance", "title": "吕布执方天画戟", "desc": "《三国演义》中吕布以方天画戟纵横，辕门射戟解纷、虎牢关前独抗三英，画戟与赤兔并为‘人中吕布’的标识。正史载其用矛，画戟为演义艺术加工。", "work": "《三国演义》" },
-    { "owner": "liu_bei", "artifact": "shuanggu_jian", "canon": "romance", "title": "刘备佩雌雄双股剑", "desc": "《三国演义》中刘备以雌雄双股剑为兵，桃园结义后三英战吕布时与关张并力。双股剑为其仁主而能战的象征。", "work": "《三国演义》" },
-    { "owner": "cao_cao", "artifact": "qixing_baodao", "canon": "romance", "title": "曹操借七星刀刺董", "desc": "《三国演义》中曹操借司徒王允七星宝刀行刺董卓，事败遂以献刀为名脱身，是为‘孟德献刀’，刀旋归王允。", "work": "《三国演义》" },
-    { "owner": "wang_yun", "artifact": "qixing_baodao", "canon": "romance", "title": "王允藏七星宝刀", "desc": "《三国演义》中七星宝刀原为司徒王允所藏，王允将宝刀借给曹操刺杀董卓，使王允、曹操与七星刀节点形成直接关联。", "work": "《三国演义》" },
-    { "owner": "lyu_bu", "artifact": "chitu_ma", "canon": "both", "title": "吕布有良马赤兔", "desc": "《三国志·吕布传》载‘布有良马曰赤兔’，能驰城飞堑；演义更以‘人中吕布，马中赤兔’传世。赤兔为吕布征战坐骑。", "work": "《三国志·吕布传》" },
-    { "owner": "guan_yu", "artifact": "chitu_ma", "canon": "romance", "title": "关羽得赤兔马", "desc": "《三国演义》中曹操以赤兔马赠关羽以收其心，关羽谢曰得马可一日见兄。后关羽败亡，赤兔绝食而死，演义以此成全忠义意象。正史中赤兔随吕布之死即失记载。", "work": "《三国演义》" },
-    { "owner": "liu_bei", "artifact": "dilu_ma", "canon": "both", "title": "刘备乘的卢跃檀溪", "desc": "的卢为刘备坐骑，《世说新语》及演义载其‘妨主’之说；刘备困于荆州，纵马跃过数丈檀溪脱险，‘的卢飞快’遂传为名马典故。", "work": "《世说新语》" },
-    { "owner": "cao_cao", "artifact": "qinggang_jian", "canon": "romance", "title": "曹操藏青釭剑", "desc": "《三国演义》中青釭剑为曹操双剑之一，削铁如泥，交背剑将夏侯恩佩带。", "work": "《三国演义》" },
-    { "owner": "zhao_yun", "artifact": "qinggang_jian", "canon": "romance", "title": "赵云长坂夺青釭剑", "desc": "《三国演义》中长坂坡赵云单骑救主，杀曹将夏侯恩夺得青釭剑，持之七进七出，剑遂归赵云。", "work": "《三国演义》" }
+    {
+      "owner": "guan_yu",
+      "artifact": "qinglong_yanyue_dao",
+      "canon": "romance",
+      "title": "关羽持青龙偃月刀",
+      "desc": "《三国演义》中关羽以青龙偃月刀(冷艳锯)为标志兵器，温酒斩华雄、斩颜良诛文丑皆仗此刀。偃月刀实为宋代仪仗器，演义将其安于关羽，铸成武圣意象。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "zhang_fei",
+      "artifact": "zhangba_shemao",
+      "canon": "romance",
+      "title": "张飞使丈八蛇矛",
+      "desc": "《三国演义》中张飞惯用丈八蛇矛，当阳长坂据水断桥、横矛立马一声断喝吓退曹军，蛇矛遂为其勇烈象征。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "lyu_bu",
+      "artifact": "fangtian_huaji",
+      "canon": "romance",
+      "title": "吕布执方天画戟",
+      "desc": "《三国演义》中吕布以方天画戟纵横，辕门射戟解纷、虎牢关前独抗三英，画戟与赤兔并为‘人中吕布’的标识。正史载其用矛，画戟为演义艺术加工。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "liu_bei",
+      "artifact": "shuanggu_jian",
+      "canon": "romance",
+      "title": "刘备佩雌雄双股剑",
+      "desc": "《三国演义》中刘备以雌雄双股剑为兵，桃园结义后三英战吕布时与关张并力。双股剑为其仁主而能战的象征。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "cao_cao",
+      "artifact": "qixing_baodao",
+      "canon": "romance",
+      "title": "曹操借七星刀刺董",
+      "desc": "《三国演义》中曹操借司徒王允七星宝刀行刺董卓，事败遂以献刀为名脱身，是为‘孟德献刀’，刀旋归王允。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "wang_yun",
+      "artifact": "qixing_baodao",
+      "canon": "romance",
+      "title": "王允藏七星宝刀",
+      "desc": "《三国演义》中七星宝刀原为司徒王允所藏，王允将宝刀借给曹操刺杀董卓，使王允、曹操与七星刀节点形成直接关联。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "lyu_bu",
+      "artifact": "chitu_ma",
+      "canon": "both",
+      "title": "吕布有良马赤兔",
+      "desc": "《三国志·吕布传》载‘布有良马曰赤兔’，能驰城飞堑；演义更以‘人中吕布，马中赤兔’传世。赤兔为吕布征战坐骑。",
+      "work": "《三国志·吕布传》"
+    },
+    {
+      "owner": "guan_yu",
+      "artifact": "chitu_ma",
+      "canon": "romance",
+      "title": "关羽得赤兔马",
+      "desc": "《三国演义》中曹操以赤兔马赠关羽以收其心，关羽谢曰得马可一日见兄。后关羽败亡，赤兔绝食而死，演义以此成全忠义意象。正史中赤兔随吕布之死即失记载。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "liu_bei",
+      "artifact": "dilu_ma",
+      "canon": "both",
+      "title": "刘备乘的卢跃檀溪",
+      "desc": "的卢为刘备坐骑，《世说新语》及演义载其‘妨主’之说；刘备困于荆州，纵马跃过数丈檀溪脱险，‘的卢飞快’遂传为名马典故。",
+      "work": "《世说新语》"
+    },
+    {
+      "owner": "cao_cao",
+      "artifact": "qinggang_jian",
+      "canon": "romance",
+      "title": "曹操藏青釭剑",
+      "desc": "《三国演义》中青釭剑为曹操双剑之一，削铁如泥，交背剑将夏侯恩佩带。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "zhao_yun",
+      "artifact": "qinggang_jian",
+      "canon": "romance",
+      "title": "赵云长坂夺青釭剑",
+      "desc": "《三国演义》中长坂坡赵云单骑救主，杀曹将夏侯恩夺得青釭剑，持之七进七出，剑遂归赵云。",
+      "work": "《三国演义》"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操乘绝影突围",
+      "desc": "宛城兵变中曹操乘坐骑突围，战马身中流矢仍负主疾驰；后世将此马明确称为绝影。",
+      "work": "《三国志·武帝纪》",
+      "canon": "history",
+      "artifact": "jueying"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操乘爪黄飞电",
+      "desc": "爪黄飞电在演义与后世形象中是曹操的华贵坐骑，常用于凯旋和王侯仪仗场面。",
+      "work": "《三国演义》及后世三国叙事",
+      "canon": "romance",
+      "artifact": "zhaohuang_feidian"
+    },
+    {
+      "owner": "sun_quan",
+      "title": "孙权乘快航跃桥",
+      "desc": "孙权逍遥津撤退时骑马飞越断桥而脱险；快航是后世对这匹坐骑的称呼，原始记载未明载马名。",
+      "work": "《江表传》及后世三国名马传说",
+      "canon": "history",
+      "artifact": "kuaihang"
+    },
+    {
+      "owner": "cao_hong",
+      "title": "曹洪以白鹄救主",
+      "desc": "曹洪兵败时让马给曹操并护其渡水；《拾遗记》又记曹家名马白鹤之神速。",
+      "work": "《三国志·曹洪传》《拾遗记》",
+      "canon": "history",
+      "artifact": "baihu_ma"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操危难乘白鹄",
+      "desc": "曹操讨董失利后得到曹洪让出的坐骑，白鹄轶闻因而同时联系曹洪与曹操。",
+      "work": "《三国志·曹洪传》《拾遗记》",
+      "canon": "history",
+      "artifact": "baihu_ma"
+    },
+    {
+      "owner": "ma_chao",
+      "title": "马超乘里飞沙",
+      "desc": "后世戏曲与民间三国形象常以里飞沙作为锦马超的西凉坐骑，突出其骑战与地域特色。",
+      "work": "后世三国民间传说",
+      "canon": null,
+      "artifact": "lifeisha"
+    },
+    {
+      "owner": "zhang_fei",
+      "title": "张飞乘乌云踏雪",
+      "desc": "后世民间三国形象以乌云踏雪为张飞坐骑，使黑马白蹄与其勇猛形象相互映衬。",
+      "work": "后世三国民间传说",
+      "canon": null,
+      "artifact": "wuyun_taxue"
+    },
+    {
+      "owner": "zhao_yun",
+      "title": "赵云乘白龙驹",
+      "desc": "后世民间艺术以白龙驹配赵云，形成白马银甲的常山赵子龙经典视觉组合。",
+      "work": "后世三国民间传说",
+      "canon": null,
+      "artifact": "bailong_ju"
+    },
+    {
+      "owner": "sun_jian",
+      "title": "孙坚洛阳得玉玺",
+      "desc": "演义中孙坚军在洛阳宫井得到传国玉玺，孙坚秘藏此物并离开联军。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "chuanguo_yuxi"
+    },
+    {
+      "owner": "sun_ce",
+      "title": "孙策以玉玺质兵",
+      "desc": "孙策把父亲留下的传国玉玺质押给袁术，换取兵马渡江创业。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "chuanguo_yuxi"
+    },
+    {
+      "owner": "yuan_shu",
+      "title": "袁术据玺称帝",
+      "desc": "袁术取得传国玉玺后以天命自居，在寿春僭号称帝。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "chuanguo_yuxi"
+    },
+    {
+      "owner": "emperor_xian",
+      "title": "汉室正统所系",
+      "desc": "传国玉玺象征汉帝国法统，汉献帝虽受权臣控制，仍是玉玺代表的名义天子。",
+      "work": "汉末传国玺传统",
+      "canon": "history",
+      "artifact": "chuanguo_yuxi"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮执白羽扇",
+      "desc": "传统三国形象以白羽扇配诸葛亮，象征其临阵从容和运筹帷幄。",
+      "work": "传统三国人物图像",
+      "canon": null,
+      "artifact": "zhuge_baiyu_shan"
+    },
+    {
+      "owner": "huang_yueying",
+      "title": "黄月英赠扇传说",
+      "desc": "后世民间故事常把诸葛亮白羽扇的来历与黄月英相连，作为夫妻智慧相契的象征。",
+      "work": "后世诸葛亮民间传说",
+      "canon": null,
+      "artifact": "zhuge_baiyu_shan"
+    },
+    {
+      "owner": "zhang_jiao",
+      "title": "张角得太平要术",
+      "desc": "演义中张角获南华老仙授予太平要术，习得道法并以太平道聚众起事。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "taiping_yaoshu"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮造木牛流马",
+      "desc": "诸葛亮北伐时制作木牛流马运输军粮，解决蜀道补给困难。",
+      "work": "《三国志·诸葛亮传》",
+      "canon": "history",
+      "artifact": "muniu_liuma"
+    },
+    {
+      "owner": "jiang_wei",
+      "title": "姜维承用蜀汉运粮机巧",
+      "desc": "姜维承继诸葛亮北伐事业，木牛流马作为蜀汉军需技术遗产与其后续北伐相连。",
+      "work": "蜀汉北伐叙事",
+      "canon": "history",
+      "artifact": "muniu_liuma"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮改制连弩",
+      "desc": "史籍记诸葛亮损益连弩，以元戎弩强化蜀汉军械。",
+      "work": "《三国志·诸葛亮传》裴松之注",
+      "canon": "history",
+      "artifact": "zhuge_liannu"
+    },
+    {
+      "owner": "jiang_wei",
+      "title": "姜维承继连弩军械",
+      "desc": "姜维承继诸葛亮北伐事业，后世叙事将诸葛连弩视作蜀军延续使用的技术遗产。",
+      "work": "蜀汉军械传统",
+      "canon": "history",
+      "artifact": "zhuge_liannu"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮作八阵图",
+      "desc": "史载诸葛亮推演兵法作八阵图，演义又以夔关石阵展现其阵法智慧。",
+      "work": "《三国志·诸葛亮传》《三国演义》",
+      "canon": "both",
+      "artifact": "bazhen_tu"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮设七星灯禳命",
+      "desc": "演义中诸葛亮在五丈原军帐设置七星灯禳星续命，试图延续北伐大业。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "qixing_deng"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮授三锦囊",
+      "desc": "刘备赴东吴前，诸葛亮预先写下三条计策并装入锦囊交给赵云。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "jinnang_miaoji"
+    },
+    {
+      "owner": "zhao_yun",
+      "title": "赵云依次开启锦囊",
+      "desc": "赵云保管三个锦囊并按诸葛亮嘱咐依次开启，护送刘备与孙尚香脱险。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "jinnang_miaoji"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操撰孟德新书",
+      "desc": "演义中曹操把用兵心得编成十三篇《孟德新书》，后因张松倒背而疑忌焚毁。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "mengde_xinshu"
+    },
+    {
+      "owner": "yang_xiu",
+      "title": "杨修持书示张松",
+      "desc": "杨修曾取出《孟德新书》给张松观看，使曹操兵书与益州使者的才辩发生联系。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "mengde_xinshu"
+    },
+    {
+      "owner": "zhuge_liang",
+      "title": "诸葛亮著兵法二十四篇",
+      "desc": "演义中诸葛亮将平生军事思想整理成二十四篇遗书。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "bingfa_ershisipian"
+    },
+    {
+      "owner": "jiang_wei",
+      "title": "姜维受兵法遗书",
+      "desc": "诸葛亮临终把兵法二十四篇传给姜维，象征蜀汉北伐事业的师承。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "bingfa_ershisipian"
+    },
+    {
+      "owner": "emperor_xian",
+      "title": "汉献帝密授衣带诏",
+      "desc": "汉献帝将讨曹密诏藏入衣带交出，试图借忠于汉室者摆脱曹操控制。",
+      "work": "《后汉书》《三国演义》",
+      "canon": "both",
+      "artifact": "yidai_zhao"
+    },
+    {
+      "owner": "liu_bei",
+      "title": "刘备响应衣带诏",
+      "desc": "演义中刘备在衣带诏密盟上署名，随后离开许都，与曹操关系转向公开敌对。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "yidai_zhao"
+    },
+    {
+      "owner": "liu_bei",
+      "title": "刘备获西川地形图",
+      "desc": "演义中张松向刘备献出西川地形图，为其日后入蜀取得地理与军情先机。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "xichuan_dixing_tu"
+    },
+    {
+      "owner": "fa_zheng",
+      "title": "法正借图助刘备入蜀",
+      "desc": "法正参与迎刘备入蜀的谋划，西川地图代表益州内部人士为刘备提供的关键情报。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "xichuan_dixing_tu"
+    },
+    {
+      "owner": "meng_huo",
+      "title": "孟获借藤甲军再战",
+      "desc": "演义中孟获借乌戈国藤甲军对抗诸葛亮，利用藤甲刀箭难入、渡水不沉的特点。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "tengjia"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操以霹雳车破橹",
+      "desc": "官渡之战中曹军制造发石车击破袁绍高橹，因声如雷震而称霹雳车。",
+      "work": "《三国志·袁绍传》裴松之注",
+      "canon": "history",
+      "artifact": "pili_che"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操命铁索连舟",
+      "desc": "演义中曹操采纳庞统连环计，以铁锁连接战船，结果在赤壁火攻中难以疏散。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "lianhuan_tiesuo"
+    },
+    {
+      "owner": "huang_gai",
+      "title": "黄盖使用铁鞭",
+      "desc": "演义与传统三国人物形象常以硬质铁鞭作为黄盖的代表兵器。",
+      "work": "《三国演义》及传统三国人物图像",
+      "canon": "romance",
+      "artifact": "huang_gai_tiebian"
+    },
+    {
+      "owner": "xu_huang",
+      "title": "徐晃使用大斧",
+      "desc": "演义中徐晃以长柄大斧为标志兵器，参与多场曹魏征战并与关羽交锋。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "xu_huang_dafu"
+    },
+    {
+      "owner": "cao_cao",
+      "title": "曹操自佩倚天剑",
+      "desc": "演义称曹操有倚天、青釭两口宝剑，倚天由曹操亲自佩带。",
+      "work": "《三国演义》",
+      "canon": "romance",
+      "artifact": "yitian_jian"
+    },
+    {
+      "owner": "gan_ning",
+      "title": "甘宁使用铁链",
+      "desc": "传统三国人物形象常以单兵铁链作为甘宁奇袭与水战风格的代表兵器。",
+      "work": "《三国演义》及传统三国人物图像",
+      "canon": null,
+      "artifact": "gan_ning_tielian"
+    },
+    {
+      "owner": "zhao_yun",
+      "title": "赵云使用龙胆亮银枪",
+      "desc": "后世评书和人物图像以龙胆亮银枪作为赵云标志兵器，原著仅明确其用枪。",
+      "work": "《三国演义》及后世三国民间传说",
+      "canon": null,
+      "artifact": "longdan_liangyin_qiang"
+    },
+    {
+      "owner": "ma_chao",
+      "title": "马超使用虎头湛金枪",
+      "desc": "后世三国民间艺术以虎头湛金枪作为锦马超的代表兵器，原著仅明确其持枪。",
+      "work": "《三国演义》及后世三国民间传说",
+      "canon": null,
+      "artifact": "hutou_zhanjin_qiang"
+    },
+    {
+      "owner": "sun_ce",
+      "title": "孙策使用霸王枪",
+      "desc": "后世三国人物图像以霸王枪配江东小霸王孙策，强化其横扫江东的勇锐形象。",
+      "work": "后世三国人物图像",
+      "canon": null,
+      "artifact": "bawang_qiang"
+    }
   ],
   "en_title_override": {
     "lyu_bu": "Lü Bu",

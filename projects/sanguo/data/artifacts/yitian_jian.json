@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "yitian_jian",
+  "name_zh": "倚天剑",
+  "name_en": "Heaven's Reliance Sword",
+  "aliases": [
+    "倚天"
+  ],
+  "epithet": "曹操佩剑·双剑之首",
+  "category": "weapon",
+  "bio": "倚天剑是《三国演义》中曹操所藏两口宝剑之一，与青釭剑并称。小说写曹操亲自佩带倚天剑，而让夏侯恩背负青釭剑；长坂坡赵云夺走青釭后，倚天仍保留曹操权威佩剑的地位。它没有像七星宝刀那样推动行刺事件，却因“倚天”之名和曹操自佩身份成为枭雄威仪的象征，也能与现有青釭剑组成完整双剑节点。",
+  "events": [
+    {
+      "title": "曹操藏双剑",
+      "desc": "演义称曹操有宝剑两口，一名倚天、一名青釭，皆削铁如泥。倚天由曹操自佩，青釭命夏侯恩背负。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "青釭易主倚天仍存",
+      "desc": "长坂坡赵云杀夏侯恩夺走青釭剑，倚天剑则继续作为曹操的自佩宝剑，与青釭形成一存一失的对照。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "锋锐",
+    "权威",
+    "曹魏"
+  ],
+  "portrait": "/p/sanguo/portraits/yitian_jian.webp",
+  "thumb": "/p/sanguo/thumbs/yitian_jian.webp"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "baihu_ma",
+  "name_zh": "白鹄马",
+  "name_en": "White Swan Horse",
+  "aliases": [
+    "白鹄",
+    "白鹤"
+  ],
+  "epithet": "曹家白鹤·曹洪救主",
+  "category": "mount",
+  "bio": "白鹄马又称白鹤，是古代轶闻中曹洪与曹氏家族的神骏坐骑。《拾遗记》记载曹洪与魏武帝所乘马名白鹤，时人以“凭空虚跃，曹家白鹤”称赞其飞驰之速。曹操讨董兵败失马时，曹洪让出自己的坐骑并护送曹操渡过汴水，这一史实与名马轶闻结合，使白鹄成为曹洪忠于宗族、危难救主的象征。",
+  "events": [
+    {
+      "title": "曹洪让马救曹操",
+      "desc": "曹操讨董兵败、坐骑受伤，曹洪把自己的马让给曹操并随其渡水，留下“天下可无洪，不可无君”的救主故事。",
+      "source": {
+        "work": "《三国志·曹洪传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "曹家白鹤",
+      "desc": "《拾遗记》称曹洪与魏武帝所乘之马名白鹤，奔走如凌空而跃，时人以谚语赞叹曹家名驹。",
+      "source": {
+        "work": "《拾遗记》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "速度",
+    "救主",
+    "曹氏"
+  ],
+  "portrait": "/p/sanguo/portraits/baihu_ma.webp",
+  "thumb": "/p/sanguo/thumbs/baihu_ma.webp"
+}

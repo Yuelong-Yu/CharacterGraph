@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "hutou_zhanjin_qiang",
+  "name_zh": "虎头湛金枪",
+  "name_en": "Tiger-Head Gilt Spear",
+  "aliases": [
+    "虎头枪",
+    "湛金枪"
+  ],
+  "epithet": "锦马超·西凉金枪",
+  "category": "weapon",
+  "bio": "虎头湛金枪是后世民间三国叙事为马超配置的代表兵器，正史和《三国演义》正文只明确马超持枪作战，并未给枪命名。后世以虎头吞口、鎏金枪刃和西凉纹饰塑造其华丽而勇猛的风格，与“锦马超”的银甲白袍、里飞沙坐骑共同构成完整视觉体系。该枪应保留骑战长枪的修长比例，华美但不能做成神怪法器。",
+  "events": [
+    {
+      "title": "马超潼关使枪",
+      "desc": "演义中马超在潼关、渭水等战场持长枪与曹军诸将交锋，枪术勇猛，但原文未称虎头湛金枪。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "后世塑造锦马超",
+      "desc": "民间评书和人物图像以虎头湛金枪配马超，使鎏金虎纹长枪与西凉锦袍、银甲名驹形成统一标志。",
+      "source": {
+        "work": "后世三国民间传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "枪术",
+    "西凉",
+    "勇武"
+  ],
+  "portrait": "/p/sanguo/portraits/hutou_zhanjin_qiang.webp",
+  "thumb": "/p/sanguo/thumbs/hutou_zhanjin_qiang.webp"
+}

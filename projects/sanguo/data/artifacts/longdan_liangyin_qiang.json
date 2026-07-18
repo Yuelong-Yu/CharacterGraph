@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "longdan_liangyin_qiang",
+  "name_zh": "龙胆亮银枪",
+  "name_en": "Dragon Courage Silver Spear",
+  "aliases": [
+    "亮银枪",
+    "龙胆枪"
+  ],
+  "epithet": "常山赵云·一身是胆",
+  "category": "weapon",
+  "bio": "龙胆亮银枪是后世评书、戏曲和大众三国文化赋予赵云的标志性兵器，正史与《三国演义》正文只写赵云用枪，并未明确这一名称。银白长枪与赵云白袍银甲、长坂救主和“子龙一身都是胆”的评价相结合，逐渐形成极高辨识度的武将符号。其造型应保持汉末长枪的实战比例，以修长枪杆、柳叶枪刃和简洁龙纹表现，不宜做成夸张奇幻武器。",
+  "events": [
+    {
+      "title": "赵云长坂使枪",
+      "desc": "演义中赵云在长坂坡持枪冲阵、怀抱幼主突围，枪是其主要战斗兵器，但原文没有龙胆亮银枪这一专名。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "后世定名龙胆",
+      "desc": "评书、戏曲和大众三国艺术以龙胆亮银枪命名赵云长枪，把银甲白袍和一身是胆的评价凝结为视觉标志。",
+      "source": {
+        "work": "后世三国民间传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "枪术",
+    "忠勇",
+    "长坂"
+  ],
+  "portrait": "/p/sanguo/portraits/longdan_liangyin_qiang.webp",
+  "thumb": "/p/sanguo/thumbs/longdan_liangyin_qiang.webp"
+}

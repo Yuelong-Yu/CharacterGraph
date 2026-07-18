@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "xichuan_dixing_tu",
+  "name_zh": "西川地形图",
+  "name_en": "Map of Western Sichuan",
+  "aliases": [
+    "西蜀地形图",
+    "蜀中地形图"
+  ],
+  "epithet": "张松献图·入蜀先机",
+  "category": "treasure",
+  "bio": "西川地形图是《三国演义》中张松为选择明主而暗中绘制、最终献给刘备的战略地图。图中标示益州山川、险要、道路、府库与兵力布置，使刘备集团在入蜀前掌握关键地理情报。张松虽未进入当前人物名册，但地图可连接刘备、法正和刘璋，并表现益州内部力量由拥刘璋转向迎刘备的过程，是刘备建立蜀汉基业的重要情报节点。",
+  "events": [
+    {
+      "title": "张松暗绘西川图",
+      "desc": "演义中张松熟知益州山川险要，暗中绘制西川地形图，准备献给能够取代刘璋的雄主。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "地图献予刘备",
+      "desc": "张松受到刘备礼遇后献出地图，详细说明州郡、关隘、道路和钱粮，为刘备日后入蜀提供重要先机。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "法正助成入蜀",
+      "desc": "法正等益州人士与刘备联络，地形图代表他们提供的内部情报，也把刘璋统治下的西川资源转化为刘备的战略优势。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "地理",
+    "入蜀",
+    "战略"
+  ],
+  "portrait": "/p/sanguo/portraits/xichuan_dixing_tu.webp",
+  "thumb": "/p/sanguo/thumbs/xichuan_dixing_tu.webp"
+}

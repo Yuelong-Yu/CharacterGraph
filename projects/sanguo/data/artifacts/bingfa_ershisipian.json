@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "bingfa_ershisipian",
+  "name_zh": "兵法二十四篇",
+  "name_en": "Twenty-Four Chapters on Military Strategy",
+  "aliases": [
+    "二十四篇兵书",
+    "孔明兵法"
+  ],
+  "epithet": "孔明遗书·姜维受业",
+  "category": "treasure",
+  "bio": "《兵法二十四篇》是《三国演义》中诸葛亮传给姜维的军事著作。诸葛亮临终安排后事，把平生所学整理成兵法二十四篇，内容包括八务、七戒、六恐、五惧等治军要旨，命姜维继承。它与木牛流马、连弩等遗产共同表现蜀汉军事技术和战略思想的师承，也标志着五丈原之后姜维接过北伐理想。",
+  "events": [
+    {
+      "title": "孔明整理兵法",
+      "desc": "演义中诸葛亮把平生所学整理为兵法二十四篇，作为治军、用兵和修身的系统遗著。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "临终传付姜维",
+      "desc": "诸葛亮临终前把兵书交付姜维，命其用心研习，象征北伐事业与军事思想的传承。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "兵法",
+    "传承",
+    "北伐"
+  ],
+  "portrait": "/p/sanguo/portraits/bingfa_ershisipian.webp",
+  "thumb": "/p/sanguo/thumbs/bingfa_ershisipian.webp"
+}

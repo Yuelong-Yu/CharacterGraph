@@ -1,0 +1,41 @@
+{
+  "schema_version": 3,
+  "id": "lifeisha",
+  "name_zh": "里飞沙",
+  "name_en": "Lifeisha",
+  "aliases": [
+    "里飞沙马"
+  ],
+  "epithet": "锦马超西凉名驹",
+  "category": "mount",
+  "bio": "里飞沙是后世戏曲、评书与民间三国叙事中马超的代表坐骑，正史与《三国演义》正文均未明确记载此名。它通常被描写成沙金或淡黄色的西凉骏马，耐寒、善走山地，与马超银甲白袍、羌胡骑战的形象相配。作为民间艺术不断补充出的武将标识，里飞沙突出“锦马超”来自西凉、长于骑战的地域气质。",
+  "events": [
+    {
+      "title": "民间配属锦马超",
+      "desc": "戏曲、评书和游戏化三国形象常把里飞沙配给马超，使其与虎头湛金枪、银甲白袍共同组成锦马超的标志性装束。",
+      "source": {
+        "work": "后世三国民间传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "西凉骑战意象",
+      "desc": "里飞沙的沙金毛色和耐风沙形象来自对西凉骑兵环境的艺术想象，并非正史或演义原文所载名马。",
+      "source": {
+        "work": "后世三国人物图像",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "西凉",
+    "速度",
+    "征战"
+  ],
+  "portrait": "/p/sanguo/portraits/lifeisha.webp",
+  "thumb": "/p/sanguo/thumbs/lifeisha.webp"
+}

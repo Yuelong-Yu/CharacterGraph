@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "yidai_zhao",
+  "name_zh": "衣带诏",
+  "name_en": "Girdle Edict",
+  "aliases": [
+    "衣带密诏",
+    "血诏"
+  ],
+  "epithet": "汉帝血诏·讨曹密盟",
+  "category": "treasure",
+  "bio": "衣带诏是汉末皇权受制于曹操背景下最著名的秘密诏令。汉献帝把讨伐曹操的密诏写在绢帛上，缝藏于衣带之内交给董承；董承联络刘备等人署名盟誓。计划泄露后，曹操诛杀董承等人并清洗相关势力。史书存在董承受密诏诛曹的记载，演义则将血书、玉带拆解和名单细节戏剧化，使衣带诏成为汉献帝、曹操和刘备政治关系的关键实物。",
+  "events": [
+    {
+      "title": "汉献帝藏诏衣带",
+      "desc": "汉献帝不满曹操挟制，将秘密诏令藏在衣带中交给董承，希望联合忠于汉室者诛除曹操。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "刘备参与密盟",
+      "desc": "董承邀集刘备等人署名响应衣带诏，刘备随后借机离开许都，避免长期处于曹操控制之下。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "事泄遭曹操镇压",
+      "desc": "密谋最终泄露，曹操诛杀董承等参与者，衣带诏成为汉室天子与权臣冲突公开化的象征。",
+      "source": {
+        "work": "《后汉书》《三国志》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "domains": [
+    "密诏",
+    "汉室",
+    "政治斗争"
+  ],
+  "portrait": "/p/sanguo/portraits/yidai_zhao.webp",
+  "thumb": "/p/sanguo/thumbs/yidai_zhao.webp"
+}

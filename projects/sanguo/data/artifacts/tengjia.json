@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "tengjia",
+  "name_zh": "藤甲",
+  "name_en": "Rattan Armor",
+  "aliases": [
+    "藤甲军甲胄",
+    "油藤甲"
+  ],
+  "epithet": "南中藤甲·渡水不沉",
+  "category": "treasure",
+  "bio": "藤甲是《三国演义》南征篇中乌戈国藤甲军使用的特殊甲胄。小说称其以山藤编成，浸油半年再晒，如此反复十余遍，穿在身上渡江不沉、刀箭难入，却极易燃烧。孟获借来藤甲军对抗诸葛亮，最终被诱入盘蛇谷火攻。藤甲兼具强韧防护和致命弱点，既连接孟获、祝融夫人与诸葛亮，也集中表现南征叙事对异域军械的传奇想象。",
+  "events": [
+    {
+      "title": "乌戈国制藤甲",
+      "desc": "演义称乌戈国以山藤反复浸油晒制甲胄，轻便坚韧、渡水不沉，组成特殊的藤甲军。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "孟获借藤甲军",
+      "desc": "孟获多次失败后借乌突骨藤甲军再战，希望凭刀箭难伤的甲胄击败蜀军。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "盘蛇谷火攻",
+      "desc": "诸葛亮识破藤甲怕火的弱点，将藤甲军诱入盘蛇谷以火攻破之，并为杀伤惨烈而感叹。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "甲胄",
+    "南中",
+    "防御"
+  ],
+  "portrait": "/p/sanguo/portraits/tengjia.webp",
+  "thumb": "/p/sanguo/thumbs/tengjia.webp"
+}

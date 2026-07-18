@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "zhuge_liannu",
+  "name_zh": "诸葛连弩",
+  "name_en": "Zhuge Repeating Crossbow",
+  "aliases": [
+    "诸葛弩",
+    "元戎弩",
+    "连弩"
+  ],
+  "epithet": "元戎连弩·蜀汉机括",
+  "category": "weapon",
+  "bio": "诸葛连弩是传统上归于诸葛亮改制的连发弩器。史书记载诸葛亮损益连弩，称为元戎，可一弩发十矢；后世实物与复原方案多以木制箭匣、杠杆和连续上弦机构表现。它适合近距离密集射击和守城，却不应画成现代枪械。诸葛亮去世后，相关技术仍作为蜀汉军械传统延续，并在姜维继承北伐的文化叙事中出现。",
+  "events": [
+    {
+      "title": "诸葛亮损益连弩",
+      "desc": "史籍称诸葛亮改进连弩，名为元戎，以机械结构提升连续发射能力，成为其军事技术才能的重要证明。",
+      "source": {
+        "work": "《三国志·诸葛亮传》裴松之注",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "蜀汉军械传承",
+      "desc": "连弩作为蜀汉特色军械被后世反复复原，常与姜维承继诸葛亮北伐事业的叙事结合。",
+      "source": {
+        "work": "历代兵器记载与三国文化",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "弩术",
+    "机关",
+    "守御"
+  ],
+  "portrait": "/p/sanguo/portraits/zhuge_liannu.webp",
+  "thumb": "/p/sanguo/thumbs/zhuge_liannu.webp"
+}

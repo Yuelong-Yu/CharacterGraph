@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "gan_ning_tielian",
+  "name_zh": "甘宁铁链",
+  "name_en": "Gan Ning's Iron Chain",
+  "aliases": [
+    "铁链",
+    "锦帆铁链"
+  ],
+  "epithet": "锦帆游侠·百骑劫营",
+  "category": "weapon",
+  "bio": "铁链是后世《三国演义》人物图像中甘宁常见的奇门兵器，与他早年锦帆游侠、善于水战和轻捷突袭的经历相配。它不是赤壁连环铁锁那种连接战船的巨链，而是一条可单手挥舞、末端带短柄和配重的战斗链。甘宁在东吴以勇猛和百骑劫曹营著称，铁链能够连接孙权、凌统以及合肥前线，同时在视觉上与常规刀枪武将区分。",
+  "events": [
+    {
+      "title": "锦帆游侠兵器",
+      "desc": "传统三国人物图像常以短柄铁链表现甘宁早年的游侠和水战气质，使其与锦帆铃铛、轻捷突袭形象相配。",
+      "source": {
+        "work": "《三国演义》及传统三国人物图像",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "百骑劫曹营",
+      "desc": "濡须前线甘宁率少数精锐夜袭曹营、全身而退，孙权赞叹其勇。铁链作为人物标志承载这一奇袭意象。",
+      "source": {
+        "work": "《三国志·甘宁传》《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "both"
+    }
+  ],
+  "domains": [
+    "奇兵",
+    "水战",
+    "江东"
+  ],
+  "portrait": "/p/sanguo/portraits/gan_ning_tielian.webp",
+  "thumb": "/p/sanguo/thumbs/gan_ning_tielian.webp"
+}

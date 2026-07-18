@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "muniu_liuma",
+  "name_zh": "木牛流马",
+  "name_en": "Wooden Ox and Flowing Horse",
+  "aliases": [
+    "木牛",
+    "流马"
+  ],
+  "epithet": "蜀道运粮·孔明机巧",
+  "category": "treasure",
+  "bio": "木牛流马是诸葛亮北伐期间用于山地运输粮草的器械。《三国志》明确记载诸葛亮制作木牛、流马，但具体结构已经失传；《三国演义》进一步赋予机关舌、扭转控制等传奇细节，并写司马懿仿制后被蜀军夺粮。它们应理解为适应蜀道的木制运输车械，而非真正有生命的牛马或现代机器人，代表蜀汉在艰险补给条件下的工程智慧。",
+  "events": [
+    {
+      "title": "诸葛亮制木牛流马",
+      "desc": "诸葛亮北伐时制作木牛、流马运送军粮，以解决秦岭蜀道崎岖、车马难行的补给问题。",
+      "source": {
+        "work": "《三国志·诸葛亮传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "演义机关运粮",
+      "desc": "《三国演义》把木牛流马描写成带有机关控制的木制运粮器械，蜀军借此迷惑并反制司马懿。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "姜维承接北伐运输",
+      "desc": "诸葛亮身后姜维继续北伐，木牛流马作为蜀汉运输技术遗产与其军旅叙事相连。",
+      "source": {
+        "work": "蜀汉北伐叙事",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    }
+  ],
+  "domains": [
+    "运输",
+    "机关",
+    "北伐"
+  ],
+  "portrait": "/p/sanguo/portraits/muniu_liuma.webp",
+  "thumb": "/p/sanguo/thumbs/muniu_liuma.webp"
+}

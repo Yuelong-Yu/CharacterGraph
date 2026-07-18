@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "taiping_yaoshu",
+  "name_zh": "太平要术",
+  "name_en": "Essential Arts of Great Peace",
+  "aliases": [
+    "太平清领书",
+    "天书三卷"
+  ],
+  "epithet": "南华授书·黄巾道法",
+  "category": "treasure",
+  "bio": "《太平要术》是《三国演义》中张角获得的三卷天书。小说称南华老仙在山中授书，张角学得呼风唤雨、符水治病等术法，随后以太平道聚众，发动黄巾起义。其文学原型与汉末《太平清领书》、太平道思想相关，但“南华授三卷天书”属于演义神异叙事。这部典籍连接张角、卢植、皇甫嵩等黄巾战争节点，是汉末乱世开端的象征物。",
+  "events": [
+    {
+      "title": "南华老仙授书",
+      "desc": "张角入山采药时遇南华老仙，获授三卷天书《太平要术》，被告诫应代天宣化、普救世人。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "符水聚众",
+      "desc": "张角研习天书后以符水为人治病，自称大贤良师，发展太平道徒众，为黄巾起义积聚力量。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "黄巾起义",
+      "desc": "张角以苍天已死、黄天当立号召起事，卢植、皇甫嵩等汉将奉命镇压，太平要术成为演义中乱世开篇的神秘源头。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "道术",
+    "黄巾",
+    "太平"
+  ],
+  "portrait": "/p/sanguo/portraits/taiping_yaoshu.webp",
+  "thumb": "/p/sanguo/thumbs/taiping_yaoshu.webp"
+}

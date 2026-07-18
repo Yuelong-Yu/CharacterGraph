@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "bazhen_tu",
+  "name_zh": "八阵图",
+  "name_en": "Eight Formation Diagram",
+  "aliases": [
+    "八阵",
+    "八阵石图"
+  ],
+  "epithet": "孔明阵法·石阵困陆逊",
+  "category": "treasure",
+  "bio": "八阵图是与诸葛亮军事思想联系最紧密的阵法体系。史书称诸葛亮推演兵法、作八阵图；《三国演义》又把它具象化为夔关江边的石阵，陆逊追击刘备时误入其中，见怪石如兵、风沙骤起，最终由黄承彦引出。八阵图既可作为绘有方位与军阵的古代阵图，也可表现为微缩石阵模型，象征诸葛亮利用地形、方位和虚实变化的战略智慧。",
+  "events": [
+    {
+      "title": "诸葛亮推演八阵",
+      "desc": "史书记载诸葛亮推演兵法并作八阵图，其阵法思想成为后世研究诸葛亮军事才能的重要内容。",
+      "source": {
+        "work": "《三国志·诸葛亮传》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "history"
+    },
+    {
+      "title": "石阵困陆逊",
+      "desc": "演义中陆逊追击夷陵败退的刘备时误入江边八阵图，石阵随风沙变幻如千军万马，幸得黄承彦引路才脱困。",
+      "source": {
+        "work": "《三国演义》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "domains": [
+    "阵法",
+    "谋略",
+    "地形"
+  ],
+  "portrait": "/p/sanguo/portraits/bazhen_tu.webp",
+  "thumb": "/p/sanguo/thumbs/bazhen_tu.webp"
+}

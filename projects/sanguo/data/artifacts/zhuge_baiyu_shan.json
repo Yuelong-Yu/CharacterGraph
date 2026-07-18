@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "zhuge_baiyu_shan",
+  "name_zh": "诸葛白羽扇",
+  "name_en": "Zhuge Liang's White Feather Fan",
+  "aliases": [
+    "白羽扇",
+    "孔明羽扇"
+  ],
+  "epithet": "卧龙羽扇·运筹帷幄",
+  "category": "treasure",
+  "bio": "白羽扇是诸葛亮最具辨识度的传统形象标志。史书不以神兵宝物记载此扇，但宋元以来的戏曲、绘画和《三国演义》传播不断强化“纶巾羽扇”的军师造型。后世传说又常把羽扇与黄月英联系起来，赋予扇面识风、藏策或调度军阵的象征意义。它并非施法魔器，而是表现诸葛亮临阵从容、运筹帷幄和儒将气质的文化符号。",
+  "events": [
+    {
+      "title": "羽扇纶巾成经典",
+      "desc": "历代绘画、戏曲和三国通俗文化以纶巾、鹤氅、白羽扇塑造诸葛亮，使羽扇成为其智慧与从容的视觉标识。",
+      "source": {
+        "work": "传统三国人物图像",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "黄月英赠扇传说",
+      "desc": "部分民间故事称白羽扇与黄月英有关，用来提醒诸葛亮保持冷静或辅助观测风向；此为后世传说而非正史。",
+      "source": {
+        "work": "后世诸葛亮民间传说",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "domains": [
+    "智慧",
+    "谋略",
+    "从容"
+  ],
+  "portrait": "/p/sanguo/portraits/zhuge_baiyu_shan.webp",
+  "thumb": "/p/sanguo/thumbs/zhuge_baiyu_shan.webp"
+}
