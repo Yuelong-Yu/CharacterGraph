@@ -4692,5 +4692,329 @@
         "era_order": 2
       }
     ]
+  },
+  {
+    "schema_version": 1,
+    "id": "yin_jiangjun_xiong_shanjun",
+    "source": "yin_jiangjun",
+    "target": "xiong_shanjun",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [{"title": "虎穴宴请山君", "desc": "熊山君到访寅将军虎穴，二怪寒暄并共同参加妖宴。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "yin_jiangjun_te_chushi",
+    "source": "yin_jiangjun",
+    "target": "te_chushi",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [{"title": "双叉岭妖友", "desc": "特处士与寅将军相互道贺叙话，并共同分食唐僧从者。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiong_shanjun_te_chushi",
+    "source": "xiong_shanjun",
+    "target": "te_chushi",
+    "primary_type": "bond",
+    "composite_types": [],
+    "events": [{"title": "结伴拜访虎魔", "desc": "熊山君与特处士结伴前往虎穴，显示二怪关系亲近。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "yin_jiangjun_tang_sanzang",
+    "source": "yin_jiangjun",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "取经第一场妖难", "desc": "寅将军把唐僧捆入虎穴并吃掉他的两名从者。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "xiong_shanjun_tang_sanzang",
+    "source": "xiong_shanjun",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "妖宴中留下唐僧", "desc": "熊山君提议三名俘虏留下一人，使唐僧暂时未被分食。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "te_chushi_tang_sanzang",
+    "source": "te_chushi",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "虎穴待客之问", "desc": "特处士把被俘的唐僧一行视作妖宴食材。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "yin_jiangjun_taibai_jinxing",
+    "source": "yin_jiangjun",
+    "target": "taibai_jinxing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "金星破虎穴妖缚", "desc": "太白金星趁三怪散去后解救唐僧，破坏寅将军的捕食。", "source": {"work": "西游记", "locus": "第十三回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanshan_dawang_tang_sanzang",
+    "source": "nanshan_dawang",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "拿云手摄走唐僧", "desc": "南山大王调开三徒弟后从半空抓走唐僧，囚入折岳连环洞。", "source": {"work": "西游记", "locus": "第八十五至八十六回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanshan_dawang_sun_wukong",
+    "source": "nanshan_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "假人头欺骗悟空", "desc": "南山大王用柳根假头谎称唐僧已死，最终被悟空识破并攻破洞府。", "source": {"work": "西游记", "locus": "第八十六回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanshan_dawang_zhu_bajie",
+    "source": "nanshan_dawang",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "一钯筑死豹精", "desc": "八戒追击逃走的南山大王，以九齿钉钯将豹精击杀。", "source": {"work": "西游记", "locus": "第八十六回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "nanshan_dawang_sha_wujing",
+    "source": "nanshan_dawang",
+    "target": "sha_wujing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "假身调走沙僧", "desc": "南山大王以分瓣梅花计派假身引开沙僧，为摄走唐僧制造机会。", "source": {"work": "西游记", "locus": "第八十五回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangshi_jing_jiuling_yuansheng",
+    "source": "huangshi_jing",
+    "target": "jiuling_yuansheng",
+    "primary_type": "kinship",
+    "composite_types": ["bond"],
+    "events": [{"title": "祖翁为徒孙复仇", "desc": "黄狮精尊九灵元圣为祖翁；黄狮死后，九灵元圣率群狮攻打玉华州。", "source": {"work": "西游记", "locus": "第八十九至九十回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangshi_jing_sun_wukong",
+    "source": "huangshi_jing",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "盗棒引发豹头山大战", "desc": "黄狮精盗走金箍棒等三件兵器，悟空乔装客商骗回后捣毁虎口洞。", "source": {"work": "西游记", "locus": "第八十九回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangshi_jing_zhu_bajie",
+    "source": "huangshi_jing",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "偷钉钯反办钉钯宴", "desc": "黄狮精盗走九齿钉钯并准备办宴，八戒随悟空夺回兵器攻洞。", "source": {"work": "西游记", "locus": "第八十九回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "huangshi_jing_sha_wujing",
+    "source": "huangshi_jing",
+    "target": "sha_wujing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "盗取降妖宝杖", "desc": "黄狮精把沙僧的降妖宝杖一并盗走，沙僧参与乔装夺宝。", "source": {"work": "西游记", "locus": "第八十九回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_pishu_dawang",
+    "source": "pihan_dawang",
+    "target": "pishu_dawang",
+    "primary_type": "bond",
+    "composite_types": ["kinship"],
+    "events": [{"title": "玄英洞犀牛兄弟", "desc": "辟寒与辟暑共同盘踞青龙山，千年假佛收油并联手作战。", "source": {"work": "西游记", "locus": "第九十一至九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_pichen_dawang",
+    "source": "pihan_dawang",
+    "target": "pichen_dawang",
+    "primary_type": "bond",
+    "composite_types": ["kinship"],
+    "events": [{"title": "寒尘二王同守玄英洞", "desc": "辟寒与辟尘以兄弟相称，共同摄走唐僧并统率牛精。", "source": {"work": "西游记", "locus": "第九十一至九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_pichen_dawang",
+    "source": "pishu_dawang",
+    "target": "pichen_dawang",
+    "primary_type": "bond",
+    "composite_types": ["kinship"],
+    "events": [{"title": "暑尘二王并肩伏诛", "desc": "辟暑与辟尘一同逃入西海、被生擒，并在金平府同时伏诛。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_tang_sanzang",
+    "source": "pihan_dawang",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "元宵摄走唐僧", "desc": "辟寒率两兄弟假扮佛像，在金灯桥摄走唐僧并囚入玄英洞。", "source": {"work": "西游记", "locus": "第九十一回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_tang_sanzang",
+    "source": "pishu_dawang",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "玄英洞锁住圣僧", "desc": "辟暑参与把唐僧锁在洞后檐柱，准备以香油煎食。", "source": {"work": "西游记", "locus": "第九十一至九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pichen_dawang_tang_sanzang",
+    "source": "pichen_dawang",
+    "target": "tang_sanzang",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "假佛掳僧", "desc": "辟尘随两兄长以假佛之身夺取香油，同时把唐僧卷入妖风。", "source": {"work": "西游记", "locus": "第九十一回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_sun_wukong",
+    "source": "pihan_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "钺斧对战金箍棒", "desc": "辟寒持钺斧与悟空交锋，并以小妖围阵逼悟空上天求援。", "source": {"work": "西游记", "locus": "第九十一至九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_sun_wukong",
+    "source": "pishu_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "三犀合围悟空", "desc": "辟暑随兄弟和牛精围攻悟空，后被悟空请来的四木禽星降伏。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pichen_dawang_sun_wukong",
+    "source": "pichen_dawang",
+    "target": "sun_wukong",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "黄尘阵困心猿", "desc": "辟尘以藤棍尘雾协助围攻悟空，最终被悟空追入西海擒获。", "source": {"work": "西游记", "locus": "第九十一至九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_zhu_bajie",
+    "source": "pihan_dawang",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "群牛擒住八戒", "desc": "辟寒号令牛精一拥而上，把交战中的八戒拖入玄英洞捆绑。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_zhu_bajie",
+    "source": "pishu_dawang",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "大刀战钉钯", "desc": "辟暑以大刀迎战八戒，伏诛时由八戒亲手处决。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pichen_dawang_zhu_bajie",
+    "source": "pichen_dawang",
+    "target": "zhu_bajie",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "金平府斩犀", "desc": "辟尘被押回金平府后，八戒以戒刀将其斩首。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_sha_wujing",
+    "source": "pihan_dawang",
+    "target": "sha_wujing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "号令牛精擒沙僧", "desc": "辟寒统率玄英洞群牛围战，沙僧继八戒之后被小妖擒入洞中。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_sha_wujing",
+    "source": "pishu_dawang",
+    "target": "sha_wujing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "暑王合攻卷帘将", "desc": "辟暑与两兄弟、群牛合围取经人，协助将沙僧生擒。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pichen_dawang_sha_wujing",
+    "source": "pichen_dawang",
+    "target": "sha_wujing",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "藤棍迎战宝杖", "desc": "辟尘以藤棍正面对战沙僧，随后借群牛之力把他捉住。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_huangpao_guai",
+    "source": "pihan_dawang",
+    "target": "huangpao_guai",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "奎木狼奉旨降犀", "desc": "黄袍怪归位后的奎木狼作为四木禽星之一，参与追剿辟寒三犀。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_huangpao_guai",
+    "source": "pishu_dawang",
+    "target": "huangpao_guai",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "四木禽星围捕辟暑", "desc": "奎木狼与其余三位木禽星奉玉帝旨意降伏辟暑。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pichen_dawang_huangpao_guai",
+    "source": "pichen_dawang",
+    "target": "huangpao_guai",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "木禽星扫荡玄英洞", "desc": "奎木狼参与清剿洞中牛精并追击逃往西海的辟尘。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pihan_dawang_moang_taizi",
+    "source": "pihan_dawang",
+    "target": "moang_taizi",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "西海龙兵堵截三犀", "desc": "摩昂太子奉西海龙王命率水族拦路，使辟寒无法继续逃遁。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pishu_dawang_moang_taizi",
+    "source": "pishu_dawang",
+    "target": "moang_taizi",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "水晶宫外合围辟暑", "desc": "摩昂率龟鳖鼋鼍协助木禽星布阵，迫使辟暑投降被擒。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
+  },
+  {
+    "schema_version": 1,
+    "id": "pichen_dawang_moang_taizi",
+    "source": "pichen_dawang",
+    "target": "moang_taizi",
+    "primary_type": "enmity",
+    "composite_types": [],
+    "events": [{"title": "摩昂生擒辟尘", "desc": "摩昂太子率众把辟尘掀翻，以铁钩穿鼻、攒蹄捆倒。", "source": {"work": "西游记", "locus": "第九十二回", "translator": null}, "era_order": 2}]
   }
 ]

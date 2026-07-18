@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "nanshan_dawang",
+  "name_zh": "南山大王",
+  "name_en": "King of the Southern Mountain",
+  "aliases": [
+    "南山大王",
+    "King of the Southern Mountain",
+    "艾叶花皮豹子精",
+    "南山大豹"
+  ],
+  "epithet": "隐雾山折岳连环洞豹王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "南山大王是隐雾山折岳连环洞的艾叶花皮豹子精，手持铁杵，盘踞山中数百年。他采纳铁背苍狼先锋提出的分瓣梅花计，让三名小妖变化成自己的模样调开悟空、八戒、沙僧，趁机摄走唐僧。为打击悟空，他又以柳树根削成人头冒充唐僧首级。计谋最终被识破，悟空攻破妖洞，八戒将南山大王一钯筑死。",
+  "events": [
+    {
+      "title": "分瓣梅花擒唐僧",
+      "desc": "南山大王以三个假身调开三徒弟，从云中伸下钢钩般巨爪抓走唐僧。",
+      "source": {"work": "西游记", "locus": "第八十五回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "柳根假头乱心猿",
+      "desc": "妖王用柳树根削成假人头并涂上血色，谎称唐僧已被吃掉。",
+      "source": {"work": "西游记", "locus": "第八十六回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "折岳洞中被伏",
+      "desc": "悟空识破骗局救出唐僧，八戒追上南山大王并将其一钯筑死。",
+      "source": {"work": "西游记", "locus": "第八十六回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["浑铁杵"],
+  "skills": ["分瓣梅花计", "拿云钢爪", "喷雾隐身", "豹子真身"],
+  "domains": ["隐雾山", "折岳连环洞"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/nanshan_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/nanshan_dawang.webp"
+}

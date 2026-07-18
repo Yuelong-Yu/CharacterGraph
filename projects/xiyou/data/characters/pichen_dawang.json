@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "pichen_dawang",
+  "name_zh": "辟尘大王",
+  "name_en": "Dust-Averting King",
+  "aliases": [
+    "辟尘大王",
+    "Dust-Averting King",
+    "辟尘犀牛精",
+    "玄英洞三大王"
+  ],
+  "epithet": "青龙山玄英洞犀牛三王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "辟尘大王是玄英洞三只犀牛精中的三王，手持藤棍，擅长卷起黄尘掩护兄弟。他参与元宵假佛收油、摄走唐僧和青龙山大战，并随辟寒、辟暑用犀角分水逃往西海。四木禽星追入海中后将他生擒，最终押回金平府伏诛，结束玄英洞千年骗供。",
+  "events": [
+    {
+      "title": "金灯桥假佛骗供",
+      "desc": "辟尘与两位兄长以佛像幻术欺骗金平府百姓供奉香油。",
+      "source": {"work": "西游记", "locus": "第九十一回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "藤棍卷尘助战",
+      "desc": "辟尘持藤棍统领牛头小妖，以黄尘妖风协助两兄长围攻取经人。",
+      "source": {"work": "西游记", "locus": "第九十一回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "西海被擒伏诛",
+      "desc": "辟尘在西海被木禽星捉拿，押回金平府后与辟暑一同伏诛。",
+      "source": {"work": "西游记", "locus": "第九十二回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["藤棍"],
+  "skills": ["黄尘妖风", "假佛变化", "犀角分水"],
+  "domains": ["青龙山", "玄英洞", "金平府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/pichen_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/pichen_dawang.webp"
+}

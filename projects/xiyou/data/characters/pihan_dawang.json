@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "pihan_dawang",
+  "name_zh": "辟寒大王",
+  "name_en": "Cold-Averting King",
+  "aliases": [
+    "辟寒大王",
+    "Cold-Averting King",
+    "辟寒犀牛精",
+    "玄英洞大大王"
+  ],
+  "epithet": "青龙山玄英洞犀牛大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "辟寒大王是青龙山玄英洞三只犀牛精之首，手持钺斧，与辟暑、辟尘盘踞金平府千年。三怪每逢元宵变化成佛像，收取酥合香油，后来在慈云寺上空摄走唐僧。辟寒率群妖与悟空三兄弟鏖战，败逃西海后被四木禽星围捕，最终被井木犴咬死。",
+  "events": [
+    {
+      "title": "假佛收取香油",
+      "desc": "辟寒与两位兄弟变化佛像，长期骗取金平府供奉的酥合香油。",
+      "source": {"work": "西游记", "locus": "第九十一回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "玄英洞摄走圣僧",
+      "desc": "三犀牛在元宵夜卷走唐僧，将他囚入玄英洞准备煎食。",
+      "source": {"work": "西游记", "locus": "第九十一回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "西海败亡",
+      "desc": "辟寒逃入西海后遭四木禽星追捕，被井木犴克制并咬死。",
+      "source": {"work": "西游记", "locus": "第九十二回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["钺斧"],
+  "skills": ["寒霜犀甲", "假佛变化", "犀牛冲阵"],
+  "domains": ["青龙山", "玄英洞", "金平府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/pihan_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/pihan_dawang.webp"
+}

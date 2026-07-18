@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "huangshi_jing",
+  "name_zh": "黄狮精",
+  "name_en": "Yellow Lion Demon",
+  "aliases": [
+    "黄狮精",
+    "Yellow Lion Demon",
+    "黄狮大王",
+    "豹头山妖王"
+  ],
+  "epithet": "豹头山虎口洞黄狮大王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "黄狮精是豹头山虎口洞妖王，尊九灵元圣为祖翁，使用四明铲。他见悟空、八戒、沙僧的三件兵器放在玉华州匠棚，趁夜全部盗走，并打算买猪羊举行钉钯宴。悟空三人乔装客商骗回兵器，捣毁虎口洞；黄狮精逃往竹节山求援，九灵元圣遂率七狮攻打玉华州。黄狮精最终死于混战，其死亡直接触发九灵元圣复仇，是玉华州后半段故事的关键枢纽。",
+  "events": [
+    {
+      "title": "夜盗三般兵器",
+      "desc": "黄狮精趁夜盗走金箍棒、九齿钉钯和降妖宝杖，带回虎口洞收藏。",
+      "source": {"work": "西游记", "locus": "第八十八至八十九回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "虚设钉钯宴",
+      "desc": "黄狮精让小妖买猪羊筹办钉钯宴，却被悟空三人乔装骗回宝贝。",
+      "source": {"work": "西游记", "locus": "第八十九回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "投奔祖翁引群狮",
+      "desc": "虎口洞被毁后，黄狮精向九灵元圣哭诉，引来竹节山群狮攻城。",
+      "source": {"work": "西游记", "locus": "第八十九至九十回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["四明铲"],
+  "skills": ["狮吼震敌", "夜行盗宝", "黄狮真身"],
+  "domains": ["豹头山", "虎口洞", "竹节山"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/huangshi_jing.webp",
+  "thumb": "/p/xiyou/thumbs/huangshi_jing.webp"
+}

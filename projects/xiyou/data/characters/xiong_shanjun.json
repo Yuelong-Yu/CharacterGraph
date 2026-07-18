@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "id": "xiong_shanjun",
+  "name_zh": "熊山君",
+  "name_en": "Lord Bear Mountain",
+  "aliases": [
+    "熊山君",
+    "Lord Bear Mountain",
+    "熊罴精",
+    "黑汉"
+  ],
+  "epithet": "双叉岭熊罴山君",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "熊山君是双叉岭熊罴成精的妖怪，变化成魁梧黑汉，与寅将军、特处士交好。他到寅将军虎穴赴宴，提议三名俘虏不可尽食，应留下一人，因而间接留下唐僧性命；随后与两怪分食从者首级心肝，天明才离去。熊山君出场虽短，却与寅将军、特处士共同组成取经路上最早出现的妖怪集团。",
+  "events": [
+    {
+      "title": "赴虎穴妖宴",
+      "desc": "熊山君与特处士来到寅将军洞府，见到被捆的唐僧三人。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "提议留下一人",
+      "desc": "熊山君主张不可把三名俘虏全部吃掉，寅将军遂留下唐僧。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["熊罴巨力", "攀林折木", "熊罴真身"],
+  "domains": ["双叉岭", "熊罴山林"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/xiong_shanjun.webp",
+  "thumb": "/p/xiyou/thumbs/xiong_shanjun.webp"
+}

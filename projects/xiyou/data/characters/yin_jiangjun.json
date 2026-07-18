@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "yin_jiangjun",
+  "name_zh": "寅将军",
+  "name_en": "General Yin",
+  "aliases": [
+    "寅将军",
+    "General Yin",
+    "老虎精",
+    "双叉岭虎魔"
+  ],
+  "epithet": "双叉岭虎穴魔王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "寅将军是唐僧离开大唐边界后遭遇的第一位妖王，本相为斑斓老虎，盘踞双叉岭虎穴。他趁唐僧与两名从者失足落坑，将三人捆缚，又设宴款待熊山君、特处士，当面吃掉两名从者。唐僧因本性元明未被吞食，最终由化作老叟的太白金星解救。寅将军开启了取经路真正的妖魔考验，也对应八十一难中的出城逢虎、折从落坑与双叉岭上。",
+  "events": [
+    {
+      "title": "双叉岭陷虎穴",
+      "desc": "寅将军擒住唐僧和两名从者，将三人捆在虎穴中。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "宴请熊牛二怪",
+      "desc": "熊山君、特处士来访，寅将军与二怪分食唐僧的两名从者。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "金星现身解厄",
+      "desc": "太白金星化作老叟解开绳索，引唐僧走出妖穴重上西行路。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["虎啸摄魂", "伏坑擒人", "猛虎真身"],
+  "domains": ["双叉岭", "虎穴"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/yin_jiangjun.webp",
+  "thumb": "/p/xiyou/thumbs/yin_jiangjun.webp"
+}

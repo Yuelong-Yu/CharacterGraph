@@ -1,0 +1,37 @@
+{
+  "schema_version": 3,
+  "id": "te_chushi",
+  "name_zh": "特处士",
+  "name_en": "Squire Te",
+  "aliases": [
+    "特处士",
+    "Squire Te",
+    "野牛精",
+    "胖汉"
+  ],
+  "epithet": "双叉岭野牛处士",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "特处士是双叉岭野牛成精的妖怪，变化成头生双角、身形壮硕的胖汉，以处士自称。他与熊山君一同拜访寅将军，参与虎穴妖宴，笑问唐僧三人是否可以待客，并与两怪分食从者。特处士的文士名号与凶残兽性形成强烈反差，是取经开篇山野妖魔秩序的一员。",
+  "events": [
+    {
+      "title": "与熊山君访虎穴",
+      "desc": "特处士随熊山君进入寅将军洞府，与虎魔寒暄叙话。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "分食唐僧从者",
+      "desc": "特处士参加妖宴，分食被寅将军捕获的两名随从。",
+      "source": {"work": "西游记", "locus": "第十三回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["野牛冲阵", "双角挑击", "野牛真身"],
+  "domains": ["双叉岭", "野牛山场"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/te_chushi.webp",
+  "thumb": "/p/xiyou/thumbs/te_chushi.webp"
+}

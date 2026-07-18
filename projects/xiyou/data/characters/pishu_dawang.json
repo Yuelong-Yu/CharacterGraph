@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "pishu_dawang",
+  "name_zh": "辟暑大王",
+  "name_en": "Heat-Averting King",
+  "aliases": [
+    "辟暑大王",
+    "Heat-Averting King",
+    "辟暑犀牛精",
+    "玄英洞二大王"
+  ],
+  "epithet": "青龙山玄英洞犀牛二王",
+  "category": "demon",
+  "era_layer": 2,
+  "bio": "辟暑大王是玄英洞三只犀牛精中的二王，使用大刀，与辟寒、辟尘合力变化佛像、骗取金平府香油。三怪摄走唐僧后与悟空、八戒、沙僧交战，依靠犀牛角分水逃入西海。四木禽星赶到后，辟暑被擒回金平府，遭悟空处决，犀角被留下作为破邪与进贡之物。",
+  "events": [
+    {
+      "title": "元宵冒充佛像",
+      "desc": "辟暑随两兄弟假扮佛像，在金灯桥收取百姓供奉。",
+      "source": {"work": "西游记", "locus": "第九十一回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "大刀鏖战三僧",
+      "desc": "辟暑持大刀率牛头群妖出战，与悟空三兄弟长时间交锋。",
+      "source": {"work": "西游记", "locus": "第九十一回", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "木禽星擒回金平",
+      "desc": "辟暑逃入西海后被四木禽星擒获，押回金平府伏诛。",
+      "source": {"work": "西游记", "locus": "第九十二回", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["大刀"],
+  "skills": ["暑火犀甲", "假佛变化", "犀角分水"],
+  "domains": ["青龙山", "玄英洞", "金平府"],
+  "mounts": [],
+  "portrait": "/p/xiyou/portraits/pishu_dawang.webp",
+  "thumb": "/p/xiyou/thumbs/pishu_dawang.webp"
+}

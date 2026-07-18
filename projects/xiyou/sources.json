@@ -849,6 +849,70 @@
       "epithet": "被玉兔替换的天竺公主"
     },
     {
+      "slug": "yin_jiangjun",
+      "name_zh": "寅将军",
+      "name_en": "General Yin",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "双叉岭虎穴魔王"
+    },
+    {
+      "slug": "xiong_shanjun",
+      "name_zh": "熊山君",
+      "name_en": "Lord Bear Mountain",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "双叉岭熊罴山君"
+    },
+    {
+      "slug": "te_chushi",
+      "name_zh": "特处士",
+      "name_en": "Squire Te",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "双叉岭野牛处士"
+    },
+    {
+      "slug": "nanshan_dawang",
+      "name_zh": "南山大王",
+      "name_en": "King of the Southern Mountain",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "隐雾山折岳连环洞豹王"
+    },
+    {
+      "slug": "huangshi_jing",
+      "name_zh": "黄狮精",
+      "name_en": "Yellow Lion Demon",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "豹头山虎口洞黄狮大王"
+    },
+    {
+      "slug": "pihan_dawang",
+      "name_zh": "辟寒大王",
+      "name_en": "Cold-Averting King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "青龙山玄英洞犀牛大王"
+    },
+    {
+      "slug": "pishu_dawang",
+      "name_zh": "辟暑大王",
+      "name_en": "Heat-Averting King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "青龙山玄英洞犀牛二王"
+    },
+    {
+      "slug": "pichen_dawang",
+      "name_zh": "辟尘大王",
+      "name_en": "Dust-Averting King",
+      "category": "demon",
+      "era_layer": 2,
+      "epithet": "青龙山玄英洞犀牛三王"
+    },
+    {
       "slug": "tang_taizong",
       "name_zh": "唐太宗",
       "name_en": "Emperor Taizong of Tang",
