@@ -13,6 +13,7 @@ import type { SessionUser } from "@/lib/auth";
 import { fetchSessionUser } from "@/lib/authClient";
 
 export const CHRONCHAOS_AUTH_CHANGE_EVENT = "chronchaos-auth-change";
+export const CHRONCHAOS_OPEN_AUTH_EVENT = "chronchaos-open-auth";
 
 export function ChronChaosNav() {
   const [user, setUser] = useState<SessionUser | null | undefined>(undefined);
@@ -45,6 +46,17 @@ export function ChronChaosNav() {
       window.removeEventListener(CHRONCHAOS_AUTH_CHANGE_EVENT, refresh);
     };
   }, [refreshUser]);
+
+  useEffect(() => {
+    const openLogin = () => {
+      setLoginOpen(true);
+      setRegisterOpen(false);
+      setUserMenuOpen(false);
+      setMessage("");
+    };
+    window.addEventListener(CHRONCHAOS_OPEN_AUTH_EVENT, openLogin);
+    return () => window.removeEventListener(CHRONCHAOS_OPEN_AUTH_EVENT, openLogin);
+  }, []);
 
   useEffect(() => {
     if (!user) {

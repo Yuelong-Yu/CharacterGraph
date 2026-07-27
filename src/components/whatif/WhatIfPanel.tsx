@@ -389,6 +389,7 @@ export function WhatIfPanel({
 
   return (
     <div
+      data-whatif-panel
       style={{
         position: "fixed",
         top: 68,

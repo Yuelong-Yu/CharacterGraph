@@ -8,6 +8,10 @@ import type { Artifact, Dataset, Character } from "@/schemas/character";
 import type { ClientProjectConfig } from "@/schemas/projectConfig";
 import { Graph3D, type LayoutMode } from "./Graph3D";
 import { SearchBox } from "./SearchBox";
+import {
+  MobileGraphView,
+  type MobileCharacterEventItem,
+} from "./MobileGraphView";
 import { Legend } from "./Legend";
 import { WhatIfPanel } from "./whatif/WhatIfPanel";
 import { SessionList } from "./whatif/SessionList";
@@ -97,6 +101,7 @@ function computeMatchedIds(items: SearchEntity[], rawQuery: string): Set<string>
 }
 
 export function GraphShell({ dataset, config }: { dataset: Dataset; config: ClientProjectConfig }) {
+  const mobileViewport = useMobileViewport();
   const allCategoryKeys = useMemo(() => Object.keys(config.characterCategories), [config]);
   const allArtifactCategoryKeys = useMemo(() => Object.keys(config.artifactCategories), [config]);
 
@@ -159,6 +164,37 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [loadedWhatIfSession, setLoadedWhatIfSession] = useState<WhatIfSessionDetail | null>(null);
   const [characterImageAssets, setCharacterImageAssets] = useState<Map<string, CharacterImageAsset>>(new Map());
   const [characterImageJobs, setCharacterImageJobs] = useState<Record<string, CharacterImageJob>>({});
+  const mobileOverlayKind = mobileViewport
+    ? userCharacterEditor
+      ? "editor"
+      : privateBranchBrowserOpen
+        ? "branches"
+        : whatIfConfig && whatIfPanelOpen
+          ? "whatif"
+          : null
+    : null;
+
+  useEffect(() => {
+    if (!mobileOverlayKind) return;
+    if (window.history.state?.characterGraphMobileOverlay !== mobileOverlayKind) {
+      window.history.pushState({ characterGraphMobileOverlay: mobileOverlayKind }, "");
+    }
+    const handleBack = () => {
+      if (mobileOverlayKind === "editor") setUserCharacterEditor(null);
+      if (mobileOverlayKind === "branches") setPrivateBranchBrowserOpen(false);
+      if (mobileOverlayKind === "whatif") dispatchWhatIf({ type: "hide-panel" });
+    };
+    window.addEventListener("popstate", handleBack);
+    return () => window.removeEventListener("popstate", handleBack);
+  }, [mobileOverlayKind]);
+
+  const closeMobileOverlay = useCallback((kind: "editor" | "branches" | "whatif", close: () => void) => {
+    if (mobileViewport && window.history.state?.characterGraphMobileOverlay === kind) {
+      window.history.back();
+      return;
+    }
+    close();
+  }, [mobileViewport]);
 
   useEffect(() => {
     recordsRef.current = userCharacterRecords;
@@ -490,6 +526,23 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       })),
     ];
   }, [character, selectedCharacterAdaptations]);
+  const mobileCharacterEventItems = useMemo<MobileCharacterEventItem[]>(
+    () => selectedMainEventItems.map(({ key, event, adaptation }) => {
+      const userEntry = character
+        ? userEvents[character.id]?.find((entry) => entry.event.title === event.title)
+        : undefined;
+      const other = adaptation
+        ? effectiveDataset.characters.find((item) => item.id === adaptation.otherCharacterId)
+        : null;
+      return {
+        key,
+        event,
+        otherName: other?.name_zh ?? null,
+        shouldContinue: Boolean(userEntry || adaptation || event.source?.work.endsWith("-改编")),
+      };
+    }),
+    [character, effectiveDataset.characters, selectedMainEventItems, userEvents],
+  );
   const artifact = sel.kind === "node"
     ? effectiveDataset.artifacts.find((a) => a.id === sel.id)
     : null;
@@ -535,6 +588,11 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
 
   // 点击边：仅选中，不影响聚焦态
   const handleEdgeClick = (id: string) => setSel({ kind: "edge", id });
+  const handleMobileNodeSelect = useCallback((id: string) => {
+    setSel({ kind: "node", id });
+    setFocusId(id);
+    setFocusedId(null);
+  }, []);
 
   const launchWhatIf = (launchConfig: WhatIfLaunchConfig) => {
     setLoadedWhatIfSession(null);
@@ -557,6 +615,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   };
 
   const handleExitWhatIf = () => {
+    if (mobileViewport && window.history.state?.characterGraphMobileOverlay === "whatif") {
+      window.history.back();
+    }
     setLoadedWhatIfSession(null);
     dispatchWhatIf({ type: "exit" });
     setFocusedId(null);
@@ -647,7 +708,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         throw new Error(`人物已保存，但部分推演待重试：${historyError instanceof Error ? historyError.message : String(historyError)}`);
       }
     }
-    setUserCharacterEditor(null);
+    closeMobileOverlay("editor", () => setUserCharacterEditor(null));
     setSel({ kind: "node", id: persistedRecord.id });
     setFocusId(persistedRecord.id);
     setFocusedId(persistedRecord.id);
@@ -679,7 +740,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       : [];
     if (turnIds.length > 0) setHistoryRefreshVersion((version) => version + 1);
     setDeletedUserCharacter({ record, branchId: activeBranchId, turnIds });
-    setSel({ kind: "none" });
+    if (!mobileViewport) setSel({ kind: "none" });
     setFocusedId(null);
   };
 
@@ -758,6 +819,129 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   // 缓存 set 给 Graph3D 用，避免每次 render 都重建依赖
   const enabledSet = useMemo(() => enabledCategories, [enabledCategories]);
   const enabledArtifactSet = useMemo(() => enabledArtifactCategories, [enabledArtifactCategories]);
+
+  if (mobileViewport === null) {
+    return <div style={{ height: "100%", background: COLOR.bg }} aria-busy="true" />;
+  }
+
+  if (mobileViewport) {
+    const branchLabel = localUserBranchId
+      ? userCharacterScopes.find((scope) => scope.id === localUserBranchId)?.title ?? "用户改编分支"
+      : null;
+    return (
+      <ProjectConfigProvider config={config}>
+        <MobileGraphView
+          dataset={effectiveDataset}
+          config={config}
+          selectedId={sel.kind === "node" ? sel.id : null}
+          onSelectNode={handleMobileNodeSelect}
+          draftQuery={draftQuery}
+          matchedIds={matchedIds}
+          onSearchChange={handleSearchChange}
+          onSearchPick={handleSearchPick}
+          onSearchSubmit={setCommittedQuery}
+          onSearchClear={handleSearchClear}
+          accountUser={accountUser}
+          userCharacterRecords={userCharacterRecords}
+          userEvents={userEvents}
+          characterEventItems={mobileCharacterEventItems}
+          onLaunchWhatIf={(launchConfig) => {
+            if (!accountUser) {
+              window.dispatchEvent(new Event("chronchaos-open-auth"));
+              return;
+            }
+            launchWhatIf({ ...launchConfig, projectSlug: config.slug });
+          }}
+          onAddUserEvent={addUserEvent}
+          onRemoveUserEvent={removeUserEvent}
+          onCreateCharacter={() => accountUser
+            ? setUserCharacterEditor({ editingRecord: null })
+            : window.dispatchEvent(new Event("chronchaos-open-auth"))}
+          onEditCharacter={(record) => setUserCharacterEditor({ editingRecord: record })}
+          onDeleteCharacter={removeUserCharacter}
+          onGenerateCharacterImage={handleGenerateCharacterImage}
+          imageEligible={selectedImageEligible}
+          imageJob={selectedImageJob}
+          branchLabel={branchLabel}
+          onOpenBranches={accountUser ? () => setPrivateBranchBrowserOpen(true) : undefined}
+          onExitBranch={localUserBranchId ? () => void activateLocalUserBranch(null) : undefined}
+          whatIfActive={Boolean(whatIfConfig)}
+          onOpenWhatIf={whatIfConfig ? () => dispatchWhatIf({ type: "show-panel" }) : undefined}
+          onExitWhatIf={whatIfConfig ? handleExitWhatIf : undefined}
+        />
+
+        {deletedUserCharacter && !userCharacterEditor && (
+          <div
+            role="status"
+            style={{
+              position: "fixed",
+              zIndex: 210,
+              left: 14,
+              right: 14,
+              bottom: "max(14px,env(safe-area-inset-bottom))",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: "10px 12px",
+              background: COLOR.bgPanel,
+              border: `1px solid ${COLOR.border}`,
+              boxShadow: "0 10px 30px rgba(0,0,0,.16)",
+            }}
+          >
+            已删除「{deletedUserCharacter.record.character.name_zh}」
+            <button type="button" onClick={undoUserCharacterDelete} style={userEventSecondaryButtonStyle}>撤销</button>
+          </div>
+        )}
+
+        {userCharacterEditor && (
+          <div className="mobile-fullscreen" style={{ zIndex: 190 }}>
+            <div className="mobile-fullscreen-body">
+              <UserCharacterEditor
+                key={`${activeUserScopeId}:${userCharacterEditor.editingRecord?.id ?? "new"}`}
+                dataset={effectiveDataset}
+                config={config}
+                scopeId={activeUserScopeId}
+                editingRecord={userCharacterEditor.editingRecord}
+                onCancel={() => closeMobileOverlay("editor", () => setUserCharacterEditor(null))}
+                onSave={saveUserCharacter}
+              />
+            </div>
+          </div>
+        )}
+
+        {!whatIfConfig && privateBranchBrowserOpen && accountUser && (
+          <div className="mobile-fullscreen" style={{ zIndex: 185 }}>
+            <SessionList
+              projectSlug={config.slug}
+              onLoad={handleLoadPrivateSession}
+              onClose={() => closeMobileOverlay("branches", () => setPrivateBranchBrowserOpen(false))}
+            />
+          </div>
+        )}
+
+        {whatIfConfig && (
+          <WhatIfPanel
+            key={loadedWhatIfSession?.id
+              ?? `${whatIfConfig.characterId}:${whatIfConfig.eventTitle ?? ""}:${whatIfConfig.premise}`}
+            isOpen={whatIfPanelOpen}
+            projectSlug={whatIfConfig.projectSlug}
+            characterId={whatIfConfig.characterId}
+            characterName={whatIfConfig.characterName}
+            eventTitle={whatIfConfig.eventTitle}
+            premise={whatIfConfig.premise}
+            premiseType={whatIfConfig.premiseType}
+            onClose={() => closeMobileOverlay("whatif", () => dispatchWhatIf({ type: "hide-panel" }))}
+            onTurnsChange={handleWhatIfTurnsChange}
+            onActiveBranchChange={handleActiveBranchChange}
+            datasetOverlay={userDatasetOverlay}
+            historyRefreshVersion={historyRefreshVersion}
+            initialSession={loadedWhatIfSession}
+            autoStart={!loadedWhatIfSession}
+          />
+        )}
+      </ProjectConfigProvider>
+    );
+  }
 
   return (
     <ProjectConfigProvider config={config}>
@@ -2036,4 +2220,18 @@ function DegreeSlider({
       </div>
     </div>
   );
+}
+
+function useMobileViewport(): boolean | null {
+  const [mobile, setMobile] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    const query = window.matchMedia("(max-width: 1023px)");
+    const update = () => setMobile(query.matches);
+    update();
+    query.addEventListener("change", update);
+    return () => query.removeEventListener("change", update);
+  }, []);
+
+  return mobile;
 }

@@ -7,6 +7,7 @@ export default function Home() {
 
   return (
     <main
+      className="project-home"
       style={{
         minHeight: "100%",
         background: COLOR.bg,
@@ -18,7 +19,7 @@ export default function Home() {
         padding: "96px 32px",
       }}
     >
-      <header style={{ maxWidth: 1080, width: "100%", marginBottom: 56 }}>
+      <header className="project-home-header" style={{ maxWidth: 1080, width: "100%", marginBottom: 56 }}>
         <div
           style={{
             fontFamily: FONT.mono,
@@ -32,6 +33,7 @@ export default function Home() {
           CharacterGraph
         </div>
         <h1
+          className="project-home-title"
           style={{
             fontFamily: FONT.serif,
             fontSize: 56,
@@ -44,11 +46,12 @@ export default function Home() {
           人物关系图谱
         </h1>
         <p style={{ marginTop: 16, fontSize: 15, color: COLOR.textMuted, maxWidth: 560, lineHeight: 1.7 }}>
-          选择一个图谱进入 3D 关系网络。每个图谱拥有独立的人物、神器、关系与视觉体系。
+          选择一个图谱探索人物关系网络。每个图谱拥有独立的人物、神器、关系与视觉体系。
         </p>
       </header>
 
       <section
+        className="project-home-grid"
         style={{
           maxWidth: 1080,
           width: "100%",
@@ -68,6 +71,22 @@ export default function Home() {
           </Link>
         ))}
       </section>
+      <style>{`
+        @media (max-width: 1023px) {
+          .project-home {
+            align-items: stretch !important;
+            min-height: 100% !important;
+            overflow-y: auto;
+            padding: 40px 18px max(32px,env(safe-area-inset-bottom)) !important;
+          }
+          .project-home-header { margin-bottom: 28px !important; }
+          .project-home-title { font-size: clamp(38px,12vw,48px) !important; }
+          .project-home-grid {
+            grid-template-columns: minmax(0,1fr) !important;
+            gap: 16px !important;
+          }
+        }
+      `}</style>
     </main>
   );
 }

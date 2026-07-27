@@ -88,6 +88,8 @@ interface Props {
   totalCount: number;
   /** 为右上角同排操作预留的空间。 */
   rightOffset?: number;
+  /** 移动卡片工具栏内嵌布局。 */
+  mobile?: boolean;
 }
 
 export function SearchBox({
@@ -101,6 +103,7 @@ export function SearchBox({
   appliedCount,
   totalCount,
   rightOffset = 16,
+  mobile = false,
 }: Props) {
   const { config, characterCategoryColor, artifactCategoryColor } = useProjectConfig();
   const [focused, setFocused] = useState(false);
@@ -146,12 +149,14 @@ export function SearchBox({
     <div
       ref={wrapperRef}
       style={{
-        position: "absolute",
-        top: 16,
-        left: 16,
-        right: rightOffset,
-        maxWidth: 480,
-        zIndex: 20,
+        position: mobile ? "relative" : "absolute",
+        top: mobile ? undefined : 16,
+        left: mobile ? undefined : 16,
+        right: mobile ? undefined : rightOffset,
+        maxWidth: mobile ? "none" : 480,
+        minWidth: 0,
+        flex: mobile ? 1 : undefined,
+        zIndex: mobile ? 80 : 20,
       }}
     >
       <div style={{ position: "relative" }}>
@@ -165,7 +170,9 @@ export function SearchBox({
           style={{
             width: "100%",
             boxSizing: "border-box",
-            padding: filterApplied ? "10px 180px 10px 14px" : "10px 14px",
+            padding: filterApplied
+              ? mobile ? "10px 92px 10px 14px" : "10px 180px 10px 14px"
+              : "10px 14px",
             background: "oklch(99% 0 0 / 0.94)",
             border: `1px solid ${filterApplied ? COLOR.accent : COLOR.border}`,
             borderRadius: 8,
@@ -203,7 +210,7 @@ export function SearchBox({
               whiteSpace: "nowrap",
             }}
           >
-            <span>{appliedCount} / {totalCount} 已应用</span>
+            <span>{mobile ? `${appliedCount} 已应用` : `${appliedCount} / ${totalCount} 已应用`}</span>
             <button
               onClick={() => {
                 onClear();
