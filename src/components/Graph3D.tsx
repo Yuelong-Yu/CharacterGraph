@@ -25,6 +25,7 @@ import { isGraphNodeVisible } from "@/lib/graphVisibility";
 import { resolveNodeChange, type WhatIfNodeChange } from "@/lib/whatif/graphView";
 import { COLOR, FONT } from "@/lib/tokens";
 import { useProjectConfig } from "@/lib/projectConfig";
+import { buildTourSequence, type TourTraversalMode } from "@/lib/tourTraversal";
 
 // SSR off — three.js 只能在浏览器
 const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), { ssr: false });
@@ -277,6 +278,8 @@ interface Props {
   matchedIds: Set<string> | null;
   /** 自动旋转 + 轮播巡游 */
   autoTour: boolean;
+  /** 自动巡游的图遍历算法 */
+  tourTraversalMode: TourTraversalMode;
   onNodeSelect?: (id: string) => void;
   onEdgeSelect?: (id: string) => void;
   onBackgroundClick?: () => void;
@@ -318,6 +321,7 @@ export function Graph3D({
   minDegree,
   matchedIds,
   autoTour,
+  tourTraversalMode,
   onNodeSelect,
   onEdgeSelect,
   onBackgroundClick,
@@ -1028,18 +1032,7 @@ export function Graph3D({
   // 过滤平铺态下也暂停巡游(避免镜头旋转脱离俯视)
   const tourActive = autoTour && initialFitReady && !tourPaused && !focusedId && !matchedIds;
 
-  // 邻接表：用于 DFS 巡游
-  const adjacency = useMemo(() => {
-    const m = new Map<string, Set<string>>();
-    for (const c of dataset.characters) m.set(c.id, new Set());
-    for (const r of dataset.relations) {
-      m.get(r.source)?.add(r.target);
-      m.get(r.target)?.add(r.source);
-    }
-    return m;
-  }, [dataset]);
-
-  // 可见节点 id 集合（用于巡游和 DFS 过滤）
+  // 可见节点 id 集合（用于巡游过滤）
   // 三层 AND:类别 ∧ 度数 ∧ (无搜索 / 在命中集中)
   const visibleIdSet = useMemo(() => {
     return new Set(
@@ -1055,57 +1048,16 @@ export function Graph3D({
     );
   }, [nodes, enabledCategories, enabledArtifactCategories, minDegree, degreeMap, matchedIds]);
 
-  // 巡游序列：从度数最高的节点开始，DFS 遍历可见连通分量；多个分量按度数降序衔接
+  // 巡游序列：从度数最高的节点开始，按所选算法遍历；多个分量按度数降序衔接
   const tourSequence = useMemo<GraphNode[]>(() => {
-    const visible = nodes.filter((n) => visibleIdSet.has(n.id));
-    if (visible.length === 0) return [];
-
-    // 按度数降序排序（度数相同时按 era_layer 再按 id 稳定排序）
-    const byDegree = [...visible].sort((a, b) => {
-      const da = degreeMap.get(a.id) ?? 0;
-      const db = degreeMap.get(b.id) ?? 0;
-      if (db !== da) return db - da;
-      const eraA = a.kind === "character" ? a.entity.era_layer : a.eraLayer;
-      const eraB = b.kind === "character" ? b.entity.era_layer : b.eraLayer;
-      if (eraA !== eraB) return eraA - eraB;
-      return a.id.localeCompare(b.id);
+    return buildTourSequence({
+      nodes,
+      relations: dataset.relations,
+      visibleIds: visibleIdSet,
+      degreeById: degreeMap,
+      mode: tourTraversalMode,
     });
-
-    const seen = new Set<string>();
-    const order: GraphNode[] = [];
-    const nodeById = new Map(nodes.map((n) => [n.id, n]));
-
-    // DFS：每次进入新节点时把所有可见邻居按度数降序压栈
-    const dfs = (startId: string) => {
-      const stack: string[] = [startId];
-      while (stack.length > 0) {
-        const id = stack.pop()!;
-        if (seen.has(id)) continue;
-        if (!visibleIdSet.has(id)) continue;
-        seen.add(id);
-        const node = nodeById.get(id);
-        if (node) order.push(node);
-
-        const neighbors = Array.from(adjacency.get(id) ?? new Set<string>())
-          .filter((nid) => visibleIdSet.has(nid) && !seen.has(nid))
-          // 升序排序后压栈 → 弹栈时按降序（度数最高的先访问）
-          .sort((a, b) => {
-            const da = degreeMap.get(a) ?? 0;
-            const db = degreeMap.get(b) ?? 0;
-            if (da !== db) return da - db;
-            return b.localeCompare(a);
-          });
-        for (const nid of neighbors) stack.push(nid);
-      }
-    };
-
-    // 主循环：按度数降序的种子节点逐个启动 DFS（处理多个连通分量）
-    for (const seed of byDegree) {
-      if (!seen.has(seed.id)) dfs(seed.id);
-    }
-
-    return order;
-  }, [nodes, visibleIdSet, adjacency, degreeMap]);
+  }, [nodes, dataset.relations, visibleIdSet, degreeMap, tourTraversalMode]);
 
   useEffect(() => {
     const priorityUrls = tourSequence.slice(0, 12).map((n) => n.entity.thumb);
@@ -1143,6 +1095,10 @@ export function Graph3D({
 
   // 轮播：每 3 秒切到下一个可见节点放大
   const [tourIndex, setTourIndex] = useState(0);
+  useEffect(() => {
+    setTourIndex(0);
+  }, [tourTraversalMode]);
+
   useEffect(() => {
     if (!tourActive || tourSequence.length === 0) return;
 

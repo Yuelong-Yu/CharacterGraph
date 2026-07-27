@@ -22,6 +22,7 @@ import {
 import { ProjectConfigProvider } from "@/lib/projectConfig";
 import { COLOR, FONT } from "@/lib/tokens";
 import { entityMatchesSearch } from "@/lib/searchMatch";
+import type { TourTraversalMode } from "@/lib/tourTraversal";
 import { applyCharacterImageOverrides } from "@/lib/characterImages";
 import {
   fetchCharacterImageAssets,
@@ -112,6 +113,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [minDegree, setMinDegree] = useState<number>(0);
   // 加载即进入巡游模式
   const [autoTour, setAutoTour] = useState<boolean>(true);
+  const [tourTraversalMode, setTourTraversalMode] =
+    useState<TourTraversalMode>("breadth-first");
 
   // 搜索:draft = 输入中,committed = 已回车应用的 query
   // committed !== "" 时,Graph3D 进入"过滤平铺"态(filterMode)
@@ -904,7 +907,12 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
         <LayoutToggle value={layoutMode} onChange={setLayoutMode} />
         {!isWhatIfChangeView && (
           <>
-            <AutoTourToggle value={autoTour} onChange={setAutoTour} />
+            <AutoTourToggle
+              value={autoTour}
+              onChange={setAutoTour}
+              traversalMode={tourTraversalMode}
+              onTraversalModeChange={setTourTraversalMode}
+            />
             <DegreeSlider
               value={minDegree}
               max={degreeInfo.max}
@@ -931,6 +939,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           minDegree={minDegree}
           matchedIds={isWhatIfChangeView ? null : matchedIds}
           autoTour={isWhatIfChangeView ? false : autoTour}
+          tourTraversalMode={tourTraversalMode}
           onNodeSelect={handleNodeClick}
           onEdgeSelect={handleEdgeClick}
           onBackgroundClick={handleBackground}
@@ -1788,9 +1797,43 @@ function ToggleBtn({
 function AutoTourToggle({
   value,
   onChange,
-}: { value: boolean; onChange: (v: boolean) => void }) {
+  traversalMode,
+  onTraversalModeChange,
+}: {
+  value: boolean;
+  onChange: (v: boolean) => void;
+  traversalMode: TourTraversalMode;
+  onTraversalModeChange: (mode: TourTraversalMode) => void;
+}) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const handleOutsideClick = (event: PointerEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) setMenuOpen(false);
+    };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    document.addEventListener("pointerdown", handleOutsideClick);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("pointerdown", handleOutsideClick);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, [menuOpen]);
+
+  const traversalOptions: Array<{ mode: TourTraversalMode; label: string }> = [
+    { mode: "breadth-first", label: "广度优先（BFS）" },
+    { mode: "depth-first", label: "深度优先（DFS）" },
+  ];
+
   return (
     <div
+      ref={containerRef}
       style={{
         position: "absolute",
         bottom: 20,
@@ -1828,6 +1871,75 @@ function AutoTourToggle({
         <span style={{ fontSize: 10 }}>{value ? "●" : "○"}</span>
         {value ? "自动巡游中" : "开始自动巡游"}
       </button>
+      <button
+        onClick={() => setMenuOpen((open) => !open)}
+        title="选择巡游算法"
+        aria-label="选择巡游算法"
+        aria-haspopup="menu"
+        aria-expanded={menuOpen}
+        style={{
+          width: 30,
+          padding: 0,
+          background: "transparent",
+          color: COLOR.textMuted,
+          border: "none",
+          borderRadius: 5,
+          fontSize: 10,
+          fontFamily: FONT.sans,
+          cursor: "pointer",
+        }}
+      >
+        ▲
+      </button>
+      {menuOpen && (
+        <div
+          role="menu"
+          style={{
+            position: "absolute",
+            right: 4,
+            bottom: "calc(100% + 6px)",
+            minWidth: 152,
+            padding: 4,
+            background: "oklch(99% 0 0 / 0.98)",
+            border: `1px solid ${COLOR.border}`,
+            borderRadius: 8,
+            boxShadow: "0 6px 20px rgba(0,0,0,0.12)",
+          }}
+        >
+          {traversalOptions.map((option) => {
+            const selected = option.mode === traversalMode;
+            return (
+              <button
+                key={option.mode}
+                role="menuitem"
+                onClick={() => {
+                  onTraversalModeChange(option.mode);
+                  setMenuOpen(false);
+                }}
+                style={{
+                  width: "100%",
+                  padding: "8px 10px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                  background: selected ? COLOR.bgPanel : "transparent",
+                  color: COLOR.text,
+                  border: "none",
+                  borderRadius: 5,
+                  fontSize: 12,
+                  fontFamily: FONT.sans,
+                  textAlign: "left",
+                  cursor: "pointer",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                <span style={{ width: 12 }}>{selected ? "✓" : ""}</span>
+                {option.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
