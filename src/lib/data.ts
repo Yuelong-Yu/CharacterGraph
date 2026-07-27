@@ -12,6 +12,7 @@ import path from "node:path";
 import { Artifact, Character, Relation, Dataset, SCHEMA_VERSION } from "@/schemas/character";
 import { ProjectConfig, ClientProjectConfig } from "@/schemas/projectConfig";
 import { withBasePath } from "@/lib/basePath";
+import { versionFileUrl } from "@/lib/contentVersion";
 
 const PROJECTS_DIR = path.join(process.cwd(), "projects");
 
@@ -30,6 +31,20 @@ export interface LoadedProject {
 
 function projectDir(slug: string): string {
   return path.join(PROJECTS_DIR, slug);
+}
+
+function versionProjectAsset(slug: string, assetUrl: string): string {
+  const publicPrefix = `/p/${slug}/`;
+  const parsed = new URL(assetUrl, "https://charactergraph.local");
+  if (!parsed.pathname.startsWith(publicPrefix)) return withBasePath(assetUrl);
+
+  const imagesDir = path.resolve(projectDir(slug), "images");
+  const filePath = path.resolve(imagesDir, parsed.pathname.slice(publicPrefix.length));
+  if (!filePath.startsWith(`${imagesDir}${path.sep}`)) {
+    throw new Error(`项目图片路径越界: ${assetUrl}`);
+  }
+
+  return withBasePath(versionFileUrl(assetUrl, filePath));
 }
 
 /** 扫 projects/*,返回非 draft 项目摘要(用于首页卡片墙 + generateStaticParams) */
@@ -52,7 +67,7 @@ export function listProjects(): ProjectSummary[] {
       title: config.title,
       subtitle: config.subtitle ?? null,
       order: config.order,
-      cover: coverExists ? withBasePath(`/p/${slug}/cover.webp`) : null,
+      cover: coverExists ? versionProjectAsset(slug, `/p/${slug}/cover.webp`) : null,
     });
   }
   return summaries.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));
@@ -70,13 +85,13 @@ export function loadDataset(slug: string): LoadedProject {
 
   const characters = loadCharacters(base).map((character) => ({
     ...character,
-    portrait: withBasePath(character.portrait),
-    thumb: withBasePath(character.thumb),
+    portrait: versionProjectAsset(slug, character.portrait),
+    thumb: versionProjectAsset(slug, character.thumb),
   }));
   const artifacts = loadArtifacts(base).map((artifact) => ({
     ...artifact,
-    portrait: withBasePath(artifact.portrait),
-    thumb: withBasePath(artifact.thumb),
+    portrait: versionProjectAsset(slug, artifact.portrait),
+    thumb: versionProjectAsset(slug, artifact.thumb),
   }));
   const relations = loadRelations(base);
 
