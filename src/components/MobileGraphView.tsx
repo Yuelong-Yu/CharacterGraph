@@ -5,6 +5,7 @@ import {
   useMemo,
   useRef,
   useState,
+  type ImgHTMLAttributes,
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from "react";
@@ -75,6 +76,66 @@ function nodeImage(node: MobileNode): string {
   return node.entity.portrait || node.entity.thumb;
 }
 
+function MobileCardImage({
+  node,
+  alt,
+}: {
+  node: MobileNode;
+  alt: string;
+}) {
+  const portrait = node.entity.portrait;
+  const fallback = node.entity.thumb || portrait;
+  const hasProgressivePortrait = Boolean(portrait && fallback && portrait !== fallback);
+  const [portraitReady, setPortraitReady] = useState(!hasProgressivePortrait);
+  const portraitRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    setPortraitReady(!hasProgressivePortrait);
+    const image = portraitRef.current;
+    if (hasProgressivePortrait && image?.complete && image.naturalWidth > 0) {
+      setPortraitReady(true);
+    }
+  }, [hasProgressivePortrait, portrait]);
+
+  if (!fallback) {
+    return <span className="mobile-card-placeholder">{node.entity.name_zh.slice(0, 1)}</span>;
+  }
+
+  const eagerImageProps: Pick<
+    ImgHTMLAttributes<HTMLImageElement>,
+    "decoding" | "draggable" | "loading"
+  > = {
+    decoding: "async",
+    draggable: false,
+    loading: "eager",
+  };
+
+  return (
+    <>
+      {/* The tiny node-specific thumb replaces the previous card immediately. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        {...eagerImageProps}
+        className="mobile-card-image mobile-card-image-fallback"
+        src={fallback}
+        alt={hasProgressivePortrait ? "" : alt}
+        aria-hidden={hasProgressivePortrait || undefined}
+      />
+      {hasProgressivePortrait && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          {...eagerImageProps}
+          ref={portraitRef}
+          className={`mobile-card-image mobile-card-image-portrait${portraitReady ? " is-ready" : ""}`}
+          src={portrait}
+          alt={alt}
+          onLoad={() => setPortraitReady(true)}
+        />
+      )}
+    </>
+  );
+}
+
 export function MobileGraphView({
   dataset,
   config,
@@ -134,6 +195,7 @@ export function MobileGraphView({
   const gestureRef = useRef<{ x: number; y: number; startedInIdentity: boolean } | null>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const transitionTimerRef = useRef<number | null>(null);
+  const preloadCacheRef = useRef(new Map<string, HTMLImageElement>());
   const initializedRef = useRef(false);
   const previousSelectedRef = useRef<string | null>(selectedId);
   const previousDeckIndexRef = useRef(0);
@@ -189,13 +251,31 @@ export function MobileGraphView({
   useEffect(() => {
     if (!selectedId || deck.length === 0) return;
     const index = Math.max(0, deck.findIndex((node) => node.id === selectedId));
-    for (const offset of [-1, 0, 1]) {
-      const node = deck[(index + offset + deck.length) % deck.length];
-      const url = node ? nodeImage(node) : "";
-      if (!url) continue;
+    const desiredUrls = new Set<string>();
+    const queue = (url: string) => {
+      if (!url || desiredUrls.has(url)) return;
+      desiredUrls.add(url);
+      if (preloadCacheRef.current.has(url)) return;
       const image = new Image();
       image.decoding = "async";
       image.src = url;
+      preloadCacheRef.current.set(url, image);
+      void image.decode?.().catch(() => {
+        // Rendering still falls back to the regular load event.
+      });
+    };
+
+    for (const offset of [-3, -2, -1, 0, 1, 2, 3]) {
+      const node = deck[(index + offset + deck.length) % deck.length];
+      if (node?.entity.thumb) queue(node.entity.thumb);
+    }
+    for (const offset of [-1, 0, 1]) {
+      const node = deck[(index + offset + deck.length) % deck.length];
+      if (node) queue(nodeImage(node));
+    }
+
+    for (const url of preloadCacheRef.current.keys()) {
+      if (!desiredUrls.has(url)) preloadCacheRef.current.delete(url);
     }
   }, [deck, selectedId]);
 
@@ -458,12 +538,11 @@ export function MobileGraphView({
           }}
         >
           <div className="mobile-card-portrait-frame">
-            {nodeImage(activeNode) ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={nodeImage(activeNode)} alt={activeNode.entity.name_zh} draggable={false} />
-            ) : (
-              <span className="mobile-card-placeholder">{activeNode.entity.name_zh.slice(0, 1)}</span>
-            )}
+            <MobileCardImage
+              key={activeNode.id}
+              node={activeNode}
+              alt={activeNode.entity.name_zh}
+            />
           </div>
         </div>
         {incomingNode && incomingNode.id !== activeNode.id && (
@@ -478,12 +557,11 @@ export function MobileGraphView({
             }}
           >
             <div className="mobile-card-portrait-frame">
-              {nodeImage(incomingNode) ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img src={nodeImage(incomingNode)} alt="" draggable={false} />
-              ) : (
-                <span className="mobile-card-placeholder">{incomingNode.entity.name_zh.slice(0, 1)}</span>
-              )}
+              <MobileCardImage
+                key={incomingNode.id}
+                node={incomingNode}
+                alt=""
+              />
             </div>
           </div>
         )}

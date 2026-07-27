@@ -100,14 +100,25 @@
   justify-content: center;
   max-width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
-.mobile-card-portrait-frame img {
+.mobile-card-image {
   display: block;
   height: 100%;
+  inset: 0;
   object-fit: contain;
+  position: absolute;
   width: 100%;
 }
+
+.mobile-card-image-fallback { z-index: 1; }
+.mobile-card-image-portrait {
+  opacity: 0;
+  transition: opacity 120ms ease;
+  z-index: 2;
+}
+.mobile-card-image-portrait.is-ready { opacity: 1; }
 
 .mobile-card-placeholder {
   color: var(--mobile-muted);
@@ -342,7 +353,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .mobile-card-portrait,.mobile-detail-sheet { transition: none; }
+  .mobile-card-image-portrait,.mobile-card-portrait,.mobile-detail-sheet { transition: none; }
   .mobile-tutorial-hand { animation: none; }
 }
 
