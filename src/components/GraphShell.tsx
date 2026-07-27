@@ -1746,7 +1746,7 @@ function LayoutToggle({
       style={{
         position: "absolute",
         bottom: 20,
-        left: 20,
+        left: 68,
         zIndex: 20,
         background: "oklch(99% 0 0 / 0.92)",
         border: `1px solid ${COLOR.border}`,
@@ -1837,7 +1837,7 @@ function AutoTourToggle({
       style={{
         position: "absolute",
         bottom: 20,
-        left: 220,
+        left: 324,
         zIndex: 20,
         background: "oklch(99% 0 0 / 0.92)",
         border: `1px solid ${COLOR.border}`,
