@@ -75,9 +75,13 @@ export default function Home() {
         @media (max-width: 1023px) {
           .project-home {
             align-items: stretch !important;
-            min-height: 100% !important;
+            box-sizing: border-box;
+            height: 100% !important;
+            min-height: 0 !important;
             overflow-y: auto;
+            overscroll-behavior-y: contain;
             padding: 40px 18px max(32px,env(safe-area-inset-bottom)) !important;
+            -webkit-overflow-scrolling: touch;
           }
           .project-home-header { margin-bottom: 28px !important; }
           .project-home-title { font-size: clamp(38px,12vw,48px) !important; }

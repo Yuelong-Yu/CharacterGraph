@@ -78,12 +78,15 @@
 .mobile-card-portrait {
   align-items: center;
   display: flex;
-  height: 100%;
+  inset: 0;
   justify-content: center;
+  position: absolute;
   transition: opacity 160ms ease,transform 180ms ease;
-  width: 100%;
   will-change: transform;
+  z-index: 2;
 }
+
+.mobile-card-incoming { pointer-events: none; z-index: 1; }
 
 .mobile-card-portrait-frame {
   align-items: center;
