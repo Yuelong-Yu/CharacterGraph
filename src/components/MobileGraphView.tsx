@@ -12,6 +12,11 @@ import {
 
 import type { SessionUser } from "@/lib/auth";
 import { buildMobileDeck, filterMobileDeck, moveInMobileDeck } from "@/lib/mobileDeck";
+import {
+  lockMobileSwipeAxis,
+  resolveMobileCardSwipe,
+  type MobileSwipeAxis,
+} from "@/lib/mobileSwipe";
 import type { UserCharacterRecord } from "@/lib/userCharacters";
 import type { UserEventsByCharacter } from "@/lib/userEvents";
 import type { WhatIfLaunchConfig } from "@/lib/whatif/workspaceState";
@@ -68,9 +73,23 @@ interface Props {
   onExitWhatIf?: () => void;
 }
 
-const SWIPE_THRESHOLD = 56;
-const SWIPE_TRANSITION_MS = 190;
+const SWIPE_TRANSITION_MS = 220;
+const IDENTITY_TRANSITION_MS = 150;
 const SHEET_THRESHOLD = 52;
+
+type MobileGesture =
+  | {
+      axis: MobileSwipeAxis;
+      kind: "card";
+      startedAt: number;
+      x: number;
+      y: number;
+    }
+  | {
+      kind: "identity";
+      x: number;
+      y: number;
+    };
 
 function nodeImage(node: MobileNode): string {
   return node.entity.portrait || node.entity.thumb;
@@ -186,20 +205,24 @@ export function MobileGraphView({
   const activeNode = selectedId ? nodeById.get(selectedId) ?? null : null;
   const [expanded, setExpanded] = useState(false);
   const [relationId, setRelationId] = useState<string | null>(null);
-  const [dragX, setDragX] = useState(0);
+  const [dragY, setDragY] = useState(0);
   const [sheetDragY, setSheetDragY] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
   const [transitionDirection, setTransitionDirection] = useState<-1 | 1 | null>(null);
   const [dragging, setDragging] = useState(false);
   const [tutorialOpen, setTutorialOpen] = useState(false);
-  const gestureRef = useRef<{ x: number; y: number; startedInIdentity: boolean } | null>(null);
+  const [identityOutgoingNode, setIdentityOutgoingNode] = useState<MobileNode | null>(null);
+  const gestureRef = useRef<MobileGesture | null>(null);
+  const cardFrameRef = useRef<HTMLDivElement>(null);
+  const cardStageRef = useRef<HTMLDivElement>(null);
   const sheetRef = useRef<HTMLDivElement>(null);
   const transitionTimerRef = useRef<number | null>(null);
+  const identityTimerRef = useRef<number | null>(null);
   const preloadCacheRef = useRef(new Map<string, HTMLImageElement>());
   const initializedRef = useRef(false);
   const previousSelectedRef = useRef<string | null>(selectedId);
   const previousDeckIndexRef = useRef(0);
-  const tutorialKey = `character-graph:${config.slug}:mobile-gesture-tutorial:v1`;
+  const tutorialKey = `character-graph:${config.slug}:mobile-gesture-tutorial:v2`;
   const lastNodeKey = `character-graph:${config.slug}:mobile-last-node:v1`;
 
   useEffect(() => {
@@ -301,6 +324,7 @@ export function MobileGraphView({
 
   useEffect(() => () => {
     if (transitionTimerRef.current !== null) window.clearTimeout(transitionTimerRef.current);
+    if (identityTimerRef.current !== null) window.clearTimeout(identityTimerRef.current);
   }, []);
 
   const openDetails = () => {
@@ -335,19 +359,33 @@ export function MobileGraphView({
     if (expanded || transitioning) return;
     const next = moveInMobileDeck(deck, selectedId, direction);
     if (!next || next.id === selectedId) {
-      setDragX(0);
+      setDragY(0);
       return;
     }
+    const cardHeight = Math.max(
+      1,
+      cardFrameRef.current?.clientHeight
+        ?? cardStageRef.current?.clientHeight
+        ?? window.innerHeight,
+    );
+    const reducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    const transitionMs = reducedMotion ? 0 : SWIPE_TRANSITION_MS;
     setTransitioning(true);
     setTransitionDirection(direction);
-    setDragX(direction > 0 ? -window.innerWidth : window.innerWidth);
+    setDragY(direction > 0 ? -cardHeight : cardHeight);
     transitionTimerRef.current = window.setTimeout(() => {
+      setIdentityOutgoingNode(reducedMotion ? null : activeNode);
       onSelectNode(next.id);
       setTransitioning(false);
       setTransitionDirection(null);
-      setDragX(0);
+      setDragY(0);
       transitionTimerRef.current = null;
-    }, SWIPE_TRANSITION_MS);
+      if (identityTimerRef.current !== null) window.clearTimeout(identityTimerRef.current);
+      identityTimerRef.current = window.setTimeout(() => {
+        setIdentityOutgoingNode(null);
+        identityTimerRef.current = null;
+      }, reducedMotion ? 0 : IDENTITY_TRANSITION_MS);
+    }, transitionMs);
   };
 
   const handlePointerDown = (event: ReactPointerEvent<HTMLElement>) => {
@@ -359,18 +397,27 @@ export function MobileGraphView({
       setDragging(false);
       return;
     }
+    const startedInCard = Boolean(target.closest("[data-mobile-card]"));
     const startedInIdentity = Boolean(target.closest("[data-mobile-identity]"));
-    if (expanded && !startedInIdentity) {
+    if ((!startedInCard && !startedInIdentity) || (expanded && !startedInIdentity)) {
       gestureRef.current = null;
       setDragging(false);
       return;
     }
     setDragging(true);
-    gestureRef.current = {
-      x: event.clientX,
-      y: event.clientY,
-      startedInIdentity,
-    };
+    gestureRef.current = startedInCard
+      ? {
+          axis: "pending",
+          kind: "card",
+          startedAt: event.timeStamp,
+          x: event.clientX,
+          y: event.clientY,
+        }
+      : {
+          kind: "identity",
+          x: event.clientX,
+          y: event.clientY,
+        };
     event.currentTarget.setPointerCapture?.(event.pointerId);
   };
   const handlePointerMove = (event: ReactPointerEvent<HTMLElement>) => {
@@ -378,15 +425,24 @@ export function MobileGraphView({
     if (!start) return;
     const dx = event.clientX - start.x;
     const dy = event.clientY - start.y;
-    if (start.startedInIdentity && Math.abs(dy) > Math.abs(dx) + 8) {
+    if (start.kind === "identity" && Math.abs(dy) > Math.abs(dx) + 8) {
       if (!expanded && dy < 0) setSheetDragY(Math.max(dy, -220));
       if (expanded && dy > 0 && (sheetRef.current?.scrollTop ?? 0) <= 0) {
         setSheetDragY(Math.min(dy, 260));
       }
       return;
     }
-    if (expanded) return;
-    if (Math.abs(dx) > Math.abs(dy) + 8) setDragX(dx);
+    if (start.kind !== "card" || expanded) return;
+    if (start.axis === "pending") start.axis = lockMobileSwipeAxis({ dx, dy });
+    if (start.axis !== "vertical") return;
+    if (event.cancelable) event.preventDefault();
+    const cardHeight = Math.max(
+      1,
+      cardFrameRef.current?.clientHeight
+        ?? cardStageRef.current?.clientHeight
+        ?? window.innerHeight,
+    );
+    setDragY(Math.max(-cardHeight, Math.min(cardHeight, dy)));
   };
   const handlePointerUp = (event: ReactPointerEvent<HTMLElement>) => {
     const start = gestureRef.current;
@@ -398,25 +454,45 @@ export function MobileGraphView({
     }
     const dx = event.clientX - start.x;
     const dy = event.clientY - start.y;
-    if (!expanded && Math.abs(dx) >= SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
-      move(dx < 0 ? 1 : -1);
+    if (start.kind === "card" && !expanded) {
+      const axis = start.axis === "pending"
+        ? lockMobileSwipeAxis({ dx, dy })
+        : start.axis;
+      const direction = resolveMobileCardSwipe({
+        axis,
+        dx,
+        dy,
+        elapsedMs: event.timeStamp - start.startedAt,
+        stageHeight: Math.max(
+          1,
+          cardFrameRef.current?.clientHeight
+            ?? cardStageRef.current?.clientHeight
+            ?? window.innerHeight,
+        ),
+      });
+      if (direction !== 0) {
+        move(direction);
+        return;
+      }
+      setDragY(0);
+      setSheetDragY(0);
       return;
     }
-    if (!expanded && start.startedInIdentity && dy <= -SHEET_THRESHOLD) {
-      setDragX(0);
+    if (!expanded && start.kind === "identity" && dy <= -SHEET_THRESHOLD) {
+      setDragY(0);
       setSheetDragY(0);
       openDetails();
       return;
     }
     if (
       expanded
-      && start.startedInIdentity
+      && start.kind === "identity"
       && dy >= SHEET_THRESHOLD
       && (sheetRef.current?.scrollTop ?? 0) <= 0
     ) {
       closeDetails();
     }
-    setDragX(0);
+    setDragY(0);
     setSheetDragY(0);
   };
 
@@ -456,12 +532,17 @@ export function MobileGraphView({
     ],
     [dataset.artifacts, dataset.characters],
   );
-  const cardWidth = windowWidth();
-  const swipeDirection = transitionDirection ?? (dragX < 0 ? 1 : dragX > 0 ? -1 : null);
+  const cardHeight = Math.max(
+    1,
+    cardFrameRef.current?.clientHeight
+      ?? cardStageRef.current?.clientHeight
+      ?? windowHeight(),
+  );
+  const swipeDirection = transitionDirection ?? (dragY < 0 ? 1 : dragY > 0 ? -1 : null);
   const incomingNode = swipeDirection
     ? moveInMobileDeck(deck, selectedId, swipeDirection)
     : null;
-  const incomingX = swipeDirection ? dragX + swipeDirection * cardWidth : 0;
+  const incomingY = swipeDirection ? dragY + swipeDirection * cardHeight : 0;
 
   if (!activeNode) {
     return (
@@ -483,7 +564,7 @@ export function MobileGraphView({
       onPointerCancel={() => {
         gestureRef.current = null;
         setDragging(false);
-        setDragX(0);
+        setDragY(0);
         setSheetDragY(0);
       }}
     >
@@ -527,17 +608,16 @@ export function MobileGraphView({
         </div>
       )}
 
-      <div className="mobile-card-stage">
+      <div ref={cardStageRef} className="mobile-card-stage">
         <div
-          className="mobile-card-portrait"
+          className={`mobile-card-portrait${transitioning ? " is-transitioning" : ""}`}
           data-swipe-card="active"
           style={{
-            transform: `translate3d(${dragX}px,0,0) rotate(${dragX / 45}deg)`,
-            opacity: Math.max(0.25, 1 - Math.abs(dragX) / Math.max(260, cardWidth)),
-            transition: dragging ? "none" : undefined,
+            transform: `translate3d(0,${dragY}px,0)`,
+            transition: dragging && gestureRef.current?.kind === "card" ? "none" : undefined,
           }}
         >
-          <div className="mobile-card-portrait-frame">
+          <div ref={cardFrameRef} className="mobile-card-portrait-frame" data-mobile-card>
             <MobileCardImage
               key={activeNode.id}
               node={activeNode}
@@ -548,12 +628,11 @@ export function MobileGraphView({
         {incomingNode && incomingNode.id !== activeNode.id && (
           <div
             aria-hidden="true"
-            className="mobile-card-portrait mobile-card-incoming"
+            className={`mobile-card-portrait mobile-card-incoming${transitioning ? " is-transitioning" : ""}`}
             data-swipe-card="incoming"
             style={{
-              transform: `translate3d(${incomingX}px,0,0) rotate(${incomingX / 45}deg)`,
-              opacity: Math.max(0.25, 1 - Math.abs(incomingX) / Math.max(260, cardWidth)),
-              transition: dragging ? "none" : undefined,
+              transform: `translate3d(0,${incomingY}px,0)`,
+              transition: dragging && gestureRef.current?.kind === "card" ? "none" : undefined,
             }}
           >
             <div className="mobile-card-portrait-frame">
@@ -581,8 +660,26 @@ export function MobileGraphView({
           onClick={() => { if (!expanded) openDetails(); }}
         >
           <div className="mobile-detail-handle" />
-          <div className="mobile-detail-name">{activeNode.entity.name_zh}</div>
-          {activeNode.entity.epithet && <div className="mobile-detail-epithet">{activeNode.entity.epithet}</div>}
+          <div className="mobile-detail-identity-copy">
+            <div
+              key={activeNode.id}
+              className="mobile-detail-identity-content mobile-detail-identity-content-in"
+            >
+              <div className="mobile-detail-name">{activeNode.entity.name_zh}</div>
+              {activeNode.entity.epithet && <div className="mobile-detail-epithet">{activeNode.entity.epithet}</div>}
+            </div>
+            {identityOutgoingNode && identityOutgoingNode.id !== activeNode.id && (
+              <div
+                aria-hidden="true"
+                className="mobile-detail-identity-content mobile-detail-identity-content-out"
+              >
+                <div className="mobile-detail-name">{identityOutgoingNode.entity.name_zh}</div>
+                {identityOutgoingNode.entity.epithet && (
+                  <div className="mobile-detail-epithet">{identityOutgoingNode.entity.epithet}</div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
 
         {expanded && (
@@ -636,7 +733,7 @@ export function MobileGraphView({
       {tutorialOpen && (
         <div className="mobile-tutorial" onPointerDown={(event) => event.stopPropagation()}>
           <div className="mobile-tutorial-demo"><span className="mobile-tutorial-hand" /></div>
-          <p>左滑看下一个，右滑回到上一个<br />上拉查看详情，下拉收回卡片</p>
+          <p>画像上滑看下一张，下滑回到上一张<br />人物栏上拉查看详情，下拉收回卡片</p>
           <button type="button" onClick={dismissTutorial}>开始探索</button>
         </div>
       )}
@@ -935,8 +1032,8 @@ function MobileKv({ label, values }: { label: string; values: string[] }) {
   return <div className="mobile-kv"><strong>{label}</strong>{values.join(" · ")}</div>;
 }
 
-function windowWidth() {
-  return typeof window === "undefined" ? 390 : window.innerWidth;
+function windowHeight() {
+  return typeof window === "undefined" ? 844 : window.innerHeight;
 }
 
 const mobileVariables = {

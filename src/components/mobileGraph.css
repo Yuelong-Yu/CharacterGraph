@@ -81,9 +81,14 @@
   inset: 0;
   justify-content: center;
   position: absolute;
-  transition: opacity 160ms ease,transform 180ms ease;
+  transition: transform 180ms ease-out;
   will-change: transform;
   z-index: 2;
+}
+
+.mobile-card-portrait.is-transitioning {
+  transition-duration: 220ms;
+  transition-timing-function: cubic-bezier(.22,1,.36,1);
 }
 
 .mobile-card-incoming { pointer-events: none; z-index: 1; }
@@ -101,6 +106,8 @@
   max-width: 100%;
   overflow: hidden;
   position: relative;
+  touch-action: none;
+  user-select: none;
 }
 
 .mobile-card-image {
@@ -153,6 +160,7 @@
   min-height: 124px;
   padding: 12px max(20px,env(safe-area-inset-right)) 18px max(20px,env(safe-area-inset-left));
   touch-action: none;
+  user-select: none;
 }
 
 .mobile-detail-handle {
@@ -161,6 +169,25 @@
   height: 4px;
   margin: 0 auto 14px;
   width: 38px;
+}
+
+.mobile-detail-identity-copy {
+  position: relative;
+}
+
+.mobile-detail-identity-content {
+  will-change: opacity;
+}
+
+.mobile-detail-identity-content-in {
+  animation: mobile-identity-in 150ms ease-out both;
+}
+
+.mobile-detail-identity-content-out {
+  animation: mobile-identity-out 150ms ease-out both;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .mobile-detail-name {
@@ -322,14 +349,14 @@
   width: 108px;
 }
 .mobile-tutorial-hand {
-  animation: mobile-tutorial-gesture 3.6s ease-in-out infinite;
+  animation: mobile-tutorial-gesture 3.2s ease-in-out infinite;
   background: #fff;
   border-radius: 999px;
-  bottom: 22px;
   box-shadow: 0 0 0 8px rgb(255 255 255/.18);
   height: 18px;
   left: 45px;
   position: absolute;
+  top: 73px;
   width: 18px;
 }
 .mobile-tutorial p { font-size: 14px; line-height: 1.8; margin: 0 0 20px; }
@@ -344,17 +371,26 @@
 
 @keyframes mobile-tutorial-gesture {
   0%,10% { transform: translate(0,0); }
-  25% { transform: translate(-42px,0); }
-  35%,45% { transform: translate(0,0); }
-  60% { transform: translate(42px,0); }
-  70%,80% { transform: translate(0,0); }
-  95% { transform: translate(0,-70px); }
+  28% { transform: translate(0,-54px); }
+  38%,52% { transform: translate(0,0); }
+  70% { transform: translate(0,54px); }
+  80%,90% { transform: translate(0,0); }
   100% { transform: translate(0,0); }
+}
+
+@keyframes mobile-identity-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes mobile-identity-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .mobile-card-image-portrait,.mobile-card-portrait,.mobile-detail-sheet { transition: none; }
-  .mobile-tutorial-hand { animation: none; }
+  .mobile-detail-identity-content,.mobile-tutorial-hand { animation: none; }
 }
 
 @media (max-width: 1023px) {
