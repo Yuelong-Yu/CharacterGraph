@@ -610,6 +610,7 @@ export function MobileGraphView({
 
       <div ref={cardStageRef} className="mobile-card-stage">
         <div
+          key={`active:${activeNode.id}`}
           className={`mobile-card-portrait${transitioning ? " is-transitioning" : ""}`}
           data-swipe-card="active"
           style={{
@@ -627,6 +628,7 @@ export function MobileGraphView({
         </div>
         {incomingNode && incomingNode.id !== activeNode.id && (
           <div
+            key={`incoming:${incomingNode.id}`}
             aria-hidden="true"
             className={`mobile-card-portrait mobile-card-incoming${transitioning ? " is-transitioning" : ""}`}
             data-swipe-card="incoming"
