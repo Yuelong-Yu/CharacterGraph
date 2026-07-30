@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "elpenor",
+  "name_zh": "埃尔佩诺耳",
+  "name_en": "Elpenor",
+  "aliases": ["Ἐλπήνωρ", "Elpēnōr", "厄尔佩诺耳"],
+  "epithet": "请求安葬的年轻亡魂",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "埃尔佩诺耳是奥德修斯船队中最年轻、战力并不突出的成员。离开喀耳刻岛前夜，他醉卧宫殿屋顶，清晨忘记梯子而坠亡。奥德修斯尚不知其死讯，便在冥府入口先遇见他的亡魂；埃尔佩诺耳恳求同伴返回艾尤岛妥善焚葬并在坟上竖起船桨，以免自己成为无名孤魂。",
+  "events": [
+    {
+      "title": "醉后从喀耳刻宫殿屋顶坠亡",
+      "desc": "埃尔佩诺耳酒后睡在屋顶，听见同伴动身时惊醒，忘记从长梯下去而直接跌落，折断颈骨身亡。",
+      "source": {"work": "奥德赛", "locus": "10.552-560", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "在冥府请求安葬",
+      "desc": "他的亡魂在冥府边缘拦住奥德修斯，恳求众人返回艾尤岛火葬遗体、堆起坟冢并把他生前划船的桨立在墓上。",
+      "source": {"work": "奥德赛", "locus": "11.51-83, 12.8-15", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["船桨"],
+  "skills": ["划桨", "航海"],
+  "domains": ["意外死亡", "亡魂", "葬礼"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/elpenor.webp",
+  "thumb": "/p/greek/thumbs/elpenor.webp"
+}

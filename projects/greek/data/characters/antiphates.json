@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "antiphates",
+  "name_zh": "安提法忒斯",
+  "name_en": "Antiphates",
+  "aliases": ["Ἀντιφάτης", "Antiphates of the Laestrygonians"],
+  "epithet": "莱斯特律戈涅斯食人巨人王",
+  "category": "monster",
+  "era_layer": 4,
+  "bio": "安提法忒斯是食人巨人族莱斯特律戈涅斯人的国王，居住在拉摩斯城。奥德修斯的侦察队来到王宫后，王后召来安提法忒斯；他当场抓住一名使者吞食，并号召族人从悬崖投掷巨石。停在狭窄港湾内的十一艘船全部被砸毁，只有奥德修斯留在港外的旗舰逃脱。",
+  "events": [
+    {
+      "title": "吞食奥德修斯的使者",
+      "desc": "三名侦察者进入王宫后，安提法忒斯抓住其中一人当场吞食，另外两人奔逃报警。",
+      "source": {"work": "奥德赛", "locus": "10.100-117", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "摧毁奥德修斯十一艘船",
+      "desc": "莱斯特律戈涅斯巨人从悬崖投下巨石，并以长矛叉取落水船员；港内舰队全灭，奥德修斯仅率自己的船逃走。",
+      "source": {"work": "奥德赛", "locus": "10.118-134", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["巨石", "长矛"],
+  "skills": ["巨力", "投掷巨石", "吞食人类"],
+  "domains": ["食人巨人", "莱斯特律戈涅斯", "舰队覆灭"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/antiphates.webp",
+  "thumb": "/p/greek/thumbs/antiphates.webp"
+}

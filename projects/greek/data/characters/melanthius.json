@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "melanthius",
+  "name_zh": "墨兰提俄斯",
+  "name_en": "Melanthius",
+  "aliases": ["Melanthios", "Μελάνθιος", "墨兰透斯"],
+  "epithet": "背叛奥德修斯的牧羊人",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "墨兰提俄斯是多利俄斯之子、墨兰托之兄，负责看管奥德修斯的羊群，却在主人离家时依附求婚者。他在路上辱骂并踢打伪装成乞丐的奥德修斯，宫廷决战时又从武器库偷取盔甲和长矛交给求婚者。欧迈俄斯与菲洛提俄斯将他捆住，战后他因叛主受到残酷处决。",
+  "events": [
+    {
+      "title": "在进城路上羞辱奥德修斯",
+      "desc": "墨兰提俄斯赶着供求婚者宴饮的山羊进城，遇到欧迈俄斯和伪装的奥德修斯后出言辱骂，并踢中奥德修斯的臀部。",
+      "source": {"work": "奥德赛", "locus": "17.182-253", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "偷运武器给求婚者",
+      "desc": "宫廷战斗中，墨兰提俄斯潜入库房为求婚者搬出盔甲和长矛；欧迈俄斯与菲洛提俄斯抓住他并吊绑在梁上。",
+      "source": {"work": "奥德赛", "locus": "22.135-193", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["长矛", "牧杖"],
+  "skills": ["牧羊", "搬运武器", "熟悉王宫"],
+  "domains": ["叛徒", "求婚者", "牧羊"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/melanthius.webp",
+  "thumb": "/p/greek/thumbs/melanthius.webp"
+}

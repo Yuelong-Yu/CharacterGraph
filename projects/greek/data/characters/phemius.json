@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "phemius",
+  "name_zh": "斐弥俄斯",
+  "name_en": "Phemius",
+  "aliases": ["Phemios", "Φήμιος", "菲弥俄斯"],
+  "epithet": "伊塔刻宫廷的吟游诗人",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "斐弥俄斯是伊塔刻宫廷的吟游诗人，在奥德修斯离家后被求婚者强迫于宴席上演唱。他吟诵希腊英雄从特洛伊归乡的苦难，使佩涅洛佩悲从中来；忒勒玛科斯却要求母亲允许诗人继续，因为歌者只是传达缪斯所赐的题材。宫廷屠杀时，斐弥俄斯抱着里拉琴求饶，忒勒玛科斯证明他并非自愿侍奉求婚者，奥德修斯遂饶其性命。",
+  "events": [
+    {
+      "title": "吟唱阿开亚人悲惨归乡",
+      "desc": "求婚者宴饮时，斐弥俄斯唱起雅典娜降给希腊人的归乡灾难；佩涅洛佩听后下楼，请他改唱别的故事。",
+      "source": {"work": "奥德赛", "locus": "1.325-359", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "在宫廷屠杀中获赦",
+      "desc": "斐弥俄斯抱琴逃到大厅门边，向奥德修斯说明自己是被迫为求婚者演唱；在忒勒玛科斯作证后，他与传令官墨冬一起获赦。",
+      "source": {"work": "奥德赛", "locus": "22.330-377", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["吟唱史诗", "弹奏里拉琴", "即兴叙事"],
+  "domains": ["诗歌", "口述传统", "宫廷"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/phemius.webp",
+  "thumb": "/p/greek/thumbs/phemius.webp"
+}

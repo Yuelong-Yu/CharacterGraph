@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "clytemnestra",
+  "name_zh": "克吕泰涅斯特拉",
+  "name_en": "Clytemnestra",
+  "aliases": ["Klytaimnestra", "Κλυταιμνήστρα", "克吕泰墨涅斯特拉"],
+  "epithet": "迈锡尼王后，弑夫复仇者",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "克吕泰涅斯特拉是廷达瑞俄斯与勒达之女、海伦的姐妹、阿伽门农之妻。阿伽门农为使希腊舰队出航而献祭女儿伊菲革涅娅，此事成为她复仇的根源。特洛伊战争期间，她与埃癸斯托斯结合；阿伽门农凯旋后，二人将其杀死。她与忠贞等待奥德修斯的佩涅洛佩在《奥德赛》中形成鲜明对照，其命运随后又成为俄瑞斯忒斯复仇故事的中心。",
+  "events": [
+    {
+      "title": "失去女儿伊菲革涅娅",
+      "desc": "阿伽门农以婚嫁为名将伊菲革涅娅骗至奥利斯，并为平息阿尔忒弥斯之怒将她献祭；克吕泰涅斯特拉由此对丈夫怀下深仇。",
+      "source": {"work": "欧里庇得斯《伊菲革涅娅在奥利斯》", "locus": "1146-1208, 1532-1629", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "杀死凯旋归来的阿伽门农",
+      "desc": "阿伽门农从特洛伊返乡后，被克吕泰涅斯特拉与埃癸斯托斯设宴伏杀；这一悲剧被冥府中的阿伽门农亲口讲给奥德修斯。",
+      "source": {"work": "奥德赛", "locus": "11.405-434", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["双刃斧"],
+  "skills": ["宫廷权谋", "复仇", "统治迈锡尼"],
+  "domains": ["母亲之怒", "复仇", "王权"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/clytemnestra.webp",
+  "thumb": "/p/greek/thumbs/clytemnestra.webp"
+}

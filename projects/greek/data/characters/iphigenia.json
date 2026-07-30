@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "iphigenia",
+  "name_zh": "伊菲革涅娅",
+  "name_en": "Iphigenia",
+  "aliases": ["Iphigeneia", "Ἰφιγένεια", "伊菲革涅亚"],
+  "epithet": "奥利斯祭坛上的公主",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "伊菲革涅娅是阿伽门农与克吕泰涅斯特拉之女。希腊舰队被逆风困在奥利斯时，先知卡尔卡斯宣称必须献祭她才能平息阿尔忒弥斯之怒。阿伽门农以嫁给阿喀琉斯为名将她骗来。悲剧传统中她最终自愿面对祭坛；另一传统则说阿尔忒弥斯在最后一刻以牝鹿替换她，并把她带到陶里斯担任女祭司。",
+  "events": [
+    {
+      "title": "被父亲骗至奥利斯",
+      "desc": "阿伽门农谎称要把伊菲革涅娅嫁给阿喀琉斯，诱使克吕泰涅斯特拉带女儿来到军营，实则准备以她换取出航之风。",
+      "source": {"work": "欧里庇得斯《伊菲革涅娅在奥利斯》", "locus": "89-123, 607-690", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "在祭坛前被神带走",
+      "desc": "在欧里庇得斯的结尾叙述中，伊菲革涅娅走向祭坛后突然消失，原处只剩一头牝鹿；信使称阿尔忒弥斯救走了她。",
+      "source": {"work": "欧里庇得斯《伊菲革涅娅在奥利斯》", "locus": "1532-1629", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["祭祀", "勇敢赴难"],
+  "domains": ["献祭", "战争代价", "女儿"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/iphigenia.webp",
+  "thumb": "/p/greek/thumbs/iphigenia.webp"
+}

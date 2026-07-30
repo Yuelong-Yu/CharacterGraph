@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "sinon",
+  "name_zh": "西农",
+  "name_en": "Sinon",
+  "aliases": ["Σίνων", "锡农"],
+  "epithet": "木马计的欺敌者",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "西农是参与特洛伊木马计的希腊战士。他故意留在特洛伊城外，被俘后编造自己遭希腊人迫害、木马是献给雅典娜的祭物等谎言，诱使特洛伊人相信把木马拖入城内会获得神佑。夜深后，他发出信号并打开木马暗门，使潜伏的希腊勇士攻入特洛伊。西农集中体现了战争中的欺骗与言辞力量。",
+  "events": [
+    {
+      "title": "以谎言诱使特洛伊人接纳木马",
+      "desc": "西农假称自己逃过希腊人的献祭，并宣称木马被造得巨大是为了防止特洛伊人将其拖入城中，从而说服众人破墙迎入木马。",
+      "source": {"work": "维吉尔《埃涅阿斯纪》", "locus": "2.57-198", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "打开木马释放希腊勇士",
+      "desc": "特洛伊沉睡后，西农依约向海上的希腊舰队发出火光信号，并开启木马，让奥德修斯等伏兵从马腹中降下。",
+      "source": {"work": "维吉尔《埃涅阿斯纪》", "locus": "2.252-267", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["短剑"],
+  "skills": ["欺敌", "演说", "潜伏"],
+  "domains": ["诡计", "木马计", "特洛伊陷落"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/sinon.webp",
+  "thumb": "/p/greek/thumbs/sinon.webp"
+}

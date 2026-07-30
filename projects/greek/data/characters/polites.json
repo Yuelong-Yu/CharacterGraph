@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "polites",
+  "name_zh": "波利忒斯",
+  "name_en": "Polites",
+  "aliases": ["Πολίτης", "Polites of Ithaca"],
+  "epithet": "奥德修斯最亲近的船员",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "波利忒斯是奥德修斯船队成员，史诗称他为奥德修斯最亲爱、最信赖的同伴之一。在艾尤岛探查喀耳刻宫殿时，他被女巫的歌声和织机吸引，率先建议同伴呼唤屋中主人，结果众人入内饮下魔药，被变成猪。波利忒斯代表船员对安宁、食物与人类居所的渴望。",
+  "events": [
+    {
+      "title": "建议同伴呼唤喀耳刻",
+      "desc": "船员在喀耳刻宫外听见美妙歌声时，波利忒斯称屋中女子必是女神，并建议大家出声招呼她。",
+      "source": {"work": "奥德赛", "locus": "10.221-232", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "被喀耳刻变成猪",
+      "desc": "波利忒斯等人进入宫殿，饮下混有魔药的酒后被喀耳刻以杖击打，外形变成猪而仍保留人的心智。",
+      "source": {"work": "奥德赛", "locus": "10.233-243", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["剑", "船桨"],
+  "skills": ["航海", "侦察", "鼓舞同伴"],
+  "domains": ["船员", "友谊", "喀耳刻"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/polites.webp",
+  "thumb": "/p/greek/thumbs/polites.webp"
+}

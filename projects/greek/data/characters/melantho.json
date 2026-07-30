@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "melantho",
+  "name_zh": "墨兰托",
+  "name_en": "Melantho",
+  "aliases": ["Μελανθώ", "Melantho of Ithaca"],
+  "epithet": "背叛佩涅洛佩的侍女",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "墨兰托是多利俄斯之女、墨兰提俄斯之妹，自幼由佩涅洛佩抚养，却在奥德修斯离家后投向求婚者并成为欧律马科斯的情人。她两次辱骂伪装成乞丐的奥德修斯，表现出伊塔刻宫廷内部的背叛。求婚者被杀后，她与其他不忠女仆被迫清理大厅，随后受到处决。",
+  "events": [
+    {
+      "title": "辱骂伪装成乞丐的奥德修斯",
+      "desc": "墨兰托嘲笑陌生乞丐赖在宫中，威胁将他赶走；奥德修斯严厉警告她，指出佩涅洛佩仍可能得知她的不忠。",
+      "source": {"work": "奥德赛", "locus": "18.321-339, 19.65-88", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "因背叛王室受到处决",
+      "desc": "奥德修斯杀死求婚者后，欧律克勒娅指出十二名与求婚者私通的女仆；墨兰托等人清理血污后被忒勒玛科斯处死。",
+      "source": {"work": "奥德赛", "locus": "22.417-473", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["宫廷侍奉", "察言观色"],
+  "domains": ["背叛", "宫廷", "求婚者"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/melantho.webp",
+  "thumb": "/p/greek/thumbs/melantho.webp"
+}

@@ -5611,5 +5611,341 @@
         "era_order": 0
       }
     ]
+  },
+  {
+    "schema_version": 3,
+    "id": "eurylochus-odysseus",
+    "source": "eurylochus",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "副手与船长",
+      "desc": "欧律洛科斯作为船队副手随奥德修斯经历喀耳刻、冥府、塞壬与太阳神牛群等险境，也多次质疑船长的决定。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "10-12", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "agamemnon-clytemnestra",
+    "source": "agamemnon",
+    "target": "clytemnestra",
+    "primary_type": "marriage",
+    "composite_types": ["hostile"],
+    "events": [{
+      "title": "婚姻因献女与弑夫化为血仇",
+      "desc": "阿伽门农献祭女儿伊菲革涅娅后，克吕泰涅斯特拉在其凯旋归国时参与设局杀夫。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "11.405-434", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "clytemnestra-helen",
+    "source": "clytemnestra",
+    "target": "helen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [{
+      "title": "廷达瑞俄斯与勒达的女儿",
+      "desc": "克吕泰涅斯特拉与海伦是姐妹，分别嫁给阿特柔斯的两个儿子阿伽门农和墨涅拉俄斯。",
+      "desc_long": null,
+      "source": {"work": "伪阿波罗多罗斯《书库》", "locus": "3.10.6-7", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "clytemnestra-iphigenia",
+    "source": "clytemnestra",
+    "target": "iphigenia",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [{
+      "title": "母女赴奥利斯",
+      "desc": "克吕泰涅斯特拉带伊菲革涅娅前往奥利斯参加所谓婚礼，抵达后才得知女儿将被献祭。",
+      "desc_long": null,
+      "source": {"work": "欧里庇得斯《伊菲革涅娅在奥利斯》", "locus": "607-1035", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "agamemnon-iphigenia",
+    "source": "agamemnon",
+    "target": "iphigenia",
+    "primary_type": "blood",
+    "composite_types": ["hostile"],
+    "events": [{
+      "title": "父亲以女儿换取出航之风",
+      "desc": "阿伽门农接受神谕，把伊菲革涅娅骗到奥利斯祭坛，试图以她的生命换取舰队驶往特洛伊的顺风。",
+      "desc_long": null,
+      "source": {"work": "欧里庇得斯《伊菲革涅娅在奥利斯》", "locus": "89-123, 1532-1629", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "odysseus-sinon",
+    "source": "odysseus",
+    "target": "sinon",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "共同执行木马计",
+      "desc": "西农以谎言诱使特洛伊人接纳木马，并在夜间打开暗门，释放以奥德修斯为首的伏兵。",
+      "desc_long": null,
+      "source": {"work": "维吉尔《埃涅阿斯纪》", "locus": "2.57-267", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "melantho-penelope",
+    "source": "melantho",
+    "target": "penelope",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [{
+      "title": "受王后抚养却背叛王室",
+      "desc": "佩涅洛佩把墨兰托如女儿般养大，墨兰托却与求婚者私通，并辱骂伪装归来的奥德修斯。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "18.321-339", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "melantho-melanthius",
+    "source": "melantho",
+    "target": "melanthius",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [{
+      "title": "共同投靠求婚者的兄妹",
+      "desc": "墨兰托与墨兰提俄斯同为多利俄斯之子女，兄妹二人都背叛奥德修斯家族并依附求婚者。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "17.212, 18.321-325", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "odysseus-polybus",
+    "source": "odysseus",
+    "target": "polybus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [{
+      "title": "宫廷决战",
+      "desc": "波吕玻斯与残余求婚者结阵抵抗奥德修斯，最终被加入奥德修斯一方的欧迈俄斯刺死。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "22.241-284", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "odysseus-perimedes",
+    "source": "odysseus",
+    "target": "perimedes",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "冥府与塞壬海域的可靠船员",
+      "desc": "佩里墨得斯协助奥德修斯完成冥府祭祀，并把他牢牢绑在桅杆上安全通过塞壬海域。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "11.23-50, 12.178-196", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "elpenor-odysseus",
+    "source": "elpenor",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "亡魂请求船长安葬",
+      "desc": "埃尔佩诺耳死后在冥府边缘请求奥德修斯返回艾尤岛安葬自己，奥德修斯依约照办。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "11.51-83, 12.8-15", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "mentor-odysseus",
+    "source": "mentor",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "受托看守家业的老友",
+      "desc": "奥德修斯出征特洛伊前把家宅托付给门托尔，证明二人之间深厚的信任。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "2.225-240", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "mentor-telemachus",
+    "source": "mentor",
+    "target": "telemachus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [{
+      "title": "雅典娜借其形貌引导王子",
+      "desc": "雅典娜化作门托尔组织寻父航程，门托尔的名字因而成为后世“导师”的代称。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "2.267-295, 3.1-30", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "eurycleia-odysseus",
+    "source": "eurycleia",
+    "target": "odysseus",
+    "primary_type": "mentor",
+    "composite_types": ["ally"],
+    "events": [{
+      "title": "乳母凭伤疤认主",
+      "desc": "欧律克勒娅为乞丐洗脚时认出奥德修斯的旧伤疤，并遵命保守主人归来的秘密。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "19.386-507", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "eurycleia-telemachus",
+    "source": "eurycleia",
+    "target": "telemachus",
+    "primary_type": "mentor",
+    "composite_types": [],
+    "events": [{
+      "title": "抚养并帮助王子出航",
+      "desc": "欧律克勒娅抚养忒勒玛科斯长大，并为其秘密寻父之旅准备酒粮、保守计划。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "2.337-381", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "argus-odysseus",
+    "source": "argus",
+    "target": "odysseus",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "老犬等待主人二十年",
+      "desc": "阿尔戈斯在奥德修斯离家后衰老受弃，却仍认出伪装归来的主人，完成等待后随即死去。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "17.290-327", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "melanthius-odysseus",
+    "source": "melanthius",
+    "target": "odysseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [{
+      "title": "叛主并武装求婚者",
+      "desc": "墨兰提俄斯先踢打伪装的奥德修斯，后在宫廷决战中偷运武器给求婚者。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "17.182-253, 22.135-193", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "eumaeus-melanthius",
+    "source": "eumaeus",
+    "target": "melanthius",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [{
+      "title": "忠仆与叛仆",
+      "desc": "欧迈俄斯忠于奥德修斯，墨兰提俄斯则投靠求婚者；决战时欧迈俄斯抓住并捆起偷运武器的墨兰提俄斯。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "22.161-193", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "odysseus-polites",
+    "source": "odysseus",
+    "target": "polites",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "最亲爱可信的船员",
+      "desc": "史诗称波利忒斯为奥德修斯最珍爱、最信任的同伴之一；他随船队探查喀耳刻的宫殿。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "10.221-243", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "antiphates-odysseus",
+    "source": "antiphates",
+    "target": "odysseus",
+    "primary_type": "hostile",
+    "composite_types": [],
+    "events": [{
+      "title": "毁灭十一艘返乡船",
+      "desc": "安提法忒斯发动食人巨人袭击，在狭港内摧毁奥德修斯舰队十一艘船，仅旗舰逃脱。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "10.100-134", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
+  },
+  {
+    "schema_version": 3,
+    "id": "odysseus-phemius",
+    "source": "odysseus",
+    "target": "phemius",
+    "primary_type": "ally",
+    "composite_types": [],
+    "events": [{
+      "title": "赦免被迫献唱的诗人",
+      "desc": "斐弥俄斯说明自己是被迫为求婚者演唱，忒勒玛科斯为他作证后，奥德修斯饶其性命。",
+      "desc_long": null,
+      "source": {"work": "奥德赛", "locus": "22.330-377", "translator": null},
+      "canon": null,
+      "era_order": 0
+    }]
   }
 ]

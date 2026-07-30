@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "eurycleia",
+  "name_zh": "欧律克勒娅",
+  "name_en": "Eurycleia",
+  "aliases": ["Eurykleia", "Εὐρύκλεια", "欧律克莱娅"],
+  "epithet": "凭伤疤认出奥德修斯的乳母",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "欧律克勒娅是奥普斯之女，年轻时被拉厄耳忒斯买入家中，却受到尊重。她先后抚养奥德修斯与忒勒玛科斯，是伊塔刻王室最忠诚的家人之一。奥德修斯伪装成乞丐归来时，她为其洗脚，凭童年狩猎留下的腿部伤疤认出主人，并保守秘密。复仇之后，她又指出曾与求婚者私通的不忠女仆。",
+  "events": [
+    {
+      "title": "为忒勒玛科斯保守出航秘密",
+      "desc": "忒勒玛科斯准备秘密出海寻父时，欧律克勒娅为他备好酒粮，并发誓暂不把计划告知佩涅洛佩。",
+      "source": {"work": "奥德赛", "locus": "2.337-381", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "凭腿上伤疤认出奥德修斯",
+      "desc": "欧律克勒娅替乞丐洗脚时摸到奥德修斯青年时代猎野猪留下的伤疤，立刻认出主人；奥德修斯制止她惊呼并要求保密。",
+      "source": {"work": "奥德赛", "locus": "19.386-507", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": ["抚育", "管理家务", "辨认身份", "保守秘密"],
+  "domains": ["乳母", "忠诚", "认主"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/eurycleia.webp",
+  "thumb": "/p/greek/thumbs/eurycleia.webp"
+}

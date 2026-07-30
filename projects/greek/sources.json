@@ -719,6 +719,126 @@
       "category": "achaean",
       "era_layer": 4,
       "epithet": "求婚者首领"
+    },
+    {
+      "slug": "eurylochus",
+      "name_zh": "欧律洛科斯",
+      "name_en": "Eurylochus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯的副手"
+    },
+    {
+      "slug": "clytemnestra",
+      "name_zh": "克吕泰涅斯特拉",
+      "name_en": "Clytemnestra",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "迈锡尼王后,弑夫复仇者"
+    },
+    {
+      "slug": "sinon",
+      "name_zh": "西农",
+      "name_en": "Sinon",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "木马计的欺敌者"
+    },
+    {
+      "slug": "melantho",
+      "name_zh": "墨兰托",
+      "name_en": "Melantho",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "背叛佩涅洛佩的侍女"
+    },
+    {
+      "slug": "polybus",
+      "name_zh": "波吕玻斯",
+      "name_en": "Polybus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "佩涅洛佩的求婚者"
+    },
+    {
+      "slug": "perimedes",
+      "name_zh": "佩里墨得斯",
+      "name_en": "Perimedes",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯的忠实船员"
+    },
+    {
+      "slug": "elpenor",
+      "name_zh": "埃尔佩诺耳",
+      "name_en": "Elpenor",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "请求安葬的年轻亡魂"
+    },
+    {
+      "slug": "mentor",
+      "name_zh": "门托尔",
+      "name_en": "Mentor",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯托付家业的老友"
+    },
+    {
+      "slug": "eurycleia",
+      "name_zh": "欧律克勒娅",
+      "name_en": "Eurycleia",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "凭伤疤认出奥德修斯的乳母"
+    },
+    {
+      "slug": "argus",
+      "name_zh": "阿尔戈斯",
+      "name_en": "Argus",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "等待主人二十年的老犬"
+    },
+    {
+      "slug": "melanthius",
+      "name_zh": "墨兰提俄斯",
+      "name_en": "Melanthius",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "背叛奥德修斯的牧羊人"
+    },
+    {
+      "slug": "iphigenia",
+      "name_zh": "伊菲革涅娅",
+      "name_en": "Iphigenia",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥利斯祭坛上的公主"
+    },
+    {
+      "slug": "polites",
+      "name_zh": "波利忒斯",
+      "name_en": "Polites",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "奥德修斯最亲近的船员"
+    },
+    {
+      "slug": "antiphates",
+      "name_zh": "安提法忒斯",
+      "name_en": "Antiphates",
+      "category": "monster",
+      "era_layer": 4,
+      "epithet": "莱斯特律戈涅斯食人巨人王"
+    },
+    {
+      "slug": "phemius",
+      "name_zh": "斐弥俄斯",
+      "name_en": "Phemius",
+      "category": "achaean",
+      "era_layer": 4,
+      "epithet": "伊塔刻宫廷的吟游诗人"
     }
   ],
   "artifacts": [

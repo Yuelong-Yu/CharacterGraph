@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "mentor",
+  "name_zh": "门托尔",
+  "name_en": "Mentor",
+  "aliases": ["Μέντωρ", "墨恩托耳"],
+  "epithet": "奥德修斯托付家业的老友",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "门托尔是阿尔基摩斯之子、奥德修斯信任的老友。奥德修斯出征特洛伊前把家宅托付给他。雅典娜多次化作门托尔的外貌，鼓励忒勒玛科斯寻父、陪伴他航行，并在宫廷决战及其后的冲突中援助奥德修斯一家。由于这种“神以智者朋友之形引导青年”的形象，Mentor后来成为“导师”一词的来源。",
+  "events": [
+    {
+      "title": "受托照管奥德修斯家业",
+      "desc": "奥德修斯远征前把家宅交给老友门托尔看守，命家中众人服从他的安排。",
+      "source": {"work": "奥德赛", "locus": "2.225-240", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "成为雅典娜引导忒勒玛科斯的化身",
+      "desc": "雅典娜借用门托尔的形貌，组织船只、陪伴忒勒玛科斯前往皮洛斯，并在最终冲突中继续以此形象护佑王室。",
+      "source": {"work": "奥德赛", "locus": "2.267-295, 3.1-30, 22.205-240", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["长矛"],
+  "skills": ["管理家业", "忠诚辅佐", "劝导青年"],
+  "domains": ["导师", "信托", "忠诚"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/mentor.webp",
+  "thumb": "/p/greek/thumbs/mentor.webp"
+}

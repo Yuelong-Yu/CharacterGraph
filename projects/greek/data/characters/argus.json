@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "argus",
+  "name_zh": "阿尔戈斯",
+  "name_en": "Argus",
+  "aliases": ["Argos", "Ἄργος", "奥德修斯的猎犬"],
+  "epithet": "等待主人二十年的老犬",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "阿尔戈斯是奥德修斯亲手养大的猎犬，年轻时以速度和嗅觉闻名。主人远征后，它无人照料，衰老后卧在宫门外的粪堆上。二十年后，伪装成乞丐的奥德修斯回到伊塔刻，阿尔戈斯仍立刻认出主人，摇尾垂耳，却已无力靠近；确认主人归来后，它安然死去。它是《奥德赛》中忠诚与归乡最凝练的象征之一。",
+  "events": [
+    {
+      "title": "认出伪装归来的主人",
+      "desc": "奥德修斯化装成乞丐来到王宫，衰老的阿尔戈斯听见他的声音便竖耳、摇尾；奥德修斯不敢暴露身份，只能暗自拭泪。",
+      "source": {"work": "奥德赛", "locus": "17.290-327", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "等待二十年后死去",
+      "desc": "阿尔戈斯在看见奥德修斯的那一刻完成了漫长等待，随后被死亡带走，未等到主人公开复位。",
+      "source": {"work": "奥德赛", "locus": "17.326-327", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["獠牙"],
+  "skills": ["狩猎", "追踪", "辨认主人"],
+  "domains": ["忠犬", "等待", "归乡"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/argus.webp",
+  "thumb": "/p/greek/thumbs/argus.webp"
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "polybus",
+  "name_zh": "波吕玻斯",
+  "name_en": "Polybus",
+  "aliases": ["Πόλυβος", "Wise Polybus", "波吕波斯"],
+  "epithet": "佩涅洛佩的求婚者",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "波吕玻斯是《奥德赛》中佩涅洛佩的求婚者之一，史诗称他为“聪明的波吕玻斯”。他与阿革拉俄斯、安菲墨冬等人一同在最后的宫廷战斗中抵抗奥德修斯及其同伴，最终被忠诚猪倌欧迈俄斯以长矛杀死。此人不应与欧律马科斯之父或科林斯王波吕玻斯混淆。",
+  "events": [
+    {
+      "title": "参与求婚者最后的抵抗",
+      "desc": "安提诺俄斯与欧律马科斯死后，波吕玻斯仍与最强悍的求婚者结阵，向奥德修斯一方投掷长矛。",
+      "source": {"work": "奥德赛", "locus": "22.241-256", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "被欧迈俄斯杀死",
+      "desc": "雅典娜使求婚者的齐射偏离目标，奥德修斯一方反击时，欧迈俄斯一矛刺中波吕玻斯，终结其性命。",
+      "source": {"work": "奥德赛", "locus": "22.276-284", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["长矛", "盾"],
+  "skills": ["战斗", "投矛"],
+  "domains": ["求婚者", "宫廷侵占"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/polybus.webp",
+  "thumb": "/p/greek/thumbs/polybus.webp"
+}

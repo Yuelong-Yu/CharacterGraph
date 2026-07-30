@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "perimedes",
+  "name_zh": "佩里墨得斯",
+  "name_en": "Perimedes",
+  "aliases": ["Περιμήδης", "Perimedes of Ithaca"],
+  "epithet": "奥德修斯的忠实船员",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "佩里墨得斯是奥德修斯返乡船队中的重要船员，常与欧律洛科斯并列承担祭祀和操船任务。他在冥府入口协助控制祭牲，在塞壬海域又将奥德修斯牢牢绑在桅杆上，使船长能够听见歌声而不致投海。他最终与其他船员一起死于宙斯击毁船只的雷霆。",
+  "events": [
+    {
+      "title": "在冥府入口协助献祭",
+      "desc": "奥德修斯掘沟召魂时，佩里墨得斯与欧律洛科斯按住祭牲，协助完成献血给亡魂的仪式。",
+      "source": {"work": "奥德赛", "locus": "11.23-50", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "把奥德修斯绑在桅杆上",
+      "desc": "为抵御塞壬歌声，佩里墨得斯与欧律洛科斯依照命令以绳索将奥德修斯绑紧；即使船长恳求松绑，他们仍加上更多绳结。",
+      "source": {"work": "奥德赛", "locus": "12.178-196", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["桨", "剑"],
+  "skills": ["航海", "祭祀协助", "服从命令"],
+  "domains": ["船员", "冥府之旅", "塞壬"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/perimedes.webp",
+  "thumb": "/p/greek/thumbs/perimedes.webp"
+}

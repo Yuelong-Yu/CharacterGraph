@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "id": "eurylochus",
+  "name_zh": "欧律洛科斯",
+  "name_en": "Eurylochus",
+  "aliases": ["Eurylochos", "Εὐρύλοχος"],
+  "epithet": "奥德修斯的副手",
+  "category": "achaean",
+  "era_layer": 4,
+  "bio": "欧律洛科斯是奥德修斯的姻亲与船队副手，也是返乡航程中最重要的幸存船员之一。他谨慎、多疑，常在危机中代表普通船员的恐惧与现实判断：在艾尤岛，他察觉喀耳刻的陷阱而拒绝入宫；在特里纳基亚岛，他又因饥饿说服同伴宰杀赫利俄斯的神牛，最终招致全船覆灭。欧律洛科斯既是奥德修斯的助手，也是不断质疑其领导的反面镜像。",
+  "events": [
+    {
+      "title": "逃过喀耳刻的变形术",
+      "desc": "欧律洛科斯率队探查艾尤岛，其他同伴进入喀耳刻宫殿后被变成猪；他因怀疑陷阱留在门外，逃回海边向奥德修斯报信。",
+      "source": {"work": "奥德赛", "locus": "10.203-260", "translator": null},
+      "canon": null
+    },
+    {
+      "title": "劝说同伴宰杀太阳神牛群",
+      "desc": "船队被风困在特里纳基亚岛、粮食耗尽后，欧律洛科斯说服同伴宁愿冒险触怒神明也不要饿死，众人遂宰杀赫利俄斯的神牛，最终被宙斯以雷霆毁船。",
+      "source": {"work": "奥德赛", "locus": "12.339-419", "translator": null},
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": ["长矛", "剑"],
+  "skills": ["航海", "侦察", "统领船员"],
+  "domains": ["副手", "谨慎", "反叛"],
+  "mounts": [],
+  "portrait": "/p/greek/portraits/eurylochus.webp",
+  "thumb": "/p/greek/thumbs/eurylochus.webp"
+}
