@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "id": "zhen_baoyu",
+  "name_zh": "甄宝玉",
+  "name_en": "Zhen Baoyu",
+  "aliases": [
+    "甄宝玉",
+    "Zhen Baoyu",
+    "真宝玉"
+  ],
+  "epithet": "甄家公子·宝玉镜像",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "甄宝玉是清代小说《红楼梦》中的次要人物，家住金陵，系金陵省体仁院总裁甄应嘉之子。他与贾宝玉有着相同的外貌和相似的性情，似为贾宝玉的镜中幻影。贾雨村曾将二人相提并论，评为正邪两赋人格的典型。甄宝玉生活在金陵的富贵家族中，同样拥有众多侍从和表亲。在脂砚斋评语中，甄宝玉本应在后文有重要戏份，包括在贾宝玉丢失通灵玉后送回玉，并且最终也出家为僧。然而在程高本续书中，甄宝玉的结局有所不同：他中举后留在红尘凡间，娶李绮为妻，重振家业，似乎成为贾宝玉另一种假设结局的诠释。甄宝玉的存在象征着“真”与“假”的辩证关系，其家族命运也与贾府遥相呼应。",
+  "events": [
+    {
+      "title": "与贾宝玉镜像相似",
+      "desc": "甄宝玉与贾宝玉外貌、性情极为相似，均出身富贵，厌恶仕途，喜爱诗词和女性陪伴。贾雨村将二人并提，认为他们是正邪两赋之气的典型代表。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "脂评中送还宝玉",
+      "desc": "根据脂砚斋评语，甄宝玉在后文（现佚）中曾将贾宝玉丢失的通灵玉送回，是贾宝玉命运转折的关键人物。",
+      "source": {
+        "work": "脂砚斋评语",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "脂评本结局出家",
+      "desc": "脂砚斋评语暗示甄宝玉像贾宝玉一样最终出家为僧，成为贾宝玉的镜中幻影。",
+      "source": {
+        "work": "脂砚斋评语",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "程高本中举娶妻",
+      "desc": "在程高本续书中，甄宝玉的结局与贾宝玉不同：他参加科举并中举，后娶李绮为妻，重振家业，留在红尘凡间。",
+      "source": {
+        "work": "红楼梦（程高本）",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/zhen_baoyu.webp",
+  "thumb": "/p/honglou/thumbs/zhen_baoyu.webp"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "jia_cong",
+  "name_zh": "贾琮",
+  "name_en": "Jia Cong",
+  "aliases": [],
+  "epithet": "贾赦庶子",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "贾琮是贾赦的庶出幼子，贾琏同父异母弟。在贾府中存在感较低，因庶出且年幼，不甚受贾赦重视。曾因在贾府祭祀等场合出现失仪之事被贾政责骂。",
+  "events": [
+    {
+      "title": "祭祀失仪",
+      "desc": "贾府祭祀时贾琮因失仪被贾政责骂，可见其在贾府地位不高。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_cong.webp",
+  "thumb": "/p/honglou/thumbs/jia_cong.webp"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "duo_hunchong",
+  "name_zh": "多浑虫",
+  "name_en": "Duo Hunchong",
+  "aliases": [],
+  "epithet": "多姑娘之夫",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "多浑虫是贾府仆人，外号'多浑虫'，因窝囊无能得名。其妻多姑娘生性淫荡，与贾琏等多名男子有染，多浑虫却浑然不觉，只顾饮酒糊涂度日。",
+  "events": [
+    {
+      "title": "窝囊度日",
+      "desc": "多浑虫窝囊无能，其妻多姑娘与贾琏等多人有染，他却浑然不觉，只顾饮酒糊涂度日。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第二十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/duo_hunchong.webp",
+  "thumb": "/p/honglou/thumbs/duo_hunchong.webp"
+}

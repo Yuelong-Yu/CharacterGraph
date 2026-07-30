@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "su_yun",
+  "name_zh": "素云",
+  "name_en": "Suyun",
+  "aliases": [],
+  "epithet": "李纨丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "素云是李纨房中的贴身丫鬟，性格沉稳素净，与李纨的守节寡居生活相匹配。她在稻香村伏侍李纨母子，是李纨身边得力的丫鬟。",
+  "events": [
+    {
+      "title": "伏侍李纨",
+      "desc": "素云在稻香村伏侍李纨母子，是李纨身边的贴身丫鬟。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/su_yun.webp",
+  "thumb": "/p/honglou/thumbs/su_yun.webp"
+}

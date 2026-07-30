@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "xiu_ju",
+  "name_zh": "绣橘",
+  "name_en": "Xiuju",
+  "aliases": [],
+  "epithet": "迎春丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "绣橘是贾迎春房中的丫鬟，性格刚烈正直。迎春懦弱，乳母偷拿迎春首饰去赌，绣橘据理力争要追回，体现其忠心与刚烈。",
+  "events": [
+    {
+      "title": "据理力争",
+      "desc": "迎春乳母偷拿迎春的攒珠累丝金凤去赌，绣橘据理力争要追回，体现其忠心刚烈。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第七十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xiu_ju.webp",
+  "thumb": "/p/honglou/thumbs/xiu_ju.webp"
+}

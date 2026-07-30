@@ -1,0 +1,69 @@
+{
+  "schema_version": 3,
+  "id": "wang_furen",
+  "name_zh": "王夫人",
+  "name_en": "Lady Wang",
+  "aliases": [
+    "王夫人",
+    "Lady Wang"
+  ],
+  "epithet": "宝玉之母",
+  "category": "master",
+  "era_layer": 1,
+  "bio": "王夫人是《红楼梦》中贾政的正室妻子，贾宝玉、贾元春和早逝的贾珠之母。她出身金陵王家，是薛姨妈的长姐，薛宝钗和薛蟠的姨妈。表面上，王夫人是个慈眉善目的虔诚佛教徒，吃斋念佛，待人宽厚。她将荣国府的日常管理大权委托给侄女王熙凤，自己则退居幕后。然而，她内心极易受谗言影响，对于被认为勾引她儿子的丫鬟手段残忍，甚至不惜直接导致宝玉的贴身丫鬟晴雯悲愤而死。当贾惜春决心削发为尼时，王夫人虽不赞同，认为“我们这样的人家，女孩儿出家，实在不好”，但最终还是勉强同意。王夫人作为贾府的实际掌权者之一，表面温和，实则心狠手辣，是封建礼教维护者的典型代表。",
+  "events": [
+    {
+      "title": "委托王熙凤管家",
+      "desc": "王夫人因自身精力有限且信奉佛教，不愿过多操劳家务，便将荣国府日常管理权全权交给其侄女王熙凤，自己则退居幕后，只在重大事务上做最终决断。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "逼死丫鬟晴雯",
+      "desc": "王夫人听信谗言，认为宝玉的丫鬟晴雯妖媚勾引主子，不顾晴雯病体，强行将其撵出大观园。晴雯含冤受辱，不久后悲愤而死。王夫人此举被视为间接致死的凶手之一。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    },
+    {
+      "title": "反对惜春出家",
+      "desc": "贾惜春执意削发为尼，王夫人虽不赞同，认为大户人家女儿出家有失体面，但拗不过惜春的决心，最终只得勉强同意，并叮嘱她好自为之。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "quotes": [
+    {
+      "text": "我们这样的人家，女孩儿出家，实在不好。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": "romance"
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "管理家务",
+    "吃斋念佛"
+  ],
+  "domains": [
+    "家务",
+    "佛教"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/wang_furen.webp",
+  "thumb": "/p/honglou/thumbs/wang_furen.webp"
+}

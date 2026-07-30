@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "id": "zhineng_er",
+  "name_zh": "智能儿",
+  "name_en": "Zhineng'er",
+  "aliases": [
+    "智能儿",
+    "Zhineng'er"
+  ],
+  "epithet": "净虚徒弟·与秦钟有染",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "智能儿是《红楼梦》中水月庵的小尼姑，净虚的徒弟。自幼在贾府走动，与贾宝玉、秦钟等人相熟，常一同玩笑。长大后渐知风情，爱慕秦钟的人物风流，秦钟也喜爱她的妍媚。两人情投意合，在馒头庵（水月庵）中多次幽会。秦钟返家后，智能儿从水月庵私逃出来寻找秦钟，不料被秦钟的父亲秦业察觉，将她逐出。此后智能儿下落不明，再无音讯。",
+  "events": [
+    {
+      "title": "自幼在贾府走动",
+      "desc": "智能儿作为水月庵的小尼姑，因净虚与贾府有往来，自幼常随师父进入贾府，与宝玉、秦钟等公子小姐相识并玩耍，成为贾府熟客。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与秦钟相识相爱",
+      "desc": "智能儿长大后情窦初开，看上秦钟风流俊俏，秦钟也爱其妍媚，二人互生情愫，在馒头庵中幽会数次，感情渐深。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "馒头庵幽会",
+      "desc": "秦钟随贾宝玉至水月庵（馒头庵）时，智能儿与秦钟暗中幽会，被宝玉撞破，但二人并未收敛，仍继续往来。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "私逃出庵寻秦钟",
+      "desc": "秦钟返家后，智能儿因思念难耐，私自离开水月庵，逃至秦钟家中寻找他，欲与之一同生活。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被秦业逐出",
+      "desc": "智能儿私逃至秦家，被秦钟的父亲秦业发现，秦业大怒，将她逐出家门，此后智能儿不知所踪。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/zhineng_er.webp",
+  "thumb": "/p/honglou/thumbs/zhineng_er.webp"
+}

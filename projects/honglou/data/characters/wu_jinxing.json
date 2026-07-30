@@ -1,0 +1,87 @@
+{
+  "schema_version": 3,
+  "id": "wu_jinxing",
+  "name_zh": "乌进孝",
+  "name_en": "Wu Jinxing",
+  "aliases": [],
+  "epithet": "宁国府庄头",
+  "category": "servant",
+  "era_layer": 1,
+  "bio": "乌进孝是宁国府黑山村的庄头，负责管理宁国府在东北的田庄。每年岁末，他需赶路一个多月进京向宁国府交纳租子。在《红楼梦》第五十三回中，他面见贾珍，诉苦说“年成实在不好”，试图解释租子减少的原因。贾珍查看租单后大为不满，批评道“真真是又教别过年了”，并抱怨荣府近年来花销巨大、产业无增，反而赔钱，只能向庄头们索取。乌进孝还引用歇后语“黄杨木作磬槌子——外头体面里头苦”，暗指贾府表面风光、内里艰辛。这一人物展现了贾府经济衰败的侧面，以及地主与佃户间的矛盾。",
+  "events": [
+    {
+      "title": "岁末进京交租",
+      "desc": "乌进孝从黑山村出发，赶了一个多月的路程，于岁末抵达宁国府，向贾珍交纳田租。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "向贾珍诉苦年成不好",
+      "desc": "乌进孝见到贾珍后，立即诉苦说“年成实在不好”，意在说明当年收成差，租子难以如数缴纳。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贾珍不满租单并抱怨荣府",
+      "desc": "贾珍查看乌进孝呈上的租单后，怒气冲冲地说“真真是又教别过年了”，并指责荣府近年花销大增、产业无添，反而赔了许多，质问“不和你们要，找谁去！”。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "年成实在不好。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "真真是又教别过年了。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "不和你们要，找谁去！",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "黄杨木作磬槌子——外头体面里头苦。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/wu_jinxing.webp",
+  "thumb": "/p/honglou/thumbs/wu_jinxing.webp"
+}

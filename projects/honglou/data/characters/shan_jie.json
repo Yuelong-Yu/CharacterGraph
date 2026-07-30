@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "id": "shan_jie",
+  "name_zh": "善姐",
+  "name_en": "Shanjie",
+  "aliases": [],
+  "epithet": "凤姐派给尤二姐的丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "善姐是清代小说《红楼梦》中的人物，在金陵十二钗四副册中列为“情损---善姐”。她原为王熙凤的贴身丫鬟，后被王熙凤指派去服侍尤二姐。表面上作为丫鬟照料尤二姐的起居，实际上受王熙凤暗中指使，通过言语奚落和生活苛待来逼迫尤二姐。善姐对尤二姐冷言冷语，拒绝为其取头油，克扣饮食，不断进行精神折磨。在她的持续虐待下，尤二姐身心俱疲，最终吞金自尽。善姐这一角色虽出场不多，但作为王熙凤实施“借刀杀人”计谋的关键棋子，深刻揭示了封建大家庭中主仆之间的残酷关系与人性之恶。在1987年电视剧《红楼梦》中由孙雪梅饰演。",
+  "events": [
+    {
+      "title": "被指派服侍尤二姐",
+      "desc": "王熙凤为折磨尤二姐，将自己的贴身丫鬟善姐派去服侍，表面上是照料，实为监视和虐待。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "对尤二姐冷言相讥",
+      "desc": "善姐对尤二姐态度恶劣，言语刻薄，不断用冷言冷语刺激尤二姐，使其精神受压。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "拒绝提供头油并克扣饮食",
+      "desc": "尤二姐需要头油，善姐不仅拒绝提供，还故意克扣其饮食，从物质上折磨尤二姐。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受王熙凤指使逼迫尤二姐",
+      "desc": "善姐的所有行为都是受王熙凤暗中指使，通过言语奚落和生活苛待，一步步将尤二姐逼入绝境。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "导致尤二姐吞金自尽",
+      "desc": "在善姐长期的精神虐待和物质苛待下，尤二姐最终绝望，吞金自尽，善姐成为王熙凤害死尤二姐的直接帮凶。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十八回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/shan_jie.webp",
+  "thumb": "/p/honglou/thumbs/shan_jie.webp"
+}

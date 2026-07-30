@@ -1,0 +1,72 @@
+{
+  "schema_version": 3,
+  "id": "lai_da",
+  "name_zh": "赖大",
+  "name_en": "Lai Da",
+  "aliases": [
+    "赖大"
+  ],
+  "epithet": "荣国府大管家",
+  "category": "servant",
+  "era_layer": 1,
+  "bio": "赖大是《红楼梦》中贾府荣国府的大总管，家生子儿出身。其母赖嬷嬷因服侍贾府老主子而获得贾母的尊崇。其弟赖二任宁国府总管，兄弟二人构成了贾府奴仆阶层的最高等级。赖大少言精明，主持元妃省亲的大观园工程时掌管账目人事，借职权贪污公款，拥有了私家花园。探春曾效仿其经验改革大观园。赖大为子赖尚荣脱籍并捐得知县官职，赖尚荣三十岁转实职后结交世家公子。赖大发家全程依赖贾府权势，既体现了封建家族内部的腐化，又反映了底层仆从的生存智慧。赖氏家族通过奴仆身份完成了阶层跃升，成为贾府奴仆群体中唯一的大富豪。",
+  "events": [
+    {
+      "title": "主持元妃省亲工程",
+      "desc": "赖大作为荣国府大总管，负责元妃省亲时大观园的建设工程，掌管账目与人事安排，借此机会积累财富。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贪污公款私建花园",
+      "desc": "赖大利用职权贪污大观园工程公款，为自己建造私家花园，成为贾府奴仆中罕见的拥有私人园林的富豪。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "为子脱籍捐官",
+      "desc": "赖大利用贾府权势，为其子赖尚荣脱离奴籍，并捐得知县官职，实现了家族从奴仆到官宦的阶层跃升。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖尚荣转实职结交世家",
+      "desc": "赖尚荣三十岁时转任实职知县，开始结交世家公子，进一步巩固了赖氏家族的社会地位。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "探春效仿其经验改革",
+      "desc": "探春在大观园改革中借鉴了赖大管理私家花园的经验，实行承包责任制，提高了大观园的经济效益。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/lai_da.webp",
+  "thumb": "/p/honglou/thumbs/lai_da.webp"
+}

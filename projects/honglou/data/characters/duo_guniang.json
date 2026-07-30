@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "id": "duo_guniang",
+  "name_zh": "多姑娘",
+  "name_en": "Duo Guniang",
+  "aliases": [
+    "多姑娘",
+    "灯姑娘"
+  ],
+  "epithet": "多浑虫之妻·贾琏情妇",
+  "category": "servant",
+  "era_layer": 2,
+  "bio": "多姑娘，又名灯姑娘，是《红楼梦》中荣国府厨子多官（多浑虫）之妻，晴雯的表嫂。她以风流放浪的形象闻名，常周旋于贾府男丁之间，曾与贾琏私通并赠青丝定情。然而，在探望被逐出府的晴雯时，她通过试探贾宝玉，识破了谣言，证明二人清白。虽然被视作“淫妇”，实则清醒通透：既利用美色争取生存空间，又能突破偏见洞察真情。她游离于礼教束缚之外，以泼辣生命力在封建压迫中存活，最终未陷入传统女性悲剧结局。曹雪芹借其从“多”到“灯”的称谓变化，塑造出兼具欲望反叛与人性光明的复杂形象，既映射贾府糜烂风气，又反衬晴雯的清白悲剧。",
+  "events": [
+    {
+      "title": "与贾琏私通",
+      "desc": "多姑娘与贾琏私通，并赠予青丝作为定情之物，展现了其风流放浪的一面，同时也反映了贾府内部的糜烂风气。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "探望晴雯试探宝玉",
+      "desc": "多姑娘在晴雯被逐出府后前去探望，通过试探贾宝玉，发现二人清白，以此证明谣言的虚假，表现出她清醒通透的一面。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/duo_guniang.webp",
+  "thumb": "/p/honglou/thumbs/duo_guniang.webp"
+}

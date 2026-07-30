@@ -1,0 +1,6079 @@
+[
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_mu",
+    "source": "jia_mu",
+    "target": "jia_baoyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贾母溺爱宝玉",
+        "desc": "贾母最疼爱贾宝玉，宝玉自幼在贾母身边长大，祖孙感情深厚。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_zheng",
+    "source": "jia_zheng",
+    "target": "jia_baoyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子冲突",
+        "desc": "贾政对宝玉不喜读书、专爱脂粉深感不满，曾因琪官事件将宝玉打得皮开肉绽。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三十三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-wang_furen",
+    "source": "wang_furen",
+    "target": "jia_baoyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子连心",
+        "desc": "王夫人是贾宝玉的生母，宝玉挨打时王夫人哭求贾政手下留情。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三十三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_yuanchun",
+    "source": "jia_yuanchun",
+    "target": "jia_baoyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐弟情深",
+        "desc": "贾元春自幼教宝玉读书识字，情同母子。元春省亲时特命宝玉题对额。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_tanchun",
+    "source": "jia_baoyu",
+    "target": "jia_tanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同父兄妹",
+        "desc": "贾宝玉与贾探春同父异母，探春是赵姨娘所生，但与宝玉关系融洽，常在诗社共题。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_huan",
+    "source": "jia_baoyu",
+    "target": "jia_huan",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "嫡庶对立",
+        "desc": "贾宝玉嫡出，贾环庶出，赵姨娘常教唆贾环嫉妒宝玉。贾环曾故意推倒烛台烫伤宝玉。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_lan",
+    "source": "jia_baoyu",
+    "target": "jia_lan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "叔侄",
+        "desc": "贾兰是贾珠之子、宝玉的亲侄子，宝玉对这个好学的侄子颇为喜爱。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-lin_daiyu",
+    "source": "jia_baoyu",
+    "target": "lin_daiyu",
+    "primary_type": "affection",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "木石前盟",
+        "desc": "贾宝玉与林黛玉前世为神瑛侍者与绛珠仙草，下凡后成姑表兄妹，青梅竹马，互为知己，发展出超越世俗的纯洁爱情。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "黛玉泪尽而逝",
+        "desc": "贾宝玉被迫迎娶薛宝钗，林黛玉焚稿断痴情，泪尽而亡。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第九十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-xue_baochai",
+    "source": "jia_baoyu",
+    "target": "xue_baochai",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "金玉良缘",
+        "desc": "贾宝玉的通灵宝玉与薛宝钗的金锁成对，在家族安排下成婚，是为'金玉良缘'。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-shi_xiangyun",
+    "source": "jia_baoyu",
+    "target": "shi_xiangyun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姑表兄妹",
+        "desc": "史湘云是贾母内侄孙女，与宝玉是姑表兄妹，自幼在贾府长大，常与宝玉打闹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-wang_xifeng",
+    "source": "wang_xifeng",
+    "target": "jia_baoyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂嫂表姐",
+        "desc": "王熙凤是贾宝玉堂兄贾琏之妻（堂嫂），也是王夫人内侄女（表姐）。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-xi_ren",
+    "source": "jia_baoyu",
+    "target": "xi_ren",
+    "primary_type": "master_servant",
+    "composite_types": [
+      "affection"
+    ],
+    "events": [
+      {
+        "title": "贴身丫鬟",
+        "desc": "袭人是宝玉的贴身大丫鬟，伏侍宝玉无微不至，与宝玉有'初试云雨情'之事。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-qing_wen",
+    "source": "jia_baoyu",
+    "target": "qing_wen",
+    "primary_type": "master_servant",
+    "composite_types": [
+      "affection"
+    ],
+    "events": [
+      {
+        "title": "撕扇千金一笑",
+        "desc": "晴雯是宝玉房中大丫鬟，性格刚烈。宝玉为博晴雯一笑，任她撕扇取乐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三十一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "晴雯被逐",
+        "desc": "王善保家的进谗，王夫人将晴雯逐出大观园，宝玉偷偷探望，晴雯含屈而亡。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第七十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-she_yue",
+    "source": "jia_baoyu",
+    "target": "she_yue",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "最后丫鬟",
+        "desc": "麝月是宝玉房中丫鬟，在晴雯被逐、袭人出嫁后，成为宝玉身边最后的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六十三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-bei_ming",
+    "source": "jia_baoyu",
+    "target": "bei_ming",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贴心小厮",
+        "desc": "焙茗是宝玉最贴心的书童小厮，常为宝玉跑腿办事，陪宝玉外出。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-miao_yu",
+    "source": "jia_baoyu",
+    "target": "miao_yu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "栊翠庵品茶",
+        "desc": "贾宝玉与妙玉在栊翠庵品茶，妙玉独以自己常用的绿玉斗斟茶给宝玉，暗藏情愫。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jiang_yuhan",
+    "source": "jia_baoyu",
+    "target": "jiang_yuhan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宝玉赠玉",
+        "desc": "贾宝玉与蒋玉菡（琪官）互生情谊，宝玉将玉玦扇坠赠予蒋玉菡，蒋玉菡回赠大红汗巾子。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-bei_jing_wang",
+    "source": "bei_jing_wang",
+    "target": "jia_baoyu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "北静王礼遇",
+        "desc": "北静王水溶在秦可卿出殡时初见宝玉，赠以鹡鸰香念珠，对宝玉礼遇有加。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-liu_laolao",
+    "source": "liu_laolao",
+    "target": "jia_baoyu",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "刘姥姥进大观园",
+        "desc": "刘姥姥二进荣国府时游大观园，与宝玉及众姐妹在怡红院等处饮酒行令。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_zheng",
+    "source": "jia_mu",
+    "target": "jia_zheng",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "贾政是贾母的次子，贾母常劝贾政不要对宝玉过于严厉。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_she",
+    "source": "jia_mu",
+    "target": "jia_she",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "贾赦是贾母的长子，但贾母不喜贾赦好色贪婪，偏爱次子贾政。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-lin_daiyu",
+    "source": "jia_mu",
+    "target": "lin_daiyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "外祖母抚孤",
+        "desc": "林黛玉之母贾敏是贾母最疼爱的女儿，早逝后贾母将黛玉接至贾府抚养。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_yuanchun",
+    "source": "jia_mu",
+    "target": "jia_yuanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾元春是贾母的长孙女，元春省亲时贾母携众女眷迎接，祖孙相聚落泪。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_tanchun",
+    "source": "jia_mu",
+    "target": "jia_tanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾探春是贾母的孙女，精明能干，深得贾母喜爱。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_yingchun",
+    "source": "jia_mu",
+    "target": "jia_yingchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾迎春是贾母的长房孙女，贾母对其被孙绍祖虐待深感痛心。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_xichun",
+    "source": "jia_mu",
+    "target": "jia_xichun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾惜春是贾母的堂孙女，自幼在贾母身边长大。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_lian",
+    "source": "jia_mu",
+    "target": "jia_lian",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾琏是贾母的长房长孙，在贾母跟前承欢，常为贾母办差。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-jia_zhen",
+    "source": "jia_mu",
+    "target": "jia_zhen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾珍是宁国府族长，贾母的堂孙，贾珍对贾母恭敬有加。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-shi_xiangyun",
+    "source": "jia_mu",
+    "target": "shi_xiangyun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姑祖孙",
+        "desc": "史湘云是贾母娘家史侯的孙女，贾母的内侄孙女，常被接到贾府居住。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-wang_xifeng",
+    "source": "jia_mu",
+    "target": "wang_xifeng",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "管家奶奶",
+        "desc": "王熙凤是贾母长孙贾琏之妻，被委以荣国府管家之任，凤姐善于奉承贾母，深得欢心。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-yuan_yang",
+    "source": "jia_mu",
+    "target": "yuan_yang",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贴身丫鬟",
+        "desc": "鸳鸯是贾母的贴身大丫鬟，掌管贾母私房，是贾母须臾离不开的左膀右臂。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "鸳鸯拒嫁",
+        "desc": "贾赦欲讨鸳鸯为妾，鸳鸯誓死不从，贾母大怒力保鸳鸯。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-lai_da",
+    "source": "jia_mu",
+    "target": "lai_da",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "大管家",
+        "desc": "赖大是荣国府大管家，管理贾府一应外务，其母赖嬷嬷是贾母的老仆。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-liu_laolao",
+    "source": "liu_laolao",
+    "target": "jia_mu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "三进荣国府",
+        "desc": "刘姥姥二进荣国府时被贾母留住游大观园，贾母喜她朴实有趣，认作老亲家。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三十九回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-wang_furen",
+    "source": "jia_zheng",
+    "target": "wang_furen",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "王夫人是贾政的正室，生有贾珠、贾元春、贾宝玉三子女。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-zhao_yiniang",
+    "source": "jia_zheng",
+    "target": "zhao_yiniang",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [
+      "blood",
+      "master_servant"
+    ],
+    "events": [
+      {
+        "title": "妾室",
+        "desc": "赵姨娘是贾政的妾室，生有贾探春、贾环。贾政常在赵姨娘处歇息。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-jia_yuanchun",
+    "source": "jia_zheng",
+    "target": "jia_yuanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "贾元春是贾政的长女，因贤德入选宫中，后晋封贵妃，贾政上表谢恩。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-jia_tanchun",
+    "source": "jia_zheng",
+    "target": "jia_tanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "贾探春是贾政与赵姨娘之女，庶出但才精明能干，贾政对这个女儿颇为看重。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-jia_huan",
+    "source": "jia_zheng",
+    "target": "jia_huan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾环是贾政与赵姨娘之子，庶出，贾政对贾环不甚看重。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-jia_yucun",
+    "source": "jia_zheng",
+    "target": "jia_yucun",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "连宗",
+        "desc": "贾雨村与贾政连宗认作同宗，常在贾府走动，贾政为其谋得应天府尹之职。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-wang_ziteng",
+    "source": "wang_ziteng",
+    "target": "wang_furen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹",
+        "desc": "王子腾是王夫人的兄长，四大家族王家的核心人物，官至京营节度使。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-xue_yima",
+    "source": "xue_yima",
+    "target": "wang_furen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐妹",
+        "desc": "薛姨妈与王夫人是亲姐妹，同出王家，薛姨妈携子女进京后常住荣国府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-wang_xifeng",
+    "source": "wang_xifeng",
+    "target": "wang_furen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姑侄",
+        "desc": "王熙凤是王夫人的内侄女，因王夫人之故嫁入贾府成为管家奶奶。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-jin_chuan",
+    "source": "wang_furen",
+    "target": "jin_chuan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "金钏投井",
+        "desc": "金钏是王夫人贴身丫鬟，因与宝玉调笑被王夫人打骂逐出，含辱投井自尽。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三十二回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-yu_chuan",
+    "source": "wang_furen",
+    "target": "yu_chuan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贴身丫鬟",
+        "desc": "玉钏是金钏之妹，金钏死后接替姐姐成为王夫人贴身丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-zhou_rui_jia",
+    "source": "wang_furen",
+    "target": "zhou_rui_jia",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "陪房",
+        "desc": "周瑞家的是王夫人的陪房，专管王夫人处一应杂事。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_furen-zhao_yiniang",
+    "source": "wang_furen",
+    "target": "zhao_yiniang",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "嫡庶对立",
+        "desc": "王夫人是贾政正室，赵姨娘是妾室，王夫人表面上不与赵姨娘计较，实则厌恶。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ziteng-wang_xifeng",
+    "source": "wang_ziteng",
+    "target": "wang_xifeng",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "伯侄",
+        "desc": "王子腾是王熙凤的伯父，凤姐嫁入贾府有王子腾的势力支持。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ziteng-xue_yima",
+    "source": "wang_ziteng",
+    "target": "xue_yima",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹",
+        "desc": "王子腾是薛姨妈的兄长，薛姨妈进京后有王子腾照应。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_yima-xue_baochai",
+    "source": "xue_yima",
+    "target": "xue_baochai",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "薛姨妈是薛宝钗的母亲，携宝钗进京待选，常住荣国府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_yima-xue_pan",
+    "source": "xue_yima",
+    "target": "xue_pan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "薛蟠是薛姨妈的长子，薛姨妈溺爱薛蟠，对其惹祸无可奈何。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_yima-wang_furen",
+    "source": "xue_yima",
+    "target": "wang_furen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐妹",
+        "desc": "薛姨妈与王夫人是亲姐妹，姐妹情深，薛姨妈常住荣国府陪王夫人说话。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baochai-xue_pan",
+    "source": "xue_pan",
+    "target": "xue_baochai",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹",
+        "desc": "薛蟠是薛宝钗的哥哥，宝钗常劝薛蟠收敛，薛蟠惹祸后宝钗替他善后。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baochai-ying_er",
+    "source": "xue_baochai",
+    "target": "ying_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贴身丫鬟",
+        "desc": "莺儿是薛宝钗的贴身丫鬟，手巧会编络子，曾为宝玉打络子。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baochai-xiang_ling",
+    "source": "xue_baochai",
+    "target": "xiang_ling",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "主仆",
+        "desc": "香菱是薛蟠的妾，薛宝钗对香菱颇为照顾，曾教香菱学诗。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baochai-lin_daiyu",
+    "source": "lin_daiyu",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "金陵十二钗正册",
+        "desc": "林黛玉与薛宝钗同列金陵十二钗正册，判词合二为一：'可叹停机德，堪怜咏絮才。玉带林中挂，金簪雪里埋。'",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "钗黛和好",
+        "desc": "经过'金兰契互剖金兰语'后，林黛玉与薛宝钗释嫌和好，黛玉认宝钗为姐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baochai-shi_xiangyun",
+    "source": "shi_xiangyun",
+    "target": "xue_baochai",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "表姐妹",
+        "desc": "史湘云与薛宝钗是表姐妹，湘云敬爱宝钗，曾说'宝姐姐天下第一好人'。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baochai-wang_xifeng",
+    "source": "wang_xifeng",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "表姐妹同列十二钗",
+        "desc": "王熙凤与薛宝钗同为金陵十二钗正册人物，且为表姐妹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_pan-xiang_ling",
+    "source": "xue_pan",
+    "target": "xiang_ling",
+    "primary_type": "master_servant",
+    "composite_types": [
+      "legitimate_concubine"
+    ],
+    "events": [
+      {
+        "title": "强抢香菱",
+        "desc": "薛蟠强抢香菱（英莲）为妾，打死冯渊，是薛家进京的缘由。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_pan-zhen_shiyin",
+    "source": "zhen_shiyin",
+    "target": "xue_pan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夺女之仇",
+        "desc": "薛蟠抢走的香菱正是甄士隐之女英莲，但甄士隐此时已出家，不知女儿下落。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhen_shiyin-xiang_ling",
+    "source": "zhen_shiyin",
+    "target": "xiang_ling",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "香菱本名英莲，是甄士隐的独女，元宵节被拐子拐走，后卖给薛蟠。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhen_shiyin-jia_yucun",
+    "source": "zhen_shiyin",
+    "target": "jia_yucun",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "资助赴考",
+        "desc": "甄士隐资助贾雨村赴京赶考，贾雨村后做官却恩将仇报，乱判葫芦案。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhen_shiyin-jiao_xing",
+    "source": "zhen_shiyin",
+    "target": "jiao_xing",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "主仆",
+        "desc": "娇杏是甄士隐家的丫鬟，曾因回头顾看贾雨村而被贾雨村记下。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yucun-jiao_xing",
+    "source": "jia_yucun",
+    "target": "jiao_xing",
+    "primary_type": "marriage",
+    "composite_types": [
+      "master_servant"
+    ],
+    "events": [
+      {
+        "title": "纳妾",
+        "desc": "贾雨村做官后纳娇杏为妾，娇杏后因正室病故被扶正。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yucun-jia_zheng",
+    "source": "jia_yucun",
+    "target": "jia_zheng",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "连宗",
+        "desc": "贾雨村与贾政连宗认作同宗，贾政为其谋得官职，贾雨村常在贾府走动。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_she-xing_furen",
+    "source": "jia_she",
+    "target": "xing_furen",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "邢夫人是贾赦的续弦，无儿无女，凡事逢迎贾赦。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_she-jia_lian",
+    "source": "jia_she",
+    "target": "jia_lian",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾琏是贾赦之子，因贾赦好色贪婪，贾琏常为父亲办差跑腿。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_she-jia_yingchun",
+    "source": "jia_she",
+    "target": "jia_yingchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "贾迎春是贾赦之女，贾赦为还孙家五千两银子，将迎春抵嫁给孙绍祖。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第七十九回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_she-yuan_yang",
+    "source": "jia_she",
+    "target": "yuan_yang",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "强讨鸳鸯",
+        "desc": "贾赦欲讨鸳鸯为妾，鸳鸯誓死不从，贾母大怒，贾赦未能得逞。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_furen-wang_shanbao_jia",
+    "source": "xing_furen",
+    "target": "wang_shanbao_jia",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "陪房",
+        "desc": "王善保家的是邢夫人的陪房，在抄检大观园时充当领头。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_jing-jia_zhen",
+    "source": "jia_jing",
+    "target": "jia_zhen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾敬沉迷炼丹不问世事，贾珍作为族长肆无忌惮，宁国府因此败坏。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_jing-jia_xichun",
+    "source": "jia_jing",
+    "target": "jia_xichun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "贾惜春是贾敬之女，因父亲不管，自幼在贾母身边长大。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zhen-you_shi",
+    "source": "jia_zhen",
+    "target": "you_shi",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "尤氏是贾珍的续弦，对贾珍的荒淫无可奈何，只能睁一只眼闭一只眼。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zhen-jia_rong",
+    "source": "jia_zhen",
+    "target": "jia_rong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾蓉是贾珍之子，父子皆为好色之徒，宁国府因此声名狼藉。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "父子",
+        "desc": "贾蓉是贾珍之子，在贾珍指使下做各种差事。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zhen-qin_keqing",
+    "source": "jia_zhen",
+    "target": "qin_keqing",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "爬灰",
+        "desc": "贾珍与儿媳秦可卿有染，即所谓'爬灰'，是宁国府的丑闻。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "you_shi-you_erjie",
+    "source": "you_shi",
+    "target": "you_erjie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "异母姐妹",
+        "desc": "尤二姐是尤氏继母带来的女儿，尤氏对这个异母妹妹颇为无奈。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "you_shi-you_sanjie",
+    "source": "you_shi",
+    "target": "you_sanjie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "异母姐妹",
+        "desc": "尤三姐是尤氏继母带来的女儿，性格刚烈，后持剑自刎。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "you_erjie-you_sanjie",
+    "source": "you_erjie",
+    "target": "you_sanjie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐妹",
+        "desc": "尤二姐与尤三姐是亲姐妹，同在贾府寄居，命运皆悲惨。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_rong-qin_keqing",
+    "source": "jia_rong",
+    "target": "qin_keqing",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "秦可卿是贾蓉之妻，端庄妩媚，后因与贾珍事发自缢身亡。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十三回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-wang_xifeng",
+    "source": "jia_lian",
+    "target": "wang_xifeng",
+    "primary_type": "marriage",
+    "composite_types": [
+      "blood"
+    ],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "王熙凤是贾琏的正室，夫妻二人共同管家，但凤姐强势，贾琏常受压制。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-ping_er",
+    "source": "jia_lian",
+    "target": "ping_er",
+    "primary_type": "master_servant",
+    "composite_types": [
+      "legitimate_concubine"
+    ],
+    "events": [
+      {
+        "title": "通房丫头",
+        "desc": "平儿是王熙凤的陪嫁丫鬟，后成贾琏通房丫头，在凤姐与贾琏之间周旋。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-you_erjie",
+    "source": "jia_lian",
+    "target": "you_erjie",
+    "primary_type": "marriage",
+    "composite_types": [
+      "legitimate_concubine"
+    ],
+    "events": [
+      {
+        "title": "偷娶外室",
+        "desc": "贾琏在花枝巷偷娶尤二姐为外室，被王熙凤发现后接回府中，尤二姐后被害致死。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-jia_qiaojie",
+    "source": "jia_lian",
+    "target": "jia_qiaojie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "巧姐是贾琏与王熙凤之女，贾府败落后险被卖出，被刘姥姥救出。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-jia_qiaojie",
+    "source": "wang_xifeng",
+    "target": "jia_qiaojie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "巧姐是王熙凤之女，凤姐请刘姥姥给巧姐取名，结下善缘。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十二回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-ping_er",
+    "source": "wang_xifeng",
+    "target": "ping_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "心腹丫鬟",
+        "desc": "平儿是王熙凤的陪嫁丫鬟，也是凤姐的心腹，帮凤姐处理大小事务。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-xiao_hong",
+    "source": "wang_xifeng",
+    "target": "xiao_hong",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "收用小红",
+        "desc": "小红因能干被王熙凤看中收用，从此离开宝玉房中，成为凤姐的得力丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-you_erjie",
+    "source": "wang_xifeng",
+    "target": "you_erjie",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "借剑杀人",
+        "desc": "王熙凤发现贾琏偷娶尤二姐后，假意接回善待，实则借秋桐之手逼尤二姐吞金自尽。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六十八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-lin_daiyu",
+    "source": "wang_xifeng",
+    "target": "lin_daiyu",
+    "primary_type": "blood",
+    "composite_types": [
+      "jinling_twelve"
+    ],
+    "events": [
+      {
+        "title": "表姐妹",
+        "desc": "王熙凤与林黛玉是表姐妹，凤姐曾打趣黛玉'吃了我们家的茶，怎么还不给我们家作媳妇'。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_qiaojie-liu_laolao",
+    "source": "liu_laolao",
+    "target": "jia_qiaojie",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "巧姐取名",
+        "desc": "刘姥姥二进荣国府时，王熙凤请刘姥姥给女儿取名，刘姥姥取名'巧姐'，意在'逢凶化吉'。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十二回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "刘姥姥救巧姐",
+        "desc": "贾府败落后，巧姐险被狠舅奸兄卖出，刘姥姥倾家救出巧姐，带至乡间抚养。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第一百二十回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_daiyu-zi_juan",
+    "source": "lin_daiyu",
+    "target": "zi_juan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贴身丫鬟",
+        "desc": "紫鹃原是贾母的丫鬟鹦哥，后分给黛玉，成为黛玉最贴心的知己。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "紫鹃试玉",
+        "desc": "紫鹃为试探宝玉对黛玉的心意，谎称黛玉要回苏州，宝玉为此痴狂，证得宝黛真情。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_daiyu-shi_xiangyun",
+    "source": "lin_daiyu",
+    "target": "shi_xiangyun",
+    "primary_type": "blood",
+    "composite_types": [
+      "jinling_twelve"
+    ],
+    "events": [
+      {
+        "title": "表姐妹",
+        "desc": "林黛玉与史湘云是表姐妹，二人常在诗社联句，也有过'寒塘渡鹤影，冷月葬花魂'的联诗。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第七十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_wan-jia_lan",
+    "source": "li_wan",
+    "target": "jia_lan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "李纨青年守寡，独子贾兰是她的全部希望，悉心教导贾兰读书科举。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhao_yiniang-jia_tanchun",
+    "source": "zhao_yiniang",
+    "target": "jia_tanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "赵姨娘是贾探春的生母，但探春以嫡母王夫人为母，对赵姨娘的胡闹深感耻辱。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五十五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "zhao_yiniang-jia_huan",
+    "source": "zhao_yiniang",
+    "target": "jia_huan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "赵姨娘是贾环的生母，常教唆贾环嫉妒宝玉、生事生非。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-jia_huan",
+    "source": "jia_tanchun",
+    "target": "jia_huan",
+    "primary_type": "blood",
+    "composite_types": [
+      "legitimate_concubine"
+    ],
+    "events": [
+      {
+        "title": "同母姐弟",
+        "desc": "贾探春与贾环同为赵姨娘所生，但探春才高，贾环猥琐，二人关系疏远。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-si_qi",
+    "source": "jia_yingchun",
+    "target": "si_qi",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "主仆",
+        "desc": "司棋是贾迎春的贴身丫鬟，性格刚烈，后因与潘又安私通被逐出大观园。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_shanbao_jia-si_qi",
+    "source": "wang_shanbao_jia",
+    "target": "si_qi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "外祖母",
+        "desc": "司棋是王善保家的的外孙女，王善保家的在抄检大观园时反查出司棋的私情，自打嘴巴。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第七十四回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jin_chuan-yu_chuan",
+    "source": "jin_chuan",
+    "target": "yu_chuan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐妹",
+        "desc": "金钏与玉钏是亲姐妹，同在王夫人处做丫鬟。金钏死后玉钏接替姐姐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_zhixiao-xiao_hong",
+    "source": "lin_zhixiao",
+    "target": "xiao_hong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "小红是林之孝的女儿，但因父母老实低调，小红在宝玉房中不受重用。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_zhixiao-lai_da",
+    "source": "lai_da",
+    "target": "lin_zhixiao",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同僚管家",
+        "desc": "赖大与林之孝同为荣国府管家，赖大为大管家，林之孝为二管家。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_xianglian-you_sanjie",
+    "source": "liu_xianglian",
+    "target": "you_sanjie",
+    "primary_type": "affection",
+    "composite_types": [
+      "marriage"
+    ],
+    "events": [
+      {
+        "title": "定亲",
+        "desc": "柳湘莲以祖传鸳鸯剑作为定礼与尤三姐订亲，后听信谣言疑尤三姐不贞欲退婚。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      },
+      {
+        "title": "三姐自刎",
+        "desc": "尤三姐听闻柳湘莲退婚，拔剑自刎以明志，柳湘莲悔恨出家。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_xianglian-jia_baoyu",
+    "source": "liu_xianglian",
+    "target": "jia_baoyu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "结交",
+        "desc": "柳湘莲与贾宝玉是好友，柳湘莲曾向宝玉打听尤三姐的为人。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第六十六回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "liu_xianglian-xue_pan",
+    "source": "liu_xianglian",
+    "target": "xue_pan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "结义",
+        "desc": "柳湘莲曾教训薛蟠，后二人在平安州遇盗时柳湘莲救了薛蟠，结为兄弟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_yuhan-xue_pan",
+    "source": "jiang_yuhan",
+    "target": "xue_pan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "酒楼结交",
+        "desc": "蒋玉菡在酒楼与薛蟠等人饮酒，薛蟠素喜男风，对蒋玉菡颇为殷勤。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jiang_yuhan-xi_ren",
+    "source": "jiang_yuhan",
+    "target": "xi_ren",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "宝玉撮合",
+        "desc": "蒋玉菡后娶袭人为妻，是因宝玉在酒席上将袭人的松花汗巾赠予蒋玉菡，暗藏姻缘。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第二十八回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 2
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_keqing-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "qin_keqing",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "太虚幻境",
+        "desc": "贾宝玉在秦可卿卧室午睡，梦游太虚幻境，与可卿成亲，是宝黛爱情的隐喻。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-jia_mu",
+    "source": "jia_mu",
+    "target": "miao_yu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "请入栊翠庵",
+        "desc": "贾母请妙玉入大观园栊翠庵带发修行，妙玉因此寄居贾府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-lin_daiyu",
+    "source": "lin_daiyu",
+    "target": "miao_yu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "栊翠庵品茶",
+        "desc": "林黛玉与妙玉在栊翠庵品茶，妙玉嫌黛玉用过的杯子脏，黛玉不以为忤。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第四十一回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "bei_jing_wang-jia_zheng",
+    "source": "bei_jing_wang",
+    "target": "jia_zheng",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "王公交往",
+        "desc": "北静王水溶与贾政有交往，对贾政颇为礼遇。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-jia_xichun",
+    "source": "jia_yingchun",
+    "target": "jia_xichun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂姐妹",
+        "desc": "贾迎春与贾惜春是堂姐妹，同在贾母身边长大，与大观园众姐妹同住。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-jia_tanchun",
+    "source": "jia_yingchun",
+    "target": "jia_tanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂姐妹",
+        "desc": "贾迎春与贾探春是堂姐妹，迎春是大房，探春是二房。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-jia_xichun",
+    "source": "jia_tanchun",
+    "target": "jia_xichun",
+    "primary_type": "blood",
+    "composite_types": [
+      "jinling_twelve"
+    ],
+    "events": [
+      {
+        "title": "堂姐妹",
+        "desc": "贾探春与贾惜春是堂姐妹，探春是二房，惜春是宁国府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与贾惜春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-jia_tanchun",
+    "source": "jia_yuanchun",
+    "target": "jia_tanchun",
+    "primary_type": "blood",
+    "composite_types": [
+      "jinling_twelve"
+    ],
+    "events": [
+      {
+        "title": "同父姐妹",
+        "desc": "贾元春与贾探春同父异母，元春是嫡出，探春是庶出。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      },
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与贾探春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-jia_huan",
+    "source": "jia_yuanchun",
+    "target": "jia_huan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同父姐弟",
+        "desc": "贾元春与贾环同父异母，元春是嫡出，环是庶出。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-jia_zhen",
+    "source": "jia_zhen",
+    "target": "jia_lian",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂兄弟",
+        "desc": "贾珍与贾琏是堂兄弟，珍是宁国府族长，琏是荣国府，二人常一起办事。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ping_er-xiao_hong",
+    "source": "ping_er",
+    "target": "xiao_hong",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟友谊",
+        "desc": "平儿与小红都是凤姐身边的丫鬟，关系融洽。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xi_ren-yuan_yang",
+    "source": "xi_ren",
+    "target": "yuan_yang",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟友谊",
+        "desc": "袭人与鸳鸯是贾府大丫鬟中的佼佼者，关系亲密。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xi_ren-qing_wen",
+    "source": "xi_ren",
+    "target": "qing_wen",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同房丫鬟",
+        "desc": "袭人与晴雯同在宝玉房中，性格一柔一烈，时有龃龉。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-jia_mu",
+    "source": "jia_mu",
+    "target": "jia_yuanchun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾元春是贾母最疼爱的孙女，元春省亲时与贾母相拥而泣。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第十七回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 1
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-xue_baochai",
+    "source": "jia_yuanchun",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-lin_daiyu",
+    "source": "jia_yuanchun",
+    "target": "lin_daiyu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与林黛玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-shi_xiangyun",
+    "source": "jia_yuanchun",
+    "target": "shi_xiangyun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与史湘云同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-miao_yu",
+    "source": "jia_yuanchun",
+    "target": "miao_yu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与妙玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-jia_yingchun",
+    "source": "jia_yuanchun",
+    "target": "jia_yingchun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与贾迎春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-jia_xichun",
+    "source": "jia_yuanchun",
+    "target": "jia_xichun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与贾惜春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-wang_xifeng",
+    "source": "jia_yuanchun",
+    "target": "wang_xifeng",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与王熙凤同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-jia_qiaojie",
+    "source": "jia_yuanchun",
+    "target": "jia_qiaojie",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与巧姐同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-li_wan",
+    "source": "jia_yuanchun",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yuanchun-qin_keqing",
+    "source": "jia_yuanchun",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾元春与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-xue_baochai",
+    "source": "jia_tanchun",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-lin_daiyu",
+    "source": "jia_tanchun",
+    "target": "lin_daiyu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与林黛玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-shi_xiangyun",
+    "source": "jia_tanchun",
+    "target": "shi_xiangyun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与史湘云同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-miao_yu",
+    "source": "jia_tanchun",
+    "target": "miao_yu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与妙玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-jia_yingchun",
+    "source": "jia_tanchun",
+    "target": "jia_yingchun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与贾迎春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-wang_xifeng",
+    "source": "jia_tanchun",
+    "target": "wang_xifeng",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与王熙凤同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-jia_qiaojie",
+    "source": "jia_tanchun",
+    "target": "jia_qiaojie",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与巧姐同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-li_wan",
+    "source": "jia_tanchun",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-qin_keqing",
+    "source": "jia_tanchun",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾探春与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-xue_baochai",
+    "source": "shi_xiangyun",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-lin_daiyu",
+    "source": "shi_xiangyun",
+    "target": "lin_daiyu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与林黛玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-miao_yu",
+    "source": "shi_xiangyun",
+    "target": "miao_yu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与妙玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-jia_yingchun",
+    "source": "shi_xiangyun",
+    "target": "jia_yingchun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与贾迎春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-jia_xichun",
+    "source": "shi_xiangyun",
+    "target": "jia_xichun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与贾惜春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-wang_xifeng",
+    "source": "shi_xiangyun",
+    "target": "wang_xifeng",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与王熙凤同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-jia_qiaojie",
+    "source": "shi_xiangyun",
+    "target": "jia_qiaojie",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与巧姐同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-li_wan",
+    "source": "shi_xiangyun",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-qin_keqing",
+    "source": "shi_xiangyun",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "史湘云与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-xue_baochai",
+    "source": "miao_yu",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-jia_yingchun",
+    "source": "miao_yu",
+    "target": "jia_yingchun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与贾迎春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-jia_xichun",
+    "source": "miao_yu",
+    "target": "jia_xichun",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与贾惜春同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-wang_xifeng",
+    "source": "miao_yu",
+    "target": "wang_xifeng",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与王熙凤同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-jia_qiaojie",
+    "source": "miao_yu",
+    "target": "jia_qiaojie",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与巧姐同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-li_wan",
+    "source": "miao_yu",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "miao_yu-qin_keqing",
+    "source": "miao_yu",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "妙玉与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-xue_baochai",
+    "source": "jia_yingchun",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾迎春与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-lin_daiyu",
+    "source": "jia_yingchun",
+    "target": "lin_daiyu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾迎春与林黛玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-wang_xifeng",
+    "source": "jia_yingchun",
+    "target": "wang_xifeng",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾迎春与王熙凤同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-jia_qiaojie",
+    "source": "jia_yingchun",
+    "target": "jia_qiaojie",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾迎春与巧姐同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-li_wan",
+    "source": "jia_yingchun",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾迎春与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-qin_keqing",
+    "source": "jia_yingchun",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾迎春与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-xue_baochai",
+    "source": "jia_xichun",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾惜春与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-lin_daiyu",
+    "source": "jia_xichun",
+    "target": "lin_daiyu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾惜春与林黛玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-wang_xifeng",
+    "source": "jia_xichun",
+    "target": "wang_xifeng",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾惜春与王熙凤同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-jia_qiaojie",
+    "source": "jia_xichun",
+    "target": "jia_qiaojie",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾惜春与巧姐同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-li_wan",
+    "source": "jia_xichun",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾惜春与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-qin_keqing",
+    "source": "jia_xichun",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "贾惜春与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-li_wan",
+    "source": "wang_xifeng",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "王熙凤与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_xifeng-qin_keqing",
+    "source": "wang_xifeng",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "王熙凤与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_qiaojie-li_wan",
+    "source": "jia_qiaojie",
+    "target": "li_wan",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "巧姐与李纨同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_qiaojie-qin_keqing",
+    "source": "jia_qiaojie",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "巧姐与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_wan-qin_keqing",
+    "source": "li_wan",
+    "target": "qin_keqing",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "李纨与秦可卿同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_keqing-xue_baochai",
+    "source": "qin_keqing",
+    "target": "xue_baochai",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "秦可卿与薛宝钗同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_keqing-lin_daiyu",
+    "source": "qin_keqing",
+    "target": "lin_daiyu",
+    "primary_type": "jinling_twelve",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "同列十二钗",
+        "desc": "秦可卿与林黛玉同列金陵十二钗正册。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": "第五回",
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_daishan-jia_mu",
+    "source": "jia_daishan",
+    "target": "jia_mu",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "荣国公夫妻",
+        "desc": "贾代善是贾母之夫，荣国公，贾府荣国支的奠基人。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_daishan-jia_zheng",
+    "source": "jia_daishan",
+    "target": "jia_zheng",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾代善是贾政之父，贾政是次子。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_daishan-jia_she",
+    "source": "jia_daishan",
+    "target": "jia_she",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾代善是贾赦之父，贾赦是长子。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_daihua-jia_jing",
+    "source": "jia_daihua",
+    "target": "jia_jing",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾代化是贾敬之父，宁国府老太爷。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_dairu-jia_rui",
+    "source": "jia_dairu",
+    "target": "jia_rui",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "贾代儒是贾瑞之祖，贾府族学老师，教导贾瑞。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zheng-jia_zhu",
+    "source": "jia_zheng",
+    "target": "jia_zhu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾珠是贾政长子，英年早逝，留下妻子李纨和儿子贾兰。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zhu-li_wan",
+    "source": "jia_zhu",
+    "target": "li_wan",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "贾珠与李纨是夫妻，贾珠早逝后李纨守节。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lan-jia_zhu",
+    "source": "jia_zhu",
+    "target": "jia_lan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾兰是贾珠之子，遗腹子，由李纨悉心教导。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_min-lin_daiyu",
+    "source": "jia_min",
+    "target": "lin_daiyu",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "贾敏是林黛玉之母，贾母最疼爱的女儿，早逝后黛玉被接到贾府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_cong-jia_she",
+    "source": "jia_she",
+    "target": "jia_cong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "贾琮是贾赦庶出幼子，不甚受贾赦重视。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_qiang-jia_zhen",
+    "source": "jia_zhen",
+    "target": "jia_qiang",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "叔侄",
+        "desc": "贾蔷是贾珍之侄，宁国府玄孙，被贾珍指派管理戏班。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_qiang-jia_rong",
+    "source": "jia_rong",
+    "target": "jia_qiang",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂兄弟",
+        "desc": "贾蓉与贾蔷是堂兄弟，同在宁国府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_yun",
+    "source": "jia_baoyu",
+    "target": "jia_yun",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "义父子",
+        "desc": "贾芸认贾宝玉为义父，宝玉戏称其为'儿子'，贾芸借此攀附。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_ding-shi_xiangyun",
+    "source": "shi_ding",
+    "target": "shi_xiangyun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "叔侄女",
+        "desc": "史鼎是史湘云的叔父，保龄侯。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_nai-shi_xiangyun",
+    "source": "shi_nai",
+    "target": "shi_xiangyun",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "叔侄女",
+        "desc": "史鼐是史湘云的叔父，忠靖侯。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_ding-shi_nai",
+    "source": "shi_ding",
+    "target": "shi_nai",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄弟",
+        "desc": "史鼎与史鼐是兄弟，同为史湘云叔父。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "wang_ren-wang_xifeng",
+    "source": "wang_ren",
+    "target": "wang_xifeng",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹",
+        "desc": "王仁是王熙凤之兄，巧姐的舅舅。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_qiaojie-wang_ren",
+    "source": "wang_ren",
+    "target": "jia_qiaojie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "舅父甥女",
+        "desc": "王仁是巧姐的舅舅，后为图钱财欲卖巧姐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_ke-xue_pan",
+    "source": "xue_pan",
+    "target": "xue_ke",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂兄弟",
+        "desc": "薛蟠与薛蝌是堂兄弟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baoqin-xue_ke",
+    "source": "xue_ke",
+    "target": "xue_baoqin",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹",
+        "desc": "薛蝌与薛宝琴是亲兄妹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xue_baoqin-xue_pan",
+    "source": "xue_pan",
+    "target": "xue_baoqin",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂兄妹",
+        "desc": "薛蟠与薛宝琴是堂兄妹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_xiuyan-xue_ke",
+    "source": "xue_ke",
+    "target": "xing_xiuyan",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "未婚夫妻",
+        "desc": "薛蝌与邢岫烟订亲，是薛姨妈撮合的姻缘。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_wan-li_wen",
+    "source": "li_wan",
+    "target": "li_wen",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂姐妹",
+        "desc": "李纹是李纨的堂妹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_qi-li_wan",
+    "source": "li_wan",
+    "target": "li_qi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂姐妹",
+        "desc": "李绮是李纨的堂妹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_qi-li_wen",
+    "source": "li_wen",
+    "target": "li_qi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐妹",
+        "desc": "李纹与李绮是亲姐妹。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_furen-xing_zhong",
+    "source": "xing_furen",
+    "target": "xing_zhong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄妹",
+        "desc": "邢夫人与邢忠是兄妹，邢忠是邢岫烟之父。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_dequan-xing_furen",
+    "source": "xing_furen",
+    "target": "xing_dequan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐弟",
+        "desc": "邢夫人与邢德全是姐弟，邢德全外号'傻大舅'。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_furen-xing_xiuyan",
+    "source": "xing_furen",
+    "target": "xing_xiuyan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姑侄",
+        "desc": "邢岫烟是邢夫人的侄女，寄居贾府。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_xiuyan-xing_zhong",
+    "source": "xing_zhong",
+    "target": "xing_xiuyan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "邢忠是邢岫烟之父，家道艰难送女儿进京。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xing_dequan-xing_zhong",
+    "source": "xing_zhong",
+    "target": "xing_dequan",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "兄弟",
+        "desc": "邢忠与邢德全是兄弟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "you_erjie-you_laoniang",
+    "source": "you_laoniang",
+    "target": "you_erjie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "尤老娘是尤二姐之母。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "you_laoniang-you_sanjie",
+    "source": "you_laoniang",
+    "target": "you_sanjie",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "尤老娘是尤三姐之母。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "you_laoniang-you_shi",
+    "source": "you_laoniang",
+    "target": "you_shi",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "继母继女",
+        "desc": "尤老娘是尤氏的继母，尤氏是前妻所生。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xia_jingui-xue_pan",
+    "source": "xia_jingui",
+    "target": "xue_pan",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "夏金桂是薛蟠之妻，外号'河东狮'，搅得薛家鸡犬不宁。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xia_jingui-xiang_ling",
+    "source": "xia_jingui",
+    "target": "xiang_ling",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "嫡庶欺压",
+        "desc": "夏金桂嫁入薛家后百般虐待香菱，甚至将香菱改名秋菱。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "bao_chan-xia_jingui",
+    "source": "xia_jingui",
+    "target": "bao_chan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "主仆",
+        "desc": "宝蟾是夏金桂的贴身丫鬟，帮夏金桂作恶。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-qiu_tong",
+    "source": "qiu_tong",
+    "target": "jia_lian",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "妾",
+        "desc": "秋桐是贾赦赐给贾琏的妾，与尤二姐争夺贾琏宠爱。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qiu_tong-wang_xifeng",
+    "source": "qiu_tong",
+    "target": "wang_xifeng",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "嫡庶敌对",
+        "desc": "秋桐被王熙凤利用对付尤二姐，后被凤姐抛弃。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qiu_tong-you_erjie",
+    "source": "qiu_tong",
+    "target": "you_erjie",
+    "primary_type": "legitimate_concubine",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "嫡庶敌对",
+        "desc": "秋桐与尤二姐同为贾琏妾室，秋桐依仗贾赦之赐欺压尤二姐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-zhen_baoyu",
+    "source": "zhen_baoyu",
+    "target": "jia_baoyu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "镜像惺惺相惜",
+        "desc": "甄宝玉与贾宝玉容貌性情极为相似，二人相见如照镜子，互为镜像。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_keqing-qin_ye",
+    "source": "qin_ye",
+    "target": "qin_keqing",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父女",
+        "desc": "秦业是秦可卿的养父，营缮郎。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_ye-qin_zhong",
+    "source": "qin_ye",
+    "target": "qin_zhong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "秦业是秦钟之父，秦钟是秦可卿之弟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_keqing-qin_zhong",
+    "source": "qin_keqing",
+    "target": "qin_zhong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "姐弟",
+        "desc": "秦可卿与秦钟是姐弟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-qin_zhong",
+    "source": "jia_baoyu",
+    "target": "qin_zhong",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "知己好友",
+        "desc": "贾宝玉与秦钟在族学相识，互生情谊，是宝玉的第一个同性知己。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "qin_zhong-zhineng_er",
+    "source": "qin_zhong",
+    "target": "zhineng_er",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "私通",
+        "desc": "秦钟与智能儿在馒头庵私通，被宝玉撞破。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hupo-jia_mu",
+    "source": "jia_mu",
+    "target": "hupo",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "贴身丫鬟",
+        "desc": "琥珀是贾母身边的贴身丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "boli-jia_mu",
+    "source": "jia_mu",
+    "target": "boli",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "玻璃是贾母身边的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "feicui-jia_mu",
+    "source": "jia_mu",
+    "target": "feicui",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "翡翠是贾母身边的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fang_guan-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "fang_guan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班丫鬟",
+        "desc": "芳官是戏班解散后归入宝玉房中的丫鬟，深得宝玉喜爱。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-ou_guan",
+    "source": "jia_baoyu",
+    "target": "ou_guan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班丫鬟",
+        "desc": "藕官是戏班解散后归入宝玉房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-rui_guan",
+    "source": "jia_baoyu",
+    "target": "rui_guan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班丫鬟",
+        "desc": "蕊官是戏班解散后归入宝玉房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-kui_guan",
+    "source": "jia_baoyu",
+    "target": "kui_guan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班丫鬟",
+        "desc": "葵官是戏班解散后归入宝玉房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "dou_guan-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "dou_guan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班丫鬟",
+        "desc": "豆官是戏班解散后归入宝玉房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ai_guan-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "ai_guan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班丫鬟",
+        "desc": "艾官是戏班解散后归入宝玉房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "hui_xiang-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "hui_xiang",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "蕙香（四儿）是宝玉房中的小丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "chun_yan-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "chun_yan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "春燕是宝玉房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-wu_er",
+    "source": "jia_baoyu",
+    "target": "wu_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "五儿是柳嫂之女，想入宝玉房中未成。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-zhui_er",
+    "source": "jia_baoyu",
+    "target": "zhui_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "坠儿是宝玉房中的小丫鬟，因偷虾须镯被逐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_daiyu-xue_yan",
+    "source": "lin_daiyu",
+    "target": "xue_yan",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "雪雁是黛玉从扬州带来的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yingchun-xiu_ju",
+    "source": "jia_yingchun",
+    "target": "xiu_ju",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "绣橘是迎春房中的丫鬟，性格刚烈。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_tanchun-shi_shu",
+    "source": "jia_tanchun",
+    "target": "shi_shu",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "侍书是探春房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_xichun-ru_hua",
+    "source": "jia_xichun",
+    "target": "ru_hua",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "入画是惜春房中的丫鬟，因私藏财物被逐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cai_yun-wang_furen",
+    "source": "wang_furen",
+    "target": "cai_yun",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "彩云是王夫人房中的丫鬟，与贾环有染。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "cai_xia-wang_furen",
+    "source": "wang_furen",
+    "target": "cai_xia",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "彩霞是王夫人房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "li_wan-su_yun",
+    "source": "li_wan",
+    "target": "su_yun",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "素云是李纨房中的贴身丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "bi_yue-li_wan",
+    "source": "li_wan",
+    "target": "bi_yue",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "碧月是李纨房中的丫鬟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shan_jie-wang_xifeng",
+    "source": "wang_xifeng",
+    "target": "shan_jie",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "善姐是凤姐派给尤二姐的丫鬟，实则虐待尤二姐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "xiao_que-zhao_yiniang",
+    "source": "zhao_yiniang",
+    "target": "xiao_que",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "丫鬟",
+        "desc": "小鹊是赵姨娘房中的丫鬟，曾给宝玉报信。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_lian-xing_er",
+    "source": "jia_lian",
+    "target": "xing_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "小厮",
+        "desc": "兴儿是贾琏的贴身小厮。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "bao_er-jia_lian",
+    "source": "jia_lian",
+    "target": "bao_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "仆人",
+        "desc": "鲍二是贾琏的仆人。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zhen-jiao_da",
+    "source": "jia_zhen",
+    "target": "jiao_da",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "老仆",
+        "desc": "焦大是宁国府老仆，曾救贾代化性命，常借酒醉骂人。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_zhen-wu_jinxing",
+    "source": "jia_zhen",
+    "target": "wu_jinxing",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "庄头",
+        "desc": "乌进孝是宁国府庄头，年底交租。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-lai_nainai",
+    "source": "jia_mu",
+    "target": "lai_nainai",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "老仆",
+        "desc": "赖嬷嬷是贾府地位最高的老仆，贾母对她颇为礼遇。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lai_da-lai_nainai",
+    "source": "lai_nainai",
+    "target": "lai_da",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母子",
+        "desc": "赖嬷嬷是赖大之母。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lai_da-lai_shangrong",
+    "source": "lai_da",
+    "target": "lai_shangrong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "父子",
+        "desc": "赖尚荣是赖大之子，赖家出资为其捐官出仕。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lai_nainai-lai_shangrong",
+    "source": "lai_nainai",
+    "target": "lai_shangrong",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "祖孙",
+        "desc": "赖尚荣是赖嬷嬷之孙。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "lin_zhixiao-lin_zhixiao_jia",
+    "source": "lin_zhixiao",
+    "target": "lin_zhixiao_jia",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "林之孝家的与林之孝是夫妻。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jing_xu-zhineng_er",
+    "source": "jing_xu",
+    "target": "zhineng_er",
+    "primary_type": "master_servant",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "师徒",
+        "desc": "智能儿是净虚的徒弟。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jing_xu-wang_xifeng",
+    "source": "wang_xifeng",
+    "target": "jing_xu",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "合作",
+        "desc": "净虚为张家说媒求凤姐办事，凤姐受贿三千两银子。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "feng_ziying-jia_baoyu",
+    "source": "jia_baoyu",
+    "target": "feng_ziying",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "好友",
+        "desc": "冯紫英是宝玉的好友，神威将军公子。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-wei_ruolan",
+    "source": "jia_baoyu",
+    "target": "wei_ruolan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "好友",
+        "desc": "卫若兰是宝玉的好友，后与史湘云订亲。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "shi_xiangyun-wei_ruolan",
+    "source": "shi_xiangyun",
+    "target": "wei_ruolan",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "未婚夫妻",
+        "desc": "卫若兰与史湘云订亲，后卫若兰早逝湘云守寡。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "pan_youan-si_qi",
+    "source": "si_qi",
+    "target": "pan_youan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "私通",
+        "desc": "司棋与表弟潘又安私通，被抄检大观园时发现。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "duo_guniang-jia_lian",
+    "source": "jia_lian",
+    "target": "duo_guniang",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "私通",
+        "desc": "贾琏与多姑娘私通，多姑娘是多浑虫之妻。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "bao_er_jia-jia_lian",
+    "source": "jia_lian",
+    "target": "bao_er_jia",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "私通",
+        "desc": "贾琏与鲍二家的私通，被凤姐撞破后鲍二家的自缢。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "bao_er-bao_er_jia",
+    "source": "bao_er",
+    "target": "bao_er_jia",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "鲍二与鲍二家的是夫妻。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "duo_guniang-duo_hunchong",
+    "source": "duo_hunchong",
+    "target": "duo_guniang",
+    "primary_type": "marriage",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "夫妻",
+        "desc": "多浑虫与多姑娘是夫妻。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_rui-wang_xifeng",
+    "source": "jia_rui",
+    "target": "wang_xifeng",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "单恋",
+        "desc": "贾瑞单恋王熙凤，被凤姐设下毒计'凤姐毒设相思局'害死。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_qiang",
+    "source": "jia_baoyu",
+    "target": "jia_qiang",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "好友",
+        "desc": "贾蔷是宝玉的好友，宁国府玄孙。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_mu-zhang_daoshi",
+    "source": "jia_mu",
+    "target": "zhang_daoshi",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "故交",
+        "desc": "张道士是清虚观当家人，贾母的故交，曾为宝玉说媒。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "ma_daopo-zhao_yiniang",
+    "source": "zhao_yiniang",
+    "target": "ma_daopo",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "请托",
+        "desc": "赵姨娘请马道婆用魇魔法害宝玉和凤姐。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_yucun-leng_zixing",
+    "source": "jia_yucun",
+    "target": "leng_zixing",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "酒友演说",
+        "desc": "冷子兴与贾雨村在酒楼饮酒，冷子兴演说荣国府，为贾雨村连宗贾府铺路。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "leng_zixing-zhou_rui_jia",
+    "source": "zhou_rui_jia",
+    "target": "leng_zixing",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "母女",
+        "desc": "冷子兴是周瑞家的女婿，周瑞家的是冷子兴岳母。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-jia_rui",
+    "source": "jia_baoyu",
+    "target": "jia_rui",
+    "primary_type": "blood",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "堂兄弟",
+        "desc": "贾瑞是贾府族人，与宝玉同辈。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-xue_baoqin",
+    "source": "jia_baoyu",
+    "target": "xue_baoqin",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "好友",
+        "desc": "薛宝琴进京后与宝玉等人在大观园中游玩。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "jia_baoyu-xing_xiuyan",
+    "source": "jia_baoyu",
+    "target": "xing_xiuyan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "诗社好友",
+        "desc": "邢岫烟进京后与宝玉等人在大观园诗社共题。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  },
+  {
+    "schema_version": 3,
+    "id": "fang_guan-ou_guan",
+    "source": "fang_guan",
+    "target": "ou_guan",
+    "primary_type": "affection",
+    "composite_types": [],
+    "events": [
+      {
+        "title": "戏班情谊",
+        "desc": "芳官与藕官在戏班中结下深厚情谊。",
+        "desc_long": null,
+        "source": {
+          "work": "《红楼梦》",
+          "locus": null,
+          "translator": null
+        },
+        "canon": "both",
+        "era_order": 0
+      }
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "schema_version": 3,
+  "id": "xue_yan",
+  "name_zh": "雪雁",
+  "name_en": "Xueyan",
+  "aliases": [
+    "雪雁"
+  ],
+  "epithet": "黛玉丫鬟·从自家带来",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "雪雁是中国古典小说《红楼梦》中的人物，为林黛玉从苏州带来的贴身丫鬟。她自幼跟随黛玉进入贾府，因年幼无知、不明事理，逐渐失去黛玉的信任。在小说情节中，雪雁误信宝玉定亲的传言，导致黛玉病危；后在“掉包计”中被调去搀扶宝钗，使宝玉误认为婚配对象是黛玉。宝玉成亲后，她被安排服侍宝钗，最终因“心地不甚明白”被配与小厮。雪雁的角色体现了贾府边缘人物的命运，反映了封建大家庭中丫鬟的卑微地位。",
+  "events": [
+    {
+      "title": "随黛玉入贾府",
+      "desc": "雪雁自幼跟随林黛玉从苏州来到贾府，成为黛玉的贴身丫鬟，负责照料黛玉的日常起居。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "误信宝玉定亲传言",
+      "desc": "雪雁听信了关于贾宝玉定亲的传言，并将此消息告知林黛玉，导致黛玉病情加重，陷入绝望。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "掉包计中搀扶宝钗",
+      "desc": "在贾府实施的“掉包计”中，雪雁被派去搀扶薛宝钗，使宝玉在婚礼上误以为新娘是林黛玉，从而促成婚事。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被配与小厮",
+      "desc": "宝玉成亲后，雪雁被安排服侍宝钗，但因“心地不甚明白”等性格缺陷，最终被贾府配给一个小厮，丧失了贴身丫鬟的地位。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xue_yan.webp",
+  "thumb": "/p/honglou/thumbs/xue_yan.webp"
+}

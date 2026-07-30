@@ -1,0 +1,90 @@
+{
+  "schema_version": 3,
+  "id": "jia_zhu",
+  "name_zh": "贾珠",
+  "name_en": "Jia Zhu",
+  "aliases": [],
+  "epithet": "贾政长子·早逝",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "贾珠是中国古典小说《红楼梦》中的虚构人物，荣国府贾政与王夫人所生的嫡长子，贾宝玉与贾元春的胞兄。他十四岁即考中秀才（进学），未满二十岁便娶了国子监祭酒李守中之女李纨为妻，婚后不久生下儿子贾兰，随后因病早逝。贾珠的早逝使李纨青春守寡，贾兰随母亲迁居大观园中的稻香村，该院落以竹篱茅舍的田园风格为其生活背景。王夫人在贾政痛打宝玉时，曾含泪追忆贾珠，感叹“若有你活着，便死一百个我也不管了”，侧面印证贾珠生前品学兼优、孝顺听话，远胜于宝玉。贾珠之死客观上造成了荣国府继承权的空缺，使得贾政一系的嫡长孙贾兰失去父亲庇护，家族内部矛盾因此埋下隐患。后世学者如南京大学吴滢在《贾珠之死》中分析其形象为“年少聪颖、孝顺听话”，认为家庭教育失败是悲剧根源。",
+  "events": [
+    {
+      "title": "十四岁进学",
+      "desc": "贾珠在十四岁时即考中秀才，展现了优异的学业天赋，成为贾府中年轻一代的佼佼者。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "娶李纨为妻",
+      "desc": "贾珠未满二十岁时，由父母做主娶了国子监祭酒李守中之女李纨，二人婚后相敬如宾。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "生子贾兰",
+      "desc": "贾珠与李纨育有一子，取名贾兰，后成为贾府中唯一通过科举重振家业的子孙。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "病逝早亡",
+      "desc": "贾珠在生下贾兰后不久因病去世，未满二十岁即离世，导致李纨早早守寡，贾兰失去父亲。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "王夫人追忆",
+      "desc": "贾政笞挞宝玉时，王夫人哭诉提及贾珠，说道“若有你活着，便死一百个我也不管了”，凸显贾珠在母亲心中的地位远高于宝玉。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第三十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "继承权空缺",
+      "desc": "贾珠早逝致使荣国府嫡长孙贾兰失去父亲庇护，继承权出现空缺，为日后家族内部权力争斗埋下伏笔。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第二回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "若有你活着，便死一百个我也不管了。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第三十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_zhu.webp",
+  "thumb": "/p/honglou/thumbs/jia_zhu.webp"
+}

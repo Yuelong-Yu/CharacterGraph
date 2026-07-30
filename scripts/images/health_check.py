@@ -19,6 +19,7 @@ import time
 from pathlib import Path
 
 from dotenv import load_dotenv
+import httpx
 import requests
 from volcenginesdkarkruntime import Ark
 
@@ -47,7 +48,13 @@ def main() -> None:
     print(f"model: {MODEL}")
     print()
 
-    client = Ark(base_url=BASE_URL, api_key=IMAGE_API_KEY)
+    # trust_env=False: 不读 macOS 系统代理(Clash/V2Ray 等),避免 httpx 经代理访问国内域名超时
+    client = Ark(
+        base_url=BASE_URL,
+        api_key=IMAGE_API_KEY,
+        timeout=300.0,
+        http_client=httpx.Client(trust_env=False, timeout=300.0),
+    )
 
     prompt = (
         "Greek mythology hero portrait, half-body, three-quarter view, "
@@ -89,7 +96,9 @@ def main() -> None:
     ts = int(time.time())
     out_path = TMP_DIR / f"healthcheck_{ts}.png"
     try:
-        r = requests.get(url, timeout=30)
+        session = requests.Session()
+        session.trust_env = False  # 不读 macOS 系统代理,避免下载国内 TOS 域名超时
+        r = session.get(url, timeout=60)
         r.raise_for_status()
     except Exception as e:
         print(f"✗ 下载失败：{e}")

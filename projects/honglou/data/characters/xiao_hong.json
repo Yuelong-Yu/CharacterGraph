@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "id": "xiao_hong",
+  "name_zh": "小红",
+  "name_en": "Xiaohong",
+  "aliases": [
+    "林红玉",
+    "红儿",
+    "Lin Hongyu",
+    "Hong'er"
+  ],
+  "epithet": "凤姐丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "林红玉，中国古典小说《红楼梦》中的人物，贾府的丫鬟。原名林红玉，因名字中的“玉”字犯了林黛玉、贾宝玉的名讳而改名为小红，也称红儿。她原本在怡红院当差，负责烧茶炉子、喂喂鸟雀。因有几分姿色，每每想到贾宝玉跟前现弄现弄，只因晴雯等伶牙利爪下不去手。好容易得到一次倒茶的机会，出门就被晴雯、秋纹、碧痕等撞见，说她也不照照镜子，配端茶倒水不配，排挤得小红心灰意冷。后转投凤姐，在凤姐处得到重用，因其伶俐麻利，深得凤姐赏识。与贾芸由手帕传情，暗定终身，成为《红楼梦》中为数不多结局较为圆满的丫鬟之一。",
+  "events": [
+    {
+      "title": "因讳改名",
+      "desc": "林红玉因名字中的“玉”字与林黛玉、贾宝玉相犯，为避讳而改名为小红，又称红儿。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "倒茶被排挤",
+      "desc": "小红在怡红院当差，趁贾宝玉独自在房时主动倒茶，被晴雯、秋纹、碧痕撞见，遭到一顿冷嘲热讽，说她也不照照镜子，配端茶倒水不配，小红因此心灰意冷。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "投靠凤姐",
+      "desc": "小红离开怡红院后，转投王熙凤麾下，凭借机灵能干获得凤姐重用，成为凤姐身边得力的丫鬟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "手帕传情定终身",
+      "desc": "小红与贾芸因手帕传情，私下交换信物，二人暗定终身，是《红楼梦》中少有的自主选择姻缘的丫鬟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "烧茶炉子",
+    "喂鸟雀",
+    "端茶递水",
+    "办事伶俐"
+  ],
+  "domains": [
+    "丫鬟事务",
+    "传情"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xiao_hong.webp",
+  "thumb": "/p/honglou/thumbs/xiao_hong.webp"
+}

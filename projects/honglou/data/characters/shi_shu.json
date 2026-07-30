@@ -1,0 +1,21 @@
+{
+  "schema_version": 3,
+  "id": "shi_shu",
+  "name_zh": "侍书",
+  "name_en": "Shishu",
+  "aliases": [
+    "待书"
+  ],
+  "epithet": "探春丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "侍书是《红楼梦》中贾探春的贴身丫鬟，以心眼灵活、口齿伶俐著称。在小说中，她最终随探春远嫁，结局与探春一同离开贾府。关于她的名字，现存版本存在分歧：脂评抄本如庚辰本、己卯本、梦稿本、戚序本等多作“待书”，而蒙府本、甲辰本、舒序本等作“侍书”，程本系统则统一为“侍书”。这一差异反映了抄本与刻本之间的文字演变。侍书在书中虽出场不多，但作为探春的丫鬟，其性格鲜明，是探春身边重要的助手。",
+  "events": [],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/shi_shu.webp",
+  "thumb": "/p/honglou/thumbs/shi_shu.webp"
+}

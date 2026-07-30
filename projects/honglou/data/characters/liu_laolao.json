@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "id": "liu_laolao",
+  "name_zh": "刘姥姥",
+  "name_en": "Granny Liu",
+  "aliases": [],
+  "epithet": "农妇·三进荣国府",
+  "category": "guest",
+  "era_layer": 0,
+  "bio": "刘姥姥是87版《红楼梦》中的角色，由一级演员沙玉华饰演。虽然是一个配角，但有极其重要的作用。她陪衬贾母、王夫人、王熙凤，还陪衬贾府的管家婆子周瑞家的和鸳鸯平儿等底层的仆人们。她是一条基准线，其表现有多深刻，整个贾府就有多繁华富贵，整部戏就有多深的厚度。",
+  "events": [],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/liu_laolao.webp",
+  "thumb": "/p/honglou/thumbs/liu_laolao.webp"
+}

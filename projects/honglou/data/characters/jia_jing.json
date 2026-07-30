@@ -1,0 +1,89 @@
+{
+  "schema_version": 3,
+  "id": "jia_jing",
+  "name_zh": "贾敬",
+  "name_en": "Jia Jing",
+  "aliases": [
+    "贾敬",
+    "Jia Jing"
+  ],
+  "epithet": "炼丹修道",
+  "category": "master",
+  "era_layer": 1,
+  "bio": "贾敬是中国古典小说《红楼梦》中的角色，宁国公贾演之孙，京营节度使世袭一等神威将军贾代化的次子，贾珍、贾惜春之父。他考中乙卯科进士，却无心功名，一味好道，将世袭的官职让给儿子贾珍，自己搬到都中城外的玄真观修炼，烧丹炼汞，与道士们厮混，平时“清净惯了”，余者一概不放在心上。每年只在除夕祭祖时回府一次，主持祭祀仪式。后因急于升仙，在守庚申时吞金服砂，导致烧胀而死，死于四月底（约公历5月中旬）。死前曾让儿子贾珍抄录《阴骘文》一万张送人。死后朝廷追赐五品之职。作为边缘性人物，贾敬在《红楼梦》叙事中起着引线作用，其生辰和死亡构建的风月情节，揭示了贾府衰败的原因。",
+  "events": [
+    {
+      "title": "考中乙卯科进士",
+      "desc": "贾敬考中乙卯科进士，但无心仕途，一心向道，最终将官爵让给儿子贾珍。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "让爵修炼，入住玄真观",
+      "desc": "贾敬将世袭的官职让给儿子贾珍，自己搬到都中城外的玄真观，与道士们一起烧丹炼汞，追求长生不老。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "每年除夕回府祭祖",
+      "desc": "贾敬平时在玄真观清修，只在每年除夕祭祖时返回宁国府，主持家族的祭祀仪式，其余时间一概不问家事。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "吞金服砂，烧胀而死",
+      "desc": "贾敬急于升仙，在守庚申时吞服金砂，导致体内烧胀，中毒身亡，死于四月底。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "遗命抄录《阴骘文》",
+      "desc": "贾敬死前嘱咐儿子贾珍抄录《阴骘文》一万张送给他人，以积阴德。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "死后追赐五品职",
+      "desc": "贾敬死后，朝廷追赐其为五品之职，以示恩典。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "炼丹修道",
+    "烧丹炼汞"
+  ],
+  "domains": [
+    "道教",
+    "炼丹"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_jing.webp",
+  "thumb": "/p/honglou/thumbs/jia_jing.webp"
+}

@@ -19,6 +19,7 @@ from typing import Any
 
 from dotenv import load_dotenv
 import anthropic
+import httpx
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 # 仓库根 .env
@@ -32,7 +33,13 @@ _MODEL = os.getenv("CODING_MODEL", "deepseek-v4-flash")
 if not _API_KEY:
     raise RuntimeError("CODING_API_KEY 未设置（检查仓库根 .env）")
 
-_client = anthropic.Anthropic(api_key=_API_KEY, base_url=_BASE_URL)
+# trust_env=False: 不读 macOS 系统代理(Clash/V2Ray 等),避免 httpx 经代理访问国内域名超时
+_client = anthropic.Anthropic(
+    api_key=_API_KEY,
+    base_url=_BASE_URL,
+    timeout=300.0,
+    http_client=httpx.Client(trust_env=False, timeout=300.0),
+)
 
 _FENCE_RE = re.compile(r"^```(?:json)?\s*|\s*```$", re.MULTILINE)
 

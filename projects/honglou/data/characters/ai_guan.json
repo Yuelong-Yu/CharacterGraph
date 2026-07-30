@@ -1,0 +1,40 @@
+{
+  "schema_version": 3,
+  "id": "ai_guan",
+  "name_zh": "艾官",
+  "name_en": "Aiguan",
+  "aliases": [],
+  "epithet": "宝玉丫鬟·戏班出身",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "艾官是《红楼梦》中贾府梨香院十二女伶之一，饰演老外行当。首次出场于第五十八回，后成为贾探春的贴身丫鬟。第六十回，赵姨娘因蔷薇硝事件殴打芳官时，艾官向探春告发夏婆子挑唆之事，但探春并未采信。其名字取自艾草意象，与所饰老外行当相合，该行当在昆曲中多扮演年老持重者。戏班解散后，艾官最终被干娘领出贾府聘嫁。",
+  "events": [
+    {
+      "title": "成为探春丫鬟",
+      "desc": "贾府梨香院戏班解散后，艾官被分派到贾探春处做贴身丫鬟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "告发夏婆子",
+      "desc": "第六十回，赵姨娘因蔷薇硝事件殴打芳官，艾官向探春告发夏婆子挑唆，但探春未采信。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/ai_guan.webp",
+  "thumb": "/p/honglou/thumbs/ai_guan.webp"
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": 3,
+  "id": "jia_rong",
+  "name_zh": "贾蓉",
+  "name_en": "Jia Rong",
+  "aliases": [
+    "蓉哥",
+    "蓉大爷"
+  ],
+  "epithet": "蓉大爷",
+  "category": "master",
+  "era_layer": 3,
+  "bio": "贾蓉，清代曹雪芹所著《红楼梦》中的人物，宁国府贾珍之子，秦可卿之夫。其名首见于第二回，初次登场于第六回，出场时十七八岁，面目清秀、身材俊俏、衣着华丽。与王熙凤关系亲近，参与了王熙凤为整治贾瑞所设的相思局。二十岁时，妻子秦可卿去世，贾珍为他捐得龙禁尉。作为贾府长房长孙，贾蓉参与了筹建大观园、除夕祭宗祠、元宵开夜宴等家族重要活动。祖父贾敬治丧期间，与两位姨母尤二姐、尤三姐关系暧昧，并设法促成贾琏偷娶尤二姐。后事情泄露，遭王熙凤痛骂指责，在王熙凤引导下花钱了事。续作中，贾蓉与继母尤氏、父亲贾珍先后患异症，引发贾府恐慌，经法师作法平息。后宁国府被抄，财物没收，贾蓉被捕，最终因察无罪获释。贾蓉名字谐音“假荣”，恰如其分地勾勒其角色特质：捐得的官职徒有虚名，外表华美内心荒淫，身为贾府长房长孙却轻浮油滑、糜烂淫乱，对贾府衰败负有责任。这一形象在电视剧、电影等艺术作品中亦有演绎。",
+  "events": [
+    {
+      "title": "参与整治贾瑞",
+      "desc": "贾蓉与王熙凤合谋，设下相思局捉弄贾瑞，致使贾瑞屡次受骗，最终病倒身亡。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "妻子秦可卿去世",
+      "desc": "贾蓉之妻秦可卿病逝，贾珍为贾蓉捐得龙禁尉官职，葬礼极为奢华。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "捐得龙禁尉",
+      "desc": "秦可卿死后，贾珍为贾蓉捐买龙禁尉官职，以提升葬礼规格，但此官职实为杜撰虚名。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与筹建大观园",
+      "desc": "贾蓉作为贾府长房长孙，参与家族筹建大观园以迎接元春省亲，承担部分事务。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "除夕祭宗祠",
+      "desc": "贾蓉参与贾府除夕祭宗祠仪式，作为长房长孙担任重要角色。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "元宵开夜宴",
+      "desc": "贾蓉出席贾府元宵夜宴，与家族成员共度佳节。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与尤二姐尤三姐暧昧",
+      "desc": "贾敬治丧期间，贾蓉与两位姨母尤二姐、尤三姐调情暧昧，行为不检。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "促成贾琏偷娶尤二姐",
+      "desc": "贾蓉主动为贾琏出谋划策，暗中帮助贾琏偷娶尤二姐为妾，并隐瞒王熙凤。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "遭王熙凤痛骂",
+      "desc": "贾琏偷娶尤二姐之事泄露，王熙凤大闹宁国府，痛骂贾蓉，贾蓉被迫花钱了事。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "患异症（续作）",
+      "desc": "续作中，贾蓉与父亲贾珍、继母尤氏先后患上怪异病症，引发贾府恐慌，后经法师作法平息。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "宁国府被抄家",
+      "desc": "贾府衰败后，宁国府被抄没，财物尽失，贾蓉被捕入狱。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被捕获释",
+      "desc": "贾蓉被捕后，经审查因无罪而获释，但家族已败落。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_rong.webp",
+  "thumb": "/p/honglou/thumbs/jia_rong.webp"
+}

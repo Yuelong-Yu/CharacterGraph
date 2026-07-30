@@ -1,0 +1,103 @@
+{
+  "schema_version": 3,
+  "id": "yuan_yang",
+  "name_zh": "鸳鸯",
+  "name_en": "Yuanyang",
+  "aliases": [
+    "金鸳鸯",
+    "鸳鸯姐姐",
+    "golden mandarin duck"
+  ],
+  "epithet": "贾母贴身丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "鸳鸯是《红楼梦》中贾母最倚重的贴身大丫鬟，本姓金，父母在南京为贾府看守老宅。她聪慧伶俐，办事麻利，深得贾母信任，掌管贾母的私房财物与日常起居。贾赦欲强纳她为妾，鸳鸯誓死不从，在贾母面前剪发明志，折断钢鞭，声称终生不嫁。贾母去世后，她自知无依，为免遭欺凌，悬梁自尽，以身殉主。鸳鸯的形象集中体现了底层奴婢的刚烈与尊严，是小说中极为光彩的丫鬟角色。她的故事主要集中在第四十六回“尴尬人难免尴尬事，鸳鸯女誓绝鸳鸯偶”及后续情节中。",
+  "events": [
+    {
+      "title": "贾赦逼婚",
+      "desc": "贾赦看中鸳鸯，欲纳为妾，派邢夫人、王熙凤等说媒。鸳鸯不为所动，坚决拒绝。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十六回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "剪发明志",
+      "desc": "鸳鸯在贾母面前剪下一缕头发，发誓终身不嫁，并折断钢鞭以示决绝，贾母大怒，训斥贾赦。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十六回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "撞见司棋私会",
+      "desc": "鸳鸯在大观园山石后撞见司棋与表弟潘又安幽会，司棋求她保密，鸳鸯应允，并未告发，体现其宽厚。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第七十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贾母临终托付",
+      "desc": "贾母临终前将私房财物托付给鸳鸯，鸳鸯含泪应允，尽心料理后事。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第一百一十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "殉主自缢",
+      "desc": "贾母死后，鸳鸯担心被贾赦报复，又感念贾母恩情，在贾母灵前上吊自尽，以身殉主。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第一百一十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "我这一辈子，莫说是‘宝玉’，便是‘宝金’、‘宝银’、‘宝天王’、‘宝皇帝’，横竖不嫁人就完了！",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十六回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "text": "我若得脸，你们就仗着我；我若不得脸，你们就踩我。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十六回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [
+    "管理财务",
+    "梳头打扮",
+    "伺候起居",
+    "传话听差"
+  ],
+  "domains": [
+    "内务",
+    "忠诚",
+    "女红",
+    "管家"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/yuan_yang.webp",
+  "thumb": "/p/honglou/thumbs/yuan_yang.webp"
+}

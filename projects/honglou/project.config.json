@@ -1,0 +1,35 @@
+{
+  "schema_version": 3,
+  "slug": "honglou",
+  "title": "红楼梦人物谱",
+  "subtitle": "贾府 · 金陵十二钗 · 主仆 · 清客 - 命运交织的人物图谱",
+  "searchPlaceholder": "搜索:宝玉 / 黛玉 / 宝钗 / 凤姐 / 金陵十二钗 / 葬花吟…  (回车应用)",
+  "order": 5,
+  "zhSource": "baike",
+  "characterCategories": {
+    "master": { "label": "主子", "color": "#c9a04a" },
+    "maid": { "label": "丫鬟", "color": "#7aa8a8" },
+    "servant": { "label": "婆子小厮", "color": "#8a6a4a" },
+    "guest": { "label": "清客优伶", "color": "#8a6aa8" }
+  },
+  "artifactCategories": {},
+  "relationTypes": {
+    "blood": { "label": "血缘", "color": "#8a8580" },
+    "marriage": { "label": "姻亲", "color": "#c0506e" },
+    "master_servant": { "label": "主仆", "color": "#b88a2c" },
+    "affection": { "label": "情感", "color": "#e87844" },
+    "legitimate_concubine": { "label": "嫡庶", "color": "#6f5a8a" },
+    "jinling_twelve": { "label": "同列十二钗", "color": "#1f8a7a" }
+  },
+  "eraLayers": {
+    "0": "贾母代",
+    "1": "文字辈",
+    "2": "玉字辈",
+    "3": "草字辈"
+  },
+  "nodeVisualTheme": "lightPortraits",
+  "artStyle": {
+    "character": "87 版央视红楼梦电视剧剧照，复古 80 年代国产胶片影视实拍，35mm彩色胶片，低对比度柔化光影，室内古典贾府实景布景，暖黄柔光侧逆光，漫反射柔光，无硬阴影，复古影视磨皮，柔和氛围感，电影人像构图，浅景深虚化背景，胶片暗角，低饱和复古色调，传统清代江南仕女古装，精致刺绣织锦衣料，古典珍珠玉饰，古典中式红木家具、纱幔、兰花盆栽布景，写实真人肤质，细腻皮肤纹理，无过度美颜，影视镜头透视，细腻发丝，高清影视画质，2:3 竖向构图，8k 分辨率",
+    "artifact": "红楼梦项目不设器物，此字段保留占位"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 3,
+  "id": "miao_yu",
+  "name_zh": "妙玉",
+  "name_en": "Miaoyu",
+  "aliases": [
+    "Adamantina",
+    "栊翠庵尼姑"
+  ],
+  "epithet": "栊翠庵尼姑·十二钗",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "妙玉是《红楼梦》中金陵十二钗之一，苏州人氏，出身仕宦人家，自幼在玄墓蟠香寺带发修行。贾府建造大观园时，妙玉入住栊翠庵，成为园中一处清净所在的主人。她性情孤傲，洁癖成性，厌恶世俗之人，曾因刘姥姥用过的茶杯而弃之不用。然而她才华横溢，诗学精湛，尤爱庄子，被视为“红楼诗仙”。她与黛玉、宝钗、湘云、宝玉等情谊深厚，曾教邢岫烟读书识字，宝玉生日时更寄帖相贺。中秋夜与黛玉、湘云联诗，尽显才情。贾母病危时，她不请自来探望。宝玉丢失通灵宝玉后，邢岫烟请她扶乩。贾母出殡次日，妙玉被贼人掳走，下落不明，后传闻在海边遇害。红学家认为高鹗续写的结局可能与曹雪芹原意不符，其真正命运至今成谜。",
+  "events": [
+    {
+      "title": "入住栊翠庵",
+      "desc": "贾府为迎接元春省亲修建大观园，妙玉受王夫人之邀入住园中栊翠庵，带发修行，成为园中常驻的尼姑。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "栊翠庵品茶",
+      "desc": "贾母带刘姥姥等人游览大观园，至栊翠庵歇息。妙玉用珍贵茶具沏茶款待，因嫌弃刘姥姥粗鄙，要将她用过的茶杯丢弃，被宝玉劝阻。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "生日帖贺宝玉",
+      "desc": "贾宝玉生日当天，妙玉派人送来粉红笺帖，上书“槛外人妙玉恭肃遥叩芳辰”，以示祝贺，展现她对宝玉的特别关注。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "中秋夜联诗",
+      "desc": "中秋夜，妙玉与林黛玉、史湘云在凹晶馆联诗，妙玉续作结尾，诗句清雅脱俗，被众人誉为“红楼诗仙”。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "扶乩寻玉",
+      "desc": "贾宝玉丢失通灵宝玉后，众人惊慌失措。邢岫烟请妙玉扶乩，妙玉施法写出乩语，预示宝玉的运势。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "探望病危贾母",
+      "desc": "贾母病重，妙玉不请自来，进入贾府探望，表现出对贾母的关切，但此举也引起一些人的猜疑。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被贼人掳走",
+      "desc": "贾母出殡次日，妙玉在栊翠庵被贼人掳走，下落不明。后来贾府传闻她在海边遇害，结局悲惨。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "教导邢岫烟",
+      "desc": "邢岫烟早年家境贫寒，曾租住蟠香寺，妙玉教她读书识字，两人结下师徒之谊，后在大观园重逢。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/miao_yu.webp",
+  "thumb": "/p/honglou/thumbs/miao_yu.webp"
+}

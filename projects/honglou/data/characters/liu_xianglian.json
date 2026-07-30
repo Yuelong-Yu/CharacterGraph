@@ -1,0 +1,79 @@
+{
+  "schema_version": 3,
+  "id": "liu_xianglian",
+  "name_zh": "柳湘莲",
+  "name_en": "Liu Xianglian",
+  "aliases": [
+    "冷面二郎",
+    "冷郎君"
+  ],
+  "epithet": "冷郎君",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "柳湘莲是曹雪芹长篇小说《红楼梦》中的虚拟人物，别称冷面二郎，原为理国公柳家子弟，父母早逝后读书不成流落江湖。他性情豪爽不拘礼节，爱好戏剧表演，擅长扮演小生角色并常客串风月戏文，与贾宝玉交好。曾因薛蟠调戏而设计痛打对方，后在平安州救下遭劫的薛蟠并与其结拜。经贾琏提议，以祖传鸳鸯剑与尤三姐定亲，但得知尤三姐与宁国府有瓜葛后索剑悔婚，致其自刎身亡。尤三姐殒命后，柳湘莲于破庙中被跏腿道士点化，截发出家随其离去。该角色性格兼具豪侠与草率，人生经历由世家子弟转为江湖侠客，最终遁入空门，其命运转折与尤三姐悲剧紧密相连，反映了对世俗观念的对抗与救赎。",
+  "events": [
+    {
+      "title": "痛打薛蟠",
+      "desc": "薛蟠调戏柳湘莲，柳湘莲设计将其骗至苇塘，痛打一顿，使其狼狈不堪，事后柳湘莲远走避祸。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "平安州救薛蟠并结拜",
+      "desc": "薛蟠在平安州遭劫，柳湘莲恰好路过，挺身而出救下薛蟠，二人因此尽释前嫌，结拜为兄弟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与尤三姐定亲",
+      "desc": "贾琏撮合，柳湘莲以祖传鸳鸯剑为信物，与尤三姐定下婚约，尤三姐立志非他不嫁。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "悔婚致尤三姐自刎",
+      "desc": "柳湘莲听闻尤三姐与宁国府有染，心生悔意，索回鸳鸯剑要求退婚。尤三姐刚烈，当众自刎以证清白，柳湘莲悔之不及。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "截发出家",
+      "desc": "尤三姐死后，柳湘莲在破庙中遇见跏腿道士，被点化后顿悟，截断头发随道士出家，不知所终。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "鸳鸯剑"
+  ],
+  "skills": [
+    "扮演小生",
+    "客串风月戏文",
+    "武艺高强"
+  ],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/liu_xianglian.webp",
+  "thumb": "/p/honglou/thumbs/liu_xianglian.webp"
+}

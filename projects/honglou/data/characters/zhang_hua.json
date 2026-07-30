@@ -1,0 +1,155 @@
+{
+  "schema_version": 3,
+  "id": "zhang_hua",
+  "name_zh": "张华",
+  "name_en": "Zhang Hua",
+  "aliases": [
+    "张华",
+    "Zhang Hua",
+    "张茂先",
+    "Maoxian"
+  ],
+  "epithet": "尤二姐前未婚夫·被凤姐利用",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "张华（232年－300年5月7日），字茂先，范阳方城（今河北固安）人。西晋政治家、文学家，官至司空。他出身寒微，幼年丧父，以牧羊为生，但博学多才。同郡刘芳赏识其才，将女儿嫁给他。张华以《鹪鹩赋》等诗赋闻名，阮籍称其“能助王业”。司马昭任他为秘书郎，后入晋为黄门侍郎，封关内侯。晋武帝伐吴时，张华支持杨恢之议，并负责后勤，为灭吴立下大功，封广武侯。后因推荐齐王攸为顾命，触怒武帝，被外放幽州，抚慰边疆各族。晋惠帝时，贾后专权，张华被召回，任右光禄大夫、侍中、中书监，与裴頠共同辅政，使朝局相对稳定。他作《女史箴》讽谏贾后，未被加罪。300年，赵王司马伦发动政变，张华拒绝合作，与二子同时遇害，家产被抄。303年得平反，追复爵位。张华著述丰富，有《博物志》传世，为志怪小说之祖。",
+  "events": [
+    {
+      "title": "幼年丧父牧羊为生",
+      "desc": "张华父亲早逝，家境贫寒，幼年时以牧羊为生，但勤奋好学，文才出众。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受刘芳赏识娶其女",
+      "desc": "同乡刘芳欣赏张华的才华，将女儿许配给他，张华因此得以进一步发展。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "以诗文成名获阮籍称赞",
+      "desc": "张华创作《鹪鹩赋》等作品，借物喻人，阮籍读后感叹其能辅佐王业，名声大振。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "任秘书郎参与机要",
+      "desc": "经卢钦推荐，被司马昭任命为秘书郎等职，表现突出。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "支持灭吴负责后勤",
+      "desc": "晋武帝时，张华支持杨恢伐吴之议，并负责战略物资筹备，发挥关键作用。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "灭吴后受封广武侯",
+      "desc": "280年西晋灭吴，张华因功封广武侯，食邑万户。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "因推荐齐王攸失宠外放",
+      "desc": "晋武帝问顾命人选，张华推荐齐王司马攸，武帝疑其有异心，遂将其外放幽州，任护乌桓校尉等职。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "镇抚边境安抚胡人",
+      "desc": "在北方，张华安抚乌桓、鲜卑等民族，边境安定，威信大增。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贾后召回重用",
+      "desc": "290年惠帝即位，张华被召回任太常卿，后贾后政变后，因其非强势家族且无威胁，被擢升为右光禄大夫、侍中、中书监，成为实际宰相。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与裴頠合作维持稳定",
+      "desc": "张华与裴頠同心辅政，任用贤能，使西晋度过一段相对稳定的时期。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "作《女史箴》讽谏贾后",
+      "desc": "张华担心贾后家族势力过大，作《女史箴》以讽喻，但贾后未加罪。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "拒绝司马伦拉拢遭杀害",
+      "desc": "300年，赵王司马伦发动政变，拉拢张华，张华拒绝合作，最终与两个儿子一同被处死，并夷三族。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "平反追复爵位",
+      "desc": "303年，长沙王司马冏执政时，为张华平反，恢复其爵位，由其孙张舆继承。",
+      "source": {
+        "work": "晋书",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/zhang_hua.webp",
+  "thumb": "/p/honglou/thumbs/zhang_hua.webp"
+}

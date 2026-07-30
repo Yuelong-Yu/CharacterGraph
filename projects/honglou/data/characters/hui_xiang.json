@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "hui_xiang",
+  "name_zh": "蕙香",
+  "name_en": "Huixiang",
+  "aliases": [
+    "四儿"
+  ],
+  "epithet": "宝玉丫鬟·本名四儿",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "蕙香本名四儿，是宝玉房中的小丫鬟。宝玉嫌'四儿'名字俗气，为其改名蕙香。她因与宝玉同生日，被王夫人认为有勾引宝玉之嫌，后在抄检大观园时被逐出。",
+  "events": [
+    {
+      "title": "宝玉赐名",
+      "desc": "宝玉嫌'四儿'名字俗气，为其改名蕙香。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "抄检被逐",
+      "desc": "王夫人认为蕙香与宝玉同生日有勾引之嫌，在抄检大观园时将其逐出。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第七十七回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/hui_xiang.webp",
+  "thumb": "/p/honglou/thumbs/hui_xiang.webp"
+}

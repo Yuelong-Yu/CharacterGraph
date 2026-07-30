@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "id": "you_laoniang",
+  "name_zh": "尤老娘",
+  "name_en": "You Laoniang",
+  "aliases": [],
+  "epithet": "尤氏继母·尤二姐尤三姐之母",
+  "category": "master",
+  "era_layer": 0,
+  "bio": "尤老娘是古典小说《红楼梦》中的人物，她是贾珍继室尤氏的继母，尤二姐、尤三姐的生母，与尤氏并无血缘关系。她早年通过两次婚姻提升社会地位，先嫁皇粮庄头，再嫁六品京官，丈夫去世后携女依附宁国府，依靠贾珍接济。尤老娘贪图富贵，默许贾珍、贾琏与女儿厮混。在贾敬丧事期间，她促成尤二姐与贾琏私婚，接受了贾琏提供的新宅、衣物及每月五两银子的物质保障。后来尤二姐被王熙凤设计堕胎，绝望吞金自尽；尤三姐因柳湘莲退婚，羞愧自刎身亡。尤老娘的纵容行为直接导致两个女儿受辱惨死，这一角色虽着墨不多，却深刻展现了封建时代女性依附男性的生存困境。",
+  "events": [
+    {
+      "title": "默许女儿与贾珍厮混",
+      "desc": "尤老娘为维持依附宁国府的富贵生活，默许贾珍、贾琏与自己的女儿尤二姐、尤三姐厮混，不加制止，甚至有意纵容，使女儿们失身于贾府子弟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "促成尤二姐与贾琏私婚",
+      "desc": "在贾敬丧事期间，尤老娘带着尤二姐、尤三姐来到宁国府。贾琏看中尤二姐，尤老娘在贾珍、贾蓉的撮合下，同意尤二姐与贾琏私下成婚，并接受了贾琏提供的婚房、衣物及每月五两银子的生活费。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "接受贾琏物质保障",
+      "desc": "尤老娘为贪图富贵，欣然接受贾琏为尤二姐安置的新宅、衣物以及每月五两银子的生活补贴，以此作为女儿屈身作妾的交换条件。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "尤二姐吞金自尽",
+      "desc": "尤二姐被王熙凤设计接入荣国府，受尽欺凌，后胎儿被庸医打掉，失去依靠。在绝望中，尤二姐吞金自尽，尤老娘悲痛欲绝，但已无力挽回。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "尤三姐自刎身亡",
+      "desc": "尤三姐与柳湘莲定亲后，柳湘莲因听闻宁国府名声败坏而退婚。尤三姐为证清白，用鸳鸯剑自刎而死。尤老娘接连失去两个女儿，晚景凄凉。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/you_laoniang.webp",
+  "thumb": "/p/honglou/thumbs/you_laoniang.webp"
+}

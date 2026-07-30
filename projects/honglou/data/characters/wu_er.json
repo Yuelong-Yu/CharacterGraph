@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "id": "wu_er",
+  "name_zh": "五儿",
+  "name_en": "Wu'er",
+  "aliases": [],
+  "epithet": "宝玉丫鬟·柳嫂之女",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "五儿是年代传奇剧《娘道》中的男配角，由郭圣然饰演，是女主角瑛娘的养子。瑛娘收养了神秘人的孩子并取名五儿，从此带着他开始长达十余年的寻子之路。五儿被瑛娘养育得身体很好，后当兵并与高团长父子相认。五儿曾与念娣结婚，后穿着日军军服回家，坦白自己犯下大错要自杀，并说出自己与亲姐姐结婚的真相。这段剧情展现了战争背景下伦理与亲情的悲剧冲突。",
+  "events": [
+    {
+      "title": "被瑛娘收养",
+      "desc": "瑛娘收养了神秘人的孩子，取名五儿，从此带着他踏上寻子之路。",
+      "source": {
+        "work": "娘道 (电视剧)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "十余年寻子之路",
+      "desc": "瑛娘带着五儿经历了长达十余年的寻子过程，五儿在瑛娘的抚养下健康成长。",
+      "source": {
+        "work": "娘道 (电视剧)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "当兵并与高团长父子相认",
+      "desc": "五儿长大后参军，在军队中与高团长相遇并父子相认。",
+      "source": {
+        "work": "娘道 (电视剧)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与念娣结婚",
+      "desc": "五儿与念娣结为夫妻，但后来发现念娣其实是他的亲姐姐。",
+      "source": {
+        "work": "娘道 (电视剧)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "坦白错误并自杀",
+      "desc": "五儿穿着日军军服回家，向家人坦白自己犯下大错，试图自杀，并说出与亲姐姐结婚的真相。",
+      "source": {
+        "work": "娘道 (电视剧)",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/wu_er.webp",
+  "thumb": "/p/honglou/thumbs/wu_er.webp"
+}

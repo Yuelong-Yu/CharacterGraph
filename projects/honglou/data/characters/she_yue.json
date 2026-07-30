@@ -1,0 +1,38 @@
+{
+  "schema_version": 3,
+  "id": "she_yue",
+  "name_zh": "麝月",
+  "name_en": "Sheyue",
+  "aliases": [],
+  "epithet": "宝玉丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "麝月是贾宝玉房中的丫鬟，与袭人、晴雯同侍宝玉。她性格沉稳老实，不争不抢，处事低调，是怡红院中不起眼却最持久的存在。在晴雯被逐、袭人出嫁后，麝月成为宝玉身边最后留下的丫鬟，应了'开到荼蘼花事了'的谶语。她不善言辞却忠诚可靠，是宝玉怡红院岁月的最终见证者。",
+  "events": [
+    {
+      "title": "抽花签得荼蘼",
+      "desc": "第六十三回怡红院夜宴抽花签，麝月抽到'开到荼蘼花事了'一签，签语暗藏春尽花残之意，预示她是宝玉身边最后留下的丫鬟。",
+      "source": { "work": "《红楼梦》", "locus": "第六十三回", "translator": null },
+      "canon": null
+    },
+    {
+      "title": "理妆代晴雯",
+      "desc": "晴雯被逐后，麝月承担起宝玉房中诸事，伏侍宝玉梳洗理妆，成为怡红院中最后的主事丫鬟。",
+      "source": { "work": "《红楼梦》", "locus": null, "translator": null },
+      "canon": null
+    },
+    {
+      "title": "留守到最后",
+      "desc": "贾府败落后，袭人出嫁，麝月成为宝玉身边唯一留下的丫鬟，陪伴宝玉走完在贾府的最后时光。",
+      "source": { "work": "《红楼梦》", "locus": null, "translator": null },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/she_yue.webp",
+  "thumb": "/p/honglou/thumbs/she_yue.webp"
+}

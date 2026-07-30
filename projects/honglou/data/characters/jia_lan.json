@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "id": "jia_lan",
+  "name_zh": "贾兰",
+  "name_en": "Jia Lan",
+  "aliases": [
+    "贾兰",
+    "Jia Lan"
+  ],
+  "epithet": "李纨之子",
+  "category": "master",
+  "era_layer": 3,
+  "bio": "贾兰是中国古典小说《红楼梦》中的人物，系贾珠与李纨之子、贾政与王夫人之孙。自幼丧父，由母亲李纨在贾府中抚养长大。五岁时便进入家塾读书，在众顽童闹学堂时，他劝阻贾菌不要参与争斗，劝其专心念书。贾元春归省时，贾兰获得赏赐。他文武兼修，尤其在经济文章方面有独到见解，并最终考中举人。据学者推测，贾兰功成名就后不久便离世。虽然原著中着墨不多，但作为荣国府的嫡系子孙，他通过刻苦努力考中举人，暗合了甄士隐预言的“兰桂齐芳”，未来可能带领家族复兴。贾兰的形象也出现在诸多衍生作品中，如电视剧《红楼梦》。",
+  "events": [
+    {
+      "title": "五岁入学读书",
+      "desc": "贾兰五岁时进入贾府家塾，开始接受启蒙教育，为日后的科举功名打下基础。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "闹学堂时劝阻贾菌",
+      "desc": "在第九回“恋风流情友入家塾 起嫌疑顽童闹学堂”中，贾菌想要参与打架，贾兰劝他说：“好兄弟，咱们不与人家打架，咱们念书要紧。”表现出他稳重好学的性格。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "元春省亲获赏赐",
+      "desc": "贾元春归省时，贾兰随众同辈迎接，并得到了元春的赏赐，体现了其作为贾府嫡孙的地位。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "考中举人",
+      "desc": "贾兰在科举考试中脱颖而出，考中举人，实现了家族复兴的希望，后被推测随即离世。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "后四十回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "好兄弟，咱们不与人家打架，咱们念书要紧。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_lan.webp",
+  "thumb": "/p/honglou/thumbs/jia_lan.webp"
+}

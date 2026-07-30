@@ -1,0 +1,91 @@
+{
+  "schema_version": 3,
+  "id": "wang_shanbao_jia",
+  "name_zh": "王善保家的",
+  "name_en": "Wang Shanbao's Wife",
+  "aliases": [
+    "王善保家的",
+    "Wang Shanbao's Wife"
+  ],
+  "epithet": "邢夫人陪房",
+  "category": "servant",
+  "era_layer": 1,
+  "bio": "王善保家的是清代小说《红楼梦》中人物，贾府大房邢夫人的陪房，司棋的外祖母。她作为邢夫人的心腹，在绣春囊事件中借机挑唆王夫人抄检大观园，意图打压不奉承自己的丫鬟。她诬陷晴雯“妖娆轻狂”，导致晴雯被逐出大观园后病死。抄检过程中，她故意避开薛宝钗的居处，却对林黛玉的丫鬟进行搜查，更因掀贾探春的衣襟而遭到探春的掌掴。最终，她在搜查外孙女司棋的箱子时，发现了司棋与表弟潘又安的私通书信，当场羞愧自扇耳光。事后，她被邢夫人责打，沦为贾府上下笑柄。王善保家的形象贯穿抄检大观园事件始终，既推动了矛盾激化，又自作自受，集中体现了封建家族中刁奴仗势欺人、公报私仇的丑态。",
+  "events": [
+    {
+      "title": "挑唆抄检大观园",
+      "desc": "借绣春囊事件向王夫人进谗言，导致大观园被抄检。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "诬陷晴雯致其被逐",
+      "desc": "向王夫人诬告晴雯“妖娆轻狂”，导致晴雯被逐出大观园后病死。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "搜查时避开薛宝钗",
+      "desc": "在抄检大观园时，故意避开薛宝钗的居处，体现其趋炎附势。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被探春掌掴",
+      "desc": "检查探春丫鬟时，掀探春衣襟，被探春掌掴。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "查出司棋私通",
+      "desc": "在搜查中查出外孙女司棋与表弟潘又安的私通书信，当场羞愧自扇耳光。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被邢夫人责打",
+      "desc": "事件后邢夫人责打她，沦为笑柄。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "挑唆生事",
+    "诬陷告密",
+    "仗势欺人"
+  ],
+  "domains": [
+    "内宅斗争",
+    "告密",
+    "奴仆管理"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/wang_shanbao_jia.webp",
+  "thumb": "/p/honglou/thumbs/wang_shanbao_jia.webp"
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 3,
+  "id": "jia_daishan",
+  "name_zh": "贾代善",
+  "name_en": "Jia Daishan",
+  "aliases": [],
+  "epithet": "贾母之夫·荣国公",
+  "category": "master",
+  "era_layer": 0,
+  "bio": "贾代善是中国古典小说《红楼梦》中荣国公贾源的嫡长子，贾源死后袭封荣国公，成为荣国府的当家人，掌管家族核心权力和产业。他娶出身四大家族之一史家的史太君（贾母）为妻，生有二子：贾赦和贾政。贾代善凭借自身能力和家族威望，巩固了荣国府在朝廷和民间的地位。他为人公正，对两个儿子严格要求，悉心教导。临终时，他向皇帝上本，请求让贾赦袭爵，并为贾政求官。皇帝感念荣国公家族的功劳和贾代善的恳切请求，遂令贾赦袭爵，并额外赐贾政主事之衔。贾代善在小说故事开始时已去世，但其形象通过贾母等人的回忆和家族影响贯穿全书。",
+  "events": [
+    {
+      "title": "临终上本请旨",
+      "desc": "贾代善临终时向皇帝上奏本，请求让长子贾赦袭爵，并为次子贾政求取官职。皇帝感念荣国公一门的功勋以及贾代善的恳切请求，批准贾赦袭爵，并额外赐贾政主事之衔，直接入部学习。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_daishan.webp",
+  "thumb": "/p/honglou/thumbs/jia_daishan.webp"
+}

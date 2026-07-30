@@ -1,0 +1,73 @@
+{
+  "schema_version": 3,
+  "id": "zhao_yiniang",
+  "name_zh": "赵姨娘",
+  "name_en": "Concubine Zhao",
+  "aliases": [
+    "赵姨娘",
+    "赵氏"
+  ],
+  "epithet": "贾政妾·探春母",
+  "category": "servant",
+  "era_layer": 2,
+  "bio": "赵姨娘是曹雪芹所著《红楼梦》中的人物，荣国府贾政的妾室，贾环与贾探春的生母。她性格粗鄙、愚昧争强好胜，搬弄是非，中年后容貌平庸，神态刻薄粗俗，衣着朴素，气质阴戾，全无大家主母的端庄气度。因贾环烫伤宝玉遭王夫人痛骂，便勾结马道婆用魇魔法害宝玉、凤姐，致二人险些丧命。后又因茉莉粉替蔷薇硝一事，在夏婆子挑唆下大闹大观园，与芳官等小丫鬟厮打，被探春制止。她屡次暗中争宠，处处与嫡出一脉作对，却屡屡失败。身处嫡庶森严的环境，地位卑微却一心为贾环争得家业，长期压抑与不公使其性格扭曲，行事偏激狠辣，最终在通行本结局中疯癫暴毙。赵姨娘是封建宗法与妾媵制度下的悲剧人物，其挣扎与毁灭深刻揭露了封建礼教对人性的摧残。",
+  "events": [
+    {
+      "title": "贾环烫伤宝玉",
+      "desc": "贾环因嫉妒宝玉，故意推翻烛台烫伤宝玉脸颊，赵姨娘因此被王夫人痛骂，心怀怨恨。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "勾结马道婆施魇魔法",
+      "desc": "赵姨娘与马道婆勾结，用魇魔法诅咒宝玉和凤姐，致使二人突发疯病，险些丧命，后经癞头和尚与跛足道人解救。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "茉莉粉事件大闹大观园",
+      "desc": "因芳官用茉莉粉冒充蔷薇硝给贾环，赵姨娘在夏婆子挑唆下，闯入大观园与芳官、藕官等小丫鬟厮打，被探春赶来制止。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与芳官等厮打被探春制止",
+      "desc": "赵姨娘在怡红院与芳官等人扭打，探春以嫡庶之礼规劝母亲，赵姨娘只得悻悻离去。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "结局疯癫暴毙",
+      "desc": "在通行本结局中，赵姨娘因长期积怨与精神压迫，最终疯癫而死，暴毙而亡。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/zhao_yiniang.webp",
+  "thumb": "/p/honglou/thumbs/zhao_yiniang.webp"
+}

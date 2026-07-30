@@ -1,0 +1,90 @@
+{
+  "schema_version": 3,
+  "id": "lai_nainai",
+  "name_zh": "赖嬷嬷",
+  "name_en": "Lai Nainai",
+  "aliases": [],
+  "epithet": "赖大之母·老仆",
+  "category": "servant",
+  "era_layer": 0,
+  "bio": "赖嬷嬷是《红楼梦》中贾府的资深仆妇，其子赖大任荣国府总管，孙子赖尚荣经贾府提携捐官后出任知县，形成赖家祖孙三代依附贾府的管家体系。赖嬷嬷因服侍过贾府老主子，与贾母同辈而地位特殊，在贾府中对话时可享坐凳之礼，备受尊重。凤姐寿宴筹款时，贾母曾直言赖家财力雄厚，暗示其家资殷实。赖家宅园以泉石林木著称，赖嬷嬷曾将婢女晴雯献给贾母。赖尚荣出任知县后，赖家大摆三日宴席，贾母亲率众人赴宴，场面盛大。赖嬷嬷深谙人情世故，曾为周瑞之子求情免于被逐，并训诫宝玉遵守贾府家规，展现出她作为老仆的威严与智慧。赖家通过三代经营，从奴仆升至官员阶层，赖大曾掌管大观园修建，然而赖尚荣在贾府败落时拒绝资助银两，导致两家关系彻底破裂。赖嬷嬷的形象体现了贾府中资深仆人的复杂处境，既有依附主家的荣耀，也有家族兴衰的无奈。",
+  "events": [
+    {
+      "title": "赖嬷嬷受贾母礼遇",
+      "desc": "赖嬷嬷因服侍过贾府老主子，与贾母同辈，在贾府中享有特殊地位，对话时可坐凳，受到贾母等人的尊重。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖嬷嬷献晴雯于贾母",
+      "desc": "赖嬷嬷曾将自家婢女晴雯献给贾母，后晴雯成为宝玉的丫鬟，以美貌和伶俐闻名。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖尚荣捐官任知县",
+      "desc": "赖家通过贾府提携，赖尚荣捐官得任知县，赖家由此从奴仆阶层跃升为官员门第。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖家摆宴庆贺知县上任",
+      "desc": "赖尚荣出任知县后，赖家大摆三日宴席，贾母亲率众人赴宴，场面隆重，彰显赖家声势。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖嬷嬷为周瑞之子求情",
+      "desc": "周瑞之子因事被王熙凤欲逐出，赖嬷嬷出面求情，凭借老仆情面使周瑞之子得以留用。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖嬷嬷训诫宝玉",
+      "desc": "赖嬷嬷以长辈身份训诫宝玉，要他遵守贾府家规，不可骄纵，体现了赖嬷嬷在贾府中的威望。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "赖尚荣拒助贾府败落",
+      "desc": "贾府败落时，赖尚荣拒绝资助银两，导致赖家与贾府关系破裂，反映出赖家忘恩负义的一面。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/lai_nainai.webp",
+  "thumb": "/p/honglou/thumbs/lai_nainai.webp"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 3,
+  "id": "ou_guan",
+  "name_zh": "藕官",
+  "name_en": "Ouguan",
+  "aliases": [],
+  "epithet": "宝玉丫鬟·戏班出身",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "藕官是清代小说《红楼梦》中贾府为迎接元妃省亲而从苏州采买的十二名女伶之一，在梨香院戏班中专攻小生行当。她与饰演小旦的菂官在戏中假扮夫妻，并逐渐将戏中情感延伸至现实生活，发展出真挚的同性恋情。菂官病逝后，藕官悲痛不已，但在戏班中又遇到顶替菂官角色的蕊官，藕官将情感投射到蕊官身上，继续维持着类似夫妻的亲密关系，并因此引发了关于情感专一性与变通性的哲理思考，得到贾宝玉的赞赏。戏班解散后，藕官被分派到林黛玉处做丫鬟，但始终不愿离开梨香院。最终，因不愿被主人再次转卖，藕官毅然选择出家为尼，皈依佛门，了却尘缘。",
+  "events": [
+    {
+      "title": "采买入府",
+      "desc": "贾府为筹备元妃省亲，从苏州采买十二名女伶，成立梨香院戏班，藕官作为其中之一被选中，专攻小生行当。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与菂官相恋",
+      "desc": "藕官在戏班中与饰演小旦的菂官长期搭档，二人将戏中的夫妻关系延伸至现实生活，产生了深厚的同性恋情。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "菂官病逝",
+      "desc": "菂官不幸病逝，藕官悲痛欲绝，常以烧纸等方式祭奠，此事被贾宝玉撞见，宝玉对藕官的情深义重表示理解。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与蕊官续缘",
+      "desc": "菂官死后，戏班中新补了蕊官顶替其角色，藕官将情感延续到了蕊官身上，二人继续维持亲密关系，引发了关于情感专一与变通的讨论。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "戏班解散分派",
+      "desc": "省亲结束后，贾府遣散戏班，藕官因不愿离开梨香院，被分派到林黛玉处做丫鬟，但内心仍惦念过往。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "出家为尼",
+      "desc": "贾府衰败后，藕官面临被转卖的命运，她坚决不从，最终选择削发为尼，遁入空门，以了却尘缘。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/ou_guan.webp",
+  "thumb": "/p/honglou/thumbs/ou_guan.webp"
+}

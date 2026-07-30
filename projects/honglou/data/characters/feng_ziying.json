@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "id": "feng_ziying",
+  "name_zh": "冯紫英",
+  "name_en": "Feng Ziying",
+  "aliases": [],
+  "epithet": "冯唐之子·宝玉好友",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "冯紫英，神武将军冯唐之子，与贾宝玉、薛蟠等京城王公子弟交往密切。他为人豪爽侠义，继承了父亲的武艺，擅长弓马拳脚，在众公子中堪称高手。虽不精于诗文，但性格稳重，办事有盘算，不同于贾宝玉的懵懂和薛蟠的粗鲁。冯紫英在《红楼梦》中首次出现于第十回，但真正登场是在第二十六回薛蟠庆生时，与宝玉、蒋玉菡等人一同饮酒，席间行令、唱曲，展现了其豪迈的一面。此后他偶有提及，并未再详细出场，但因其神秘的身份和背景，成为红学家研究的热点人物之一。关于他的后续命运，书中未作交代，留给读者无尽的想象。",
+  "events": [
+    {
+      "title": "首见第十回",
+      "desc": "冯紫英在《红楼梦》第十回中首次被提及，作为神武将军冯唐之子，与贾府有往来。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参加薛蟠生日宴",
+      "desc": "第二十六回中，薛蟠为庆生设宴，贾宝玉、冯紫英、蒋玉菡等人齐聚。席间众人行酒令、唱曲，冯紫英表现豪爽，与宝玉等人相谈甚欢。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第二十六回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "骑射",
+    "拳脚",
+    "舞枪弄棒"
+  ],
+  "domains": [
+    "武艺",
+    "交友"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/feng_ziying.webp",
+  "thumb": "/p/honglou/thumbs/feng_ziying.webp"
+}

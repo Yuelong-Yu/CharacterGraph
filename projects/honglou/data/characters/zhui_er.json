@@ -1,0 +1,40 @@
+{
+  "schema_version": 3,
+  "id": "zhui_er",
+  "name_zh": "坠儿",
+  "name_en": "Zhuier",
+  "aliases": [],
+  "epithet": "宝玉丫鬟·偷虾须镯",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "坠儿是曹雪芹《红楼梦》中贾宝玉房中的小丫鬟。她与小红交好，在滴翠亭私传手帕，促成贾芸与小红的情缘，脂砚斋批此行为为“传奸”。后因偷取平儿的虾须镯，被晴雯发现并驱逐，此事被批为“为盗”。这两次事件分别反映了大观园内礼教束缚与贾府道德体系的危机。坠儿作为小红密友，其传递信物的行为直接推动了贾芸与小红的情感发展。脂砚斋批语暗示原著八十回后仍有坠儿的情节，推断她被逐后仍能独立生存。坠儿通过“传奸”“为盗”的双重行为，成为贾府价值体系的试金石。",
+  "events": [
+    {
+      "title": "滴翠亭传手帕",
+      "desc": "坠儿在滴翠亭替贾芸与小红私传手帕，促成二人的情缘。脂砚斋批注称此行为属于“传奸”，暗示其违背礼教。此事发生在《红楼梦》第二十七回前后。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "偷虾须镯被逐",
+      "desc": "坠儿偷取平儿所戴的虾须镯，被晴雯发现后，晴雯以病中性急、对宝玉不满为由，将坠儿驱逐出怡红院。脂砚斋批此行为为“为盗”，认为她破坏了贾府的道德秩序。此事发生在《红楼梦》第五十二回。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/zhui_er.webp",
+  "thumb": "/p/honglou/thumbs/zhui_er.webp"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 3,
+  "id": "rui_guan",
+  "name_zh": "蕊官",
+  "name_en": "Ruiguan",
+  "aliases": [],
+  "epithet": "宝玉丫鬟·戏班出身小旦",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "蕊官是贾府为元春省亲而采买的十二个戏班女孩之一，行当为小旦。戏班解散后归入宝玉房中为丫鬟。她与藕官交好，藕官死后曾为之焚纸祭奠。",
+  "events": [
+    {
+      "title": "戏班解散入宝玉房",
+      "desc": "元春省亲后戏班解散，蕊官被分入宝玉房中为丫鬟。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第五十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与藕官交好",
+      "desc": "蕊官与藕官在戏班中结下深厚情谊，藕官死后蕊官为之焚纸祭奠。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/rui_guan.webp",
+  "thumb": "/p/honglou/thumbs/rui_guan.webp"
+}

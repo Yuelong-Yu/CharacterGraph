@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "yu_chuan",
+  "name_zh": "玉钏",
+  "name_en": "Yuchuan",
+  "aliases": [
+    "白玉钏"
+  ],
+  "epithet": "金钏之妹",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "玉钏，本名白玉钏，是《红楼梦》中王夫人房中的丫鬟，与姐姐金钏一同在贾府服侍。金钏因与宝玉调笑被王夫人撵出，后投井自尽，玉钏由此接替姐姐的月钱份额。因金钏之死与宝玉有关，玉钏对宝玉心怀怨恨。宝玉遭贾政杖责后，玉钏奉命为宝玉送莲叶羹，席间冷面相对，经宝玉温言哄劝并故意让她先尝羹汤，才稍解心结。金钏周年忌日时，玉钏独坐廊下流泪，宝玉外出祭奠归来欲加安抚未果。玉钏性格沉默寡言，与金钏的活泼外向形成鲜明对比。作者通过姐妹情深和两次与宝玉的互动，以少量笔墨刻画了底层婢女的生存状态与亲情牵绊，展现了在封建大家族中，奴婢身不由己的悲凉命运。",
+  "events": [
+    {
+      "title": "接替金钏月钱",
+      "desc": "金钏投井自尽后，王夫人将金钏的月钱份额转给玉钏，玉钏由此成为王夫人身边的一等丫鬟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "送莲叶羹冷面待宝玉",
+      "desc": "宝玉被贾政杖责后，玉钏奉命送莲叶羹。她因姐姐之死对宝玉心存怨恨，始终冷着脸。宝玉以言语哄劝，并故意让她先尝羹汤，玉钏才稍露笑容。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "金钏忌日独泣廊下",
+      "desc": "金钏周年忌日，玉钏独自在廊下流泪。宝玉外出祭奠金钏归来，欲安抚玉钏，但玉钏未予理会。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/yu_chuan.webp",
+  "thumb": "/p/honglou/thumbs/yu_chuan.webp"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "id": "feicui",
+  "name_zh": "翡翠",
+  "name_en": "Feicui",
+  "aliases": [],
+  "epithet": "贾母丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "根据提供的维基百科原文，内容为玉石翡翠（jadeite）的矿物学定义和历史，并未涉及《红楼梦》人物翡翠的任何信息。因此无法从该原文中提取人物生平。",
+  "events": [],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/feicui.webp",
+  "thumb": "/p/honglou/thumbs/feicui.webp"
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": 3,
+  "id": "fang_guan",
+  "name_zh": "芳官",
+  "name_en": "Fangguan",
+  "aliases": [
+    "芳官",
+    "花芳官",
+    "温都里纳"
+  ],
+  "epithet": "宝玉丫鬟·戏班出身",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "芳官，清代小说《红楼梦》中的人物，姑苏人氏，本姓花，原为贾府戏班正旦演员，属“红楼十二官”之一。戏班解散后，她被分配到贾宝玉的怡红院当丫鬟。芳官性格骄纵任性，敢作敢为，曾因“洗头事件”反抗干娘克扣月钱，又在“蔷薇硝事件”中与赵姨娘发生激烈冲突，展现了不屈的反抗精神。她热心帮助柳五儿进入怡红院，虽未成功，但足见其重情重义。在宝玉生日群芳夜宴上，她献唱《赏花时》一曲，深受宝玉喜爱，宝玉甚至赐其法语名“温都里纳”，形容她“面如满月犹白，眼如秋水还清”。然而，抄检大观园后，芳官被王夫人逐出贾府，最终与藕官、蕊官一同出家于水月庵，结束了短暂的丫鬟生涯。她的形象在“玫瑰露引茯苓霜”事件中进一步强化，成为宝玉房中最具戏剧冲突的丫鬟之一。",
+  "events": [
+    {
+      "title": "洗头事件",
+      "desc": "芳官因干娘克扣月钱，导致洗头水不足，与干娘发生争执，反抗其不公待遇，展现出她敢于抗争的性格。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "蔷薇硝事件",
+      "desc": "芳官因蔷薇硝与赵姨娘发生冲突，赵姨娘闹到怡红院，芳官毫不退让，引发了一场风波，最终惊动贾府上层。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "帮助柳五儿",
+      "desc": "芳官同情柳五儿处境，试图帮助她进入怡红院当差，但因种种阻碍未能成功，显示出她的善良与热心。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "群芳夜宴献唱",
+      "desc": "在宝玉生日当晚的群芳夜宴上，芳官被要求演唱助兴，她献唱《赏花时》一曲，赢得众人赞赏。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "宝玉赐名",
+      "desc": "宝玉因喜爱芳官，赐其法语名“温都里纳”，并称赞她“面如满月犹白，眼如秋水还清”，以示宠爱。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "玫瑰露引茯苓霜",
+      "desc": "芳官卷入玫瑰露与茯苓霜的偷窃案，她主动承担责任，保护他人，进一步凸显其仗义与反抗性格。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "抄检被逐出家",
+      "desc": "抄检大观园后，王夫人以芳官“狐狸精”为由将其逐出贾府，芳官与藕官、蕊官一同出家水月庵，结束丫鬟生涯。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "演唱戏曲",
+    "扮演正旦"
+  ],
+  "domains": [
+    "戏曲表演"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/fang_guan.webp",
+  "thumb": "/p/honglou/thumbs/fang_guan.webp"
+}

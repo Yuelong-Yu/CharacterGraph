@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "xing_zhong",
+  "name_zh": "邢忠",
+  "name_en": "Xing Zhong",
+  "aliases": [],
+  "epithet": "邢夫人之兄·邢岫烟之父",
+  "category": "master",
+  "era_layer": 0,
+  "bio": "邢忠是曹雪芹所著《红楼梦》中的虚拟人物，出身姑苏邢家旁支，为邢夫人堂兄、邢岫烟之父。早年丧母，与继母关系不睦，因不善持家导致家道中落，在家族中处于边缘地位。后因家境艰难，携妻女赴京投奔贾府，暂居贾府西厢房。其女邢岫烟与薛蝌订婚后，邢夫人曾遣人赠银五百两供其妹置办嫁妆，并劝邢忠南下经商。邢忠与妻商议后决定启程，从此离开贾府。作为贾府姻亲中的边缘人物，邢忠一生碌碌无为，性格懦弱，在《红楼梦》中仅作为推动邢岫烟婚姻情节的配角出现。",
+  "events": [
+    {
+      "title": "携家投奔贾府",
+      "desc": "邢忠因家境艰难，携妻女从姑苏赴京，投奔堂妹邢夫人，暂居贾府西厢房。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "女儿定亲薛蝌",
+      "desc": "邢忠之女邢岫烟经贾母撮合，与薛蝌订婚，邢忠因此成为薛蝌的岳父。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "接受赠银并南下经商",
+      "desc": "邢夫人遣人赠银五百两为邢岫烟置办嫁妆，并建议邢忠南下经商以谋生计，邢忠与妻商议后决定启程。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xing_zhong.webp",
+  "thumb": "/p/honglou/thumbs/xing_zhong.webp"
+}

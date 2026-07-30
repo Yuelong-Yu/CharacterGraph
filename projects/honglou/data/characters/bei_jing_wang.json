@@ -1,0 +1,64 @@
+{
+  "schema_version": 3,
+  "id": "bei_jing_wang",
+  "name_zh": "北静王",
+  "name_en": "Prince Beijing",
+  "aliases": [
+    "北静王",
+    "水溶",
+    "贤王"
+  ],
+  "epithet": "水溶·贤王",
+  "category": "guest",
+  "era_layer": 1,
+  "bio": "北静王，名水溶，是曹雪芹小说《红楼梦》中的一位王爷，首次出现于第十四回。他年未弱冠，容貌秀美，性情谦和。因祖上与贾府有世交之谊，故从不以王位自居。秦可卿出丧时，他特设路祭，在路旁高搭彩棚，设席张筵，和音奏乐，哀悼吊唁。随后专请贾宝玉相见，对通灵宝玉称奇道异，夸奖宝玉果然如“宝”似“玉”，真乃“龙驹凤雏”，并将皇上亲赐之鹡鸰念珠一串赠与宝玉。贾宝玉素厌官僚权贵，但平日闻得北静王风流潇洒，不为官俗国体所缚，每思相会，故相见之下彼此惺惺相惜。北静王在书中是贤王形象，与贾府关系密切，是贾宝玉为数不多的知己之一。",
+  "events": [
+    {
+      "title": "路祭秦可卿",
+      "desc": "秦可卿出丧时，北静王特设路祭，在路旁高搭彩棚，设席张筵，和音奏乐，哀悼吊唁。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "召见贾宝玉赠鹡鸰念珠",
+      "desc": "北静王专请贾宝玉相见，对通灵宝玉称奇道异，夸奖宝玉为'龙驹凤雏'，并将皇上亲赐之鹡鸰念珠一串赠与宝玉。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与宝玉惺惺相惜",
+      "desc": "贾宝玉素厌官僚权贵，但闻北静王风流潇洒，不为官俗国体所缚，每思相会，相见之下彼此惺惺相惜。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第十四回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "真乃龙驹凤雏",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第十四回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/bei_jing_wang.webp",
+  "thumb": "/p/honglou/thumbs/bei_jing_wang.webp"
+}

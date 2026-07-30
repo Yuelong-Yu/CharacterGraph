@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "id": "boli",
+  "name_zh": "玻璃",
+  "name_en": "Boli",
+  "aliases": [],
+  "epithet": "贾母丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "原文未提供该人物的生平信息。",
+  "events": [],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/boli.webp",
+  "thumb": "/p/honglou/thumbs/boli.webp"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "id": "xing_dequan",
+  "name_zh": "邢德全",
+  "name_en": "Xing Dequan",
+  "aliases": [
+    "傻大舅"
+  ],
+  "epithet": "邢夫人之弟·败家子",
+  "category": "master",
+  "era_layer": 1,
+  "bio": "邢德全，邢夫人胞弟，邢岫烟之叔，人称“傻大舅”。他为人只知吃酒赌钱、眠花宿柳为乐，手中滥漫使钱，待人无二心，因此都唤他“傻大舅”。他常与贾府不肖子弟如薛蟠、贾珍等在一起鬼混。首见《红楼梦》第七十五回，曾向贾珍抱怨其姐邢夫人出嫁时将家私都带到贾家，导致邢家一应用度由陪房王善保家的掌管，他有冤无处诉。后王仁等人想把巧姐卖与藩王爷为妾，邢德全也参与其事。他作为邢夫人之胞弟，居心行事却大不相同，是一个典型的纨绔子弟形象。",
+  "events": [
+    {
+      "title": "向贾珍抱怨家私被占",
+      "desc": "邢德全在宁国府向贾珍诉苦，称其姐邢夫人出嫁时把邢家财产都带到了贾家，如今邢家日常用度全由陪房王善保家的掌管，他虽有怨却无处申辩，表现出对姐姐的不满和自身的无能。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第七十五回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与卖巧姐之事",
+      "desc": "王仁、贾环等人合谋将贾府巧姐卖给藩王为妾，邢德全也参与其中，成为帮凶。这一行为暴露了他贪图钱财、不顾亲情、助纣为虐的纨绔本性。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xing_dequan.webp",
+  "thumb": "/p/honglou/thumbs/xing_dequan.webp"
+}

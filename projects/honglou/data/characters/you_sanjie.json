@@ -1,0 +1,92 @@
+{
+  "schema_version": 3,
+  "id": "you_sanjie",
+  "name_zh": "尤三姐",
+  "name_en": "You Sanjie",
+  "aliases": [],
+  "epithet": "尤氏妹",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "尤三姐是中国古典小说《红楼梦》中的人物，尤氏继母与前夫所生之女，尤二姐的妹妹。她容貌风流，性情刚烈。因家境贫寒，寄居宁国府期间，被迫与贾珍、贾蓉父子保持暧昧关系，但以泼辣手段抗拒纠缠。她曾以放纵姿态戏弄贾珍等人，借索取财物发泄愤懑。后倾心于世家子弟柳湘莲，托贾琏代为定亲，柳湘莲赠鸳鸯剑为信物。然而柳湘莲因听闻宁国府名声污秽，怀疑尤三姐的贞洁，前来退婚。尤三姐当面自刎以证清白，柳湘莲悔恨出家。曹雪芹通过尤三姐的刚烈抗争，展现了封建礼教对女性的压迫，她以自戕实现精神解脱，成为反抗男权社会的典型形象。",
+  "events": [
+    {
+      "title": "寄居宁国府周旋贾珍",
+      "desc": "尤三姐因家境贫寒，随母亲寄居宁国府，被迫与贾珍、贾蓉父子保持暧昧关系，但始终以泼辣手段抗拒其纠缠。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "戏弄贾珍贾蓉",
+      "desc": "尤三姐以放纵姿态故意戏弄贾珍等人，借索取昂贵衣物、首饰等财物发泄心中愤懑，令贾珍等人既贪恋又畏惧。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "倾心柳湘莲托贾琏定亲",
+      "desc": "尤三姐在贾府宴席上见到柳湘莲，心生爱慕，发誓非他不嫁。后托贾琏代为说亲，柳湘莲应允并赠鸳鸯剑作为定情信物。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "获赠鸳鸯剑为信物",
+      "desc": "柳湘莲将祖传鸳鸯剑交给贾琏转赠尤三姐，作为定亲信物。尤三姐将剑挂在床头，日夜珍视。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "柳湘莲退婚质疑贞洁",
+      "desc": "柳湘莲从宝玉处听闻宁国府名声污秽，怀疑尤三姐不洁，遂到贾府索回定礼，坚决退婚。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "当面自刎证清白",
+      "desc": "尤三姐听闻柳湘莲退婚，趁其前来索剑时，取出鸳鸯剑当面自刎，以死表明贞洁。柳湘莲目睹后悔恨不已。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "柳湘莲悔恨出家",
+      "desc": "尤三姐死后，柳湘莲深感自责，万念俱灰，最终随跛足道人出家，遁入空门。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [
+    "鸳鸯剑"
+  ],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/you_sanjie.webp",
+  "thumb": "/p/honglou/thumbs/you_sanjie.webp"
+}

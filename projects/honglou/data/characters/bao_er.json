@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "id": "bao_er",
+  "name_zh": "鲍二",
+  "name_en": "Bao Er",
+  "aliases": [],
+  "epithet": "贾琏仆人",
+  "category": "servant",
+  "era_layer": 2,
+  "bio": "鲍二是《红楼梦》中贾府的底层仆役，其人物轨迹在全书中存在文本矛盾与版本差异。在第四十四回中，贾琏与鲍二媳妇偷情，被凤姐撞破后大闹，鲍二媳妇羞愤自缢，贾琏承诺为鲍二续弦。第六十四回，贾珍将鲍二夫妇赠予贾琏，并明确标注为“一房家人”。第八十八回，鲍二因故被贾珍鞭打并撵出。第一百零六回，揭露鲍二实为宁国府借调至荣国府的人员。在贾府被抄家一案中，鲍二成为关键证人，其招供内容直接导致贾府败落。程高本与脂砚斋批本对鲍二的身份处理存在显著差异，形成人物脉络的叙事断裂，这也反映了《红楼梦》版本研究的复杂性。",
+  "events": [
+    {
+      "title": "鲍二媳妇与贾琏偷情",
+      "desc": "贾琏趁凤姐生日宴席之际，与鲍二媳妇私通，被凤姐发现后大闹一场。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "鲍二媳妇自缢身亡",
+      "desc": "偷情事发后，鲍二媳妇因羞愤和畏惧而自缢，贾琏为安抚鲍二，承诺为其续弦。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贾珍赠予鲍二夫妇",
+      "desc": "贾珍为讨好贾琏，将鲍二夫妇作为“一房家人”赠予，该事件发生在贾琏偷娶尤二姐之前。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "鲍二被贾珍鞭打撵出",
+      "desc": "鲍二因故触怒贾珍，被鞭打后撵出贾府，其后续去向不明。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第八十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "鲍二在抄家中招供",
+      "desc": "贾府被查抄时，鲍二作为宁国府借调人员，其招供内容成为贾府罪证，导致贾府彻底败落。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第一百零六回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/bao_er.webp",
+  "thumb": "/p/honglou/thumbs/bao_er.webp"
+}

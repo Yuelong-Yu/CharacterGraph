@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "lin_zhixiao_jia",
+  "name_zh": "林之孝家的",
+  "name_en": "Lin Zhixiao's Wife",
+  "aliases": [
+    "林之孝之妻",
+    "小红之母"
+  ],
+  "epithet": "林之孝之妻",
+  "category": "servant",
+  "era_layer": 1,
+  "bio": "林之孝家的，中国古典小说《红楼梦》中人物，荣国府管家林之孝之妻，林红玉（小红）之母。她为人行事低调，与其夫被喻为“天聋地哑”，虽身处管家高位却依然保持低调作风，但常借职务之便谋取私利。在第六十一回中，她巡夜时查获柳五儿携带的茯苓霜，随即带人搜查厨房缴获玫瑰露，借此机会安排秦显家的临时接管厨房事务。秦显家的为谋取职位，向其秘密赠送一篓炭、五百斤木柴及一担粳米。后因柳家的无罪获释，秦显家的所送财物尽数损失，林之孝家的未能保住这一安排。这一事件展现出她善于利用职权、暗中谋利的一面，是贾府内部复杂人际关系的一个缩影。",
+  "events": [
+    {
+      "title": "巡夜查获茯苓霜",
+      "desc": "林之孝家的在巡夜时查获柳五儿携带的茯苓霜，随即带人搜查厨房并缴获玫瑰露，借此安排秦显家的临时接管厨房事务。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "安排秦显家的接管厨房",
+      "desc": "林之孝家的利用查获的茯苓霜和玫瑰露事件，安排秦显家的临时接管厨房，秦显家的为谋取职位，向其赠送一篓炭、五百斤木柴及一担粳米。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十一回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "秦显家的送礼损失",
+      "desc": "后因柳家的无罪获释，秦显家的所送财物尽数损失，林之孝家的未能保住秦显家的的职位，自身也未能从中获利。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十一回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/lin_zhixiao_jia.webp",
+  "thumb": "/p/honglou/thumbs/lin_zhixiao_jia.webp"
+}

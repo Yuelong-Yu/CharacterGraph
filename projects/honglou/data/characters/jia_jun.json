@@ -1,0 +1,50 @@
+{
+  "schema_version": 3,
+  "id": "jia_jun",
+  "name_zh": "贾菌",
+  "name_en": "Jia Jun",
+  "aliases": [],
+  "epithet": "贾府族人·学童",
+  "category": "master",
+  "era_layer": 3,
+  "bio": "贾菌，是荣国府近派的玄孙，母亲娄氏，父亲早亡，与母亲相依为命。他在贾家族学中读书，与贾兰最为交好，年纪虽小却志气很大，性格淘气、不怕事。在第九回的学堂事件中，他挺身而出，帮助茗烟参与争斗，表现出少年人的义气与胆量。第十三回，秦可卿丧事期间，贾菌也曾随族人参与祭奠。此后，小说中再无关于他的情节，他的命运便不了了之。",
+  "events": [
+    {
+      "title": "与贾兰交好，在家塾读书",
+      "desc": "贾菌在贾家族学中读书，与贾兰关系最为亲密，二人常在一起。他虽年幼，但志气颇高，为人淘气不怕事，在学堂中颇有存在感。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "学堂事件中帮助茗烟争斗",
+      "desc": "在第九回‘恋风流情友入家塾 起嫌疑顽童闹学堂’中，贾菌见茗烟与人争斗，便主动上前相助，参与闹学事件，展现出他的胆量和义气。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参加秦可卿丧事",
+      "desc": "第十三回，秦可卿去世，贾府上下举行盛大丧礼，贾菌作为贾家族人，也参与了丧事活动，但此后小说中再无他的描写。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第十三回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_jun.webp",
+  "thumb": "/p/honglou/thumbs/jia_jun.webp"
+}

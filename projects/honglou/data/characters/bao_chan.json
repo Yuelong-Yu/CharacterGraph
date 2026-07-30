@@ -1,0 +1,70 @@
+{
+  "schema_version": 3,
+  "id": "bao_chan",
+  "name_zh": "宝蟾",
+  "name_en": "Baochan",
+  "aliases": [],
+  "epithet": "夏金桂丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "宝蟾是古典小说《红楼梦》中夏金桂的陪房丫鬟，生有三分姿色且举止轻浮。她首次登场于原著第80回，与主子夏金桂结成利益同盟，共同设计引诱薛蟠，以排挤薛蟠之妾香菱，导致香菱被毒打驱逐。后因争宠与夏金桂反目，二人互相缠斗。薛蟠因命案入狱后，宝蟾又与夏金桂合谋勾引薛蝌，但未成功。此后，夏金桂企图毒死香菱，宝蟾在调换汤碗时误使香菱服下毒药身亡，最终罪行败露被捕入狱。宝蟾被塑造为工于心计、手段阴毒的侍妾形象，与秋桐同属泼辣狠戾类型，与平儿的隐忍善良形成鲜明对比。",
+  "events": [
+    {
+      "title": "设计引诱薛蟠",
+      "desc": "宝蟾与夏金桂合谋，主动引诱薛蟠，以排挤香菱，导致香菱被薛蟠毒打并驱逐出房。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第八十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与夏金桂反目",
+      "desc": "因争宠于薛蟠，宝蟾与夏金桂产生矛盾，二人互相缠斗，关系破裂。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "合谋勾引薛蝌",
+      "desc": "薛蟠入狱后，宝蟾与夏金桂合谋勾引薛蝌，企图控制薛家，但未能成功。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "调换汤碗害死香菱",
+      "desc": "夏金桂在汤中下毒欲害香菱，宝蟾在端汤时调换碗盏，导致香菱误服毒药身亡。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "罪行败露入狱",
+      "desc": "香菱之死真相败露，宝蟾与夏金桂的罪行被揭露，宝蟾最终被官府逮捕入狱。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/bao_chan.webp",
+  "thumb": "/p/honglou/thumbs/bao_chan.webp"
+}

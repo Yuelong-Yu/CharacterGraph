@@ -1,0 +1,82 @@
+{
+  "schema_version": 3,
+  "id": "jia_qiang",
+  "name_zh": "贾蔷",
+  "name_en": "Jia Qiang",
+  "aliases": [
+    "蔷二爷"
+  ],
+  "epithet": "宁国府玄孙·戏班管事",
+  "category": "master",
+  "era_layer": 3,
+  "bio": "贾蔷是《红楼梦》中宁国府正派玄孙，父母双亡后由贾珍抚养长大，与贾蓉为堂兄弟。他生得风流俊俏，但性格钻营投机、凶狠残忍。初次登场于第九回，幕后策划挑拨茗烟大闹学堂，既为贾蓉复仇又巧妙避开薛蟠的牵连。随后与贾蓉合作设计贾瑞，展现其心计。贾府为迎接元春省亲，筹建梨香院戏班，贾蔷被任命为总管，负责下姑苏采买行头、聘请教习。期间他与小旦龄官情投意合，被称作“蔷二爷”。曾购雀儿讨龄官欢心反遭奚落，后将雀儿放生；见龄官咳血，冒暑为其请医。管理戏班时，他默许龄官拒演元春指定的剧目，反使龄官获得元春赞赏。贾府衰败后，脂砚斋批语暗示其或与龄官成婚，但高鹗续书称其行为不端，结局存争议。其名“蔷”谐音“假墙”，暗合“假作真时真亦假”的创作哲学，人物命运与贾府兴衰相关联。",
+  "events": [
+    {
+      "title": "挑拨茗烟大闹学堂",
+      "desc": "贾蔷在学堂中幕后策划，挑唆茗烟引发冲突，既为贾蓉复仇又巧妙避开薛蟠的牵连。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与贾蓉合作设计贾瑞",
+      "desc": "贾蔷与贾蓉合作，设计陷害贾瑞，展现其心计。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "筹建梨香院戏班",
+      "desc": "贾蔷被任命为梨香院戏班总管，负责筹建戏班并下姑苏采买行头及聘请教习。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与龄官情投意合",
+      "desc": "贾蔷与小旦龄官情投意合，被称作“蔷二爷”，曾购雀儿反遭奚落，后放生。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "冒暑为龄官请医",
+      "desc": "贾蔷见龄官咳血，冒暑为其请医诊治，展现深情。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "默许龄官拒演贵妃剧目",
+      "desc": "贾蔷管理戏班期间，默许龄官拒演贾元春指定的剧目，反使龄官获得元春赞赏。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_qiang.webp",
+  "thumb": "/p/honglou/thumbs/jia_qiang.webp"
+}

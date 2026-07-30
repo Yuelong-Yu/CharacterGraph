@@ -1,0 +1,60 @@
+{
+  "schema_version": 3,
+  "id": "ru_hua",
+  "name_zh": "入画",
+  "name_en": "Ruhua",
+  "aliases": [],
+  "epithet": "惜春丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "入画是古典小说《红楼梦》中贾惜春的贴身丫鬟，与抱琴、司棋、侍书并称贾府四春的四大丫鬟，其名对应惜春擅长绘画的特点。入画父母居于南方，自幼随叔婶生活，其兄在宁国府担任小厮，将所得的赏赐财物交她保管。抄检大观园时，这些寄存物品被搜出，王熙凤核查后确认财物来源正当，但贾惜春为维护清白坚持驱逐入画。入画跪地哀求未果，最终由尤氏带回宁国府，此事成为惜春与宁府断绝往来的导火索。该角色性格温和寡言，事件突显贾惜春的孤僻性格与贾府内部矛盾，其最终结局在书中未再提及。",
+  "events": [
+    {
+      "title": "抄检大观园，入画财物被搜出",
+      "desc": "抄检大观园时，在入画箱中搜出银锞子、玉带版子、一包男人靴袜等物，系其兄在宁国府当小厮所得赏赐，寄存于入画处。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "王熙凤核实财物来源",
+      "desc": "王熙凤审问入画，入画说明财物来源，凤姐查证后认为情有可原，但惜春坚持要赶走入画。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "惜春驱逐入画",
+      "desc": "贾惜春为维护自身清白，不顾入画跪地哀求，坚决要求王熙凤将入画带走，并宣称与宁国府断绝往来。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "入画被尤氏带回宁国府",
+      "desc": "最终尤氏将入画带回宁国府，入画自此离开大观园，书中未再提及她的结局。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/ru_hua.webp",
+  "thumb": "/p/honglou/thumbs/ru_hua.webp"
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 3,
+  "id": "xiang_ling",
+  "name_zh": "香菱",
+  "name_en": "Xiangling",
+  "aliases": [
+    "甄英莲",
+    "秋菱",
+    "菱角",
+    "英莲",
+    "菱儿"
+  ],
+  "epithet": "薛蟠妾·副册之首",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "香菱，本名甄英莲，是《红楼梦》中人物，为金陵十二钗副册之首。她出身乡宦家庭，幼时被拐子拐卖，辗转流离，后被薛蟠强买为妾，改名香菱。她生得粉妆玉琢，秉性温柔，虽遭薛蟠虐待，却仍保持纯真。进入大观园后，随林黛玉学诗，苦心钻研，终能作出佳句，被众人称赞。后薛蟠娶妻夏金桂，香菱受尽欺凌，被改名秋菱，最终难产而死。香菱的一生是悲剧的缩影，她的命运映射了封建社会中底层女性的无奈与苦楚。",
+  "events": [
+    {
+      "title": "被拐卖离乡",
+      "desc": "香菱幼时在元宵节被家人霍启抱去看社火花灯，不慎被拐子拐走，从此与家人失散，辗转流离，被拐子养大后转卖。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被薛蟠强纳为妾",
+      "desc": "拐子将香菱同时卖给冯渊和薛蟠，两家争买，薛蟠倚仗权势打死冯渊，抢走香菱，带回荣国府，收为妾室，改名香菱。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "入大观园学诗",
+      "desc": "香菱随薛宝钗住进大观园后，拜林黛玉为师学习作诗。她废寝忘食，反复揣摩古人诗作，历经三稿，终于写出咏月之诗，被众人赞为有灵性。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十八回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "斗草弄脏石榴裙",
+      "desc": "香菱在园中与芳官等玩斗草游戏，不慎弄脏新做的石榴红裙。宝玉见状，让袭人将一件同样的裙子赠与香菱，解其窘迫。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受夏金桂欺凌",
+      "desc": "薛蟠娶妻夏金桂后，金桂嫉妒香菱，先是将香菱改名秋菱，又设计陷害，逼薛蟠打骂香菱，并欲将其卖掉。香菱受尽折磨，抑郁成病。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第八十回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "难产致死",
+      "desc": "香菱在薛蟠出狱后，被扶正为妻，但分娩时难产，最终血崩而死，终结了其悲剧的一生。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第一百二十回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xiang_ling.webp",
+  "thumb": "/p/honglou/thumbs/xiang_ling.webp"
+}

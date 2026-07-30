@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "id": "cai_yun",
+  "name_zh": "彩云",
+  "name_en": "Caiyun",
+  "aliases": [],
+  "epithet": "王夫人丫鬟·与贾环有染",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "",
+  "events": [],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/cai_yun.webp",
+  "thumb": "/p/honglou/thumbs/cai_yun.webp"
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 3,
+  "id": "jia_zhen",
+  "name_zh": "贾珍",
+  "name_en": "Jia Zhen",
+  "aliases": [
+    "珍大爷",
+    "珍哥儿"
+  ],
+  "epithet": "宁国府族长",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "贾珍，清代曹雪芹所著《红楼梦》中人物，出身名门，为宁国府长孙。其父贾敬好道不理世事，故贾珍承袭宁国公世职。无人管束的他恣意寻欢享乐，与儿媳秦可卿关系暧昧。秦可卿去世后，他悲痛异常，操办奢华葬礼，并为儿子贾蓉捐五品官，期间还邀王熙凤协理宁国府。身为族长，贾珍多打理家族事务，如建造大观园、领班清虚观打醮、参与除夕祭宗祠、管理田庄地租等。后来贾敬去世，贾珍一面主持丧事，一面暗中与尤氏姐妹厮混。居丧期间，他以习射为名聚众赌博饮酒。续作中，贾珍鞭打悍仆以正家法，却引发非议。后与尤氏、贾蓉相继染怪病，引起贾府恐慌。宁国府被查抄后，贾珍被革职，派往海疆效力赎罪。最终皇帝大赦天下，贾珍被免罪，仍袭宁国公世职。贾珍是贾宝玉心目中“泥做的骨肉”“渣滓浊沫”般的丑类代表，其行径糜烂、胡作非为。他与多名女性亲属存在不正当关系，面对秦可卿之死，“如丧考妣”的表现更显不堪；即便在丧期，也依旧寻欢作乐。作为宁国府的统治者与贾氏族长，他的骄奢淫逸还对贾府同辈、后辈产生不良影响。然而，贾珍的“坏”并非绝对，如他对秦可卿之死的反常举动，或许能反映出其内心的某种真挚情感。",
+  "events": [
+    {
+      "title": "承袭宁国公世职",
+      "desc": "因父亲贾敬好道不理世事，贾珍作为宁国府长孙承袭了宁国公的世袭职位，成为宁国府的当家人。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "与秦可卿暧昧关系",
+      "desc": "贾珍与儿媳秦可卿之间存在不正当关系，这一行为被《红楼梦》中暗示，成为贾府丑闻之一。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "操办秦可卿奢华葬礼",
+      "desc": "秦可卿去世后，贾珍悲痛异常，倾尽财力为其操办极其奢华的葬礼，并特意为儿子贾蓉捐官以抬高葬礼规格。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "邀请王熙凤协理宁国府",
+      "desc": "在秦可卿葬礼期间，贾珍因尤氏旧病复发，无法主持内务，于是邀请荣国府的王熙凤来宁国府协理事务。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "建造大观园",
+      "desc": "为迎接贾元春省亲，贾珍作为族长参与了建造大观园的工程，负责部分督导和管理工作。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "领班清虚观打醮",
+      "desc": "贾珍带领家族成员在清虚观举办打醮活动，祈神祈福，是家族宗教事务的重要组织者。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与除夕祭宗祠",
+      "desc": "作为族长，贾珍在除夕祭宗祠仪式中担任主祭，主导家族祭祀活动，体现其家族地位。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "管理田庄地租",
+      "desc": "贾珍负责宁国府田庄的地租收入，曾与前来送租的庄头乌进孝交涉，处理家族经济事务。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "主持贾敬丧事并厮混",
+      "desc": "贾敬丧期间，贾珍一面主持丧事，一面暗中与尤二姐、尤三姐厮混，行径荒唐。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "居丧习射赌博",
+      "desc": "在贾敬丧期，贾珍以习射为名，聚集众子弟饮酒赌博，违背丧礼规范，进一步暴露其荒淫。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "鞭打悍仆引发非议",
+      "desc": "续作中，贾珍为整顿家法，鞭打悍仆，但此举反而引起非议，反映了家族管理的混乱。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "染怪病引发恐慌",
+      "desc": "贾珍与尤氏、贾蓉相继染上怪病，症状怪异，引起贾府上下恐慌，被猜测为天谴。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "宁国府被查抄革职",
+      "desc": "宁国府因罪被查抄，贾珍被革去世职，发配海疆效力赎罪，家族败落。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "大赦复职",
+      "desc": "皇帝大赦天下，贾珍被免罪，仍恢复宁国公世职，但家族已元气大伤。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "管理家族事务",
+    "操办丧事",
+    "捐纳官职",
+    "组织祭祀活动",
+    "监督建筑工程"
+  ],
+  "domains": [
+    "家族管理",
+    "丧事",
+    "祭祀",
+    "田庄地租",
+    "族规家法"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_zhen.webp",
+  "thumb": "/p/honglou/thumbs/jia_zhen.webp"
+}

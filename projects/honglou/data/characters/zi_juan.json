@@ -1,0 +1,52 @@
+{
+  "schema_version": 3,
+  "id": "zi_juan",
+  "name_zh": "紫鹃",
+  "name_en": "Zijuan",
+  "aliases": [
+    "鹦哥"
+  ],
+  "epithet": "黛玉丫鬟",
+  "category": "maid",
+  "era_layer": 2,
+  "bio": "紫鹃，原名鹦哥，原是贾母房中的二等小丫头。林黛玉初入贾府时，只带了两个人，贾母恐不称心，便将鹦哥拨给黛玉使唤，并改名为紫鹃。紫鹃聪慧灵秀，与黛玉情同姐妹，朝夕相伴，成为黛玉的“闺中贵友”。她深知黛玉孤苦无依，又见黛玉与宝玉彼此倾心，便劝黛玉趁贾母身体健朗时早早定下大事。为了试探宝玉的真心，紫鹃编造林家要接黛玉回苏州的谎言，致使宝玉急痛迷心，痴病大发。她忠心耿耿，一心为黛玉着想，是黛玉身边最值得信赖的丫鬟。",
+  "events": [
+    {
+      "title": "改名紫鹃，侍奉黛玉",
+      "desc": "紫鹃原为贾母房中的二等丫头鹦哥，因林黛玉带来的仆人不敷使用，贾母将其派给黛玉，并改名为紫鹃，从此成为黛玉的贴身丫鬟。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第三回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "劝黛玉早定大事",
+      "desc": "紫鹃见黛玉与宝玉情投意合，且黛玉孤苦无依，便劝黛玉趁贾母尚在时，将婚事定下，以免日后生变。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十七回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "编造谎言试宝玉",
+      "desc": "紫鹃为试探宝玉对黛玉的真心，谎称林家要接黛玉回苏州，宝玉听后急痛攻心，引发痴病，闹得阖府不宁。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第五十七回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/zi_juan.webp",
+  "thumb": "/p/honglou/thumbs/zi_juan.webp"
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 3,
+  "id": "li_wen",
+  "name_zh": "李纹",
+  "name_en": "Li Wen",
+  "aliases": [],
+  "epithet": "李纨堂妹",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "李纹是曹雪芹小说《红楼梦》中的虚拟人物，李纨堂妹，李婶娘之女。因年成不好，随母亲投靠贾府，入住大观园。她与李绮、薛宝琴、邢岫烟被晴雯形容为“一把子四根水葱儿”，可见其出众的容貌与气质。李纹性格如梅般美丽高冷又不失坚韧，曾作《咏红梅花》诗，其中“冻脸有痕皆是血”一句展现出精神上的韧性。在大观园期间，她参与诗社活动，偶有表现，但整体上被脂砚斋批语视为与李绮、薛宝琴、邢岫烟一样的“陪客”。王夫人曾提及李纹已许配人家，但脂砚斋批注暗示其结局并非简单的婚配，而是随着贾府家族的败落而离散，具体结局未被明写。在程乙本《红楼梦》中，李纹与李绮、邢岫烟三人共同出现在一幅绣像画中，成为该版本的一个特色。",
+  "events": [
+    {
+      "title": "随母投靠贾府",
+      "desc": "因年成不好，李纹随母亲李婶娘投奔贾府，入住大观园，成为贾府的临时客居者。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被晴雯形容为水葱儿",
+      "desc": "晴雯将李纹与李绮、薛宝琴、邢岫烟四人并称为“一把子四根水葱儿”，形容其容貌清秀出众。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "作《咏红梅花》诗",
+      "desc": "李纹在大观园诗社活动中创作《咏红梅花》诗，其中“冻脸有痕皆是血”一句展现其坚韧高洁的性格。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与诗社活动",
+      "desc": "李纹随母客居大观园期间，不时参与诗社的联句和咏物活动，虽为“陪客”身份，但偶有表现。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被王夫人提及已许配",
+      "desc": "王夫人在闲谈中曾提及李纹已许配人家，暗示其婚姻已有安排，但具体对象未明。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "脂批暗示离散结局",
+      "desc": "脂砚斋批注指出李纹的结局并非简单的婚配，而是随着贾府家族败落而离散，最终下落不明。",
+      "source": {
+        "work": "脂砚斋重评石头记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [
+    {
+      "text": "冻脸有痕皆是血",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/li_wen.webp",
+  "thumb": "/p/honglou/thumbs/li_wen.webp"
+}

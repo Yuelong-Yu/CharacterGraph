@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "id": "shi_xiangyun",
+  "name_zh": "史湘云",
+  "name_en": "Shi Xiangyun",
+  "aliases": [
+    "史大姑娘",
+    "云姑娘"
+  ],
+  "epithet": "枕霞旧友",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "史湘云是中国古典小说《红楼梦》中的主要人物，金陵十二钗之一。她自幼父母双亡，由叔婶抚养，虽寄人篱下却生性豁达开朗，常被贾母接至贾府小住。她与贾宝玉、林黛玉等表亲关系亲密，是海棠诗社的核心成员，诗才敏捷，曾与黛玉、宝钗并称诗社翘楚。湘云性格豪爽，不拘小节，常着男装，喜饮酒食肉，醉卧芍药裀是书中经典场景。她虽出身侯门，却因家道中落需亲自做针线活到深夜，却从不抱怨。在程高本续书中，湘云婚后不久便守寡，判词“湘江水逝楚云飞”预示其命运。她以率真、英气与悲情结局成为《红楼梦》中极具魅力的角色之一。",
+  "events": [
+    {
+      "title": "醉卧芍药裀",
+      "desc": "史湘云在宴席上饮酒过量，醉后独自来到大观园中的芍药圃，躺在石凳上入睡，身上落满花瓣，身边蝴蝶环绕，情景优美。此场景被曹雪芹细致描绘，成为《红楼梦》最经典的画面之一。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第六十二回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "婚后守寡",
+      "desc": "在程高本续书中，史湘云婚后不久丈夫即去世，她从此守寡。判词“湘江水逝楚云飞”暗示其婚姻短暂、结局凄凉。",
+      "source": {
+        "work": "红楼梦（程高本）",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "刺绣",
+    "作诗"
+  ],
+  "domains": [
+    "诗词"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/shi_xiangyun.webp",
+  "thumb": "/p/honglou/thumbs/shi_xiangyun.webp"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 3,
+  "id": "jia_dairu",
+  "name_zh": "贾代儒",
+  "name_en": "Jia Dairu",
+  "aliases": [],
+  "epithet": "贾府族学老师",
+  "category": "master",
+  "era_layer": 0,
+  "bio": "贾代儒是小说《红楼梦》中的虚拟角色，贾府“代”字辈非嫡派宗族成员，贾代善的远房堂弟。他一生历经早年丧父、中年丧子、晚年丧孙三大不幸，科举未成，依附贾府，担任家塾教书先生，教授贾宝玉等子弟八股文。对孙子贾瑞管教极其严苛，当贾瑞因触犯王熙凤遭相思局折磨后，贾代儒不究缘由，施以罚跪、饿饭、补功课等惩戒，最终贾瑞沉迷色欲病亡。作为家塾管理者，贾代儒虽严控学生行止，却因年老昏聩、管教不力，未能约束薛蟠等人败坏学风，家塾属义学性质，报酬由宁荣二府支付，生活窘迫。该角色既展现封建礼教下严父形象，又因其“虚权”象征封建礼教对年轻一代的失控，揭示了传统教育模式重形式轻教化的弊端。",
+  "events": [
+    {
+      "title": "早年丧父",
+      "desc": "贾代儒在幼年时期失去父亲，成为孤儿，此后依靠贾府宗族救济生活。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "中年丧子",
+      "desc": "贾代儒的儿子（贾瑞之父）早逝，留下孙子贾瑞由他独自抚养，家庭支柱再次崩塌。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "担任家塾老师",
+      "desc": "贾代儒因科举未成，投靠贾府，被委任为贾府家塾的教书先生，负责教授贾宝玉、贾兰等族中子弟的八股文。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "教授贾宝玉八股文",
+      "desc": "贾宝玉先后两次师从贾代儒学习八股文，贾代儒按传统科举要求严格授课，但宝玉心不在焉，学业无成。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "严惩贾瑞相思局",
+      "desc": "贾瑞因痴迷王熙凤，被凤姐设计相思局，贾代儒得知后未问缘由，罚贾瑞跪在院内、不许吃饭，并责令补足功课，导致贾瑞身心俱疲。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贾瑞病亡",
+      "desc": "贾瑞因相思局折磨，加上祖父严惩，最终病倒，临终前贾代儒四处求医，但贾瑞仍因色欲情结而死，贾代儒晚年丧孙，悲痛欲绝。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "家塾管理学风败坏",
+      "desc": "贾代儒作为家塾管理者，因年老昏聩，无法有效约束薛蟠、金荣等人，导致学塾内争风吃醋、打架斗殴，学风败坏。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "生活窘迫依附贾府",
+      "desc": "贾代儒的家塾属于义学性质，报酬由宁荣二府支付，收入微薄，生活拮据，需依附贾府度日。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_dairu.webp",
+  "thumb": "/p/honglou/thumbs/jia_dairu.webp"
+}

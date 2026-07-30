@@ -1,0 +1,60 @@
+{
+  "schema_version": 3,
+  "id": "jia_min",
+  "name_zh": "贾敏",
+  "name_en": "Jia Min",
+  "aliases": [],
+  "epithet": "贾母之女·黛玉生母",
+  "category": "master",
+  "era_layer": 0,
+  "bio": "贾敏是清代小说《红楼梦》中的人物，为荣国府贾代善与史太君（贾母）之女，林黛玉之母。她出身金陵世家，谈吐不凡，深得贾母宠爱。后嫁与巡盐御史林如海为妻，婚后育有一女林黛玉，又生一子，可惜三岁时夭折。贾敏在故事开场前已早逝，其亡故导致林黛玉被外祖母接至荣国府寄居。贾敏的形象虽未直接出场，但通过贾母的思念、黛玉的哀伤以及旁人的叙述，展现了其温婉才情与家族地位。",
+  "events": [
+    {
+      "title": "嫁入林家",
+      "desc": "贾敏作为贾母最疼爱的小女儿，嫁与巡盐御史林如海为妻，成为林府夫人，从此离开荣国府。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "生育黛玉",
+      "desc": "贾敏与林如海育有一女，即林黛玉。黛玉自幼聪慧，深受父母宠爱。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "幼子夭折",
+      "desc": "贾敏曾生一子，但三岁时不幸夭折，此后林家子嗣单薄。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "早逝离世",
+      "desc": "贾敏在黛玉年幼时因病早逝，林家愈发冷清，黛玉后被贾母接入荣国府抚养。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_min.webp",
+  "thumb": "/p/honglou/thumbs/jia_min.webp"
+}

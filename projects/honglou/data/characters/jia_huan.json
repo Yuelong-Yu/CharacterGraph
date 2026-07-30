@@ -1,0 +1,53 @@
+{
+  "schema_version": 3,
+  "id": "jia_huan",
+  "name_zh": "贾环",
+  "name_en": "Jia Huan",
+  "aliases": [
+    "环三爷",
+    "三爷"
+  ],
+  "epithet": "庶出·三爷",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "贾环是《红楼梦》中荣国府贾政与妾室赵姨娘所生之子，贾宝玉同父异母的弟弟，因排行第三，人称“环三爷”。他性格顽劣，心胸狭隘，正月里与薛宝钗的丫头莺儿赶围棋时因输赢撒泼耍赖，并在母亲赵姨娘面前诬陷宝玉和莺儿。贾环深忌嫡兄贾宝玉，多次设计陷害：故意拨翻烛台烫伤宝玉；金钏跳井事件后，又向贾政诬告宝玉，致使宝玉遭毒打。贾环本是贾府正经主子，但因庶出身份，地位尴尬，且不思上进，常被王夫人、王熙凤等贬抑，贾母亦不喜，众人遂轻慢之。曹雪芹以同情笔触描写其遭受不公的处境，寄予可恕可怜之情。",
+  "events": [
+    {
+      "title": "赶围棋撒泼耍赖",
+      "desc": "正月里，贾环与薛宝钗的丫头莺儿等人赶围棋玩耍，因输赢争执，贾环撒泼耍赖，并回母亲赵姨娘处污蔑宝玉和莺儿。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "拨翻烛台烫伤宝玉",
+      "desc": "贾环心怀忌恨，故意将油灯拨翻，滚烫的蜡油泼到宝玉脸上，导致宝玉烫伤，后贾环谎称失手。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "诬陷宝玉致其毒打",
+      "desc": "金钏跳井死后，贾环向贾政诬告宝玉强奸未遂逼死金钏，贾政大怒，将宝玉毒打一顿。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/jia_huan.webp",
+  "thumb": "/p/honglou/thumbs/jia_huan.webp"
+}

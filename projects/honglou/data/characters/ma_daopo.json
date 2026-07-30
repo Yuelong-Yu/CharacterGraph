@@ -1,0 +1,83 @@
+{
+  "schema_version": 3,
+  "id": "ma_daopo",
+  "name_zh": "马道婆",
+  "name_en": "Ma Daopo",
+  "aliases": [
+    "马道婆",
+    "Ma Daopo"
+  ],
+  "epithet": "巫婆·赵姨娘所请",
+  "category": "guest",
+  "era_layer": 1,
+  "bio": "马道婆是清代小说《红楼梦》中的虚构角色，贾宝玉的寄名干娘。她以封建迷信活动为业，长期游走于贾府各房骗取钱财。借宝玉被烫伤之机，先以“促狭鬼缠身”之说哄骗贾母捐五斤香油点灯祈福，后又受赵姨娘贿赂，用纸人邪术加害宝玉与王熙凤，致两人濒死，最终被癞头和尚用通灵宝玉化解危机。此外，她还收受当铺内眷钱财施法制造混乱，谎称治病敛财。因遗落施法道具被捕，刑部从其住处查获大量纸人、草人及勒索账册，最终被处死刑。作为封建迷信势力的代表，她的连环诈骗与邪术操控暴露了贾府内部矛盾，其罪行败露与伏法结局暗合因果报应的叙事逻辑。",
+  "events": [
+    {
+      "title": "成为宝玉寄名干娘",
+      "desc": "马道婆凭借三寸不烂之舌，被贾母收为贾宝玉的寄名干娘，借此在贾府中获取信任并骗取钱财。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "哄骗贾母捐香油",
+      "desc": "宝玉被烫伤后，马道婆以“促狭鬼缠身”吓唬贾母，诱骗其捐出五斤香油点灯祈福，从中牟利。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "受赵姨娘之托施邪术",
+      "desc": "赵姨娘为争夺家产，贿赂马道婆，马道婆便用纸人和针扎的巫术诅咒宝玉和王熙凤，致使二人病危。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "邪术被癞头和尚化解",
+      "desc": "贾府上下束手无策，癞头和尚与跛足道人现身，用通灵宝玉的灵力化解了马道婆的邪术，宝玉和凤姐转危为安。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "诈骗当铺内眷",
+      "desc": "马道婆利用当铺内眷的迷信心理，收受钱财后施法制造混乱，谎称能治病消灾，进一步敛财。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "被捕伏法",
+      "desc": "马道婆在施法时不慎遗落道具，被官府追查；刑部从其住处搜出大量纸人、草人和勒索账册，证据确凿，最终被处死。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/ma_daopo.webp",
+  "thumb": "/p/honglou/thumbs/ma_daopo.webp"
+}

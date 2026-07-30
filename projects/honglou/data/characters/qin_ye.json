@@ -1,0 +1,134 @@
+{
+  "schema_version": 3,
+  "id": "qin_ye",
+  "name_zh": "秦业",
+  "name_en": "Qin Ye",
+  "aliases": [
+    "开皇",
+    "秦开",
+    "秦天尊"
+  ],
+  "epithet": "秦可卿秦钟之父",
+  "category": "guest",
+  "era_layer": 1,
+  "bio": "秦业，小说《牧神记》中的角色，别号开皇，秦家先祖、天盟元老。少年时无意闯入涌江，穿越至龙汉时期，化名秦开，获封秦天尊。后在上皇的废墟上建立开皇神朝，被尊为开皇。天庭入侵开皇时代末期，拒绝妥协并命人打造无忧乡，带领部众撤离。重逢秦牧后受启发突破剑道至高境界，开创剑二十并提出道境体系。在域外天庭毁坏神通者神桥的情况下，聚集开皇时代的能人开创出鹊桥诀。其开创的道境修炼体系不同于天宫修炼体系。经历斩神台磨砺后，剑道烙印终极虚空而成道，是第十七宇宙第一个以一己之力成道的后天生灵，并参与诛杀太帝等关键战役。幽都之战中，为救凌天尊挡下致命攻击而战死，导致幽都之战失败。因七公子秦牧布置的后手，将在四十二年后重现于渡世金船，其剑道结成宝殿，到达道境四十重天。",
+  "events": [
+    {
+      "title": "少年穿越至龙汉时期",
+      "desc": "秦业少年时无意闯入涌江，穿越至龙汉时期，化名秦开，开始其传奇生涯。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "获封秦天尊",
+      "desc": "在龙汉时期，秦业因机缘和实力获封秦天尊，成为天盟元老，奠定地位。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "建立开皇神朝",
+      "desc": "秦业在上皇的废墟上建立开皇神朝，被尊为开皇，开创一个时代。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "打造无忧乡撤离",
+      "desc": "天庭入侵开皇时代末期，秦业拒绝妥协，命人打造无忧乡，带领部众撤离，保留火种。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "突破剑道创剑二十",
+      "desc": "重逢秦牧后，受启发突破剑道至高境界，创出剑二十，并提出道境体系，革新修炼之道。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "开创鹊桥诀",
+      "desc": "在域外天庭毁坏神通者神桥的困境下，聚集开皇时代的能人，开创出鹊桥诀，维系修炼之路。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "斩神台磨砺成道",
+      "desc": "经历斩神台磨砺，剑道烙印终极虚空，成为第十七宇宙第一个以一己之力成道的后天生灵。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "参与诛杀太帝",
+      "desc": "成道后参与诛杀太帝等关键战役，展现强大实力。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "幽都之战战死",
+      "desc": "幽都之战中，为救凌天尊挡下致命攻击而战死，导致幽都之战失败。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "四十二年后重现渡世金船",
+      "desc": "因秦牧布置的后手，将在四十二年后重现于渡世金船，剑道结成宝殿，到达道境四十重天。",
+      "source": {
+        "work": "牧神记",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "开创剑道",
+    "提出道境体系",
+    "开创鹊桥诀",
+    "凝聚剑道宝殿"
+  ],
+  "domains": [
+    "剑道",
+    "道境",
+    "神朝",
+    "修炼体系"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/qin_ye.webp",
+  "thumb": "/p/honglou/thumbs/qin_ye.webp"
+}

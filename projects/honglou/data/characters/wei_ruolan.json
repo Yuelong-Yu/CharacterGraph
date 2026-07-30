@@ -1,0 +1,40 @@
+{
+  "schema_version": 3,
+  "id": "wei_ruolan",
+  "name_zh": "卫若兰",
+  "name_en": "Wei Ruolan",
+  "aliases": [],
+  "epithet": "史湘云未婚夫",
+  "category": "guest",
+  "era_layer": 2,
+  "bio": "卫若兰是王孙公子，与贾宝玉交好。后与史湘云订亲，是湘云的未婚夫。据判词'湘江水逝楚云飞'，二人婚后不久卫若兰即去世，湘云守寡。",
+  "events": [
+    {
+      "title": "与湘云订亲",
+      "desc": "卫若兰与史湘云订亲，是湘云的未婚夫。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "英年早逝",
+      "desc": "据判词'湘江水逝楚云飞'，卫若兰婚后不久去世，湘云青年守寡。",
+      "source": {
+        "work": "《红楼梦》",
+        "locus": "第五回",
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [],
+  "domains": [],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/wei_ruolan.webp",
+  "thumb": "/p/honglou/thumbs/wei_ruolan.webp"
+}

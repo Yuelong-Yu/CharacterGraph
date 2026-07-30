@@ -1,0 +1,131 @@
+{
+  "schema_version": 3,
+  "id": "xue_baoqin",
+  "name_zh": "薛宝琴",
+  "name_en": "Xue Baoqin",
+  "aliases": [
+    "琴姑娘",
+    "薛小妹"
+  ],
+  "epithet": "薛蝌之妹·才女",
+  "category": "master",
+  "era_layer": 2,
+  "bio": "薛宝琴是中国古典小说《红楼梦》中的人物，薛姨妈之侄女，王夫人干女儿，薛蝌之胞妹，薛蟠、薛宝钗之堂妹。她初次登场于第四十九回“琉璃世界白雪红梅 脂粉香娃割腥啖膻”。薛宝琴本性聪敏，自幼读书识字，游历过四山五岳。因与梅翰林之子有婚约，随哥哥薛蝌进京聘嫁，投奔薛姨妈。她相貌出众，雪中折梅胜似仇十洲《双艳图》，贾府众人都十分喜爱，贾母一度欲与宝玉求配，王夫人认其作干女儿。薛宝琴加入海棠诗社，与大观园众人即景联诗，作《咏红梅花得“花”字》和《西江月》，以及十首怀古绝句，并回忆真真国女儿诗。她初次参加宁国府除夕祭宗祠活动时，仔细观察贾氏宗祠的建筑装饰及祭祖过程。薛宝琴拥有丰神灵秀之姿、惊人清丽之容、聪颖敏捷之才，堪称《红楼梦》中唯一一位完美到虚幻的女性人物，是实至名归的“兼美”。她一方面是贾府的冷眼旁观者，有见证诸钗零落、贾府衰败之意；另一方面也是打开大观园中女儿眼界的启蒙者，具有大观园群芳的特殊韵味，暗示整个红楼世界的深刻意蕴。",
+  "events": [
+    {
+      "title": "初入贾府",
+      "desc": "薛宝琴与哥哥薛蝌一同进京，投奔薛姨妈，在第四十九回正式登场，其美貌与才华立即引起贾府众人注意。",
+      "source": {
+        "work": "红楼梦",
+        "locus": "第四十九回",
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "雪中折梅",
+      "desc": "大雪天中，薛宝琴折红梅立于雪中，画面如画，被贾母称赞比仇十洲的《双艳图》还要动人。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "贾母欲求配",
+      "desc": "贾母见宝琴容貌出众，性格讨喜，一度想为宝玉求配，后知她已与梅翰林之子有婚约，只得作罢。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "王夫人认干女",
+      "desc": "王夫人对宝琴十分喜爱，认其为干女儿，更加亲近。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "加入海棠诗社",
+      "desc": "薛宝琴加入大观园的海棠诗社，与林黛玉、薛宝钗、史湘云等人一起联诗，展现诗才。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "作《咏红梅花》",
+      "desc": "在诗社活动中，薛宝琴作《咏红梅花得“花”字》诗，得到众人赞赏。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "作《西江月》",
+      "desc": "她作《西江月》词，词句清丽，体现其才情。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "作十首怀古绝句",
+      "desc": "薛宝琴作十首怀古绝句，每首咏一历史人物或事件，寓意深刻。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "回忆真真国女儿诗",
+      "desc": "薛宝琴回忆在真真国所见一位外国女子所作的诗，并背诵出来，令大观园众人耳目一新。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    },
+    {
+      "title": "除夕祭宗祠",
+      "desc": "薛宝琴首次参加宁国府除夕祭宗祠，她留心观察宗祠的建筑、陈设和祭祖仪式，体现其细腻观察力。",
+      "source": {
+        "work": "红楼梦",
+        "locus": null,
+        "translator": null
+      },
+      "canon": null
+    }
+  ],
+  "quotes": [],
+  "weapons": [],
+  "skills": [
+    "读书识字",
+    "游历山水",
+    "创作诗词"
+  ],
+  "domains": [
+    "诗学",
+    "礼制",
+    "地理"
+  ],
+  "mounts": [],
+  "portrait": "/p/honglou/portraits/xue_baoqin.webp",
+  "thumb": "/p/honglou/thumbs/xue_baoqin.webp"
+}

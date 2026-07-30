@@ -1,0 +1,996 @@
+{
+  "characters": [
+    {
+      "slug": "jia_baoyu",
+      "name_zh": "贾宝玉",
+      "name_en": "Jia Baoyu",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "神瑛侍者·绛洞花主"
+    },
+    {
+      "slug": "lin_daiyu",
+      "name_zh": "林黛玉",
+      "name_en": "Lin Daiyu",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "绛珠仙子·潇湘妃子"
+    },
+    {
+      "slug": "xue_baochai",
+      "name_zh": "薛宝钗",
+      "name_en": "Xue Baochai",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "蘅芜君"
+    },
+    {
+      "slug": "jia_mu",
+      "name_zh": "贾母",
+      "name_en": "Grandmother Jia",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "史太君·老封君"
+    },
+    {
+      "slug": "wang_xifeng",
+      "name_zh": "王熙凤",
+      "name_en": "Wang Xifeng",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "凤辣子·琏二奶奶"
+    },
+    {
+      "slug": "jia_yuanchun",
+      "name_zh": "贾元春",
+      "name_en": "Jia Yuanchun",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "贤德妃·凤藻宫尚书"
+    },
+    {
+      "slug": "jia_tanchun",
+      "name_zh": "贾探春",
+      "name_en": "Jia Tanchun",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "蕉下客·三姑娘"
+    },
+    {
+      "slug": "shi_xiangyun",
+      "name_zh": "史湘云",
+      "name_en": "Shi Xiangyun",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "枕霞旧友"
+    },
+    {
+      "slug": "jia_yingchun",
+      "name_zh": "贾迎春",
+      "name_en": "Jia Yingchun",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "二木头"
+    },
+    {
+      "slug": "jia_xichun",
+      "name_zh": "贾惜春",
+      "name_en": "Jia Xichun",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "藕榭·四姑娘"
+    },
+    {
+      "slug": "jia_qiaojie",
+      "name_zh": "贾巧姐",
+      "name_en": "Jia Qiaojie",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "凤姐之女"
+    },
+    {
+      "slug": "li_wan",
+      "name_zh": "李纨",
+      "name_en": "Li Wan",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "稻香老农·宫裁"
+    },
+    {
+      "slug": "qin_keqing",
+      "name_zh": "秦可卿",
+      "name_en": "Qin Keqing",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "兼美·蓉大奶奶"
+    },
+    {
+      "slug": "jia_zheng",
+      "name_zh": "贾政",
+      "name_en": "Jia Zheng",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "存周·员外郎"
+    },
+    {
+      "slug": "wang_furen",
+      "name_zh": "王夫人",
+      "name_en": "Lady Wang",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "宝玉之母"
+    },
+    {
+      "slug": "jia_she",
+      "name_zh": "贾赦",
+      "name_en": "Jia She",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "大老爷"
+    },
+    {
+      "slug": "xing_furen",
+      "name_zh": "邢夫人",
+      "name_en": "Lady Xing",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "赦之妻"
+    },
+    {
+      "slug": "jia_jing",
+      "name_zh": "贾敬",
+      "name_en": "Jia Jing",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "炼丹修道"
+    },
+    {
+      "slug": "jia_zhen",
+      "name_zh": "贾珍",
+      "name_en": "Jia Zhen",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "宁国府族长"
+    },
+    {
+      "slug": "you_shi",
+      "name_zh": "尤氏",
+      "name_en": "Lady You",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "珍之妻"
+    },
+    {
+      "slug": "jia_lian",
+      "name_zh": "贾琏",
+      "name_en": "Jia Lian",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "琏二爷"
+    },
+    {
+      "slug": "jia_huan",
+      "name_zh": "贾环",
+      "name_en": "Jia Huan",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "庶出·三爷"
+    },
+    {
+      "slug": "jia_rong",
+      "name_zh": "贾蓉",
+      "name_en": "Jia Rong",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "蓉大爷"
+    },
+    {
+      "slug": "jia_lan",
+      "name_zh": "贾兰",
+      "name_en": "Jia Lan",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "李纨之子"
+    },
+    {
+      "slug": "xue_yima",
+      "name_zh": "薛姨妈",
+      "name_en": "Aunt Xue",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "宝钗之母"
+    },
+    {
+      "slug": "xue_pan",
+      "name_zh": "薛蟠",
+      "name_en": "Xue Pan",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "呆霸王"
+    },
+    {
+      "slug": "wang_ziteng",
+      "name_zh": "王子腾",
+      "name_en": "Wang Ziteng",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "凤姐伯父"
+    },
+    {
+      "slug": "you_erjie",
+      "name_zh": "尤二姐",
+      "name_en": "You Erjie",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "贾琏妾"
+    },
+    {
+      "slug": "you_sanjie",
+      "name_zh": "尤三姐",
+      "name_en": "You Sanjie",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "尤氏妹"
+    },
+    {
+      "slug": "yuan_yang",
+      "name_zh": "鸳鸯",
+      "name_en": "Yuanyang",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "贾母贴身丫鬟"
+    },
+    {
+      "slug": "xi_ren",
+      "name_zh": "袭人",
+      "name_en": "Xiren",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉贴身丫鬟"
+    },
+    {
+      "slug": "qing_wen",
+      "name_zh": "晴雯",
+      "name_en": "Qingwen",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟"
+    },
+    {
+      "slug": "zi_juan",
+      "name_zh": "紫鹃",
+      "name_en": "Zijuan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "黛玉丫鬟"
+    },
+    {
+      "slug": "ping_er",
+      "name_zh": "平儿",
+      "name_en": "Pinger",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "凤姐丫鬟"
+    },
+    {
+      "slug": "si_qi",
+      "name_zh": "司棋",
+      "name_en": "Siqi",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "迎春丫鬟"
+    },
+    {
+      "slug": "jin_chuan",
+      "name_zh": "金钏",
+      "name_en": "Jinchuan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "王夫人丫鬟"
+    },
+    {
+      "slug": "yu_chuan",
+      "name_zh": "玉钏",
+      "name_en": "Yuchuan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "金钏之妹"
+    },
+    {
+      "slug": "xiang_ling",
+      "name_zh": "香菱",
+      "name_en": "Xiangling",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "薛蟠妾·副册之首"
+    },
+    {
+      "slug": "ying_er",
+      "name_zh": "莺儿",
+      "name_en": "Yinger",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝钗丫鬟"
+    },
+    {
+      "slug": "xiao_hong",
+      "name_zh": "小红",
+      "name_en": "Xiaohong",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "凤姐丫鬟"
+    },
+    {
+      "slug": "she_yue",
+      "name_zh": "麝月",
+      "name_en": "Sheyue",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟"
+    },
+    {
+      "slug": "jiao_xing",
+      "name_zh": "娇杏",
+      "name_en": "Jiaoxing",
+      "category": "maid",
+      "era_layer": 1,
+      "epithet": "雨村妾"
+    },
+    {
+      "slug": "zhao_yiniang",
+      "name_zh": "赵姨娘",
+      "name_en": "Concubine Zhao",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "贾政妾·探春母"
+    },
+    {
+      "slug": "lai_da",
+      "name_zh": "赖大",
+      "name_en": "Lai Da",
+      "category": "servant",
+      "era_layer": 1,
+      "epithet": "荣国府大管家"
+    },
+    {
+      "slug": "lin_zhixiao",
+      "name_zh": "林之孝",
+      "name_en": "Lin Zhixiao",
+      "category": "servant",
+      "era_layer": 1,
+      "epithet": "荣国府二管家"
+    },
+    {
+      "slug": "wang_shanbao_jia",
+      "name_zh": "王善保家的",
+      "name_en": "Wang Shanbao's Wife",
+      "category": "servant",
+      "era_layer": 1,
+      "epithet": "邢夫人陪房"
+    },
+    {
+      "slug": "zhou_rui_jia",
+      "name_zh": "周瑞家的",
+      "name_en": "Zhou Rui's Wife",
+      "category": "servant",
+      "era_layer": 1,
+      "epithet": "王夫人陪房"
+    },
+    {
+      "slug": "bei_ming",
+      "name_zh": "焙茗",
+      "name_en": "Beiming",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "宝玉小厮"
+    },
+    {
+      "slug": "miao_yu",
+      "name_zh": "妙玉",
+      "name_en": "Miaoyu",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "栊翠庵尼姑·十二钗"
+    },
+    {
+      "slug": "jiang_yuhan",
+      "name_zh": "蒋玉菡",
+      "name_en": "Jiang Yuhan",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "优伶·琪官"
+    },
+    {
+      "slug": "liu_xianglian",
+      "name_zh": "柳湘莲",
+      "name_en": "Liu Xianglian",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "冷郎君"
+    },
+    {
+      "slug": "bei_jing_wang",
+      "name_zh": "北静王",
+      "name_en": "Prince Beijing",
+      "category": "guest",
+      "era_layer": 1,
+      "epithet": "水溶·贤王"
+    },
+    {
+      "slug": "jia_yucun",
+      "name_zh": "贾雨村",
+      "name_en": "Jia Yucun",
+      "category": "guest",
+      "era_layer": 1,
+      "epithet": "贾府连宗·应天府"
+    },
+    {
+      "slug": "zhen_shiyin",
+      "name_zh": "甄士隐",
+      "name_en": "Zhen Shiyin",
+      "category": "guest",
+      "era_layer": 0,
+      "epithet": "隐士·英莲父"
+    },
+    {
+      "slug": "liu_laolao",
+      "name_zh": "刘姥姥",
+      "name_en": "Granny Liu",
+      "category": "guest",
+      "era_layer": 0,
+      "epithet": "农妇·三进荣国府"
+    },
+    {
+      "slug": "jia_zhu",
+      "name_zh": "贾珠",
+      "name_en": "Jia Zhu",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "贾政长子·早逝"
+    },
+    {
+      "slug": "jia_min",
+      "name_zh": "贾敏",
+      "name_en": "Jia Min",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "贾母之女·黛玉生母"
+    },
+    {
+      "slug": "jia_daishan",
+      "name_zh": "贾代善",
+      "name_en": "Jia Daishan",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "贾母之夫·荣国公"
+    },
+    {
+      "slug": "jia_daihua",
+      "name_zh": "贾代化",
+      "name_en": "Jia Daihua",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "宁国府老太爷"
+    },
+    {
+      "slug": "jia_dairu",
+      "name_zh": "贾代儒",
+      "name_en": "Jia Dairu",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "贾府族学老师"
+    },
+    {
+      "slug": "jia_qiang",
+      "name_zh": "贾蔷",
+      "name_en": "Jia Qiang",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "宁国府玄孙·戏班管事"
+    },
+    {
+      "slug": "jia_yun",
+      "name_zh": "贾芸",
+      "name_en": "Jia Yun",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "贾府族人·宝玉义子"
+    },
+    {
+      "slug": "jia_jun",
+      "name_zh": "贾菌",
+      "name_en": "Jia Jun",
+      "category": "master",
+      "era_layer": 3,
+      "epithet": "贾府族人·学童"
+    },
+    {
+      "slug": "jia_cong",
+      "name_zh": "贾琮",
+      "name_en": "Jia Cong",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "贾赦庶子"
+    },
+    {
+      "slug": "jia_rui",
+      "name_zh": "贾瑞",
+      "name_en": "Jia Rui",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "贾代儒之孙·单恋凤姐"
+    },
+    {
+      "slug": "xue_baoqin",
+      "name_zh": "薛宝琴",
+      "name_en": "Xue Baoqin",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "薛蝌之妹·才女"
+    },
+    {
+      "slug": "xue_ke",
+      "name_zh": "薛蝌",
+      "name_en": "Xue Ke",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "薛蟠堂弟"
+    },
+    {
+      "slug": "xing_xiuyan",
+      "name_zh": "邢岫烟",
+      "name_en": "Xing Xiuyan",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "邢夫人侄女·薛蝌未婚妻"
+    },
+    {
+      "slug": "li_wen",
+      "name_zh": "李纹",
+      "name_en": "Li Wen",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "李纨堂妹"
+    },
+    {
+      "slug": "li_qi",
+      "name_zh": "李绮",
+      "name_en": "Li Qi",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "李纨堂妹"
+    },
+    {
+      "slug": "xia_jingui",
+      "name_zh": "夏金桂",
+      "name_en": "Xia Jingui",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "薛蟠之妻·泼妇"
+    },
+    {
+      "slug": "qiu_tong",
+      "name_zh": "秋桐",
+      "name_en": "Qiu Tong",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "贾赦赐贾琏妾"
+    },
+    {
+      "slug": "zhen_baoyu",
+      "name_zh": "甄宝玉",
+      "name_en": "Zhen Baoyu",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "甄家公子·宝玉镜像"
+    },
+    {
+      "slug": "shi_ding",
+      "name_zh": "史鼎",
+      "name_en": "Shi Ding",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "保龄侯·湘云叔父"
+    },
+    {
+      "slug": "shi_nai",
+      "name_zh": "史鼐",
+      "name_en": "Shi Nai",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "忠靖侯·湘云叔父"
+    },
+    {
+      "slug": "wang_ren",
+      "name_zh": "王仁",
+      "name_en": "Wang Ren",
+      "category": "master",
+      "era_layer": 2,
+      "epithet": "王熙凤之兄·巧姐舅舅"
+    },
+    {
+      "slug": "you_laoniang",
+      "name_zh": "尤老娘",
+      "name_en": "You Laoniang",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "尤氏继母·尤二姐尤三姐之母"
+    },
+    {
+      "slug": "xing_zhong",
+      "name_zh": "邢忠",
+      "name_en": "Xing Zhong",
+      "category": "master",
+      "era_layer": 0,
+      "epithet": "邢夫人之兄·邢岫烟之父"
+    },
+    {
+      "slug": "xing_dequan",
+      "name_zh": "邢德全",
+      "name_en": "Xing Dequan",
+      "category": "master",
+      "era_layer": 1,
+      "epithet": "邢夫人之弟·败家子"
+    },
+    {
+      "slug": "hupo",
+      "name_zh": "琥珀",
+      "name_en": "Hupo",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "贾母丫鬟"
+    },
+    {
+      "slug": "boli",
+      "name_zh": "玻璃",
+      "name_en": "Boli",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "贾母丫鬟"
+    },
+    {
+      "slug": "feicui",
+      "name_zh": "翡翠",
+      "name_en": "Feicui",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "贾母丫鬟"
+    },
+    {
+      "slug": "fang_guan",
+      "name_zh": "芳官",
+      "name_en": "Fangguan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·戏班出身"
+    },
+    {
+      "slug": "ou_guan",
+      "name_zh": "藕官",
+      "name_en": "Ouguan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·戏班出身"
+    },
+    {
+      "slug": "rui_guan",
+      "name_zh": "蕊官",
+      "name_en": "Ruiguan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·戏班出身"
+    },
+    {
+      "slug": "kui_guan",
+      "name_zh": "葵官",
+      "name_en": "Kuiguan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·戏班出身"
+    },
+    {
+      "slug": "dou_guan",
+      "name_zh": "豆官",
+      "name_en": "Douguan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·戏班出身"
+    },
+    {
+      "slug": "ai_guan",
+      "name_zh": "艾官",
+      "name_en": "Aiguan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·戏班出身"
+    },
+    {
+      "slug": "hui_xiang",
+      "name_zh": "蕙香",
+      "name_en": "Huixiang",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·本名四儿"
+    },
+    {
+      "slug": "chun_yan",
+      "name_zh": "春燕",
+      "name_en": "Chunyan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟"
+    },
+    {
+      "slug": "wu_er",
+      "name_zh": "五儿",
+      "name_en": "Wu'er",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·柳嫂之女"
+    },
+    {
+      "slug": "zhui_er",
+      "name_zh": "坠儿",
+      "name_en": "Zhuier",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "宝玉丫鬟·偷虾须镯"
+    },
+    {
+      "slug": "xiu_ju",
+      "name_zh": "绣橘",
+      "name_en": "Xiuju",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "迎春丫鬟"
+    },
+    {
+      "slug": "shi_shu",
+      "name_zh": "侍书",
+      "name_en": "Shishu",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "探春丫鬟"
+    },
+    {
+      "slug": "ru_hua",
+      "name_zh": "入画",
+      "name_en": "Ruhua",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "惜春丫鬟"
+    },
+    {
+      "slug": "cai_yun",
+      "name_zh": "彩云",
+      "name_en": "Caiyun",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "王夫人丫鬟·与贾环有染"
+    },
+    {
+      "slug": "cai_xia",
+      "name_zh": "彩霞",
+      "name_en": "Caixia",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "王夫人丫鬟"
+    },
+    {
+      "slug": "su_yun",
+      "name_zh": "素云",
+      "name_en": "Suyun",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "李纨丫鬟"
+    },
+    {
+      "slug": "bi_yue",
+      "name_zh": "碧月",
+      "name_en": "Biyue",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "李纨丫鬟"
+    },
+    {
+      "slug": "xue_yan",
+      "name_zh": "雪雁",
+      "name_en": "Xueyan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "黛玉丫鬟·从自家带来"
+    },
+    {
+      "slug": "bao_chan",
+      "name_zh": "宝蟾",
+      "name_en": "Baochan",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "夏金桂丫鬟"
+    },
+    {
+      "slug": "shan_jie",
+      "name_zh": "善姐",
+      "name_en": "Shanjie",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "凤姐派给尤二姐的丫鬟"
+    },
+    {
+      "slug": "xiao_que",
+      "name_zh": "小鹊",
+      "name_en": "Xiaoque",
+      "category": "maid",
+      "era_layer": 2,
+      "epithet": "赵姨娘丫鬟·报信"
+    },
+    {
+      "slug": "lai_nainai",
+      "name_zh": "赖嬷嬷",
+      "name_en": "Lai Nainai",
+      "category": "servant",
+      "era_layer": 0,
+      "epithet": "赖大之母·老仆"
+    },
+    {
+      "slug": "lin_zhixiao_jia",
+      "name_zh": "林之孝家的",
+      "name_en": "Lin Zhixiao's Wife",
+      "category": "servant",
+      "era_layer": 1,
+      "epithet": "林之孝之妻"
+    },
+    {
+      "slug": "lai_shangrong",
+      "name_zh": "赖尚荣",
+      "name_en": "Lai Shangrong",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "赖大之子·捐官"
+    },
+    {
+      "slug": "jiao_da",
+      "name_zh": "焦大",
+      "name_en": "Jiao Da",
+      "category": "servant",
+      "era_layer": 0,
+      "epithet": "宁国府老仆·醉骂"
+    },
+    {
+      "slug": "xing_er",
+      "name_zh": "兴儿",
+      "name_en": "Xing'er",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "贾琏小厮"
+    },
+    {
+      "slug": "wu_jinxing",
+      "name_zh": "乌进孝",
+      "name_en": "Wu Jinxing",
+      "category": "servant",
+      "era_layer": 1,
+      "epithet": "宁国府庄头"
+    },
+    {
+      "slug": "bao_er",
+      "name_zh": "鲍二",
+      "name_en": "Bao Er",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "贾琏仆人"
+    },
+    {
+      "slug": "bao_er_jia",
+      "name_zh": "鲍二家的",
+      "name_en": "Bao Er's Wife",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "贾琏情妇·被凤姐打骂后自缢"
+    },
+    {
+      "slug": "duo_guniang",
+      "name_zh": "多姑娘",
+      "name_en": "Duo Guniang",
+      "category": "servant",
+      "era_layer": 2,
+      "epithet": "多浑虫之妻·贾琏情妇"
+    },
+    {
+      "slug": "leng_zixing",
+      "name_zh": "冷子兴",
+      "name_en": "Leng Zixing",
+      "category": "guest",
+      "era_layer": 1,
+      "epithet": "古董商·周瑞家的女婿"
+    },
+    {
+      "slug": "zhang_daoshi",
+      "name_zh": "张道士",
+      "name_en": "Zhang Daoshi",
+      "category": "guest",
+      "era_layer": 0,
+      "epithet": "清虚观道士·贾母故交"
+    },
+    {
+      "slug": "ma_daopo",
+      "name_zh": "马道婆",
+      "name_en": "Ma Daopo",
+      "category": "guest",
+      "era_layer": 1,
+      "epithet": "巫婆·赵姨娘所请"
+    },
+    {
+      "slug": "jing_xu",
+      "name_zh": "净虚",
+      "name_en": "Jingxu",
+      "category": "guest",
+      "era_layer": 1,
+      "epithet": "馒头庵尼姑·凤姐中介"
+    },
+    {
+      "slug": "zhineng_er",
+      "name_zh": "智能儿",
+      "name_en": "Zhineng'er",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "净虚徒弟·与秦钟有染"
+    },
+    {
+      "slug": "qin_zhong",
+      "name_zh": "秦钟",
+      "name_en": "Qin Zhong",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "秦可卿之弟·宝玉好友"
+    },
+    {
+      "slug": "qin_ye",
+      "name_zh": "秦业",
+      "name_en": "Qin Ye",
+      "category": "guest",
+      "era_layer": 1,
+      "epithet": "秦可卿秦钟之父"
+    },
+    {
+      "slug": "wei_ruolan",
+      "name_zh": "卫若兰",
+      "name_en": "Wei Ruolan",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "史湘云未婚夫"
+    },
+    {
+      "slug": "feng_ziying",
+      "name_zh": "冯紫英",
+      "name_en": "Feng Ziying",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "冯唐之子·宝玉好友"
+    },
+    {
+      "slug": "zhang_hua",
+      "name_zh": "张华",
+      "name_en": "Zhang Hua",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "尤二姐前未婚夫·被凤姐利用"
+    },
+    {
+      "slug": "pan_youan",
+      "name_zh": "潘又安",
+      "name_en": "Pan You'an",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "司棋表弟·与司棋私通"
+    },
+    {
+      "slug": "duo_hunchong",
+      "name_zh": "多浑虫",
+      "name_en": "Duo Hunchong",
+      "category": "guest",
+      "era_layer": 2,
+      "epithet": "多姑娘之夫"
+    }
+  ]
+}
