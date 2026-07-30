@@ -19,6 +19,12 @@ import { generateParsedWhatIf } from "@/lib/whatif/llmClient";
 import { validateNarrative } from "@/lib/whatif/validation";
 import type { Prisma } from "@prisma/client";
 import { getSessionUserFromHeaders } from "@/lib/auth";
+import {
+  confirmWhatIfQuota,
+  quotaErrorResponse,
+  releaseWhatIfQuota,
+  reserveWhatIfQuota,
+} from "@/lib/server/aiQuotaClient";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -165,28 +171,67 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ deleted: turnIds.length, turnIds });
   }
 
-  await prisma.whatIfBranch.update({
-    where: { id: branch.id },
-    data: { datasetOverlay: input.datasetOverlay as unknown as Prisma.InputJsonValue },
-  });
-  if (turnIds.length === 0) return NextResponse.json({ regenerated: 0, turnIds: [] });
+  const ownTurns = branch.turns.filter((turn) => turn.status !== "deleted").map(parseTurn);
+  const firstAffectedIndex = ownTurns.findIndex((turn) => turn.id === turnIds[0]);
+  const regenerationTurns = firstAffectedIndex < 0 ? [] : ownTurns.slice(firstAffectedIndex);
+  const quotaRequestKeys = regenerationTurns.map(
+    (turn) => `charactergraph:regenerate:${turn.id}:${crypto.randomUUID()}`,
+  );
+
+  if (regenerationTurns.length === 0) {
+    await prisma.whatIfBranch.update({
+      where: { id: branch.id },
+      data: { datasetOverlay: input.datasetOverlay as unknown as Prisma.InputJsonValue },
+    });
+    return NextResponse.json({ regenerated: 0, turnIds: [] });
+  }
 
   const loaded = loadDataset(input.projectSlug);
   const baseDataset = mergeDatasetOverlay(loaded.dataset, input.datasetOverlay);
   const canonicalSubset = buildContext(baseDataset, branch.session.characterId);
   const inherited = await inheritedTurns(branch, user.id);
-  const ownTurns = branch.turns.filter((turn) => turn.status !== "deleted").map(parseTurn);
-  const firstAffectedIndex = ownTurns.findIndex((turn) => turn.id === turnIds[0]);
+  try {
+    await reserveWhatIfQuota(req, quotaRequestKeys, "user_character_regeneration");
+  } catch (error) {
+    return quotaErrorResponse(error) ?? NextResponse.json(
+      { error: "AI 额度服务暂时不可用，请稍后重试。", code: "QUOTA_SERVICE_UNAVAILABLE" },
+      { status: 503 },
+    );
+  }
+
+  try {
+    await prisma.whatIfBranch.update({
+      where: { id: branch.id },
+      data: { datasetOverlay: input.datasetOverlay as unknown as Prisma.InputJsonValue },
+    });
+  } catch (error) {
+    await releaseWhatIfQuota(req, quotaRequestKeys);
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "更新推演分支失败" },
+      { status: 500 },
+    );
+  }
+
   const preservedOwn = ownTurns.slice(0, firstAffectedIndex);
   const regenerated: ParsedTurn[] = [];
 
-  await prisma.whatIfTurn.updateMany({
-    where: { id: { in: turnIds } },
-    data: { status: "updating" },
-  });
+  try {
+    await prisma.whatIfTurn.updateMany({
+      where: { id: { in: turnIds } },
+      data: { status: "updating" },
+    });
+  } catch (error) {
+    await releaseWhatIfQuota(req, quotaRequestKeys);
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "更新推演状态失败" },
+      { status: 500 },
+    );
+  }
 
   for (let index = firstAffectedIndex; index < ownTurns.length; index += 1) {
     const current = ownTurns[index];
+    const quotaIndex = index - firstAffectedIndex;
+    let currentPersisted = false;
     const priorTurns = [...inherited, ...preservedOwn, ...regenerated];
     const effectiveDataset = priorTurns.reduce((currentDataset, turn) => applyDiff(currentDataset, turn.diff), baseDataset);
     try {
@@ -242,6 +287,8 @@ export async function POST(req: NextRequest) {
           },
         });
       });
+      currentPersisted = true;
+      regenerated.push({ ...current, diff, narrative: output.narrative, choices: output.choices, validation, status: "completed" });
       const versions = await prisma.whatIfTurnVersion.findMany({
         where: { turnId: current.id },
         orderBy: { createdAt: "desc" },
@@ -251,9 +298,14 @@ export async function POST(req: NextRequest) {
       if (versions.length > 0) {
         await prisma.whatIfTurnVersion.deleteMany({ where: { id: { in: versions.map((version) => version.id) } } });
       }
-      regenerated.push({ ...current, diff, narrative: output.narrative, choices: output.choices, validation, status: "completed" });
+      await confirmWhatIfQuota(req, [quotaRequestKeys[quotaIndex]]);
     } catch (error) {
-      const remainingIds = ownTurns.slice(index).map((turn) => turn.id);
+      const failedIndex = index + (currentPersisted ? 1 : 0);
+      const remainingIds = ownTurns.slice(failedIndex).map((turn) => turn.id);
+      await releaseWhatIfQuota(
+        req,
+        quotaRequestKeys.slice(quotaIndex + (currentPersisted ? 1 : 0)),
+      );
       await prisma.whatIfTurn.updateMany({
         where: { id: { in: remainingIds } },
         data: { status: "stale" },

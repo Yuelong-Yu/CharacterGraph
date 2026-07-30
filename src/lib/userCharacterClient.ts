@@ -5,6 +5,7 @@ import type {
 } from "@/schemas/userCharacter";
 import type { Dataset } from "@/schemas/character";
 import { withBasePath } from "@/lib/basePath";
+import { AiQuotaRequestError } from "@/lib/aiQuotaError";
 
 export interface UserCharacterGenerationProgress {
   stage: "targets" | "profile" | "relationships";
@@ -79,6 +80,13 @@ async function postHistoryAction(body: unknown): Promise<Record<string, unknown>
   });
   const data = await response.json().catch(() => ({})) as Record<string, unknown>;
   if (!response.ok) {
+    if (typeof data.code === "string") {
+      throw new AiQuotaRequestError(
+        typeof data.error === "string" ? data.error : `更新推演历史失败：HTTP ${response.status}`,
+        data.code,
+        response.status,
+      );
+    }
     throw new Error(typeof data.error === "string" ? data.error : `更新推演历史失败：HTTP ${response.status}`);
   }
   return data;

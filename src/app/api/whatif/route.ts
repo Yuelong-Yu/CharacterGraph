@@ -21,6 +21,12 @@ import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
 import { mergeDatasetOverlay } from "@/lib/userCharacters";
 import { getSessionUserFromHeaders } from "@/lib/auth";
+import {
+  confirmWhatIfQuota,
+  quotaErrorResponse,
+  releaseWhatIfQuota,
+  reserveWhatIfQuota,
+} from "@/lib/server/aiQuotaClient";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -115,10 +121,21 @@ export async function POST(req: NextRequest) {
     premiseType: input.premiseType,
   });
 
+  const quotaRequestKey = `charactergraph:whatif:${crypto.randomUUID()}`;
+  try {
+    await reserveWhatIfQuota(req, [quotaRequestKey], "whatif_initial");
+  } catch (error) {
+    return quotaErrorResponse(error) ?? NextResponse.json(
+      { error: "AI 额度服务暂时不可用，请稍后重试。", code: "QUOTA_SERVICE_UNAVAILABLE" },
+      { status: 503 },
+    );
+  }
+
   // 4. SSE 流式响应
   const encoder = new TextEncoder();
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
+      let turnPersisted = false;
       const send = (event: string, data: unknown) => {
         controller.enqueue(
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
@@ -185,6 +202,8 @@ export async function POST(req: NextRequest) {
         });
 
         const turn = session.branches[0].turns[0];
+        turnPersisted = true;
+        await confirmWhatIfQuota(req, [quotaRequestKey]);
 
         // 8. 推 done 事件，带完整解析结果 + DB id + 校验结果
         send("done", {
@@ -197,6 +216,9 @@ export async function POST(req: NextRequest) {
           validation,
         });
       } catch (e) {
+        if (!turnPersisted) {
+          await releaseWhatIfQuota(req, [quotaRequestKey]);
+        }
         if (e instanceof LLMRefusalError) {
           send("error", { code: "LLM_REFUSAL", message: e.message });
         } else if (e instanceof LLMParseError) {

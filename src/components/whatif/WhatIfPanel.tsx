@@ -36,6 +36,8 @@ import type {
 import type { Character, Relation } from "@/schemas/character";
 import type { SessionUser } from "@/lib/auth";
 import { fetchSessionUser } from "@/lib/authClient";
+import { AiQuotaRequestError } from "@/lib/aiQuotaError";
+import { requestChronChaosUpgrade } from "@chronchaos/top-navigation";
 
 interface Props {
   isOpen: boolean;
@@ -88,6 +90,7 @@ export function WhatIfPanel({
   const lastAccountIdRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const autoStartAttemptedRef = useRef(false);
+  const startRetryRef = useRef<(allowUpgrade?: boolean) => Promise<void>>(async () => {});
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
@@ -178,7 +181,7 @@ export function WhatIfPanel({
     onTurnsChange(computePriorTurns());
   }, [computePriorTurns, onTurnsChange]);
 
-  const handleStart = useCallback(async () => {
+  const handleStart = useCallback(async (allowUpgrade = true) => {
     setError(null);
     setStreaming({ text: "", isContinue: false });
 
@@ -219,6 +222,9 @@ export function WhatIfPanel({
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
       setStreaming(null);
+      if (allowUpgrade && e instanceof AiQuotaRequestError && e.code === "UPGRADE_REQUIRED") {
+        requestChronChaosUpgrade(() => startRetryRef.current(false));
+      }
     }
   }, [
     projectSlug,
@@ -229,6 +235,9 @@ export function WhatIfPanel({
     premiseType,
     datasetOverlay,
   ]);
+  useEffect(() => {
+    startRetryRef.current = handleStart;
+  }, [handleStart]);
 
   useEffect(() => {
     if (
@@ -243,7 +252,7 @@ export function WhatIfPanel({
     void handleStart();
   }, [accountUser, autoStart, handleStart, isOpen, sessionDetail, streaming]);
 
-  async function handleContinue(userInput: string) {
+  async function handleContinue(userInput: string, allowUpgrade = true) {
     if (!sessionDetail || !activeBranch) return;
     setError(null);
     setFreeInput("");
@@ -279,6 +288,9 @@ export function WhatIfPanel({
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
       setStreaming(null);
+      if (allowUpgrade && e instanceof AiQuotaRequestError && e.code === "UPGRADE_REQUIRED") {
+        requestChronChaosUpgrade(() => handleContinue(userInput, false));
+      }
     }
   }
 

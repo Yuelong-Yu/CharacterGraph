@@ -65,6 +65,8 @@ import type { SessionUser } from "@/lib/auth";
 import { fetchSessionUser } from "@/lib/authClient";
 import { withBasePath } from "@/lib/basePath";
 import type { WhatIfSessionDetail } from "@/schemas/whatif";
+import { AiQuotaRequestError } from "@/lib/aiQuotaError";
+import { requestChronChaosUpgrade } from "@chronchaos/top-navigation";
 
 type Selection =
   | { kind: "none" }
@@ -689,23 +691,33 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     }
     setDeletedUserCharacter(null);
     if (previous && activeBranchId && impactCount > 0) {
-      try {
-        const custom = customDatasetOverlay(nextRecords);
-        const nextDataset = mergeUserEvents(mergeUserCharacters(dataset, nextRecords), userEvents);
-        const changedIds = new Set([...nextRecords.map((item) => item.id), ...Object.keys(userEvents)]);
-        await regenerateUserCharacterHistory({
-          projectSlug: config.slug,
-          branchId: activeBranchId,
-          characterId: persistedRecord.id,
-          datasetOverlay: {
+      const regenerationInput = {
+        projectSlug: config.slug,
+        branchId: activeBranchId,
+        characterId: persistedRecord.id,
+        datasetOverlay: (() => {
+          const custom = customDatasetOverlay(nextRecords);
+          const nextDataset = mergeUserEvents(mergeUserCharacters(dataset, nextRecords), userEvents);
+          const changedIds = new Set([...nextRecords.map((item) => item.id), ...Object.keys(userEvents)]);
+          return {
             characters: nextDataset.characters.filter((character) => changedIds.has(character.id)),
             relations: custom.relations,
-          },
-        });
+          };
+        })(),
+      };
+      try {
+        await regenerateUserCharacterHistory(regenerationInput);
         setHistoryRefreshVersion((version) => version + 1);
       } catch (historyError) {
         setHistoryRefreshVersion((version) => version + 1);
-        throw new Error(`人物已保存，但部分推演待重试：${historyError instanceof Error ? historyError.message : String(historyError)}`);
+        if (historyError instanceof AiQuotaRequestError && historyError.code === "UPGRADE_REQUIRED") {
+          requestChronChaosUpgrade(async () => {
+            await regenerateUserCharacterHistory(regenerationInput);
+            setHistoryRefreshVersion((version) => version + 1);
+          });
+        } else {
+          throw new Error(`人物已保存，但部分推演待重试：${historyError instanceof Error ? historyError.message : String(historyError)}`);
+        }
       }
     }
     closeMobileOverlay("editor", () => setUserCharacterEditor(null));

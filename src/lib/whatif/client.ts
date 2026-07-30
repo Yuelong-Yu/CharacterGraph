@@ -7,6 +7,7 @@
 
 import { EventSourceParserStream } from "eventsource-parser/stream";
 import { withBasePath } from "@/lib/basePath";
+import { throwAiQuotaResponse } from "@/lib/aiQuotaError";
 import type {
   CreateWhatIfSessionInput,
   GraphDiff,
@@ -47,8 +48,7 @@ export async function streamWhatIf(
   });
 
   if (!resp.ok) {
-    const text = await resp.text().catch(() => "");
-    throw new Error(`HTTP ${resp.status}: ${text}`);
+    await throwAiQuotaResponse(resp);
   }
   if (!resp.body) {
     throw new Error("Response has no body");
@@ -130,8 +130,7 @@ export async function streamContinueTurn(
   });
 
   if (!resp.ok) {
-    const text = await resp.text().catch(() => "");
-    throw new Error(`HTTP ${resp.status}: ${text}`);
+    await throwAiQuotaResponse(resp);
   }
   if (!resp.body) {
     throw new Error("Response has no body");
