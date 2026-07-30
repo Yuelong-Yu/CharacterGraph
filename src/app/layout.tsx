@@ -1,5 +1,5 @@
-import { ChronChaosNav } from "@/components/ChronChaosNav";
-import "@/components/chronChaosNav.css";
+import { ChronChaosTopNavigation } from "@chronchaos/top-navigation";
+import "@chronchaos/top-navigation/styles.css";
 
 export const metadata = {
   title: "CharacterGraph — 人物关系图谱",
@@ -17,16 +17,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh-CN">
       <body style={{ margin: 0, background: "oklch(99% 0 0)", color: "oklch(20% 0.012 270)" }}>
         <div className="charactergraph-app">
-          <ChronChaosNav />
+          <ChronChaosTopNavigation active="multiverse" />
           <div className="charactergraph-content">{children}</div>
         </div>
         <style>{`
           html, body { height: 100%; }
-          .charactergraph-app { height: 100vh; height: 100dvh; overflow: hidden; }
-          .charactergraph-content { height: calc(100vh - 68px); overflow: auto; }
+          .charactergraph-app {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+          }
+          .charactergraph-content {
+            flex: 1 1 auto;
+            min-height: 0;
+            overflow: auto;
+          }
           @media (max-width: 1023px) {
             .charactergraph-content {
-              height: calc(100dvh - 56px);
               overflow: hidden;
             }
           }
