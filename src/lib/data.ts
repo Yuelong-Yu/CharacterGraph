@@ -47,6 +47,33 @@ function versionProjectAsset(slug: string, assetUrl: string): string {
   return withBasePath(versionFileUrl(assetUrl, filePath));
 }
 
+/**
+ * 当项目没有显式封面时，选用图中度数最高的人物立绘。
+ * 度数口径与 Graph3D / GraphShell 一致：每条关系为两端节点各加 1。
+ */
+function highestDegreeCharacterPortrait(slug: string): string | null {
+  const base = projectDir(slug);
+  const characters = loadCharacters(base);
+  if (characters.length === 0) return null;
+
+  const degreeById = new Map(characters.map((character) => [character.id, 0]));
+  for (const relation of loadRelations(base)) {
+    if (degreeById.has(relation.source)) {
+      degreeById.set(relation.source, (degreeById.get(relation.source) ?? 0) + 1);
+    }
+    if (degreeById.has(relation.target)) {
+      degreeById.set(relation.target, (degreeById.get(relation.target) ?? 0) + 1);
+    }
+  }
+
+  const character = characters.toSorted((a, b) => {
+    const degreeDifference = (degreeById.get(b.id) ?? 0) - (degreeById.get(a.id) ?? 0);
+    return degreeDifference || a.id.localeCompare(b.id);
+  })[0];
+
+  return character ? versionProjectAsset(slug, character.portrait) : null;
+}
+
 /** 扫 projects/*,返回非 draft 项目摘要(用于首页卡片墙 + generateStaticParams) */
 export function listProjects(): ProjectSummary[] {
   if (!fs.existsSync(PROJECTS_DIR)) return [];
@@ -62,12 +89,15 @@ export function listProjects(): ProjectSummary[] {
     );
     if (config.draft) continue;
     const coverExists = fs.existsSync(path.join(projectDir(slug), "images", "cover.webp"));
+    const cover = coverExists
+      ? versionProjectAsset(slug, `/p/${slug}/cover.webp`)
+      : highestDegreeCharacterPortrait(slug);
     summaries.push({
       slug: config.slug,
       title: config.title,
       subtitle: config.subtitle ?? null,
       order: config.order,
-      cover: coverExists ? versionProjectAsset(slug, `/p/${slug}/cover.webp`) : null,
+      cover,
     });
   }
   return summaries.sort((a, b) => a.order - b.order || a.title.localeCompare(b.title));

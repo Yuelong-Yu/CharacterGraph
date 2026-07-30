@@ -124,7 +124,7 @@ function ProjectCard({
         style={{
           aspectRatio: "16 / 10",
           background: cover
-            ? `center / cover no-repeat url(${cover})`
+            ? `center 24% / cover no-repeat url("${cover}")`
             : "linear-gradient(135deg, #2e2a3a 0%, #4a2f2a 100%)",
           display: "flex",
           alignItems: "flex-end",
