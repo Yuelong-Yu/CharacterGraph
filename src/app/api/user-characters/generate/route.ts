@@ -108,7 +108,9 @@ export async function POST(req: NextRequest) {
         const canonicalWork = loaded.dataset.characters
           .flatMap((character) => character.events)
           .find((event) => event.source?.work)?.source?.work;
-        const sourceWork = adaptationWork(canonicalWork ?? config.title.replace(/人物谱$/, ""));
+        const sourceWork = adaptationWork(
+          canonicalWork ?? config.title.replace(/(?:人物谱|同人宇宙)$/, ""),
+        );
         const remainingCount = input.relationCount - requiredTargetIds.length;
         const selectable = input.candidates.filter((candidate) => !requiredTargetIds.includes(candidate.id));
         let selectedTargetIds: string[] = [];
