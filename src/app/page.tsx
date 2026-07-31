@@ -43,7 +43,7 @@ export default function Home() {
             letterSpacing: "-0.01em",
           }}
         >
-          人物关系图谱
+          同人宇宙
         </h1>
         <p style={{ marginTop: 16, fontSize: 15, color: COLOR.textMuted, maxWidth: 560, lineHeight: 1.7 }}>
           选择一个图谱探索人物关系网络。每个图谱拥有独立的人物、神器、关系与视觉体系。
