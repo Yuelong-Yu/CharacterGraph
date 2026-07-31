@@ -250,7 +250,27 @@
   padding: 18px 0;
 }
 .mobile-event:first-child { border-top: 0; padding-top: 0; }
-.mobile-event-title { color: var(--mobile-accent); font-size: 16px; font-weight: 700; line-height: 1.5; }
+.mobile-event-heading {
+  align-items: flex-start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
+}
+.mobile-event-title {
+  color: var(--mobile-accent);
+  flex: 1;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.mobile-event-whatif {
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
+}
 .mobile-event-source {
   color: var(--mobile-muted);
   font: 12px/1.6 ui-monospace,SFMono-Regular,Menlo,monospace;

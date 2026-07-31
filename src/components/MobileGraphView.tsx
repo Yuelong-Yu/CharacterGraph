@@ -826,13 +826,10 @@ function CharacterDetails({
           const userEntry = userEvents[character.id]?.find((entry) => entry.event.title === event.title);
           return (
             <div className="mobile-event" key={key}>
-              <div className="mobile-event-title">{event.title}</div>
-              {otherName && <div className="mobile-muted" style={{ fontSize: 13, marginTop: 4 }}>与 {otherName}</div>}
-              <p className="mobile-copy" style={{ color: "var(--mobile-muted)", marginTop: 6 }}>{event.desc}</p>
-              {event.source && <div className="mobile-event-source">《{event.source.work}》{event.source.locus ?? ""}</div>}
-              <div className="mobile-action-row">
+              <div className="mobile-event-heading">
+                <div className="mobile-event-title">{event.title}</div>
                 <button
-                  className="mobile-action"
+                  className="mobile-action mobile-event-whatif"
                   type="button"
                   onClick={() => onLaunchWhatIf({
                     projectSlug,
@@ -847,12 +844,17 @@ function CharacterDetails({
                 >
                   {shouldContinue ? "⚡ 基于此事件推演" : "⚡ 假设这件事没发生"}
                 </button>
-                {userEntry && (
+              </div>
+              {otherName && <div className="mobile-muted" style={{ fontSize: 13, marginTop: 4 }}>与 {otherName}</div>}
+              <p className="mobile-copy" style={{ color: "var(--mobile-muted)", marginTop: 6 }}>{event.desc}</p>
+              {event.source && <div className="mobile-event-source">《{event.source.work}》{event.source.locus ?? ""}</div>}
+              {userEntry && (
+                <div className="mobile-action-row">
                   <button className="mobile-action danger" type="button" onClick={() => void onRemoveUserEvent(character.id, userEntry.id)}>
                     删除事件
                   </button>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           );
         })}
