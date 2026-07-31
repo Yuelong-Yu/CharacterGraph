@@ -299,7 +299,7 @@
 .mobile-relation-row small { color: var(--mobile-muted); display: block; margin-top: 3px; }
 
 .mobile-fullscreen {
-  background: var(--mobile-panel);
+  background: var(--mobile-panel, #fff);
   bottom: 0;
   color: var(--mobile-text);
   display: flex;
