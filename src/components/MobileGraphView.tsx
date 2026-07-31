@@ -827,8 +827,8 @@ function CharacterDetails({
           return (
             <div className="mobile-event" key={key}>
               <div className="mobile-event-title">{event.title}</div>
-              {otherName && <div className="mobile-muted" style={{ fontSize: 11, marginTop: 3 }}>与 {otherName}</div>}
-              <p className="mobile-copy" style={{ color: "var(--mobile-muted)", fontSize: 13, marginTop: 5 }}>{event.desc}</p>
+              {otherName && <div className="mobile-muted" style={{ fontSize: 13, marginTop: 4 }}>与 {otherName}</div>}
+              <p className="mobile-copy" style={{ color: "var(--mobile-muted)", marginTop: 6 }}>{event.desc}</p>
               {event.source && <div className="mobile-event-source">《{event.source.work}》{event.source.locus ?? ""}</div>}
               <div className="mobile-action-row">
                 <button
@@ -891,7 +891,7 @@ function ArtifactDetails({
         {artifact.events.map((event, index) => (
           <div className="mobile-event" key={`${event.title}:${index}`}>
             <div className="mobile-event-title">{event.title}</div>
-            <p className="mobile-copy" style={{ color: "var(--mobile-muted)", fontSize: 13, marginTop: 5 }}>{event.desc}</p>
+            <p className="mobile-copy" style={{ color: "var(--mobile-muted)", marginTop: 6 }}>{event.desc}</p>
             {event.source && <div className="mobile-event-source">《{event.source.work}》{event.source.locus ?? ""}</div>}
           </div>
         ))}
@@ -958,7 +958,7 @@ function RelationOverlay({
           {relation.events.map((event, index) => (
             <div className="mobile-event" key={`${event.title}:${index}`}>
               <div className="mobile-event-title">{event.title}</div>
-              <p className="mobile-copy" style={{ color: "var(--mobile-muted)", fontSize: 13, marginTop: 5 }}>{event.desc}</p>
+              <p className="mobile-copy" style={{ color: "var(--mobile-muted)", marginTop: 6 }}>{event.desc}</p>
               {event.source && <div className="mobile-event-source">《{event.source.work}》{event.source.locus ?? ""}</div>}
             </div>
           ))}
