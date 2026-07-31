@@ -53,3 +53,8 @@ tmp/
 GreekmythPoker/
 
 Videos/
+
+# --- Local-only tooling & one-off scripts (not for repo) ---
+.claude/
+scripts/create_sidameinv_jianying.py
+skills-lock.json
