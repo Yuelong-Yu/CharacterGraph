@@ -1488,10 +1488,48 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                     );
                     return (
                       <div key={key} style={{ marginBottom: 18 }}>
-                        <div style={{ display: "flex", alignItems: "flex-start", gap: 8 }}>
-                          <strong style={{ color: COLOR.accent, fontSize: 13, flex: 1 }}>
+                        <div style={{ display: "flex", alignItems: "flex-start", gap: 8, width: "100%" }}>
+                          <strong style={{
+                            color: COLOR.accent,
+                            fontSize: 13,
+                            flex: 1,
+                            minWidth: 0,
+                            lineHeight: 1.5,
+                            overflowWrap: "anywhere",
+                          }}>
                             {event.title}
                           </strong>
+                          <button
+                            onClick={() => {
+                              launchWhatIf({
+                                projectSlug: config.slug,
+                                characterId: character.id,
+                                characterName: character.name_zh,
+                                eventTitle: event.title,
+                                premise: shouldContinueFromEvent
+                                  ? `假设${character.name_zh}经历了「${event.title}」：${event.desc}`
+                                  : `如果${character.name_zh}没有「${event.title}」`,
+                                premiseType: shouldContinueFromEvent ? "free_text" : "event_negative",
+                              });
+                            }}
+                            style={{
+                              flex: "0 0 auto",
+                              marginLeft: "auto",
+                              padding: "3px 8px",
+                              fontSize: 11,
+                              whiteSpace: "nowrap",
+                              background: "transparent",
+                              color: COLOR.accent,
+                              border: `1px solid ${COLOR.accent}`,
+                              borderRadius: 3,
+                              cursor: "pointer",
+                              opacity: 0.7,
+                            }}
+                            onMouseEnter={(ev) => (ev.currentTarget.style.opacity = "1")}
+                            onMouseLeave={(ev) => (ev.currentTarget.style.opacity = "0.7")}
+                          >
+                            {shouldContinueFromEvent ? "⚡ 基于此事件推演" : "⚡ 假设这件事没发生"}
+                          </button>
                           {userEntry && (
                             <button
                               type="button"
@@ -1527,35 +1565,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                             《{event.source.work}》{event.source.locus ?? ""}
                           </div>
                         )}
-                        <button
-                          onClick={() => {
-                            launchWhatIf({
-                              projectSlug: config.slug,
-                              characterId: character.id,
-                              characterName: character.name_zh,
-                              eventTitle: event.title,
-                              premise: shouldContinueFromEvent
-                                ? `假设${character.name_zh}经历了「${event.title}」：${event.desc}`
-                                : `如果${character.name_zh}没有「${event.title}」`,
-                              premiseType: shouldContinueFromEvent ? "free_text" : "event_negative",
-                            });
-                          }}
-                          style={{
-                            marginTop: 6,
-                            padding: "3px 8px",
-                            fontSize: 11,
-                            background: "transparent",
-                            color: COLOR.accent,
-                            border: `1px solid ${COLOR.accent}`,
-                            borderRadius: 3,
-                            cursor: "pointer",
-                            opacity: 0.7,
-                          }}
-                          onMouseEnter={(ev) => (ev.currentTarget.style.opacity = "1")}
-                          onMouseLeave={(ev) => (ev.currentTarget.style.opacity = "0.7")}
-                        >
-                          {shouldContinueFromEvent ? "⚡ 基于此事件推演" : "⚡ 假设这件事没发生"}
-                        </button>
                       </div>
                     );
                   })}
