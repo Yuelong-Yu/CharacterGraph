@@ -11,6 +11,7 @@
  *   - 【杜撰】橙
  */
 import type { NarrativeLabel, NarrativeSegment } from "@/schemas/whatif";
+import { extractStreamingNarrative } from "@/lib/whatif/streamingNarrative";
 
 const LABEL_COLORS: Record<NarrativeLabel, string> = {
   原典: "#888",
@@ -54,18 +55,19 @@ export function NarrativeView({ streamText, segments }: Props) {
     );
   }
 
-  // 流式态：直接显示原始文本（含 === 分隔符，让用户看到 LLM 真实输出）
+  // 流式态：只显示面向用户的叙事正文，隐藏 DIFF、分隔符和选项等结构化中间结果。
+  const visibleNarrative = extractStreamingNarrative(streamText);
+
   return (
     <div
       style={{
         whiteSpace: "pre-wrap",
         fontSize: 14,
         lineHeight: 1.7,
-        fontFamily: "ui-monospace, monospace",
         color: "#aaa",
       }}
     >
-      {streamText || "(等待生成...)"}
+      {visibleNarrative || "正在生成故事..."}
       <span style={{ animation: "blink 1s steps(2) infinite" }}>▌</span>
       <style>{`@keyframes blink { 50% { opacity: 0; } }`}</style>
     </div>
