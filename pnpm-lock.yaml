@@ -15,8 +15,8 @@ importers:
         specifier: file:../chronchaos_gpt/packages/auth-registration
         version: file:../chronchaos_gpt/packages/auth-registration(react@19.2.7)
       '@chronchaos/top-navigation':
-        specifier: file:../chronchaos_gpt/packages/top-navigation
-        version: file:../chronchaos_gpt/packages/top-navigation(@chronchaos/auth-registration@file:../chronchaos_gpt/packages/auth-registration(react@19.2.7))(react@19.2.7)
+        specifier: link:../chronchaos_gpt/packages/top-navigation
+        version: link:../chronchaos_gpt/packages/top-navigation
       '@dagrejs/dagre':
         specifier: ^1.1.4
         version: 1.1.8
@@ -131,12 +131,6 @@ packages:
   '@chronchaos/auth-registration@file:../chronchaos_gpt/packages/auth-registration':
     resolution: {directory: ../chronchaos_gpt/packages/auth-registration, type: directory}
     peerDependencies:
-      react: '>=19'
-
-  '@chronchaos/top-navigation@file:../chronchaos_gpt/packages/top-navigation':
-    resolution: {directory: ../chronchaos_gpt/packages/top-navigation, type: directory}
-    peerDependencies:
-      '@chronchaos/auth-registration': '>=0.1.0'
       react: '>=19'
 
   '@dagrejs/dagre@1.1.8':
@@ -2602,11 +2596,6 @@ snapshots:
 
   '@chronchaos/auth-registration@file:../chronchaos_gpt/packages/auth-registration(react@19.2.7)':
     dependencies:
-      react: 19.2.7
-
-  '@chronchaos/top-navigation@file:../chronchaos_gpt/packages/top-navigation(@chronchaos/auth-registration@file:../chronchaos_gpt/packages/auth-registration(react@19.2.7))(react@19.2.7)':
-    dependencies:
-      '@chronchaos/auth-registration': file:../chronchaos_gpt/packages/auth-registration(react@19.2.7)
       react: 19.2.7
 
   '@dagrejs/dagre@1.1.8':
