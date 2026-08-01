@@ -44,6 +44,13 @@ function isLLMRefusal(text: string): boolean {
   return compact.length <= 300 && REFUSAL_PATTERNS.some((pattern) => pattern.test(compact));
 }
 
+function parseFailureReason(error: LLMParseError): string {
+  if (error.message.includes('"diff":["Required"]')) return "missing_diff";
+  if (error.message.includes("不是合法 JSON")) return "invalid_json";
+  if (error.message.includes("必须是 JSON 对象")) return "non_object_json";
+  return "schema_validation";
+}
+
 function buildRefusalRecoveryPrompt(user: string): string {
   const softened = user
     .replaceAll("夺权", "争取梁山内部主导权")
@@ -304,13 +311,17 @@ export async function generateParsedWhatIf(
       return parseLLMOutput(fullText);
     } catch (error) {
       if (!(error instanceof LLMParseError)) throw error;
+      const recovered = tryRecoverMissingDiffOutput(fullText);
+      if (recovered) {
+        console.warn("[whatif-output-repair]", JSON.stringify({ repair: "missing_diff_defaulted", attempt }));
+        return recovered;
+      }
       lastParseError = error;
+      console.warn("[whatif-output-retry]", JSON.stringify({
+        reason: parseFailureReason(error),
+        attempt,
+      }));
       if (attempt === MAX_PARSE_ATTEMPTS) {
-        const recovered = tryRecoverMissingDiffOutput(fullText);
-        if (recovered) {
-          console.warn("[whatif-output-repair]", JSON.stringify({ repair: "missing_diff_defaulted" }));
-          return recovered;
-        }
         if (isLLMRefusal(error.raw)) throw new LLMRefusalError(error.raw);
         throw error;
       }

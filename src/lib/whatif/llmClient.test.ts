@@ -294,6 +294,33 @@ describe("generateParsedWhatIf", () => {
     expect(result.choices).toEqual(["继续推演"]);
   });
 
+  it("defaults an otherwise valid response with a missing diff without regenerating", async () => {
+    const missingDiff = JSON.stringify({
+      narrative: [{ label: "推演", text: "奥德修斯转向伊塔刻。" }],
+      choices: ["继续返乡", "先补给"],
+    });
+    createMock.mockResolvedValue(eventStream([missingDiff]));
+    const { generateParsedWhatIf } = await import("@/lib/whatif/llmClient");
+
+    const result = await generateParsedWhatIf(
+      "system",
+      "user",
+      256,
+      () => {},
+      () => {},
+    );
+
+    expect(createMock).toHaveBeenCalledTimes(1);
+    expect(result.diff).toEqual({
+      removedNodes: [],
+      addedNodes: [],
+      removedEdges: [],
+      addedEdges: [],
+      modifiedEvents: [],
+      replacedEvents: [],
+    });
+  });
+
   it("rephrases fictional conflict before retrying a provider refusal", async () => {
     const refusal = "你好，我无法给到相关内容。";
     const valid = `===DIFF===
