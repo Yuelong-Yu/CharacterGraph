@@ -173,13 +173,16 @@ export async function POST(
     })),
     baseDataset,
   );
+  const branchCharacterIds = new Set(
+    priorTurns.flatMap((turn) => turn.diff.addedNodes.map((character) => character.id)),
+  );
 
   // 6. 构建上下文（基于 effective dataset）
   let canonicalSubset;
   let subset;
   try {
     canonicalSubset = buildContext(baseDataset, session.characterId);
-    subset = buildContext(effectiveDataset, session.characterId);
+    subset = buildContext(effectiveDataset, session.characterId, { branchCharacterIds });
   } catch (e) {
     return NextResponse.json(
       { error: `上下文构建失败: ${e instanceof Error ? e.message : String(e)}` },

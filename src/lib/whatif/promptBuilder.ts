@@ -240,6 +240,14 @@ function formatBranchDeltaForPrompt(
     neighbors: collectionDelta(canonicalSubset.neighbors, branchSubset.neighbors),
     secondDegree: collectionDelta(canonicalSubset.secondDegree, branchSubset.secondDegree),
     artifacts: collectionDelta(canonicalSubset.artifacts, branchSubset.artifacts),
+    branchAddedCharacters: collectionDelta(
+      canonicalSubset.branchAddedCharacters,
+      branchSubset.branchAddedCharacters,
+    ),
+    branchAddedRelations: collectionDelta(
+      canonicalSubset.branchAddedRelations,
+      branchSubset.branchAddedRelations,
+    ),
   };
   for (const [key, value] of Object.entries(collections)) {
     if (value) delta[key] = value;

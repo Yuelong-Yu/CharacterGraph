@@ -234,8 +234,11 @@ export async function POST(req: NextRequest) {
     let currentPersisted = false;
     const priorTurns = [...inherited, ...preservedOwn, ...regenerated];
     const effectiveDataset = priorTurns.reduce((currentDataset, turn) => applyDiff(currentDataset, turn.diff), baseDataset);
+    const branchCharacterIds = new Set(
+      priorTurns.flatMap((turn) => turn.diff.addedNodes.map((character) => character.id)),
+    );
     try {
-      const subset = buildContext(effectiveDataset, branch.session.characterId);
+      const subset = buildContext(effectiveDataset, branch.session.characterId, { branchCharacterIds });
       const system = buildCacheableSystemPrompt(canonicalSubset, loaded.config, {
         branchSubset: subset,
         knownCharacters: effectiveDataset.characters.map(({ id, name_zh }) => ({ id, name_zh })),

@@ -188,4 +188,44 @@ describe("buildContext", () => {
     expect(1 + subset.neighbors.length + subset.secondDegree.length + subset.artifacts.length)
       .toBe(MAX_NODES);
   });
+
+  it("keeps branch-added characters outside the canonical node budget", () => {
+    const core = makeCharacter({ id: "core" });
+    const canonicalNeighbors = Array.from({ length: 20 }, (_, index) => (
+      makeCharacter({ id: `canon_${index}` })
+    ));
+    const branchNeighbors = Array.from({ length: 4 }, (_, index) => (
+      makeCharacter({ id: `branch_${index}`, name_zh: `分支人物${index}` })
+    ));
+    const disconnectedBranchCharacter = makeCharacter({
+      id: "branch_far",
+      name_zh: "远方分支人物",
+      bio: "由本分支新增，尚未与核心人物建立关系。",
+    });
+    const allCharacters = [core, ...canonicalNeighbors, ...branchNeighbors, disconnectedBranchCharacter];
+    const relations = [
+      ...canonicalNeighbors.map((character) => makeRelation("core", character.id)),
+      ...branchNeighbors.map((character) => makeRelation("core", character.id)),
+    ];
+
+    const subset = buildContext(
+      makeDataset(allCharacters, relations),
+      "core",
+      { branchCharacterIds: new Set([...branchNeighbors.map((character) => character.id), "branch_far"]) },
+    );
+
+    expect(subset.neighbors.filter((node) => node.id.startsWith("branch_"))).toHaveLength(4);
+    expect(subset.branchAddedCharacters.map((character) => character.id).sort())
+      .toEqual(["branch_0", "branch_1", "branch_2", "branch_3", "branch_far"]);
+    expect(subset.branchAddedCharacters.find((character) => character.id === "branch_far")?.bio)
+      .toContain("本分支新增");
+    expect(subset.branchAddedRelations.map((relation) => relation.id))
+      .toContain("branch_0-core");
+
+    const canonicalBudget = 1
+      + subset.neighbors.filter((node) => !node.id.startsWith("branch_")).length
+      + subset.secondDegree.filter((node) => !node.id.startsWith("branch_")).length
+      + subset.artifacts.length;
+    expect(canonicalBudget).toBeLessThanOrEqual(MAX_NODES);
+  });
 });

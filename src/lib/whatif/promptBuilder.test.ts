@@ -31,6 +31,8 @@ function makeSubset(eventTitle: string): GraphSubset {
     neighbors: [],
     secondDegree: [],
     artifacts: [],
+    branchAddedCharacters: [],
+    branchAddedRelations: [],
   };
 }
 
@@ -500,6 +502,39 @@ describe("multi-turn prompt provenance", () => {
     expect(prompt).toContain('"lin_chong"');
     expect(prompt).toContain('"modified"');
     expect(prompt).toContain('"primary_type": "rival"');
+  });
+
+  it("puts branch-added characters in the dynamic branch state", () => {
+    const canonicalSubset = makeSubset("原典事件");
+    const branchSubset = makeSubset("原典事件");
+    branchSubset.branchAddedCharacters = [{
+      id: "branch_sailor",
+      name_zh: "分支水手",
+      name_en: "Branch Sailor",
+      aliases: ["新水手"],
+      epithet: null,
+      category: "liangshan",
+      era_layer: 1,
+      bio: "仅在当前分支加入的完整人物信息。",
+      events: [{ title: "登船", desc: "加入船队", source: null }],
+      quotes: [],
+    }];
+    branchSubset.branchAddedRelations = [{
+      id: "branch_sailor-song_jiang",
+      source: "branch_sailor",
+      target: "song_jiang",
+      primary_type: "ally",
+      composite_types: [],
+      events: [],
+    }];
+
+    const prompt = buildCacheableSystemPrompt(canonicalSubset, testConfig, { branchSubset });
+
+    expect(prompt.dynamic).toContain('"branchAddedCharacters"');
+    expect(prompt.dynamic).toContain('"branchAddedRelations"');
+    expect(prompt.dynamic).toContain("分支水手");
+    expect(prompt.dynamic).toContain("仅在当前分支加入的完整人物信息。");
+    expect(prompt.cacheable).not.toContain("分支水手");
   });
 
   it("feeds every prior narrative to the next turn as 假设", () => {

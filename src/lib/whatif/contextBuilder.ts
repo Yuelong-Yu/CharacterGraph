@@ -6,7 +6,8 @@
  *   - 1度邻居: name + category + epithet + 与 core 的 relation（含 events）
  *   - 2度邻居: name + category（不含 relation 细节）
  *   - 相关 artifacts: core 和 1度邻居关联的宝物（name + epithet + category）
- *   - 上限 MAX_NODES=15，超限时依次裁剪 2 度、宝物、1 度节点
+ *   - 原典节点上限 MAX_NODES=15，超限时依次裁剪 2 度、宝物、1 度节点
+ *   - 当前推演分支新增的人物完整保留，不计入原典节点上限
  *
  * 预估压缩后 3-5k token（vs 全量 50k）。
  */
@@ -38,6 +39,16 @@ export interface RelatedArtifact {
   relation: Pick<Relation, "id" | "primary_type">;
 }
 
+export type BranchAddedCharacter = Pick<
+  Character,
+  "id" | "name_zh" | "name_en" | "aliases" | "epithet" | "category" | "era_layer" | "bio" | "events" | "quotes"
+>;
+
+export type BranchAddedRelation = Pick<
+  Relation,
+  "id" | "source" | "target" | "primary_type" | "composite_types" | "events"
+>;
+
 export interface GraphSubset {
   core: Pick<
     Character,
@@ -46,14 +57,24 @@ export interface GraphSubset {
   neighbors: NeighborNode[];
   secondDegree: SecondDegreeNode[];
   artifacts: RelatedArtifact[];
+  /** 当前推演分支由 diff.addedNodes 新增的人物；不受 MAX_NODES 限制。 */
+  branchAddedCharacters: BranchAddedCharacter[];
+  /** 与分支新增人物相连的关系，随完整人物信息一并输入。 */
+  branchAddedRelations: BranchAddedRelation[];
 }
 
 export const MAX_NODES = 15;
 
 /**
  * 构建图谱子集。coreCharacterId 不存在时抛错。
+ * branchCharacterIds 表示当前分支历史中由 addedNodes 新增且仍存在的人物；
+ * 它们会完整输入且不占用不可变原典的节点预算。
  */
-export function buildContext(dataset: Dataset, coreCharacterId: string): GraphSubset {
+export function buildContext(
+  dataset: Dataset,
+  coreCharacterId: string,
+  options: { branchCharacterIds?: ReadonlySet<string> } = {},
+): GraphSubset {
   const core = dataset.characters.find((c) => c.id === coreCharacterId);
   if (!core) {
     throw new Error(`buildContext: character not found: ${coreCharacterId}`);
@@ -131,17 +152,30 @@ export function buildContext(dataset: Dataset, coreCharacterId: string): GraphSu
     }
   }
 
-  // 裁剪：core 永远保留；超限时依次裁 2度、宝物、最后才裁 1度邻居。
+  const branchCharacterIds = options.branchCharacterIds ?? new Set<string>();
+
+  // 裁剪：core 永远保留；原典节点超限时依次裁 2度、宝物、最后才裁 1度邻居。
+  // 分支新增人物不会被裁剪，也不占用 MAX_NODES 预算。
   // 每类按 id 保留前面的项，避免 relation 文件顺序变化导致 prompt 前缀变化。
-  const totalNodes = 1 + neighborMap.size + secondDegreeMap.size + artifacts.length;
+  const budgetedCount = <T extends { id: string }>(items: Iterable<T>) => (
+    Array.from(items).filter((item) => !branchCharacterIds.has(item.id)).length
+  );
+  const totalNodes = 1
+    + budgetedCount(neighborMap.values())
+    + budgetedCount(secondDegreeMap.values())
+    + artifacts.length;
   if (totalNodes > MAX_NODES) {
     let overflow = totalNodes - MAX_NODES;
     const trimMap = <T extends { id: string }>(map: Map<string, T>) => {
-      const removable = Math.min(overflow, map.size);
+      const removableNodes = Array.from(map.values())
+        .filter((item) => !branchCharacterIds.has(item.id))
+        .sort((left, right) => left.id.localeCompare(right.id));
+      const removable = Math.min(overflow, removableNodes.length);
       if (removable === 0) return;
+      const removedIds = new Set(removableNodes.slice(-removable).map((item) => item.id));
       const retained = Array.from(map.values())
-        .sort((left, right) => left.id.localeCompare(right.id))
-        .slice(0, map.size - removable);
+        .filter((item) => !removedIds.has(item.id))
+        .sort((left, right) => left.id.localeCompare(right.id));
       map.clear();
       for (const item of retained) map.set(item.id, item);
       overflow -= removable;
@@ -160,6 +194,35 @@ export function buildContext(dataset: Dataset, coreCharacterId: string): GraphSu
     trimMap(neighborMap);
   }
 
+  const branchAddedCharacters = dataset.characters
+    .filter((character) => branchCharacterIds.has(character.id))
+    .sort((left, right) => left.id.localeCompare(right.id))
+    .map((character) => ({
+      id: character.id,
+      name_zh: character.name_zh,
+      name_en: character.name_en,
+      aliases: character.aliases,
+      epithet: character.epithet,
+      category: character.category,
+      era_layer: character.era_layer,
+      bio: character.bio,
+      events: character.events,
+      quotes: character.quotes,
+    }));
+  const branchAddedRelations = dataset.relations
+    .filter((relation) => (
+      branchCharacterIds.has(relation.source) || branchCharacterIds.has(relation.target)
+    ))
+    .sort((left, right) => left.id.localeCompare(right.id))
+    .map((relation) => ({
+      id: relation.id,
+      source: relation.source,
+      target: relation.target,
+      primary_type: relation.primary_type,
+      composite_types: relation.composite_types,
+      events: relation.events,
+    }));
+
   return {
     core: {
       id: core.id,
@@ -176,6 +239,8 @@ export function buildContext(dataset: Dataset, coreCharacterId: string): GraphSu
     neighbors: Array.from(neighborMap.values()),
     secondDegree: Array.from(secondDegreeMap.values()),
     artifacts,
+    branchAddedCharacters,
+    branchAddedRelations,
   };
 }
 
