@@ -15,7 +15,7 @@ import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
 import { buildContext } from "@/lib/whatif/contextBuilder";
 import { buildSystemPrompt, buildUserPrompt, LLMParseError } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf, LLMRefusalError } from "@/lib/whatif/llmClient";
+import { generateParsedWhatIf, LLMRefusalError, type ProviderTimingEvent } from "@/lib/whatif/llmClient";
 import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
@@ -149,6 +149,28 @@ export async function POST(req: NextRequest) {
       let firstTextRecorded = false;
       let outputChars = 0;
       let recoveryCount = 0;
+      let providerRequestReadyMs: number | undefined;
+      let providerFirstTextMs: number | undefined;
+      let providerTotalMs = 0;
+      let providerAttemptCount = 0;
+      const recordProviderTiming = (event: ProviderTimingEvent) => {
+        if (event.stage === "request-ready" && providerRequestReadyMs === undefined) {
+          providerRequestReadyMs = event.elapsedMs;
+        }
+        if (event.stage === "first-text" && providerFirstTextMs === undefined) {
+          providerFirstTextMs = event.elapsedMs;
+        }
+        if (event.stage === "attempt-complete") {
+          providerTotalMs += event.elapsedMs;
+          providerAttemptCount += 1;
+        }
+      };
+      const providerTiming = () => ({
+        providerRequestReadyMs,
+        providerFirstTextMs,
+        providerTotalMs,
+        providerAttemptCount,
+      });
       const send = (event: string, data: unknown) => {
         controller.enqueue(
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
@@ -183,6 +205,7 @@ export async function POST(req: NextRequest) {
             send("status", { stage: "thinking" });
             send("reset", {});
           },
+          { onProviderTiming: recordProviderTiming },
         );
         timing.mark("modelMs", modelStartedAt);
         send("status", { stage: "finalizing" });
@@ -250,6 +273,7 @@ export async function POST(req: NextRequest) {
           promptChars: system.length + user.length,
           outputChars,
           recoveryCount,
+          ...providerTiming(),
         });
 
         // 8. 推 done 事件，带完整解析结果 + DB id + 校验结果
@@ -273,6 +297,7 @@ export async function POST(req: NextRequest) {
           promptChars: system.length + user.length,
           outputChars,
           recoveryCount,
+          ...providerTiming(),
         });
         if (!turnPersisted) {
           await releaseWhatIfQuota(req, [quotaRequestKey]);

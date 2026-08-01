@@ -8,6 +8,10 @@ export interface WhatIfTimingRecord {
   quotaReserveMs?: number;
   firstTextMs?: number;
   modelMs?: number;
+  providerRequestReadyMs?: number;
+  providerFirstTextMs?: number;
+  providerTotalMs?: number;
+  providerAttemptCount?: number;
   validationMs?: number;
   persistMs?: number;
   quotaConfirmMs?: number;

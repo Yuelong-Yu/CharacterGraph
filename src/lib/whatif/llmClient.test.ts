@@ -111,6 +111,23 @@ describe("callLLMStream", () => {
     expect(createMock).toHaveBeenCalledTimes(2);
     expect(deltas).toEqual(["complete"]);
   });
+
+  it("reports provider request, first-text, and attempt-complete timing events", async () => {
+    createMock.mockResolvedValue(eventStream(["OK"]));
+    const { callLLMStream } = await import("@/lib/whatif/llmClient");
+    const events: string[] = [];
+
+    await callLLMStream(
+      "system",
+      "user",
+      32,
+      () => {},
+      undefined,
+      { onProviderTiming: (event: { stage: string }) => events.push(event.stage) },
+    );
+
+    expect(events).toEqual(["request-ready", "first-text", "attempt-complete"]);
+  });
 });
 
 describe("generateParsedWhatIf", () => {

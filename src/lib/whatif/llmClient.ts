@@ -72,6 +72,12 @@ function isRetryableTransportError(error: unknown): boolean {
 
 let client: Anthropic | null = null;
 
+export interface ProviderTimingEvent {
+  stage: "request-ready" | "first-text" | "attempt-complete";
+  attempt: number;
+  elapsedMs: number;
+}
+
 function getClient(): Anthropic {
   if (!apiKey) {
     throw new Error("CODING_API_KEY 未设置（检查仓库根 .env）");
@@ -94,13 +100,18 @@ export async function callLLMStream(
   maxTokens: number,
   onDelta: (delta: string) => void,
   onRetry?: () => void,
-  options: { timeoutMs?: number; maxAttempts?: number } = {},
+  options: {
+    timeoutMs?: number;
+    maxAttempts?: number;
+    onProviderTiming?: (event: ProviderTimingEvent) => void;
+  } = {},
 ): Promise<void> {
   const timeoutMs = options.timeoutMs ?? 120_000;
   const maxAttempts = options.maxAttempts ?? 2;
 
   let lastError: unknown = null;
   for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const attemptStartedAt = performance.now();
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
 
@@ -118,12 +129,24 @@ export async function callLLMStream(
         },
         { signal: controller.signal },
       );
+      options.onProviderTiming?.({
+        stage: "request-ready",
+        attempt,
+        elapsedMs: Math.round(performance.now() - attemptStartedAt),
+      });
 
       for await (const event of stream) {
         if (
           event.type === "content_block_delta" &&
           event.delta.type === "text_delta"
         ) {
+          if (event.delta.text.length > 0 && !receivedText) {
+            options.onProviderTiming?.({
+              stage: "first-text",
+              attempt,
+              elapsedMs: Math.round(performance.now() - attemptStartedAt),
+            });
+          }
           if (event.delta.text.length > 0) receivedText = true;
           onDelta(event.delta.text);
         }
@@ -144,10 +167,20 @@ export async function callLLMStream(
         throw emptyError;
       }
       clearTimeout(timer);
+      options.onProviderTiming?.({
+        stage: "attempt-complete",
+        attempt,
+        elapsedMs: Math.round(performance.now() - attemptStartedAt),
+      });
       return; // 成功，直接返回
     } catch (e) {
       clearTimeout(timer);
       lastError = e;
+      options.onProviderTiming?.({
+        stage: "attempt-complete",
+        attempt,
+        elapsedMs: Math.round(performance.now() - attemptStartedAt),
+      });
       // AbortError = 超时；网络错误也重试
       const isRetryable =
         (e instanceof Error && e.name === "EmptyLLMResponseError") ||
@@ -173,6 +206,7 @@ export async function generateParsedWhatIf(
   maxTokens: number,
   onDelta: (delta: string) => void,
   onReset: () => void,
+  options: { onProviderTiming?: (event: ProviderTimingEvent) => void } = {},
 ): Promise<ParsedLLMOutput> {
   const MAX_PARSE_ATTEMPTS = 2;
   let lastParseError: LLMParseError | null = null;
@@ -197,6 +231,7 @@ export async function generateParsedWhatIf(
         fullText = "";
         onReset();
       },
+      { onProviderTiming: options.onProviderTiming },
     );
 
     try {

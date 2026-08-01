@@ -24,7 +24,7 @@ import {
   type BranchPoint,
   type PriorTurnSummary,
 } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf, LLMRefusalError } from "@/lib/whatif/llmClient";
+import { generateParsedWhatIf, LLMRefusalError, type ProviderTimingEvent } from "@/lib/whatif/llmClient";
 import { applyDiff, normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { ContinueTurnInput } from "@/schemas/whatif";
@@ -242,6 +242,28 @@ export async function POST(
       let firstTextRecorded = false;
       let outputChars = 0;
       let recoveryCount = 0;
+      let providerRequestReadyMs: number | undefined;
+      let providerFirstTextMs: number | undefined;
+      let providerTotalMs = 0;
+      let providerAttemptCount = 0;
+      const recordProviderTiming = (event: ProviderTimingEvent) => {
+        if (event.stage === "request-ready" && providerRequestReadyMs === undefined) {
+          providerRequestReadyMs = event.elapsedMs;
+        }
+        if (event.stage === "first-text" && providerFirstTextMs === undefined) {
+          providerFirstTextMs = event.elapsedMs;
+        }
+        if (event.stage === "attempt-complete") {
+          providerTotalMs += event.elapsedMs;
+          providerAttemptCount += 1;
+        }
+      };
+      const providerTiming = () => ({
+        providerRequestReadyMs,
+        providerFirstTextMs,
+        providerTotalMs,
+        providerAttemptCount,
+      });
       const send = (event: string, data: unknown) => {
         controller.enqueue(
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
@@ -276,6 +298,7 @@ export async function POST(
             send("status", { stage: "thinking" });
             send("reset", {});
           },
+          { onProviderTiming: recordProviderTiming },
         );
         timing.mark("modelMs", modelStartedAt);
         send("status", { stage: "finalizing" });
@@ -323,6 +346,7 @@ export async function POST(
           promptChars: system.length + user.length,
           outputChars,
           recoveryCount,
+          ...providerTiming(),
         });
 
         send("done", {
@@ -346,6 +370,7 @@ export async function POST(
           promptChars: system.length + user.length,
           outputChars,
           recoveryCount,
+          ...providerTiming(),
         });
         if (!turnPersisted) {
           await releaseWhatIfQuota(req, [quotaRequestKey]);
