@@ -105,6 +105,18 @@ function toProviderSystem(system: SystemPrompt) {
   ];
 }
 
+function usageFromProviderEvent(usage: {
+  input_tokens: number | null;
+  cache_read_input_tokens: number | null;
+  cache_creation_input_tokens: number | null;
+}) {
+  return {
+    inputTokens: usage.input_tokens ?? undefined,
+    cacheReadInputTokens: usage.cache_read_input_tokens ?? undefined,
+    cacheCreationInputTokens: usage.cache_creation_input_tokens ?? undefined,
+  };
+}
+
 function getClient(): Anthropic {
   if (!apiKey) {
     throw new Error("CODING_API_KEY 未设置（检查仓库根 .env）");
@@ -146,6 +158,7 @@ export async function callLLMStream(
       const c = getClient();
       let receivedText = false;
       let stopReason: string | null = null;
+      let finalUsage: ReturnType<typeof usageFromProviderEvent> | undefined;
       const stream = await c.messages.create(
         {
           model,
@@ -170,15 +183,7 @@ export async function callLLMStream(
 
       for await (const event of stream) {
         if (event.type === "message_start") {
-          const usage = event.message.usage;
-          options.onProviderTiming?.({
-            stage: "usage",
-            attempt,
-            elapsedMs: Math.round(performance.now() - attemptStartedAt),
-            inputTokens: usage.input_tokens,
-            cacheReadInputTokens: usage.cache_read_input_tokens ?? undefined,
-            cacheCreationInputTokens: usage.cache_creation_input_tokens ?? undefined,
-          });
+          finalUsage = usageFromProviderEvent(event.message.usage);
         }
         if (
           event.type === "content_block_delta" &&
@@ -196,7 +201,17 @@ export async function callLLMStream(
         }
         if (event.type === "message_delta") {
           stopReason = event.delta.stop_reason;
+          // 方舟兼容流可能只在最后一个 message_delta 中返回缓存用量。
+          finalUsage = usageFromProviderEvent(event.usage);
         }
+      }
+      if (finalUsage) {
+        options.onProviderTiming?.({
+          stage: "usage",
+          attempt,
+          elapsedMs: Math.round(performance.now() - attemptStartedAt),
+          ...finalUsage,
+        });
       }
       if (stopReason === "max_tokens") {
         const limitError = new Error(

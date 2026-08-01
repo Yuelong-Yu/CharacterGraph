@@ -194,6 +194,48 @@ describe("callLLMStream", () => {
       cacheCreationInputTokens: 0,
     }));
   });
+
+  it("uses final message usage when the provider omits cache counts from the first stream event", async () => {
+    createMock.mockResolvedValue({
+      async *[Symbol.asyncIterator]() {
+        yield {
+          type: "message_start",
+          message: {
+            usage: {
+              input_tokens: 0,
+              cache_read_input_tokens: 0,
+              cache_creation_input_tokens: 0,
+            },
+          },
+        };
+        yield {
+          type: "content_block_delta",
+          delta: { type: "text_delta", text: "OK" },
+        };
+        yield {
+          type: "message_delta",
+          delta: { stop_reason: "end_turn", stop_sequence: null },
+          usage: {
+            input_tokens: 70,
+            cache_read_input_tokens: 4096,
+            cache_creation_input_tokens: 0,
+          },
+        };
+      },
+    });
+    const { callLLMStream } = await import("@/lib/whatif/llmClient");
+    const events: unknown[] = [];
+
+    await callLLMStream("system", "user", 32, () => {}, undefined, {
+      onProviderTiming: (event) => events.push(event),
+    });
+
+    expect(events).toContainEqual(expect.objectContaining({
+      stage: "usage",
+      inputTokens: 70,
+      cacheReadInputTokens: 4096,
+    }));
+  });
 });
 
 describe("generateParsedWhatIf", () => {
