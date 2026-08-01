@@ -33,6 +33,7 @@ import type { GraphDiff, NarrativeSegment } from "@/schemas/whatif";
 import { mergeDatasetOverlay } from "@/lib/userCharacters";
 import { Dataset as DatasetSchema } from "@/schemas/character";
 import { getSessionUserFromHeaders } from "@/lib/auth";
+import { startSSEKeepAlive } from "@/lib/whatif/sse";
 import {
   confirmWhatIfQuota,
   quotaErrorResponse,
@@ -234,6 +235,7 @@ export async function POST(
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
         );
       };
+      const stopKeepAlive = startSSEKeepAlive(controller, encoder);
 
       try {
         // 8. 流式生成并解析；重试时通知客户端清空失败草稿
@@ -301,6 +303,7 @@ export async function POST(
           send("error", { code: "LLM_ERROR", message });
         }
       } finally {
+        stopKeepAlive();
         controller.close();
       }
     },

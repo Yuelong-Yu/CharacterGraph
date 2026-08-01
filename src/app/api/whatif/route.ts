@@ -21,6 +21,7 @@ import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
 import { mergeDatasetOverlay } from "@/lib/userCharacters";
 import { getSessionUserFromHeaders } from "@/lib/auth";
+import { startSSEKeepAlive } from "@/lib/whatif/sse";
 import {
   confirmWhatIfQuota,
   quotaErrorResponse,
@@ -141,6 +142,7 @@ export async function POST(req: NextRequest) {
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
         );
       };
+      const stopKeepAlive = startSSEKeepAlive(controller, encoder);
 
       try {
         // 5-6. 流式生成并解析；重试时通知客户端清空失败草稿
@@ -228,6 +230,7 @@ export async function POST(req: NextRequest) {
           send("error", { code: "LLM_ERROR", message });
         }
       } finally {
+        stopKeepAlive();
         controller.close();
       }
     },
