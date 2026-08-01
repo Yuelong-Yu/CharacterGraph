@@ -1,24 +1,12 @@
 /**
  * Prompt 组装 + LLM 输出解析
  *
- * 输出格式（用 === 分隔，避免 markdown 围栏干扰）：
- *
- *   ===DIFF===
- *   {JSON}
- *   ===NARRATIVE===
- *   【原典】...
- *   【假设】...
- *   【推演】...
- *   【杜撰】...
- *   ===CHOICES===
- *   1. ...
- *   2. ...
- *   3. ...
+ * 输出格式：一个由上游 JSON Schema 约束的 JSON 对象。
  *
  * 解析失败时抛 ParseError，调用方决定降级策略。
  */
 import type { ClientProjectConfig } from "@/schemas/projectConfig";
-import { GraphDiff, NarrativeSegment, NarrativeLabel } from "@/schemas/whatif";
+import { GraphDiff, NarrativeSegment, NarrativeLabel, WhatIfLLMOutput } from "@/schemas/whatif";
 import type { GraphSubset } from "./contextBuilder";
 import { formatSubsetForPrompt } from "./contextBuilder";
 
@@ -36,6 +24,153 @@ export interface SystemPromptOptions {
   /** 完整项目中的已有角色简表，用来避免 LLM 重复新增已有角色。 */
   knownCharacters?: Array<{ id: string; name_zh: string }>;
 }
+
+/**
+ * 方舟 Anthropic 兼容端点的 output_config.format 使用的 JSON Schema。
+ * 它镜像 WhatIfLLMOutput 的外部契约；本地仍以 Zod 作最终校验和默认值补全。
+ */
+export const WHAT_IF_OUTPUT_JSON_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["diff", "narrative", "choices"],
+  properties: {
+    narrative: { type: "array", items: { $ref: "#/$defs/narrativeSegment" } },
+    diff: { $ref: "#/$defs/graphDiff" },
+    choices: { type: "array", items: { type: "string" } },
+  },
+  $defs: {
+    slug: { type: "string", pattern: "^[a-z][a-z0-9_]*$" },
+    canon: { enum: ["romance", "history", "both"] },
+    citation: {
+      type: "object",
+      additionalProperties: false,
+      required: ["work"],
+      properties: {
+        work: { type: "string" },
+        locus: { anyOf: [{ type: "string" }, { type: "null" }] },
+        translator: { anyOf: [{ type: "string" }, { type: "null" }] },
+      },
+    },
+    characterEvent: {
+      type: "object",
+      additionalProperties: false,
+      required: ["title", "desc"],
+      properties: {
+        title: { type: "string" },
+        desc: { type: "string" },
+        source: { anyOf: [{ $ref: "#/$defs/citation" }, { type: "null" }] },
+        canon: { anyOf: [{ $ref: "#/$defs/canon" }, { type: "null" }] },
+      },
+    },
+    quote: {
+      type: "object",
+      additionalProperties: false,
+      required: ["text", "source"],
+      properties: {
+        text: { type: "string" },
+        source: { $ref: "#/$defs/citation" },
+        canon: { anyOf: [{ $ref: "#/$defs/canon" }, { type: "null" }] },
+      },
+    },
+    character: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "schema_version", "id", "name_zh", "name_en", "epithet", "category",
+        "era_layer", "bio", "portrait", "thumb",
+      ],
+      properties: {
+        schema_version: { type: "integer", minimum: 1, maximum: 3 },
+        id: { $ref: "#/$defs/slug" },
+        name_zh: { type: "string" },
+        name_en: { type: "string" },
+        aliases: { type: "array", items: { type: "string" } },
+        epithet: { anyOf: [{ type: "string" }, { type: "null" }] },
+        category: { $ref: "#/$defs/slug" },
+        era_layer: { type: "integer", minimum: 0, maximum: 5 },
+        bio: { anyOf: [{ type: "string" }, { type: "null" }] },
+        events: { type: "array", items: { $ref: "#/$defs/characterEvent" } },
+        quotes: { type: "array", items: { $ref: "#/$defs/quote" } },
+        weapons: { type: "array", items: { type: "string" } },
+        skills: { type: "array", items: { type: "string" } },
+        domains: { type: "array", items: { type: "string" } },
+        mounts: { type: "array", items: { type: "string" } },
+        portrait: { type: "string" },
+        thumb: { type: "string" },
+      },
+    },
+    relationEvent: {
+      type: "object",
+      additionalProperties: false,
+      required: ["title", "desc", "era_order"],
+      properties: {
+        title: { type: "string" },
+        desc: { type: "string" },
+        desc_long: { anyOf: [{ type: "string" }, { type: "null" }] },
+        source: { anyOf: [{ $ref: "#/$defs/citation" }, { type: "null" }] },
+        canon: { anyOf: [{ $ref: "#/$defs/canon" }, { type: "null" }] },
+        era_order: { type: "integer", minimum: 0 },
+      },
+    },
+    relation: {
+      type: "object",
+      additionalProperties: false,
+      required: ["schema_version", "id", "source", "target", "primary_type"],
+      properties: {
+        schema_version: { type: "integer", minimum: 1, maximum: 3 },
+        id: { type: "string" },
+        source: { type: "string" },
+        target: { type: "string" },
+        primary_type: { $ref: "#/$defs/slug" },
+        composite_types: { type: "array", items: { $ref: "#/$defs/slug" } },
+        events: { type: "array", items: { $ref: "#/$defs/relationEvent" } },
+      },
+    },
+    modifiedEvent: {
+      type: "object",
+      additionalProperties: false,
+      required: ["characterId", "eventIndex", "newEvent"],
+      properties: {
+        characterId: { type: "string" },
+        eventIndex: { type: "integer", minimum: 0 },
+        newEvent: { $ref: "#/$defs/characterEvent" },
+      },
+    },
+    replacedEvents: {
+      type: "object",
+      additionalProperties: false,
+      required: ["characterId", "newEvents"],
+      properties: {
+        characterId: { type: "string" },
+        newEvents: { type: "array", items: { $ref: "#/$defs/characterEvent" } },
+      },
+    },
+    graphDiff: {
+      type: "object",
+      additionalProperties: false,
+      required: ["removedNodes", "addedNodes", "removedEdges", "addedEdges", "modifiedEvents", "replacedEvents"],
+      properties: {
+        removedNodes: { type: "array", items: { type: "string" } },
+        addedNodes: { type: "array", items: { $ref: "#/$defs/character" } },
+        removedEdges: { type: "array", items: { type: "string" } },
+        addedEdges: { type: "array", items: { $ref: "#/$defs/relation" } },
+        modifiedEvents: { type: "array", items: { $ref: "#/$defs/modifiedEvent" } },
+        replacedEvents: { type: "array", items: { $ref: "#/$defs/replacedEvents" } },
+      },
+    },
+    narrativeSegment: {
+      type: "object",
+      additionalProperties: false,
+      required: ["label", "text"],
+      properties: {
+        label: { enum: ["原典", "假设", "推演", "杜撰"] },
+        text: { type: "string" },
+        citation: { anyOf: [{ $ref: "#/$defs/citation" }, { type: "null" }] },
+        characterIds: { type: "array", items: { type: "string" } },
+      },
+    },
+  },
+} as const;
 
 function equalPromptValue(left: unknown, right: unknown): boolean {
   return JSON.stringify(left) === JSON.stringify(right);
@@ -156,57 +291,57 @@ ${knownCharacters}
 - 新增 relation 的 id 必须是 source/target 按字典序用 - 连接（如 a-b，a 字典序小于 b）
 - DIFF 中所有新增或改写事件的 source.work 必须写成对应的“著作名-改编”，不要带《》；例如“水浒传-改编”“伊利亚特-改编”，绝不能直接写原著名。
 
-# 输出格式（严格遵守，用 === 分隔，不要加 markdown 围栏）
-===DIFF===
+# 输出格式（严格遵守）
+输出一个**唯一的 JSON 对象**，不要 markdown 围栏、分隔符或任何额外文字。上游会按 JSON Schema 校验结构；字段必须使用如下形状：
 {
-  "removedNodes": ["character_id"],
-  "addedNodes": [
-    {
-      "schema_version": 3,
-      "id": "slug",
-      "name_zh": "中文名",
-      "name_en": "English Name",
-      "aliases": [],
-      "epithet": "绰号或 null",
-      "category": "合法分类",
-      "era_layer": 1,
-      "bio": "人物简介",
-      "events": [],
-      "quotes": [],
-      "weapons": [],
-      "skills": [],
-      "domains": [],
-      "mounts": [],
-      "portrait": "",
-      "thumb": ""
-    }
+  "narrative": [
+    {"label": "原典", "text": "第一段叙事..."},
+    {"label": "假设", "text": "已经成立的分支前提或前情..."},
+    {"label": "推演", "text": "本轮合理推导..."},
+    {"label": "杜撰", "text": "本轮创造性补充..."}
   ],
-  "removedEdges": ["source-target"],
-  "addedEdges": [
-    {
-      "schema_version": 3,
-      "id": "a-b",
-      "source": "a",
-      "target": "b",
-      "primary_type": "合法关系类型",
-      "composite_types": [],
-      "events": []
-    }
-  ],
-  "modifiedEvents": [
-    {"characterId": "id", "eventIndex": 0, "newEvent": {"title": "...", "desc": "...", "source": {"work": "著作名-改编", "locus": null, "translator": null}}}
-  ],
-  "replacedEvents": []
+  "diff": {
+    "removedNodes": ["character_id"],
+    "addedNodes": [
+      {
+        "schema_version": 3,
+        "id": "slug",
+        "name_zh": "中文名",
+        "name_en": "English Name",
+        "aliases": [],
+        "epithet": "绰号或 null",
+        "category": "合法分类",
+        "era_layer": 1,
+        "bio": "人物简介",
+        "events": [],
+        "quotes": [],
+        "weapons": [],
+        "skills": [],
+        "domains": [],
+        "mounts": [],
+        "portrait": "",
+        "thumb": ""
+      }
+    ],
+    "removedEdges": ["source-target"],
+    "addedEdges": [
+      {
+        "schema_version": 3,
+        "id": "a-b",
+        "source": "a",
+        "target": "b",
+        "primary_type": "合法关系类型",
+        "composite_types": [],
+        "events": []
+      }
+    ],
+    "modifiedEvents": [
+      {"characterId": "id", "eventIndex": 0, "newEvent": {"title": "...", "desc": "...", "source": {"work": "著作名-改编", "locus": null, "translator": null}}}
+    ],
+    "replacedEvents": []
+  },
+  "choices": ["选项一描述", "选项二描述", "选项三描述"]
 }
-===NARRATIVE===
-【原典】第一段叙事...
-【假设】已经成立的分支前提或前情...
-【推演】本轮合理推导...
-【杜撰】本轮创造性补充...
-===CHOICES===
-1. 选项一描述
-2. 选项二描述
-3. 选项三描述
 
 # 图谱变化原则（严格遵守，避免过度激进）
 **核心原则：局部影响。** 一个事件的改变通常只影响直接相关的人物，不应连锁删除远亲节点。
@@ -236,8 +371,9 @@ ${knownCharacters}
 
 # 重要约束
 - 首轮叙事至少包含 1 段【原典】、1 段【假设】和 1 段【推演】；续写若回顾前情必须标【假设】，不得为了凑段落把假设改标为【原典】。
-- choices 必须是 2-3 个，每个一行，用 "数字. " 开头。
-- 不要输出 === 分隔符以外的任何解释性文字。
+- narrative 中每段都必须有 label 和 text；label 只能是【原典】、【假设】、【推演】、【杜撰】去掉方括号后的值。
+- choices 必须是 2-3 个字符串，不要添加 "1. " 等编号前缀。
+- 不要输出 JSON 对象以外的任何解释性文字。
 - **再次强调：removedNodes 要极度克制，不要因为「连锁影响」就删除大量远亲节点。**`;
 }
 
@@ -299,7 +435,7 @@ ${userInput}
 
 # 要求
 基于前文和当前图谱状态，继续推演下一 turn。
-- 输出格式同 system prompt 规定（===DIFF=== / ===NARRATIVE=== / ===CHOICES===）
+- 输出格式同 system prompt 规定的单一 JSON 对象
 - diff 是相对**当前图谱状态**的增量（不是相对原始图谱）
 - 前文中的【假设】是当前分支已成立的事实，但仍不是原典
 - 叙事要承接前文，不要重复已发生的事
@@ -332,10 +468,48 @@ const SEPARATOR_NARRATIVE = "===NARRATIVE===";
 const SEPARATOR_CHOICES = "===CHOICES===";
 
 /**
- * 解析 LLM 输出。失败时抛 LLMParseError（带 raw 原文便于调试）。
+ * 解析 LLM 输出。主路径为单一 JSON 对象；保留旧文本协议的解析仅用于
+ * 已在途请求的兼容性兜底，新的请求始终由 JSON Schema 约束。
  */
 export function parseLLMOutput(raw: string): ParsedLLMOutput {
   const text = raw.trim();
+
+  if (text.startsWith("{")) {
+    return parseStructuredOutput(text, raw);
+  }
+
+  return parseLegacyLLMOutput(text, raw);
+}
+
+function parseStructuredOutput(text: string, raw: string): ParsedLLMOutput {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    throw new LLMParseError("模型输出不是合法 JSON", raw);
+  }
+
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+    throw new LLMParseError("模型输出必须是 JSON 对象", raw);
+  }
+
+  const output = parsed as Record<string, unknown>;
+  if (output.diff && typeof output.diff === "object") {
+    sanitizeDiffJson(output.diff);
+  }
+
+  const result = WhatIfLLMOutput.safeParse(output);
+  if (!result.success) {
+    throw new LLMParseError(
+      `JSON 输出 Zod 校验失败: ${JSON.stringify(result.error.flatten())}`,
+      raw,
+    );
+  }
+
+  return result.data;
+}
+
+function parseLegacyLLMOutput(text: string, raw: string): ParsedLLMOutput {
 
   // 定位三个分隔符
   const diffStart = text.indexOf(SEPARATOR_DIFF);

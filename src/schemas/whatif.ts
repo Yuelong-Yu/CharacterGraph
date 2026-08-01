@@ -48,6 +48,14 @@ export const NarrativeSegment = z.object({
 });
 export type NarrativeSegment = z.infer<typeof NarrativeSegment>;
 
+/** 模型单次推演的完整结构化输出。 */
+export const WhatIfLLMOutput = z.object({
+  diff: GraphDiff,
+  narrative: z.array(NarrativeSegment),
+  choices: z.array(z.string()),
+});
+export type WhatIfLLMOutput = z.infer<typeof WhatIfLLMOutput>;
+
 // ─────────────────────────────────────────────────────────────
 // ValidationResult - 事后幻觉校验结果
 // ─────────────────────────────────────────────────────────────

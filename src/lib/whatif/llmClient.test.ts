@@ -128,6 +128,25 @@ describe("callLLMStream", () => {
 
     expect(events).toEqual(["request-ready", "first-text", "attempt-complete"]);
   });
+
+  it("requests the single JSON Schema output contract from the provider", async () => {
+    createMock.mockResolvedValue(eventStream(["OK"]));
+    const { callLLMStream } = await import("@/lib/whatif/llmClient");
+
+    await callLLMStream("system", "user", 32, () => {});
+
+    expect(createMock.mock.calls[0][0]).toMatchObject({
+      output_config: {
+        format: {
+          type: "json_schema",
+          schema: {
+            type: "object",
+            required: ["diff", "narrative", "choices"],
+          },
+        },
+      },
+    });
+  });
 });
 
 describe("generateParsedWhatIf", () => {
@@ -142,13 +161,19 @@ describe("generateParsedWhatIf", () => {
   });
 
   it("regenerates once when the first complete response cannot be parsed", async () => {
-    const invalid = `===DIFF===\n{not-json}\n===NARRATIVE===\n【推演】失败草稿\n===CHOICES===\n1. 失败选项`;
-    const valid = `===DIFF===
-{"removedNodes":[],"addedNodes":[],"removedEdges":[],"addedEdges":[],"modifiedEvents":[],"replacedEvents":[]}
-===NARRATIVE===
-【推演】第二次生成成功。
-===CHOICES===
-1. 继续推演`;
+    const invalid = '{"diff": {not-json}}';
+    const valid = JSON.stringify({
+      diff: {
+        removedNodes: [],
+        addedNodes: [],
+        removedEdges: [],
+        addedEdges: [],
+        modifiedEvents: [],
+        replacedEvents: [],
+      },
+      narrative: [{ label: "推演", text: "第二次生成成功。" }],
+      choices: ["继续推演"],
+    });
     createMock
       .mockResolvedValueOnce(eventStream([invalid]))
       .mockResolvedValueOnce(eventStream([valid]));

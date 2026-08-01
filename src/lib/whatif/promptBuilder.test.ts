@@ -6,6 +6,7 @@ import {
   buildContinuationUserPrompt,
   buildSystemPrompt,
   parseLLMOutput,
+  WHAT_IF_OUTPUT_JSON_SCHEMA,
   LLMParseError,
 } from "@/lib/whatif/promptBuilder";
 import type { GraphSubset } from "@/lib/whatif/contextBuilder";
@@ -69,6 +70,33 @@ const testConfig = {
 } satisfies ClientProjectConfig;
 
 describe("parseLLMOutput", () => {
+  it("parses the single JSON output contract", () => {
+    const raw = JSON.stringify({
+      narrative: [
+        { label: "原典", text: "奥德修斯终将返乡。" },
+        { label: "推演", text: "他的行程因此改变。" },
+      ],
+      diff: {
+        removedNodes: [],
+        addedNodes: [],
+        removedEdges: [],
+        addedEdges: [],
+        modifiedEvents: [],
+        replacedEvents: [],
+      },
+      choices: ["继续航行", "先返回伊塔刻"],
+    });
+
+    const result = parseLLMOutput(raw);
+
+    expect(result.narrative[0]).toMatchObject({ label: "原典", text: "奥德修斯终将返乡。" });
+    expect(result.choices).toEqual(["继续航行", "先返回伊塔刻"]);
+  });
+
+  it("rejects invalid JSON objects instead of falling back to text delimiters", () => {
+    expect(() => parseLLMOutput('{"diff": {bad-json}')).toThrow("模型输出不是合法 JSON");
+  });
+
   it("parses strict format (=== separators)", () => {
     const raw = `===DIFF===
 {
@@ -372,6 +400,21 @@ no labels here
 });
 
 describe("multi-turn prompt provenance", () => {
+  it("requires the single JSON object output contract", () => {
+    const prompt = buildSystemPrompt(makeSubset("原典事件"), testConfig);
+
+    expect(prompt).toContain("唯一的 JSON 对象");
+    expect(prompt).toContain('"narrative"');
+    expect(prompt).not.toContain("===DIFF===");
+    expect(WHAT_IF_OUTPUT_JSON_SCHEMA).toMatchObject({
+      type: "object",
+      required: ["diff", "narrative", "choices"],
+      properties: {
+        diff: { $ref: "#/$defs/graphDiff" },
+      },
+    });
+  });
+
   it("separates immutable canon from a compact current branch delta", () => {
     const canonicalSubset = makeSubset("原典事件");
     canonicalSubset.core.bio = "这段不可变原典简介只能出现一次";

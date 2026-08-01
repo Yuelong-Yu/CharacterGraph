@@ -2,41 +2,30 @@ import { describe, expect, it } from "vitest";
 import { extractStreamingNarrative } from "./streamingNarrative";
 
 describe("extractStreamingNarrative", () => {
-  it("hides diff output until the narrative section starts", () => {
-    const raw = `===DIFF===
-{
-  "removedNodes": [],
-  "addedNodes": []
-}`;
+  it("keeps the stream empty until a narrative item is complete", () => {
+    const raw = '{"narrative":[{"label":"推演","text":"奥德修斯改变';
 
     expect(extractStreamingNarrative(raw)).toBe("");
   });
 
-  it("returns only the narrative section", () => {
-    const raw = `===DIFF===
-{"removedNodes":[]}
-===NARRATIVE===
-【推演】奥德修斯改变了返乡的路线。
-===CHOICES===
-1. 继续前行`;
+  it("renders completed narrative objects and hides diff/choices", () => {
+    const raw = `{
+      "narrative": [
+        {"label":"原典","text":"奥德修斯终将返乡。"},
+        {"label":"推演","text":"他改变了返乡的路线。"}
+      ],
+      "diff": {"removedNodes": []},
+      "choices": ["继续"]
+    }`;
 
-    expect(extractStreamingNarrative(raw)).toBe("【推演】奥德修斯改变了返乡的路线。\n");
+    expect(extractStreamingNarrative(raw)).toBe(
+      "【原典】奥德修斯终将返乡。\n【推演】他改变了返乡的路线。",
+    );
   });
 
-  it("holds back a partially streamed choices separator", () => {
-    const raw = `===DIFF===
-{}
-===NARRATIVE===
-【推演】故事仍在继续。
-===CHOI`;
+  it("handles escaped quotes in a completed narrative string", () => {
+    const raw = '{"narrative":[{"label":"假设","text":"他说：\\"继续前进\\"。"}],"diff":';
 
-    expect(extractStreamingNarrative(raw)).toBe("【推演】故事仍在继续。\n");
-  });
-
-  it("supports narrative separator text split across stream chunks", () => {
-    expect(extractStreamingNarrative("===DIFF===\n{}\n===NARR")).toBe("");
-    expect(
-      extractStreamingNarrative("===DIFF===\n{}\n===NARRATIVE===\n【假设】新的前提成立。"),
-    ).toBe("【假设】新的前提成立。");
+    expect(extractStreamingNarrative(raw)).toBe("【假设】他说：\"继续前进\"。");
   });
 });

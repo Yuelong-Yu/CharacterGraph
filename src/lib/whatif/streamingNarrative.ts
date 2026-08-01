@@ -1,42 +1,79 @@
-const NARRATIVE_SEPARATOR = "===NARRATIVE===";
-const CONTROL_SEPARATORS = [
-  "===CHOICES===",
-  "===DIFF===",
-  NARRATIVE_SEPARATOR,
-] as const;
-
-function removeTrailingSeparatorPrefix(text: string): string {
-  for (const separator of CONTROL_SEPARATORS) {
-    for (let length = separator.length - 1; length > 0; length--) {
-      const prefix = separator.slice(0, length);
-      if (text.endsWith(prefix)) {
-        return text.slice(0, -length);
-      }
-    }
-  }
-  return text;
+interface PartialNarrativeSegment {
+  label?: unknown;
+  text?: unknown;
 }
 
 /**
- * Extracts the user-facing story from the model's structured streaming output.
- * DIFF, control separators, and choices remain available to the final parser but
- * never enter the visible stream.
+ * 从尚未完成的根 JSON 中提取已闭合的 narrative 条目。
+ * 不能对完整 raw 直接 JSON.parse，因为流式传输中最后一个条目通常未闭合。
  */
-export function extractStreamingNarrative(raw: string): string {
-  const narrativeStart = raw.indexOf(NARRATIVE_SEPARATOR);
-  if (narrativeStart < 0) return "";
+function completeNarrativeItems(raw: string): PartialNarrativeSegment[] {
+  const narrativeMatch = /"narrative"\s*:\s*\[/.exec(raw);
+  if (!narrativeMatch) return [];
 
-  const contentStart = narrativeStart + NARRATIVE_SEPARATOR.length;
-  let narrative = raw.slice(contentStart);
+  const items: PartialNarrativeSegment[] = [];
+  let index = narrativeMatch.index + narrativeMatch[0].length;
 
-  const boundaryIndexes = CONTROL_SEPARATORS
-    .map((separator) => narrative.indexOf(separator))
-    .filter((index) => index >= 0);
-  if (boundaryIndexes.length > 0) {
-    narrative = narrative.slice(0, Math.min(...boundaryIndexes));
-  } else {
-    narrative = removeTrailingSeparatorPrefix(narrative);
+  while (index < raw.length) {
+    while (/\s|,/.test(raw[index] ?? "")) index += 1;
+    if (raw[index] !== "{") break;
+
+    const start = index;
+    let depth = 0;
+    let inString = false;
+    let escaped = false;
+    let completeAt = -1;
+
+    for (; index < raw.length; index += 1) {
+      const character = raw[index];
+      if (inString) {
+        if (escaped) {
+          escaped = false;
+        } else if (character === "\\") {
+          escaped = true;
+        } else if (character === '"') {
+          inString = false;
+        }
+        continue;
+      }
+      if (character === '"') {
+        inString = true;
+      } else if (character === "{") {
+        depth += 1;
+      } else if (character === "}") {
+        depth -= 1;
+        if (depth === 0) {
+          completeAt = index + 1;
+          break;
+        }
+      }
+    }
+
+    if (completeAt < 0) break;
+    try {
+      const item = JSON.parse(raw.slice(start, completeAt));
+      if (item && typeof item === "object" && !Array.isArray(item)) {
+        items.push(item as PartialNarrativeSegment);
+      }
+    } catch {
+      // 上游 JSON Schema 仍可能偶发不合规；等待最终本地 Zod 校验处理。
+    }
+    index = completeAt;
   }
 
-  return narrative.replace(/^\s+/, "");
+  return items;
+}
+
+/**
+ * Extracts completed, user-facing story paragraphs from the JSON streaming output.
+ * The final parser remains authoritative; incomplete JSON never enters the visible stream.
+ */
+export function extractStreamingNarrative(raw: string): string {
+  return completeNarrativeItems(raw)
+    .flatMap(({ label, text }) => (
+      typeof label === "string" && typeof text === "string" && text.trim()
+        ? [`【${label}】${text}`]
+        : []
+    ))
+    .join("\n");
 }

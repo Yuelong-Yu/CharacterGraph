@@ -12,6 +12,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import {
   LLMParseError,
   parseLLMOutput,
+  WHAT_IF_OUTPUT_JSON_SCHEMA,
   type ParsedLLMOutput,
 } from "@/lib/whatif/promptBuilder";
 
@@ -125,6 +126,12 @@ export async function callLLMStream(
           max_tokens: maxTokens,
           system,
           messages: [{ role: "user", content: user }],
+          output_config: {
+            format: {
+              type: "json_schema",
+              schema: WHAT_IF_OUTPUT_JSON_SCHEMA,
+            },
+          },
           stream: true,
         },
         { signal: controller.signal },
