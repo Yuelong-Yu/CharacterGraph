@@ -134,6 +134,8 @@
 }
 
 .mobile-detail-sheet {
+  /* Keep the details readable in browsers that cannot resolve oklch() theme values. */
+  background: #fff;
   background: var(--mobile-panel);
   border-top: 1px solid var(--mobile-border);
   border-radius: 18px 18px 0 0;
