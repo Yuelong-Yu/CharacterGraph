@@ -34,6 +34,7 @@ import { mergeDatasetOverlay } from "@/lib/userCharacters";
 import { Dataset as DatasetSchema } from "@/schemas/character";
 import { getSessionUserFromHeaders } from "@/lib/auth";
 import { startSSEKeepAlive } from "@/lib/whatif/sse";
+import { createWhatIfTiming } from "@/lib/whatif/timing";
 import {
   confirmWhatIfQuota,
   quotaErrorResponse,
@@ -61,6 +62,8 @@ export async function POST(
   req: NextRequest,
   { params }: { params: Promise<{ sessionId: string }> },
 ) {
+  const requestStartedAt = performance.now();
+  const timing = createWhatIfTiming("continue");
   const accountUser = getSessionUserFromHeaders(req.headers);
   if (!accountUser) {
     return NextResponse.json({ error: "请先登录后续写推演", code: "LOGIN_REQUIRED" }, { status: 401 });
@@ -200,11 +203,16 @@ export async function POST(
     knownCharacters: effectiveDataset.characters.map(({ id, name_zh }) => ({ id, name_zh })),
   });
   const user = buildContinuationUserPrompt(branchPoint, priorSummaries, input.userInput);
+  timing.mark("preparationMs", requestStartedAt);
 
   const quotaRequestKey = `charactergraph:whatif:${crypto.randomUUID()}`;
+  const quotaReserveStartedAt = performance.now();
   try {
     await reserveWhatIfQuota(req, [quotaRequestKey], "whatif_continue");
+    timing.mark("quotaReserveMs", quotaReserveStartedAt);
   } catch (error) {
+    timing.mark("quotaReserveMs", quotaReserveStartedAt);
+    timing.report("error", { errorCode: "QUOTA_RESERVE_FAILED", promptChars: system.length + user.length });
     return quotaErrorResponse(error) ?? NextResponse.json(
       { error: "AI 额度服务暂时不可用，请稍后重试。", code: "QUOTA_SERVICE_UNAVAILABLE" },
       { status: 503 },
@@ -230,6 +238,10 @@ export async function POST(
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       let turnPersisted = false;
+      let firstTextReceived = false;
+      let firstTextRecorded = false;
+      let outputChars = 0;
+      let recoveryCount = 0;
       const send = (event: string, data: unknown) => {
         controller.enqueue(
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
@@ -238,16 +250,38 @@ export async function POST(
       const stopKeepAlive = startSSEKeepAlive(controller, encoder);
 
       try {
+        send("status", { stage: "thinking" });
+        const modelStartedAt = performance.now();
         // 8. 流式生成并解析；重试时通知客户端清空失败草稿
         const llmOutput = await generateParsedWhatIf(
           system,
           user,
           8192,
-          (delta) => send("delta", { text: delta }),
-          () => send("reset", {}),
+          (delta) => {
+            if (!firstTextReceived) {
+              firstTextReceived = true;
+              send("status", { stage: "generating" });
+            }
+            if (!firstTextRecorded) {
+              firstTextRecorded = true;
+              timing.mark("firstTextMs", requestStartedAt);
+            }
+            outputChars += delta.length;
+            send("delta", { text: delta });
+          },
+          () => {
+            firstTextReceived = false;
+            outputChars = 0;
+            recoveryCount += 1;
+            send("status", { stage: "thinking" });
+            send("reset", {});
+          },
         );
+        timing.mark("modelMs", modelStartedAt);
+        send("status", { stage: "finalizing" });
 
         // 8.5 清理重复新增；原典校验始终基于不可变 base dataset
+        const validationStartedAt = performance.now();
         const diff = normalizeDiffAgainstDataset(effectiveDataset, llmOutput.diff, {
           premise: input.userInput,
           narrative: llmOutput.narrative,
@@ -258,9 +292,11 @@ export async function POST(
           diff,
           priorTurns.map((turn) => turn.diff),
         );
+        timing.mark("validationMs", validationStartedAt);
 
         // 9. 落库新 turn
         // order 基于 branch 自己的 turns（不含 parent inherited），fork 后第一 turn order=1
+        const persistStartedAt = performance.now();
         const allBranchTurns = branch.turns as unknown as PrismaTurn[];
         const nextOrder = Math.max(0, ...allBranchTurns.map((turn) => turn.order)) + 1;
         const newTurn = await prisma.whatIfTurn.create({
@@ -277,8 +313,17 @@ export async function POST(
             validation: validation as unknown as object,
           },
         });
+        timing.mark("persistMs", persistStartedAt);
         turnPersisted = true;
+        const quotaConfirmStartedAt = performance.now();
         await confirmWhatIfQuota(req, [quotaRequestKey]);
+        timing.mark("quotaConfirmMs", quotaConfirmStartedAt);
+
+        timing.report("success", {
+          promptChars: system.length + user.length,
+          outputChars,
+          recoveryCount,
+        });
 
         send("done", {
           turnId: newTurn.id,
@@ -291,6 +336,17 @@ export async function POST(
           validation,
         });
       } catch (e) {
+        const errorCode = e instanceof LLMRefusalError
+          ? "LLM_REFUSAL"
+          : e instanceof LLMParseError
+            ? "PARSE_ERROR"
+            : "LLM_ERROR";
+        timing.report("error", {
+          errorCode,
+          promptChars: system.length + user.length,
+          outputChars,
+          recoveryCount,
+        });
         if (!turnPersisted) {
           await releaseWhatIfQuota(req, [quotaRequestKey]);
         }

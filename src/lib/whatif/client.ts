@@ -15,7 +15,10 @@ import type {
   ValidationResult,
 } from "@/schemas/whatif";
 
+export type WhatIfGenerationStage = "thinking" | "generating" | "finalizing";
+
 export interface WhatIfStreamHandlers {
+  onStatus?: (stage: WhatIfGenerationStage) => void;
   onDelta: (text: string) => void;
   onReset: () => void;
   onDone: (data: {
@@ -73,7 +76,12 @@ export async function streamWhatIf(
         continue;
       }
 
-      if (value.event === "delta") {
+      if (value.event === "status") {
+        const status = data as { stage?: unknown };
+        if (status.stage === "thinking" || status.stage === "generating" || status.stage === "finalizing") {
+          handlers.onStatus?.(status.stage);
+        }
+      } else if (value.event === "delta") {
         const d = data as { text?: string };
         if (typeof d.text === "string") handlers.onDelta(d.text);
       } else if (value.event === "reset") {
@@ -106,6 +114,7 @@ export interface ContinueTurnDoneData {
 }
 
 export interface ContinueTurnHandlers {
+  onStatus?: (stage: WhatIfGenerationStage) => void;
   onDelta: (text: string) => void;
   onReset: () => void;
   onDone: (data: ContinueTurnDoneData) => void;
@@ -154,7 +163,12 @@ export async function streamContinueTurn(
         continue;
       }
 
-      if (value.event === "delta") {
+      if (value.event === "status") {
+        const status = data as { stage?: unknown };
+        if (status.stage === "thinking" || status.stage === "generating" || status.stage === "finalizing") {
+          handlers.onStatus?.(status.stage);
+        }
+      } else if (value.event === "delta") {
         const d = data as { text?: string };
         if (typeof d.text === "string") handlers.onDelta(d.text);
       } else if (value.event === "reset") {

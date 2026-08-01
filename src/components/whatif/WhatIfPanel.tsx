@@ -38,6 +38,7 @@ import type { SessionUser } from "@/lib/auth";
 import { fetchSessionUser } from "@/lib/authClient";
 import { AiQuotaRequestError } from "@/lib/aiQuotaError";
 import { requestChronChaosUpgrade } from "@chronchaos/top-navigation";
+import type { WhatIfGenerationStage } from "@/lib/whatif/client";
 
 interface Props {
   isOpen: boolean;
@@ -60,7 +61,15 @@ interface StreamingState {
   text: string;
   /** 在 displayTurns 中的索引位置（committed turns 之后追加） */
   isContinue: boolean; // false = 首轮, true = 续写
+  stage: "preparing" | WhatIfGenerationStage;
 }
+
+const streamingStageLabel: Record<StreamingState["stage"], string> = {
+  preparing: "正在准备图谱与连接模型…",
+  thinking: "模型正在构思推演…",
+  generating: "正在生成内容…",
+  finalizing: "正在校验并保存…",
+};
 
 export function WhatIfPanel({
   isOpen,
@@ -183,7 +192,7 @@ export function WhatIfPanel({
 
   const handleStart = useCallback(async (allowUpgrade = true) => {
     setError(null);
-    setStreaming({ text: "", isContinue: false });
+    setStreaming({ text: "", isContinue: false, stage: "preparing" });
 
     const controller = new AbortController();
     abortRef.current = controller;
@@ -200,11 +209,14 @@ export function WhatIfPanel({
           datasetOverlay,
         },
         {
+          onStatus: (stage) => {
+            setStreaming((prev) => (prev ? { ...prev, stage } : prev));
+          },
           onDelta: (text) => {
-            setStreaming((prev) => (prev ? { ...prev, text: prev.text + text } : prev));
+            setStreaming((prev) => (prev ? { ...prev, stage: "generating", text: prev.text + text } : prev));
           },
           onReset: () => {
-            setStreaming((prev) => (prev ? { ...prev, text: "" } : prev));
+            setStreaming((prev) => (prev ? { ...prev, stage: "thinking", text: "" } : prev));
           },
           onDone: async (data) => {
             setStreaming(null);
@@ -256,7 +268,7 @@ export function WhatIfPanel({
     if (!sessionDetail || !activeBranch) return;
     setError(null);
     setFreeInput("");
-    setStreaming({ text: "", isContinue: true });
+    setStreaming({ text: "", isContinue: true, stage: "preparing" });
 
     const controller = new AbortController();
     abortRef.current = controller;
@@ -267,11 +279,14 @@ export function WhatIfPanel({
         userInput,
         datasetOverlay,
         {
+          onStatus: (stage) => {
+            setStreaming((prev) => (prev ? { ...prev, stage } : prev));
+          },
           onDelta: (text) => {
-            setStreaming((prev) => (prev ? { ...prev, text: prev.text + text } : prev));
+            setStreaming((prev) => (prev ? { ...prev, stage: "generating", text: prev.text + text } : prev));
           },
           onReset: () => {
-            setStreaming((prev) => (prev ? { ...prev, text: "" } : prev));
+            setStreaming((prev) => (prev ? { ...prev, stage: "thinking", text: "" } : prev));
           },
           onDone: async () => {
             setStreaming(null);
@@ -540,7 +555,7 @@ export function WhatIfPanel({
               }}
             >
               <span>
-                ── Turn {i + 1} {turn.isStreaming ? "(生成中)" : ""}
+                ── Turn {i + 1} {turn.isStreaming ? `(${streamingStageLabel[streaming?.stage ?? "preparing"]})` : ""}
                 {turn.status === "stale" ? "（待重新推演）" : ""}
                 {turn.status === "updating" ? "（更新中）" : ""}
               </span>
@@ -563,6 +578,12 @@ export function WhatIfPanel({
                 </span>
               )}
             </div>
+
+            {turn.isStreaming && !turn.streamingText && (
+              <div role="status" aria-live="polite" style={{ color: "#8cb4d8", fontSize: 13, marginBottom: 12 }}>
+                {streamingStageLabel[streaming?.stage ?? "preparing"]}
+              </div>
+            )}
 
             {turn.turnId && versionPicker?.turnId === turn.turnId && (
               <div style={{ padding: 8, marginBottom: 8, background: "#242424", border: "1px solid #3a3a3a", fontSize: 11 }}>

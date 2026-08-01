@@ -22,6 +22,7 @@ import { CreateWhatIfSessionInput } from "@/schemas/whatif";
 import { mergeDatasetOverlay } from "@/lib/userCharacters";
 import { getSessionUserFromHeaders } from "@/lib/auth";
 import { startSSEKeepAlive } from "@/lib/whatif/sse";
+import { createWhatIfTiming } from "@/lib/whatif/timing";
 import {
   confirmWhatIfQuota,
   quotaErrorResponse,
@@ -68,6 +69,8 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const requestStartedAt = performance.now();
+  const timing = createWhatIfTiming("initial");
   const accountUser = getSessionUserFromHeaders(req.headers);
   if (!accountUser) {
     return NextResponse.json({ error: "请先登录后创建同人推演", code: "LOGIN_REQUIRED" }, { status: 401 });
@@ -121,11 +124,16 @@ export async function POST(req: NextRequest) {
     premise: input.premise,
     premiseType: input.premiseType,
   });
+  timing.mark("preparationMs", requestStartedAt);
 
   const quotaRequestKey = `charactergraph:whatif:${crypto.randomUUID()}`;
+  const quotaReserveStartedAt = performance.now();
   try {
     await reserveWhatIfQuota(req, [quotaRequestKey], "whatif_initial");
+    timing.mark("quotaReserveMs", quotaReserveStartedAt);
   } catch (error) {
+    timing.mark("quotaReserveMs", quotaReserveStartedAt);
+    timing.report("error", { errorCode: "QUOTA_RESERVE_FAILED", promptChars: system.length + user.length });
     return quotaErrorResponse(error) ?? NextResponse.json(
       { error: "AI 额度服务暂时不可用，请稍后重试。", code: "QUOTA_SERVICE_UNAVAILABLE" },
       { status: 503 },
@@ -137,6 +145,10 @@ export async function POST(req: NextRequest) {
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
       let turnPersisted = false;
+      let firstTextReceived = false;
+      let firstTextRecorded = false;
+      let outputChars = 0;
+      let recoveryCount = 0;
       const send = (event: string, data: unknown) => {
         controller.enqueue(
           encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
@@ -145,23 +157,47 @@ export async function POST(req: NextRequest) {
       const stopKeepAlive = startSSEKeepAlive(controller, encoder);
 
       try {
+        send("status", { stage: "thinking" });
+        const modelStartedAt = performance.now();
         // 5-6. 流式生成并解析；重试时通知客户端清空失败草稿
         const llmOutput = await generateParsedWhatIf(
           system,
           user,
           8192,
-          (delta) => send("delta", { text: delta }),
-          () => send("reset", {}),
+          (delta) => {
+            if (!firstTextReceived) {
+              firstTextReceived = true;
+              send("status", { stage: "generating" });
+            }
+            if (!firstTextRecorded) {
+              firstTextRecorded = true;
+              timing.mark("firstTextMs", requestStartedAt);
+            }
+            outputChars += delta.length;
+            send("delta", { text: delta });
+          },
+          () => {
+            firstTextReceived = false;
+            outputChars = 0;
+            recoveryCount += 1;
+            send("status", { stage: "thinking" });
+            send("reset", {});
+          },
         );
+        timing.mark("modelMs", modelStartedAt);
+        send("status", { stage: "finalizing" });
 
         // 6.5 清理重复新增并做来源校验
+        const validationStartedAt = performance.now();
         const diff = normalizeDiffAgainstDataset(dataset, llmOutput.diff, {
           premise: input.premise,
           narrative: llmOutput.narrative,
         });
         const validation = validateNarrative(llmOutput.narrative, dataset, diff);
+        timing.mark("validationMs", validationStartedAt);
 
         // 7. 落库：session + root branch + turn
+        const persistStartedAt = performance.now();
         const session = await prisma.whatIfSession.create({
           data: {
             ownerId: accountUser.id,
@@ -202,10 +238,19 @@ export async function POST(req: NextRequest) {
             },
           },
         });
+        timing.mark("persistMs", persistStartedAt);
 
         const turn = session.branches[0].turns[0];
         turnPersisted = true;
+        const quotaConfirmStartedAt = performance.now();
         await confirmWhatIfQuota(req, [quotaRequestKey]);
+        timing.mark("quotaConfirmMs", quotaConfirmStartedAt);
+
+        timing.report("success", {
+          promptChars: system.length + user.length,
+          outputChars,
+          recoveryCount,
+        });
 
         // 8. 推 done 事件，带完整解析结果 + DB id + 校验结果
         send("done", {
@@ -218,6 +263,17 @@ export async function POST(req: NextRequest) {
           validation,
         });
       } catch (e) {
+        const errorCode = e instanceof LLMRefusalError
+          ? "LLM_REFUSAL"
+          : e instanceof LLMParseError
+            ? "PARSE_ERROR"
+            : "LLM_ERROR";
+        timing.report("error", {
+          errorCode,
+          promptChars: system.length + user.length,
+          outputChars,
+          recoveryCount,
+        });
         if (!turnPersisted) {
           await releaseWhatIfQuota(req, [quotaRequestKey]);
         }
