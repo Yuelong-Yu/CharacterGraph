@@ -93,6 +93,24 @@ describe("callLLMStream", () => {
     expect(resetCount).toBe(1);
     expect(text).toBe("complete");
   });
+
+  it("retries a provider network error instead of surfacing it to the stream consumer", async () => {
+    createMock
+      .mockRejectedValueOnce(new Error("network error"))
+      .mockResolvedValueOnce(eventStream(["complete"]));
+    const { callLLMStream } = await import("@/lib/whatif/llmClient");
+    const deltas: string[] = [];
+
+    await callLLMStream(
+      "system",
+      "user",
+      32,
+      (delta) => deltas.push(delta),
+    );
+
+    expect(createMock).toHaveBeenCalledTimes(2);
+    expect(deltas).toEqual(["complete"]);
+  });
 });
 
 describe("generateParsedWhatIf", () => {

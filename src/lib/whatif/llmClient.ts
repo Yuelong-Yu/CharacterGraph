@@ -53,6 +53,23 @@ function buildRefusalRecoveryPrompt(user: string): string {
 这是虚构文学作品的人物关系图谱推演。请用概括、非血腥、非操作性的方式表现冲突，保留人物关系与故事因果，不展开伤害细节。严格输出且只输出要求的三个区块，DIFF 必须是合法 JSON。`;
 }
 
+function isRetryableTransportError(error: unknown): boolean {
+  if (!(error instanceof Error)) return false;
+
+  // The SDK wraps failures before a stream starts in APIConnectionError. A stream
+  // can also fail mid-response with the underlying fetch error, whose message is
+  // commonly just "network error" in production.
+  if (
+    (typeof Anthropic.APIConnectionError === "function" &&
+      error instanceof Anthropic.APIConnectionError)
+  ) {
+    return true;
+  }
+
+  return error.name === "AbortError" ||
+    /(?:network|connection) error|fetch failed|ECONNRESET|ETIMEDOUT|ECONNREFUSED|EPIPE|EAI_AGAIN|ENOTFOUND|socket hang up|UND_ERR_/i.test(error.message);
+}
+
 let client: Anthropic | null = null;
 
 function getClient(): Anthropic {
@@ -133,12 +150,8 @@ export async function callLLMStream(
       lastError = e;
       // AbortError = 超时；网络错误也重试
       const isRetryable =
-        e instanceof Error &&
-        (e.name === "AbortError" ||
-          e.name === "EmptyLLMResponseError" ||
-          e.message.includes("ECONNRESET") ||
-          e.message.includes("ETIMEDOUT") ||
-          e.message.includes("fetch failed"));
+        (e instanceof Error && e.name === "EmptyLLMResponseError") ||
+        isRetryableTransportError(e);
       if (!isRetryable || attempt === maxAttempts) {
         throw e;
       }
