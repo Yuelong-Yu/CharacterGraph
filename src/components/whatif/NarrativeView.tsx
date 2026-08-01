@@ -57,6 +57,7 @@ export function NarrativeView({ streamText, segments }: Props) {
 
   // 流式态：只显示面向用户的叙事正文，隐藏 DIFF、分隔符和选项等结构化中间结果。
   const visibleNarrative = extractStreamingNarrative(streamText);
+  if (!visibleNarrative) return null;
 
   return (
     <div
@@ -67,7 +68,7 @@ export function NarrativeView({ streamText, segments }: Props) {
         color: "#aaa",
       }}
     >
-      {visibleNarrative || "正在生成故事..."}
+      {visibleNarrative}
       <span style={{ animation: "blink 1s steps(2) infinite" }}>▌</span>
       <style>{`@keyframes blink { 50% { opacity: 0; } }`}</style>
     </div>

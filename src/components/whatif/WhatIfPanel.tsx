@@ -39,6 +39,7 @@ import { fetchSessionUser } from "@/lib/authClient";
 import { AiQuotaRequestError } from "@/lib/aiQuotaError";
 import { requestChronChaosUpgrade } from "@chronchaos/top-navigation";
 import type { WhatIfGenerationStage } from "@/lib/whatif/client";
+import { extractStreamingNarrative } from "@/lib/whatif/streamingNarrative";
 
 interface Props {
   isOpen: boolean;
@@ -372,6 +373,7 @@ export function WhatIfPanel({
     choices: string[];
     premise: string;
     isStreaming: boolean;
+    hasVisibleNarrative: boolean;
     streamingText: string;
     turnId: string | null;
     validation: ValidationResult[] | null;
@@ -387,6 +389,7 @@ export function WhatIfPanel({
         choices: t.choices,
         premise: t.premise,
         isStreaming: false,
+        hasVisibleNarrative: true,
         streamingText: "",
         turnId: t.id,
         validation: t.validation,
@@ -402,6 +405,7 @@ export function WhatIfPanel({
       choices: [],
       premise: streaming.isContinue ? "(续写中)" : premise,
       isStreaming: true,
+      hasVisibleNarrative: Boolean(extractStreamingNarrative(streaming.text)),
       streamingText: streaming.text,
       turnId: null,
       validation: null,
@@ -579,7 +583,7 @@ export function WhatIfPanel({
               )}
             </div>
 
-            {turn.isStreaming && !turn.streamingText && (
+            {turn.isStreaming && !turn.hasVisibleNarrative && (
               <div role="status" aria-live="polite" style={{ color: "#8cb4d8", fontSize: 13, marginBottom: 12 }}>
                 {streamingStageLabel[streaming?.stage ?? "preparing"]}
               </div>
