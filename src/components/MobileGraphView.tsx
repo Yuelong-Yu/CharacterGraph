@@ -1041,13 +1041,15 @@ function windowHeight() {
 }
 
 const mobileVariables = {
-  "--mobile-bg": "oklch(97.5% 0.004 75)",
-  "--mobile-panel": "oklch(99% 0 0)",
-  "--mobile-raised": "oklch(95% 0.008 75)",
-  "--mobile-text": "oklch(20% 0.012 270)",
-  "--mobile-muted": "oklch(48% 0.012 270)",
-  "--mobile-border": "oklch(86% 0.01 75)",
-  "--mobile-accent": "oklch(48% 0.12 35)",
+  // Keep these in legacy syntax: Baidu Browser does not parse oklch() custom-property values.
+  // An unparseable custom property invalidates every color and border that references it.
+  "--mobile-bg": "#f8f6f4",
+  "--mobile-panel": "#fcfcfc",
+  "--mobile-raised": "#f2eee9",
+  "--mobile-text": "#16181b",
+  "--mobile-muted": "#5b5e65",
+  "--mobile-border": "#d5d0ca",
+  "--mobile-accent": "#95402b",
 } as React.CSSProperties;
 
 const mobileInputStyle: React.CSSProperties = {
