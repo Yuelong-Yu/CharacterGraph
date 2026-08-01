@@ -7,13 +7,12 @@ const stylesheet = readFileSync(
   "utf8",
 );
 
-describe("mobile detail sheet color fallback", () => {
-  it("keeps an opaque white background when the theme color is unsupported", () => {
+describe("mobile detail sheet background", () => {
+  it("uses an opaque literal fallback instead of the oklch theme variable", () => {
     const sheetRule = stylesheet.match(/\.mobile-detail-sheet\s*\{(?<declarations>[^}]*)}/)?.groups?.declarations;
 
     expect(sheetRule).toBeDefined();
-    expect(sheetRule).toMatch(
-      /background:\s*#fff\s*;\s*background:\s*var\(--mobile-panel\)\s*;/,
-    );
+    expect(sheetRule).toMatch(/background:\s*#fff\s*;/);
+    expect(sheetRule).not.toMatch(/background:\s*var\(--mobile-panel/);
   });
 });
