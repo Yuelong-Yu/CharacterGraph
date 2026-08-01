@@ -490,6 +490,15 @@ export interface ParsedLLMOutput {
   choices: string[];
 }
 
+const EMPTY_GRAPH_DIFF: GraphDiff = {
+  removedNodes: [],
+  addedNodes: [],
+  removedEdges: [],
+  addedEdges: [],
+  modifiedEvents: [],
+  replacedEvents: [],
+};
+
 const SEPARATOR_DIFF = "===DIFF===";
 const SEPARATOR_NARRATIVE = "===NARRATIVE===";
 const SEPARATOR_CHOICES = "===CHOICES===";
@@ -534,6 +543,29 @@ function parseStructuredOutput(text: string, raw: string): ParsedLLMOutput {
   }
 
   return result.data;
+}
+
+/**
+ * 仅用于最后一次格式恢复：若上游已返回可用的叙事和选项，却完全遗漏 diff，
+ * 把它解释为“本轮没有结构化图谱变更”。不修复 diff=null、半截 JSON 或其他
+ * Schema 失败，避免掩盖真实格式问题。
+ */
+export function tryRecoverMissingDiffOutput(raw: string): ParsedLLMOutput | null {
+  const text = raw.trim();
+  if (!text.startsWith("{")) return null;
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(text);
+  } catch {
+    return null;
+  }
+  if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
+
+  const output = parsed as Record<string, unknown>;
+  if (Object.hasOwn(output, "diff")) return null;
+  const result = WhatIfLLMOutput.safeParse({ ...output, diff: EMPTY_GRAPH_DIFF });
+  return result.success ? result.data : null;
 }
 
 function parseLegacyLLMOutput(text: string, raw: string): ParsedLLMOutput {

@@ -7,6 +7,7 @@ import {
   buildCacheableSystemPrompt,
   buildSystemPrompt,
   parseLLMOutput,
+  tryRecoverMissingDiffOutput,
   WHAT_IF_OUTPUT_JSON_SCHEMA,
   LLMParseError,
 } from "@/lib/whatif/promptBuilder";
@@ -71,6 +72,30 @@ const testConfig = {
 } satisfies ClientProjectConfig;
 
 describe("parseLLMOutput", () => {
+  it("recovers a complete structured response that only omits diff", () => {
+    const recovered = tryRecoverMissingDiffOutput(JSON.stringify({
+      narrative: [{ label: "推演", text: "奥德修斯改道返乡。" }],
+      choices: ["继续返乡", "先拜访涅斯托尔"],
+    }));
+
+    expect(recovered?.diff).toEqual({
+      removedNodes: [],
+      addedNodes: [],
+      removedEdges: [],
+      addedEdges: [],
+      modifiedEvents: [],
+      replacedEvents: [],
+    });
+  });
+
+  it("does not recover a response whose diff is present but malformed", () => {
+    expect(tryRecoverMissingDiffOutput(JSON.stringify({
+      diff: null,
+      narrative: [{ label: "推演", text: "x" }],
+      choices: ["继续"],
+    }))).toBeNull();
+  });
+
   it("parses the single JSON output contract", () => {
     const raw = JSON.stringify({
       narrative: [

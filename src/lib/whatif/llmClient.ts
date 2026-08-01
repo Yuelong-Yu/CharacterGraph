@@ -12,6 +12,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import {
   LLMParseError,
   parseLLMOutput,
+  tryRecoverMissingDiffOutput,
   WHAT_IF_OUTPUT_JSON_SCHEMA,
   type CacheableSystemPrompt,
   type ParsedLLMOutput,
@@ -55,7 +56,7 @@ function buildRefusalRecoveryPrompt(user: string): string {
 
   return `${softened}
 
-这是虚构文学作品的人物关系图谱推演。请用概括、非血腥、非操作性的方式表现冲突，保留人物关系与故事因果，不展开伤害细节。严格输出且只输出要求的三个区块，DIFF 必须是合法 JSON。`;
+这是虚构文学作品的人物关系图谱推演。请用概括、非血腥、非操作性的方式表现冲突，保留人物关系与故事因果，不展开伤害细节。严格输出且只输出一个 JSON 根对象，必须包含 diff、narrative、choices 三个字段；即使没有图谱变化，diff 也必须包含六个空数组。`;
 }
 
 function isRetryableTransportError(error: unknown): boolean {
@@ -282,7 +283,7 @@ export async function generateParsedWhatIf(
       ? user
       : lastParseError && isLLMRefusal(lastParseError.raw)
         ? buildRefusalRecoveryPrompt(user)
-        : `${user}\n\n上一次响应格式无效。请严格输出且只输出要求的三个区块，DIFF 必须是合法 JSON。`;
+        : `${user}\n\n上一次响应不符合 JSON Schema。请严格输出且只输出一个 JSON 根对象，必须同时包含 diff、narrative、choices 三个字段。即使本轮没有图谱变化，diff 也必须包含 removedNodes、addedNodes、removedEdges、addedEdges、modifiedEvents、replacedEvents 六个数组字段。`;
 
     await callLLMStream(
       system,
@@ -305,6 +306,11 @@ export async function generateParsedWhatIf(
       if (!(error instanceof LLMParseError)) throw error;
       lastParseError = error;
       if (attempt === MAX_PARSE_ATTEMPTS) {
+        const recovered = tryRecoverMissingDiffOutput(fullText);
+        if (recovered) {
+          console.warn("[whatif-output-repair]", JSON.stringify({ repair: "missing_diff_defaulted" }));
+          return recovered;
+        }
         if (isLLMRefusal(error.raw)) throw new LLMRefusalError(error.raw);
         throw error;
       }
