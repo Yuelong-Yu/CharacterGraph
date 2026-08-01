@@ -18,7 +18,7 @@ import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
 import { buildContext } from "@/lib/whatif/contextBuilder";
 import {
-  buildSystemPrompt,
+  buildCacheableSystemPrompt,
   buildContinuationUserPrompt,
   LLMParseError,
   type BranchPoint,
@@ -198,7 +198,7 @@ export async function POST(
     userChoice: undefined,
   }));
 
-  const system = buildSystemPrompt(canonicalSubset, config, {
+  const system = buildCacheableSystemPrompt(canonicalSubset, config, {
     branchSubset: subset,
     knownCharacters: effectiveDataset.characters.map(({ id, name_zh }) => ({ id, name_zh })),
   });
@@ -212,7 +212,10 @@ export async function POST(
     timing.mark("quotaReserveMs", quotaReserveStartedAt);
   } catch (error) {
     timing.mark("quotaReserveMs", quotaReserveStartedAt);
-    timing.report("error", { errorCode: "QUOTA_RESERVE_FAILED", promptChars: system.length + user.length });
+    timing.report("error", {
+      errorCode: "QUOTA_RESERVE_FAILED",
+      promptChars: system.cacheable.length + system.dynamic.length + user.length,
+    });
     return quotaErrorResponse(error) ?? NextResponse.json(
       { error: "AI 额度服务暂时不可用，请稍后重试。", code: "QUOTA_SERVICE_UNAVAILABLE" },
       { status: 503 },
@@ -246,6 +249,9 @@ export async function POST(
       let providerFirstTextMs: number | undefined;
       let providerTotalMs = 0;
       let providerAttemptCount = 0;
+      let providerInputTokens = 0;
+      let providerCacheReadInputTokens = 0;
+      let providerCacheCreationInputTokens = 0;
       const recordProviderTiming = (event: ProviderTimingEvent) => {
         if (event.stage === "request-ready" && providerRequestReadyMs === undefined) {
           providerRequestReadyMs = event.elapsedMs;
@@ -257,12 +263,20 @@ export async function POST(
           providerTotalMs += event.elapsedMs;
           providerAttemptCount += 1;
         }
+        if (event.stage === "usage") {
+          providerInputTokens += event.inputTokens ?? 0;
+          providerCacheReadInputTokens += event.cacheReadInputTokens ?? 0;
+          providerCacheCreationInputTokens += event.cacheCreationInputTokens ?? 0;
+        }
       };
       const providerTiming = () => ({
         providerRequestReadyMs,
         providerFirstTextMs,
         providerTotalMs,
         providerAttemptCount,
+        providerInputTokens,
+        providerCacheReadInputTokens,
+        providerCacheCreationInputTokens,
       });
       const send = (event: string, data: unknown) => {
         controller.enqueue(
@@ -343,7 +357,7 @@ export async function POST(
         timing.mark("quotaConfirmMs", quotaConfirmStartedAt);
 
         timing.report("success", {
-          promptChars: system.length + user.length,
+          promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
           ...providerTiming(),
@@ -367,7 +381,7 @@ export async function POST(
             : "LLM_ERROR";
         timing.report("error", {
           errorCode,
-          promptChars: system.length + user.length,
+          promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
           ...providerTiming(),

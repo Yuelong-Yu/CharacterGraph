@@ -147,6 +147,53 @@ describe("callLLMStream", () => {
       },
     });
   });
+
+  it("marks the immutable system prefix as cacheable and reports cache usage", async () => {
+    createMock.mockResolvedValue({
+      async *[Symbol.asyncIterator]() {
+        yield {
+          type: "message_start",
+          message: {
+            usage: {
+              input_tokens: 80,
+              cache_read_input_tokens: 4096,
+              cache_creation_input_tokens: 0,
+            },
+          },
+        };
+        yield {
+          type: "content_block_delta",
+          delta: { type: "text_delta", text: "OK" },
+        };
+      },
+    });
+    const { callLLMStream } = await import("@/lib/whatif/llmClient");
+    const events: unknown[] = [];
+
+    await callLLMStream(
+      { cacheable: "固定规则和原典", dynamic: "本轮分支状态" },
+      "继续推演",
+      32,
+      () => {},
+      undefined,
+      { onProviderTiming: (event) => events.push(event) },
+    );
+
+    expect(createMock.mock.calls[0][0].system).toEqual([
+      {
+        type: "text",
+        text: "固定规则和原典",
+        cache_control: { type: "ephemeral" },
+      },
+      { type: "text", text: "本轮分支状态" },
+    ]);
+    expect(events).toContainEqual(expect.objectContaining({
+      stage: "usage",
+      inputTokens: 80,
+      cacheReadInputTokens: 4096,
+      cacheCreationInputTokens: 0,
+    }));
+  });
 });
 
 describe("generateParsedWhatIf", () => {

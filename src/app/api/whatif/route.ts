@@ -14,7 +14,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
 import { buildContext } from "@/lib/whatif/contextBuilder";
-import { buildSystemPrompt, buildUserPrompt, LLMParseError } from "@/lib/whatif/promptBuilder";
+import { buildCacheableSystemPrompt, buildUserPrompt, LLMParseError } from "@/lib/whatif/promptBuilder";
 import { generateParsedWhatIf, LLMRefusalError, type ProviderTimingEvent } from "@/lib/whatif/llmClient";
 import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
@@ -114,7 +114,7 @@ export async function POST(req: NextRequest) {
   }
 
   // 3. 构建 prompt
-  const system = buildSystemPrompt(subset, config, {
+  const system = buildCacheableSystemPrompt(subset, config, {
     knownCharacters: dataset.characters.map(({ id, name_zh }) => ({ id, name_zh })),
   });
   const user = buildUserPrompt({
@@ -133,7 +133,10 @@ export async function POST(req: NextRequest) {
     timing.mark("quotaReserveMs", quotaReserveStartedAt);
   } catch (error) {
     timing.mark("quotaReserveMs", quotaReserveStartedAt);
-    timing.report("error", { errorCode: "QUOTA_RESERVE_FAILED", promptChars: system.length + user.length });
+    timing.report("error", {
+      errorCode: "QUOTA_RESERVE_FAILED",
+      promptChars: system.cacheable.length + system.dynamic.length + user.length,
+    });
     return quotaErrorResponse(error) ?? NextResponse.json(
       { error: "AI 额度服务暂时不可用，请稍后重试。", code: "QUOTA_SERVICE_UNAVAILABLE" },
       { status: 503 },
@@ -153,6 +156,9 @@ export async function POST(req: NextRequest) {
       let providerFirstTextMs: number | undefined;
       let providerTotalMs = 0;
       let providerAttemptCount = 0;
+      let providerInputTokens = 0;
+      let providerCacheReadInputTokens = 0;
+      let providerCacheCreationInputTokens = 0;
       const recordProviderTiming = (event: ProviderTimingEvent) => {
         if (event.stage === "request-ready" && providerRequestReadyMs === undefined) {
           providerRequestReadyMs = event.elapsedMs;
@@ -164,12 +170,20 @@ export async function POST(req: NextRequest) {
           providerTotalMs += event.elapsedMs;
           providerAttemptCount += 1;
         }
+        if (event.stage === "usage") {
+          providerInputTokens += event.inputTokens ?? 0;
+          providerCacheReadInputTokens += event.cacheReadInputTokens ?? 0;
+          providerCacheCreationInputTokens += event.cacheCreationInputTokens ?? 0;
+        }
       };
       const providerTiming = () => ({
         providerRequestReadyMs,
         providerFirstTextMs,
         providerTotalMs,
         providerAttemptCount,
+        providerInputTokens,
+        providerCacheReadInputTokens,
+        providerCacheCreationInputTokens,
       });
       const send = (event: string, data: unknown) => {
         controller.enqueue(
@@ -270,7 +284,7 @@ export async function POST(req: NextRequest) {
         timing.mark("quotaConfirmMs", quotaConfirmStartedAt);
 
         timing.report("success", {
-          promptChars: system.length + user.length,
+          promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
           ...providerTiming(),
@@ -294,7 +308,7 @@ export async function POST(req: NextRequest) {
             : "LLM_ERROR";
         timing.report("error", {
           errorCode,
-          promptChars: system.length + user.length,
+          promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
           ...providerTiming(),

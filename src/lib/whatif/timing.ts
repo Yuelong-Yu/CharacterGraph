@@ -12,6 +12,9 @@ export interface WhatIfTimingRecord {
   providerFirstTextMs?: number;
   providerTotalMs?: number;
   providerAttemptCount?: number;
+  providerInputTokens?: number;
+  providerCacheReadInputTokens?: number;
+  providerCacheCreationInputTokens?: number;
   validationMs?: number;
   persistMs?: number;
   quotaConfirmMs?: number;

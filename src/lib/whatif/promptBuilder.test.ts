@@ -4,6 +4,7 @@
 import { describe, it, expect } from "vitest";
 import {
   buildContinuationUserPrompt,
+  buildCacheableSystemPrompt,
   buildSystemPrompt,
   parseLLMOutput,
   WHAT_IF_OUTPUT_JSON_SCHEMA,
@@ -400,6 +401,21 @@ no labels here
 });
 
 describe("multi-turn prompt provenance", () => {
+  it("puts only immutable canon in the cacheable prefix", () => {
+    const canonicalSubset = makeSubset("原典事件");
+    const branchSubset = makeSubset("分支改写事件");
+    const prompt = buildCacheableSystemPrompt(canonicalSubset, testConfig, {
+      branchSubset,
+      knownCharacters: [{ id: "private_character", name_zh: "用户自定义人物" }],
+    });
+
+    expect(prompt.cacheable).toContain("原典事件");
+    expect(prompt.cacheable).not.toContain("分支改写事件");
+    expect(prompt.cacheable).not.toContain("用户自定义人物");
+    expect(prompt.dynamic).toContain("分支改写事件");
+    expect(prompt.dynamic).toContain("用户自定义人物");
+  });
+
   it("requires the single JSON object output contract", () => {
     const prompt = buildSystemPrompt(makeSubset("原典事件"), testConfig);
 

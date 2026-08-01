@@ -13,6 +13,7 @@ import {
   LLMParseError,
   parseLLMOutput,
   WHAT_IF_OUTPUT_JSON_SCHEMA,
+  type CacheableSystemPrompt,
   type ParsedLLMOutput,
 } from "@/lib/whatif/promptBuilder";
 
@@ -74,9 +75,34 @@ function isRetryableTransportError(error: unknown): boolean {
 let client: Anthropic | null = null;
 
 export interface ProviderTimingEvent {
-  stage: "request-ready" | "first-text" | "attempt-complete";
+  stage: "request-ready" | "first-text" | "attempt-complete" | "usage";
   attempt: number;
   elapsedMs: number;
+  inputTokens?: number;
+  cacheReadInputTokens?: number;
+  cacheCreationInputTokens?: number;
+}
+
+export type SystemPrompt = string | CacheableSystemPrompt;
+
+/**
+ * 在不可变原典子图之后建立缓存断点。后续的分支状态和人物索引虽然每轮仍会
+ * 完整提交，但不会改变此前的 token 前缀，因此同一人物的续写可命中 KV Cache。
+ */
+function toProviderSystem(system: SystemPrompt) {
+  if (typeof system === "string") return system;
+
+  return [
+    {
+      type: "text" as const,
+      text: system.cacheable,
+      cache_control: { type: "ephemeral" as const },
+    },
+    {
+      type: "text" as const,
+      text: system.dynamic,
+    },
+  ];
 }
 
 function getClient(): Anthropic {
@@ -96,7 +122,7 @@ function getClient(): Anthropic {
  * 内置 120s 超时（AbortController）+ 1 次自动重试（网络/超时/空响应）。
  */
 export async function callLLMStream(
-  system: string,
+  system: SystemPrompt,
   user: string,
   maxTokens: number,
   onDelta: (delta: string) => void,
@@ -124,7 +150,7 @@ export async function callLLMStream(
         {
           model,
           max_tokens: maxTokens,
-          system,
+          system: toProviderSystem(system),
           messages: [{ role: "user", content: user }],
           output_config: {
             format: {
@@ -143,6 +169,17 @@ export async function callLLMStream(
       });
 
       for await (const event of stream) {
+        if (event.type === "message_start") {
+          const usage = event.message.usage;
+          options.onProviderTiming?.({
+            stage: "usage",
+            attempt,
+            elapsedMs: Math.round(performance.now() - attemptStartedAt),
+            inputTokens: usage.input_tokens,
+            cacheReadInputTokens: usage.cache_read_input_tokens ?? undefined,
+            cacheCreationInputTokens: usage.cache_creation_input_tokens ?? undefined,
+          });
+        }
         if (
           event.type === "content_block_delta" &&
           event.delta.type === "text_delta"
@@ -208,7 +245,7 @@ export async function callLLMStream(
  * 通过 onReset 通知 SSE 调用方丢弃已展示的失败草稿。
  */
 export async function generateParsedWhatIf(
-  system: string,
+  system: SystemPrompt,
   user: string,
   maxTokens: number,
   onDelta: (delta: string) => void,

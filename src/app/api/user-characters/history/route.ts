@@ -10,7 +10,7 @@ import { applyDiff, normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier
 import { buildContext } from "@/lib/whatif/contextBuilder";
 import {
   buildContinuationUserPrompt,
-  buildSystemPrompt,
+  buildCacheableSystemPrompt,
   buildUserPrompt,
   type BranchPoint,
   type PriorTurnSummary,
@@ -236,7 +236,7 @@ export async function POST(req: NextRequest) {
     const effectiveDataset = priorTurns.reduce((currentDataset, turn) => applyDiff(currentDataset, turn.diff), baseDataset);
     try {
       const subset = buildContext(effectiveDataset, branch.session.characterId);
-      const system = buildSystemPrompt(canonicalSubset, loaded.config, {
+      const system = buildCacheableSystemPrompt(canonicalSubset, loaded.config, {
         branchSubset: subset,
         knownCharacters: effectiveDataset.characters.map(({ id, name_zh }) => ({ id, name_zh })),
       });

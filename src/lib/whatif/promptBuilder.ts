@@ -26,6 +26,15 @@ export interface SystemPromptOptions {
 }
 
 /**
+ * 缓存前缀与每轮变化的上下文分开构建。前缀只包含固定规则和不可变原典子图；
+ * 分支状态、完整人物索引始终在缓存点之后，绝不作为跨请求复用的内容。
+ */
+export interface CacheableSystemPrompt {
+  cacheable: string;
+  dynamic: string;
+}
+
+/**
  * 方舟 Anthropic 兼容端点的 output_config.format 使用的 JSON Schema。
  * 它镜像 WhatIfLLMOutput 的外部契约；本地仍以 Zod 作最终校验和默认值补全。
  */
@@ -243,13 +252,16 @@ function formatBranchDeltaForPrompt(
 }
 
 /**
- * 构建 system prompt：角色定义 + 图谱子集 + 标注规则 + 输出格式 + 合法 category/relationType 清单
+ * 构建可缓存的 system 前缀，以及本轮动态上下文。
+ *
+ * cacheable 在同一人物、同一原典子图的续写中保持字节一致，供上游复用 KV Cache；
+ * dynamic 则包含会随分支和用户自定义人物变化的信息，每轮均完整发送。
  */
-export function buildSystemPrompt(
+export function buildCacheableSystemPrompt(
   canonicalSubset: GraphSubset,
   config: ClientProjectConfig,
   options: SystemPromptOptions = {},
-): string {
+): CacheableSystemPrompt {
   const charCategories = Object.keys(config.characterCategories).join("、");
   const relTypes = Object.keys(config.relationTypes).join("、");
   const branchState = options.branchSubset
@@ -259,7 +271,7 @@ export function buildSystemPrompt(
     ? options.knownCharacters.map((c) => `${c.id}:${c.name_zh}`).join("、")
     : "（仅使用下方图谱子集中的人物）";
 
-  return `你是一个严谨的架空历史推演系统，专门用于文学/历史题材的人物关系图谱「如果」假设叙事生成。
+  const cacheable = `你是一个严谨的架空历史推演系统，专门用于文学/历史题材的人物关系图谱「如果」假设叙事生成。
 
 # 你的任务
 基于给定的人物图谱子集和分支点前提，推演「如果这件事没发生（或前提成立）」之后的故事走向，输出三部分：
@@ -269,12 +281,6 @@ export function buildSystemPrompt(
 
 # 不可变原典图谱子集
 ${formatSubsetForPrompt(canonicalSubset)}
-
-# 当前分支相对原典的变化（假设）
-${branchState}
-
-# 已存在人物索引
-${knownCharacters}
 
 # 标注规则（严格遵守）
 每段叙事开头必须加标签：
@@ -375,6 +381,27 @@ ${knownCharacters}
 - choices 必须是 2-3 个字符串，不要添加 "1. " 等编号前缀。
 - 不要输出 JSON 对象以外的任何解释性文字。
 - **再次强调：removedNodes 要极度克制，不要因为「连锁影响」就删除大量远亲节点。**`;
+
+  const dynamic = `# 当前分支相对原典的变化（假设）
+${branchState}
+
+# 已存在人物索引
+${knownCharacters}`;
+
+  return { cacheable, dynamic };
+}
+
+/**
+ * 兼容仍需要单个字符串的调用方与测试。实际调模型请使用 buildCacheableSystemPrompt，
+ * 以便在 cacheable 和 dynamic 之间建立上游缓存断点。
+ */
+export function buildSystemPrompt(
+  canonicalSubset: GraphSubset,
+  config: ClientProjectConfig,
+  options: SystemPromptOptions = {},
+): string {
+  const { cacheable, dynamic } = buildCacheableSystemPrompt(canonicalSubset, config, options);
+  return `${cacheable}\n\n${dynamic}`;
 }
 
 /**
