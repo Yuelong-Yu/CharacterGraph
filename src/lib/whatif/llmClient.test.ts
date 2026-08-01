@@ -127,6 +127,33 @@ describe("callLLMStream", () => {
     expect(deltas).toEqual(["complete"]);
   });
 
+  it("retries a transient upstream InternalServiceError once", async () => {
+    const providerError = new Error(JSON.stringify({
+      error: { code: "InternalServiceError", type: "InternalServerError" },
+    }));
+    providerError.name = "InternalServerError";
+    createMock
+      .mockRejectedValueOnce(providerError)
+      .mockResolvedValueOnce(eventStream(["complete"]));
+    const { callLLMStream } = await import("@/lib/whatif/llmClient");
+    const recoveries: unknown[] = [];
+
+    await callLLMStream(
+      "system",
+      "user",
+      32,
+      () => {},
+      (event) => recoveries.push(event),
+    );
+
+    expect(createMock).toHaveBeenCalledTimes(2);
+    expect(recoveries).toEqual([{
+      reason: "provider_5xx_retry",
+      providerAttempt: 1,
+      errorName: "InternalServerError",
+    }]);
+  });
+
   it("reports provider request, first-text, and attempt-complete timing events", async () => {
     createMock.mockResolvedValue(eventStream(["OK"]));
     const { callLLMStream } = await import("@/lib/whatif/llmClient");

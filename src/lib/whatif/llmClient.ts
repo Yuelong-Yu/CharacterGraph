@@ -66,8 +66,23 @@ function buildRefusalRecoveryPrompt(user: string): string {
 这是虚构文学作品的人物关系图谱推演。请用概括、非血腥、非操作性的方式表现冲突，保留人物关系与故事因果，不展开伤害细节。严格输出且只输出一个 JSON 根对象，必须包含 diff、narrative、choices 三个字段；即使没有图谱变化，diff 也必须包含六个空数组。`;
 }
 
-function isRetryableTransportError(error: unknown): boolean {
+function providerStatus(error: unknown): number | undefined {
+  if (!error || typeof error !== "object" || !("status" in error)) return undefined;
+  const status = error.status;
+  return typeof status === "number" ? status : undefined;
+}
+
+function isUpstreamInternalError(error: Error): boolean {
+  const status = providerStatus(error);
+  if (status !== undefined && status >= 500 && status <= 599) return true;
+  // 方舟兼容层会把部分 5xx 包装成普通 Error，并把错误码放在 JSON message 中。
+  return /(?:InternalServiceError|InternalServerError|ServiceUnavailable|ServiceUnavailableError|Overloaded)/i.test(error.message);
+}
+
+function isRetryableProviderError(error: unknown): boolean {
   if (!(error instanceof Error)) return false;
+
+  if (isUpstreamInternalError(error)) return true;
 
   // The SDK wraps failures before a stream starts in APIConnectionError. A stream
   // can also fail mid-response with the underlying fetch error, whose message is
@@ -85,7 +100,9 @@ function isRetryableTransportError(error: unknown): boolean {
 
 function transportRecoveryEvent(error: unknown, providerAttempt: number): WhatIfRecoveryEvent {
   const errorName = error instanceof Error ? error.name : "UnknownError";
-  const reason = errorName === "EmptyLLMResponseError"
+  const reason = error instanceof Error && isUpstreamInternalError(error)
+    ? "provider_5xx_retry"
+    : errorName === "EmptyLLMResponseError"
     ? "empty_response_retry"
     : errorName === "AbortError"
       ? "timeout_retry"
@@ -267,7 +284,7 @@ export async function callLLMStream(
       // AbortError = 超时；网络错误也重试
       const isRetryable =
         (e instanceof Error && e.name === "EmptyLLMResponseError") ||
-        isRetryableTransportError(e);
+        isRetryableProviderError(e);
       if (!isRetryable || attempt === maxAttempts) {
         throw e;
       }

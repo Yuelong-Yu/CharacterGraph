@@ -1,6 +1,7 @@
 /** 可安全暴露给浏览器与结构化日志的推演恢复原因。 */
 export type WhatIfRecoveryReason =
   | "transport_retry"
+  | "provider_5xx_retry"
   | "timeout_retry"
   | "empty_response_retry"
   | "parse_invalid_json_retry"
