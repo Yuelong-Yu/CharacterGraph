@@ -7,6 +7,8 @@
  */
 import type { ValidationResult } from "@/schemas/whatif";
 
+const WARNING_COLOR = "#ff8c00";
+
 interface Props {
   results: ValidationResult[] | null;
 }
@@ -29,13 +31,13 @@ export function ValidationResults({ results }: Props) {
         style={{
           cursor: "pointer",
           fontSize: 11,
-          color: errors.length > 0 ? "#e55" : "#fa0",
+          color: errors.length > 0 ? "#e55" : WARNING_COLOR,
           userSelect: "none",
         }}
       >
         {errors.length > 0
           ? `⚠ ${errors.length} 个错误`
-          : `⚡ ${warnings.length} 个警告`}
+          : `⚠ ${warnings.length} 个警告`}
         （点开查看）
       </summary>
       <div style={{ marginTop: 6 }}>
@@ -46,11 +48,11 @@ export function ValidationResults({ results }: Props) {
               padding: "6px 8px",
               marginBottom: 4,
               background: r.level === "error" ? "#3a1a1a" : "#3a2a0a",
-              color: r.level === "error" ? "#ff8080" : "#ffc080",
+              color: r.level === "error" ? "#ff8080" : WARNING_COLOR,
               borderRadius: 3,
               fontSize: 11,
               lineHeight: 1.5,
-              borderLeft: `3px solid ${r.level === "error" ? "#e55" : "#fa0"}`,
+              borderLeft: `3px solid ${r.level === "error" ? "#e55" : WARNING_COLOR}`,
             }}
           >
             <strong>{r.level === "error" ? "错误" : "警告"}</strong>

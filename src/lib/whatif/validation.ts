@@ -122,7 +122,7 @@ export function validateNarrative(
         if (isNew) {
           const newChar = branchAddedNodes.find((n) => n.id === charId);
           results.push({
-            level: "error",
+            level: "warning",
             message: `【原典】段提到了「${newChar?.name_zh}」，但这是当前分支新增的人物，只能作为【假设】内容`,
             segmentIndex: i,
           });

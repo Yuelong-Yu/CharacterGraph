@@ -79,7 +79,7 @@ describe("validateNarrative", () => {
     expect(result[0].message).toContain("《虚构典》");
   });
 
-  it("【原典】 mentioning addedNode character produces error", () => {
+  it("【原典】 mentioning an addedNode character produces warning", () => {
     const ds = makeDataset([makeCharacter()]);
     const newChar = makeCharacter({ id: "new_char", name_zh: "新人物" });
     const diff: GraphDiff = { ...emptyDiff, addedNodes: [newChar] };
@@ -87,7 +87,7 @@ describe("validateNarrative", () => {
       makeSeg("新人物做了某事", "原典", { work: "《水浒传》", locus: null, translator: null }),
     ];
     const result = validateNarrative(narrative, ds, diff);
-    expect(result.some((r) => r.level === "error" && r.message.includes("新人物"))).toBe(true);
+    expect(result.some((r) => r.level === "warning" && r.message.includes("新人物"))).toBe(true);
   });
 
   it("keeps characters added by prior turns as 假设 rather than 原典", () => {
@@ -102,6 +102,7 @@ describe("validateNarrative", () => {
     const result = validateNarrative(narrative, ds, emptyDiff, [priorDiff]);
 
     expect(result).toHaveLength(1);
+    expect(result[0].level).toBe("warning");
     expect(result[0].segmentIndex).toBe(0);
     expect(result[0].message).toContain("当前分支新增");
   });
