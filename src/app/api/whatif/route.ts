@@ -159,6 +159,7 @@ export async function POST(req: NextRequest) {
       let providerInputTokens = 0;
       let providerCacheReadInputTokens = 0;
       let providerCacheCreationInputTokens = 0;
+      let providerOutputTokens = 0;
       const recordProviderTiming = (event: ProviderTimingEvent) => {
         if (event.stage === "request-ready" && providerRequestReadyMs === undefined) {
           providerRequestReadyMs = event.elapsedMs;
@@ -174,6 +175,7 @@ export async function POST(req: NextRequest) {
           providerInputTokens += event.inputTokens ?? 0;
           providerCacheReadInputTokens += event.cacheReadInputTokens ?? 0;
           providerCacheCreationInputTokens += event.cacheCreationInputTokens ?? 0;
+          providerOutputTokens += event.outputTokens ?? 0;
         }
       };
       const providerTiming = () => ({
@@ -184,6 +186,7 @@ export async function POST(req: NextRequest) {
         providerInputTokens,
         providerCacheReadInputTokens,
         providerCacheCreationInputTokens,
+        providerOutputTokens,
       });
       const send = (event: string, data: unknown) => {
         controller.enqueue(

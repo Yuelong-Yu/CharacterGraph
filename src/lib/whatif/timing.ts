@@ -15,6 +15,7 @@ export interface WhatIfTimingRecord {
   providerInputTokens?: number;
   providerCacheReadInputTokens?: number;
   providerCacheCreationInputTokens?: number;
+  providerOutputTokens?: number;
   validationMs?: number;
   persistMs?: number;
   quotaConfirmMs?: number;

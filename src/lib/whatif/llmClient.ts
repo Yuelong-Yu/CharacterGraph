@@ -81,6 +81,7 @@ export interface ProviderTimingEvent {
   inputTokens?: number;
   cacheReadInputTokens?: number;
   cacheCreationInputTokens?: number;
+  outputTokens?: number;
 }
 
 export type SystemPrompt = string | CacheableSystemPrompt;
@@ -109,11 +110,13 @@ function usageFromProviderEvent(usage: {
   input_tokens: number | null;
   cache_read_input_tokens: number | null;
   cache_creation_input_tokens: number | null;
+  output_tokens: number | null;
 }) {
   return {
     inputTokens: usage.input_tokens ?? undefined,
     cacheReadInputTokens: usage.cache_read_input_tokens ?? undefined,
     cacheCreationInputTokens: usage.cache_creation_input_tokens ?? undefined,
+    outputTokens: usage.output_tokens ?? undefined,
   };
 }
 

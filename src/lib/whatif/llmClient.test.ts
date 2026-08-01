@@ -158,6 +158,7 @@ describe("callLLMStream", () => {
               input_tokens: 80,
               cache_read_input_tokens: 4096,
               cache_creation_input_tokens: 0,
+              output_tokens: 12,
             },
           },
         };
@@ -192,6 +193,7 @@ describe("callLLMStream", () => {
       inputTokens: 80,
       cacheReadInputTokens: 4096,
       cacheCreationInputTokens: 0,
+      outputTokens: 12,
     }));
   });
 
@@ -205,6 +207,7 @@ describe("callLLMStream", () => {
               input_tokens: 0,
               cache_read_input_tokens: 0,
               cache_creation_input_tokens: 0,
+              output_tokens: 0,
             },
           },
         };
@@ -219,6 +222,7 @@ describe("callLLMStream", () => {
             input_tokens: 70,
             cache_read_input_tokens: 4096,
             cache_creation_input_tokens: 0,
+            output_tokens: 120,
           },
         };
       },
@@ -234,6 +238,7 @@ describe("callLLMStream", () => {
       stage: "usage",
       inputTokens: 70,
       cacheReadInputTokens: 4096,
+      outputTokens: 120,
     }));
   });
 });
