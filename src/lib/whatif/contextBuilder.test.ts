@@ -2,7 +2,7 @@
  * contextBuilder 单元测试
  */
 import { describe, it, expect } from "vitest";
-import { buildContext } from "@/lib/whatif/contextBuilder";
+import { buildContext, MAX_NODES } from "@/lib/whatif/contextBuilder";
 import type { Dataset, Character, Relation, Artifact } from "@/schemas/character";
 
 function makeCharacter(overrides: Partial<Character> = {}): Character {
@@ -136,7 +136,7 @@ describe("buildContext", () => {
     expect(subset.artifacts[0].id).toBe("weapon1");
   });
 
-  it("truncates to MAX_NODES=30 when overflow", () => {
+  it("enforces MAX_NODES=15 by trimming 1度邻居 when lower-priority nodes are absent", () => {
     const core = makeCharacter({ id: "core" });
     // 35 个 1度邻居 + 35 个 2度邻居
     const chars: Character[] = [core];
@@ -148,11 +148,44 @@ describe("buildContext", () => {
     }
     const ds = makeDataset(chars, rels);
     const subset = buildContext(ds, "core");
-    // core(1) + neighbors(35) = 36, 超过 30
-    // 裁剪逻辑：优先裁 2度（这里没 2度），再裁 artifacts（这里没）
-    // 但 1度邻居超了不会被裁（裁剪只动 2度和 artifacts）
-    // 所以 neighbors 仍是 35
-    expect(subset.neighbors.length).toBe(35);
+    expect(MAX_NODES).toBe(15);
+    // core(1) + neighbors(35) 超限；没有 2度或宝物时，必须裁 1度至 14。
+    expect(subset.neighbors).toHaveLength(14);
+    expect(1 + subset.neighbors.length + subset.secondDegree.length + subset.artifacts.length)
+      .toBeLessThanOrEqual(MAX_NODES);
     expect(subset.core.id).toBe("core");
+  });
+
+  it("keeps 1度和宝物 before 2度节点 when applying the node budget", () => {
+    const core = makeCharacter({ id: "core" });
+    const n1 = Array.from({ length: 13 }, (_, index) => makeCharacter({ id: `n1_${index}` }));
+    const n2 = Array.from({ length: 3 }, (_, index) => makeCharacter({ id: `n2_${index}` }));
+    const artifact: Artifact = {
+      schema_version: 3,
+      id: "artifact_1",
+      name_zh: "宝物",
+      name_en: "Artifact",
+      aliases: [],
+      epithet: null,
+      category: "weapon",
+      bio: null,
+      events: [],
+      domains: [],
+      portrait: "",
+      thumb: "",
+    };
+    const rels = [
+      ...n1.map((node) => makeRelation("core", node.id)),
+      ...n2.map((node, index) => makeRelation(n1[index].id, node.id)),
+      makeRelation("core", artifact.id, "owns"),
+    ];
+
+    const subset = buildContext(makeDataset([core, ...n1, ...n2], rels, [artifact]), "core");
+
+    expect(subset.neighbors).toHaveLength(13);
+    expect(subset.artifacts).toHaveLength(1);
+    expect(subset.secondDegree).toHaveLength(0);
+    expect(1 + subset.neighbors.length + subset.secondDegree.length + subset.artifacts.length)
+      .toBe(MAX_NODES);
   });
 });

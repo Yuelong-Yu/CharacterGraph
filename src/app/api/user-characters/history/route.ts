@@ -15,7 +15,7 @@ import {
   type BranchPoint,
   type PriorTurnSummary,
 } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf } from "@/lib/whatif/llmClient";
+import { generateParsedWhatIf, WHAT_IF_MAX_TOKENS } from "@/lib/whatif/llmClient";
 import { validateNarrative } from "@/lib/whatif/validation";
 import type { Prisma } from "@prisma/client";
 import { getSessionUserFromHeaders } from "@/lib/auth";
@@ -258,7 +258,7 @@ export async function POST(req: NextRequest) {
             })),
             current.premise,
           );
-      const output = await generateParsedWhatIf(system, user, 8192, () => {}, () => {});
+      const output = await generateParsedWhatIf(system, user, WHAT_IF_MAX_TOKENS, () => {}, () => {});
       const diff = normalizeDiffAgainstDataset(effectiveDataset, output.diff);
       const validation = validateNarrative(output.narrative, baseDataset, diff, priorTurns.map((turn) => turn.diff));
       const latestVersion = await prisma.whatIfTurnVersion.aggregate({

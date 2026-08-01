@@ -21,6 +21,9 @@ const apiKey = process.env.CODING_API_KEY;
 const baseURL = process.env.CODING_BASE_URL || "https://ark.cn-beijing.volces.com/api/coding";
 const model = process.env.CODING_MODEL || "deepseek-v4-flash";
 
+/** 推演的单次上游调用输出上限，给模型思考与结构化 JSON 留出余量。 */
+export const WHAT_IF_MAX_TOKENS = 20_000;
+
 const REFUSAL_PATTERNS = [
   /无法给到相关内容/,
   /无法识别/,

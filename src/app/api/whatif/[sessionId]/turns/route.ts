@@ -24,7 +24,12 @@ import {
   type BranchPoint,
   type PriorTurnSummary,
 } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf, LLMRefusalError, type ProviderTimingEvent } from "@/lib/whatif/llmClient";
+import {
+  generateParsedWhatIf,
+  LLMRefusalError,
+  WHAT_IF_MAX_TOKENS,
+  type ProviderTimingEvent,
+} from "@/lib/whatif/llmClient";
 import { applyDiff, normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { ContinueTurnInput } from "@/schemas/whatif";
@@ -295,7 +300,7 @@ export async function POST(
         const llmOutput = await generateParsedWhatIf(
           system,
           user,
-          8192,
+          WHAT_IF_MAX_TOKENS,
           (delta) => {
             if (!firstTextReceived) {
               firstTextReceived = true;

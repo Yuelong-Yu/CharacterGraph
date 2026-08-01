@@ -15,7 +15,12 @@ import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
 import { buildContext } from "@/lib/whatif/contextBuilder";
 import { buildCacheableSystemPrompt, buildUserPrompt, LLMParseError } from "@/lib/whatif/promptBuilder";
-import { generateParsedWhatIf, LLMRefusalError, type ProviderTimingEvent } from "@/lib/whatif/llmClient";
+import {
+  generateParsedWhatIf,
+  LLMRefusalError,
+  WHAT_IF_MAX_TOKENS,
+  type ProviderTimingEvent,
+} from "@/lib/whatif/llmClient";
 import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
@@ -202,7 +207,7 @@ export async function POST(req: NextRequest) {
         const llmOutput = await generateParsedWhatIf(
           system,
           user,
-          8192,
+          WHAT_IF_MAX_TOKENS,
           (delta) => {
             if (!firstTextReceived) {
               firstTextReceived = true;

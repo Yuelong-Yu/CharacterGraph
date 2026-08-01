@@ -6,7 +6,7 @@
  *   - 1度邻居: name + category + epithet + 与 core 的 relation（含 events）
  *   - 2度邻居: name + category（不含 relation 细节）
  *   - 相关 artifacts: core 和 1度邻居关联的宝物（name + epithet + category）
- *   - 上限 MAX_NODES=30，超限按 degree 排序裁剪
+ *   - 上限 MAX_NODES=15，超限时依次裁剪 2 度、宝物、1 度节点
  *
  * 预估压缩后 3-5k token（vs 全量 50k）。
  */
@@ -48,7 +48,7 @@ export interface GraphSubset {
   artifacts: RelatedArtifact[];
 }
 
-const MAX_NODES = 30;
+export const MAX_NODES = 15;
 
 /**
  * 构建图谱子集。coreCharacterId 不存在时抛错。
@@ -131,26 +131,33 @@ export function buildContext(dataset: Dataset, coreCharacterId: string): GraphSu
     }
   }
 
-  // 裁剪：超过 MAX_NODES 时按优先级保留（core + 1度邻居 > 2度邻居 > artifacts）
+  // 裁剪：core 永远保留；超限时依次裁 2度、宝物、最后才裁 1度邻居。
+  // 每类按 id 保留前面的项，避免 relation 文件顺序变化导致 prompt 前缀变化。
   const totalNodes = 1 + neighborMap.size + secondDegreeMap.size + artifacts.length;
   if (totalNodes > MAX_NODES) {
-    const overflow = totalNodes - MAX_NODES;
-    // 优先裁 2度邻居，再裁 artifacts
-    const secondDegreeArr = Array.from(secondDegreeMap.values());
-    if (secondDegreeArr.length > overflow) {
-      // 裁掉 overflow 个 2度邻居（按 id 字典序，确定性）
-      const toRemove = secondDegreeArr
-        .sort((a, b) => a.id.localeCompare(b.id))
-        .slice(0, overflow);
-      for (const r of toRemove) secondDegreeMap.delete(r.id);
-    } else {
-      // 全删 2度邻居，再裁 artifacts
-      secondDegreeMap.clear();
-      const artOverflow = overflow - secondDegreeArr.length;
-      if (artOverflow > 0) {
-        artifacts.splice(0, artOverflow);
-      }
+    let overflow = totalNodes - MAX_NODES;
+    const trimMap = <T extends { id: string }>(map: Map<string, T>) => {
+      const removable = Math.min(overflow, map.size);
+      if (removable === 0) return;
+      const retained = Array.from(map.values())
+        .sort((left, right) => left.id.localeCompare(right.id))
+        .slice(0, map.size - removable);
+      map.clear();
+      for (const item of retained) map.set(item.id, item);
+      overflow -= removable;
+    };
+
+    trimMap(secondDegreeMap);
+
+    const removableArtifacts = Math.min(overflow, artifacts.length);
+    if (removableArtifacts > 0) {
+      artifacts.sort((left, right) => left.id.localeCompare(right.id));
+      artifacts.splice(artifacts.length - removableArtifacts, removableArtifacts);
+      overflow -= removableArtifacts;
     }
+
+    // 一度邻居也必须服从硬上限；此前这里没有裁剪，MAX_NODES 实际会失效。
+    trimMap(neighborMap);
   }
 
   return {

@@ -45,6 +45,11 @@ describe("callLLMStream", () => {
     expect(deltas).toEqual(["OK"]);
   });
 
+  it("uses a 20,000-token upper bound for production what-if calls", async () => {
+    const { WHAT_IF_MAX_TOKENS } = await import("@/lib/whatif/llmClient");
+    expect(WHAT_IF_MAX_TOKENS).toBe(20_000);
+  });
+
   it("reports output budget exhaustion when reasoning uses every token", async () => {
     createMock.mockResolvedValue({
       async *[Symbol.asyncIterator]() {
