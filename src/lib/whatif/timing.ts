@@ -20,6 +20,7 @@ export interface WhatIfTimingRecord {
   persistMs?: number;
   quotaConfirmMs?: number;
   recoveryCount?: number;
+  recoveryReasons?: string[];
   promptChars?: number;
   outputChars?: number;
   errorCode?: string;

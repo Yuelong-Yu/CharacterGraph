@@ -4,7 +4,8 @@
  *
  * SSE 协议：
  *   event: delta   data: {text: "..."}                  // LLM 流式 token
- *   event: reset   data: {}                             // 重试，丢弃之前的 token
+ *   event: reset   data: {reason, providerAttempt?, parseAttempt?}
+ *                                                          // 重试，丢弃之前的 token
  *   event: done    data: {turnId, sessionId, diff, narrative, choices}
  *   event: error   data: {code, message}
  *
@@ -21,6 +22,7 @@ import {
   WHAT_IF_MAX_TOKENS,
   type ProviderTimingEvent,
 } from "@/lib/whatif/llmClient";
+import type { WhatIfRecoveryReason } from "@/lib/whatif/recovery";
 import { normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { CreateWhatIfSessionInput } from "@/schemas/whatif";
@@ -157,6 +159,7 @@ export async function POST(req: NextRequest) {
       let firstTextRecorded = false;
       let outputChars = 0;
       let recoveryCount = 0;
+      const recoveryReasons: WhatIfRecoveryReason[] = [];
       let providerRequestReadyMs: number | undefined;
       let providerFirstTextMs: number | undefined;
       let providerTotalMs = 0;
@@ -220,12 +223,13 @@ export async function POST(req: NextRequest) {
             outputChars += delta.length;
             send("delta", { text: delta });
           },
-          () => {
+          (recovery) => {
             firstTextReceived = false;
             outputChars = 0;
             recoveryCount += 1;
+            recoveryReasons.push(recovery.reason);
             send("status", { stage: "thinking" });
-            send("reset", {});
+            send("reset", recovery);
           },
           { onProviderTiming: recordProviderTiming },
         );
@@ -295,6 +299,7 @@ export async function POST(req: NextRequest) {
           promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
+          recoveryReasons,
           ...providerTiming(),
         });
 
@@ -319,6 +324,7 @@ export async function POST(req: NextRequest) {
           promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
+          recoveryReasons,
           ...providerTiming(),
         });
         if (!turnPersisted) {

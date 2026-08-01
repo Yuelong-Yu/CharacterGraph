@@ -38,11 +38,17 @@ describe("callLLMStream", () => {
       .mockResolvedValueOnce(eventStream(["OK"]));
     const { callLLMStream } = await import("@/lib/whatif/llmClient");
     const deltas: string[] = [];
+    const recoveries: unknown[] = [];
 
-    await callLLMStream("system", "user", 32, (delta) => deltas.push(delta));
+    await callLLMStream("system", "user", 32, (delta) => deltas.push(delta), (event) => recoveries.push(event));
 
     expect(createMock).toHaveBeenCalledTimes(2);
     expect(deltas).toEqual(["OK"]);
+    expect(recoveries).toEqual([{
+      reason: "empty_response_retry",
+      providerAttempt: 1,
+      errorName: "EmptyLLMResponseError",
+    }]);
   });
 
   it("uses a 20,000-token upper bound for production what-if calls", async () => {
@@ -85,17 +91,21 @@ describe("callLLMStream", () => {
       .mockResolvedValueOnce(eventStream(["complete"]));
     const { callLLMStream } = await import("@/lib/whatif/llmClient");
     let text = "";
-    let resetCount = 0;
+    const recoveries: unknown[] = [];
 
     await callLLMStream(
       "system",
       "user",
       32,
       (delta) => { text += delta; },
-      () => { text = ""; resetCount += 1; },
+      (event) => { text = ""; recoveries.push(event); },
     );
 
-    expect(resetCount).toBe(1);
+    expect(recoveries).toEqual([{
+      reason: "transport_retry",
+      providerAttempt: 1,
+      errorName: "Error",
+    }]);
     expect(text).toBe("complete");
   });
 
@@ -278,18 +288,21 @@ describe("generateParsedWhatIf", () => {
       .mockResolvedValueOnce(eventStream([valid]));
     const { generateParsedWhatIf } = await import("@/lib/whatif/llmClient");
     let streamed = "";
-    let resetCount = 0;
+    const recoveries: unknown[] = [];
 
     const result = await generateParsedWhatIf(
       "system",
       "user",
       256,
       (delta) => { streamed += delta; },
-      () => { streamed = ""; resetCount += 1; },
+      (event) => { streamed = ""; recoveries.push(event); },
     );
 
     expect(createMock).toHaveBeenCalledTimes(2);
-    expect(resetCount).toBe(1);
+    expect(recoveries).toEqual([{
+      reason: "parse_invalid_json_retry",
+      parseAttempt: 1,
+    }]);
     expect(streamed).toBe(valid);
     expect(result.choices).toEqual(["继续推演"]);
   });

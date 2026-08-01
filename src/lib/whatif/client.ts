@@ -8,6 +8,7 @@
 import { EventSourceParserStream } from "eventsource-parser/stream";
 import { withBasePath } from "@/lib/basePath";
 import { throwAiQuotaResponse } from "@/lib/aiQuotaError";
+import type { WhatIfRecoveryEvent } from "@/lib/whatif/recovery";
 import type {
   CreateWhatIfSessionInput,
   GraphDiff,
@@ -20,7 +21,7 @@ export type WhatIfGenerationStage = "thinking" | "generating" | "finalizing";
 export interface WhatIfStreamHandlers {
   onStatus?: (stage: WhatIfGenerationStage) => void;
   onDelta: (text: string) => void;
-  onReset: () => void;
+  onReset: (event: WhatIfRecoveryEvent) => void;
   onDone: (data: {
     turnId: string;
     sessionId: string;
@@ -85,7 +86,7 @@ export async function streamWhatIf(
         const d = data as { text?: string };
         if (typeof d.text === "string") handlers.onDelta(d.text);
       } else if (value.event === "reset") {
-        handlers.onReset();
+        handlers.onReset(data as WhatIfRecoveryEvent);
       } else if (value.event === "done") {
         handlers.onDone(data as Parameters<typeof handlers.onDone>[0]);
       } else if (value.event === "error") {
@@ -116,7 +117,7 @@ export interface ContinueTurnDoneData {
 export interface ContinueTurnHandlers {
   onStatus?: (stage: WhatIfGenerationStage) => void;
   onDelta: (text: string) => void;
-  onReset: () => void;
+  onReset: (event: WhatIfRecoveryEvent) => void;
   onDone: (data: ContinueTurnDoneData) => void;
   onError: (error: { code: string; message: string; raw?: string }) => void;
 }
@@ -172,7 +173,7 @@ export async function streamContinueTurn(
         const d = data as { text?: string };
         if (typeof d.text === "string") handlers.onDelta(d.text);
       } else if (value.event === "reset") {
-        handlers.onReset();
+        handlers.onReset(data as WhatIfRecoveryEvent);
       } else if (value.event === "done") {
         handlers.onDone(data as ContinueTurnDoneData);
       } else if (value.event === "error") {

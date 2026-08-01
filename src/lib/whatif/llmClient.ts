@@ -17,6 +17,7 @@ import {
   type CacheableSystemPrompt,
   type ParsedLLMOutput,
 } from "@/lib/whatif/promptBuilder";
+import type { WhatIfRecoveryEvent, WhatIfRecoveryReason } from "@/lib/whatif/recovery";
 
 const apiKey = process.env.CODING_API_KEY;
 const baseURL = process.env.CODING_BASE_URL || "https://ark.cn-beijing.volces.com/api/coding";
@@ -44,11 +45,10 @@ function isLLMRefusal(text: string): boolean {
   return compact.length <= 300 && REFUSAL_PATTERNS.some((pattern) => pattern.test(compact));
 }
 
-function parseFailureReason(error: LLMParseError): string {
-  if (error.message.includes('"diff":["Required"]')) return "missing_diff";
-  if (error.message.includes("不是合法 JSON")) return "invalid_json";
-  if (error.message.includes("必须是 JSON 对象")) return "non_object_json";
-  return "schema_validation";
+function parseFailureReason(error: LLMParseError): WhatIfRecoveryReason {
+  if (error.message.includes("不是合法 JSON")) return "parse_invalid_json_retry";
+  if (error.message.includes("必须是 JSON 对象")) return "parse_non_object_json_retry";
+  return "parse_schema_validation_retry";
 }
 
 function buildRefusalRecoveryPrompt(user: string): string {
@@ -81,6 +81,16 @@ function isRetryableTransportError(error: unknown): boolean {
 
   return error.name === "AbortError" ||
     /(?:network|connection) error|fetch failed|ECONNRESET|ETIMEDOUT|ECONNREFUSED|EPIPE|EAI_AGAIN|ENOTFOUND|socket hang up|UND_ERR_/i.test(error.message);
+}
+
+function transportRecoveryEvent(error: unknown, providerAttempt: number): WhatIfRecoveryEvent {
+  const errorName = error instanceof Error ? error.name : "UnknownError";
+  const reason = errorName === "EmptyLLMResponseError"
+    ? "empty_response_retry"
+    : errorName === "AbortError"
+      ? "timeout_retry"
+      : "transport_retry";
+  return { reason, providerAttempt, errorName };
 }
 
 let client: Anthropic | null = null;
@@ -152,7 +162,7 @@ export async function callLLMStream(
   user: string,
   maxTokens: number,
   onDelta: (delta: string) => void,
-  onRetry?: () => void,
+  onRetry?: (event: WhatIfRecoveryEvent) => void,
   options: {
     timeoutMs?: number;
     maxAttempts?: number;
@@ -261,7 +271,7 @@ export async function callLLMStream(
       if (!isRetryable || attempt === maxAttempts) {
         throw e;
       }
-      onRetry?.();
+      onRetry?.(transportRecoveryEvent(e, attempt));
       // 重试前等 2 秒
       await new Promise((r) => setTimeout(r, 2000));
     }
@@ -278,7 +288,7 @@ export async function generateParsedWhatIf(
   user: string,
   maxTokens: number,
   onDelta: (delta: string) => void,
-  onReset: () => void,
+  onReset: (event: WhatIfRecoveryEvent) => void,
   options: { onProviderTiming?: (event: ProviderTimingEvent) => void } = {},
 ): Promise<ParsedLLMOutput> {
   const MAX_PARSE_ATTEMPTS = 2;
@@ -300,9 +310,9 @@ export async function generateParsedWhatIf(
         fullText += delta;
         onDelta(delta);
       },
-      () => {
+      (event) => {
         fullText = "";
-        onReset();
+        onReset(event);
       },
       { onProviderTiming: options.onProviderTiming },
     );
@@ -317,15 +327,16 @@ export async function generateParsedWhatIf(
         return recovered;
       }
       lastParseError = error;
+      const reason = isLLMRefusal(error.raw) ? "refusal_retry" : parseFailureReason(error);
       console.warn("[whatif-output-retry]", JSON.stringify({
-        reason: parseFailureReason(error),
+        reason,
         attempt,
       }));
       if (attempt === MAX_PARSE_ATTEMPTS) {
         if (isLLMRefusal(error.raw)) throw new LLMRefusalError(error.raw);
         throw error;
       }
-      onReset();
+      onReset({ reason, parseAttempt: attempt });
     }
   }
 

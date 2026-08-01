@@ -30,6 +30,7 @@ import {
   WHAT_IF_MAX_TOKENS,
   type ProviderTimingEvent,
 } from "@/lib/whatif/llmClient";
+import type { WhatIfRecoveryReason } from "@/lib/whatif/recovery";
 import { applyDiff, normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
 import { validateNarrative } from "@/lib/whatif/validation";
 import { ContinueTurnInput } from "@/schemas/whatif";
@@ -250,6 +251,7 @@ export async function POST(
       let firstTextRecorded = false;
       let outputChars = 0;
       let recoveryCount = 0;
+      const recoveryReasons: WhatIfRecoveryReason[] = [];
       let providerRequestReadyMs: number | undefined;
       let providerFirstTextMs: number | undefined;
       let providerTotalMs = 0;
@@ -313,12 +315,13 @@ export async function POST(
             outputChars += delta.length;
             send("delta", { text: delta });
           },
-          () => {
+          (recovery) => {
             firstTextReceived = false;
             outputChars = 0;
             recoveryCount += 1;
+            recoveryReasons.push(recovery.reason);
             send("status", { stage: "thinking" });
-            send("reset", {});
+            send("reset", recovery);
           },
           { onProviderTiming: recordProviderTiming },
         );
@@ -368,6 +371,7 @@ export async function POST(
           promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
+          recoveryReasons,
           ...providerTiming(),
         });
 
@@ -392,6 +396,7 @@ export async function POST(
           promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
+          recoveryReasons,
           ...providerTiming(),
         });
         if (!turnPersisted) {
