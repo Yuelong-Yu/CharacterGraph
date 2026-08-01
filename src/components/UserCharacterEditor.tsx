@@ -86,10 +86,14 @@ export function UserCharacterEditor({
     () => dataset.characters.filter((character) => character.id !== editingRecord?.id),
     [dataset.characters, editingRecord?.id],
   );
-  const countRange = defaultRelationshipCount(candidates.length);
   const existingTargets = editingRecord?.relations.map((relation) => (
     relation.source === editingRecord.id ? relation.target : relation.source
   )) ?? [];
+  const baseCountRange = defaultRelationshipCount(candidates.length);
+  // 新建人物最多配置 10 条关系；旧记录若历史上已超过该数，仍允许原样编辑保存。
+  const countRange = editingRecord
+    ? { ...baseCountRange, max: Math.max(baseCountRange.max, existingTargets.length) }
+    : baseCountRange;
   const [nameZh, setNameZh] = useState(editingRecord?.character.name_zh ?? "");
   const [background, setBackground] = useState(editingRecord?.background ?? "");
   const [category, setCategory] = useState(

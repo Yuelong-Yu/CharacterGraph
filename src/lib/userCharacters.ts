@@ -7,6 +7,7 @@ import type {
 } from "@/schemas/character";
 
 export const BASE_USER_CHARACTER_SCOPE = "base";
+export const MAX_INITIAL_USER_CHARACTER_RELATIONSHIPS = 10;
 
 export interface UserCharacterRecord {
   id: string;
@@ -34,7 +35,8 @@ export function defaultRelationshipCount(existingCharacterCount: number): {
 } {
   const count = Math.max(0, Math.floor(existingCharacterCount));
   if (count === 0) return { defaultValue: 0, min: 0, max: 0 };
-  return { defaultValue: Math.min(3, count), min: 1, max: count };
+  const max = Math.min(count, MAX_INITIAL_USER_CHARACTER_RELATIONSHIPS);
+  return { defaultValue: Math.min(3, max), min: 1, max };
 }
 
 function slugifyChineseName(name: string): string {

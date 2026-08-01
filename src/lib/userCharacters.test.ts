@@ -83,8 +83,8 @@ const record: UserCharacterRecord = {
 };
 
 describe("user character graph overlay", () => {
-  it("uses three as the default but keeps the full existing population as the maximum", () => {
-    expect(defaultRelationshipCount(150)).toEqual({ defaultValue: 3, min: 1, max: 150 });
+  it("uses three as the default and caps new-character relationships at ten", () => {
+    expect(defaultRelationshipCount(150)).toEqual({ defaultValue: 3, min: 1, max: 10 });
     expect(defaultRelationshipCount(2)).toEqual({ defaultValue: 2, min: 1, max: 2 });
     expect(defaultRelationshipCount(0)).toEqual({ defaultValue: 0, min: 0, max: 0 });
   });
