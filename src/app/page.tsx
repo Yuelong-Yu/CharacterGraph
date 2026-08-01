@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ChronChaosSiteFooter } from "@chronchaos/top-navigation";
 import { listProjects } from "@/lib/data";
 import { COLOR, FONT } from "@/lib/tokens";
 
@@ -71,6 +72,7 @@ export default function Home() {
           </Link>
         ))}
       </section>
+      <ChronChaosSiteFooter />
       <style>{`
         @media (max-width: 1023px) {
           .project-home {
