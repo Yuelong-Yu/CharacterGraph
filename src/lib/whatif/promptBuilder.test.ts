@@ -77,7 +77,7 @@ describe("parseLLMOutput", () => {
   it("recovers a complete structured response that only omits diff", () => {
     const recovered = tryRecoverMissingDiffOutput(JSON.stringify({
       narrative: [{ label: "推演", text: "奥德修斯改道返乡。" }],
-      choices: ["继续返乡", "先拜访涅斯托尔"],
+      choices: ["保守推进：继续返乡", "关系转折：先拜访涅斯托尔", "高风险／意外变量：冒险穿越风暴"],
     }));
 
     expect(recovered?.diff).toEqual({
@@ -94,7 +94,7 @@ describe("parseLLMOutput", () => {
     expect(tryRecoverMissingDiffOutput(JSON.stringify({
       diff: null,
       narrative: [{ label: "推演", text: "x" }],
-      choices: ["继续"],
+      choices: ["保守推进：继续", "关系转折：求助盟友", "高风险／意外变量：接受未知来客"],
     }))).toBeNull();
   });
 
@@ -112,17 +112,51 @@ describe("parseLLMOutput", () => {
         modifiedEvents: [],
         replacedEvents: [],
       },
-      choices: ["继续航行", "先返回伊塔刻"],
+      choices: ["保守推进：继续航行", "关系转折：先返回伊塔刻", "高风险／意外变量：驶入未知海域"],
     });
 
     const result = parseLLMOutput(raw);
 
     expect(result.narrative[0]).toMatchObject({ label: "原典", text: "奥德修斯终将返乡。" });
-    expect(result.choices).toEqual(["继续航行", "先返回伊塔刻"]);
+    expect(result.choices).toEqual(["保守推进：继续航行", "关系转折：先返回伊塔刻", "高风险／意外变量：驶入未知海域"]);
   });
 
   it("rejects invalid JSON objects instead of falling back to text delimiters", () => {
     expect(() => parseLLMOutput('{"diff": {bad-json}')).toThrow("模型输出不是合法 JSON");
+  });
+
+  it("rejects outputs that do not contain exactly three choices", () => {
+    const raw = JSON.stringify({
+      narrative: [{ label: "推演", text: "故事继续发展。" }],
+      diff: {
+        removedNodes: [],
+        addedNodes: [],
+        removedEdges: [],
+        addedEdges: [],
+        modifiedEvents: [],
+        replacedEvents: [],
+      },
+      choices: ["保守推进", "关系转折"],
+    });
+
+    expect(() => parseLLMOutput(raw)).toThrow("JSON 输出 Zod 校验失败");
+  });
+
+  it("rejects three choices that do not use the required direction labels", () => {
+    const raw = JSON.stringify({
+      narrative: [{ label: "推演", text: "故事继续发展。" }],
+      diff: {
+        removedNodes: [],
+        addedNodes: [],
+        removedEdges: [],
+        addedEdges: [],
+        modifiedEvents: [],
+        replacedEvents: [],
+      },
+      choices: ["继续推进", "联系盟友", "改变路线"],
+    });
+
+    expect(() => parseLLMOutput(raw)).toThrow("JSON 输出 Zod 校验失败");
   });
 
   it("parses strict format (=== separators)", () => {
@@ -139,14 +173,15 @@ describe("parseLLMOutput", () => {
 【原典】第一段
 【推演】第二段
 ===CHOICES===
-1. 选项一
-2. 选项二`;
+1. 保守推进：选项一
+2. 关系转折：选项二
+3. 高风险／意外变量：选项三`;
     const result = parseLLMOutput(raw);
     expect(result.diff.removedNodes).toEqual(["a"]);
     expect(result.narrative).toHaveLength(2);
     expect(result.narrative[0].label).toBe("原典");
     expect(result.narrative[0].text).toBe("第一段");
-    expect(result.choices).toEqual(["选项一", "选项二"]);
+    expect(result.choices).toEqual(["保守推进：选项一", "关系转折：选项二", "高风险／意外变量：选项三"]);
   });
 
   it("parses established branch facts with the 假设 label", () => {
@@ -156,7 +191,9 @@ describe("parseLLMOutput", () => {
 【假设】上一轮中卢俊义已经拒绝招安。
 【推演】因此本轮梁山改变了应战策略。
 ===CHOICES===
-1. 继续推演`;
+1. 保守推进：继续推进既定策略
+2. 关系转折：争取中立人物
+3. 高风险／意外变量：接受突发变数`;
 
     const result = parseLLMOutput(raw);
 
@@ -179,12 +216,13 @@ describe("parseLLMOutput", () => {
 some text
 【原典】叙事内容
 【推演】推演内容
-1. 选项一
-2. 选项二`;
+1. 保守推进：选项一
+2. 关系转折：选项二
+3. 高风险／意外变量：选项三`;
     const result = parseLLMOutput(raw);
     expect(result.diff.removedNodes).toEqual(["x"]);
     expect(result.narrative).toHaveLength(2);
-    expect(result.choices).toEqual(["选项一", "选项二"]);
+    expect(result.choices).toEqual(["保守推进：选项一", "关系转折：选项二", "高风险／意外变量：选项三"]);
   });
 
   it("throws LLMParseError on invalid JSON in diff", () => {
@@ -193,7 +231,9 @@ some text
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1. y`;
+1. 保守推进：y
+2. 关系转折：z
+3. 高风险／意外变量：w`;
     expect(() => parseLLMOutput(raw)).toThrow(LLMParseError);
   });
 
@@ -237,7 +277,9 @@ no labels here
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1. y`;
+1. 保守推进：y
+2. 关系转折：z
+3. 高风险／意外变量：w`;
     const result = parseLLMOutput(raw);
     expect(result.diff.modifiedEvents[0].newEvent.source).toBeNull();
   });
@@ -264,7 +306,9 @@ no labels here
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1. y`;
+1. 保守推进：y
+2. 关系转折：z
+3. 高风险／意外变量：w`;
     const result = parseLLMOutput(raw);
     expect(result.diff.modifiedEvents).toHaveLength(0);
     expect(result.diff.replacedEvents).toHaveLength(1);
@@ -292,7 +336,9 @@ no labels here
 ===NARRATIVE===
 【推演】宋江走上另一条时间线。
 ===CHOICES===
-1. 继续`;
+1. 保守推进：继续
+2. 关系转折：联络盟友
+3. 高风险／意外变量：接受变数`;
 
     const result = parseLLMOutput(raw);
 
@@ -323,7 +369,9 @@ no labels here
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1. y`;
+1. 保守推进：y
+2. 关系转折：z
+3. 高风险／意外变量：w`;
     const result = parseLLMOutput(raw);
     expect(result.diff.modifiedEvents).toHaveLength(1);
     expect(result.diff.modifiedEvents[0].eventIndex).toBe(0);
@@ -352,7 +400,9 @@ no labels here
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1. y`;
+1. 保守推进：y
+2. 关系转折：z
+3. 高风险／意外变量：w`;
     const result = parseLLMOutput(raw);
     expect(result.diff.addedEdges[0].composite_types).toEqual([]);
   });
@@ -400,7 +450,9 @@ no labels here
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1. y`;
+1. 保守推进：y
+2. 关系转折：z
+3. 高风险／意外变量：w`;
     const result = parseLLMOutput(raw);
     expect(result.diff.addedEdges[0].events[0].canon).toBeNull();
     expect(result.diff.modifiedEvents[0].newEvent.canon).toBeNull();
@@ -419,11 +471,11 @@ no labels here
 ===NARRATIVE===
 【原典】x
 ===CHOICES===
-1) 第一项
-- 第二项
-3. 第三项`;
+1) 保守推进：第一项
+- 关系转折：第二项
+3. 高风险／意外变量：第三项`;
     const result = parseLLMOutput(raw);
-    expect(result.choices).toEqual(["第一项", "第二项", "第三项"]);
+    expect(result.choices).toEqual(["保守推进：第一项", "关系转折：第二项", "高风险／意外变量：第三项"]);
   });
 });
 
@@ -454,8 +506,12 @@ describe("multi-turn prompt provenance", () => {
       required: ["diff", "narrative", "choices"],
       properties: {
         diff: { $ref: "#/$defs/graphDiff" },
+        choices: { type: "array", minItems: 3, maxItems: 3 },
       },
     });
+    expect(prompt).toContain("保守推进");
+    expect(prompt).toContain("关系转折");
+    expect(prompt).toContain("高风险／意外变量");
   });
 
   it("separates immutable canon from a compact current branch delta", () => {

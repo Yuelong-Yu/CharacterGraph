@@ -308,7 +308,7 @@ describe("generateParsedWhatIf", () => {
         replacedEvents: [],
       },
       narrative: [{ label: "推演", text: "第二次生成成功。" }],
-      choices: ["继续推演"],
+      choices: ["保守推进：继续推演", "关系转折：寻求盟友", "高风险／意外变量：接受未知消息"],
     });
     createMock
       .mockResolvedValueOnce(eventStream([invalid]))
@@ -331,13 +331,13 @@ describe("generateParsedWhatIf", () => {
       parseAttempt: 1,
     }]);
     expect(streamed).toBe(valid);
-    expect(result.choices).toEqual(["继续推演"]);
+    expect(result.choices).toEqual(["保守推进：继续推演", "关系转折：寻求盟友", "高风险／意外变量：接受未知消息"]);
   });
 
   it("defaults an otherwise valid response with a missing diff without regenerating", async () => {
     const missingDiff = JSON.stringify({
       narrative: [{ label: "推演", text: "奥德修斯转向伊塔刻。" }],
-      choices: ["继续返乡", "先补给"],
+      choices: ["保守推进：继续返乡", "关系转折：先补给", "高风险／意外变量：改变航线"],
     });
     createMock.mockResolvedValue(eventStream([missingDiff]));
     const { generateParsedWhatIf } = await import("@/lib/whatif/llmClient");
@@ -368,7 +368,9 @@ describe("generateParsedWhatIf", () => {
 ===NARRATIVE===
 【推演】众人通过协商处理梁山内部的领导权分歧。
 ===CHOICES===
-1. 继续推演`;
+1. 保守推进：继续推演
+2. 关系转折：争取中立者
+3. 高风险／意外变量：接受突发挑战`;
     createMock
       .mockResolvedValueOnce(eventStream([refusal]))
       .mockResolvedValueOnce(eventStream([valid]));
@@ -388,7 +390,7 @@ describe("generateParsedWhatIf", () => {
     expect(retryPrompt).not.toContain("杀手");
     expect(retryPrompt).not.toContain("刺杀");
     expect(retryPrompt).toContain("梁山内部主导权");
-    expect(result.choices).toEqual(["继续推演"]);
+    expect(result.choices).toEqual(["保守推进：继续推演", "关系转折：争取中立者", "高风险／意外变量：接受突发挑战"]);
   });
 
   it("reports a provider refusal instead of a JSON parse error after recovery fails", async () => {

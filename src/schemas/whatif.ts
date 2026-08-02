@@ -48,11 +48,19 @@ export const NarrativeSegment = z.object({
 });
 export type NarrativeSegment = z.infer<typeof NarrativeSegment>;
 
+/** 模型每轮必须给出的三种后续走向。历史回合仍可保留旧的 2 项选项。 */
+export const WhatIfChoices = z.tuple([
+  z.string().regex(/^保守推进[：:]/),
+  z.string().regex(/^关系转折[：:]/),
+  z.string().regex(/^高风险[／/]意外变量[：:]/),
+]);
+export type WhatIfChoices = z.infer<typeof WhatIfChoices>;
+
 /** 模型单次推演的完整结构化输出。 */
 export const WhatIfLLMOutput = z.object({
   diff: GraphDiff,
   narrative: z.array(NarrativeSegment),
-  choices: z.array(z.string()),
+  choices: WhatIfChoices,
 });
 export type WhatIfLLMOutput = z.infer<typeof WhatIfLLMOutput>;
 

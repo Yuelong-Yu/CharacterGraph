@@ -6,7 +6,13 @@
  * 解析失败时抛 ParseError，调用方决定降级策略。
  */
 import type { ClientProjectConfig } from "@/schemas/projectConfig";
-import { GraphDiff, NarrativeSegment, NarrativeLabel, WhatIfLLMOutput } from "@/schemas/whatif";
+import {
+  GraphDiff,
+  NarrativeSegment,
+  NarrativeLabel,
+  WhatIfChoices,
+  WhatIfLLMOutput,
+} from "@/schemas/whatif";
 import type { GraphSubset } from "./contextBuilder";
 import { formatSubsetForPrompt } from "./contextBuilder";
 
@@ -45,7 +51,17 @@ export const WHAT_IF_OUTPUT_JSON_SCHEMA = {
   properties: {
     narrative: { type: "array", items: { $ref: "#/$defs/narrativeSegment" } },
     diff: { $ref: "#/$defs/graphDiff" },
-    choices: { type: "array", items: { type: "string" } },
+    choices: {
+      type: "array",
+      minItems: 3,
+      maxItems: 3,
+      prefixItems: [
+        { type: "string", pattern: "^保守推进[：:]" },
+        { type: "string", pattern: "^关系转折[：:]" },
+        { type: "string", pattern: "^高风险[／/]意外变量[：:]" },
+      ],
+      items: false,
+    },
   },
   $defs: {
     slug: { type: "string", pattern: "^[a-z][a-z0-9_]*$" },
@@ -285,7 +301,7 @@ export function buildCacheableSystemPrompt(
 基于给定的人物图谱子集和分支点前提，推演「如果这件事没发生（或前提成立）」之后的故事走向，输出三部分：
 1. 图谱变化（哪些人物/关系消失或新增、哪些事件被改写）
 2. 带标注的叙事（每段必须标【原典】/【假设】/【推演】/【杜撰】）
-3. 2-3 个后续走向选项
+3. 固定 3 个后续走向选项：保守推进、关系转折、高风险／意外变量
 
 # 不可变原典图谱子集
 ${formatSubsetForPrompt(canonicalSubset)}
@@ -354,7 +370,11 @@ ${formatSubsetForPrompt(canonicalSubset)}
     ],
     "replacedEvents": []
   },
-  "choices": ["选项一描述", "选项二描述", "选项三描述"]
+  "choices": [
+    "保守推进：在不改变当前主要关系的前提下，采取具体行动……",
+    "关系转折：与某位关键人物改变合作、对立或信任关系……",
+    "高风险／意外变量：引入一个合理但不确定的事件、人物或信息……"
+  ]
 }
 
 # 图谱变化原则（严格遵守，避免过度激进）
@@ -386,7 +406,11 @@ ${formatSubsetForPrompt(canonicalSubset)}
 # 重要约束
 - 首轮叙事至少包含 1 段【原典】、1 段【假设】和 1 段【推演】；续写若回顾前情必须标【假设】，不得为了凑段落把假设改标为【原典】。
 - narrative 中每段都必须有 label 和 text；label 只能是【原典】、【假设】、【推演】、【杜撰】去掉方括号后的值。
-- choices 必须是 2-3 个字符串，不要添加 "1. " 等编号前缀。
+- choices 必须**恰好 3 个**字符串，顺序固定为：
+  1. 「保守推进：」在不改变当前主要关系的前提下，以具体行动稳步推进局势；
+  2. 「关系转折：」让一位关键人物的合作、对立或信任关系发生明确变化；
+  3. 「高风险／意外变量：」引入合理但不确定的事件、人物或信息，带来更高风险或意外走向。
+  三项必须彼此不同、都能承接当前叙事，并且不要添加「1. 」等编号前缀。
 - 不要输出 JSON 对象以外的任何解释性文字。
 - **再次强调：removedNodes 要极度克制，不要因为「连锁影响」就删除大量远亲节点。**`;
 
@@ -475,7 +499,7 @@ ${userInput}
 - 前文中的【假设】是当前分支已成立的事实，但仍不是原典
 - 叙事要承接前文，不要重复已发生的事
 - 至少 2 段叙事，至少 1 段【推演】
-- 2-3 个后续选项`;
+- 固定输出 3 个后续选项，顺序为：保守推进、关系转折、高风险／意外变量。`;
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -600,7 +624,15 @@ function parseLegacyLLMOutput(text: string, raw: string): ParsedLLMOutput {
   const narrative = parseNarrativeBlock(narrativeBlock, raw);
   const choices = parseChoicesBlock(choicesBlock, raw);
 
-  return { diff, narrative, choices };
+  return { diff, narrative, choices: validateChoices(choices, raw) };
+}
+
+function validateChoices(choices: string[], raw: string): string[] {
+  const result = WhatIfChoices.safeParse(choices);
+  if (!result.success) {
+    throw new LLMParseError("选项必须按顺序包含保守推进、关系转折、高风险／意外变量三项", raw);
+  }
+  return result.data;
 }
 
 function parseDiffBlock(block: string, raw: string): GraphDiff {
@@ -940,5 +972,5 @@ function parseLenient(text: string): ParsedLLMOutput {
     throw new LLMParseError("无法解析选项（无 数字. 开头行）", text);
   }
 
-  return { diff, narrative, choices };
+  return { diff, narrative, choices: validateChoices(choices, text) };
 }
