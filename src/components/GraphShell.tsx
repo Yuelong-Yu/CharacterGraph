@@ -60,6 +60,10 @@ import {
   restoreUserCharacterHistory,
 } from "@/lib/userCharacterClient";
 import { fetchUserProjectContent, importLocalUserContent, mutateUserContent } from "@/lib/userContentClient";
+import {
+  synchronizeUserProjectContent,
+  type UserCharacterEditorState,
+} from "@/lib/userContentSync";
 import type { UserProjectContentSnapshot } from "@/schemas/userContent";
 import type { SessionUser } from "@/lib/auth";
 import { fetchSessionUser } from "@/lib/authClient";
@@ -153,9 +157,9 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [loadedUserScopeId, setLoadedUserScopeId] = useState<string | null>(null);
   const recordsRef = useRef<UserCharacterRecord[]>([]);
   const accountIdRef = useRef<string | null>(null);
-  const [userCharacterEditor, setUserCharacterEditor] = useState<{
-    editingRecord: UserCharacterRecord | null;
-  } | null>(null);
+  const [userCharacterEditor, setUserCharacterEditor] = useState<UserCharacterEditorState>(null);
+  const userCharacterEditorRef = useRef<UserCharacterEditorState>(null);
+  userCharacterEditorRef.current = userCharacterEditor;
   const [deletedUserCharacter, setDeletedUserCharacter] = useState<{
     record: UserCharacterRecord;
     branchId: string | null;
@@ -203,18 +207,19 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   }, [userCharacterRecords]);
 
   const applyCloudContent = useCallback((content: UserProjectContentSnapshot) => {
-    setCloudContent(content);
-    setUserCharacterScopes(content.scopes);
-    setLocalUserBranchId(content.activeScopeId);
-    setUserEvents(content.userEvents);
-    const scopeId = activeBranchId ?? content.activeScopeId ?? BASE_USER_CHARACTER_SCOPE;
-    if (content.initializedScopeIds.includes(scopeId)) {
-      setUserCharacterRecords(content.characterRecords.filter((record) => record.scopeId === scopeId));
-      setLoadedUserScopeId(scopeId);
+    const sync = synchronizeUserProjectContent(content, activeBranchId, userCharacterEditorRef.current);
+    setCloudContent(sync.cloudContent);
+    setUserCharacterScopes(sync.userCharacterScopes);
+    setLocalUserBranchId(sync.localUserBranchId);
+    setUserEvents(sync.userEvents);
+    if (sync.userCharacterRecords) {
+      setUserCharacterRecords(sync.userCharacterRecords);
+      setLoadedUserScopeId(sync.loadedUserScopeId);
     } else {
       // Keep the previous scope in recordsRef until initialize-scope copies it.
       setLoadedUserScopeId(null);
     }
+    setUserCharacterEditor(sync.userCharacterEditor);
     setUserScopesReady(true);
   }, [activeBranchId]);
 
