@@ -11,6 +11,7 @@ import {
 } from "@/lib/userCharacterGeneration";
 import { GenerateUserCharacterInput } from "@/schemas/userCharacter";
 import { adaptationWork } from "@/lib/userEvents";
+import { startSseHeartbeat } from "@/lib/sseHeartbeat";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -100,9 +101,23 @@ export async function POST(req: NextRequest) {
   const encoder = new TextEncoder();
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
+      let streamOpen = true;
       const send = (event: string, data: unknown) => {
-        controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+        if (!streamOpen) return;
+        try {
+          controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
+        } catch {
+          streamOpen = false;
+        }
       };
+      const stopHeartbeat = startSseHeartbeat((frame) => {
+        if (!streamOpen) return;
+        try {
+          controller.enqueue(encoder.encode(frame));
+        } catch {
+          streamOpen = false;
+        }
+      });
 
       try {
         const canonicalWork = loaded.dataset.characters
@@ -219,7 +234,13 @@ export async function POST(req: NextRequest) {
           message: error instanceof Error ? error.message : String(error),
         });
       } finally {
-        controller.close();
+        stopHeartbeat();
+        streamOpen = false;
+        try {
+          controller.close();
+        } catch {
+          // The browser may already have cancelled a backgrounded stream.
+        }
       }
     },
   });

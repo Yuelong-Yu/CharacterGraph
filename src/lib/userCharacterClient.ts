@@ -8,9 +8,24 @@ import { withBasePath } from "@/lib/basePath";
 import { AiQuotaRequestError } from "@/lib/aiQuotaError";
 
 export interface UserCharacterGenerationProgress {
-  stage: "targets" | "profile" | "relationships";
+  stage: "targets" | "profile" | "relationships" | "reconnecting";
   completed: number;
   total: number;
+}
+
+class UserCharacterGenerationStreamError extends Error {
+  constructor(readonly code: string, message: string) {
+    super(message);
+    this.name = "UserCharacterGenerationStreamError";
+  }
+}
+
+function isRetryableTransportError(error: unknown): boolean {
+  if (error instanceof UserCharacterGenerationStreamError) {
+    return error.code === "LLM_ERROR" && /network|connection|timeout|temporar/i.test(error.message);
+  }
+  if (!(error instanceof Error)) return false;
+  return /network error|fetch failed|HTTP 5\d\d|stream ended without a result|ECONNRESET|ETIMEDOUT|ECONNREFUSED|EPIPE|UND_ERR_|HTTP2_PROTOCOL_ERROR/i.test(error.message);
 }
 
 export async function streamUserCharacterGeneration(
@@ -22,38 +37,58 @@ export async function streamUserCharacterGeneration(
   },
   signal?: AbortSignal,
 ): Promise<void> {
-  const response = await fetch(withBasePath("/api/user-characters/generate"), {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(input),
-    signal,
-  });
-  if (!response.ok) {
-    const text = await response.text().catch(() => "");
-    throw new Error(`HTTP ${response.status}: ${text}`);
-  }
-  if (!response.body) throw new Error("Response has no body");
-
-  const events = response.body
-    .pipeThrough(new TextDecoderStream())
-    .pipeThrough(new EventSourceParserStream());
-  const reader = events.getReader();
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      if (!value?.data) continue;
-      const data = JSON.parse(value.data) as unknown;
-      if (value.event === "progress") {
-        handlers.onProgress(data as UserCharacterGenerationProgress);
-      } else if (value.event === "done") {
-        handlers.onDone(data as UserCharacterGenerationResult & { sourceWork: string });
-      } else if (value.event === "error") {
-        handlers.onError(data as { code: string; message: string });
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      const response = await fetch(withBasePath("/api/user-characters/generate"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(input),
+        signal,
+      });
+      if (!response.ok) {
+        const text = await response.text().catch(() => "");
+        throw new Error(`HTTP ${response.status}: ${text}`);
       }
+      if (!response.body) throw new Error("Response has no body");
+
+      const events = response.body
+        .pipeThrough(new TextDecoderStream())
+        .pipeThrough(new EventSourceParserStream());
+      const reader = events.getReader();
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          if (!value?.data) continue;
+          const data = JSON.parse(value.data) as unknown;
+          if (value.event === "progress") {
+            handlers.onProgress(data as UserCharacterGenerationProgress);
+          } else if (value.event === "done") {
+            handlers.onDone(data as UserCharacterGenerationResult & { sourceWork: string });
+            return;
+          } else if (value.event === "error") {
+            const failure = data as { code?: unknown; message?: unknown };
+            throw new UserCharacterGenerationStreamError(
+              typeof failure.code === "string" ? failure.code : "LLM_ERROR",
+              typeof failure.message === "string" ? failure.message : "人物生成失败，请重试",
+            );
+          }
+        }
+      } finally {
+        reader.releaseLock();
+      }
+      throw new Error("生成连接在返回结果前结束");
+    } catch (error) {
+      if (!signal?.aborted && attempt < 2 && isRetryableTransportError(error)) {
+        handlers.onProgress({ stage: "reconnecting", completed: 0, total: 1 });
+        continue;
+      }
+      if (error instanceof UserCharacterGenerationStreamError) {
+        handlers.onError({ code: error.code, message: error.message });
+        return;
+      }
+      throw error;
     }
-  } finally {
-    reader.releaseLock();
   }
 }
 

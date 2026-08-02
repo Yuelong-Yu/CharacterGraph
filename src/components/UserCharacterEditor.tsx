@@ -69,6 +69,7 @@ function previewFromRecord(record: UserCharacterRecord): PreviewState {
 
 function progressText(progress: UserCharacterGenerationProgress | null): string {
   if (!progress) return "正在连接豆包模型…";
+  if (progress.stage === "reconnecting") return "连接中断，正在自动重试…";
   if (progress.stage === "targets") return `正在选择关系人物 ${progress.completed}/${progress.total}`;
   if (progress.stage === "profile") return "正在生成人物资料";
   return `正在生成关系故事 ${progress.completed}/${progress.total} 批`;
