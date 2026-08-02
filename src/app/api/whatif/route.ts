@@ -298,7 +298,7 @@ export async function POST(req: NextRequest) {
         await confirmWhatIfQuota(req, [quotaRequestKey]);
         timing.mark("quotaConfirmMs", quotaConfirmStartedAt);
 
-        timing.report("success", {
+        const timingRecord = timing.report("success", {
           promptChars: system.cacheable.length + system.dynamic.length + user.length,
           outputChars,
           recoveryCount,
@@ -315,6 +315,7 @@ export async function POST(req: NextRequest) {
           narrative: llmOutput.narrative,
           choices: llmOutput.choices,
           validation,
+          timing: timingRecord,
         });
       } catch (e) {
         const errorCode = e instanceof LLMRefusalError

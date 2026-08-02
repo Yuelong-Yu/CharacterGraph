@@ -9,6 +9,7 @@ import { EventSourceParserStream } from "eventsource-parser/stream";
 import { withBasePath } from "@/lib/basePath";
 import { throwAiQuotaResponse } from "@/lib/aiQuotaError";
 import type { WhatIfRecoveryEvent } from "@/lib/whatif/recovery";
+import type { WhatIfTimingRecord } from "@/lib/whatif/timing";
 import type {
   CreateWhatIfSessionInput,
   GraphDiff,
@@ -30,6 +31,7 @@ export interface WhatIfStreamHandlers {
     narrative: NarrativeSegment[];
     choices: string[];
     validation: ValidationResult[];
+    timing?: WhatIfTimingRecord;
   }) => void;
   onError: (error: { code: string; message: string; raw?: string }) => void;
 }
@@ -112,6 +114,7 @@ export interface ContinueTurnDoneData {
   narrative: NarrativeSegment[];
   choices: string[];
   validation: ValidationResult[];
+  timing?: WhatIfTimingRecord;
 }
 
 export interface ContinueTurnHandlers {
