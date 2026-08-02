@@ -16,7 +16,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
-import { buildContext } from "@/lib/whatif/contextBuilder";
+import { buildContext, maxNodesForCompletedContinuations } from "@/lib/whatif/contextBuilder";
 import {
   buildCacheableSystemPrompt,
   buildContinuationUserPrompt,
@@ -176,13 +176,33 @@ export async function POST(
   const branchCharacterIds = new Set(
     priorTurns.flatMap((turn) => turn.diff.addedNodes.map((character) => character.id)),
   );
+  const priorityCharacterIds = new Set(
+    priorTurns.flatMap((turn) => [
+      ...turn.diff.modifiedEvents.map((event) => event.characterId),
+      ...turn.diff.replacedEvents.map((event) => event.characterId),
+      ...turn.narrative.flatMap((segment) => segment.characterIds ?? []),
+    ]),
+  );
+  const relevanceText = [
+    ...priorTurns.flatMap((turn) => [
+      turn.sourceEventTitle ?? "",
+      turn.premise,
+      ...turn.narrative.map((segment) => segment.text),
+    ]),
+    input.userInput,
+  ].join("\n");
+  const contextOptions = {
+    maxNodes: maxNodesForCompletedContinuations(Math.max(0, priorTurns.length - 1)),
+    relevanceText,
+    priorityCharacterIds,
+  };
 
   // 6. 构建上下文（基于 effective dataset）
   let canonicalSubset;
   let subset;
   try {
-    canonicalSubset = buildContext(baseDataset, session.characterId);
-    subset = buildContext(effectiveDataset, session.characterId, { branchCharacterIds });
+    canonicalSubset = buildContext(baseDataset, session.characterId, contextOptions);
+    subset = buildContext(effectiveDataset, session.characterId, { ...contextOptions, branchCharacterIds });
   } catch (e) {
     return NextResponse.json(
       { error: `上下文构建失败: ${e instanceof Error ? e.message : String(e)}` },

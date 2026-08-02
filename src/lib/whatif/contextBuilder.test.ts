@@ -2,7 +2,12 @@
  * contextBuilder 单元测试
  */
 import { describe, it, expect } from "vitest";
-import { buildContext, MAX_NODES } from "@/lib/whatif/contextBuilder";
+import {
+  buildContext,
+  INITIAL_MAX_NODES,
+  MAX_NODES,
+  maxNodesForCompletedContinuations,
+} from "@/lib/whatif/contextBuilder";
 import type { Dataset, Character, Relation, Artifact } from "@/schemas/character";
 
 function makeCharacter(overrides: Partial<Character> = {}): Character {
@@ -46,6 +51,14 @@ function makeDataset(chars: Character[], rels: Relation[] = [], artifacts: Artif
 }
 
 describe("buildContext", () => {
+  it("starts at 7 nodes and grows by one after every five completed continuations", () => {
+    expect(INITIAL_MAX_NODES).toBe(7);
+    expect(maxNodesForCompletedContinuations(0)).toBe(7);
+    expect(maxNodesForCompletedContinuations(4)).toBe(7);
+    expect(maxNodesForCompletedContinuations(5)).toBe(8);
+    expect(maxNodesForCompletedContinuations(40)).toBe(MAX_NODES);
+  });
+
   it("throws on unknown core character", () => {
     const ds = makeDataset([makeCharacter({ id: "a" })]);
     expect(() => buildContext(ds, "nonexistent")).toThrow("character not found");
@@ -154,6 +167,54 @@ describe("buildContext", () => {
     expect(1 + subset.neighbors.length + subset.secondDegree.length + subset.artifacts.length)
       .toBeLessThanOrEqual(MAX_NODES);
     expect(subset.core.id).toBe("core");
+  });
+
+  it("prioritizes characters whose relation events match the simulated event", () => {
+    const core = makeCharacter({ id: "core" });
+    const related = makeCharacter({ id: "related", name_zh: "关联人物" });
+    const others = Array.from({ length: 8 }, (_, index) => makeCharacter({ id: `other_${index}` }));
+    const matchingRelation = makeRelation("core", "related");
+    matchingRelation.events = [{
+      title: "景阳冈打虎",
+      desc: "武松在景阳冈打死猛虎。",
+      era_order: 1,
+      source: null,
+      canon: null,
+    }];
+    const subset = buildContext(
+      makeDataset(
+        [core, related, ...others],
+        [matchingRelation, ...others.map((character) => makeRelation("core", character.id))],
+      ),
+      "core",
+      { maxNodes: INITIAL_MAX_NODES, relevanceText: "假如景阳冈打虎没有发生" },
+    );
+
+    expect(subset.neighbors.map((node) => node.id)).toContain("related");
+    expect(1 + subset.neighbors.length + subset.secondDegree.length + subset.artifacts.length)
+      .toBe(INITIAL_MAX_NODES);
+  });
+
+  it("prioritizes people directly connected to a character being modified", () => {
+    const core = makeCharacter({ id: "core" });
+    const edited = makeCharacter({ id: "edited" });
+    const directlyRelated = makeCharacter({ id: "directly_related" });
+    const others = Array.from({ length: 8 }, (_, index) => makeCharacter({ id: `other_${index}` }));
+    const subset = buildContext(
+      makeDataset(
+        [core, edited, directlyRelated, ...others],
+        [
+          makeRelation("core", "edited"),
+          makeRelation("edited", "directly_related"),
+          ...others.map((character) => makeRelation("core", character.id)),
+        ],
+      ),
+      "core",
+      { maxNodes: INITIAL_MAX_NODES, priorityCharacterIds: new Set(["edited"]) },
+    );
+
+    expect(subset.neighbors.map((node) => node.id)).toContain("edited");
+    expect(subset.secondDegree.map((node) => node.id)).toContain("directly_related");
   });
 
   it("keeps 1度和宝物 before 2度节点 when applying the node budget", () => {

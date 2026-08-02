@@ -14,7 +14,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/whatif/db";
 import { loadDataset } from "@/lib/data";
-import { buildContext } from "@/lib/whatif/contextBuilder";
+import { buildContext, INITIAL_MAX_NODES } from "@/lib/whatif/contextBuilder";
 import { buildCacheableSystemPrompt, buildUserPrompt, LLMParseError } from "@/lib/whatif/promptBuilder";
 import {
   generateParsedWhatIf,
@@ -112,7 +112,10 @@ export async function POST(req: NextRequest) {
   // 2. 构建上下文子集
   let subset;
   try {
-    subset = buildContext(dataset, input.characterId);
+    subset = buildContext(dataset, input.characterId, {
+      maxNodes: INITIAL_MAX_NODES,
+      relevanceText: [input.sourceEventTitle, input.premise].filter(Boolean).join("\n"),
+    });
   } catch (e) {
     return NextResponse.json(
       { error: `上下文构建失败: ${e instanceof Error ? e.message : String(e)}` },

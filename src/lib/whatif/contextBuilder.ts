@@ -6,7 +6,8 @@
  *   - 1度邻居: name + category + epithet + 与 core 的 relation（含 events）
  *   - 2度邻居: name + category（不含 relation 细节）
  *   - 相关 artifacts: core 和 1度邻居关联的宝物（name + epithet + category）
- *   - 原典节点上限 MAX_NODES=15，超限时依次裁剪 2 度、宝物、1 度节点
+ *   - 首轮原典节点上限 INITIAL_MAX_NODES=7；每完成 5 轮续写增加 1，最高 MAX_NODES=15
+ *   - 节点按分支事件和正在修改人物的关联度排序，保证小上下文优先保留最相关人物
  *   - 当前推演分支新增的人物完整保留，不计入原典节点上限
  *
  * 预估压缩后 3-5k token（vs 全量 50k）。
@@ -63,7 +64,75 @@ export interface GraphSubset {
   branchAddedRelations: BranchAddedRelation[];
 }
 
+/** 首轮推演的原典节点预算（包含 core 和 artifacts）。 */
+export const INITIAL_MAX_NODES = 7;
+/** 原典节点预算的硬上限。 */
 export const MAX_NODES = 15;
+const CONTINUATIONS_PER_NODE_INCREASE = 5;
+
+/**
+ * 根据已完成的续写轮数计算下一轮所用的原典节点预算。
+ * 例如完成 5 轮续写后，第 6 轮续写使用 8 个节点。
+ */
+export function maxNodesForCompletedContinuations(completedContinuations: number): number {
+  const completed = Number.isFinite(completedContinuations)
+    ? Math.max(0, Math.floor(completedContinuations))
+    : 0;
+  return Math.min(
+    MAX_NODES,
+    INITIAL_MAX_NODES + Math.floor(completed / CONTINUATIONS_PER_NODE_INCREASE),
+  );
+}
+
+export interface BuildContextOptions {
+  /** 当前推演分支由 diff.addedNodes 新增且仍存在的人物；不计入原典节点预算。 */
+  branchCharacterIds?: ReadonlySet<string>;
+  /** 本轮的原典节点预算；未提供时保留历史兼容的 15 节点行为。 */
+  maxNodes?: number;
+  /** 与本轮前提、用户续写或历史事件最相关的文本。 */
+  relevanceText?: string;
+  /** 需要优先保留的人物，例如本轮历史中被改写的人物。 */
+  priorityCharacterIds?: ReadonlySet<string>;
+}
+
+function relevanceTerms(text: string): Set<string> {
+  const terms = new Set<string>();
+  for (const word of text.toLowerCase().match(/[a-z0-9]{2,}/g) ?? []) terms.add(word);
+  for (const sequence of text.match(/[\u3400-\u9fff]+/g) ?? []) {
+    if (sequence.length === 1) {
+      terms.add(sequence);
+      continue;
+    }
+    for (let index = 0; index < sequence.length - 1; index += 1) {
+      terms.add(sequence.slice(index, index + 2));
+    }
+  }
+  return terms;
+}
+
+function overlapScore(queryTerms: ReadonlySet<string>, text: string): number {
+  if (queryTerms.size === 0) return 0;
+  let score = 0;
+  for (const term of relevanceTerms(text)) {
+    if (queryTerms.has(term)) score += 1;
+  }
+  return score;
+}
+
+function characterText(character: Character): string {
+  return [
+    character.name_zh,
+    character.name_en,
+    ...character.aliases,
+    character.epithet ?? "",
+    character.bio ?? "",
+    ...character.events.flatMap((event) => [event.title, event.desc]),
+  ].join(" ");
+}
+
+function relationText(relation: Relation): string {
+  return relation.events.flatMap((event) => [event.title, event.desc, event.desc_long ?? ""]).join(" ");
+}
 
 /**
  * 构建图谱子集。coreCharacterId 不存在时抛错。
@@ -73,7 +142,7 @@ export const MAX_NODES = 15;
 export function buildContext(
   dataset: Dataset,
   coreCharacterId: string,
-  options: { branchCharacterIds?: ReadonlySet<string> } = {},
+  options: BuildContextOptions = {},
 ): GraphSubset {
   const core = dataset.characters.find((c) => c.id === coreCharacterId);
   if (!core) {
@@ -136,6 +205,33 @@ export function buildContext(
     }
   }
 
+  // 当前推演中已被改写的人物，以及与这些人物直接相连的人物，优先进入候选集。
+  // 这些人物有时不在 branch point 的两度范围内，因此额外补入 secondDegree 容器；
+  // 它们仍以精简信息发送，完整的分支新增人物则走下方的独立字段。
+  const priorityCharacterIds = options.priorityCharacterIds ?? new Set<string>();
+  const directPriorityNeighborIds = new Set<string>();
+  const addSecondDegreeCandidate = (characterId: string) => {
+    if (characterId === coreCharacterId || neighborIds.has(characterId) || secondDegreeMap.has(characterId)) return;
+    const character = dataset.characters.find((item) => item.id === characterId);
+    if (!character) return;
+    secondDegreeMap.set(characterId, {
+      id: character.id,
+      name_zh: character.name_zh,
+      category: character.category,
+      epithet: character.epithet,
+      era_layer: character.era_layer,
+    });
+  };
+  for (const priorityId of priorityCharacterIds) {
+    addSecondDegreeCandidate(priorityId);
+    for (const relation of dataset.relations) {
+      if (relation.source !== priorityId && relation.target !== priorityId) continue;
+      const otherId = relation.source === priorityId ? relation.target : relation.source;
+      directPriorityNeighborIds.add(otherId);
+      addSecondDegreeCandidate(otherId);
+    }
+  }
+
   // 相关 artifacts：core 关联的宝物（OWNS 类型 relation 的 target 通常是 artifact）
   const artifacts: RelatedArtifact[] = [];
   for (const rel of coreRelations) {
@@ -153,10 +249,13 @@ export function buildContext(
   }
 
   const branchCharacterIds = options.branchCharacterIds ?? new Set<string>();
+  const requestedNodeBudget = options.maxNodes ?? MAX_NODES;
+  const nodeBudget = Number.isFinite(requestedNodeBudget)
+    ? Math.min(MAX_NODES, Math.max(1, Math.floor(requestedNodeBudget)))
+    : MAX_NODES;
 
-  // 裁剪：core 永远保留；原典节点超限时依次裁 2度、宝物、最后才裁 1度邻居。
-  // 分支新增人物不会被裁剪，也不占用 MAX_NODES 预算。
-  // 每类按 id 保留前面的项，避免 relation 文件顺序变化导致 prompt 前缀变化。
+  // 裁剪：core 永远保留；分支新增人物不会被裁剪，也不占用节点预算。
+  // 其他候选先按事件/人物关联度排序，分数相同时才沿用 1 度人物、宝物、2 度人物的优先级。
   const budgetedCount = <T extends { id: string }>(items: Iterable<T>) => (
     Array.from(items).filter((item) => !branchCharacterIds.has(item.id)).length
   );
@@ -164,34 +263,59 @@ export function buildContext(
     + budgetedCount(neighborMap.values())
     + budgetedCount(secondDegreeMap.values())
     + artifacts.length;
-  if (totalNodes > MAX_NODES) {
-    let overflow = totalNodes - MAX_NODES;
-    const trimMap = <T extends { id: string }>(map: Map<string, T>) => {
-      const removableNodes = Array.from(map.values())
-        .filter((item) => !branchCharacterIds.has(item.id))
-        .sort((left, right) => left.id.localeCompare(right.id));
-      const removable = Math.min(overflow, removableNodes.length);
-      if (removable === 0) return;
-      const removedIds = new Set(removableNodes.slice(-removable).map((item) => item.id));
-      const retained = Array.from(map.values())
-        .filter((item) => !removedIds.has(item.id))
-        .sort((left, right) => left.id.localeCompare(right.id));
-      map.clear();
-      for (const item of retained) map.set(item.id, item);
-      overflow -= removable;
-    };
-
-    trimMap(secondDegreeMap);
-
-    const removableArtifacts = Math.min(overflow, artifacts.length);
-    if (removableArtifacts > 0) {
-      artifacts.sort((left, right) => left.id.localeCompare(right.id));
-      artifacts.splice(artifacts.length - removableArtifacts, removableArtifacts);
-      overflow -= removableArtifacts;
+  if (totalNodes > nodeBudget) {
+    const queryText = [
+      options.relevanceText ?? "",
+      ...core.events
+        .filter((event) => (options.relevanceText ?? "").includes(event.title))
+        .flatMap((event) => [event.title, event.desc]),
+    ].join(" ");
+    const queryTerms = relevanceTerms(queryText);
+    const charactersById = new Map(dataset.characters.map((character) => [character.id, character]));
+    const relationsByCharacterId = new Map<string, Relation[]>();
+    for (const relation of dataset.relations) {
+      for (const characterId of [relation.source, relation.target]) {
+        const relations = relationsByCharacterId.get(characterId) ?? [];
+        relations.push(relation);
+        relationsByCharacterId.set(characterId, relations);
+      }
     }
-
-    // 一度邻居也必须服从硬上限；此前这里没有裁剪，MAX_NODES 实际会失效。
-    trimMap(neighborMap);
+    type Candidate = { id: string; tier: number };
+    const candidates: Candidate[] = [
+      ...Array.from(neighborMap.values(), (node) => ({ id: node.id, tier: 3 })),
+      ...artifacts.map((artifact) => ({ id: artifact.id, tier: 2 })),
+      ...Array.from(secondDegreeMap.values(), (node) => ({ id: node.id, tier: 1 })),
+    ].filter((candidate) => !branchCharacterIds.has(candidate.id));
+    const score = (candidate: Candidate) => {
+      const character = charactersById.get(candidate.id);
+      const eventScore = overlapScore(queryTerms, [
+        character ? characterText(character) : "",
+        ...(relationsByCharacterId.get(candidate.id) ?? []).map(relationText),
+      ].join(" "));
+      return (priorityCharacterIds.has(candidate.id) ? 10_000 : 0)
+        + (directPriorityNeighborIds.has(candidate.id) ? 5_000 : 0)
+        + eventScore * 100;
+    };
+    const retainedIds = new Set(
+      candidates
+        .sort((left, right) => (
+          score(right) - score(left)
+          || right.tier - left.tier
+          || left.id.localeCompare(right.id)
+        ))
+        .slice(0, Math.max(0, nodeBudget - 1))
+        .map((candidate) => candidate.id),
+    );
+    const retainMap = <T extends { id: string }>(map: Map<string, T>) => {
+      for (const id of Array.from(map.keys())) {
+        if (!branchCharacterIds.has(id) && !retainedIds.has(id)) map.delete(id);
+      }
+    };
+    retainMap(neighborMap);
+    retainMap(secondDegreeMap);
+    for (let index = artifacts.length - 1; index >= 0; index -= 1) {
+      if (!retainedIds.has(artifacts[index].id)) artifacts.splice(index, 1);
+    }
   }
 
   const branchAddedCharacters = dataset.characters

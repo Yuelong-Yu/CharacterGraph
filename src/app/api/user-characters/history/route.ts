@@ -7,7 +7,7 @@ import { affectedTurnIds } from "@/lib/whatif/historyImpact";
 import { GraphDiff, NarrativeSegment } from "@/schemas/whatif";
 import { Dataset as DatasetSchema } from "@/schemas/character";
 import { applyDiff, normalizeDiffAgainstDataset } from "@/lib/whatif/diffApplier";
-import { buildContext } from "@/lib/whatif/contextBuilder";
+import { buildContext, maxNodesForCompletedContinuations } from "@/lib/whatif/contextBuilder";
 import {
   buildContinuationUserPrompt,
   buildCacheableSystemPrompt,
@@ -188,7 +188,6 @@ export async function POST(req: NextRequest) {
 
   const loaded = loadDataset(input.projectSlug);
   const baseDataset = mergeDatasetOverlay(loaded.dataset, input.datasetOverlay);
-  const canonicalSubset = buildContext(baseDataset, branch.session.characterId);
   const inherited = await inheritedTurns(branch, user.id);
   try {
     await reserveWhatIfQuota(req, quotaRequestKeys, "user_character_regeneration");
@@ -238,7 +237,32 @@ export async function POST(req: NextRequest) {
       priorTurns.flatMap((turn) => turn.diff.addedNodes.map((character) => character.id)),
     );
     try {
-      const subset = buildContext(effectiveDataset, branch.session.characterId, { branchCharacterIds });
+      const priorityCharacterIds = new Set([
+        input.characterId,
+        ...priorTurns.flatMap((turn) => [
+          ...turn.diff.modifiedEvents.map((event) => event.characterId),
+          ...turn.diff.replacedEvents.map((event) => event.characterId),
+          ...turn.narrative.flatMap((segment) => segment.characterIds ?? []),
+        ]),
+      ]);
+      const contextOptions = {
+        maxNodes: maxNodesForCompletedContinuations(Math.max(0, priorTurns.length - 1)),
+        relevanceText: [
+          ...priorTurns.flatMap((turn) => [
+            turn.sourceEventTitle ?? "",
+            turn.premise,
+            ...turn.narrative.map((segment) => segment.text),
+          ]),
+          current.sourceEventTitle ?? "",
+          current.premise,
+        ].join("\n"),
+        priorityCharacterIds,
+      };
+      const canonicalSubset = buildContext(baseDataset, branch.session.characterId, contextOptions);
+      const subset = buildContext(effectiveDataset, branch.session.characterId, {
+        ...contextOptions,
+        branchCharacterIds,
+      });
       const system = buildCacheableSystemPrompt(canonicalSubset, loaded.config, {
         branchSubset: subset,
         knownCharacters: effectiveDataset.characters.map(({ id, name_zh }) => ({ id, name_zh })),
