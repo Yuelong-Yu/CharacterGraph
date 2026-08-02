@@ -215,7 +215,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
       // Keep the previous scope in recordsRef until initialize-scope copies it.
       setLoadedUserScopeId(null);
     }
-    setUserCharacterEditor(null);
     setUserScopesReady(true);
   }, [activeBranchId]);
 
@@ -301,7 +300,6 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     if (cloudContent.initializedScopeIds.includes(activeUserScopeId)) {
       setUserCharacterRecords(records);
       setLoadedUserScopeId(activeUserScopeId);
-      setUserCharacterEditor(null);
       return;
     }
     void mutateUserContent(config.slug, {
