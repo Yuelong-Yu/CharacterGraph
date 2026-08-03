@@ -6,6 +6,35 @@ afterEach(() => {
 });
 
 describe("streamWhatIf", () => {
+  it("reports the session id from the response before consuming streamed events", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue(
+        new Response("", { headers: { "X-WhatIf-Session-Id": "session-recoverable" } }),
+      ),
+    );
+    const sessionIds: string[] = [];
+
+    await streamWhatIf(
+      {
+        projectSlug: "greek",
+        title: "test",
+        characterId: "odysseus",
+        premise: "test premise",
+        premiseType: "free_text",
+      },
+      {
+        onSession: (sessionId) => sessionIds.push(sessionId),
+        onDelta: () => {},
+        onReset: () => {},
+        onDone: () => {},
+        onError: () => {},
+      },
+    );
+
+    expect(sessionIds).toEqual(["session-recoverable"]);
+  });
+
   it("forwards server generation stages before streamed text", async () => {
     const body = [
       "event: status\ndata: {\"stage\":\"thinking\"}\n\n",

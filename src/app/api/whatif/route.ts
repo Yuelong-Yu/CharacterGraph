@@ -153,7 +153,59 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // 4. SSE 流式响应
+  // 4. 先持久化占位回合，使客户端在流断开后仍能按 sessionId 恢复结果。
+  let session;
+  try {
+    session = await prisma.whatIfSession.create({
+      data: {
+        ownerId: accountUser.id,
+        projectSlug: input.projectSlug,
+        characterId: input.characterId,
+        title: input.title,
+        status: "active",
+        datasetOverlay: input.datasetOverlay as unknown as object | undefined,
+        branches: {
+          create: [{
+            title: "主时间线",
+            isActive: true,
+            datasetOverlay: input.datasetOverlay as unknown as object | undefined,
+            turns: {
+              create: [{
+                order: 1,
+                premise: input.premise,
+                premiseType: input.premiseType,
+                sourceEventTitle: input.sourceEventTitle ?? null,
+                diff: {},
+                narrative: [],
+                choices: [],
+                status: "streaming",
+              }],
+            },
+          }],
+        },
+      },
+      include: {
+        branches: {
+          orderBy: { createdAt: "asc" },
+          include: { turns: { orderBy: { order: "asc" } } },
+        },
+      },
+    });
+  } catch (error) {
+    await releaseWhatIfQuota(req, [quotaRequestKey]);
+    timing.report("error", {
+      errorCode: "SESSION_CREATE_FAILED",
+      promptChars: system.cacheable.length + system.dynamic.length + user.length,
+    });
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : "创建推演会话失败" },
+      { status: 500 },
+    );
+  }
+  const rootBranch = session.branches[0];
+  const rootTurn = rootBranch.turns[0];
+
+  // 5. SSE 流式响应
   const encoder = new TextEncoder();
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -200,13 +252,19 @@ export async function POST(req: NextRequest) {
         providerOutputTokens,
       });
       const send = (event: string, data: unknown) => {
-        controller.enqueue(
-          encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
-        );
+        try {
+          controller.enqueue(
+            encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
+          );
+        } catch {
+          // A background mobile browser may close the response. Generation and
+          // persistence continue so the result can be recovered on return.
+        }
       };
       const stopKeepAlive = startSSEKeepAlive(controller, encoder);
 
       try {
+        send("session", { sessionId: session.id });
         send("status", { stage: "thinking" });
         const modelStartedAt = performance.now();
         // 5-6. 流式生成并解析；重试时通知客户端清空失败草稿
@@ -248,51 +306,20 @@ export async function POST(req: NextRequest) {
         const validation = validateNarrative(llmOutput.narrative, dataset, diff);
         timing.mark("validationMs", validationStartedAt);
 
-        // 7. 落库：session + root branch + turn
+        // 7. 填充先前创建的占位回合。
         const persistStartedAt = performance.now();
-        const session = await prisma.whatIfSession.create({
+        const turn = await prisma.whatIfTurn.update({
+          where: { id: rootTurn.id },
           data: {
-            ownerId: accountUser.id,
-            projectSlug: input.projectSlug,
-            characterId: input.characterId,
-            title: input.title,
-            status: "active",
-            datasetOverlay: input.datasetOverlay as unknown as object | undefined,
-            branches: {
-              create: [
-                {
-                  title: "主时间线",
-                  isActive: true,
-                  datasetOverlay: input.datasetOverlay as unknown as object | undefined,
-                  turns: {
-                    create: [
-                      {
-                        order: 1,
-                        premise: input.premise,
-                        premiseType: input.premiseType,
-                        sourceEventTitle: input.sourceEventTitle ?? null,
-                        diff: diff as unknown as object,
-                        narrative: llmOutput.narrative as unknown as object,
-                        choices: llmOutput.choices,
-                        status: "completed",
-                        validation: validation as unknown as object,
-                      },
-                    ],
-                  },
-                },
-              ],
-            },
-          },
-          include: {
-            branches: {
-              orderBy: { createdAt: "asc" },
-              include: { turns: { orderBy: { order: "asc" } } },
-            },
+            diff: diff as unknown as object,
+            narrative: llmOutput.narrative as unknown as object,
+            choices: llmOutput.choices,
+            status: "completed",
+            validation: validation as unknown as object,
           },
         });
         timing.mark("persistMs", persistStartedAt);
 
-        const turn = session.branches[0].turns[0];
         turnPersisted = true;
         const quotaConfirmStartedAt = performance.now();
         await confirmWhatIfQuota(req, [quotaRequestKey]);
@@ -332,6 +359,10 @@ export async function POST(req: NextRequest) {
           ...providerTiming(),
         });
         if (!turnPersisted) {
+          await prisma.whatIfTurn.update({
+            where: { id: rootTurn.id },
+            data: { status: "error" },
+          }).catch(() => {});
           await releaseWhatIfQuota(req, [quotaRequestKey]);
         }
         if (e instanceof LLMRefusalError) {
@@ -355,6 +386,7 @@ export async function POST(req: NextRequest) {
       "Cache-Control": "no-cache, no-transform",
       Connection: "keep-alive",
       "X-Accel-Buffering": "no", // 禁用 nginx 缓冲，确保流式
+      "X-WhatIf-Session-Id": session.id,
     },
   });
 }

@@ -312,9 +312,13 @@ export async function POST(
         providerOutputTokens,
       });
       const send = (event: string, data: unknown) => {
-        controller.enqueue(
-          encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
-        );
+        try {
+          controller.enqueue(
+            encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`),
+          );
+        } catch {
+          // Continue persisting the turn after a background browser closes the stream.
+        }
       };
       const stopKeepAlive = startSSEKeepAlive(controller, encoder);
 

@@ -7,8 +7,15 @@ export function startSSEKeepAlive(
   encoder: TextEncoder,
   intervalMs = 15_000,
 ): () => void {
-  const write = () => controller.enqueue(encoder.encode(": keepalive\n\n"));
+  let timer: ReturnType<typeof setInterval> | null = null;
+  const write = () => {
+    try {
+      controller.enqueue(encoder.encode(": keepalive\n\n"));
+    } catch {
+      if (timer) clearInterval(timer);
+    }
+  };
   write();
-  const timer = setInterval(write, intervalMs);
-  return () => clearInterval(timer);
+  timer = setInterval(write, intervalMs);
+  return () => timer && clearInterval(timer);
 }

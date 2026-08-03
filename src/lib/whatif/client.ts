@@ -20,6 +20,8 @@ import type {
 export type WhatIfGenerationStage = "thinking" | "generating" | "finalizing";
 
 export interface WhatIfStreamHandlers {
+  /** Available as soon as the server has created the recoverable session. */
+  onSession?: (sessionId: string) => void;
   onStatus?: (stage: WhatIfGenerationStage) => void;
   onDelta: (text: string) => void;
   onReset: (event: WhatIfRecoveryEvent) => void;
@@ -59,6 +61,13 @@ export async function streamWhatIf(
   if (!resp.body) {
     throw new Error("Response has no body");
   }
+  let announcedSessionId: string | null = null;
+  const reportSession = (sessionId: string | null) => {
+    if (!sessionId || sessionId === announcedSessionId) return;
+    announcedSessionId = sessionId;
+    handlers.onSession?.(sessionId);
+  };
+  reportSession(resp.headers.get("X-WhatIf-Session-Id"));
 
   // eventsource-parser v3 提供 Web Stream 友好的 parser
   const eventStream = resp.body
@@ -79,7 +88,10 @@ export async function streamWhatIf(
         continue;
       }
 
-      if (value.event === "status") {
+      if (value.event === "session") {
+        const session = data as { sessionId?: unknown };
+        if (typeof session.sessionId === "string") reportSession(session.sessionId);
+      } else if (value.event === "status") {
         const status = data as { stage?: unknown };
         if (status.stage === "thinking" || status.stage === "generating" || status.stage === "finalizing") {
           handlers.onStatus?.(status.stage);

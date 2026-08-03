@@ -104,14 +104,82 @@ export function WhatIfPanel({
     versions: WhatIfTurnVersionSummary[];
   } | null>(null);
   const [accountUser, setAccountUser] = useState<SessionUser | null | undefined>(undefined);
+  const [recoverySessionId, setRecoverySessionId] = useState<string | null>(null);
+  const [recoveryReady, setRecoveryReady] = useState(false);
+  const [shouldRecover, setShouldRecover] = useState(false);
   const lastAccountIdRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const autoStartAttemptedRef = useRef(false);
   const startRetryRef = useRef<(allowUpgrade?: boolean) => Promise<void>>(async () => {});
   const latestTurnRef = useRef<HTMLDivElement | null>(null);
   const choiceRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const recoveryStorageKey = `charactergraph:whatif-recovery:${projectSlug}:${characterId}`;
 
   useEffect(() => () => abortRef.current?.abort(), []);
+
+  const rememberRecoverySession = useCallback((sessionId: string) => {
+    setRecoverySessionId(sessionId);
+    window.sessionStorage.setItem(recoveryStorageKey, sessionId);
+  }, [recoveryStorageKey]);
+
+  const forgetRecoverySession = useCallback(() => {
+    setRecoverySessionId(null);
+    setShouldRecover(false);
+    window.sessionStorage.removeItem(recoveryStorageKey);
+  }, [recoveryStorageKey]);
+
+  useEffect(() => {
+    const savedSessionId = window.sessionStorage.getItem(recoveryStorageKey);
+    if (savedSessionId) {
+      setRecoverySessionId(savedSessionId);
+      setShouldRecover(true);
+    }
+    setRecoveryReady(true);
+  }, [recoveryStorageKey]);
+
+  useEffect(() => {
+    if (!isOpen || !recoverySessionId) return;
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") setShouldRecover(true);
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, [isOpen, recoverySessionId]);
+
+  useEffect(() => {
+    if (!isOpen || !shouldRecover || !recoverySessionId) return;
+    let cancelled = false;
+    let timer: number | undefined;
+
+    const recover = async () => {
+      try {
+        const fresh = await fetchSession(recoverySessionId);
+        if (cancelled) return;
+        setSessionDetail(fresh);
+        const pending = fresh.branches.some((branch) => branch.turns.some(
+          (turn) => turn.status === "streaming" || turn.status === "composing",
+        ));
+        const failed = fresh.branches.some((branch) => branch.turns.some((turn) => turn.status === "error"));
+        if (pending) {
+          setStreaming((current) => current ?? { text: "", isContinue: false, stage: "preparing" });
+          timer = window.setTimeout(recover, 4_000);
+        } else {
+          setStreaming(null);
+          if (failed) setError("生成未完成，请重新推演。");
+          else setError(null);
+          forgetRecoverySession();
+        }
+      } catch {
+        if (!cancelled) timer = window.setTimeout(recover, 4_000);
+      }
+    };
+
+    void recover();
+    return () => {
+      cancelled = true;
+      if (timer !== undefined) window.clearTimeout(timer);
+    };
+  }, [forgetRecoverySession, isOpen, recoverySessionId, shouldRecover]);
 
   const refreshAccount = useCallback(async () => {
     setAccountUser(undefined);
@@ -175,7 +243,7 @@ export function WhatIfPanel({
   // 用于 onTurnsChange 通知父组件重算 effectiveDataset
   const computePriorTurns = useCallback((): WhatIfTurnDetail[] => {
     if (!sessionDetail || !activeBranch) return [];
-    const ownTurns = activeBranch.turns;
+    const ownTurns = activeBranch.turns.filter((turn) => turn.status === "completed" || turn.status === "stale" || turn.status === "updating");
     if (!activeBranch.parentTurnId) return [...ownTurns];
 
     // 找 parent turn 所属 branch
@@ -191,7 +259,9 @@ export function WhatIfPanel({
     }
     if (!parentBranch) return [...ownTurns];
 
-    const inherited = parentBranch.turns.filter((t) => t.order <= parentOrder);
+    const inherited = parentBranch.turns.filter(
+      (turn) => turn.order <= parentOrder && (turn.status === "completed" || turn.status === "stale" || turn.status === "updating"),
+    );
     return [...inherited, ...ownTurns];
   }, [sessionDetail, activeBranch]);
 
@@ -201,6 +271,7 @@ export function WhatIfPanel({
   }, [computePriorTurns, onTurnsChange]);
 
   const handleStart = useCallback(async (allowUpgrade = true) => {
+    forgetRecoverySession();
     setError(null);
     setStreaming({ text: "", isContinue: false, stage: "preparing" });
 
@@ -219,6 +290,7 @@ export function WhatIfPanel({
           datasetOverlay,
         },
         {
+          onSession: rememberRecoverySession,
           onStatus: (stage) => {
             setStreaming((prev) => (prev ? { ...prev, stage } : prev));
           },
@@ -233,6 +305,7 @@ export function WhatIfPanel({
             // 拉取完整 session
             const fresh = await fetchSession(data.sessionId);
             setSessionDetail(fresh);
+            forgetRecoverySession();
           },
           onError: (err) => {
             setError(`${err.code}: ${err.message}`);
@@ -242,8 +315,13 @@ export function WhatIfPanel({
         controller.signal,
       );
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-      setStreaming(null);
+      if (window.sessionStorage.getItem(recoveryStorageKey) && !(e instanceof AiQuotaRequestError)) {
+        setShouldRecover(true);
+        setError(null);
+      } else {
+        setError(e instanceof Error ? e.message : String(e));
+        setStreaming(null);
+      }
       if (allowUpgrade && e instanceof AiQuotaRequestError && e.code === "UPGRADE_REQUIRED") {
         requestChronChaosUpgrade(() => startRetryRef.current(false));
       }
@@ -256,6 +334,9 @@ export function WhatIfPanel({
     premise,
     premiseType,
     datasetOverlay,
+    forgetRecoverySession,
+    rememberRecoverySession,
+    recoveryStorageKey,
   ]);
   useEffect(() => {
     startRetryRef.current = handleStart;
@@ -266,19 +347,22 @@ export function WhatIfPanel({
       !autoStart
       || !isOpen
       || !accountUser
+      || !recoveryReady
+      || recoverySessionId
       || sessionDetail
       || streaming
       || autoStartAttemptedRef.current
     ) return;
     autoStartAttemptedRef.current = true;
     void handleStart();
-  }, [accountUser, autoStart, handleStart, isOpen, sessionDetail, streaming]);
+  }, [accountUser, autoStart, handleStart, isOpen, recoveryReady, recoverySessionId, sessionDetail, streaming]);
 
   async function handleContinue(userInput: string, allowUpgrade = true) {
     if (!sessionDetail || !activeBranch) return;
     setError(null);
     setFreeInput("");
     setStreaming({ text: "", isContinue: true, stage: "preparing" });
+    rememberRecoverySession(sessionDetail.id);
 
     const controller = new AbortController();
     abortRef.current = controller;
@@ -302,6 +386,7 @@ export function WhatIfPanel({
             setStreaming(null);
             const fresh = await fetchSession(sessionDetail.id);
             setSessionDetail(fresh);
+            forgetRecoverySession();
           },
           onError: (err) => {
             setError(`${err.code}: ${err.message}`);
@@ -311,8 +396,14 @@ export function WhatIfPanel({
         controller.signal,
       );
     } catch (e) {
-      setError(e instanceof Error ? e.message : String(e));
-      setStreaming(null);
+      if (e instanceof AiQuotaRequestError) {
+        forgetRecoverySession();
+        setError(e.message);
+        setStreaming(null);
+      } else {
+        setShouldRecover(true);
+        setError(null);
+      }
       if (allowUpgrade && e instanceof AiQuotaRequestError && e.code === "UPGRADE_REQUIRED") {
         requestChronChaosUpgrade(() => handleContinue(userInput, false));
       }
@@ -391,6 +482,7 @@ export function WhatIfPanel({
 
   if (activeBranch) {
     for (const t of activeBranch.turns) {
+      if (t.status === "streaming" || t.status === "composing" || t.status === "error") continue;
       displayTurns.push({
         key: t.id,
         narrative: t.narrative,
@@ -423,7 +515,9 @@ export function WhatIfPanel({
   }
 
   const isStreaming = streaming !== null;
-  const lastCommittedTurn = activeBranch?.turns[activeBranch.turns.length - 1] ?? null;
+  const lastCommittedTurn = activeBranch?.turns
+    .filter((turn) => turn.status === "completed" || turn.status === "stale" || turn.status === "updating")
+    .at(-1) ?? null;
   const historyAvailable = lastCommittedTurn?.status !== "stale" && lastCommittedTurn?.status !== "updating";
   const showChoices = !isStreaming && historyAvailable && lastCommittedTurn && lastCommittedTurn.choices.length > 0;
 
