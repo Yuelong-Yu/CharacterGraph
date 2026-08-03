@@ -1177,6 +1177,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           minWidth={PANEL_MIN_WIDTH}
           maxWidth={PANEL_MAX_WIDTH}
           onWidthChange={setCharacterDetailPanelWidth}
+          pinToViewport
         />
         {deletedUserCharacter && !userCharacterEditor && (
           <div
