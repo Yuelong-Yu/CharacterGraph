@@ -40,6 +40,7 @@ import { AiQuotaRequestError } from "@/lib/aiQuotaError";
 import { requestChronChaosUpgrade } from "@chronchaos/top-navigation";
 import type { WhatIfGenerationStage } from "@/lib/whatif/client";
 import { extractStreamingNarrative } from "@/lib/whatif/streamingNarrative";
+import { ResizablePanelHandle } from "../ResizablePanelHandle";
 
 interface Props {
   isOpen: boolean;
@@ -56,6 +57,8 @@ interface Props {
   historyRefreshVersion?: number;
   initialSession?: WhatIfSessionDetail | null;
   autoStart?: boolean;
+  width?: number;
+  onWidthChange?: (width: number) => void;
 }
 
 interface StreamingState {
@@ -87,11 +90,15 @@ export function WhatIfPanel({
   historyRefreshVersion = 0,
   initialSession = null,
   autoStart = false,
+  width = 460,
+  onWidthChange,
 }: Props) {
   const [sessionDetail, setSessionDetail] = useState<WhatIfSessionDetail | null>(initialSession);
   const [streaming, setStreaming] = useState<StreamingState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [freeInput, setFreeInput] = useState("");
+  const [premiseExpanded, setPremiseExpanded] = useState(false);
+  const [choiceListHeight, setChoiceListHeight] = useState<number | null>(null);
   const [versionPicker, setVersionPicker] = useState<{
     turnId: string;
     versions: WhatIfTurnVersionSummary[];
@@ -101,6 +108,8 @@ export function WhatIfPanel({
   const abortRef = useRef<AbortController | null>(null);
   const autoStartAttemptedRef = useRef(false);
   const startRetryRef = useRef<(allowUpgrade?: boolean) => Promise<void>>(async () => {});
+  const latestTurnRef = useRef<HTMLDivElement | null>(null);
+  const choiceRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
   useEffect(() => () => abortRef.current?.abort(), []);
 
@@ -418,6 +427,57 @@ export function WhatIfPanel({
   const historyAvailable = lastCommittedTurn?.status !== "stale" && lastCommittedTurn?.status !== "updating";
   const showChoices = !isStreaming && historyAvailable && lastCommittedTurn && lastCommittedTurn.choices.length > 0;
 
+  useEffect(() => {
+    setPremiseExpanded(false);
+  }, [isOpen, activeBranch?.id]);
+
+  // A new generation starts at the latest turn. Subsequent stream updates deliberately
+  // do not scroll again, so a reader can inspect earlier content without being pulled back.
+  useEffect(() => {
+    if (!streaming) return;
+    const frame = window.requestAnimationFrame(() => {
+      latestTurnRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+    return () => window.cancelAnimationFrame(frame);
+    // Only respond to a new stream, never to individual text deltas.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [streaming?.isContinue]);
+
+  useEffect(() => {
+    const choices = lastCommittedTurn?.choices ?? [];
+    if (!showChoices || choices.length === 0) {
+      setChoiceListHeight(null);
+      return;
+    }
+
+    let frame = 0;
+    const calculateHeight = () => {
+      const first = choiceRefs.current[0];
+      if (!first) return;
+      const second = choiceRefs.current[1];
+      const gap = second ? 6 : 0;
+      const preferredHeight = first.offsetHeight + (second?.offsetHeight ?? 0) + gap;
+      const mobile = window.matchMedia("(max-width: 1023px)").matches;
+      const limit = window.innerHeight * (mobile ? 0.4 : 0.35);
+      // Keep the first option readable in full; when two do not fit, the remaining
+      // choices are reached through this list's own scroll area.
+      setChoiceListHeight(Math.ceil(Math.max(first.offsetHeight, Math.min(preferredHeight, limit))));
+    };
+    const scheduleCalculation = () => {
+      window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(calculateHeight);
+    };
+    scheduleCalculation();
+    const observer = new ResizeObserver(scheduleCalculation);
+    choiceRefs.current.slice(0, 2).forEach((choice) => choice && observer.observe(choice));
+    window.addEventListener("resize", scheduleCalculation);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      observer.disconnect();
+      window.removeEventListener("resize", scheduleCalculation);
+    };
+  }, [lastCommittedTurn?.id, lastCommittedTurn?.choices, showChoices, width]);
+
   return (
     <div
       data-whatif-panel
@@ -426,7 +486,7 @@ export function WhatIfPanel({
         top: 68,
         right: 0,
         bottom: 0,
-        width: 460,
+        width,
         background: "#1a1a1a",
         borderLeft: "1px solid #333",
         display: isOpen ? "flex" : "none",
@@ -436,6 +496,15 @@ export function WhatIfPanel({
         color: "#eee",
       }}
     >
+      {onWidthChange && (
+        <ResizablePanelHandle
+          label="同人创作面板"
+          width={width}
+          minWidth={360}
+          maxWidth={760}
+          onWidthChange={onWidthChange}
+        />
+      )}
       {/* Header */}
       <div
         style={{
@@ -504,7 +573,33 @@ export function WhatIfPanel({
       {accountUser && (
         <div style={{ padding: "8px 16px", fontSize: 13, color: "#aaa", borderBottom: "1px solid #2a2a2a" }}>
           <strong style={{ color: "#4a9eff" }}>前提：</strong>
-          {premise}
+          <span
+            style={premiseExpanded ? undefined : {
+              display: "-webkit-box",
+              overflow: "hidden",
+              WebkitBoxOrient: "vertical",
+              WebkitLineClamp: 2,
+            }}
+          >
+            {premise}
+          </span>
+          <button
+            type="button"
+            onClick={() => setPremiseExpanded((expanded) => !expanded)}
+            aria-expanded={premiseExpanded}
+            style={{
+              display: "block",
+              marginTop: 4,
+              padding: 0,
+              border: "none",
+              background: "transparent",
+              color: "#4a9eff",
+              fontSize: 12,
+              cursor: "pointer",
+            }}
+          >
+            {premiseExpanded ? "收起前提" : "展开前提"}
+          </button>
         </div>
       )}
 
@@ -546,7 +641,11 @@ export function WhatIfPanel({
         )}
 
         {accountUser && displayTurns.map((turn, i) => (
-          <div key={turn.key} style={{ marginBottom: 24 }}>
+          <div
+            key={turn.key}
+            ref={turn.isStreaming ? latestTurnRef : undefined}
+            style={{ marginBottom: 24 }}
+          >
             <div
               style={{
                 fontSize: 12,
@@ -683,10 +782,22 @@ export function WhatIfPanel({
           <div style={{ fontSize: 12, color: "#888", marginBottom: 8 }}>
             选择后续方向，或自由输入：
           </div>
-          <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 8 }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 6,
+              marginBottom: 8,
+              maxHeight: choiceListHeight ?? undefined,
+              overflowY: choiceListHeight ? "auto" : undefined,
+              overscrollBehavior: "contain",
+              paddingRight: choiceListHeight ? 4 : undefined,
+            }}
+          >
             {lastCommittedTurn.choices.map((c, i) => (
               <button
                 key={i}
+                ref={(element) => { choiceRefs.current[i] = element; }}
                 onClick={() => handleContinue(c)}
                 style={{
                   padding: "8px 12px",

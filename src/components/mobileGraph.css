@@ -237,6 +237,13 @@
   margin: 0;
 }
 
+@media (max-width: 1023px) {
+  .whatif-narrative-text {
+    font-size: clamp(17px,4.5vw,20px) !important;
+    line-height: 1.9 !important;
+  }
+}
+
 .mobile-muted { color: var(--mobile-muted); }
 .mobile-kv { font-size: 16px; line-height: 1.75; margin-top: 16px; }
 .mobile-kv strong {

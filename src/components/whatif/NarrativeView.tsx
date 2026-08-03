@@ -48,7 +48,7 @@ export function NarrativeView({ streamText, segments }: Props) {
             >
               【{seg.label}】
             </span>
-            <span style={{ fontSize: 14, lineHeight: 1.7 }}>{seg.text}</span>
+            <span className="whatif-narrative-text" style={{ fontSize: 16, lineHeight: 1.75 }}>{seg.text}</span>
           </div>
         ))}
       </div>
@@ -61,10 +61,11 @@ export function NarrativeView({ streamText, segments }: Props) {
 
   return (
     <div
+      className="whatif-narrative-text"
       style={{
         whiteSpace: "pre-wrap",
-        fontSize: 14,
-        lineHeight: 1.7,
+        fontSize: 16,
+        lineHeight: 1.75,
         color: "#aaa",
       }}
     >

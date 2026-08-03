@@ -16,6 +16,7 @@ import { Legend } from "./Legend";
 import { WhatIfPanel } from "./whatif/WhatIfPanel";
 import { SessionList } from "./whatif/SessionList";
 import { UserCharacterEditor } from "./UserCharacterEditor";
+import { ResizablePanelHandle } from "./ResizablePanelHandle";
 import { buildWhatIfGraphView } from "@/lib/whatif/graphView";
 import {
   initialWhatIfWorkspaceState,
@@ -78,6 +79,9 @@ type Selection =
   | { kind: "edge"; id: string };
 
 const SEARCH_TRIGGER_LEN = 2;
+const PANEL_DEFAULT_WIDTH = 460;
+const PANEL_MIN_WIDTH = 360;
+const PANEL_MAX_WIDTH = 760;
 
 type SearchEntity = Character | Artifact;
 
@@ -168,6 +172,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
   const [historyRefreshVersion, setHistoryRefreshVersion] = useState(0);
   const [privateBranchBrowserOpen, setPrivateBranchBrowserOpen] = useState(false);
   const [loadedWhatIfSession, setLoadedWhatIfSession] = useState<WhatIfSessionDetail | null>(null);
+  const [characterDetailPanelWidth, setCharacterDetailPanelWidth] = useState(PANEL_DEFAULT_WIDTH);
+  const [whatIfPanelWidth, setWhatIfPanelWidth] = useState(PANEL_DEFAULT_WIDTH);
   const [characterImageAssets, setCharacterImageAssets] = useState<Map<string, CharacterImageAsset>>(new Map());
   const [characterImageJobs, setCharacterImageJobs] = useState<Record<string, CharacterImageJob>>({});
   const mobileOverlayKind = mobileViewport
@@ -958,12 +964,15 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
     );
   }
 
+  const whatIfPanelVisible = Boolean(whatIfConfig && whatIfPanelOpen);
+  const activeDesktopPanelWidth = whatIfPanelVisible ? whatIfPanelWidth : characterDetailPanelWidth;
+
   return (
     <ProjectConfigProvider config={config}>
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "1fr 380px",
+        gridTemplateColumns: `minmax(0, 1fr) ${activeDesktopPanelWidth}px`,
         height: "100%",
         background: COLOR.bg,
         color: COLOR.text,
@@ -1152,15 +1161,23 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           top: 68,
           right: 0,
           bottom: 0,
-          width: 380,
+          width: characterDetailPanelWidth,
           boxSizing: "border-box",
           zIndex: 40,
           background: COLOR.bgPanel,
           padding: 20,
           overflowY: "auto",
           borderLeft: `1px solid ${COLOR.border}`,
+          display: whatIfPanelVisible ? "none" : undefined,
         }}
       >
+        <ResizablePanelHandle
+          label="人物详情面板"
+          width={characterDetailPanelWidth}
+          minWidth={PANEL_MIN_WIDTH}
+          maxWidth={PANEL_MAX_WIDTH}
+          onWidthChange={setCharacterDetailPanelWidth}
+        />
         {deletedUserCharacter && !userCharacterEditor && (
           <div
             role="status"
@@ -1446,7 +1463,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                 ? <em style={{ color: COLOR.textMuted, fontSize: 12 }}>史料无记载</em>
                 : character.quotes.map((q, i) => (
                     <blockquote key={i} style={{ borderLeft: `2px solid ${COLOR.accent}`, paddingLeft: 12, margin: "0 0 12px 0" }}>
-                      <div style={{ fontFamily: FONT.serif, fontSize: 14, lineHeight: 1.6 }}>{q.text}</div>
+                      <div style={{ fontFamily: FONT.serif, fontSize: 16, lineHeight: 1.75 }}>{q.text}</div>
                       <div style={{ fontFamily: FONT.mono, fontSize: 10, color: COLOR.textMuted, marginTop: 4 }}>
                         —— 《{q.source.work}》{q.source.locus ?? ""}
                       </div>
@@ -1470,7 +1487,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             {character.bio && (
               <Section
                 title="人物简介"
-                items={<p style={{ lineHeight: 1.75, fontSize: 14, margin: 0 }}>{character.bio}</p>}
+                items={<p style={{ lineHeight: 1.75, fontSize: 16, margin: 0 }}>{character.bio}</p>}
               />
             )}
 
@@ -1560,7 +1577,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
                             与 {other?.name_zh ?? adaptation.otherCharacterId}
                           </div>
                         )}
-                        <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
+                        <div style={{ fontSize: 16, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.75 }}>
                           {event.desc}
                         </div>
                         {event.source && (
@@ -1674,7 +1691,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             {artifact.bio && (
               <Section
                 title="宝物简介"
-                items={<p style={{ lineHeight: 1.75, fontSize: 14, margin: 0 }}>{artifact.bio}</p>}
+                items={<p style={{ lineHeight: 1.75, fontSize: 16, margin: 0 }}>{artifact.bio}</p>}
               />
             )}
 
@@ -1683,7 +1700,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
               items={artifact.events.map((e) => (
                 <div key={e.title} style={{ marginBottom: 12 }}>
                   <strong style={{ color: COLOR.accent, fontSize: 13 }}>{e.title}</strong>
-                  <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
+                  <div style={{ fontSize: 16, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.75 }}>
                     {e.desc}
                   </div>
                   {e.source && (
@@ -1711,7 +1728,7 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
             <Section title="事件时间线" items={relation.events.map((e, i) => (
               <div key={i} style={{ marginBottom: 14 }}>
                 <strong style={{ color: COLOR.accent, fontSize: 13 }}>{e.title}</strong>
-                <div style={{ fontSize: 13, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.6 }}>
+                <div style={{ fontSize: 16, color: COLOR.textMuted, marginTop: 4, lineHeight: 1.75 }}>
                   {e.desc}
                 </div>
                 {e.source && (
@@ -1766,6 +1783,8 @@ export function GraphShell({ dataset, config }: { dataset: Dataset; config: Clie
           historyRefreshVersion={historyRefreshVersion}
           initialSession={loadedWhatIfSession}
           autoStart={!loadedWhatIfSession}
+          width={whatIfPanelWidth}
+          onWidthChange={setWhatIfPanelWidth}
         />
       )}
     </div>
