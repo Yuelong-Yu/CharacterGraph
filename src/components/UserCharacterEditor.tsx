@@ -19,6 +19,7 @@ import {
 } from "@/lib/userCharacterClient";
 import { COLOR, FONT } from "@/lib/tokens";
 import { buildUserEventCitation } from "@/lib/userEvents";
+import { entityMatchesSearch } from "@/lib/searchMatch";
 
 interface Props {
   dataset: Dataset;
@@ -128,13 +129,11 @@ export function UserCharacterEditor({
     ),
   ));
 
-  const filteredCandidates = candidates.filter((character) => {
-    const query = candidateQuery.trim().toLowerCase();
-    if (!query) return true;
-    return character.name_zh.includes(query)
-      || character.name_en.toLowerCase().includes(query)
-      || character.aliases.some((alias) => alias.includes(query));
-  });
+  // 复用图谱搜索的统一规则：中文/英文子串、别名、拼音及全文字段。
+  // 保留空查询展示全部候选人的交互。
+  const filteredCandidates = candidates.filter((character) => (
+    !candidateQuery.trim() || entityMatchesSearch(character, candidateQuery)
+  ));
 
   const validateForm = (): string | null => {
     if (!nameZh.trim()) return "请填写人物姓名";
